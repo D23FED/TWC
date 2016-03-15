@@ -1,0 +1,84 @@
+/* ==========================================================================
+    User Location -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-location {
+  padding-right: 0;
+  text-align: right;
+}
+
+.twc-customerLocation {
+  position: relative;
+}
+.twc-customerLocation li {
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+.twc-customerLocation li ul {
+  display: none;
+}
+.twc-customerLocation ul li ul {
+  display: none;
+  position: absolute;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+.twc-customerLocation ul li ul li {
+  display: block;
+}
+.twc-customerLocation ul li li {
+  padding: 0;
+}
+
+a.twc-change:after {
+  content: '\f078';
+  margin-left: 4px;
+}
+
+li.twc-drop-nav.js-persist a.twc-change:after {
+  content: '\f00d';
+  padding: 0 1px;
+}
+
+.message {
+  top: 4px;
+  margin-top: 5px;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.twc-customerLocation .message p {
+  line-height: 1;
+  text-align: center;
+}
+.twc-customerLocation .message p a {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.oof-error-text {
+  display: inline-block;
+}
+
+/* ie (.ie) */
+.twc-ie .twc-customerLocation ul li ul {
+  right: 0;
+}
+
+@media (max-width: 31.25em) {
+  span.twc-mobile-city {
+    display: none;
+  }
+
+  div.twc-mobile-custLoc input {
+    margin-right: 0;
+  }
+}

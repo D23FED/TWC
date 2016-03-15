@@ -1,0 +1,24 @@
+.desktop-only, .desktop-mobile-only {
+  display: block;
+}
+.tablet-only, .mobile-only {
+  display: none;
+}
+
+@media (max-width: 48em) {
+  .desktop-only, .mobile-only, .desktop-mobile-only {
+    display: none;
+  }
+  .tablet-only {
+    display: block;
+  }
+}
+
+@media (max-width: 40em) {
+  .desktop-only, .tablet-only {
+    display: none;
+  }
+  .mobile-only, .desktop-mobile-only {
+    display: block;
+  }
+}

@@ -1,0 +1,54 @@
+/* Do not add in Prod */
+.twc-container {
+  max-width: 100%;
+}
+@media (max-width: 48em) {
+  .twc-container {
+    padding: 0;
+  }
+}
+.imagecontent-panel {
+  background-color: #fff;
+  background-size: contain;
+}
+/* End Do not add in Prod */
+/* Begin CSS for Prod here */
+/* Css for opaque background when text goes over images */
+@media (max-width: 48em) {
+  .opaque {
+    padding: 1em;
+    border-radius: 8px;
+  }
+  .opaque.light {
+    background: rgba(255,255,255,0.85);
+  }
+  .opaque.dark {
+    background: rgba(0,0,0,0.65);
+  }
+  .opaque.blue {
+    background: rgba(217,230,245,0.85);
+  }
+}
+/* End Css for opaque background when text goes over images */
+
+/* CSS for no-stack tablet 50-50 */
+@media (max-width: 48em) {
+  [id*="tablet-no-stack-"] [class*="twc-col2_5050-c"] {
+    width: 48.75%;
+    margin-left: 2.5%;
+  }
+}
+@media (max-width: 40em) {
+  [id*="tablet-no-stack-"] [class*="twc-col2_5050-c"] {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/* End CSS for no-stack tablet 50-50 */
+
+/* Start CSS for centered CTA */
+[id*="centered-cta-"] {
+  width: 100%;
+  text-align: center;
+}
+/* End CSS for Centered CTA */

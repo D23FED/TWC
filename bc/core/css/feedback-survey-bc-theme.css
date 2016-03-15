@@ -1,0 +1,13 @@
+/* ==========================================================================
+    Feedback Survey -- Version: 1.9.0.2 - Updated: 12/30/2013
+   ========================================================================== */
+.feedback-survey .initiate-feedback {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #e1e1e1;
+  background: #f0f3f2;
+}

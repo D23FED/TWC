@@ -1,0 +1,18 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Sticky -- Version: 1.9.0.1 - Updated: 12/31/2013
+   ========================================================================== */
+
+.sticky {
+  background: #3a647b;    // Theme
+  @include box-shadow(0 1px 2px 0 $grey);    // Theme
+  a {
+    color: #ddd;    // Theme
+  }
+}
+
+.spacer {
+  background: $text-black;    // Theme
+}

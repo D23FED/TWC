@@ -1,0 +1,49 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tables -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+table.checkboxTables {
+  tr {
+    &:nth-of-type(odd) td {
+      background: #fff;    // Theme
+    }
+    &:nth-of-type(even) {
+        background: #f7f8fc;    // Theme
+      }
+    &:last-of-type {
+      border-bottom: 1px solid #e1e1e1;    // Theme
+    }
+  }
+  th {
+    border-radius: 5px 5px 0 0;    // Theme
+    @include background-gradient(#6f93af, #59768d);    // Theme
+    color: $text-white;    // Theme
+  }
+  td {
+    font-size: 14px;    // Theme
+    font-size: 1.4rem;    // Theme
+    color: #5a5a5a;    // Theme
+    &.row-title {
+      background: #c3d6e7;    // Theme
+    }
+  }
+}
+
+@media (max-width: $small) {
+
+  table.checkboxTables {
+    tr {
+      &.column-title {
+        td {
+          @include background-gradient(#6f93af, #59768d);    // Theme
+          color: white;    // Theme
+          font-weight: 700;    // Theme
+          width: 100%;    // Theme
+        }
+      }
+    }
+  }
+}

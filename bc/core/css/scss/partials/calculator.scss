@@ -1,0 +1,73 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Calculator -- Version: 1.0.0.0 - Updated: 4/3/2014
+   ========================================================================== */
+.sticky {
+  background: none;    // Framework
+  box-shadow: none;    // Framework
+  text-align: left;    // Framework
+}
+  .js-fixed {
+    top: 0;    // Framework
+    width: 100%;    // Framework
+  }
+  .calculator {
+    // width: 100%;    // Theme
+    // max-width: 980px;    // Theme
+    padding: 1em;    // Framework
+    // border: 1px solid #d2d5da;    // Theme
+  }
+  .calculator-box {
+    overflow: auto;    // Framework
+    float: right;    // Framework
+    // width: 100%;    // Theme
+    // max-width: 292px;    // Theme
+    // border-radius: 3px;    // Theme
+    // border: 1px solid #d2d5da;    // Theme
+  }
+  .calculator-box .cart-price {
+    float: left;    // Framework
+    // width: 50%;    // Theme
+    // height: 60px;    // Theme
+    // padding: 0 1em;    // Theme
+    // border-right: 1px solid #d2d5da;    // Theme
+    // text-align: center;    // Theme
+  }
+  .calculator-box .cart-price .pricing {
+    position: relative;    // Framework
+    // top: 50%;    // Theme
+    -webkit-transform: translateY(-50%);    // Framework
+    -ms-transform: translateY(-50%);    // Framework
+    transform: translateY(-50%);    // Framework
+  }
+  .calculator-box .cta-holder {
+    float: left;    // Framework
+    // width: 50%;    // Theme
+    // height: 60px;    // Theme
+    // padding: 0 1em;    // Theme
+    // text-align: center;    // Theme
+  }
+  .calculator-box .cta-holder .cta {
+    position: relative;    // Framework
+    // top: 50%;    // Theme
+    -webkit-transform: translateY(-50%);    // Framework
+    -ms-transform: translateY(-50%);    // Framework
+    transform: translateY(-50%);    // Framework
+  }
+  @media (max-width: 48em) {
+    .js-fixed {
+      left: 2.5%;    // Framework
+      right: 2.5%;    // Framework
+      width: auto;    // Framework
+    }
+    .calculator {
+      text-align: center;    // Framework
+    }
+    .calculator-box {
+      float: none;    // Framework
+      margin: 0 auto;    // Framework
+      text-align: center;    // Framework
+    }
+  }

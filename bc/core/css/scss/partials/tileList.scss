@@ -1,0 +1,158 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tile List - Version: 1.9.0.3 - Updated: 2/25/2014
+   ========================================================================== */
+
+.tileList {
+  display: table;    // Framework
+  @include padding();    // Framework
+  @include margin(0,auto, 1em);    // Framework
+  // background: $background-white;    // Theme
+  // @include border-radius();    // Theme
+  // @include box-shadow(0 1px 2px 0 #888);    // Theme
+  overflow: hidden;    // Framework
+  ul {
+    display: table-row;    // Framework
+    @include padding(1em,0);    // Framework
+  }
+  li {
+    float: none;    // Framework
+    display: table-cell;    // Framework
+    width: 16.6666667%;    // Framework
+    @include margin(1em,0);    // Framework
+    @include padding(1em,0);    // Framework
+    text-align: center;    // Framework
+    &.js-first {
+      border: 0;    // Framework
+    }
+    &:hover {
+      // background: #f3f6f9;    // Theme
+      @include margin;    // Framework
+      @include padding;    // Framework
+    }
+/*
+    &.nextHover, &.js-nextHover {
+      @include margin();
+    }
+*/
+    img {
+      display: block;    // Framework
+      @include margin(0,auto,1em);    // Framework
+    }
+    &:hover img {
+      @include opacity(.9);    // Framework
+    }
+    a {
+      display: block;    // Framework
+      @include padding(.5em);    // Framework
+      border-left: 1px dotted $grey;    // Framework
+      font-family: 'Arial', sans-serif;    // Framework
+      // @include font-size(16);    // Theme
+      // color: $text-black;    // Theme
+    }
+    &:first-child a {
+        border: none;    // Framework
+      }
+  }
+  p {
+    @include font-size(14);    // Framework
+  }
+}
+
+[class*='25-25-50'] .labelList h5.label:last-of-type {
+  height: 22px;    // Framework
+}
+
+[class*='twc-col3_252550-c'] {
+  ul {
+    @include margin(1em,0);    // Framework
+  }
+  li {
+    clear: left;    // Framework
+    width: 100%;    // Framework
+    padding: 2px 0;    // Framework
+    border-bottom: 1px dotted #ccc;    // Framework
+    &.js-last {
+      border-bottom: none;    // Framework
+    }
+    a {
+      @include padding();    // Framework
+      border: none;    // Framework
+      // font-family: Arial, Helvetica, sans-serif;    // Theme
+      // font-weight: 700;    // Theme
+      // line-height: 2;    // Theme
+      // color: $link;    // Theme
+      // text-transform: none;    // Theme
+    }
+  }
+}
+
+@media (max-width: $medium) {
+
+  section {
+    margin-left: 0;    // Framework
+    margin-bottom: 20px;    // Framework
+  }
+  .tileList {
+    width: 100%;    // Framework
+    // background: $background-white;    // Theme
+    li {
+      @include inline-block();    // Framework
+      width: 100%;    // Framework
+      @include margin();    // Framework
+      @include padding();    // Framework
+      text-align: left;    // Framework
+      border-left: 0;    // Framework
+      border-bottom: 1px solid #ccc;    // Framework
+      &.js-first {
+        border: 0;    // Framework
+        border-bottom: 1px solid #ccc;    // Framework
+      }
+      &:hover {
+        // background: #f6f6f6;    // Theme
+        @include margin();    // Framework
+        text-align: left;    // Framework
+      }
+/*
+      &.nextHover, &.js-nextHover {
+        @include margin();
+      }
+*/
+      img {
+        display: none;    // Framework
+      }
+      a {
+        border: none;    // Framework
+        // @include font-size(16);    // Theme
+        // color: #3376b2;    // Theme
+        // text-align: center;    // Theme
+        &:after {
+          @include padding(.5em);    // Framework
+          // font-family: $fontawesome;    // Theme
+          // @include font-size(20);    // Theme
+          content: '\f105';    // Framework
+          // color: #b1b2af;    // Theme
+        }
+      }
+    }
+    .parsys_column ul, .parsys_column[class*='twc-col']:nth-child(2) {
+        @include margin;    // Framework
+    }
+  }
+
+  [class*='25-25-50'] .twc-col3_252550-c2 {
+    margin-top: 1em;    // Framework
+  }
+
+}
+
+@media (max-width: $small) {
+
+  [class*='25-25-50'] .labelList h5.label:last-of-type {
+    height: auto;    // Framework
+    @include margin();    // Framework
+  }
+
+}

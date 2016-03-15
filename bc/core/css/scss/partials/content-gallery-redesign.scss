@@ -1,0 +1,20 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Content Gallery - Version: 1.0.0 - Updated: 5/22/14
+   ========================================================================== */
+
+.bc-content-gallery {
+  overflow: auto;    // Framework
+	padding: 1em;    // Framework
+	min-height: 265px;    // Framework
+  @media (max-width: $medium) {
+    &:nth-child(1){
+      margin-bottom: 1em;    // Framework
+    }
+  }
+  @media (max-width: $small) {
+    margin-bottom: 1em;    // Framework
+  }
+}

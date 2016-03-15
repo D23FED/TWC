@@ -1,0 +1,78 @@
+/* ==========================================================================
+    Search -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-search-module {
+  margin: 0 auto;
+}
+.twc-search-module .twc-container {
+  padding: 1em 4%;
+}
+
+.twc-module ul {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.twc-module li {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  padding: 0 10px;
+}
+.twc-module li.js-first {
+  padding-left: 0;
+}
+.twc-module li.js-last {
+  border-right: 0;
+}
+
+header .twc-module {
+  width: auto;
+}
+
+.twc-module {
+  width: auto;
+  margin: 0 auto;
+}
+.twc-module .twc-search-input-wrap {
+  width: auto;
+}
+
+.twc-banner-search {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+@media (max-width: 48em) {
+  .twc-search-module {
+    display: none;
+  }
+
+  .twc-search-input-wrap {
+    width: auto;
+  }
+
+  .twc-tablet-search {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .twc-mobile-search button:before {
+    content: '\f002';
+  }
+}
+@media (max-width: 40em) {
+  .twc-tablet-search {
+    display: none;
+  }
+
+  .twc-search-module .twc-module {
+    width: 100%;
+  }
+  .twc-search-module .twc-module ul {
+    display: none;
+  }
+  .twc-search-module input#submit {
+    padding: 9px 0;
+  }
+}

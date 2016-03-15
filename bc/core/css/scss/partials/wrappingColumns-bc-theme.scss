@@ -1,0 +1,36 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Wrapping Columns -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.wrappingColumns {
+
+  li.heading {
+    h5 {
+      @include background-gradient(#eeeeef, #dddfe2);    // Theme
+    }
+  }
+
+  @media (max-width: $small) {
+
+    ul {
+      li.heading {
+        &.js-first {
+          @include border-radius(3px 3px 0 0);    // Theme
+        }
+        h5 {
+          &:after {
+            font-family: $fontawesome;    // Theme
+          }
+        }
+        .expanded:after {
+          font-family: $fontawesome;    // Theme
+        }
+      }
+      ul {
+      }
+    }
+  }
+}

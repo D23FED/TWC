@@ -1,0 +1,81 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-alert-section {
+
+  .twc-alert {
+    border-bottom: 1px solid #eeeeef;    // Framework
+    // background: #d14853;    // Theme
+    // @include box-shadow(inset 0 -10px 14px 0 rgba(0, 0, 0, 0.2));    // Theme
+    // color: $text-white;    // Theme
+  }
+  .twc-container {
+    @include padding(1em,2em,1em,0);    // Framework
+  }
+  p.twc-alert-text {
+    position: relative;    // Framework
+    // @include font-family($arial);    // Theme
+    .twc-container {
+      padding: 1em 2em 1em 0;    // Framework
+    }
+  }
+
+  .twc-customerLocation p.twc-alert-text:before, p.twc-alert-text:before {
+    // padding-right: 10px;    // Theme
+    // @include font-family($fontawesome);    // Theme
+    content: '\f071';    // Framework
+    // @include font-size(24);    // Theme
+    // font-weight: 100;    // Theme
+    // color: #f6b42a;    // Theme
+    // text-shadow: 0 1px 3px #333;    // Theme
+    vertical-align: middle;    // Framework
+  }
+
+  .twc-alert-close:after {
+    position: absolute;    // Framework
+    top: 1em;    // Framework
+    right: 0;    // Framework
+    @include padding(0,1em);    // Framework
+    // @include font-family($fontawesome);    // Theme
+    content: '\f057';    // Framework
+    // color: #fff;    // Theme
+    // font-weight: lighter;    // Theme
+  }
+
+  a.twc-icon:hover {
+    // color: inherit;    // Theme
+  }
+
+  @media (max-width: $medium) {
+
+    p.twc-alert-text.twc-container {
+      @include padding(1em,3em,1em,3em);    // Framework
+    }
+    .twc-alert-close:after {
+      top: .5em;    // Framework
+      right: 4%;    // Framework
+      // @include font-size(24);    // Theme
+    }
+
+  }
+
+  @media (max-width: $small) {
+
+    .twc-alert-text:before {
+      // @include font-size(18);    // Theme
+      vertical-align: baseline;    // Framework
+    }
+    .twc-content {
+      padding-top: 0;    // Framework
+    }
+    .twc-alert-close:after {
+      @include padding(0);    // Framework
+    }
+  }
+
+}
+

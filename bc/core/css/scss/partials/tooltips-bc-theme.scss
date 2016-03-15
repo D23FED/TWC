@@ -1,0 +1,16 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tooltips -- Version: 1.9.0.1 - Updated: 2/6/2014
+   ========================================================================== */
+
+.tooltip {
+  color: $link;    // Theme
+  text-decoration: none;    // Theme
+  span.tooltip-text {
+    @include border-radius(2px);    // Theme
+    @include background-gradient(#e0e7eb, $background-white);    // Theme
+    color: $text;    // Theme
+  }
+}

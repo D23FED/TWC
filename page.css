@@ -1,0 +1,322 @@
+@charset 'UTF-8';
+
+/*expand top nav full width*/
+.campaign-top-nav .general {
+  max-width: 100% !important;
+}
+/* Fix vertical spacing above slides */
+.heroCarousel {
+    display: none;
+}
+.heroCarouselSlide.twc-container {
+  padding: 0;
+}
+.heroCarouselSlide .h5 {
+  display: block;
+}
+.heroCarouselSlide .h5 a {
+  padding: 0.75em 1em 0;
+}
+.heroCarouselSlide .h3 {
+  display: block;
+}
+.heroCarousel .heroWrapper {
+  position: relative;
+  width: 100%;
+}
+.heroCarousel .heroWrapper li {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+.heroCarousel .heroWrapper > ul > li {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  -ms-transition: 1s ease;
+  transition: 1s ease;
+}
+.heroCarousel .heroWrapper > ul > li.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  -ms-transition: 1s ease;
+  transition: 1s ease;
+}
+.heroCarousel .heroWrapper > ul > li .heroText {
+  position: absolute;
+  width: 39%;
+  text-align:left;
+}
+.heroCarousel .heroWrapper > ul > li .heroText  h1{
+  margin-bottom: .1em;
+  font-size: 4.7rem;
+}
+.heroCarousel .heroWrapper > ul > li .heroText p {
+  margin-bottom: 1.5em;
+  font-size: 1.3em;
+  font-family: "TWC Round Light";
+}
+.heroCarousel .heroWrapper > ul > li .heroText.topLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomLeft {
+  left: 9%;
+}
+.heroCarousel .heroWrapper > ul > li .heroText.topRight,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomRight {
+  right: 2%;
+}
+.heroCarousel .heroWrapper > ul > li .heroText.topLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.topRight {
+  top: 20%;
+}
+.heroCarousel .heroWrapper > ul > li .heroText.bottomLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomRight {
+  bottom: 13%;
+}
+.heroCarousel .heroIconWrapper .heroIcons {
+  text-align: center;
+  display: table;
+  border-spacing: 2em;
+  margin: 0 auto;
+  max-width: 980px;
+}
+.heroCarousel .heroIconWrapper .heroIcons .iconWrapper {
+  display: table-row;
+  width: 100%;
+  max-width:980px;
+  margin: 1em auto;
+  border-collapse: separate;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+  cursor: pointer;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  width: 14.25%;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons span {
+  font-family: "TWC Round Light";
+  font-size: 130%;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons.active {
+  color: #2776b5;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons.empty {
+  height: 1px;
+  margin-left: 4px;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure {
+  margin-bottom: 0.5em;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  margin: auto;
+  margin-bottom: 0;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure img:first-of-type,
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons.active figure img:last-of-type {
+  display: block;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons.active figure img:first-of-type,
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure img:last-of-type {
+  display: none;
+}
+.heroCarousel .heroWrapper li figure img {
+  height: auto;
+  max-width: 820px;
+  width: auto;
+  margin: 0 auto;
+}
+.heroCarousel #heroCarouselPreview, .heroCarousel #heroCarouselNext {
+  display:none;
+}
+.heroCarousel .heroWrapper .image-gradient {
+  display:none;
+}
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons:hover {
+  color: #2776B5;
+}
+/* HACKS FOR HERO 100%*/
+.heroCarousel .heroWrapper, .heroCarousel .heroWrapper li {
+
+}
+.twc-new-navigation .twc-container {
+  text-align:center;
+}
+#header, .twc-new-nav, .twc-top .twc-container, .general, footer .twc-container, .global-elements .twc-container, div.main-content {
+
+  margin: 0 auto;
+}
+/* HERO ICONS CONTROLS 2015*/
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+  vertical-align: top;
+  width: 14.25%;
+  background: linear-gradient(to bottom, #fff 0%, #ededed 80%);
+  background:  -webkit-linear-gradient(to bottom, #fff 0%, #ededed 80%);
+  background:  -moz-linear-gradient(to bottom, #fff 0%, #ededed 80%);
+  background:  -ms-linear-gradient(to bottom, #fff 0%, #ededed 80%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0.5em 0;
+  margin: 0 1.5% 0 0;
+  border: 2px solid #D2D2D2;
+  max-width: 120px;
+}
+.heroCarousel .heroIconWrapper .heroIcons .active {
+  border: 2px solid #2776b5;
+  background: none;
+}
+/* HACKS FOR HERO 100%*/
+@media (max-width: 48em) {
+  .heroIcons .iconWrapper .clone {
+    display: none !important;
+  }
+  .heroCarousel .heroWrapper li figure img {
+    max-width: 100%;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons {
+    border-spacing: 0.25em;
+  }
+}
+
+@media (max-width: 40em) {
+  .heroCarousel #heroCarouselPreview, .heroCarousel #heroCarouselNext {
+    position: absolute;
+    display:block;
+    top: 0px;
+    z-index: 1;
+    height: 100%;
+    cursor: pointer;
+    width: 19px;
+  }
+  .heroCarousel #heroCarouselPreview img, .heroCarousel #heroCarouselNext img {
+    position:relative;
+    top:38px;
+    margin: 0 auto;
+  }
+  div.heroCarouselSlide figure img:first-of-type {
+    display:none;
+  }
+  div.heroCarouselSlide figure img:last-of-type {
+    display:block;
+  }
+  .heroCarousel .heroWrapper li {
+    max-height: none;
+  }
+  .heroCarousel .heroIconWrapper {
+    position: relative;
+    height: 110px;
+  }
+  .heroCarousel .heroWrapper {
+    margin-bottom: 0em;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 85%;
+    margin-left: 25px;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons .reduce {
+    padding: 0 0.5em;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+    float: left;
+    width: 50px;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .iconWrapper {
+    display: inline-block;
+    width: 9999px;
+    position: relative;
+    left: 0px;
+    transition: left 0.5s linear;
+    -webkit-transition: left 0.5s linear;
+    max-width: none;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText {
+    text-align: center;
+    display: block;
+    width: 100%;
+    top: auto !important;
+    bottom: 5% !important;
+    right: 0 !important;
+    color: #ffffff;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText div.cta {
+    display: block !important;
+    margin-top: 5px;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText h1 {
+    margin-bottom: 0.3em;
+    font-size: 2.7rem;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText h3 {
+    display: none;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText.topLeft, .heroCarousel .heroWrapper > ul > li .heroText.bottomLeft {
+    left: 0px;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure img {
+    max-width: 55px;
+    width: 100%;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons span {
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  .heroWrapper {
+    max-height: none;
+  }
+  .heroCarousel .heroWrapper .image-gradient {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(rgba(0, 0, 0, 0),0.4),color-stop(rgba(0, 0, 0, 0.65),0.8),color-stop(rgba(0, 0, 0, 0.65),0.99));
+    background:-webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 99%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background:-moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 99%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 99%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 99%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  }
+  /* HERO ICONS CONTROLS 2015*/
+  .heroCarousel .heroIconWrapper .heroIcons {
+    text-align: center;
+    display: inline-block;
+    border-spacing: 0;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+    background: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    max-width: none;
+    min-width: none;
+    display: inline-block;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .active {
+    border: none;
+    background: none;
+  }
+  .heroIcons .iconWrapper .clone {
+    display: inline-block !important;
+  }
+}

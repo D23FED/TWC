@@ -1,0 +1,62 @@
+[class*="twc-col2_5050-"] {
+  background-size: cover;
+  min-height: 350px;
+  color: #fff;
+}
+
+[class*="twc-col2_5050-"] .quadContentContainer {
+  padding: 1em 2em;
+  max-width: 490px;
+}
+
+.columnControl:nth-of-type(1) .twc-col2_5050-c0 {
+  background: #205381;
+  background-image: url("http://lorempixel.com/800/400/");
+  background-size: cover;
+}
+.columnControl:nth-of-type(1) .twc-col2_5050-c1 {
+  background: #7b9cb9;
+  background-image: url("http://lorempixel.com/801/401/");
+  background-size: cover;
+}
+.columnControl:nth-of-type(2) .twc-col2_5050-c0 {
+  background: #383838;
+  background-image: url("http://lorempixel.com/802/402/");
+  background-size: cover;
+}
+.columnControl:nth-of-type(2) .twc-col2_5050-c1 {
+  background: #6b6b6b;
+  background-image: url("http://lorempixel.com/803/403/");
+  background-size: cover;
+}
+
+.columnControl:nth-of-type(odd) .twc-col2_5050-c0 .quadContentContainer,
+.columnControl:nth-of-type(even) .twc-col2_5050-c0 .quadContentContainer {
+  float: right;
+  text-align: left;
+}
+.columnControl:nth-of-type(odd) .twc-col2_5050-c1 .quadContentContainer,
+.columnControl:nth-of-type(even) .twc-col2_5050-c1 .quadContentContainer {
+  float: left;
+  text-align: left;
+}
+
+@media (max-width: 48em) {
+  [class*="twc-col2_5050-"] {
+    background-size: cover;
+    min-height: 200px;
+    color: #fff;
+  }
+  [class*="twc-col2_5050-"] .quadContentContainer {
+    padding: 1em;
+    max-width: 100%;
+  }
+  .columnControl:nth-of-type(odd) .twc-col2_5050-c0 .quadContentContainer,
+  .columnControl:nth-of-type(even) .twc-col2_5050-c0 .quadContentContainer,
+  .columnControl:nth-of-type(odd) .twc-col2_5050-c1 .quadContentContainer,
+  .columnControl:nth-of-type(even) .twc-col2_5050-c1 .quadContentContainer {
+    float: left;
+    text-align: left;
+  }
+
+}

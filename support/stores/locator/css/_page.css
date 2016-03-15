@@ -1,0 +1,105 @@
+/* ==========================================================================
+   CSS code for stores Map Coverage
+
+   Author: Max Quattromani
+   Version: 1.0 - Updated: 8/26/13
+   ========================================================================== */
+
+/*
+
+ * Layout
+
+ * Module
+
+ * State
+
+ * Theme
+
+ * Browser Specific
+ 		* Safari/Chrome/Webkit
+ 		* Firefox
+ 		* Internet Explorer
+
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/* base styles are being handled by base main.css */
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/* layout styles are being handled by base main.css */
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+.locate-stores .twc-search {
+  margin-right: 1em;
+}
+
+.locate-stores .twc-search .location {
+  width: 100%;
+  padding-right: 1em;
+}
+
+.locate-stores .twc-search .location input {
+  width: auto;
+}
+
+.locate-stores .twc-search input {
+  width: auto;
+}
+
+.locate-stores .twc-search .location-types {
+  margin-top: 1em;
+}
+
+.locate-stores .twc-search .location-types label {
+  font-size: 1.4rem;
+  color: #3376B2;
+}
+
+.locate-stores .twc-search .location-types > ul > li {
+  margin-right: 1em;
+  display: inline-block;
+}
+
+.locate-stores .twc-search .location-types .cta {
+  margin-top: 1em;
+}
+
+
+@media (max-width: 48em) {
+
+  .locate-stores .checkbox-filters {
+    margin-top: 1em;
+  }
+
+  .locate-stores .twc-search .location-types {
+    margin-top: 0;
+  }
+
+  .locate-stores .twc-search .location {
+    padding-right: 0;
+  }
+
+  .locate-stores .twc-search .distanceSelect {
+    margin-top: 1em;
+  }
+
+  .locate-stores .twc-search .distanceSelect select {
+    width: auto;
+  }
+
+  .locate-stores .twc-search .location-types > ul > li {
+    display: block;
+  }
+
+}

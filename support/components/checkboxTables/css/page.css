@@ -1,0 +1,216 @@
+/* ==========================================================================
+   CSS code for Alt Tables
+
+   Author: Max Quattromani
+   Version: 1.0 - Updated: 11/26/13
+   ========================================================================== */
+
+/*
+
+ * Layout
+
+ * Module
+
+ * State
+
+ * Theme
+
+ * Browser Specific
+    * Safari/Chrome/Webkit
+    * Firefox
+    * Internet Explorer
+
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/* layout styles are being handled by base main.css */
+
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+/*table { text-align: center; }
+
+th {
+    max-width: 100px;
+    padding: .675em 1em;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    border-left: 1px solid #e1e1e1;
+    background-color: #6f93af;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6f93af), to(#59768d));
+    background-image: -webkit-linear-gradient(top, #6f93af, #59768d);
+    background-image: -moz-linear-gradient(top, #6f93af, #59768d);
+    background-image: -o-linear-gradient(top, #6f93af, #59768d);
+    background-image: -ms-linear-gradient(top, #6f93af, #59768d);
+    background-image: linear-gradient(top, #6f93af, #59768d);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#6f93af', EndColorStr='#59768d');
+    color: #fff;
+    vertical-align: middle; }
+
+    th:empty {
+        min-width: 200px;
+        background-color: transparent;
+        background-image: none;
+        border: none; }
+
+th h5 { margin-bottom: 0; }
+
+table td {
+    height: 40px;
+    border-left: 1px solid #cdd2d8;
+    border-right: 1px solid #cdd2d8;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #5a5a5a;
+    vertical-align: middle; }
+
+tr:nth-of-type(odd) td { background: #fff; }
+
+    tr:last-of-type { border-bottom: 1px solid #e1e1e1; }
+
+    .row-title {
+        text-align: left; }
+
+    tr:nth-of-type(odd) td.row-title { background: #c3d6e7; }*/
+
+
+/* ==========================================================================
+   State
+   ========================================================================== */
+
+/* ==========================
+   Browser Specific
+   ========================== */
+
+/* Firefox */
+
+@-moz-document url-prefix() {
+
+}
+
+/* Webkit: Chrome/Safari */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+}
+
+/* IE: 6/7/8/9 */
+
+/* ie (.ie) */
+
+/* ie6 (.ie6) */
+
+/* prevent BG image flicker upon hover */
+
+/* ie7 (.ie7) */
+
+/* ie8 (.ie8) */
+
+/* ie9 (.ie9) */
+
+
+/* ==========================
+  Responsive Design
+   ========================== */
+
+/* Tablet */
+
+@media (max-width: 68.6875em) {
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   State
+   ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+
+} /* End Tablet Breakpoint */
+
+/* SmartPhone */
+
+@media (max-width: 31.25em) {
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+/*
+table { background: #fff; }
+
+table td { height: auto; }
+
+    table tr td:nth-of-type(odd) { background: #f8f8fa; }
+
+    table tr td:first-of-type { background: #C3D6E7; }
+
+.row-title {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 700; }*/
+
+
+/* ==========================================================================
+   State
+   ========================================================================== */
+
+
+
+
+
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+
+
+
+
+
+} /* End SmartPhone Breakpoint */
+
+
+
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+

@@ -1,0 +1,196 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Buttons -- Version: 1.9.0.3 - Updated: 8/8/2014
+   ========================================================================== */
+
+button {
+  cursor: pointer;
+}
+
+.cta, .btn, .button, label.cta {
+  a, button, input[type="button"] {
+    padding: 0.75em 0.75em;    // Theme
+    @include border-radius(3px);    // Theme
+    border: none;    // Theme
+    background: none;    // Theme
+    font-family: $arial;    // Theme
+    font-weight: normal;    // Theme
+    color: $link;    // Theme
+  }
+}
+
+.cta.omega, .cta.js-omega, .cta.blue, .btn.blue, .button.omega {
+  a, button, input[type="button"] {
+    @include background-gradient(#3779b3, #02447e);    // Theme
+    color: $text-white;    // Theme
+    &:hover {
+      @include background-gradient(#265a83, #1b405e);    // Theme
+    }
+  }
+}
+
+.btn.blue, .cta.blue,.btn.omega, .button.omega, .cta.omega, .cta.js-omega {
+  a, button, input {
+    &:active, &.active, &:focus {
+      background: #444545;    // Theme
+      background-image: 0;    // Theme
+    }
+  }
+}
+
+.btn.black, .cta.black, .button.black  {
+  a, button, input {
+    @include background-gradient(#3e3e3e, #2b2b2b);    // Theme
+    color: $text-white;    // Theme
+    &:hover, &.hover {
+      @include background-gradient(#797979, #6c6c6c);    // Theme
+      color: $text-white;    // Theme
+    }
+    &:active, &.active, &:focus {
+      background: #2b2b2b;    // Theme
+      background-image: 0;    // Theme
+    }
+  }
+}
+
+.btn.gray, .cta.gray, .button.gray  {
+  a, button, input {
+    @include background-gradient(#8d8d8d, #656565);    // Theme
+    color: $text-white;    // Theme
+    &:hover, &.hover {
+      @include background-gradient(#aeb0b2, #999a9b);    // Theme
+      color: $text-white;    // Theme
+    }
+    &:active, &.active, &:focus {
+      background: #a1a1a1;    // Theme
+      background-image: 0;    // Theme
+    }
+  }
+}
+
+.btn.orange, .cta.orange, .button.orange  {
+  a, button, input {
+    @include background-gradient(#eaa23f, #e6921e);    // Theme
+    color: $text-white;    // Theme
+    &:hover, &.hover {
+      @include background-gradient(#ecab53, #e99d35);    // Theme
+      color: $text-white;    // Theme
+    }
+    &:active, &.active, &:focus {
+      background: #a1a1a1;    // Theme
+      background-image: 0;    // Theme
+    }
+  }
+}
+
+.btn.green, .cta.green, .button.green  {
+  a, button, input {
+    @include background-gradient(#87ae39, #759731);    // Theme
+    color: $text-white;    // Theme
+    &:hover, &.hover {
+      @include background-gradient(#93b64d, #83a246);    // Theme
+      color: $text-white;    // Theme
+    }
+    &:active, &.active, &:focus {
+      background: #a1a1a1;    // Theme
+      background-image: 0;    // Theme
+    }
+  }
+}
+
+.btn.badge, .cta.badge {
+  a, button, input {
+    @include border-radius(20px);    // Theme
+  }
+}
+
+/* Buttons with checkbox */
+
+.btn.blue, .cta.blue, .btn.omega, .cta.omega {
+  &.checked a, &.js-checked a {
+    @include background-gradient(#33cc33, #008700);    // Theme
+  }
+}
+
+.btn, .btn.blue, .btn.omega, .button.omega, .cta, .cta.blue, .cta.omega {
+  &:disabled, &.disabled {
+    a, button, input {
+      @include background-gradient(#b3b3b3, #b3b3b3);    // Theme
+      color: $text-white;    // Theme
+      &:hover, &:active {
+        @include background-gradient(#666, #666);    // Theme
+        color: $text-white;    // Theme
+      }
+    }
+  }
+}
+
+.btn.gray {
+  &:disabled, &.disabled {
+    a, button, input {
+      @include background-gradient(#989898, #989898);    // Theme
+      color: $text-white;    // Theme
+      &:hover, &:active {
+        @include background-gradient(#989898, #989898);    // Theme
+        color: $text-white;    // Theme
+      }
+    }
+  }
+}
+
+input[type="submit"]:disabled {
+  @include background-gradient(#bcbcbc, #838383);    // Theme
+  color: $text-white;    // Theme
+  &:hover, &:active {
+    @include background-gradient(#bcbcbc, #838383);    // Theme
+    color: $text-white;    // Theme
+  }
+}
+
+/* ==========================
+  Share
+   ========================== */
+
+.cta.omega.share a {
+  background: #4F799F;    // Theme
+  margin-bottom: 1em;    // Theme
+  &:hover, .cta.omega.share.hover{
+      background: #265A83;    // Theme
+    }
+}
+
+/* ==========================
+  Flag
+   ========================== */
+
+.flag {
+  background: #cf0004;    // Theme
+  font-family: $arial;    // Theme
+  color: $text-white;    // Theme
+}
+
+.btn.flag {
+  padding: .375em 1em;    // Theme
+}
+
+/* =========================
+    Checkbox button
+  ========================*/
+
+label.cta.omega {
+  padding: .75em 1em;    // Theme
+  @include border-radius(3px);    // Theme
+  @include background-gradient(#3779b3, #02447e);    // Theme
+  font-family: $twc-medium;    // Theme
+  @include font-size(13);    // Theme
+  font-weight: normal;    // Theme
+  color: $text-white;    // Theme
+  &:hover {
+     @include background-gradient(#265a83, #1b405e);    // Theme
+  }
+  &.js-checked {
+    @include background-gradient(#33cc33, #008700);    // Theme
+  }
+}

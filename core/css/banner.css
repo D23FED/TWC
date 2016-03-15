@@ -1,0 +1,56 @@
+/* ==========================================================================
+    Banner -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-banner {
+  position: relative;
+  height: auto;
+  background-color: #000;
+  background-repeat: repeat;
+  background-position: center;
+  /* ie (.ie) */
+  /* ie8 (.ie8) */
+}
+.twc-banner h1 {
+  margin-top: 0.3em;
+  margin-right: 0;
+  margin-bottom: 0.3em;
+  margin-left: 0;
+  color: #e1e1e1;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 48em) {
+  .twc-banner h1 {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    line-height: 1;
+  }
+}
+.twc-banner h1 + span {
+  float: left;
+  width: 50%;
+  color: #ccc;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 48em) {
+  .twc-banner h1 + span {
+    width: 75%;
+  }
+}
+@media (max-width: 40em) {
+  .twc-banner h1 + span {
+    width: 100%;
+  }
+}
+.twc-ie .twc-banner {
+  width: 100%;
+  filter: none;
+}
+.twc-ie8 .twc-banner {
+  background-image: url("../images/background-feature-header.jpg");
+}
+
+.twc-ie8 .twc-banner {
+  background-image: url("../../images/background-feature-header.jpg");
+}

@@ -1,0 +1,586 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Main Navigation -- Version: 1.8.9.9 - Updated: 9/26/2013
+   ========================================================================== */
+
+nav.twc-mobile-navigation {
+  display: none;
+}
+
+ul.twc-main-nav {
+  display: table-row;
+  position: relative;
+  width: 100%;
+}
+
+nav.twc-navigation li {
+  display: table-cell;
+  border-left: 1px solid #545457;
+  text-align: center;
+}
+
+ul.twc-main-nav li li {
+  text-align: left;
+}
+
+nav {
+  li {
+    a em {
+      @include font-size(16);
+      font-style: normal;
+    }
+    figure {
+      float: none;
+    }
+  }
+  &.twc-navigation {
+    .twc-main-nav > li.js-last {
+      border-right: 1px solid #545457;
+    }
+    li.active {
+      background: #eeeeef;
+      border-right: 1px solid #eeeeef;
+      a {
+        color: $text;
+      }
+    }
+    a {
+      color: $text-white;
+      @include inline-block();
+      line-height: 40px;
+    }
+    li a {
+      padding: 0 10px;
+      @include font-size(15);
+      @include font-family($twc-medium);
+      font-family: 'TWC Round Medium',Arial,Sans-Serif;
+      font-weight: 100;
+      color: $text-white;
+      text-transform: uppercase;
+    }
+  }
+  &.twc-mobile-navigation li a {
+    padding: 0;
+    text-align: center;
+  }
+  &.twc-navigation li {
+    &:hover {
+      background: $background-white;
+      &.twc-active {
+        background: $background-white;
+      }
+      a, &.twc-active a {
+        color: $text;
+      }
+    }
+    a.twc-active {
+      background: #eeeeef;
+      color: $text;
+      &:hover {
+        background: $background-white;
+        color: $text;
+      }
+    }
+  }
+}
+
+/* ==========================
+	  Mega Menu
+   ========================== */
+
+.twc-navigation .twc-container {
+  position: relative;
+  overflow: visible;
+}
+
+ul.twc-main-nav li:hover > ul {
+  display: block;
+}
+
+.twc-main-nav > li:hover .twc-submenu {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.twc-submenu {
+  display: none;
+  padding: 10px 0;
+  background: $background-white;
+  @include box-shadow(0 4px 3px -3px #888);
+}
+
+.twc-mega-section {
+  position: absolute;
+  min-height: 240px;
+  width: 980px;
+  margin: 0 auto;
+  z-index: 9999;
+}
+
+nav.twc-navigation {
+  .twc-submenu li {
+    text-align: center;
+  }
+  .labelList {
+    ul li, h5 {
+      text-align: left;
+    }
+  }
+}
+
+.twc-submenu .deal {
+  float: none;
+  color: $link;
+}
+
+.twc-mega-section [class*='twc-col4_25252525-c'] img {
+  width: 70%;
+}
+
+.megamenu .parsys > img {
+  width: 100%;
+}
+
+/* mega-menu carousel */
+
+.carousel {
+  clear: both;
+  padding: 0;
+  position: relative;
+}
+
+ul.carousel-apps li {
+  display: inline;
+  float: left !important;
+  height: auto;
+  max-width: 255.5px;
+  padding: 20px;
+  margin-left: 19px;
+  border: 1px solid #ccc;
+  @include border-radius(5px);
+  background: $background-white;
+  text-align: center;
+  color: #ddd;
+  &.js-last {
+    border-bottom: 1px solid $grey !important;
+  }
+  a {
+    color: $text;
+    font: bold 12px verdana,sans-serif;
+  }
+  img {
+    @include inline-block();
+  }
+  figcaption {
+    @include font-size(20);
+    font-family: 'TWC Round Book',Arial,Sans-Serif;
+    font-weight: 100;
+    font-style: normal;
+    color: $text;
+  }
+}
+
+.twc-submenu div.sliderContent {
+  float: none;
+}
+
+.sliderContent .deal h4 {
+  margin-bottom: 0;
+}
+
+.carousel {
+  div.arrow {
+    background: url(../images/button-slider-controls-blue.png) no-repeat 50% 0;
+    position: absolute;
+    top: 95px;
+    width: 36px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .arrow {
+    &.left {
+      left: -10px;
+      background-position: 10px 0;
+      &:hover {
+        left: -10px;
+        background-position: 10px 0;
+      }
+    }
+    &.right {
+      right: -9px;
+      background-position: -28px 0;
+      &:hover {
+        right: -9px;
+        background-position: -28px 0;
+      }
+    }
+    &:hover {
+      background: url(../images/button-slider-controls-hover-fullshadow.png) no-repeat 50% 0;
+    }
+  }
+}
+
+/* Infinite promo slider */
+
+.twc-submenu [class*="twc-col"] {
+  height: inherit;
+  &:first-child {
+    height: 236px;
+  }
+}
+
+.carousel.groupr {
+  width: 549px;
+  height: 236px;
+  visibility: visible;
+  overflow: hidden;
+  position: relative;
+  left: -19px;
+  > {
+    .btnprev, .btnnext {
+      display: none;
+    }
+  }
+}
+
+ul.carousel-apps {
+  position: absolute;
+  li {
+    width: 274.5px;
+  }
+}
+
+.carousel-apps.group > li {
+  height: 235px;
+}
+
+ul.carousel-apps li {
+  &:first {
+    margin-left: 9.5px;
+  }
+  &:last {
+    border-bottom: 1px solid #CCCCCC !important;
+  }
+}
+
+/* ==========================
+	  Mega Menu Innards
+   ========================== */
+
+nav.twc-navigation .twc-submenu {
+  h5 {
+    margin-bottom: 20px;
+    font-family: $arial;
+    @include font-size(14);
+    font-weight: 700;
+    text-align: left;
+  }
+  ul {
+    width: auto;
+  }
+  li {
+    @include inline-block();
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+  .labelList ul li {
+    border-left: none;
+  }
+  li {
+    &.js-last {
+      border-bottom: none;
+    }
+    a {
+      padding: 0;
+      border: none;
+      @include font-family($arial);
+      @include font-size(14);
+      font-weight: 700;
+      line-height: 2;
+      color: $link;
+      text-transform: none;
+      &:hover {
+        color: #1e262c;
+        text-decoration: underline;
+      }
+    }
+  }
+  form#login-form {
+    text-align: left;
+    line-height: inherit;
+    a {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      vertical-align: baseline;
+      font-size: inherit;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: $link;
+      text-decoration: none;
+      text-transform: none;
+      line-height: 1.443;
+    }
+    p {
+      margin-top: 1em;
+      @include font-size(12);
+      line-height: 1.443;
+    }
+    input {
+      border: 1px solid #98999b;
+      margin: 5px 0;
+      &.twc-blue-button {
+        border: none;
+      }
+    }
+  }
+}
+
+/* ie8 (.twc-ie8) */
+
+.twc-ie8 .twc-submenu [class*='twc-col'], .twc-ie9 .twc-submenu [class*='twc-col'] {
+  border-left: 1px solid #dedede;
+}
+
+.twc-ie8 .twc-submenu [class*='twc-col']:first-child, .twc-ie9 .twc-submenu [class*='twc-col']:first-child {
+  border-left: none;
+}
+
+@media (max-width: 68.6875em) {
+
+  nav.twc-navigation, .twc-mobile-navigation li.js-last a.twc-icon {
+    display: none;
+  }
+
+  /* Mobile Nav Elements */
+  nav.twc-mobile-navigation {
+    display: block;
+    height: 40px;
+    a {
+      @include inline-block();
+      line-height: 40px;
+    }
+    li {
+      float: left;
+      border-right: 1px solid #323237;
+      border-left: 1px solid #545456;
+      &.js-first {
+        width: 25%;
+        border: none;
+      }
+      &.js-last {
+        width: 25%;
+        border-right: none;
+      }
+      &.twc-custLoc {
+        width: 50%;
+      }
+      a {
+        width: 100%;
+        padding: 0;
+        @include font-size(15);
+        font-family: 'TWC Round Medium',Arial,Sans-Serif;
+        font-weight: 100;
+        color: $text;
+      }
+      ul.mobile-megamenu li {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid $lightgrey;
+        background: $white;
+        &.js-last {
+          border-bottom: 0;
+        }
+      }
+    }
+    > li.js-first a:before {
+      font-family: $fontawesome;
+      content: "\f0c9";
+      padding-right: 5px;
+      color: $text-white;
+    }
+  }
+  .twc-mobile-navigation {
+    ul {
+      display: table;
+      width: 100%;
+    }
+    li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  nav {
+    &.twc-menu-dropdown input[type=radio], &.twc-custLoc-dropdown input[type=radio], &.twc-search-dropdown input[type=radio] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    &.twc-menu-dropdown ul {
+      display: none;
+      height: 100%;
+      li {
+        @include background-gradient(#eeeeef, #dddfe2);
+      }
+      &:nth-of-type(2) li, &:nth-of-type(3) li {
+        @include background-gradient(#7e9db7, #4b7191);
+      }
+      &:nth-of-type(2) li a, &:nth-of-type(3) li a {
+        color: $text-white;
+      }
+    }
+    &.twc-custLoc-dropdown ul, &.twc-search-dropdown ul {
+      display: none;
+      height: 100%;
+    }
+    &.twc-menu-dropdown label, &.twc-custLoc-dropdown label, &.twc-search-dropdown label {
+      display: block;
+      @include font-size(15);
+      font-family: 'TWC Round Medium',Arial,Sans-Serif;
+      font-weight: 100;
+      line-height: 2.65;
+      color: $text-white;
+      text-align: center;
+    }
+  }
+  .twc-mobile-navigation.simpleNav nav.twc-menu-dropdown label {
+    padding: 0 1em;
+    text-align: left;
+  }
+  .js-first nav.twc-menu-dropdown label:before {
+    font-family: $fontawesome;
+    content: "\f0c9";
+    padding-right: 5px;
+    color: $text-white;
+  }
+  nav.twc-custLoc-dropdown .twc-icon-after[class*="icon-"]:before {
+    float: none;
+  }
+  .twc-menu-dropdown input[type=radio]:checked ~ ul {
+    position: relative;
+    top: 1px;
+  }
+  input[type=radio]:checked ~ ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: auto;
+    width: 75%;
+    max-width: 1099px;
+    z-index: 99999;
+  }
+  nav {
+    &.twc-custLoc-dropdown input[type=radio]:checked ~ ul, &.twc-search-dropdown input[type=radio]:checked ~ ul {
+      width: 100%;
+    }
+  }
+  input[type=radio]:checked ~ ul > li {
+    width: 400%;
+/*     border-bottom: 1px solid #f0f0f0; */
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    &.js-first {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+  nav.twc-mobile-navigation nav {
+    &.twc-menu-dropdown li {
+      a {
+        width: 100%;
+        padding: .1em 1em;
+        border: none;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      &.twc-otherSites a {
+        color: $text-white;
+      }
+    }
+    &.twc-custLoc-dropdown li, &.twc-search-dropdown li {
+      position: relative;
+      width: 100%;
+      padding: 2% 4%;
+      color: $text;
+      text-align: left;
+    }
+    &.twc-menu-dropdown li a {
+      &:after {
+        float: right;
+        font-family: $fontawesome;
+        @include font-size(18);
+        content: '\f105';
+        color: inherit;
+      }
+      &[href^="#"]:after {
+        float: right;
+        font-family: $fontawesome;
+        @include font-size(18);
+        content: '\f105';
+        color: inherit;
+      }
+    }
+    &.twc-menu-dropdown ul:first-of-type li.js-expandable a {
+      &:after {
+        float: right;
+        font-family: $fontawesome;
+        @include font-size(18);
+        content: '\f107';
+        color: inherit;
+      }
+      &[href^="#"]:after {
+        float: right;
+        font-family: $fontawesome;
+        @include font-size(18);
+        content: '\f105';
+        color: inherit;
+      }
+    }
+    &.twc-menu-dropdown li.js-expandable.js-active a:first-of-type {
+      &:after {
+        float: right;
+        font-family: $fontawesome;
+        @include font-size(18);
+        content: '\f106';
+        color: inherit;
+      }
+    }
+  }
+  .twc-mobile-navigation .twc-custLoc-dropdown {
+    .message {
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4%;
+      @include border-radius();
+      background: #c6c9cf;
+      @include box-shadow(0 2px 2px #333);
+      z-index: 9999;
+      p {
+        text-align: center;
+      }
+    }
+    p.twc-alert-text {
+      font-weight: 700;
+    }
+    ul li p a {
+      display: inline;
+      line-height: inherit;
+    }
+  }
+
+}
+
+@media (max-width: 31.25em) {
+
+  .twc-mobile-navigation li.js-last a.twc-icon {
+    display: inherit;
+  }
+
+}

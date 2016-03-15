@@ -1,0 +1,11 @@
+.imageAccordion {
+  display: none;
+}
+
+@media (max-width: 48em) {
+  .imageAccordion {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,187 @@
+.sbsCompetition {
+  width: 100%;
+  overflow-x: scroll;
+}
+.sbsCompetition table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table {
+    font-size: 10px;
+    font-size: 1rem;
+    min-width: 356px; /* 356px for iPhone 6 support */
+  }
+}
+.sbsCompetition table th, .sbsCompetition table td {
+  border-left: 1px solid #dfdfdf;
+}
+
+.sbsCompetition table th .tableSubhead {
+  font-weight: 400;
+}
+
+.sbsCompetition table th img {
+  max-width: 25%;
+  clear: both;
+  margin-right: .5em;
+}
+
+@media (max-width: 48em) {
+  .sbsCompetition table th img {
+    display: none;
+  }
+}
+
+.sbsCompetition table td:first-of-type {
+  background-color: #d0e2f1;
+  color: #1b74a5;
+}
+
+.sbsCompetition table thead {
+  display: table;
+  width: 100%;
+  background-color: #fff;
+}
+.sbsCompetition table thead tr {
+  display: table-row;
+  width: 100%;
+}
+
+.sbsCompetition table tr:nth-of-type(odd) {
+  background-color: #f8f8fb;
+}
+
+.sbsCompetition table thead tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.sbsCompetition table thead th {
+  width: 18.5%;
+  padding: 1em .75em;
+  color: #004088;
+  font-weight: 100;
+}
+.sbsCompetition table thead th.features {
+  width: 26%;
+  font-family: "TWC Round Book";
+  font-size: 2.6rem;
+}
+@media (max-width: 48em) {
+  .sbsCompetition table thead th.features {
+    font-size: 1.6rem;
+  }
+}
+.sbsCompetition table th.features {
+  border-left: none;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table thead th {
+    padding-top: 0.5em;
+    padding-right: 0;
+    padding-bottom: 0.5em;
+    padding-left: 0;
+  }
+}
+
+.sbsCompetition table.packages-5 thead th {
+  width: 14.8%;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table.packages-5 thead th {
+    width: 15.6%;
+  }
+}
+.sbsCompetition table.packages-5 thead th.features {
+  width: 26%;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table.packages-5 thead th.features {
+    width: 21%;
+    position: absolute;
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+.sbsCompetition table tbody {
+  display: block;
+  width: 100%;
+}
+.sbsCompetition table tbody tr {
+  display: table;
+  width: 100%;
+  background: white;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table tbody tr {
+    line-height: 2
+  }
+  .sbsCompetition table thead tr th.features
+  .sbsCompetition table tbody tr th.features {
+    line-height: 1;
+    height: 100%;
+    position: absolute;
+  }
+  .sbsCompetition table tbody tr th.features {
+    background-color: #fff;
+  }
+  .sbsCompetition table tr:nth-of-type(2n+1) th.features {
+    background-color: #f8f8fb;
+  }
+}
+.sbsCompetition table tbody th {
+  padding: 1em .75em;
+}
+.sbsCompetition table tbody th.features {
+  width: 26%;
+  text-align: left;
+}
+.sbsCompetition table tbody th.features img {
+  float: left;
+}
+.sbsCompetition table tbody th .table-content {
+  color: #4596df;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table tbody th {
+    padding-top: 0.5em;
+    padding-right: 0.125em;
+    padding-bottom: 0.5em;
+    padding-left: 0.125em;
+  }
+}
+.sbsCompetition table tbody td {
+  width: 18.5%;
+  padding: .5em;
+  color: #808080;
+  font-size: 1.5em;
+}
+.sbsCompetition table tbody td .table-content {
+  color: #4596df;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table tbody td {
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+  }
+}
+.sbsCompetition table.packages-5 tbody td {
+  width: 14.8%;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table.packages-5 tbody td {
+    width: 15.6%;
+  }
+}
+.sbsCompetition table.packages-5 tbody th.features {
+  width: 26%;
+}
+@media (max-width: 40em) {
+  .sbsCompetition table.packages-5 tbody th.features {
+    width: 21%;
+    padding-left: 0.5em;
+  }
+}

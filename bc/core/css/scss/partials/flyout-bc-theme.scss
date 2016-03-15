@@ -1,0 +1,13 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    More Help -- Version: 1.9.0.1 - Updated: 12/31/2013
+   ========================================================================== */
+
+[class*='flyoutContent-'] {
+  border: 1px solid $text-white;    // Theme
+  @include border-radius();    // Theme
+  background-color: #f6f6f6;    // Theme
+  @include box-shadow(0 1px 2px 0 #888);    // Theme
+}

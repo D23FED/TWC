@@ -1,0 +1,25 @@
+/* ==========================================================================
+    Banner -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-banner {
+  position: relative;
+  height: auto;
+  /* ie (.ie) */
+  /* ie8 (.ie8) */
+}
+@media (max-width: 48em) {
+  .twc-banner h1 {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    line-height: 1;
+  }
+}
+.twc-banner span {
+  float: left;
+}
+.twc-ie .twc-banner {
+  width: 100%;
+  filter: none;
+}

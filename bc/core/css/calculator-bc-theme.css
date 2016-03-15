@@ -1,0 +1,38 @@
+/* ==========================================================================
+    Calculator -- Version: 1.0.0.0 - Updated: 4/3/2014
+   ========================================================================== */
+.calculator {
+  width: 100%;
+  max-width: 980px;
+  border: 1px solid #d2d5da;
+}
+
+.calculator-box {
+  width: 100%;
+  max-width: 292px;
+  border-radius: 3px;
+  border: 1px solid #d2d5da;
+}
+
+.calculator-box .cart-price {
+  width: 50%;
+  height: 60px;
+  padding: 0 1em;
+  border-right: 1px solid #d2d5da;
+  text-align: center;
+}
+
+.calculator-box .cart-price .pricing {
+  top: 50%;
+}
+
+.calculator-box .cta-holder {
+  width: 50%;
+  height: 60px;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.calculator-box .cta-holder .cta {
+  top: 50%;
+}

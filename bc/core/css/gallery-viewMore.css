@@ -1,0 +1,30 @@
+/* ==========================================================================
+    Gallery - View More -- Version: 1.0.0.1 - Updated: 3/10/2014
+   ========================================================================== */
+.half-circle-bottom {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 90px;
+  height: 45px;
+  margin-bottom: .5em;
+  padding-right: .45em;
+  -webkit-border-radius: 0 0 90px 90px;
+  -moz-border-radius: 0 0 90px 90px;
+  border-radius: 0 0 90px 90px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #3376b2;
+  font-size: 34px;
+  font-size: 3.4rem;
+  color: white;
+}
+.half-circle-bottom .icon-angle-down.js-expanded {
+  -webkit-transform: rotate(180);
+  -moz-transform: rotate(180);
+  -o-transform: rotate(180);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180))";
+  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180), M12=-sin(180), M21=sin(180), M22=cos(180));
+  zoom: 1;
+}

@@ -1,0 +1,48 @@
+.askAmy {
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.askAmy .amy {
+  float: left;
+}
+
+.askAmy .amy img {
+  max-height: 55px;
+}
+
+.askAmy .amyButtons {
+  float: right;
+}
+
+.askAmy .virtualAssistant {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.askAmy .virtualAssistant a {
+  padding: .25em 0;
+}
+
+.askAmy .cta {
+  display: block;
+}
+
+.askAmy .cta.omega a {
+  padding: 0.75em;
+}
+
+.askAmy .tooltip span.tooltip-text {
+  margin-left: -100px;
+}
+
+@media (max-width: 48em) {
+  .amy figure img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 40em) {
+
+}

@@ -1,0 +1,278 @@
+/* CSS originally pulled from Prod minified file clu-table.min.css */
+/* Changes have been made throughout the file, as well as additional CSS added */
+
+/* Filters */
+.clu-filter-wrapper {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.clu-filter-wrapper > ul > li {
+  width: 20%;
+  float: left;
+}
+.clu-filter-wrapper > ul > li:first-of-type {
+  width: 20%;
+}
+
+.clu-filter-wrapper .clu-filter-head {
+  float: left;
+}
+.clu-filter-wrapper .clu-filter {
+  position: relative;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+}
+
+.clu-filter-wrapper .clu-filter > span {
+    display: block;
+    width: 100%;
+    padding: 0.25em;
+}
+
+.clu-filter-wrapper .clu-filter:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: "FontAwesome";
+  color: #333;
+  background: #bdbdbd;
+  content: "\f078";
+  padding: .325em;
+  pointer-events: none;
+}
+
+.clu-filter-wrapper .js-active.clu-filter:after {
+  content: "\f077";
+}
+
+.clu-filter-wrapper .clu-filter.js-last {
+  margin-left: 2%;
+}
+
+.clu-filter-wrapper .clu-filters {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  height: 200px;
+  overflow: scroll;
+  display: none;
+  z-index: 1;
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+}
+
+.clu-filter-wrapper .clu-filters li {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+  padding: 0 0.5em;
+}
+.clu-filter-wrapper .clu-filters li:nth-of-type(even) {
+  background: #efefef;
+}
+.clu-filter-wrapper .clu-filters li:nth-of-type(odd) {
+
+}
+
+.clu-filter-wrapper .clu-filters label {
+  width: 80%;
+  display: inline-block;
+  padding: 0.5em 0;
+}
+
+.clu-filter-wrapper .clu-filter-footer {
+  position: absolute;
+  top: 223px;
+  left: 0;
+  width: 100%;
+  background: #e2e2e2;
+  display: none;
+  padding: .5em;
+}
+
+.clu-filter-wrapper .clu-filter.js-active .clu-filter-footer {
+  display: inline-block;
+}
+
+.clu-filter-wrapper .clu-filter.js-active .clu-filters {
+  display: block;
+}
+
+@media (max-width: 48em) {
+  .clu-filter-wrapper > ul > li {
+    width: 39%;
+  }
+}
+
+@media (max-width: 40em) {
+  .clu-filter-wrapper > ul > li {
+    width: 80%;
+    float: right;
+  }
+  .clu-filter-wrapper .clu-filter {
+    margin-bottom: 0.5em;
+  }
+}
+
+.clu .sticky.js-sticky {
+  background: #4997dc;
+}
+
+.clu .change-location {
+  text-align: right;
+  background: #fff;
+}
+.clu .js-sticky-past {
+  display: none;
+}
+.whiteCTA a {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #0252a1;
+  color: #0252a1;
+}
+.whiteCTA a:active {
+  background-color: #0052a1;
+  color: #fff;
+}
+@media (max-width: 48em) {
+  .clu .sticky {
+    width: 95vw;
+  }
+  .clu fieldset.channel-search {
+    min-width: 0;
+    width: 50%;
+  }
+  .clu .change-location {
+    background: transparent;
+  }
+}
+
+.clu [class*="icon-"].cta {margin-right: 0;}
+.clu .loading-content{margin:0 auto 0 auto;text-align:center}
+.clu .loading-content img{margin:0 auto;display:block}
+.clu .loading-content .text{margin:200px 0 200px 0}
+.clu .loading-error-content{display:none}
+.clu .location{padding:0.5em 1em; float: right; background: #fff;}
+@media (max-width:48em) {.clu .location{text-align: center; width: 100%; background: transparent;}}
+@media(max-width:40em){.clu .location{float: none; text-align: center; background: transparent;}}
+.clu .channel-search { margin-top: 0;}
+.clu .your-location { display: inline-block; margin-right: 1em;}
+.clu .your-location img {display: inline; vertical-align: middle;}
+.clu .box .table-input{border-right:1px solid #a4a8ab;padding-right:2em}
+.clu .box .table-input .table-filter-input{width:70%;margin-left:2em}
+.clu .box .channel-search .table-input{margin-top:2em}
+.clu .pdf-before>img{height:1em;width:1em}
+.clu table{width:100%;text-align:center;border-collapse:collapse}
+@media(max-width:40em){.clu table{font-size:10px;font-size:1rem}
+}
+.clu table th,.clu table td{border:1px solid #b4d6f3}
+.clu table thead{display:table;width:100%;background-color:#4596df}
+.clu table thead tr{display:table-row;width:100%}
+.clu table thead th{width:17.25%;padding:1em;color:white;font-weight:100}
+@media(max-width:40em){.clu table thead .cta a {padding: 10%;}}
+@media(max-width:40em){.clu table thead th { width: 16%;}}
+.clu table .channelNumber {width: 5%;padding: 0;}
+@media(max-width:40em){.clu table .channelNumber {width: 10%;}}
+.clu table thead th.channels{width:26%}
+@media(max-width:40em){.clu table thead th{padding-top:.5em;padding-right:0;padding-bottom:.5em;padding-left:.5em}
+}
+.clu table.packages-7 thead th{width:10.5%}
+@media(max-width:40em){.clu table.packages-7 thead th{width:11.1%}
+}
+.clu table.packages-7 thead th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-7 thead th.channels{width:22%}
+}
+.clu table.packages-6 thead th{width:12.33%}
+@media(max-width:40em){.clu table.packages-6 thead th{width:13%}
+}
+.clu table.packages-6 thead th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-6 thead th.channels{width:22%}
+}
+.clu table.packages-5 thead th{width:14.8%}
+@media(max-width:40em){.clu table.packages-5 thead th{width:15.6%}
+}
+.clu table.packages-5 thead th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-5 thead th.channels{width:22%}
+}
+.clu table.packages-3 thead th{width:24.6%}
+@media(max-width:40em){.clu table.packages-3 thead th{width:26%}}
+.clu table.packages-3 thead th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-3 thead th.channels{width:22%}
+}
+.clu table tbody{display:block;width:100%;overflow:hidden;max-height:500px;}
+
+.clu table tbody tr{display:table;width:100%;background:white}
+.clu table thead tr { text-align: center; }
+.clu table thead tr > td {background-color:#fff; text-align: center; padding: 0.5em;}
+@media(max-width:40em){.clu table thead tr > td {padding: 0;}}
+
+.clu table thead tr > td:nth-of-type(even){background-color:#e7f2fb}
+.clu table tbody tr>:nth-child(odd){background-color:#fff;}
+.clu table tbody tr>:nth-child(even){background-color:#e7f2fb}
+.clu table tbody th{padding:1em}
+.clu table th.channelNumber{padding:0;}
+.clu table tbody th.channels, .clu table thead td.channels{width:26%;text-align:left;background-color:#e7f2fb}
+.clu table tbody th.channels img{vertical-align:bottom;max-width:5em;max-height:2em}
+.clu table tbody th .channel-name{color:#333}
+.clu table tbody th .table-content{color:#4596df}
+@media(max-width:40em){.clu table tbody th{padding-top:.5em;padding-right:.5em;padding-bottom:.5em;padding-left:.5em}
+.clu table tbody th .channel-logo{display:none}
+}
+.clu table tbody th .channel-logo{display:none}
+.clu table tbody td{width:17.25%;padding:.5em;color:#4596df;font-size:1.5em}
+@media(max-width:40em){.clu table tbody td{width: 16%;}}
+.clu table tbody td .channel-name{color:#333}
+.clu table tbody td .table-content{color:#4596df}
+@media(max-width:40em){.clu table tbody td{padding-top:.5em;padding-right:.5em;padding-bottom:.5em;padding-left:.5em}
+.clu table tbody td .channel-logo{display:none}
+}
+.clu table.packages-7 tbody td{width:10.5%}
+@media(max-width:40em){.clu table.packages-7 tbody td{width:11.1%}
+}
+.clu table.packages-7 tbody th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-7 tbody th.channels{width:22%}
+}
+.clu table.packages-6 tbody td{width:12.33%}
+@media(max-width:40em){.clu table.packages-6 tbody td{width:13%}
+}
+.clu table.packages-6 tbody th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-6 tbody th.channels{width:22%}
+}
+.clu table.packages-5 tbody td{width:14.8%}
+@media(max-width:40em){.clu table.packages-5 tbody td{width:15.6%}
+}
+.clu table.packages-5 tbody th.channels{width:26%}
+@media(max-width:40em){.clu table.packages-5 tbody th.channels{width:22%}
+}
+.clu table.packages-3 tbody td{width:24.6%}
+@media(max-width:40em){.clu table.packages-3 tbody td{width:26%}
+}
+.clu table.packages-3 tbody.channels{width:26%}
+@media(max-width:40em){.clu table.packages-3 tbody.channels{width:22%}
+}
+.clu .table-footer{display:block;margin-top:1em}
+.clu .channel-logo{margin-right:.5em}
+.clu .loading-content{margin:0 auto;text-align:center}
+.clu .loading-content img{margin:0 auto;display:block}
+.clu .loading-content .text{margin:200px 0}
+.clu .loading-error-content{display:none}
+.clu table thead{display:table;width:100%;background-color:#4997dc}
+.clu .table-legend{max-width:33%}
+.clu .table-legend table thead th{padding:.5em}
+.clu .table-legend table tbody th{padding:.25em}
+.clu .table-legend table tbody td{padding:0}
+.clu-wrapper .clu .box{margin:2em 0}
+.clu-wrapper .clu .link .tune-in-link{margin:2em 0;padding-bottom:2em}
+@media(max-width:48em){.clu .box .table-input{border:0}
+}
+.clu table tbody.showAll{max-height:none}
+.clu .table-footer .less:before,.clu .table-footer .less:after{display:inline-block;-webkit-transform:rotate(-180deg);-moz-transform:rotate(-180deg);-o-transform:rotate(-180deg);-ms-filter:"progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180deg), M12=-sin(-180deg), M21=sin(-180deg), M22=cos(-180deg))";filter:progid:DXImageTransform.Microsoft.Matrix(sizingMethod = 'auto expand',M11 = cos(-180deg),M12 = -sin(-180deg),M21 = sin(-180deg),M22 = cos(-180deg))}
+.clu .ie-only-table-wrapper table tbody{display:block;width:100%;max-height:none;overflow:hidden}
+.clu .ie-only-table-wrapper{max-height:500px;overflow:hidden}
+.clu .ie-only-table-wrapper.showAll{max-height:none}
+.clu .table-footer .less:before,.clu .table-footer .less:after{-ms-transform:rotate(-180deg)}

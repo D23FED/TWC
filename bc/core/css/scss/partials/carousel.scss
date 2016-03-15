@@ -1,0 +1,203 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Carousel -- Version: 1.9.0.0 - Updated: 9/26/2013
+   ========================================================================== */
+
+.three-up-carousel {
+  visibility: hidden;    // Framework
+  // color: $text;    // Theme
+  .slide {
+    position: relative;    // Framework
+    width: 310px;    // Framework
+    height: 175px;    // Framework
+    img {
+      position: relative;    // Framework
+      width: 310px;    // Framework
+      height: 175px;    // Framework
+    }
+  }
+  .text-only:nth-child(5),
+  .text-only:nth-child(8) {
+    border-left: 1px solid #c2c2c2;    // Framework
+    border-right: 1px solid #c2c2c2;    // Framework
+  }
+  .slider-wrapper {
+    position: relative;    // Framework
+    margin: 0 auto 60px;    // Framework
+    padding: 0;    // Framework
+    *zoom: 1;    // Framework
+    img {
+      display: block;    // Framework
+      max-width: 100%;    // Framework
+    }
+    .slider-pager, .slider-controls-auto {
+      position: absolute;    // Framework
+      bottom: -30px;    // Framework
+      width: 100%;    // Framework
+    }
+    .slider-pager {
+      padding-top: 20px;    // Framework
+      @include font-size(8.5);    // Framework
+      font-family: Arial;    // Framework
+      font-weight: bold;    // Framework
+      color: #666;    // Framework
+      text-align: center;    // Framework
+      .slider-pager-item {
+        display: inline-block;    // Framework
+        *zoom: 1;    // Framework
+        *display: inline;    // Framework
+      }
+    }
+    .slider-controls-auto .slider-controls-auto-item {
+      display: inline-block;    // Framework
+      *zoom: 1;    // Framework
+      *display: inline;    // Framework
+    }
+    .slider-pager.slider-default-pager a {
+      position: relative;    // Framework
+      background: #666;    // Framework
+      text-indent: -9999px;    // Framework
+      display: block;    // Framework
+      width: 10px;    // Framework
+      height: 10px;    // Framework
+      margin: 0 5px;    // Framework
+      outline: 0;    // Framework
+      border-radius: 5px;    // Framework
+      z-index: 0;    // Framework
+      &:hover, &.active {
+        background: #000;    // Framework
+      }
+    }
+    .slider-prev {
+      left: 0;    // Framework
+      background: url(/TWC/bc/core/images/carousel--controls.png) no-repeat 0 -53px;    // Framework
+    }
+    .slider-next {
+      right: 0;    // Framework
+      background: url(/TWC/bc/core/images/carousel--controls.png) no-repeat -28px -53px;    // Framework
+    }
+    .slider-prev:hover {
+      background-position: 0 2px;    // Framework
+    }
+    .slider-next:hover {
+      background-position: -28px 2px;    // Framework
+    }
+    .slider-controls-direction a {
+      position: absolute;    // Framework
+      top: 50%;    // Framework
+      margin-top: -32px;    // Framework
+      outline: 0;    // Framework
+      width: 27px;    // Framework
+      height: 60px;    // Framework
+      text-indent: -9999px;    // Framework
+      z-index: 9999;    // Framework
+      &.disabled {
+        display: none;    // Framework
+      }
+    }
+    .slider-controls-auto {
+      text-align: center;    // Framework
+      .slider-start {
+        display: block;    // Framework
+        text-indent: -9999px;    // Framework
+        width: 10px;    // Framework
+        height: 11px;    // Framework
+        outline: 0;    // Framework
+        background: url(../img/controls.png) -86px -11px no-repeat;    // Framework
+        margin: 0 3px;    // Framework
+        &:hover, &.active {
+          background-position: -86px 0;    // Framework
+        }
+      }
+      .slider-stop {
+        display: block;    // Framework
+        text-indent: -9999px;    // Framework
+        width: 9px;    // Framework
+        height: 11px;    // Framework
+        outline: 0;    // Framework
+        background: url(../img/controls.png) -86px -44px no-repeat;    // Framework
+        margin: 0 3px;    // Framework
+        &:hover, &.active {
+          background-position: -86px -33px;    // Framework
+        }
+      }
+    }
+    .slider-controls.slider-has-controls-auto.slider-has-pager {
+      .slider-pager {
+        text-align: left;    // Framework
+        width: 80%;    // Framework
+      }
+      .slider-controls-auto {
+        right: 0;    // Framework
+        width: 35px;    // Framework
+      }
+    }
+  }
+  &.vertical {
+    .slider-wrapper {
+      .slider-prev {
+        height: 27px;    // Framework
+        width: 57px;    // Framework
+        margin: 0;    // Framework
+        margin-left: -32px;    // Framework
+        top: 0;    // Framework
+        left: 50%;    // Framework
+        background: url(/TWC/bc/core/images/carousel--controls-vertical.png) no-repeat -50px 0;    // Framework
+      }
+      .slider-next {
+        height: 27px;    // Framework
+        width: 57px;    // Framework
+        margin: 0;    // Framework
+        margin-top: -27.5px;    // Framework
+        margin-left: -32px;    // Framework
+        top: 100%;    // Framework
+        bottom: 0;    // Framework
+        left: 50%;    // Framework
+        background: url(/TWC/bc/core/images/carousel--controls-vertical.png) no-repeat -50px -28px;    // Framework
+      }
+    }
+    .slider-prev:hover {
+      background-position: 5px 0;    // Framework
+    }
+    .slider-next:hover {
+      background-position: 5px -28px;    // Framework
+    }
+  }
+
+  @media (max-width: $medium) {
+
+    .slider-wrapper {
+      max-width: 645px;    // Framework
+    }
+    .text-only:nth-child(5) {
+      border: none;    // Framework
+    }
+    .text-only:nth-child(8) {
+      border-right: none;    // Framework
+    }
+    .text-only:nth-child(4),
+    .text-only:nth-child(6),
+    .text-only:nth-child(8) {
+      border-left: 1px solid #c2c2c2;    // Framework
+    }
+  }
+
+  @media (max-width: 44.125em) {
+    .slider-wrapper {
+      max-width: 310px;    // Framework
+    }
+    .slide {
+      margin: 0;    // Framework
+      img {
+        margin: 0;    // Framework
+      }
+    }
+    .text-only:nth-child(4),
+    .text-only:nth-child(6),
+    .text-only:nth-child(8) {
+      border-left: none;    // Framework
+    }
+  }
+}

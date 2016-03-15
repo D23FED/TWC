@@ -1,0 +1,13 @@
+/* ==========================================================================
+   CSS code for LOB Topic Details
+   Version: 1.0.0 - Updated: 10/1/13
+   ========================================================================== */
+
+	.infobox {
+		background-color: #dbe7f1;
+		padding: 1em;
+		overflow: auto;
+		margin: 1em 0;
+		position: relative }
+
+	.sidebar-section { padding: 1em 0;}

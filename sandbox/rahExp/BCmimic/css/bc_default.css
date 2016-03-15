@@ -1,0 +1,384 @@
+/*************************************
+ * bc_default.css
+ * 9-28-15
+ * Raymond Heredia
+ * 
+ * This is the default styling for a simplified non-authored version of TWC BC.  I am mimicking what is publicly accessible to see how much lighter BC can be with the same information.  Some of the existing pages are much heavier than they need to be.  I am using this as a gauge to know how it comes out the other side.
+ * 
+ */
+body {
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif,Arial,sans-serif;
+	font-size:1em;
+}
+
+/** HEADER **/
+.tophat {
+	background:#000000;
+}
+.tophat ul {
+	list-style-type:none;
+	padding:0.5em 0 0 0;
+	margin:0 auto;
+	font-size:1.3em;
+}
+.tophat ul li {
+	display:inline;
+}
+.tophat ul li a {
+	padding:0.5em;
+	color:#CFD8E1;
+	display:block;
+	float:left;
+}
+.tophat ul li a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+.tophat ul li a.active {
+	background: #d0d6dd none repeat scroll 0 0 padding-box;
+    border-left: 1px solid #4d4f53;
+    border-radius: 5px 5px 0 0;
+    border-right: 1px solid #4d4f53;
+    border-top: 1px solid #4d4f53;
+    box-shadow: none;
+    color:#292929;
+}
+.secondary {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0d6dd+0,ffffff+42,ffffff+100 */
+	background: #d0d6dd; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d0d6dd 0%, #ffffff 30%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0d6dd), color-stop(30%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d0d6dd 0%,#ffffff 30%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d0d6dd 0%,#ffffff 30%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d0d6dd 0%,#ffffff 30%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #d0d6dd 0%,#ffffff 30%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0d6dd', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.secondary > div {
+	padding:0;
+}
+.secondary ul {
+	float:right;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.secondary i {
+	font-size:2em;
+	padding-bottom:5px;
+	color:#7F9DB5;
+}
+.secondary ul li a {
+	cursor:pointer;
+	text-align:center;
+	color:#334458;
+}
+.secondary ul li a:hover {
+	text-decoration:none;
+}
+.secondary ul li a:hover i {
+	color:#9FB5C7;
+}
+.secondary .glyphicon-map-marker {
+	color:#EB1C23;
+}
+.secondary ul li a:hover .glyphicon-map-marker {
+	color:#EF5459;
+}
+.secondary ul li a > span {
+	clear:both;
+	display:block;
+	width:100%;
+	text-align:center;
+}
+.secondary ul li {
+	font-size:1.3em;
+	display:inline-block;
+	padding:1em;
+}
+h1 {
+	margin:0;
+	padding:0.3em;
+	float:left;
+}
+h1 a {
+	width:215px;
+	height:57px;
+	background:url("../img/twc-logo-business.png") no-repeat transparent;
+	display:block;
+}
+h1 span {
+	display:none;
+}
+.main {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ced1d5+100,d0d6dd+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ced1d5 100%, #d0d6dd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ced1d5), color-stop(100%,#d0d6dd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ced1d5 100%,#d0d6dd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ced1d5 100%,#d0d6dd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ced1d5 100%,#d0d6dd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#ced1d5 100%,#d0d6dd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d0d6dd',GradientType=0 ); /* IE6-9 */
+	border-top:1px solid #cacbce;
+}
+/** FOOTER **/
+.social {
+	background-color:#E7EBEF;
+	border-top:1px solid #cacbce;
+	border-bottom:1px solid #cacbce;
+}
+.social ul {
+	list-style-type: none;
+	text-align:center;
+	padding: 10px 0;
+	margin:0;
+}
+.social li {
+	display:inline-block;
+	font-size: 1em;
+	margin-left: 10px;
+}
+.social a {
+	padding-left:23px;
+	display:block;
+	min-height:18px;
+	font-size:1.2em;
+	background:url("../img/social-icons.png") no-repeat;
+	color:#646464;
+}
+.social .facebook {background-position:0 0}
+.social .linkedin {background-position:0 -28px}
+.social .youtube {background-position:0 -56px}
+.social .twitter {background-position:0 -84px}
+.social .untangled {background-position:0 -112px}
+.social .google {background-position:0 -140px}
+.social .slideshare {background-position:0 -168px}
+.links {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f8+0,ffffff+100 */
+	background: rgb(247,247,248); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(247,247,248,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,247,248,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(247,247,248,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(247,247,248,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(247,247,248,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(247,247,248,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.links {
+	padding:10px 0;
+}
+.links ul {
+	list-style-type:none;
+	padding:0;
+	font-size:1.2em;
+}
+.links a {
+	color:#646464;
+}
+.links a:hover,
+.social a:hover {
+	color:#3376b2;
+}
+h6 {
+	font-weight:bold;
+}
+.toe {
+	background:url("../img/hr-shadow.png") no-repeat top center;
+}
+.toe ul {
+	list-style-type:none;
+	padding:20px 0;
+	margin:0;
+	text-align:center;
+}
+.toe p {
+	text-align:center;
+	font-size:1.2em;
+}
+.toe li {
+	display:inline;
+	border-left:1px solid #646464;
+	padding:0 10px;
+	font-size:1.2em;
+}
+.toe li:first-child {
+	border:none;
+}
+.toe a {
+	color:#646464;
+}
+.toe a:hover {
+	color:#3376b2;
+}
+.primary {
+	list-style:none;
+	margin:0 auto;
+	display:table;
+	position:relative;
+}
+.primary > li {
+	display:table-cell;
+	text-align:center;	
+	border:none;
+	border-left:1px solid #cacbce;
+}
+.primary > li:last-child {
+	border-right:1px solid #cacbce;
+}
+.primary > li:hover {
+	border-left:1px solid #cacbce;
+}
+.primary > li a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.3em; 
+	color: #000;
+	display:block;
+	outline:0;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:0.75em 1.3em;
+}
+.primary > li:hover a {
+	color:#FFF;
+	background:#343B46;
+}
+.primary > li > section {
+	margin:0 auto;
+	float:left;
+	position:absolute;
+	left:-999em; /* Hides the drop down */
+	text-align:left;
+	padding:0.75em 1.3em;
+	border:1px solid #cacbce;
+	border-top:none;
+	-webkit-box-shadow: -4px 12px 8px 0px rgba(0,0,0,0.22);
+	-moz-box-shadow: -4px 12px 8px 0px rgba(0,0,0,0.22);
+	box-shadow: -4px 12px 8px 0px rgba(0,0,0,0.22);
+}
+.primary > li:hover > section {
+	left:16px;
+	top:auto;
+	z-index:1;
+	min-height: 300px;
+}
+.primary > li > section a {
+	color:#3376b2;
+}
+.primary > li > section a:hover {
+	text-decoration:underline;
+}
+.primary > li > section h3 {
+	text-transform:uppercase;
+	font-size:1.7em;
+}
+.primary > li > section li {
+	padding:8px 0;
+}
+.primary .edge {
+	border-left: 1px solid #E2E4E3; 
+}
+.primary .menu_right {
+	float:right;
+	margin-right:0px;
+}
+.primary > li:hover .align_right {
+	left:auto;
+	right:-1px;
+	top:auto;
+}
+.primary > li:hover ul {
+	list-style-type:none;
+}
+.primary > li:hover section a {
+	width:auto;
+	display:inline;
+	padding:0;
+	text-transform:none;
+	background:none;
+	color:#3376b2;
+}
+.primary h2 {
+	color:#F19E17;
+	font-size:2.7em;
+	font-weight:bold;
+}
+.primary p {
+	font-size:1.5em;
+}
+.services {
+	background:url("../img/bgServices.jpg") no-repeat -22px bottom #FFF;
+	padding-bottom:20px !important;
+}
+.primary section ul {
+	padding:0;
+}
+.solutions p {
+	margin-top:30px;
+	margin-bottom:0;
+}
+.solutions h2 {
+	margin-top:0;
+	color:#72AB3D;
+}
+.services .nudge {
+	margin-top:116px;
+}
+.resources .nudge,
+.partners .nudge,
+.myAccount .nudge,
+.support .nudge {
+	margin-top:20px;
+}
+.solutions {
+	background:url("../img/bgSolutions.jpg") no-repeat left bottom #FFF;
+	padding-bottom:20px !important;
+}
+.resources {
+	background:url("../img/bgResources.jpg") no-repeat left bottom #FFF;
+	padding-bottom:20px !important;
+}
+.partners {
+	background:url("../img/bgPartners.jpg") no-repeat left bottom #F4F4F4;
+	padding-bottom:20px !important;
+}
+.myAccount {
+	background:url("../img/bgAccount.jpg") no-repeat right bottom #FFF;
+	padding-bottom:20px !important;
+}
+.support {
+	background:url("../img/bgSupport.jpg") no-repeat right bottom #FFF;
+	padding-bottom:20px !important;
+}
+.resources > div:nth-child(2),
+.partners > div:nth-child(2) {
+	margin-top:30px;
+}
+.resources li, .partners li {
+	padding-bottom:1.3em;
+}
+/*.primary .resourceTab {
+	position:relative;
+}
+.primary .resourceTab:hover > section {
+	left:-1px;
+}*/
+.primary blockquote {
+	border:none;
+}
+.primary blockquote:before {
+	content: "“";
+    font-size: 50px;
+    font-style: normal;
+    margin-left: -21px;
+    margin-top: -15px;
+    position: absolute;
+}
+.primary blockquote:after {
+    content: "”";
+    font-size: 50px;
+    font-style: normal;
+    margin-left: 6px;
+    margin-top: -15px;
+    position: absolute;
+}

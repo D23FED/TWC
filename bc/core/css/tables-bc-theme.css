@@ -1,0 +1,48 @@
+/* ==========================================================================
+    Tables -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+table.checkboxTables tr:nth-of-type(odd) td {
+  background: #fff;
+}
+table.checkboxTables tr:nth-of-type(even) {
+  background: #f7f8fc;
+}
+table.checkboxTables tr:last-of-type {
+  border-bottom: 1px solid #e1e1e1;
+}
+table.checkboxTables th {
+  border-radius: 5px 5px 0 0;
+  background-color: #6f93af;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6f93af), to(#59768d));
+  background-image: -webkit-linear-gradient(top, #6f93af, #59768d);
+  background-image: -moz-linear-gradient(top, #6f93af, #59768d);
+  background-image: -ms-linear-gradient(top, #6f93af, #59768d);
+  background-image: -o-linear-gradient(top, #6f93af, #59768d);
+  background-image: linear-gradient(top, #6f93af, #59768d);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f93af', EndColorStr='#59768d')"; */
+  color: white;
+}
+table.checkboxTables td {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #5a5a5a;
+}
+table.checkboxTables td.row-title {
+  background: #c3d6e7;
+}
+
+@media (max-width: 40em) {
+  table.checkboxTables tr.column-title td {
+    background-color: #6f93af;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6f93af), to(#59768d));
+    background-image: -webkit-linear-gradient(top, #6f93af, #59768d);
+    background-image: -moz-linear-gradient(top, #6f93af, #59768d);
+    background-image: -ms-linear-gradient(top, #6f93af, #59768d);
+    background-image: -o-linear-gradient(top, #6f93af, #59768d);
+    background-image: linear-gradient(top, #6f93af, #59768d);
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f93af', EndColorStr='#59768d')"; */
+    color: white;
+    font-weight: 700;
+    width: 100%;
+  }
+}

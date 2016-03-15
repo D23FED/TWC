@@ -1,0 +1,116 @@
+/*************************************
+ * default.css
+ * 2-23-2016
+ * Raymond Heredia
+ * 
+ * All classes will have .pre as a namespace.  These are the default styles for the prechat form
+ * 
+ */
+body {
+	background:rgba(0,0,0,.5);
+}
+br.clear {
+	clear: both;
+	overflow:hidden;
+	visibiprey:hidden;
+	display:block;
+	width:100%
+}
+br.clear:after {
+	content:".";
+	color:transparent;
+}
+.pre {
+	width:460px;
+	background:#FFF;
+	margin:auto;
+	padding:40px;
+	font-family:Arial, Helvetica, sans-serif;
+	position:relative;
+	margin:40px auto 0 auto;
+	border-radius:3px;
+}
+.pre h2 {
+	font-size:1.7em;
+	color:#444;
+}
+.pre sup {
+	color:red;
+}
+.pre p {
+	position:absolute;
+	right:40px;
+	top:40px;
+}
+.pre a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#35668f;
+}
+.pre ul {
+	margin-top:20px;
+}
+.pre li {
+	margin-bottom:20px;
+}
+.pre li:last-child {
+	margin-bottom:0;
+}
+.pre form {
+	padding:20px 0;
+}
+.pre form fieldset > input {
+	display:table-cell;
+}
+.pre form input[type="checkbox"] {
+	display: none;
+}
+.pre form label {
+	cursor:pointer;
+	margin-left:0;
+	margin-bottom:5px;
+	display:block;
+	line-height: 1.4em;
+}
+input[type="checkbox"] + label span {
+    background:url("../img/checkbox.png") no-repeat left top;
+}
+input[type="checkbox"]:checked + label span {
+    background:url("../img/checkbox.png") no-repeat left -37px;
+}
+.pre form input[type="text"], textarea {
+	font-weight:100;
+	margin:0 10px 20px 0;
+	float:left;
+	border:1px solid #cecece;
+	border-radius:3px;
+	padding:5px 7px;
+	width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+}
+.pre form input[type="submit"]  {
+	margin:20px 0;
+	padding:10px 15px;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+	border-radius:3px;
+	cursor:pointer;
+	background: rgb(46,122,184); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(46,122,184,1) 0%, rgba(0,67,128,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(46,122,184,1) 0%,rgba(0,67,128,1) 100%);
+	background: linear-gradient(to bottom,  rgba(46,122,184,1) 0%,rgba(0,67,128,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e7ab8', endColorstr='#004380',GradientType=0 );
+}
+.pre select {
+	margin:5px 0 20px;
+	width:100%;
+}
+.pre .box {
+	display:none;
+}
+.pre ._50 {
+	width:50%;
+	float:left;
+}

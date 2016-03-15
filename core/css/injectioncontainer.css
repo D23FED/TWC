@@ -1,0 +1,9 @@
+/* ==========================================================================
+    Injection Container  -- Version: 1.0.0 - Updated: 7/14/2014
+   ========================================================================== */
+.injectioncontainerwrapper {
+  border: dashed 2px red;
+  overflow: scroll;
+  width: 100%;
+  min-height: 100%;
+}

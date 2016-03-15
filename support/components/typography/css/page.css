@@ -1,0 +1,111 @@
+.tempClass h1, .tempClass .h1 {
+  font-family: "TWC Round Light";
+  font-size: 4.6rem;
+  font-size: 46px;
+}
+.tempClass h2, .tempClass .h2 {
+  font-family: "TWC Round Light";
+  font-size: 3.6rem;
+  font-size: 36px;
+}
+.tempClass h3, .tempClass .h3  {
+  font-family: "TWC Round Light";
+  font-size: 3.0rem;
+  font-size: 30px;
+}
+.tempClass h4, .tempClass .h4  {
+  font-family: "TWC Round Light";
+  font-size: 2.4rem;
+  font-size: 24px;
+}
+.tempClass h5, .tempClass .h5  {
+  font-family: "TWC Round Light";
+  font-size: 2.0rem;
+  font-size: 20px;
+}
+.tempClass h6, .tempClass .h6  {
+  font-family: "TWC Round Book";
+  font-size: 2.0rem;
+  font-size: 20px;
+}
+.tempClass .h7 {
+  font-family: "TWC Round Book";
+  font-size: 1.8rem;
+  font-size: 18px;
+}
+
+@media (max-width: 48em) {
+  .tempClass h1, .tempClass .h1 {
+    font-family: "TWC Round Light";
+    font-size: 3.6rem;
+    font-size: 36px;
+  }
+  .tempClass h2, .tempClass .h2 {
+    font-family: "TWC Round Light";
+    font-size: 3.2rem;
+    font-size: 32px;
+  }
+  .tempClass h3, .tempClass .h3  {
+    font-family: "TWC Round Light";
+    font-size: 2.6rem;
+    font-size: 26px;
+  }
+  .tempClass h4, .tempClass .h4  {
+    font-family: "TWC Round Light";
+    font-size: 2.1rem;
+    font-size: 21px;
+  }
+  .tempClass h5, .tempClass .h5  {
+    font-family: "TWC Round Light";
+    font-size: 2.0rem;
+    font-size: 20px;
+  }
+  .tempClass h6, .tempClass .h6  {
+    font-family: "TWC Round Book";
+    font-size: 2.0rem;
+    font-size: 20px;
+  }
+  .tempClass .h7 {
+    font-family: "TWC Round Book";
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 40em) {
+  .tempClass h1, .tempClass .h1 {
+    font-family: "TWC Round Light";
+    font-size: 3.5rem;
+    font-size: 35px;
+  }
+  .tempClass h2, .tempClass .h2 {
+    font-family: "TWC Round Light";
+    font-size: 2.7rem;
+    font-size: 27px;
+  }
+  .tempClass h3, .tempClass .h3  {
+    font-family: "TWC Round Light";
+    font-size: 2.2rem;
+    font-size: 22px;
+  }
+  .tempClass h4, .tempClass .h4  {
+    font-family: "TWC Round Light";
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+  .tempClass h5, .tempClass .h5  {
+    font-family: "TWC Round Light";
+    font-size: 2.0rem;
+    font-size: 20px;
+  }
+  .tempClass h6, .tempClass .h6  {
+    font-family: "TWC Round Book";
+    font-size: 2.0rem;
+    font-size: 20px;
+  }
+  .tempClass .h7 {
+    font-family: "TWC Round Book";
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+}

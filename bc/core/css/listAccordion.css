@@ -1,0 +1,29 @@
+/* ==========================================================================
+    List Accordion -- Version: 1.9.0.4 - Updated: 12/31/2013
+   ========================================================================== */
+.listAccordion .listAccordionItem {
+  cursor: pointer;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  padding-top: 0.75em;
+  padding-right: 0;
+  padding-bottom: 0.75em;
+  padding-left: 0;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title a:after {
+  content: "\f107";
+  padding-left: .5em;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title.active a:after, .listAccordion .listAccordionItem .listAccordionItem-title.js-active a:after {
+  content: "\f106";
+}
+.listAccordion .listAccordionItem .listAccordionItem-title.empty a:after {
+  content: none;
+}
+.listAccordion .details {
+  display: none;
+  margin-top: .5em;
+}

@@ -1,0 +1,25 @@
+/* ==========================================================================
+    My Move -- Version: 1.0.0.0 - Updated: 1/2/14
+   ========================================================================== */
+   
+.twc-banner {
+	background-image: url('../images/my-move-bnr-new.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 290px;
+}
+	
+.zip-input { 
+	display: inline-block;
+	padding-right: 1em; }
+
+.contact-form { display: none; }
+
+@media (max-width: 31.25em) {
+
+  .zip-input { 
+	  display: block;
+    padding-right: 0; 
+  }
+   		
+}

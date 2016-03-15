@@ -1,0 +1,102 @@
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 3/6/2014
+   ========================================================================== */
+.upsell {
+  width: 100%;
+  padding: 2em 1.5em 1.5em;
+  background: #2c89ce;
+  position: relative;
+}
+.upsell .blue {
+  color: #185ea3;
+}
+.upsell .upsell-content-teaser {
+  cursor: pointer;
+}
+.upsell .close-button {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+.upsell .close-button.cta a {
+  padding: 0;
+}
+.upsell .close-button.cta a span {
+  color: #fff;
+}
+.upsell .close-button:hover span {
+  text-decoration: underline;
+}
+.upsell .twc-col2_4555-c0.parsys_column {
+  border-right: 1px solid #ccc;
+}
+.upsell .upsell-content-wrapper {
+  border-radius: 3px;
+  background: #fff;
+  padding: 1em;
+  position: relative;
+}
+.upsell .upsell-content-wrapper .upsell-content {
+  max-width: 85%;
+  display: inline-block;
+}
+.upsell .upsell-content-wrapper .upsell-content .pricing {
+  display: inline;
+  color: #185ea3;
+  margin: 0 .5em;
+}
+.upsell .upsell-content-wrapper .upsell-content .h2 {
+  margin-bottom: 0;
+}
+.upsell .upsell-content-wrapper .pricing .h4 span.dollars {
+  font-size: 44px;
+  font-size: 4.4rem;
+}
+.upsell .upsell-content-wrapper .pricing .h4 sup {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+.upsell .upsell-content-wrapper .upsell-content-expanded {
+  display: none;
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
+.upsell .upsell-content-wrapper .upsell-content-expanded .upsell-expanded-wrapper {
+  padding: 1em;
+}
+.upsell .upsell-content-wrapper .upsell-content-expanded .upsell-expanded-wrapper ul li {
+  list-style: disc;
+  margin-bottom: .5em;
+  padding-right: 1em;
+  color: #185ea3;
+}
+.upsell .upsell-content-wrapper .upsell-content-expanded .upsell-expanded-wrapper ul li span {
+  color: #333;
+}
+.upsell .upsell-content-wrapper .expandButton {
+  max-width: 15%;
+  display: inline-block;
+  margin-right: 0;
+}
+.upsell .upsell-content-wrapper .expandButton:hover span {
+  text-decoration: underline;
+}
+.upsell .upsell-content-wrapper .expandButton:hover span:after {
+  text-decoration: none;
+}
+
+@media (max-width: 40em) {
+  .upsell .upsell-content-teaser {
+    display: inline-block;
+  }
+  .upsell .upsell-content-wrapper .upsell-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .upsell .upsell-content-wrapper .expandButton {
+    max-width: 100%;
+    width: 100%;
+    text-align: right;
+  }
+}

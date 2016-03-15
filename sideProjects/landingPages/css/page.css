@@ -1,0 +1,143 @@
+.heroCarousel {
+  height: 100%;
+  display: none;
+}
+.heroCarousel .heroWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+}
+
+.heroCarousel .heroWrapper li {
+  position: absolute;
+  max-height: 300px;
+  max-width: 980px;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.heroCarousel .heroWrapper > ul > li {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  -ms-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.heroCarousel .heroWrapper > ul > li.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  -ms-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.heroCarousel .heroWrapper > ul > li .heroText {
+  position: absolute;
+  width: 50%;
+}
+
+.heroCarousel .heroWrapper > ul > li .heroText.topLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomLeft {
+  left: 5%;
+}
+
+.heroCarousel .heroWrapper > ul > li .heroText.topRight,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomRight {
+  right: 5%;
+}
+
+.heroCarousel .heroWrapper > ul > li .heroText.topLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.topRight {
+  top: 5%;
+}
+
+.heroCarousel .heroWrapper > ul > li .heroText.bottomLeft,
+.heroCarousel .heroWrapper > ul > li .heroText.bottomRight {
+  bottom: 5%;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons {
+  text-align: center;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons .iconWrapper {
+  display: table;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+  display: table-cell;
+  cursor: pointer;
+  text-align: center;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons span {
+  font-family: "TWC Round Book";
+  font-size: 100%;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons.active {
+  color: #2776b5;
+}
+
+.heroCarousel .heroIconWrapper .heroIcons .carouselIcons figure img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.heroCarousel .heroWrapper li figure img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.heroCarousel #heroCarouselPreview, .heroCarousel #heroCarouselNext {
+    display:none;
+}
+
+@media (max-width: 48em) {
+
+}
+
+@media (max-width: 40em) {
+  .heroCarousel #heroCarouselPreview {
+      float:left;
+  }
+  .heroCarousel #heroCarouselNext {
+      float:right;
+  }
+  .heroCarousel #heroCarouselPreview, .heroCarousel #heroCarouselNext {
+      display:inline;
+      margin-bottom: 26px;
+  }
+
+  .heroCarousel #heroCarouselPreview img, .heroCarousel #heroCarouselNext img {
+      cursor: pointer;
+  }
+  .heroCarousel .heroWrapper li {
+      max-height: none;
+  }
+  .heroCarousel .heroIconWrapper .heroIcons .carouselIcons {
+      width: 33%;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText {
+      text-align: center;
+      display: block;
+      width: 100%;
+      top: 65% !important;
+      right: 0 !important;
+  }
+  .heroCarousel .heroWrapper > ul > li .heroText p {
+      display: none;
+  }
+}

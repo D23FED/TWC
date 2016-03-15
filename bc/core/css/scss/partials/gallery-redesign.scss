@@ -1,0 +1,219 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Gallery -- Version: 1.0.0.0 - Updated: 2/20/2014
+   ========================================================================== */
+
+.gallery {
+  .bc-gallery-filter {
+    width: 23%;
+  }
+  .row-wrapper {
+    overflow: auto;
+  }
+  .twc-box-column .section-header span.h4 {
+    margin-left: 25px;
+    // padding-top: 1em;
+  }
+  a.view-all {
+    padding-left: 0.85em;
+  }
+  .gallery-header-container {
+    @include border-radius(3px 3px 0 0);
+    @include box-shadow();
+    & + .twc-box-column {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  .gallery-head {
+    padding: 1em;
+    @include background-gradient(#333534, #1a1b1f);
+    color: #fff;
+    border-radius: 3px 3px 0 0;
+  }
+  .gallery-subhead {
+    padding: 1em;
+    background: none repeat scroll 0 0 #E4E7EA;
+  }
+  .twc-box-column {
+    overflow: hidden;
+    box-shadow: none;
+    margin-bottom: 0;
+    @include padding(1em);
+    .showing {
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+  .asset-block {
+    width: 25%;
+    padding: 1em;
+    float: left;
+    // height: 525px;
+    // border-bottom: 1px dotted #d0cfcf;
+    &.three-up {
+      width: 33.3333333%;
+      &.news {
+        height: 250px;
+      }
+    }
+  }
+  .asset-container {
+    figure {
+      img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  .bc-content-gallery {
+    background: none;
+    color: #333;
+    overflow: hidden;
+  }
+  .bc-content-gallery h6 {
+    // max-height: 63px;
+    // min-height: 63px;
+    overflow: hidden;
+    // margin-bottom: 0.938em;
+    position: relative;
+  }
+  .bc-content-gallery p.content-type {
+    font-size: 1em;
+    color: #444;
+    text-transform: uppercase;
+    // max-height: 120px;
+  }
+  .bc-content-gallery p.content-intro {
+    // display: block;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: verticl;
+    // white-space: nowrap;
+    font-size: 1.063em;
+    color: #444;
+    // margin-bottom: 1.25em;
+    // max-height: 95px;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+  }
+  .pagination {
+    text-align: right;
+    padding-top: 0.75em;
+    padding-right: 2em;
+  }
+  .twc-box-column.filter {
+    padding: 1em 3em;
+    span.h4 {
+      margin: 0 0 1.25em 0;
+    }
+    label.filter {
+      display: block;
+      margin: 0 0 0.625em 0;
+    }
+  }
+  .bc-filter table tr td label ~ select {
+    margin-top: 0.313em;
+  }
+  .bc-filter {
+    background: #E4E4E6;
+    padding: 1em;
+    border-radius: 3px;
+  }
+  .bc-filter span.h4 {
+    margin-bottom: 1.563em;
+  }
+  .bc-filter table {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .bc-filter .submitButton .cta.gray.mobile-full {
+    margin-top: 1.7em;
+  }
+  .cta.gray.twc-icon-after.icon-angle-right.mobile-full span {
+    text-transform: uppercase;
+}
+  .cta.gray.mobile-full > a {
+    padding: 0.5em 1em;
+  }
+}
+
+@media (max-width: $medium) {
+
+  .gallery {
+    .asset-block {
+      width: 50%;
+      padding: 1em;
+      float: left;
+      // border-bottom: 1px dotted #d0cfcf;
+      // height: 540px;
+      &.three-up {
+        width: 50%;
+      }
+    }
+    .bc-content-gallery p.content-intro {
+      margin-top: 1.25em;
+    }
+    .bc-filter table tr td {
+      display: block;
+      float: left;
+      margin-top: 1em;
+      width: 50%;
+    }
+    .bc-filter td.submitButton {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $small) {
+
+  .gallery {
+    .asset-block {
+      width: 100%;
+      height: 100%;
+      figure img {
+        margin: 0 auto;
+      }
+      &.three-up {
+        width: 100%;
+      }
+      .asset-container {
+        float: left;
+        max-width: 48.75%;
+        margin: 0;
+      }
+      .asset-info {
+        float: right;
+        margin-left: 2.5%;
+        max-width: 48.75%;
+      }
+    }
+    .bc-content-gallery p.content-intro {
+      margin-top: 1.25em;
+      // max-height: 50px;
+    }
+    .bc-content-gallery h6 {
+      // max-height: 45px;
+      // min-height: 45px;
+      overflow: hidden;
+      // margin-bottom: 0.938em;
+      position: relative;
+    }
+    .pagination {
+      text-align: center;
+      padding: 0.75em, 0 0 0;
+    }
+    .bc-filter table tr td {
+      width: 100%;
+    }
+    .bc-filter td:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+}
+

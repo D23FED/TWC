@@ -1,0 +1,29 @@
+/* ==========================================================================
+    Wrapping Columns -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+.wrappingColumns li.heading h5 {
+  background-color: #eeeeef;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeef), to(#dddfe2));
+  background-image: -webkit-linear-gradient(top, #eeeeef, #dddfe2);
+  background-image: -moz-linear-gradient(top, #eeeeef, #dddfe2);
+  background-image: -ms-linear-gradient(top, #eeeeef, #dddfe2);
+  background-image: -o-linear-gradient(top, #eeeeef, #dddfe2);
+  background-image: linear-gradient(top, #eeeeef, #dddfe2);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeef', EndColorStr='#dddfe2')"; */
+}
+@media (max-width: 40em) {
+  .wrappingColumns ul li.heading.js-first {
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  .wrappingColumns ul li.heading h5:after {
+    font-family: "FontAwesome";
+  }
+  .wrappingColumns ul li.heading .expanded:after {
+    font-family: "FontAwesome";
+  }
+}

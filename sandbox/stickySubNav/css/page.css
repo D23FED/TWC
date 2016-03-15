@@ -1,0 +1,114 @@
+.styleguideNav {
+  border-radius: 0 0 3px 3px;  
+  opacity: 1;
+}
+.styleguideNav .sectionList {
+  display: table;
+  width: 100%;
+  border: #777;
+  padding: 1em; 
+  background: #383838;
+   -webkit-box-shadow: 0 2px 2px 0 #666;
+    -moz-box-shadow: 0 2px 2px 0 #666;
+    box-shadow: 0 2px 2px 0 #666;
+}
+.styleguideNav.sticky.unstuck .sectionList {
+  display: table !important;
+}
+
+.styleguideNav .sectionList li {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #777;
+  
+}
+.styleguideNav .sectionList li a {
+    color: #fff;
+    position: relative;
+}
+
+.styleguideNav .sectionList li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  transform: translateY(2px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+.styleguideNav .sectionList li a:hover::after,
+.styleguideNav .sectionList li a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.styleguideNav .sectionList li.js-last {
+  border-right: none;
+}
+.styleguideNav .expandNav {
+  display: none;
+}
+.styleguideNav .expandNav .expand-block {
+    background: #383838;
+    -webkit-box-shadow: 0 2px 2px 0 #666;
+    -moz-box-shadow: 0 2px 2px 0 #666;
+    box-shadow: 0 2px 2px 0 #666;
+    margin-top: -1px;
+    border-radius: 0px 0px 5px 5px; 
+    -moz-border-radius: 0px 0px 5px 5px; 
+    -webkit-border-radius: 0px 0px 5px 5px; 
+}
+.styleguideNav .expandNav .expand-block a {
+    color: #B2B2B2;
+    padding: 0.50em 1em;
+}
+/* Sticky Specific Styles*/
+.styleguideNav.js-sticky {
+  padding: 0;
+  background: transparent;
+  opacity: 0.9;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.styleguideNav.js-sticky .sectionList {
+  border-bottom: 1px solid #777;
+}
+.styleguideNav.js-sticky.js-collapsed .sectionList {
+  border-bottom: none;
+}
+.styleguideNav.js-sticky .expandNav {
+  display: block;
+}
+.styleguideNav.js-sticky .js-inactive {
+  display: none;
+}
+
+@media (max-width: 48em) {
+  .styleguideNav .sectionList {
+    display: inline-block;
+    padding: 0 1em;
+  }
+  .styleguideNav .sectionList li {
+    display: list-item;
+    border-right: none;
+    border-bottom: 1px solid #777;
+    padding: 0.5em 0;
+  }
+  .styleguideNav .sectionList li.js-last {
+    border-bottom: none;
+  }
+  .styleguideNav .expandNav .cta.mobile-full {
+    margin-top: 0;
+  }
+}

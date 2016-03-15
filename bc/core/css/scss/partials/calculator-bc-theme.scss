@@ -1,0 +1,36 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Calculator -- Version: 1.0.0.0 - Updated: 4/3/2014
+   ========================================================================== */
+.calculator {
+  width: 100%;    // Theme
+  max-width: 980px;    // Theme
+  border: 1px solid #d2d5da;    // Theme
+}
+.calculator-box {
+  width: 100%;    // Theme
+  max-width: 292px;    // Theme
+  border-radius: 3px;    // Theme
+  border: 1px solid #d2d5da;    // Theme
+}
+.calculator-box .cart-price {
+  width: 50%;    // Theme
+  height: 60px;    // Theme
+  padding: 0 1em;    // Theme
+  border-right: 1px solid #d2d5da;    // Theme
+  text-align: center;    // Theme
+}
+.calculator-box .cart-price .pricing {
+  top: 50%;    // Theme
+}
+.calculator-box .cta-holder {
+  width: 50%;    // Theme
+  height: 60px;    // Theme
+  padding: 0 1em;    // Theme
+  text-align: center;    // Theme
+}
+.calculator-box .cta-holder .cta {
+  top: 50%;    // Theme
+}

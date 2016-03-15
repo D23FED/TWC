@@ -1,0 +1,18 @@
+/* ==========================================================================
+    Scroll To -- Version: 1.9.0.1 - Updated: 2/7/2014
+   ========================================================================== */
+.scrollToTop {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 100;
+}
+.scrollToTop:after {
+  font-family: "FontAwesome";
+  font-size: inherit;
+  font-weight: inherit;
+}

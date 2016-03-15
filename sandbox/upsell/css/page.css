@@ -1,0 +1,40 @@
+.review-order-upsell .upsell-banner {
+  background-size: cover;
+  width: 48.75%;
+  margin-left: 2.5%;
+  min-width: 0;
+}
+.review-order-upsell .upsell-image {
+  position: relative;
+  width: 40%;
+}
+.review-order-upsell .upsell-image > img {
+  width: 100%;
+}
+.review-order-upsell .upsell-title {
+  font-size: 1.6rem;
+}
+.review-order-upsell .upsell-banner.left-banner {
+  margin-left: 0;
+  margin-right: 0;
+}
+.review-order-upsell .upsell-content, .review-order-upsell .upsell-button {
+  width: 57.5%;
+  margin-left: 2.5%;
+}
+.review-order-upsell .upsell-description {
+  font-family: Arial,sans-serif;
+}
+
+@media (max-width: 48em) {
+  .review-order-upsell .upsell-banner {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 40em) {
+  .review-order-upsell .upsell-button {
+    width: 100%;
+  }
+}

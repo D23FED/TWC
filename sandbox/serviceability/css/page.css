@@ -1,0 +1,12 @@
+.serviceArea hr.spacer {
+  margin: 1.25em 0 0;
+}
+.serviceArea label {
+  font-size: 1.4rem;
+  font-size: 14px;
+}
+@media (max-width: 48em) {
+  .serviceArea input {
+    margin-bottom: 0.5em;
+  }
+}

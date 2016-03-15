@@ -1,0 +1,268 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tooltips -- Version: 1.9.0.1 - Updated: 2/6/2014
+   ========================================================================== */
+
+.tooltip {
+  position: relative;
+  color: $link;
+  text-decoration: none;
+  a {
+    position: relative;
+  }
+  span.tooltip-text {
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    margin-left: -75px;
+    padding: .5em 1em;
+    border: 3px solid $text-white;
+    @include border-radius(2px);
+    @include background-gradient(#e0e7eb, $background-white);
+    color: $text;
+    text-align: center;
+    @include opacity(0);
+    @include box-shadow(0 0 3px 0 $text);
+    @include transition(opacity, .3s, ease);
+    z-index: 999999;
+  }
+  &:hover span.tooltip-text {
+    @include opacity(1);
+  }
+  span.tooltip-text:hover {
+    @include opacity(0);
+    cursor: default;
+  }
+  &.above span.tooltip-text {
+    bottom: 2em;
+    &:before {
+      position: absolute;
+      bottom: -11px;
+      left: 43%;
+      width: 0;
+      height: 0;
+      content: " ";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $text-white;
+      z-index: 5;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      left: 43%;
+      bottom: -13px;
+      width: 0;
+      height: 0;
+      content: " ";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #999;
+    }
+  }
+  &.below span.tooltip-text {
+    top: 2em;
+    &:before {
+      position: absolute;
+      top: -11px;
+      left: 43%;
+      width: 0;
+      height: 0;
+      content: " ";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $text-white;
+      z-index: 5;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      left: 43%;
+      top: -13px;
+      width: 0;
+      height: 0;
+      content: " ";
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #999;
+    }
+  }
+}
+
+#CQ .x-html-editor-tb  .x-btn-text.x-edit-modifytooltip {
+    background: url(./icons/modifytooltip.png) center no-repeat;
+}
+
+#CQ .x-html-editor-tb  .x-btn-text.x-edit-removetooltip {
+    background: url(./icons/removetooltip.png) center no-repeat;
+}
+
+.tooltip {
+    position: relative;
+    color: #3376b2;
+    border-bottom: 1px dotted #3376b2;
+    cursor: pointer; }
+.tooltip:hover {
+    border-bottom-color: #1b405d; }
+
+.tooltip-popup {
+    display: none;
+    position: absolute;
+    /* top and left positions are set via JS */
+    z-index: 1999;
+    width: 240px;
+    max-width: 100%;
+    overflow: hidden;
+    /* Add "top" class to point the arrow up */
+    /* Add "bottom" class to point the arrow down */
+    /* Add "left" class to point the arrow to the left */
+    /* Add "right" class to point the arrow to the right */ }
+.tooltip-popup .tooltip-content:before, .tooltip-popup .tooltip-wrap:before, .tooltip-popup .tooltip-wrap:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid; }
+.tooltip-popup.top .tooltip-content:before,
+.tooltip-popup.top .tooltip-wrap:before,
+.tooltip-popup.top .tooltip-wrap:after, .tooltip-popup.bottom .tooltip-content:before,
+.tooltip-popup.bottom .tooltip-wrap:before,
+.tooltip-popup.bottom .tooltip-wrap:after {
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    left: 50%; }
+.tooltip-popup.left .tooltip-content:before,
+.tooltip-popup.left .tooltip-wrap:before,
+.tooltip-popup.left .tooltip-wrap:after, .tooltip-popup.right .tooltip-content:before,
+.tooltip-popup.right .tooltip-wrap:before,
+.tooltip-popup.right .tooltip-wrap:after {
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    top: 50%; }
+.tooltip-popup .tooltip-content {
+    border: 1px solid #999999;
+    position: relative; }
+.tooltip-popup .tooltip-wrap {
+    color: #444;
+    font-size: 13px;
+    line-height: 18px;
+    border: 3px solid white;
+    padding: 10px;
+    z-index: 1; }
+.tooltip-popup .tooltip-wrap:before, .tooltip-popup .tooltip-wrap:after {
+    z-index: 2; }
+.tooltip-popup header {
+    font-weight: bold;
+    font-size: 15px;
+    color: #222;
+    margin: 0 0 5px; }
+.tooltip-popup.top .tooltip-content:before, .tooltip-popup.bottom .tooltip-content:before {
+    border-left-width: 12px;
+    border-right-width: 12px;
+    margin-left: -12px; }
+.tooltip-popup.top .tooltip-wrap, .tooltip-popup.bottom .tooltip-wrap {
+    background-color: #eaeff1;
+    background-image: -moz-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom,  color-stop(0%, #e0e7eb), color-stop(100%, #f5f7f8));
+    background-image: -webkit-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
+    background-image: -o-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
+    background-image: -ms-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
+    background-image: linear-gradient(to bottom,  #e0e7eb 0%, #f5f7f8 100%); }
+.tooltip-popup.top .tooltip-wrap:before, .tooltip-popup.bottom .tooltip-wrap:before {
+    border-left-width: 11px;
+    border-right-width: 11px;
+    margin-left: -11px; }
+.tooltip-popup.top .tooltip-wrap:after, .tooltip-popup.bottom .tooltip-wrap:after {
+    border-left-width: 9px;
+    border-right-width: 9px;
+    margin-left: -9px; }
+.tooltip-popup.top {
+    padding-top: 12px; }
+.tooltip-popup.top .tooltip-content:before,
+.tooltip-popup.top .tooltip-wrap:before,
+.tooltip-popup.top .tooltip-wrap:after {
+    border-top: 0; }
+.tooltip-popup.top .tooltip-content:before {
+    border-bottom: 12px solid #999999;
+    top: -12px; }
+.tooltip-popup.top .tooltip-wrap:before {
+    border-bottom: 11px solid white;
+    top: -11px; }
+.tooltip-popup.top .tooltip-wrap:after {
+    border-bottom: 9px solid #e0e7eb;
+    top: -6px; }
+.tooltip-popup.bottom {
+    padding-bottom: 12px; }
+.tooltip-popup.bottom .tooltip-content:before,
+.tooltip-popup.bottom .tooltip-wrap:before,
+.tooltip-popup.bottom .tooltip-wrap:after {
+    border-bottom: 0; }
+.tooltip-popup.bottom .tooltip-content:before {
+    border-top: 12px solid #999999;
+    bottom: -12px; }
+.tooltip-popup.bottom .tooltip-wrap:before {
+    border-top: 11px solid white;
+    bottom: -11px; }
+.tooltip-popup.bottom .tooltip-wrap:after {
+    border-top: 9px solid #f5f7f8;
+    bottom: -6px; }
+.tooltip-popup.left .tooltip-content:before, .tooltip-popup.right .tooltip-content:before {
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    margin-top: -12px; }
+.tooltip-popup.left .tooltip-wrap, .tooltip-popup.right .tooltip-wrap {
+    background: #e0e7eb; }
+.tooltip-popup.left .tooltip-wrap:before, .tooltip-popup.right .tooltip-wrap:before {
+    border-top-width: 11px;
+    border-bottom-width: 11px;
+    margin-top: -11px; }
+.tooltip-popup.left .tooltip-wrap:after, .tooltip-popup.right .tooltip-wrap:after {
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    margin-top: -9px; }
+.tooltip-popup.left {
+    padding-left: 12px; }
+.tooltip-popup.left .tooltip-content:before,
+.tooltip-popup.left .tooltip-wrap:before,
+.tooltip-popup.left .tooltip-wrap:after {
+    border-left: 0; }
+.tooltip-popup.left .tooltip-content:before {
+    border-right: 12px solid #999999;
+    left: -12px; }
+.tooltip-popup.left .tooltip-wrap:before {
+    border-right: 11px solid white;
+    left: -11px; }
+.tooltip-popup.left .tooltip-wrap:after {
+    border-right: 9px solid #e0e7eb;
+    left: -6px; }
+.tooltip-popup.right {
+    padding-right: 12px; }
+.tooltip-popup.right .tooltip-content:before,
+.tooltip-popup.right .tooltip-wrap:before,
+.tooltip-popup.right .tooltip-wrap:after {
+    border-right: 0; }
+.tooltip-popup.right .tooltip-content:before {
+    border-left: 12px solid #999999;
+    right: -12px; }
+.tooltip-popup.right .tooltip-wrap:before {
+    border-left: 11px solid white;
+    right: -11px; }
+.tooltip-popup.right .tooltip-wrap:after {
+    border-left: 9px solid #e0e7eb;
+    right: -6px; }
+
+
+/* ie8 (.ie8) */
+
+.twc-ie8 .tooltip {
+  span.tooltip-text {
+    background-image: none;
+    @include opacity(0);
+  }
+  &:hover span.tooltip-text {
+    @include opacity(1);
+  }
+}

@@ -1,0 +1,315 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 10/2/2014
+   ========================================================================== */
+
+.newHead {
+  #header {
+    position: relative;
+  }
+  li {
+    .clickIcon {
+      &> a {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0 0;
+        margin-bottom: .5em;
+        font-weight: normal;
+        font-size: 1.3rem;
+        figure {
+          // height: 24px;
+          margin: 0 auto;
+        }
+        img {
+          opacity: 1;
+          margin-bottom: 0;
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    &:hover {
+      .clickIcon {
+        &> a {
+          img {
+            opacity: .75;
+          }
+        }
+      }
+    }
+  }
+  > .twc-container {
+    overflow: visible;
+    display: table;
+    padding: 0.5em 0 0;
+  }
+  .newHeaderIcons {
+    float: right;
+    width: 70%;
+    ul {
+      &.horizontal {
+        text-align: right;
+        float: right;
+        width: 50%;
+        > {
+          li {
+            float: left;
+            width: 25%;
+            .offPage {
+              span {
+                color: #334458;
+                float: left;
+                text-align: center;
+                width: 100%;
+                margin-top: 0.25em;
+              }
+            }
+            span {
+              color: #334458;
+              float: left;
+              text-align: center;
+              width: 100%;
+              margin-top: 0.25em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .newHeaderIcons ul.horizontal > li {
+    &:hover {
+      .offPage span, span {
+        color: #889cb4;
+      }
+    }
+    .noZip span {
+      color: #bd3300;
+    }
+  }
+  #header .cust-loc-dropdown .noZip {
+    color: #bd3300;
+  }
+  .cust-loc-dropdown.hiddenCheckboxDropdown {
+    figure {
+      max-width: 10%;
+      float: left;
+    }
+    .geoLoc {
+      width: 90%;
+      float: right;
+      input {
+        width: 70%;
+      }
+    }
+  }
+  .newHeaderIcons ul.horizontal > li:hover .noZip span {
+    color: #f04b23;
+  }
+  #header .cust-loc-dropdown {
+    .noZip:hover {
+      color: #f04b23;
+    }
+    p.localize-head {
+      color: #3376B2;
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+  .newHeaderIcons ul.horizontal > li span:before {
+    display: block;
+    font-size: 2.2rem;
+    margin: 0 auto 0.25em;
+  }
+  #header input.hiddenCheckbox {
+    display: none;
+  }
+  .pushDown {
+    background: rgb(243,243,243);
+    border-top: 1px solid #ededed;
+    .twc-container {
+      padding: 0;
+    }
+    .hiddenCheckboxDropdown {
+      display: none;
+      padding: 0.75em 1em;
+      .hiddenCheckboxLabel {
+        float: right;
+        cursor: pointer;
+        font-size: 1.6rem;
+        width: 2%;
+        margin-right: 0;
+      }
+      table {
+        width: 98%;
+        tr {
+          width: 100%;
+          td {
+            width: 60%;
+            .localize-head {
+              margin-right: 1em;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+      .twc-search-input-wrap {
+        text-align: center;
+      }
+      .contentSearch .twc-search input {
+        width: 50%;
+      }
+    }
+  }
+  .newHeaderIcons ul.horizontal > li label {
+    display: block;
+    font-size: inherit;
+    height: 70%;
+    width: 100%;
+    cursor: pointer;
+  }
+  #header {
+    .cust-loc-dropdown, .search-dropdown {
+      position: relative;
+      background: #333;
+      float: left;
+      width: 100%;
+      padding: 2%;
+      color: #fff;
+    }
+    .hiddenCheckboxDropdown {
+      display: none;
+    }
+    .closeDropdown {
+      color: #fff;
+      position: absolute;
+      right: 0;
+      top: 0.25em;
+      font-size: 2rem;
+      z-index: 9999;
+      cursor: pointer;
+      &:hover {
+        color: #777;
+      }
+    }
+    .twc-search-input-wrap {
+      width: 100%;
+    }
+    .twc-search input {
+      width: 78%;
+      margin: 0 0 1em;
+    }
+    .search-dropdown .twc-search input {
+      margin: 0;
+    }
+    .cta {
+      &.geoloc-btn, &.search-btn {
+        width: auto;
+      }
+    }
+    .searchResults {
+      background: none repeat scroll 0 0 #FFFFFF;
+      border-top: 1px solid;
+      margin: 0 -1% -1%;
+      padding: 1%;
+      width: 102%;
+    }
+  }
+}
+
+.landscapeLabel {
+  display: none;
+}
+
+html.touch [class*="nav-menu-"] > {
+  a {
+    display: none;
+  }
+  .landscapeLabel {
+    display: block;
+    font-family: "TWC Round Book";
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 0 1em;
+  }
+}
+
+@media (max-width: $medium) {
+ html.touch [class*="nav-menu-"] > .landscapeLabel, nav.twc-mobile-navigation {
+  display: none;
+}
+
+.newHead {
+  .twc-logo {
+    width: 40%;
+    img {
+      max-width: 225px;
+      margin: .25em .5em;
+    }
+  }
+  .newHeaderIcons {
+    width: 60%;
+    ul.horizontal {
+      width: 80%;
+    }
+  }
+  #header {
+    .twc-search input {
+      width: 78%;
+    }
+    .twc-module {
+      max-width: 100%;
+    }
+  }
+}
+}
+
+@media (max-width: $small) {
+ .newHead {
+  .clickIcon > a {
+    margin-bottom: 0;
+  }
+  .twc-header .twc-container {
+    padding: 2.5% 0;
+    position: relative;
+  }
+  .twc-logo {
+    width: 50%;
+    img {
+      max-width: 185px;
+      width: 90%;
+    }
+  }
+  .newHeaderIcons {
+    width: 40%;
+    min-height: 2.75em;
+    ul.horizontal {
+      width: 100%;
+      margin: .25em 0;
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+  .pushDown .hiddenCheckboxDropdown .contentSearch .twc-search input {
+    width: 77%;
+  }
+  &.tophat .desktop-hidden.tablet-hidden {
+    display: block !important;
+  }
+  .newHeaderIcons ul.horizontal > li {
+    width: 33%;
+    span:before {
+      font-size: 2rem;
+    }
+  }
+  #header .twc-search input {
+    width: 75%;
+  }
+}
+}

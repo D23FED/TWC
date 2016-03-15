@@ -1,0 +1,176 @@
+// TWC sitewide variables
+$site-width: 980px;
+
+// TWC Residential Breakpoints
+$big: 68.75em;
+$medium: 48em;
+$small: 40em;
+
+// TWC Residential Fonts
+$italic: italic;
+$bold: bold;
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$twc-book: 'TWC Round Book';
+$twc-medium: 'TWC Round Medium';
+$twc-light: 'TWC Round Light';
+$fontawesome: 'FontAwesome';
+$pre: Inconsolata,Monaco,Consolas,"Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+
+$base-font-size: 13;
+$base-line-height: 1.25;
+
+// TWC residential colors.
+$white: #fff;
+$black: #000;
+$grey: #666;
+$lightgrey: #e1e1e1;
+
+$text: #333;
+$link: #3376b2;
+$text-black: #010101;
+$text-grey: #666;
+$text-lightgrey: #e1e1e1;
+$text-link: $link;
+$text-white: $white;
+$text-error: #f00;
+
+$footer-link: $grey;
+
+$background-white: $white;
+$background-black: $black;
+
+// Steel Dark
+
+$steelDark-darkest: #191a1b;
+
+$steelDark-darker : #2d2e30;
+
+$steelDark-dark : #3c3e41;
+
+$steelDark-darkish : #4d4f53;
+
+$steelDark: #747679;
+
+$steelDark-lightish: #98999b;
+
+$steelDark-light: #d4d5d6;
+
+$steelDark-lighter: #e6e6e7;
+
+$steelDark-lightest: #f6f6f6;
+
+// Steel Sky
+
+$steelSky-darkest: #0a1c2b;
+
+$steelSky-darker: #12314c;
+
+$steelosky-dark: #184266;
+
+$steelSky-darkish: #205381;
+
+$steelSky: #4f799e;
+
+$steelSky-lightish: #7b9cb9;
+
+$steelSky-light: #c8d6e3;
+
+$steelSky-lighter: #dfe7ee;
+
+$steelSky-lightest: #f3f6f9;
+
+// Sky Dark
+
+$skyDark-darkest: #001c34;
+
+$skyDark-darker: #00315c;
+
+$skyDark-dark: #00427c;
+
+$skyDark-darkish: #00549f;
+
+$skyDark: #387ab4;
+
+$skyDark-lightish: #6b9cc7;
+
+$skyDark-light: #c2d6e8;
+
+$skyDark-lighter: #dbe7f1;
+
+$skyDark-lightest: #f2f6fa;
+
+// Rich Black
+
+$richBlack-dark: $white;
+
+$richBlack-darkish: $black;
+
+$richBlack: #383838;
+
+$richBlack-lightish: #6b6b6b;
+
+$richBlack-light: #c2c2c2;
+
+$richBlack-lighter: #f2f2f2;
+
+$richBlack-lightest: #f2f6fa;
+
+$plumDark-darkest: #1e0a23;
+
+$plumDark-darker: #35123d;
+
+$plumDark-dark: #471852;
+
+$plumDark-darkish: #5b1f69;
+
+$plumDark: #7f508a;
+
+$plumDark-lightish: #a07da8;
+
+// Typography
+
+$text-almost-black: #010101;
+
+$text-blue-dark: #174061;
+
+$text-slategrey-dark: #222e36;
+
+$text-grey: $grey;
+
+// Component Gradients
+
+$color-steel-blue-start: #92b9dd;
+
+$color-steel-blue-end: #5384af;
+
+$color-deep-blue-start: #5d92c0;
+
+$color-deep-blue-end: #1e5688;
+
+$color-steel-grey-start: #babbbc;
+
+$color-steel-grey-end: #3d3f43;
+
+$color-deep-grey-start: #99999b;
+
+$color-deep-grey-end: #515151;
+
+// Backgrounds
+
+$background-darkest: #161d22;
+
+$background-darker: #1e262c;
+
+$slategrey:  #424e57;
+
+$grey-blue: #445f74;
+
+$light-blue: #5d84a3;
+
+$light-slategrey: #8e96a0;
+
+$light-slategrey-lighter: #c6c9cf;
+
+$light-slategrey-lightest: #d2d5da;
+
+$offwhite: #f2f4f6;

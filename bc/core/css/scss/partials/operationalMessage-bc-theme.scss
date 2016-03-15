@@ -1,0 +1,18 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Operational Message -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.operationalMessage {
+  .twc-box-column {
+    background: #e1ecf5;    // Theme
+  }
+  .notices {
+    border-right: 1px solid $grey;    // Theme
+  }
+  .marquee-messages {
+    width: 84%;    // Theme
+  }
+}

@@ -1,0 +1,89 @@
+/* ==========================================================================
+    Tabs -- Version: 1.9.0.3 - Updated: 1/8/2013
+   ========================================================================== */
+.tab-component .tab-content-container {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+.tab-component .tabs {
+  display: table;
+  width: 100%;
+}
+.tab-component .tabs ul {
+  display: table-row;
+}
+.tab-component .tabs li {
+  display: table-cell;
+  position: relative;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+.tab-component .tabs li.js-first {
+  border-left: none;
+}
+.tab-component .tabs li a {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.tab-component .tabs li.active, .tab-component .tabs li.js-active {
+  filter: none;
+}
+.tab-component .tab-content {
+  display: none;
+}
+.tab-component .tab-content.active, .tab-component .tab-content.js-active {
+  display: block;
+}
+@media (max-width: 48em) {
+  .tab-component .tabs {
+    display: block;
+  }
+  .tab-component .tabs ul {
+    display: block;
+  }
+  .tab-component .tabs li {
+    display: block;
+    border: none;
+  }
+  .tab-component .tabs li.js-last {
+    border-bottom: none;
+  }
+  .tab-component .tabs li a {
+    width: 100%;
+  }
+  .tab-component .tabs li a:after {
+    content: '\f107';
+    float: right;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .tab-component .tabs li.active a:after, .tab-component .tabs li.js-active a:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180deg), M12=-sin(180deg), M21=sin(180deg), M22=cos(180deg))";
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(180deg), M12=-sin(180deg), M21=sin(180deg), M22=cos(180deg));
+    zoom: 1;
+    float: right;
+  }
+  .tab-component .tab-content-container {
+    display: none;
+  }
+  .tab-component .tab-content {
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    filter: none;
+  }
+}

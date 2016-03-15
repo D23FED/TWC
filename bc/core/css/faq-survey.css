@@ -1,0 +1,57 @@
+/* ==========================================================================
+    Feedback Survey -- Version: 1.9.0.2 - Updated: 12/30/2013
+   ========================================================================== */
+.faq-survey .initiate-feedback, .faq-survey .feedback-survey-yes-response, .faq-survey .feedback-survey-no-response {
+  overflow: auto;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  margin: 1em 0;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  border: 1px solid #e1e1e1;
+}
+.faq-survey .initiate-feedback fieldset, .faq-survey .feedback-survey-yes-response fieldset, .faq-survey .feedback-survey-no-response fieldset {
+  padding-top: 0.75em;
+  padding-right: 0;
+  padding-bottom: 0.75em;
+  padding-left: 0;
+}
+.faq-survey .feedback-survey-yes-response, .faq-survey .feedback-survey-no-response {
+  display: none;
+}
+.faq-survey .improve-feedback {
+  display: none;
+}
+.faq-survey input[type="radio"] + label {
+  width: auto;
+}
+
+@media (max-width: 48em) {
+  .faq-survey [class*='twc-col3_252550-c'] {
+    width: 23.75%;
+  }
+  .faq-survey [class*='twc-col3_252550-c1'] {
+    margin-top: 0;
+    margin-left: 2.5%;
+  }
+  .faq-survey [class*='twc-col3_252550-c2'] {
+    margin-left: 0;
+    width: 48.75%;
+  }
+}
+@media (max-width: 40em) {
+  .faq-survey .initiate-feedback, .faq-survey .feedback-survey-yes-response, .faq-survey .feedback-survey-no-response {
+    text-align: center;
+  }
+  .faq-survey [class*='twc-col3_252550-c'], .faq-survey [class*='twc-col3_252550-c1'], .faq-survey [class*='twc-col3_252550-c2'] {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,12 @@
+/* ==========================================================================
+    Operational Message -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.operationalMessage .twc-box-column {
+  background: #e1ecf5;
+}
+.operationalMessage .notices {
+  border-right: 1px solid #666666;
+}
+.operationalMessage .marquee-messages {
+  width: 84%;
+}

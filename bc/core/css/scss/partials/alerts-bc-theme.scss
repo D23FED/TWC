@@ -1,0 +1,49 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-alert-section {
+
+  .twc-alert {
+    background: #d14853;    // Theme
+    @include box-shadow(inset 0 -10px 14px 0 rgba(0, 0, 0, 0.2));    // Theme
+    color: $text-white;    // Theme
+  }
+  p.twc-alert-text {
+    @include font-family($arial);    // Theme
+  }
+
+  .twc-customerLocation p.twc-alert-text:before, p.twc-alert-text:before {
+    padding-right: 10px;    // Theme
+    @include font-family($fontawesome);    // Theme
+    @include font-size(24);    // Theme
+    font-weight: 100;    // Theme
+    color: #f6b42a;    // Theme
+    text-shadow: 0 1px 3px #333;    // Theme
+  }
+
+  .twc-alert-close:after {
+    @include font-family($fontawesome);    // Theme
+    color: #fff;    // Theme
+    font-weight: lighter;    // Theme
+  }
+
+  a.twc-icon:hover {
+    color: inherit;    // Theme
+  }
+
+  @media (max-width: $medium) {
+    .twc-alert-close:after {
+      @include font-size(24);    // Theme
+    }
+  }
+
+  @media (max-width: $small) {
+    .twc-alert-text:before {
+      @include font-size(18);    // Theme
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/* ==========================================================================
+    Speed  -- Version: 1.0.0 - Updated: 5/20/2014
+   ========================================================================== */
+.speed {
+  width: 100%;
+  color: #444;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+}
+.speed sub {
+  font-size: 12.5px;
+  font-weight: normal;
+  top: .8px;
+  padding: 2px;
+  line-height: 33px;
+}
+.speed .x {
+  font-size: 10px;
+  margin: 0px -3px 0px 3px;
+  display: inline-block;
+  font-weight: normal;
+}

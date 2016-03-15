@@ -1,0 +1,131 @@
+/*	Raymond Heredia
+ *	1-4-16 
+ * 
+ *  These styles stand alone; they don't use any of the core/shared CSS.  Updated per podio ticket: https://podio.com/twcablecom/bc-omega-project-collaboration/apps/tickets/items/2525
+ * They have been changed to tables in order to make everything center nicely.
+ * 
+ */
+@media only screen and (min-width:320px) {
+	body {margin:0;}
+	.wrapper {
+		background: #fff;
+		margin: 0 auto;
+	}
+	.contact-bar {
+		color: #fff;
+		width:100%;
+		background:#004990;
+		-moz-box-shadow: 0 2px 3px 0 rgba(135, 135, 135, 0.5);
+		-webkit-box-shadow: 0 2px 3px 0 rgba(135, 135, 135, 0.5);
+		box-shadow: 0 2px 3px 0 rgba(135, 135, 135, 0.5);
+		display:block;/*hide this*/
+		position:relative;
+		z-index:9999;
+		font-family:Arial, Helvetica, sans-serif;
+		text-align:center;
+	}
+	.contact-bar table {
+		max-width:979px;
+		margin:0 auto;
+		width:100%;
+		border:none;
+	}
+	.contact-bar table button {
+		width:100%;
+	}
+	.contact-bar a {
+		text-decoration:none;
+		color: #FFF;
+	}
+	.contact-bar a span {
+		display:none;
+	}
+	.contact table td:nth-child(1) {
+		display:none;
+	}
+	.contact-bar .liveagent-chat-link a button {
+		height:35px;
+		width:100%;
+		background:#007DC3;
+	}
+	.contact-bar .logo a {
+		width:149px;
+		height:49px;
+		background:url("twc-logo-business-white.png") no-repeat center;
+		/*background:url("/content/dam/business/images/global/logos/twc-logo-business-white.png") no-repeat center;*/
+	}
+	.contact-bar button {
+		background:#72AB3D;
+		color:#FFF;
+		border-radius:0;
+		font-size:15px;
+		font-weight:bold;
+		border:none;
+		cursor:pointer;
+		padding:0;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, sans-serif;
+		white-space: nowrap;
+		height:35px;
+		width:100%;
+	}
+	.contact-bar button:hover {
+		background:#FEC84E;
+	}
+	.contact-bar button a {
+		color: white;
+	}
+	.contact-bar .phoneNumber a {
+		height:35px;
+		vertical-align: middle;
+		line-height:35px;
+		padding:0 10px;
+	}
+	.contact-bar .tablet-hidden {
+	    display: table-cell;
+	    text-align:left;
+	}
+}
+@media only screen and (min-width:768px) {
+    .contact-bar .logo a {
+        display:none;
+    }
+    .contact-bar .phoneNumber a {
+		height:60px;
+		line-height:60px;
+		font-size:27px;
+	}
+	.contact-bar button {
+		font-size:20px;
+		height:60px;
+		width:208px;
+	}
+	.contact-bar .liveagent-chat-link a button {
+		height:60px;
+		width:100%;
+	}
+}
+@media only screen and (min-width:979px) {
+	.contact-bar .logo {
+        width:180px;
+  	}
+  	.contact-bar .logo a {
+        display:block;
+  	}
+    .contact table td:nth-child(1) {
+		display:table-cell;
+	}
+	.contact-bar .phoneNumber a,
+	.contact-bar .liveagent-chat-link a button,
+	.contact-bar button {
+		height:85px;
+		line-height: 85px;
+	}
+	.contact-bar .quote {
+		width:208px;
+		text-align:right;
+	}
+	.contact-bar .logo a {
+		height:85px;
+		margin:0 auto;
+	}
+}

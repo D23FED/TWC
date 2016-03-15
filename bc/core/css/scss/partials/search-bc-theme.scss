@@ -1,0 +1,50 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";;
+
+/* ==========================================================================
+    Search -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-search-module {
+  background: #d4d5d6;    // Theme
+}
+
+.twc-module {
+  li {
+    border-right: 1px solid #9d9d9e;    // Theme
+  }
+}
+
+.twc-module {
+  max-width: 440px;    // Theme
+}
+
+.twc-banner-search {
+  width: 100%;    // Theme
+  margin: 0 auto;    // Themef
+}
+
+.twc-search input {
+  width: 77%;    // Theme
+}
+
+@media (max-width: $medium) {
+
+  .twc-tablet-search {
+    height: 40px;    // Theme
+  }
+  .twc-mobile-search button:before {
+    font-family: $fontawesome;    // Theme
+  }
+
+}
+
+@media (max-width: $small) {
+
+  .twc-search-module {
+    input#submit {
+      width: 25%;    // Theme
+    }
+  }
+
+}

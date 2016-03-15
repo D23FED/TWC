@@ -1,0 +1,66 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Wrapping Columns -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.wrappingColumns {
+
+  li.heading {
+    @include inline-block();    // Framework
+    width: 100%;    // Framework
+    h5 {
+      margin-bottom: .5em;    // Framework
+      padding: .5em 5%;    // Framework
+      border-bottom: 1px solid $white;    // Framework
+      // @include background-gradient(#eeeeef, #dddfe2);    // Theme
+    }
+    ul.content {
+      margin-bottom: 1em;    // Framework
+      @include padding(0, 5%);    // Framework
+    }
+  }
+
+  @media (max-width: $small) {
+
+    .twc-box-column {
+      @include padding();    // Framework
+    }
+    ul {
+      margin-bottom: 0;    // Framework
+      li.heading {
+        &.js-first {
+          // @include border-radius(3px 3px 0 0);    // Theme
+        }
+        h5 {
+          margin-bottom: 0;    // Framework
+          &:after {
+            content: "\f106";    // Framework
+            float: right;    // Framework
+            // font-family: $fontawesome;    // Theme
+          }
+        }
+        .expanded:after {
+          content: "\f107";    // Framework
+          float: right;    // Framework
+          // font-family: $fontawesome;    // Theme
+        }
+      }
+      ul {
+        margin-top: .5em;    // Framework
+        &.content {
+          display: none;    // Framework
+        }
+      }
+    }
+  }
+}
+
+/* ie8 (.ie8) */
+.no-csscolumns {
+  visibility: inherit;    // Framework
+  ul li.heading {
+    padding: 0 1em;    // Framework
+  }
+}

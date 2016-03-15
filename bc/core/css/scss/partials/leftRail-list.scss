@@ -1,0 +1,196 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Left Rail List - Version: 1.0.0.1 - Updated: 2/7/14
+   ========================================================================== */
+
+.leftRail-list {
+  margin-bottom: 2em;    // Framework
+  @include padding();    // Framework
+  // @include border-radius();    // Theme
+  // background: $text-white;    // Theme
+  // @include box-shadow(0 1px 2px 0 #888888);    // Theme
+  .leftRail-topics {
+    position: relative;    // Framework
+    @include padding(1em);    // Framework
+    // @include border-radius(3px 0 0 3px);    // Theme
+    // @include background-gradient(#487a97, #0e4460);    // Theme
+    overflow: hidden;
+    h3 {
+      // color: $text-white;    // Theme
+    }
+    h5 {
+      @include margin();    // Framework
+      // @include font-family($arial);    // Theme
+      // @include font-size(13);    // Theme
+      // color: $text-white;    // Theme
+      + ul {
+        display: none;    // Framework
+      }
+    }
+    a {
+      @include margin();    // Framework
+      // @include font-family($arial);    // Theme
+      // @include font-size(13);    // Theme
+      // color: $text-white;    // Theme
+    }
+    ul {
+      h5.arrow:after {
+        float: right;    // Framework
+        // font-family: $fontawesome;    // Theme
+        // @include font-size(18);    // Theme
+        // font-weight: bold;    // Theme
+        content: '\f107';    // Framework
+        // color: #b1b2af;    // Theme
+        @include transition(all, .4s, ease-in-out);    // Framework
+      }
+      li {
+        &.expanded > h5.arrow:after, &.js-expanded > h5.arrow:after {
+          @include rotate(180deg);    // Framework
+        }
+        ul li ul li.topic h5.arrow:after {
+          // color: #b1b2af;    // Theme
+        }
+        &.topic ul {
+          margin-bottom: 0;    // Framework
+          li {
+            display: none;    // Framework
+            &.topic {
+              display: block;    // Framework
+            }
+          }
+        }
+      }
+    }
+    li {
+      display: block;    // Framework
+      padding: .5em 1em;    // Framework
+      border-bottom: 1px dotted $lightgrey;    // Framework
+      cursor: pointer;    // Framework
+      &.active, &.js-active {
+        width: 150%;    // Framework
+        padding: .5em 50% .5em 1em;    // Framework
+        // border-bottom: 1px solid $text-white;    // Theme
+        // @include horizontal-gradient(#ebebeb, $background-white);    // Theme
+        a, h5 {
+          // color: $text;    // Theme
+        }
+      }
+      &.js-last {
+        border-bottom: none;    // Framework
+      }
+    }
+  }
+  .content {
+    @include padding(2em);    // Framework
+  }
+}
+
+@media (max-width: $medium) {
+  .marginless [class*="twc-col2_2476-c0"] {
+      width: 24%;    // Framework
+  }
+  .marginless [class*="twc-col2_2476-c1"] {
+      width: 76%;    // Framework
+  }
+}
+
+@media (max-width: $small) {
+
+.leftRail-list {
+  .marginless [class*="twc-col2_2476-c"] {
+      width: 100%;    // Framework
+  }
+  .leftRail-topics {
+    @include border-radius();    // Framework
+    width: 100%;    // Framework
+    @include padding(4%);    // Framework
+    border-right: none;    // Framework
+    // background: $text-white;    // Theme
+    ul li.topic {
+      @include padding();    // Framework
+      // border-bottom: 1px solid $white;    // Theme
+    }
+    li {
+      &.active, &.js-active {
+        width: 100%;    // Framework
+        @include padding();    // Framework
+        background: none;    // Framework
+      }
+      h5, &.active h5, &.js-active h5 {
+        width: auto;    // Framework
+        padding: .7em .5em;    // Framework
+        // @include background-gradient(#3779b3, #02447e);    // Theme
+        // @include font-size(20);    // Theme
+        // font-family: $twc-book;    // Theme
+        // font-weight: 100;    // Theme
+        // color: $text-white;    // Theme
+      }
+      ul {
+        @include margin(0);    // Framework
+      }
+      &.js-first ul {
+        display: block;    // Framework
+      }
+    }
+    ul {
+      li {
+        &.topic ul li {
+          display: block;    // Framework
+          &.topic ul {
+            display: none;    // Framework
+          }
+        }
+        li {
+          padding: .5em;    // Framework
+          &.topic {
+            @include padding(0);    // Framework
+            h5 {
+              // background: #eeeeef;    // Theme
+              // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);    // Theme
+              // background: -moz-linear-gradient(top, rgba(238, 238, 239, 0.5) 0%, rgba(221, 223, 226, 0.5) 100%);    // Theme
+              // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(238, 238, 239, 0.5)), color-stop(100%, rgba(221, 223, 226, 0.5)));    // Theme
+              // background: -webkit-linear-gradient(top, rgba(238, 238, 239, 0.5) 0%, rgba(221, 223, 226, 0.5) 100%);    // Theme
+              // background: -o-linear-gradient(top, rgba(238, 238, 239, 0.5) 0%, rgba(221, 223, 226, 0.5) 100%);    // Theme
+              // background: -ms-linear-gradient(top, rgba(238, 238, 239, 0.5) 0%, rgba(221, 223, 226, 0.5) 100%);    // Theme
+              // background: linear-gradient(to bottom, rgba(238, 238, 239, 0.5) 0%, rgba(221, 223, 226, 0.5) 100%);    // Theme
+              // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeef', endColorstr='#dddfe2',GradientType=0 );    // Theme
+            }
+          }
+        }
+        ul li ul li.topic {
+          border-bottom: 1px solid #e1e1e1;    // Framework
+          a {
+            background: none;    // Framework
+          }
+        }
+      }
+      h5:after {
+        float: right;    // Framework
+        // font-family: $fontawesome;    // Theme
+        // @include font-size(18);    // Theme
+        // font-weight: 700;    // Theme
+        content: '\f107';    // Framework
+        color: inherit;    // Framework
+        @include transition(all, .4s, ease-in-out);    // Framework
+      }
+      li {
+        &.expanded > h5:after, &.js-expanded > h5:after {
+          @include rotate(180deg);    // Framework
+        }
+        ul li ul li.topic h5:after {
+          // color: #B1B2AF;    // Theme
+        }
+      }
+    }
+    h3, h6 {
+      // color: $text;    // Theme
+    }
+  }
+  .parsys.parsys1.twc-col2_2476-c1.parsys_column {
+    display: none;    // Framework
+  }
+}
+
+}

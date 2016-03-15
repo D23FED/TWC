@@ -1,0 +1,17 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Scroll To -- Version: 1.9.0.1 - Updated: 2/7/2014
+   ========================================================================== */
+
+.scrollToTop {
+  @include border-radius();    // Theme
+  background: rgba(0,0,0,.1);    // Theme
+  font-weight: 100;    // Theme
+  &:after {
+    font-family: $fontawesome;    // Theme
+    font-size: inherit;    // Theme
+    font-weight: inherit;    // Theme
+  }
+}

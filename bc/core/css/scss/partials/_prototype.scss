@@ -1,0 +1,60 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Prototype -- Version: 1.9.0.5  - Updated: 2/4/2014
+   ========================================================================== */
+
+// For Prototype Demo ONLY!! Don't ever ingest this file...EVER!
+
+.viewport, .loadtime, .pv {
+  position: fixed;
+  @include padding(.5em, 1em);
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.675);
+  font-family: $pre;
+  color: #0f0;
+}
+
+.pv {
+  top: 0;
+  left: 0;
+  @include border-radius(0 0 3px 0);
+  cursor: pointer;
+}
+
+.viewport {
+  top: 0;
+  right: 0;
+  @include border-radius(0 0 0 3px);
+}
+
+.loadtime {
+  bottom: 0;
+  left: 0;
+  @include border-radius(0 3px 0 0);
+}
+
+.internal {
+  margin-bottom: 1em;
+  @include padding(1em);
+  color: #D4D5D6;
+  text-align: center;
+}
+
+@media (max-width: $small) {
+
+  .pv {
+    display: none;
+  }
+
+  .fold {
+    position: absolute;
+    top: 480px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #0f0;
+    z-index: 10000;
+  }
+
+}

@@ -1,0 +1,87 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Rollover Captions -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.rolloverCaptions {
+
+  figure {
+    display: block;    // Framework
+    position: relative;    // Framework
+    float: left;    // Framework
+    overflow: hidden;    // Framework
+    img { width: 100%; }    // Framework
+    &:before {
+      // font-family: $fontawesome;    // Theme
+      content: "\f077";    // Framework
+      position: absolute;    // Framework
+      // text-shadow: 0 0 5px $text;    // Theme
+      // color: $text-white;    // Theme
+      // text-align: center;    // Theme
+      // @include font-size(16);    // Theme
+      @include transition(all, .6s, ease);    // Framework
+      @include opacity(.75);    // Framework
+    }
+    &:hover:before {
+      opacity: 0;    // Framework
+    }
+    &:hover {
+      figcaption {
+        @include opacity(1);    // Framework
+        margin-bottom: 1em;    // Framework
+      }
+    }
+  }
+
+  figcaption {
+    position: absolute;    // Framework
+    background: $black;    // Framework
+    background: rgba(0,0,0,.75);    // Framework
+    color: $white;    // Framework
+    @include padding(1em);    // Framework
+    @include opacity(0);    // Framework
+    @include transition(all, .6s, ease);    // Framework
+  }
+
+  .caption-top {
+    figcaption {
+      left: 0;    // Framework
+      top: -1em;    // Framework
+    }
+    &:before {
+      top: .5em;    // Framework
+      right: 1em;    // Framework
+      content: "\f078";    // Framework
+    }
+    &:hover figcaption {
+      top: 0;    // Framework
+    }
+  }
+
+  .caption-bottom {
+    figcaption {
+      left: 0;    // Framework
+      bottom: -1em;    // Framework
+    }
+    &:before {
+      bottom: 1.5em;    // Framework
+      left: 1em;    // Framework
+    }
+    &:hover figcaption {
+      bottom: 0;    // Framework
+    }
+  }
+
+  @media (max-width: $medium) {
+
+    .touch {
+      figcaption {
+        display: none;    // Framework
+      }
+    }
+
+  }
+
+}

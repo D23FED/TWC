@@ -1,0 +1,16 @@
+/* ==========================================================================
+    Alerts -- 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-browser-alert-section {
+  background-color: #fef937;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fef937), to(#e8d440));
+  background-image: -webkit-linear-gradient(top, #fef937, #e8d440);
+  background-image: -moz-linear-gradient(top, #fef937, #e8d440);
+  background-image: -ms-linear-gradient(top, #fef937, #e8d440);
+  background-image: -o-linear-gradient(top, #fef937, #e8d440);
+  background-image: linear-gradient(top, #fef937, #e8d440);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fef937', EndColorStr='#e8d440')"; */
+}
+.twc-browser-alert-section .twc-alert-close:after {
+  color: #333;
+}

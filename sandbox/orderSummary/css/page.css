@@ -1,0 +1,207 @@
+.progress-bar {
+
+}
+.progress-bar .progress-bar-wrapper {
+  border-radius: 3px;
+  border: 2px solid #fff;
+}
+.progress-bar li {
+  display: inline-block;
+  width: 20%;
+  margin-left: -4px;
+  border-right: 2px solid #387ab4;
+}
+.progress-bar li:first-of-type {
+  margin-left: 0;
+}
+.progress-bar li:last-of-type {
+  border-right: none;
+}
+.progress-bar li.js-active {
+  width: 40%;
+  background: #387ab4;
+}
+.progress-bar .color-block {
+  background: #fff;
+  padding: 1em;
+}
+.progress-bar .stepNumber {
+  font-family: "TWC Round Book";
+  color: #387ab4;
+  display: inline-block;
+  width: 42px;
+  float: left;
+  font-size: 2.8rem;
+  font-size: 28px;
+  line-height: 42px;
+  max-width: 20%;
+}
+.progress-bar .js-active .stepNumber {
+  background: #fff;
+  border-radius: 50%;
+}
+.progress-bar .stepContent {
+  display: inline-block;
+  float: left;
+  width: 80%;
+  color: #387ab4;
+}
+.progress-bar .stepContent h4 {
+  margin-bottom: 0;
+}
+.progress-bar li:not(.js-active) .stepContent h4 {
+  line-height: 42px;
+}
+.progress-bar .js-active .stepContent {
+  color: #fff;
+}
+
+@media (max-width: 40em) {
+  .progress-bar li,
+  .progress-bar li.js-active {
+    width: 25%;
+  }
+  .progress-bar li .stepNumber {
+    width: 100%;
+    text-align: center;
+  }
+  .progress-bar li .stepContent {
+    display: none;
+  }
+}
+
+/* Order Summary CSS Begin */
+.order-summary .color-block {
+  padding: 1em;
+}
+
+.order-summary .color-block h2,
+.order-summary h4,
+.order-summary .serviceAuthorization .twc-box-column,
+.verticalAccordionHeader .h4 {
+  margin-bottom: 0;
+}
+
+.order-summary table,
+.order-summary .serviceAuthorization {
+  border: 1px solid #ccc;
+}
+
+.order-summary table.order-summary-table figure img {
+  margin: 0 auto;
+}
+
+.order-summary table.order-summary-table td,
+.order-summary table.order-summary-table th,
+.order-summary .serviceAuthHead {
+  padding: 0.5em;
+}
+
+.order-summary table.order-summary-table .tableSubHead td,
+.appointmentNotifications.twc-box-column {
+  padding: 0;
+}
+
+.order-summary table.order-summary-table td {
+  border-top: 1px solid #ccc;
+}
+
+.order-summary table.special-offer td:first-of-type {
+  width: 10%;
+  padding: 0;
+}
+
+.order-summary table.special-offer td:nth-of-type(2) {
+  width: 90%;
+}
+
+.order-summary table.special-offer td > span {
+  vertical-align: top;
+}
+
+.order-summary table td:first-of-type {
+  width: 15%;
+}
+
+.order-summary table .tableSubhead td:nth-of-type(2) {
+  padding: 1em 0;
+}
+
+.order-summary table td:nth-of-type(2) {
+  width: 60%;
+  border-right: 1px solid #ccc;
+  padding-left: 1em;
+}
+
+.order-summary table td:nth-of-type(3) {
+  width: 25%;
+}
+
+.order-summary table .tableSubHead td {
+  border-right: none;
+}
+
+.order-summary .serviceAuthorization {
+  border-radius: 3px;
+  padding: 1em;
+}
+
+.order-summary .serviceAuthorization .serviceAuthContent {
+  background: #fff;
+  padding: 1em;
+  max-height: 150px;
+  overflow-y: scroll;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
+.verticalAccordionHeader {
+  padding: 1em;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+}
+
+.verticalAccordionContent {
+  display: none;
+  padding: 1em;
+}
+
+.appointmentNotifications .verticalAccordion .icon-chevron-sign-down span:before {
+  transition: all 0.5s;
+  display: inline-block;
+}
+
+.appointmentNotifications .verticalAccordion .icon-chevron-sign-down.js-toggle span:before {
+  transition: all 0.5s;
+  -webkit-transform: rotate(180deg);/* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: rotate(180deg);/* IE 9 */
+  transform: rotate(180deg);/* IE 10, Fx 16+, Op 12.1+ */
+}
+
+.terms.termsError {
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid #f03;
+  border-radius: 3px;
+}
+.terms .text-error {
+  display: none;
+}
+.terms.termsError .text-error {
+  display: block;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 40em) {
+  .order-summary table td:first-of-type {
+    display: none;
+  }
+  .order-summary table td:nth-of-type(2),
+  .order-summary table td:nth-of-type(3) {
+    width: 50%;
+  }
+  .order-summary table.order-summary-table .tableSubHead td {
+    padding: 0.5em;
+  }
+}

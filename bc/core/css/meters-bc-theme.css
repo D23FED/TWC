@@ -1,0 +1,29 @@
+/* ==========================================================================
+    Meters -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.meter {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #e1e1e1;
+}
+.meter > span {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #3779b3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3779b3), to(#02447e));
+  background-image: -webkit-linear-gradient(top, #3779b3, #02447e);
+  background-image: -moz-linear-gradient(top, #3779b3, #02447e);
+  background-image: -ms-linear-gradient(top, #3779b3, #02447e);
+  background-image: -o-linear-gradient(top, #3779b3, #02447e);
+  background-image: linear-gradient(top, #3779b3, #02447e);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3779b3', EndColorStr='#02447e')"; */
+  color: white;
+}

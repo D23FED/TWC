@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.twc-container {
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
+}
+
+.huge-hero {
+  height: 100%;
+  overflow: hidden;
+}
+
+.huge-hero .huge-hero-image-1 {
+  height: 100%;
+  width: 100%;
+  background-image: url(mega-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+.huge-hero .huge-hero-image-2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(dodgers.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.huge-hero .huge-hero-image-3 {
+  height: 100%;
+  width: 100%;
+  background-image: url(mega-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.huge-hero .huge-hero-image .huge-hero-image-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  width: 80%;
+}

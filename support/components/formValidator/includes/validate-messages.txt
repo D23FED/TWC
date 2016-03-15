@@ -1,0 +1,12 @@
+[
+	{ "id":"max-length", "message":"Please fill in the maximum required characters!"},
+	{ "id":"min-length", "message":"Please fill in the minimum required characters!"},
+  { "id":"first-name", "message":"Please Enter Your First Name"},
+  { "id":"last-name", "message":"Please Enter Your Last Name"},
+  { "id":"address", "message":"Please Enter Your Address"},
+  { "id":"city", "message":"Please Enter Your City"},
+  { "id":"state", "message":"Please Enter Your State"},
+  { "id":"zip", "message":"Please Enter Your Zip Code"},
+  { "id":"phone-number", "message":"Please Enter Your Phone Number"},
+  { "id":"email", "message":"Please Enter Your Email"}
+]

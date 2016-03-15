@@ -1,0 +1,62 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+$th-packages-start: #6f93af;
+$th-packages-end: #59768d;
+$th-channels-start: lighten($th-packages-start,72%);
+$th-channels-end: lighten($th-packages-end,72%);
+$td-channels: #fff;
+$tr-even: #f2f2f2;
+
+/* ==========================================================================
+    Channel Lineup  -- Version: 1.0.0 - Updated: 3/14/2014
+   ========================================================================== */
+
+.clu {
+
+  .channel-search {
+    margin-top: 2em;
+    @include bp(medium) {
+      margin-top: 0;
+    }
+    .channels-input {
+      width: 100%;
+      input {
+        border: none;
+      }
+    }
+    .channels-submit {
+      width: 37%;
+    }
+  }
+  .box {
+    &.link {
+      background: none;
+      @include padding;
+      a {
+        @include bp(small) {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .location{
+      background: $white;
+      margin: 0;
+      @include padding(1em,0);
+      @include bp(small) {
+        background: none;
+        @include padding;
+        p {
+          @include inline-block;
+          margin-bottom: .5em;
+        }
+      }
+    }
+    @include bp(small) {
+      @include padding;
+      background: none;
+    }
+  }
+
+}

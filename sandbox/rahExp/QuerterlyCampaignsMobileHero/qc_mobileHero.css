@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*	Raymond Heredia
+ * 	12-10-15
+ * 	qc_mobileHero.html
+ */
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+.qc section {
+	padding:20px;
+}
+.qc section:nth-child(1) {
+	background: red;
+	min-height:310px;
+}
+.qc section:nth-child(2) {
+	border-top:5px solid #FFF;
+	position:relative;
+	background: #007ec3;
+	background: -moz-linear-gradient(top,  #007ec3 1%, #002f65 100%);
+	background: -webkit-linear-gradient(top,  #007ec3 1%,#002f65 100%);
+	background: linear-gradient(to bottom,  #007ec3 1%,#002f65 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007ec3', endColorstr='#002f65',GradientType=0 );
+}
+.qc i {
+	width: 52px;
+	height:52px;
+	background:#FFF;
+	display:block;
+	margin:-50px auto 20px;
+	border-radius:50%;
+}
+.qc section p {
+	color: #FFF;
+	padding:15px 0;
+}
+.qc section:nth-child(2) {
+	border-bottom:1px solid #FFF;
+}
+.qc section:nth-child(2) p:last-child {
+	color:#DB971C;
+	border-top:1px solid #FFF;
+}

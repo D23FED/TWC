@@ -1,0 +1,428 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Footer -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-footer {
+  @include padding(2em,0,2em,0);
+  background: rgb(211, 211, 212);
+  background: -moz-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(211, 211, 212, 1)), color-stop(3%, rgba(231, 231, 232, 1)), color-stop(16%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+  background: -webkit-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
+  background: -o-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(to bottom, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3d3d4', endColorstr='#ffffff',GradientType=0 );
+  @include font-size(12);
+  [class*='twc-col3_333333-c'] {
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 2em;
+  }
+  a {
+    color: $footer-link;
+    &:hover {
+      color: $link;
+      text-decoration: underline;
+    }
+  }
+  h3.label {
+    display: block;
+    /* offset earlier table-cell declaration */
+    color: #000;
+    @include font-family($twc-book);
+    @include font-size(18);
+    margin: 0 0 1em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.01);
+  }
+  .twc-block-links {
+    display: none;
+    float: left;
+    @include margin();
+    width: 100%;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  .labelList li {
+    line-height: 2;
+  }
+  .twc-block-links li {
+    float: left;
+    margin: 0 0 1px;
+    padding: 0;
+    width: 16.66666%;
+    &:first-child a {
+      border-left: 0;
+    }
+    &:last-child a {
+      border-right: 0;
+    }
+    a {
+      border-left: 1px solid #D4D4D4;
+      color: $text;
+      display: block;
+      @include font-size(14);
+      font-weight: 700;
+      margin: 0 0 1px;
+      padding: 1em 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  .twc-footer-links {
+    ul {
+      max-width: 980px;
+    }
+    li {
+      @include inline-block();
+      padding: 0 0 0 8px;
+      margin: 0 .5em .5em 0;
+      line-height: 1;
+    }
+  }
+}
+
+.twc-footer-links ul li {
+  border-left: 1px solid #3c3e41;
+  &:first-child {
+    border-left: 0;
+  }
+}
+
+.twc-footer {
+  .twc-footer-links {
+    li {
+      &.js-last {
+        background: 0;
+      }
+      &:first-child {
+        padding: 0;
+        background: 0;
+      }
+    }
+    a {
+      color: $text;
+      font-weight: 700;
+      &:hover {
+        color: #387ab4;
+      }
+    }
+  }
+  p {
+    width: 100%;
+    color: #4c4d51;
+    @include font-family($arial);
+  }
+}
+
+footer {
+  input {
+    margin-bottom: 1em;
+    padding: 0.35em 0.5em;
+    border: 1px solid #E6E6E7;
+    @include border-radius(2);
+    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.1) inset);
+  }
+  [class*='social-'] {
+    padding: 0;
+    display: block;
+  }
+}
+
+/* Accessibility */
+
+// .accessibility:before {
+//   content: 'icon-wheelchair';
+//   font-family: $fontawesome;
+// }
+
+/* Social Networking Icons */
+
+.social-facebook {
+  background: url(../../images/social-facebook.png) 0 .5em no-repeat;
+  &:hover {
+    background-image: url(../../images/social-facebook-hover.png);
+  }
+}
+
+.social-twitter {
+  background: transparent url(../../images/social-twitter.png) 0 .5em no-repeat;
+  &:hover {
+    background-image: url(../../images/social-twitter-hover.png);
+  }
+}
+
+.social-untangled {
+  background: transparent url(../../images/social-untangled.png) 0 .5em no-repeat;
+  &:hover {
+    background-image: url(../../images/social-untangled-hover.png);
+  }
+}
+
+.social-youtube {
+  background: transparent url(../../images/social-youtube.png) 0 .5em no-repeat;
+  &:hover {
+    background-image: url(../../images/social-youtube-hover.png);
+  }
+}
+
+.social-forums {
+  background: transparent url(../../images/icon-social-forum.png) 0 .5em no-repeat;
+  &:hover {
+    background-image: url(../../images/icon-social-forum-hover.png);
+  }
+}
+
+.twc-footer [class*='social-'] {
+    padding: 2px 0 2px 2em;
+    display: block;
+}
+
+.twc-footer .footer-menu .vertical li {
+    padding: 0;
+}
+
+.twc-footer .columnControl {
+    padding-bottom: 0px;
+}
+
+.footer-menu .horizontal.list {
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+}
+
+.twc-menu-dropdown .current-nav-list { position: relative; }
+
+nav.twc-mobile-navigation .current-nav-list {
+    display: block ;
+    position: absolute ;
+    left: 0;
+    height: auto;
+    width: 100%;
+    max-width: 1099px;
+    z-index: 99999;
+}
+
+
+nav.twc-mobile-navigation .current-nav-list > li {
+    width: 400%;
+    border-left: none;
+    border-right: none;
+    text-align: left; }
+
+nav.twc-mobile-navigation .current-nav-list > li.js-first { border-bottom: 1px solid #f0f0f0; }
+
+/* Webkit: Chrome/Safari */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Webkit browsers add a 2px margin outside the chrome of form elements */
+  .twc-footer h3.label {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+  }
+}
+
+/* IE:8/9 */
+
+.twc-ie .twc-footer {
+  zoom: 1;
+  &:before, &:after {
+    zoom: 1;
+  }
+}
+
+/* ie8 (.ie8) */
+
+.twc-ie8 .twc-footer .twc-footer-links ul {
+  max-width: 960px;
+}
+
+@media (max-width: 48em) {
+
+  .twc-footer {
+    padding-top: 0;
+    [class*='twc-col3_333333-c'] {
+      width: 31.6666667%;
+      margin-left: 2.5%;
+    }
+    .twc-block-links li {
+      width: 33.333%;
+      border-bottom: 1px solid $text-white;
+    }
+  }
+  .twc-row div.twc-footer-menu-bottom-row div.parsys_column:first-child {
+    margin-left: 0;
+  }
+  .twc-footer .twc-block-links {
+    display: block;
+  }
+  .twc-other-sites {
+    display: block;
+    background: #f2f4f6;
+    ul {
+      margin: 5px 0;
+      text-align: center;
+    }
+    li {
+      display: inline;
+      a {
+        padding: 0 1%;
+        border-right: 1px solid #666;
+      }
+      &.js-last a {
+        border-right: none;
+      }
+    }
+  }
+  .twc-mobile-social-links {
+    display: none;
+  }
+  .twc-footer {
+    .twc-footer-links {
+      @include inline-block();
+      margin: 35px 0 5px;
+      text-align: center;
+    }
+    .twc-legal-links li {
+      text-align: center;
+    }
+    .twc-footer-links {
+      margin: 0;
+    }
+  }
+  footer {
+    .twc-content {
+      padding: 0;
+    }
+    .twc-box-column {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+@media (max-width: 40em) {
+
+  .twc-footer {
+    padding: 0;
+  }
+  .twc-container.footer-menu {
+    width: 100%;
+    padding: 0;
+  }
+  .twc-footer {
+    [class*='twc-col3_333333-c'] {
+      width: 33.3333337%;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    h3.label {
+      @include margin();
+      padding: 15px;
+      border-right: 1px solid #d4d4d4;
+      @include background-gradient(#eeeeef, #dddfe2);
+      @include font-family($arial);
+      @include font-size(14);
+      font-weight: 700;
+      color: $text;
+      text-align: center;
+      min-height: 80px; /*WEBCMS-12585*/
+    }
+    [class*='twc-col3_333333-c']:nth-of-type(3n) h3.label {
+      border-right: none;
+    }
+    h3.label {
+      + ul {
+        display: none;
+        position: relative;
+        width: 300%;
+      }
+      &.current, &.js-current {
+        @include background-gradient(#d0d5db, #bbc2cb);
+        + ul li {
+          @include background-gradient(#d0d5db, #bbc2cb);
+          &:active {
+            @include background-gradient(#a6b5c3, #8698aa);
+          }
+          a {
+            color: $text;
+            &:active {
+              color: $text;
+            }
+          }
+        }
+      }
+      + ul li {
+        padding: 12px 3%;
+        border-top: 1px solid #dfe7ee;
+        @include background-gradient(#eeeeef, #dddfe2);
+        @include font-size(14);
+        text-align: left;
+      }
+    }
+  }
+  .twc-footer-menu.mobile li, .twc-footer-menu.js-mobile li {
+    &:hover a, &:active a {
+      color: $text;
+      text-decoration: none;
+    }
+  }
+  .twc-footer {
+    .parsys_column a {
+      color: $footer-link;
+      font-weight: 700;
+    }
+    h3.label + ul.mobile, h3.label + ul.js-mobile {
+      display: block;
+    }
+  }
+  [class*='twc-col3_333333-c'] {
+    &:nth-of-type(2) h3.label + ul {
+      left: -100%;
+    }
+    &:nth-of-type(3n) h3.label + ul {
+      left: -200%;
+    }
+  }
+  .twc-footer .twc-footer-links {
+    margin-top: 0;
+    padding: 2em;
+  }
+  .twc-footer-copyright-msg {
+    display: block;
+  }
+  .twc-footer-menu li a {
+    @include inline-block();
+    width: 100%;
+  }
+  .twc-footer h3.label + ul li a:after {
+    float: right;
+    font-family: $fontawesome;
+    content: '\f105';
+    color: inherit;
+  }
+
+  .footer-menu .horizontal.list {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+  }
+
+  .footer-menu .footer-copyright-msg {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+  }
+
+  .footer-menu .labelList ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
+}

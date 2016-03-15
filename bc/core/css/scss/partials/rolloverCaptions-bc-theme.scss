@@ -1,0 +1,18 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Rollover Captions -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.rolloverCaptions {
+  figure {
+    &:before {
+      font-family: $fontawesome;    // Theme
+      text-shadow: 0 0 5px $text;    // Theme
+      color: $text-white;    // Theme
+      text-align: center;    // Theme
+      @include font-size(16);    // Theme
+    }
+  }
+}

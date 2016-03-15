@@ -1,0 +1,38 @@
+.backgroundColor {
+  position: relative;
+}
+
+.textSection {
+  position: absolute;
+  top: 20%;
+  width: 96%;
+  left: 2%;
+  text-align: center;
+  color: #fff;
+  text-shadow:
+   -2px -2px 2px #000,
+    2px -2px 2px #000,
+    -2px 2px 2px #000,
+     2px 2px 2px #000;
+}
+
+.textSection.dark {
+  color: #333;
+  text-shadow:
+   -1px -1px 1px rgba(255,255,255,0.75),
+    1px 0 0 rgba(255,255,255,0.75),
+    -1px 0 0 rgba(255,255,255,0.75),
+     2px 2px 1px rgba(255,255,255,0.75);
+}
+
+@media (max-width: 48em) {
+  .backgroundColor {
+    background: #777;
+  }
+  img {
+    opacity: 0.5;
+  }
+  .textSection {
+    opacity: 1 !important;
+  }
+}

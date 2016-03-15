@@ -1,0 +1,31 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Pagination -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.pagination {
+  li {
+    &.page_first, &.page_prev, &.page_next, &.page_last {
+    }
+    &.page_prev button:before {
+      font-family: $fontawesome;    // Theme
+    }
+    &.page_next button:after {
+      font-family: $fontawesome;    // Theme
+    }
+  }
+  button {
+    @include font-size(13);
+    &.first:before {
+      font-family: $fontawesome;    // Theme
+    }
+    &.last:after {
+      font-family: $fontawesome;    // Theme
+    }
+  }
+  .number span {
+    background: none repeat scroll 0 0 #ebedec;    // Theme
+  }
+}

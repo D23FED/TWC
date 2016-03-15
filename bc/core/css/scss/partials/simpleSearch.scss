@@ -1,0 +1,255 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Simple Search  -- Version: 1.0.0 - Updated: 5/19/2014
+   ========================================================================== */
+
+.bc-simpleSearch {
+  .twc-box-column {
+    padding: 0.5em;
+    overflow: hidden;
+  }
+  .twc-col2_7624-c1 {
+    &.twc-box-column {
+      padding: 1em;
+    }
+  }
+  .elc-style-3 {
+    padding: 0.6em;
+  }
+  .searchResults.resultNumbers {
+    text-align: center;
+  }
+  .resultNumbers {
+    font-size: 1.063em;
+  }
+  form {
+    background-color: #a7a7a7;
+    padding: 1em;
+    border-radius: 0 3px 0 0;
+    margin: -0.5em -0.6em 1.5em 0;
+    &.searchInput {
+      .twc-search {
+        width: 100%;
+        .twc-search-input-wrap {
+          text-align: center;
+          input {
+            width: 85%;
+            float: left;
+          }
+        }
+      }
+    }
+
+    &.searchInput-bottom {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  .filters {
+    // @include background-gradient(#f0f4fb, #ffffff);
+    margin-right: -1.5em;
+    .filter-applied {
+      display: none;
+    }
+    .filters-bar {
+      position: relative;
+      background-color: #7BABDC;
+      cursor: pointer;
+      .cta {
+        &.filter-toggle {
+          position: relative;
+          a {
+            color: #fff;
+          }
+        }
+        &.filter-applied {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+    .filter-list {
+      position: relative;
+      padding: 1em;
+      ul {
+        li {
+          padding-bottom: 1em;
+        }
+        &.js-last{
+          padding-bottom: 0;
+        }
+      }
+      .remove-filter {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+    }
+  }
+  .pagination.right.top {
+    padding-bottom: 1.5em;
+    padding-right: 1.95em;
+  }
+  .pagination.right.bottom {
+    padding-top: 0.563em;
+    padding-bottom: 1.118em;
+    padding-right: 1.95em;
+  }
+
+  .search-bar {
+    form {
+      input {
+        float: left;
+        max-width: 75%;
+        min-width: 60%;
+      }
+      .cta.omega[class*="icon-"] {
+        margin-right: 0;
+      }
+    }
+  }
+  form {
+    .twc-search {
+      button:before {
+        color: #3376B2;
+        content: "\f002";
+        font-family: FontAwesome;
+        line-height: 1;
+      }
+    }
+  }
+  ul {
+    &.bordered {
+      > li {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $medium) {
+  .simpleSearch {
+    .filters {
+      .filter-list {
+        .remove-filter {
+          top: 100%;
+          left: 0;
+        }
+      }
+    }
+    form {
+      margin: -0.5em -2em 1em 0;
+    }
+
+    .filters {
+      margin-right: 0.5em;
+    }
+    [class*='twc-col2_2476-c'] {
+      width: 74.75%;
+      .marginless & {
+        width: 76%;
+      }
+    }
+
+    [class*='twc-col2_2476-c0'] {
+      width: 22.75%;
+      .marginless & {
+        width: 24%;
+      }
+    }
+  }
+  .searchInput.desktop-hidden {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: $small) {
+  .simpleSearch {
+    [class*='twc-col2_2476-c'] {
+      width: 100%;
+      .marginless & {
+        width: 100%;
+      }
+    }
+    .searchInput.desktop-hidden {
+      width: auto;
+      margin-bottom: 1em;
+    }
+
+    form {
+      &.searchInput {
+        margin: 0 -2.5%;
+        border-radius: 0;
+        .twc-search {
+          .twc-search-input-wrap {
+            input {
+              width: 85%;
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      margin-bottom: 1em;
+    }
+
+    .desktop-hidden.tablet-hidden,
+    .desktop-hidden, .tablet-hidden {
+      display: block !important;
+    }
+
+    .filters {
+      background-color: #E7EEF4;
+      background-image: none;
+      a {
+        font-weight: 400;
+      }
+      .box {
+        display: none;
+      }
+      .filters-bar {
+        margin: -0.5em -1em 0 -0.5em;
+        border-radius: 3px 3px 0 0;
+        .cta {
+          &.filter-applied {
+            top: 10%;
+            border-left: 1px solid #6595C5;
+          }
+        }
+        .filter-applied {
+          a {
+            color: #fff;
+          }
+        }
+      }
+      .filter-list {
+        display: none;
+        .remove-filter {
+          left: auto;
+          top: 1em;
+        }
+      }
+
+    }
+    .search-bar {
+      margin: 1em 0;
+    }
+    .twc-search{
+      input {
+        width: 84%;
+      }
+    }
+    .box {
+      margin: 0;
+    }
+
+  }
+}
+

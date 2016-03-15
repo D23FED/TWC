@@ -1,0 +1,53 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    More Help -- Version: 1.9.0.1 - Updated: 12/31/2013
+   ========================================================================== */
+
+.flyout {
+  position: relative;    // Framework
+  margin-left: .125em;    // Framework
+}
+
+[class*='flyoutContent-'] {
+  display: none;    // Framework
+  position: absolute;    // Framework
+  overflow: visible;    // Framework
+  width: 100%;    // Framework
+  min-width: 19.25em;    // Framework
+  max-width: 19.25em;    // Framework
+  margin-top: .5em;    // Framework
+  @include padding(1em);    // Framework
+  // border: 1px solid $text-white;    // Theme
+  // @include border-radius();    // Theme
+  // background-color: #f6f6f6;    // Theme
+  // @include box-shadow(0 1px 2px 0 #888);    // Theme
+  z-index: 99999;    // Framework
+  li {
+    @include padding(1em, 0);    // Framework
+  }
+}
+
+.flyoutContent-up {
+  right: 0;    // Framework
+  bottom: .5em;    // Framework
+}
+
+.flyoutContent-down {
+  right: 0;    // Framework
+  top: 2.5em;    // Framework
+}
+
+.flyout-page-height {
+  min-height: 400px;    // Framework
+}
+
+@media (max-width: $small) {
+
+  .flyoutContent-up {
+    bottom: 2.5em;    // Framework
+  }
+
+}
+

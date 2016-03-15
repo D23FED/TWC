@@ -1,0 +1,67 @@
+/* ==========================================================================
+    Accordion -- Version: 1.9.0.0 - Updated: 1/11/2014
+   ========================================================================== */
+.expandable li h6, .expandableHybrid li h6 {
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: #3779b3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3779b3), to(#02447e));
+  background-image: -webkit-linear-gradient(top, #3779b3, #02447e);
+  background-image: -moz-linear-gradient(top, #3779b3, #02447e);
+  background-image: -ms-linear-gradient(top, #3779b3, #02447e);
+  background-image: -o-linear-gradient(top, #3779b3, #02447e);
+  background-image: linear-gradient(top, #3779b3, #02447e);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3779b3', EndColorStr='#02447e')"; */
+  color: white;
+}
+.expandable li.js-notexpandable h6:after, .expandable li.js-notexpandableHybrid h6:after, .expandableHybrid li.js-notexpandable h6:after, .expandableHybrid li.js-notexpandableHybrid h6:after {
+  font-family: "FontAwesome";
+}
+.expandable li.js-expandable h6:after, .expandable li.js-expandableHybrid h6:after, .expandableHybrid li.js-expandable h6:after, .expandableHybrid li.js-expandableHybrid h6:after {
+  font-family: "FontAwesome";
+}
+.expandable li ul, .expandableHybrid li ul {
+  border-right: 1px solid #e1e1e1;
+}
+.expandable li ul li.js-notexpandableHybrid a:after, .expandableHybrid li ul li.js-notexpandableHybrid a:after {
+  font-family: "FontAwesome";
+  color: #C2C2C2;
+}
+.expandable li ul li.js-expandableHybridSub a:after, .expandableHybrid li ul li.js-expandableHybridSub a:after {
+  font-family: "FontAwesome";
+  color: #C2C2C2;
+}
+.expandable li ul li.js-active.js-expandableHybridSub, .expandableHybrid li ul li.js-active.js-expandableHybridSub {
+  background: #e3effb;
+}
+.expandable li ul li.js-active.js-expandableHybridSub a:after, .expandableHybrid li ul li.js-active.js-expandableHybridSub a:after {
+  font-family: "FontAwesome";
+  color: #C2C2C2;
+}
+.expandable li li, .expandableHybrid li li {
+  border-bottom: 1px dotted #e1e1e1;
+}
+.expandable li.liState, .expandableHybrid li.liState {
+  background: #c8d6e3;
+}
+
+@media (max-width: 48em) {
+  .expandable li ul li.js-notexpandableHybrid a:after, .expandableHybrid li ul li.js-notexpandableHybrid a:after {
+    font-family: "FontAwesome";
+    color: #C2C2C2;
+  }
+  .expandable li ul li.js-expandableHybridSub a:after, .expandableHybrid li ul li.js-expandableHybridSub a:after {
+    font-family: "FontAwesome";
+    color: #C2C2C2;
+  }
+  .expandable li ul li.js-active.js-expandableHybridSub, .expandableHybrid li ul li.js-active.js-expandableHybridSub {
+    background: #e3effb;
+  }
+  .expandable li ul li.js-active.js-expandableHybridSub a:after, .expandableHybrid li ul li.js-active.js-expandableHybridSub a:after {
+    font-family: "FontAwesome";
+    color: #C2C2C2;
+  }
+}

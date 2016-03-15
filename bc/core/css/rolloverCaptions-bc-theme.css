@@ -1,0 +1,11 @@
+/* ==========================================================================
+    Rollover Captions -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+.rolloverCaptions figure:before {
+  font-family: "FontAwesome";
+  text-shadow: 0 0 5px #333333;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+}

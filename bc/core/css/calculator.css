@@ -1,0 +1,62 @@
+/* ==========================================================================
+    Calculator -- Version: 1.0.0.0 - Updated: 4/3/2014
+   ========================================================================== */
+.sticky {
+  background: none;
+  box-shadow: none;
+  text-align: left;
+}
+
+.js-fixed {
+  top: 0;
+  width: 100%;
+}
+
+.calculator {
+  padding: 1em;
+}
+
+.calculator-box {
+  overflow: auto;
+  float: right;
+}
+
+.calculator-box .cart-price {
+  float: left;
+}
+
+.calculator-box .cart-price .pricing {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.calculator-box .cta-holder {
+  float: left;
+}
+
+.calculator-box .cta-holder .cta {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 48em) {
+  .js-fixed {
+    left: 2.5%;
+    right: 2.5%;
+    width: auto;
+  }
+
+  .calculator {
+    text-align: center;
+  }
+
+  .calculator-box {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

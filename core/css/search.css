@@ -1,0 +1,141 @@
+/* ==========================================================================
+    Search -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-search-module {
+  margin: 0 auto;
+  background: #d4d5d6;
+}
+.twc-search-module .twc-container {
+  padding: 1em 4%;
+}
+.twc-search-module .cta button {
+  background-color: #3779b3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3779b3), to(#02447e));
+  background-image: -webkit-linear-gradient(top, #3779b3, #02447e);
+  background-image: -moz-linear-gradient(top, #3779b3, #02447e);
+  background-image: -ms-linear-gradient(top, #3779b3, #02447e);
+  background-image: -o-linear-gradient(top, #3779b3, #02447e);
+  background-image: linear-gradient(top, #3779b3, #02447e);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3779b3', EndColorStr='#02447e')"; */
+  color: white;
+}
+.twc-search-module .cta button:hover {
+  background-color: #265a83;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#265a83), to(#1b405e));
+  background-image: -webkit-linear-gradient(top, #265a83, #1b405e);
+  background-image: -moz-linear-gradient(top, #265a83, #1b405e);
+  background-image: -ms-linear-gradient(top, #265a83, #1b405e);
+  background-image: -o-linear-gradient(top, #265a83, #1b405e);
+  background-image: linear-gradient(top, #265a83, #1b405e);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#265a83', EndColorStr='#1b405e')"; */
+}
+
+.twc-search-module .cta button:active, .twc-search-module .cta button.active, .twc-search-module .cta button:focus {
+  background: #444545;
+  background-image: 0;
+}
+
+.twc-search-module .cta:disabled button, .twc-search-module .cta.disabled button {
+  cursor: default;
+  background-color: #666666;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666));
+  background-image: -webkit-linear-gradient(top, #666666, #666666);
+  background-image: -moz-linear-gradient(top, #666666, #666666);
+  background-image: -ms-linear-gradient(top, #666666, #666666);
+  background-image: -o-linear-gradient(top, #666666, #666666);
+  background-image: linear-gradient(top, #666666, #666666);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#666666')"; */
+  color: white;
+}
+
+.twc-search-module .cta:disabled button:hover, .twc-search-module .cta:disabled button:active, .twc-search-module .cta.disabled button:hover, .twc-search-module .cta.disabled button:active {
+  background-color: #666666;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666));
+  background-image: -webkit-linear-gradient(top, #666666, #666666);
+  background-image: -moz-linear-gradient(top, #666666, #666666);
+  background-image: -ms-linear-gradient(top, #666666, #666666);
+  background-image: -o-linear-gradient(top, #666666, #666666);
+  background-image: linear-gradient(top, #666666, #666666);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#666666')"; */
+  color: white;
+}
+
+.twc-module ul {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.twc-module li {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  padding: 0 10px;
+  border-right: 1px solid #9d9d9e;
+}
+.twc-module li.js-first {
+  padding-left: 0;
+}
+.twc-module li.js-last {
+  border-right: 0;
+}
+
+header .twc-module {
+  width: auto;
+}
+
+.twc-module {
+  width: auto;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.twc-module .twc-search-input-wrap {
+  width: auto;
+}
+
+.twc-banner-search {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.twc-search input {
+  width: 77%;
+}
+
+@media (max-width: 48em) {
+  .twc-search-module {
+    display: none;
+  }
+
+  .twc-search-input-wrap {
+    width: auto;
+  }
+
+  .twc-tablet-search {
+    display: table-cell;
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .twc-mobile-search button:before {
+    content: '\f002';
+    font-family: "FontAwesome";
+  }
+}
+@media (max-width: 40em) {
+  .twc-tablet-search {
+    display: none;
+  }
+
+  .twc-search-module .twc-module {
+    width: 100%;
+  }
+  .twc-search-module .twc-module ul {
+    display: none;
+  }
+  .twc-search-module input#submit {
+    width: 25%;
+    padding: 9px 0;
+  }
+}

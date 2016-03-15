@@ -1,0 +1,231 @@
+#olaHeader {
+  background: -webkit-linear-gradient(rgba(34, 35, 37, 1) 0%, rgba(19,19,22,1) 100%);
+  background: -o-linear-gradient(rgba(34, 35, 37, 1) 0%, rgba(19,19,22,1) 100%);
+  background: linear-gradient(rgba(34, 35, 37, 1) 0%, rgba(19,19,22,1) 100%);
+}
+
+#olaHeader h2 {
+  text-align: right;
+}
+
+#olaHeader figure.desktop-hidden img {
+  margin: 0 auto;
+}
+
+#olaHeader .image-art-direction.twc-container {
+  padding: 0;
+}
+
+#olaHeader [class*="image-focus-"] {
+  min-height: 0;
+  padding: 0.25em 0.5em;
+}
+
+#olaHeader [class*="image-focus-"] h2 {
+  margin-top: 0.25em;
+}
+
+#olaWrapper-1 {
+  background: -webkit-linear-gradient(to bottom, rgba(209, 217, 222, 0.25) 0%, rgba(196,213,213,1) 100%);
+  background: -o-linear-gradient(to bottom, rgba(209, 217, 222, 0.25) 0%, rgba(196,213,213,1) 100%);
+  background: linear-gradient(to bottom, rgba(209, 217, 222, 0.25) 0%, rgba(196,213,213,1) 100%);
+}
+
+[id*="olaWrapper-"] .parsys {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#olaWrapper-1 .pricing {
+  position: relative;
+  max-width: 290px;
+}
+
+#olaWrapper-1 .pricing .h4 sup {
+  font-size: 52px;
+  font-size: 5.2rem;
+  vertical-align: super;
+}
+
+#olaWrapper-1 .pricing .h4 span.dollars {
+  font-size: 90px;
+  font-size: 9rem;
+}
+
+#olaWrapper-1 .pricing .term {
+  top: 4.5em;
+  right: 0.5em;
+  position: absolute;
+  text-align: left;
+  font-weight: 700;
+  max-width: 34%;
+}
+
+#olaWrapper-1 .pricing .term .disclaimer-text {
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+
+#olaWrapper-1 h6 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+#olaWrapper-1 .brandLogos {
+  width: 100%;
+  display: inline;
+}
+
+#olaWrapper-1 .brandLogos .left,
+#olaWrapper-1 .brandLogos .right {
+  width: 40%;
+}
+
+#olaWrapper-1 .brandLogos .middle {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+#olaWrapper-1 .brandLogos figure img {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#olaWrapper-1 .cta {
+  font-size: 2.2rem;
+  display: block;
+  text-align: center;
+}
+
+#full-width-button {
+  margin-bottom: -1.5em;
+  padding-bottom: 1em;
+}
+
+#full-width-button .cta {
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 98%;
+}
+#full-width-button .cta a {
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+[id*="olaWrapper-"],
+[id*="full-width-button"] {
+    background: #fff;
+}
+
+[id*="olaWrapper-"] .image-art-direction.twc-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+[id*="olaWrapper-"] .image-art-direction.twc-container [class*="image-focus-"] {
+  overflow: hidden;
+}
+
+#olaWrapper-2 .parsys {
+  max-width: 100%;
+}
+#olaWrapper-2 .image-art-direction .parsys {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+#olaWrapper-3 {
+  min-height: 188px;
+}
+
+#olaFooter {
+  width: 100%;
+  background-color: #E8E8E8;
+  padding: 1em 0;
+}
+
+#olaFooter .parsys {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+section#content {
+  display: none;
+}
+
+a.text-white:hover {
+  color: #fff;
+}
+
+#olaWrapper-2 .image-art-direction .art-direction-par {
+  padding: 1em;
+}
+
+#olaWrapper-2 .image-art-direction .image-focus-1 .art-direction-par {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#olaWrapper-2 .image-art-direction .image-focus-1 .art-direction-par .richtext {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 48em) {
+  #olaHeader h2 {
+    text-align: center;
+  }
+  #olaWrapper-1 {
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(209, 217, 222, 0.25) 0%, rgba(209, 217, 222, 0.5) 80%, rgba(196,213,213,1) 100%);
+    background: -o-linear-gradient(rgba(209, 217, 222, 0.25) 0%, rgba(209, 217, 222, 0.5) 80%, rgba(196,213,213,1) 100%);
+    background: linear-gradient(rgba(209, 217, 222, 0.25) 0%, rgba(209, 217, 222, 0.5) 80%, rgba(196,213,213,1) 100%);
+  }
+  #olaWrapper-1 .olaHeader {
+    text-align: center;
+  }
+  #olaWrapper-1 .pricing,
+  #olaWrapper-1 .brandLogos {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+  #olaWrapper-1 .brandLogos {
+    display: inline-block;
+  }
+  #olaWrapper-2 .image-focus-5 figure img {
+    max-height: 250px;
+  }
+  #olaFooter {
+    margin: 0 auto;
+    max-width: 98%;
+  }
+}
+
+.disclaimer-text{font-size:9px;font-family:Arial;line-height:11px;color:#69696c}
+.super-h1{font-size:55px;font-family:"TWC Round Light";font-weight:100}
+.super-h2{font-size:46px;font-family:"TWC Round Light";font-weight:100}
+.super-h3{font-size:32px;font-family:"TWC Round Light";font-weight:100}
+.super-h4{font-size:24px;font-family:"TWC Round Book";font-weight:100}
+@media(max-width:48em){.super-h1{font-size:45px}
+.super-h2{font-size:36px}
+.super-h3{font-size:26px}
+}
+@media(max-width:40em){.super-h1{font-size:35px}
+.super-h2{font-size:26px}
+.super-h3{font-size:22px}
+}
+@media(max-width:48em){.h1{font-size:32px;font-size:3.2rem}
+.h2{font-size:26px;font-size:2.6rem}
+.h3{font-size:21px;font-size:2.1rem}
+.h4{font-size:19.5px;font-size:1.95rem}
+.h5{font-size:17.75px;font-size:1.775rem}
+.h6{font-size:16px;font-size:1.6rem}
+}
+@media(max-width:40em){.h1{font-size:27px;font-size:2.7rem}
+.h2{font-size:22.5px;font-size:2.25rem}
+.h3{font-size:18px;font-size:1.8rem}
+.h4{font-size:16.5px;font-size:1.65rem}
+.h5{font-size:15px;font-size:1.5rem}
+.h6{font-size:15px;font-size:1.5rem}
+}

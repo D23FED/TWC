@@ -1,0 +1,71 @@
+/* ==========================================================================
+   CSS code for Date Picker
+
+   Author: Qoppa
+   Version: 1.0 - Updated: 12/5/13
+   ========================================================================== */
+
+.ui-datepicker {
+	background-color: #EDF0F2;
+	border: 1px solid #6F93AF;
+	min-width: 185px;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 1px 2px 0 #888888;
+}
+
+.ui-datepicker-title {
+	text-align: center;
+	max-width: 48%;
+	margin: 0 auto;
+}
+
+.ui-datepicker-year,
+.ui-datepicker-month {
+	color: #fff;
+}
+
+.ui-datepicker-header {
+	padding: .5em .25em;
+	background-color: #5d92c0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5d92c0), to(#2c608f));
+	background-image: -webkit-linear-gradient(top, #5d92c0, #2c608f);
+	background-image: -moz-linear-gradient(top, #5d92c0, #2c608f);
+	background-image: -o-linear-gradient(top, #5d92c0, #2c608f);
+	background-image: -ms-linear-gradient(top, #5d92c0, #2c608f);
+	background-image: linear-gradient(top, #5d92c0, #2c608f);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5d92c0', EndColorStr='#2c608f'); }
+
+.ui-datepicker-next {
+	float: right;
+	min-width: 25%;
+	text-align: right;
+	color: #fff; }
+
+.ui-datepicker-prev {
+	float: left;
+	min-width: 25%;
+	text-align: left;
+	color: #fff; }
+
+.ui-datepicker-calendar { padding: 0em 1em .5em 1em; }
+
+table.ui-datepicker-calendar {
+	text-align: center;
+	margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.ui-datepicker-calendar thead tr {
+	color: #333333;
+	background: #eeeeef;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #eeeeef 0%, #dddfe2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(100%,#dddfe2));
+	background: -webkit-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+	background: -o-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+	background: -ms-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+	background: linear-gradient(to bottom,  #eeeeef 0%,#dddfe2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeef', endColorstr='#dddfe2',GradientType=0 );
+	box-shadow: 0 0 2px 0 #888888; }
+
+table.ui-datepicker-calendar td:not(:empty):hover + a { background-color: #D3D3D3; }

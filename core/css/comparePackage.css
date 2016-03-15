@@ -1,0 +1,36 @@
+/* ==========================================================================
+    Side-by-side Compare Package  -- Version: 1.0.0 - Updated: 10/22/2014
+   ========================================================================== */
+.packageCompare .mobile-only, .packageCompare .tablet-only {
+  display: none;
+}
+.packageCompare table.compare-packages {
+  text-align: center;
+  width: 75%;
+  float: left;
+  border-collapse: collapse;
+}
+.packageCompare table.compare-packages.full-width {
+  width: 100%;
+}
+.packageCompare table tr {
+  width: 100%;
+}
+.packageCompare table thead tr th {
+  background: #717171;
+  padding: 1em;
+  color: #ffffff;
+  width: 25%;
+  border-right: 1px solid #98999b;
+}
+.packageCompare table tbody tr td {
+  width: 25%;
+  padding: 1em;
+  border-right: 1px solid #98999b;
+}
+.packageCompare table tbody tr td.compare-subHead {
+  width: 100%;
+  padding: 0.5em;
+  background: #98999b;
+  color: #fff;
+}

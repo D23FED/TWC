@@ -1,0 +1,7 @@
+.faqList {
+  margin-left: 1.25em;
+  margin-bottom: 0.25em;
+}
+.faqList li.js-last {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   	About Us News -- Version: 1.0.1 - Updated: 01/03/2014
+   ========================================================================== */
+
+.head-banner header { 
+	height: 62px;
+	margin-bottom: 2em; }
+
+.head-banner header h4 {
+	color: #fff;
+	line-height: 2.8;
+	text-indent: 20px; }
+	
+.youtube-video-1 span { 
+	float: left;
+	margin-bottom: 1em; }
+
+.youtube-video-2 { 
+	max-width: 48.75%;
+	margin-right: 1.25%;
+	float: left; 
+}
+
+.youtube-video-3 {
+  float: right;
+  width: 48.75%;
+  margin-left: 1.25%;
+}
+
+.youtube-video-1 figure,
+.youtube-video-2 figure,
+.youtube-video-3 figure { margin-bottom: 0;}
+
+@media (max-width: 68.6875em) {
+	
+  .post { 
+  	margin-bottom: 1em;
+  	border-bottom: 1px solid #ededed; }
+
+}
+

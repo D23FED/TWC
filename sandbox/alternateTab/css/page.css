@@ -1,0 +1,7 @@
+[id*="tab"] {
+  display: none;
+}
+
+[id*="tab"].js-active {
+  display: block;
+}

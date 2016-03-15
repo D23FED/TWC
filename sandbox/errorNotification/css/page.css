@@ -1,0 +1,9 @@
+.error-notification .text-error:before {
+  font-family: "FontAwesome";
+  content: "\f071";
+  color: #f6b42a;
+  font-size: 2.4rem;
+  float: left;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}

@@ -1,0 +1,23 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Quick Request - Version: 1.0.0 - Updated: 10/16/14
+   ========================================================================== */
+
+.quick-request {
+  overflow: auto;    // Framework
+	padding: 1em;    // Framework
+	// min-height: 265px;    // Framework
+  @media (max-width: $medium) {
+    &:nth-child(1){
+      margin-bottom: 1em;    // Framework
+    }
+  }
+  @media (max-width: $small) {
+    margin-bottom: 1em;    // Framework
+  }
+  .box {
+    background: none;
+  }
+}

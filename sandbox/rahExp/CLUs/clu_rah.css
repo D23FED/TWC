@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* clu_rah.css
+ * Raymond Heredia
+ * 12-9-15
+ * 
+ * These classes are specific to CLUs and each new class should be namespaced with .lineup to prevent any style collisions.
+ * The CSS media queries do not live here. They are embedded in clu.js because they change based on the URL.
+ */
+
+body {
+	font-family:"TWC Round Book",Arial, Helvetica, sans-serif;
+}
+.lineup table {
+	max-width:980px;
+	text-align:center;
+	font-size:0.75em;
+}
+.lineup .wrap {
+	overflow:hidden;
+	height:0;
+}
+.lineup tr:nth-child(even) {
+	background-color:#FAFAFA;
+}
+.lineup td {
+	padding:15px;
+	height:30px;
+}
+.lineup td a {
+	color:#3376b2;
+	font-weight:700;
+	text-decoration:none;
+	display:block;
+	padding:15px;
+}
+.lineup td a:hover {
+	color: #1b405d;
+}
+.lineup .mainRow {
+	background: #E8E8E8;
+	padding:0;
+}
+.lineup tr:nth-child(1) td:nth-child(8)  {
+	padding:0;
+	font-weight: bold;
+}
+.lineup tr.mobile {
+	background:none !important;
+}
+.lineup .mainRow td,
+.lineup .optional td  {
+	padding:0;
+}
+.lineup .mainRow td {
+	background:#EBEBEB;
+}
+.lineup tr:nth-child(2) > td:nth-child(1),
+.lineup tr:nth-child(2) > td:nth-child(8),
+.lineup tr:nth-child(2) > td:nth-child(9) {
+	padding:15px;
+	font-weight:bold;
+}
+.lineup tr:nth-child(1) td:nth-child(1)  {
+	background:none;
+}
+.lineup td:nth-child(1) {
+	background:#EBEBEB;
+	text-align:left;
+}
+.lineup .checked {
+	background-image: url(image-checkmark.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.lineup .active {
+	background-color: #F8EFCC;
+}
+.lineup .active a {
+	color:#FFF;
+}
+.lineup .active a:hover {
+	color:#FFF;
+	cursor:text;
+}
+.lineup li {
+	list-style-type: none;
+	padding-top: 8px;
+}
+.lineup span {
+	display: none;
+}
+.lineup .activeTitle {
+	background: #A6A089 !important;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="video.css" type="text/css" />
+		<script src="video.js"></script>
+	</head>
+	<body>
+		
+		
+		<div class="videoContainer">
+			<video autoplay poster="polina.jpg" id="bgvid" loop="true" muted="true" autoplay="true">
+			  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+			  <source src="polina.webm" type="video/webm"></source>
+			  <source src="polina.mp4" type="video/mp4"></source>
+			</video>
+			
+			<div id="overlay">
+				<h1>VIDEO TEST</h1>
+			    <p><a href="#">Link to something</a></p>
+				<p>filler text filler text filler text filler text filler text filler text </p>
+				<button>Pause Video</button>
+			</div>
+			<br class="clear" />
+		</div>
+
+
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+.componentGallery .twc-col3_333333 {
+  margin-bottom: 1em;
+}
+
+.componentGallery .twc-col3_333333 h5 {
+  margin-bottom: 0;
+}
+
+.componentGallery a {
+  display: block;
+  padding: 1em;
+}
+
+.componentGallery a:hover {
+  background: #c8d6e3;
+}
+
+@media (max-width: 48em) {
+
+  .componentGallery .twc-col3_333333 {
+    border-bottom: none;
+    margin-bottom: 1em;
+  }
+
+}
+
+@media (max-width: 40em) {
+
+}

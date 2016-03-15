@@ -1,0 +1,58 @@
+/* ==========================================================================
+    Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-alert-section .twc-alert {
+  border-bottom: 1px solid #eeeeef;
+}
+.twc-alert-section .twc-container {
+  padding-top: 1em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  padding-left: 0;
+}
+.twc-alert-section p.twc-alert-text {
+  position: relative;
+}
+.twc-alert-section p.twc-alert-text .twc-container {
+  padding: 1em 2em 1em 0;
+}
+.twc-alert-section .twc-customerLocation p.twc-alert-text:before, .twc-alert-section p.twc-alert-text:before {
+  content: '\f071';
+  vertical-align: middle;
+}
+.twc-alert-section .twc-alert-close:after {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  padding-left: 1em;
+  content: '\f057';
+}
+@media (max-width: 48em) {
+  .twc-alert-section p.twc-alert-text.twc-container {
+    padding-top: 1em;
+    padding-right: 3em;
+    padding-bottom: 1em;
+    padding-left: 3em;
+  }
+  .twc-alert-section .twc-alert-close:after {
+    top: .5em;
+    right: 4%;
+  }
+}
+@media (max-width: 40em) {
+  .twc-alert-section .twc-alert-text:before {
+    vertical-align: baseline;
+  }
+  .twc-alert-section .twc-content {
+    padding-top: 0;
+  }
+  .twc-alert-section .twc-alert-close:after {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}

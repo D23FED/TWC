@@ -1,0 +1,14 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Feedback Survey -- Version: 1.9.0.2 - Updated: 12/30/2013
+   ========================================================================== */
+
+.feedback-survey {
+  .initiate-feedback {
+    @include border-radius();    // Theme
+    border: 1px solid $lightgrey;    // Theme
+    background: #f0f3f2;    // Theme
+  }
+}

@@ -1,0 +1,110 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    User Location -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-location {
+  padding-right: 0;    // Framework
+  text-align: right;    // Framework
+}
+
+.twc-customerLocation {
+  position: relative;    // Framework
+  // color: $text-white;    // Theme
+  li {
+    @include padding(.5em);    // Framework
+    ul {
+      display: none;    // Framework
+    }
+  }
+  ul li.twc-drop-nav.js-persist {
+    // @include border-radius(3px 3px 0 0);    // Theme
+    // background: #677986;    // Theme
+  }
+  p.twc-alert-text {
+    // font-weight: 700;    // Theme
+  }
+  ul li ul {
+    display: none;    // Framework
+    position: absolute;    // Framework
+    // width: 225px;    // Theme
+    // top: 28px;    // Theme
+    // background: #677986;    // Theme
+    // @include border-radius(3px 0 3px 3px);    // Theme
+    @include opacity(0);    // Framework
+    visibility: hidden;    // Framework
+    z-index: 9999;    // Framework
+    li {
+      display: block;    // Framework
+      // color: $text-white;    // Theme
+    }
+  }
+  button.btn {
+    // background: #444545;    // Theme
+    &:hover {
+      // background: $text;    // Theme
+    }
+  }
+  ul li li {
+    padding: 0;    // Framework
+  }
+}
+
+a.twc-change {
+  // font-weight: 100;    // Theme
+  // color: #9d9d9e;    // Theme
+  &:after {
+    // font-family: $fontawesome;    // Theme
+    content: '\f078';    // Framework
+    margin-left: 4px;    // Framework
+  }
+}
+
+li.twc-drop-nav.js-persist a.twc-change:after {
+  // font-family: $fontawesome;    // Theme
+  content: '\f00d';    // Framework
+  padding: 0 1px;    // Framework
+}
+
+.message {
+  top: 4px;    // Framework
+  margin-top: 5px;    // Framework
+  padding: 10px;    // Framework
+  // @include border-radius(0 0 3px 3px);    // Theme
+  // background: #c6c9cf;    // Theme
+  z-index: 9999;    // Framework
+}
+
+.twc-customerLocation .message p {
+  // @include font-family($arial);    // Theme
+  // color: $text;    // Theme
+  line-height: 1;    // Framework
+  text-align: center;    // Framework
+  a {
+    @include padding();    // Framework
+    // color: $link;    // Theme
+  }
+}
+
+.oof-error-text {
+  display: inline-block;    // Framework
+}
+
+/* ie (.ie) */
+
+.twc-ie .twc-customerLocation ul li ul {
+  right: 0;    // Framework
+}
+
+@media (max-width: 31.25em) {
+
+  span.twc-mobile-city {
+    display: none;    // Framework
+  }
+  div.twc-mobile-custLoc input {
+    margin-right: 0;    // Framework
+  }
+
+}

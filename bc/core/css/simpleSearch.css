@@ -1,0 +1,113 @@
+/* ==========================================================================
+    Simple Search  -- Version: 1.0.0 - Updated: 5/19/2014
+   ========================================================================== */
+.simpleSearch .twc-box-column {
+  padding: .5em;
+  overflow: hidden;
+}
+.simpleSearch .resultNumbers {
+  margin: 0.5em;
+}
+.simpleSearch form {
+  background-color: #445f74;
+  padding: 1em;
+  border-radius: 0 3px 0 0;
+  margin: -0.5em -0.6em 1em 0;
+}
+.simpleSearch form .twc-search {
+  width: 100%;
+}
+.simpleSearch .filters {
+  background-color: #f0f4fb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f4fb), to(white));
+  background-image: -webkit-linear-gradient(top, #f0f4fb, white);
+  background-image: -moz-linear-gradient(top, #f0f4fb, white);
+  background-image: -ms-linear-gradient(top, #f0f4fb, white);
+  background-image: -o-linear-gradient(top, #f0f4fb, white);
+  background-image: linear-gradient(top, #f0f4fb, white);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f4fb', EndColorStr='white')"; */
+  margin-right: .5em;
+}
+.simpleSearch .filters .filter-list {
+  padding: 1em;
+}
+.simpleSearch .filters .filter-list ul li {
+  padding-bottom: 1em;
+}
+.simpleSearch .search-bar form input {
+  float: left;
+  max-width: 75%;
+  min-width: 60%;
+}
+.simpleSearch .search-bar form .cta.omega[class*="icon-"] {
+  margin-right: 0;
+}
+.simpleSearch form .twc-search button:before {
+  color: #3376B2;
+  content: "\f002";
+  font-family: FontAwesome;
+  line-height: 1;
+}
+.simpleSearch ul.bordered > li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+.simpleSearch ul.bordered > li.js-last {
+  border-bottom: 0 none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 48em) {
+  .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 74.75%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 76%;
+  }
+  .simpleSearch [class*='twc-col2_2476-c0'] {
+    width: 22.75%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c0'] {
+    width: 24%;
+  }
+}
+@media (max-width: 40em) {
+  .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+  }
+  .simpleSearch form.searchInput {
+    margin: -2.6% -2.6% .5em;
+    border-radius: 0;
+  }
+  .simpleSearch .pagination {
+    margin-bottom: 1em;
+  }
+  .simpleSearch .desktop-hidden.tablet-hidden,
+  .simpleSearch .desktop-hidden, .simpleSearch .tablet-hidden {
+    display: block !important;
+  }
+  .simpleSearch .filters {
+    background-color: #E7EEF4;
+    background-image: none;
+  }
+  .simpleSearch .filters a {
+    font-weight: 400;
+  }
+  .simpleSearch .filters .box {
+    display: none;
+  }
+  .simpleSearch .search-bar {
+    margin: 1em 0;
+  }
+  .simpleSearch .twc-search input {
+    width: 84%;
+  }
+  .simpleSearch .box {
+    margin: 0;
+  }
+}

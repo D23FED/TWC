@@ -1,0 +1,370 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Typography -- Version: 1.9.0.0  - Updated: 12/29/2013
+   ========================================================================== */
+
+html {
+  height: 100%;
+  @include font-family($arial);
+  font-size: 10px; /* set absolutely to handle zoomed/user-defined font size state */
+  color: $text;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, button, input, select, textarea {
+  @include font-size($base-font-size);
+  line-height: normal;
+  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+}
+
+@font-face {
+  font-family: $twc-book;
+  src: url('fonts/TWCRound/TWC-Round-Book.eot');
+  src: url('fonts/TWCRound/TWC-Round-Book.eot?#iefix') format("embedded-opentype"), url('fonts/TWCRound/TWC-Round-Book.svg#svgTWCBook') format("svg"), url('fonts/TWCRound/TWC-Round-Book.woff') format("woff"), url('fonts/TWCRound/TWC-Round-Book.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $twc-medium;
+  src: url('fonts/TWCRound/TWC-Round-Medium.eot');
+  src: url('fonts/TWCRound/TWC-Round-Medium.eot?#iefix') format("embedded-opentype"), url('fonts/TWCRound/TWC-Round-Medium.svg#svgTWCMedium') format("svg"), url('fonts/TWCRound/TWC-Round-Medium.woff') format("woff"), url('fonts/TWCRound/TWC-Round-Medium.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $twc-light;
+  src: url('fonts/TWCRound/TWC-Round-Light.eot');
+  src: url('fonts/TWCRound/TWC-Round-Light.eot?#iefix') format("embedded-opentype"), url('fonts/TWCRound/TWC-Round-Light.svg#svgTWCLight') format("svg"), url('fonts/TWCRound/TWC-Round-Light.woff') format("woff"), url('fonts/TWCRound/TWC-Round-Light.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontawesome;
+  src: url('fonts/icons/fontawesome-webfont.eot');
+  src: url('fonts/icons/fontawesome-webfont.eot?#iefix') format("embedded-opentype"), url('fonts/icons/fontawesome-webfont.svg#svgFontAwesome') format("svg"), url('fonts/icons/fontawesome-webfont.woff') format("woff"), url('fonts/icons/fontawesome-webfont.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $bc-uni-lightcn;
+  src: url('fonts/universal/UniversLTStd-LightCn.eot');
+  src: url('fonts/universal/UniversLTStd-LightCn.eot?#iefix') format("embedded-opentype"), url('fonts/universal/UniversLTStd-LightCn.svg#UniversLTStd-LightCn') format("svg"), url('fonts/universal/UniversLTStd-LightCn.woff') format("woff"), url('fonts/universal/UniversLTStd-LightCn.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $bc-uni-cn;
+  src: url('fonts/universal/UniversLTStd-Cn.eot');
+  src: url('fonts/universal/UniversLTStd-Cn.eot?#iefix') format("embedded-opentype"), url('fonts/universal/UniversLTStd-Cn.svg#UniversLTStd-Cn') format("svg"), url('fonts/universal/UniversLTStd-Cn.woff') format("woff"), url('fonts/universal/UniversLTStd-Cn.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $bc-uni-boldcn;
+  src: url('fonts/universal/UniversLTStd-BoldCn.eot');
+  src: url('fonts/universal/UniversLTStd-BoldCn.eot?#iefix') format("embedded-opentype"), url('fonts/universal/UniversLTStd-BoldCn.svg#UniversLTStd-BoldCn') format("svg"), url('fonts/universal/UniversLTStd-BoldCn.woff') format("woff"), url('fonts/universal/UniversLTStd-BoldCn.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $bc-uni-cnobl;
+  src: url('fonts/universal/UniversLTStd-CnObl.eot');
+  src: url('fonts/universal/UniversLTStd-CnObl.eot?#iefix') format("embedded-opentype"), url('fonts/universal/UniversLTStd-CnObl.svg#UniversLTStd-CnObl') format("svg"), url('fonts/universal/UniversLTStd-CnObl.woff') format("woff"), url('fonts/universal/UniversLTStd-CnObl.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================
+	  Body Text
+   ========================== */
+
+.lede {
+  @include font-size(17);
+  font-family: $arial;
+  line-height: 1.4;
+  color: $text;
+}
+
+.banner-text {
+  background: $text;
+  padding: 10px;
+  @include font-size(15);
+  font-family: $arial;
+  font-weight: 100;
+  line-height: 1.4;
+  color: #cfcfcf;
+}
+
+.body-text {
+  @include font-size(13);
+  font-family: $arial;
+  line-height: 1.4;
+  color: $text;
+}
+
+.slider-text {
+  @include font-size(13);
+  font-family: $arial;
+  line-height: 15px;
+  color: $text;
+}
+
+.small-body-text {
+  @include font-size(12);
+  font-family: $arial;
+  line-height: 15px;
+  color: $text;
+}
+
+.disclaimer-text {
+  @include font-size(11);
+  font-family: $arial;
+  line-height: 13px;
+  color: $text;
+}
+
+/* ==========================
+	  Links
+   ========================== */
+
+a {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  vertical-align: baseline;
+  @include font-family($arial);
+  font-weight: 700;
+  color: $link;
+  text-decoration: none;
+  cursor: pointer;
+  img {
+    border: 0 none;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #1b405d;
+  }
+}
+
+.read-more a, a.morelink {
+  font-weight: 100;
+  &:after {
+    padding-left: .25em;
+    font-family: $fontawesome;
+    font-size: inherit;
+    font-weight: inherit;
+    content: '\f107';
+  }
+}
+a.morelink.less {
+  &:before {
+    padding-right: .25em;
+    font-family: $fontawesome;
+    font-size: inherit;
+    font-weight: inherit;
+    content: '\f106';
+  }
+  &:after {
+    content: none;
+  }
+}
+
+.iconable {
+  margin-left: 1.5em;
+}
+
+// a[href$=".PDF"],
+// a[href$=".pdf"] {
+//   background: url("/TWC/bc/core/images/pdf-icon.png") no-repeat;
+// }
+
+/* ==========================
+	  Headings
+   ========================== */
+
+h1, .h1 {
+  margin-bottom: .3em;
+  @include font-size(36);
+  font-family: $arial;
+  font-weight: 100;
+}
+
+h2, .h2 {
+  margin-bottom: .3em;
+  @include font-size(30);
+  font-family: $arial;
+  font-weight: 100;
+}
+
+h3, .h3 {
+  @include font-size(24);
+  font-family: $arial;
+  font-weight: 100;
+}
+
+h4, .h4 {
+  @include font-size(22);
+  font-family: $arial;
+  font-weight: 100;
+}
+
+h5, .h5 {
+  @include font-size(20);
+  font-family: $arial;
+  font-weight: 100;
+  color: inherit;
+}
+
+h6, .h6 {
+  @include font-size(18);
+  font-family: $arial;
+  font-weight: 100;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 { display: inline-block; }
+
+small {
+  @include inline-block();
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote {
+  clear: inherit;
+  margin-bottom: .5em;
+  vertical-align: middle;
+}
+
+p, .p {
+  display: block;
+  font-family: $arial;
+  // line-height: 1.40em;
+  line-height: 1.70rem;
+  padding: 0 0.65em 0.65em 0;
+  letter-spacing: 0.02em;
+}
+
+p.btn {
+  margin-bottom: 0;
+}
+
+.b {
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 3px solid $footer-link;
+  color: $footer-link;
+  font-style: italic;
+  padding-left: 1.2em;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+abbr {
+  border-bottom: 1px dotted $grey;
+  cursor: help;
+}
+
+address {
+  font-style: normal;
+}
+
+sub {
+  vertical-align: text-top;
+}
+
+sup {
+  vertical-align: text-top;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+mark {
+  background: #ff0;
+}
+
+/* ==========================
+	  Pre
+   ========================== */
+pre {
+  margin: 1em 0;
+  background-color: $text;
+  @include border-radius();
+  overflow: auto;
+  padding: 12px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+kbd, samp {
+  font-family: $pre;
+}
+
+kbd, samp {
+  color: #859900;
+}
+
+.error {
+  background: pink;
+}
+
+.error, .is-error {
+  color: $text-error;
+}
+
+pre.correct {
+  background: green;
+}
+
+.valid, .is-valid, pre.correct code {
+  color: #0f0;
+}
+
+.code-comment {
+  @include opacity(.5);
+}
+
+.book {
+  @include font-family($twc-book);
+}
+
+.medium {
+  @include font-family($twc-medium);
+}
+
+.light {
+  @include font-family($twc-light);
+}
+
+.arial {
+  @include font-family($arial);
+  font-weight: 100;
+}
+
+.arialItalic {
+  @include font-family($arial);
+  font-weight: 100;
+  font-style: italic;
+}
+
+.arialBold, .introtext {
+  @include font-family($arial);
+  font-weight: 700;
+}

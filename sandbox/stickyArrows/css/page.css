@@ -1,0 +1,330 @@
+
+/*STICKY ARROW*/
+.sticky-arrow {
+    font-size: 3em;
+    position: fixed;
+    left: 50%;
+    bottom: 0.3em;
+    z-index: 1;
+}
+
+
+.sticky-arrow a {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #000000;
+    opacity: 0.4;
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+    padding: 0.1em 0.13em;
+}
+.sticky-arrow a:hover {
+    
+}
+
+.sticky-arrow a:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+.sticky-arrow a:before {	
+	speak: none;	
+	line-height: 1em;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Sonar Effect */
+.sonar-effect a {
+	background: rgba(0,0,0,0.2);
+	-webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+	-moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+	transition: transform ease-out 0.1s, background 0.2s;
+}
+
+.sonar-effect a:after {
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+	opacity: 0;
+}
+
+.sonar-effect a:hover {
+	background: rgba(0,0,0,0.5);
+	color: #000000;
+    opacity: 1;
+    transition: all 500ms linear 0.1s;
+}
+
+.sonar-effect a:hover:after {
+	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+	animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+@-webkit-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@-moz-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+		-moz-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+/*STICKY ARROW*/
+
+
+/*SCROLL ARROW*/
+
+.scroll-arrow {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    bottom: 3em;
+    z-index: 1;
+}
+.scroll-arrow > span {
+    border-radius: 7px;
+    padding: 4px 0 4px 5px;
+    -webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+    color: #818181;
+    font-weight: bold;
+    background: #ffffff;
+	border: 2px solid #818181;
+    opacity: 0.8;
+}
+.scroll-arrow > span > div {
+    display: inline-block;
+    margin: 0;
+    padding: 0px;
+    font-size: 1.3em;
+    margin-left: 0.4em;
+    margin-top: 1px;
+    font-weight: initial;
+}
+
+
+
+
+/*SCROLL ARROW*/
+
+
+
+
+
+
+
+
+
+/*STICKY BAR OLD*/
+/*.sticky-bar {   
+    position: fixed;
+    width: 100%;
+    bottom: 0.4em;
+    text-align: center;
+    z-index: 1;
+}
+
+.sticky-bar .icon {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 10%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #000000;
+    opacity: 0.5;
+    width: 75px;
+    height: 60px;
+    margin: 0 5px;
+    padding: 4px;
+    border: 1px solid #818181;
+    background-color: #ffffff;
+}
+.sticky-bar .icon a {
+    color: #000000;
+}
+.sticky-bar .icon:hover {
+	
+	color: #3376b2;
+    opacity: 1;
+    border: 1px solid #3376b2;
+    transition: all 500ms linear 0.1s;
+}
+
+
+@-webkit-keyframes iconJump {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes iconJump {
+  0% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+
+@-webkit-keyframes iconJump-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes iconJump-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.iconJump {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconJump:hover, .iconJump:focus, .iconJump:active {
+  -webkit-animation-name: iconJump-float, iconJump;
+  animation-name: iconJump-float, iconJump;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}*/
+/*STICKY BAR OLD*/
+
+
+/*STICKY BAR NEW*/
+.stickyScrolNav {
+  position: fixed;
+  bottom: 0.2em;
+  margin: 35px auto;
+  text-align: center;
+  width: 100%;
+  z-index: 99999;
+}
+.stickyScrolNav ul {
+  width: 100%;
+  text-align: center;
+}
+.stickyScrolNav li.stickyScrollItem {
+  display: inline;
+}
+.stickyScrolNav li.stickyScrollItem a {
+  box-shadow: 1px 1px 2px 0px #888888;
+  display: inline-block;
+  width: 15%;
+  max-width: 105px;
+  height: auto;
+  padding: 0.6em 0.3em;
+  margin-right: 1%;
+  border: 2px solid #98999b;
+  background: rgba(255,255,255,0.8);
+  border-radius: 7px;
+  text-align: center;  
+  transition : border 300ms linear;
+}
+.stickyScrolNav li.stickyScrollItem:last-of-type a {
+  margin-right: 0;
+}
+.stickyScrolNav li.stickyScrollItem a:hover {
+  border: 2px solid #4578af;
+  box-shadow: 1px 1px 2px 0px #3376b2;
+}
+.stickyScrolNav li.stickyScrollItem a svg {
+  fill: rgba(95,95,95,1) ;
+  max-width: 50%;
+  transition : fill 300ms linear;
+}
+
+.stickyScrolNav li.stickyScrollItem a:hover svg {
+  fill: #4578af;
+}
+/*STICKY BAR NEW*/

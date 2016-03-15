@@ -1,0 +1,88 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    BC Image Content Panel -- Version: 1.0.0.3 - Updated: 7/9/2014
+   ========================================================================== */
+
+.bc-imagecontent-panel {
+  color: $text-white;    // Theme
+  position: relative;
+
+  .parsys.parsys1.twc-col2_4060-c1.parsys_column {
+    background-color: rgba(255,255,255,0.5);
+    margin: -0.75em 0;
+    padding: 1.5em 0;
+  }
+  .parbase.section.right {
+    margin: 1em;
+  }
+
+  .color1 {
+    color: #333;
+  }
+  .color2 {
+    color: #fff;
+  }
+  .color3 {
+    color: #3376b2;
+  }
+  .color4 {
+    color: #000;
+  }
+
+  h1.bc-hero-header {
+    margin: 0;
+  }
+
+  h3.bc-hero-subheader {
+    font-weight: 500;
+    line-height: 1.5em;
+    padding: 0.75em 0;
+    margin: 0;
+   }
+
+  .bc-hero-subheader-2 {
+    padding: 0.35em 0 0 0;
+    position: absolute;
+  }
+
+  .bc-disclaimer {
+    left: 1rem;
+    @include font-size(11);
+    padding-top: 1em;
+  }
+
+  .cta-left-text {
+    padding-top:25px;
+  }
+  .fs-20, .fs20 {
+    font-size: 2rem;
+    position: absolute;
+    padding-top: 4px;
+  }
+  .fs-20 > a {
+    font-weight: normal;
+    font-size: 1.25em;
+  }
+  .cta.omega.twc-icon-after.icon-angle-right > a {
+    margin-left: 200px;
+  }
+  .cta.omega.twc-icon-after.icon-angle-right span {
+    font-family: arial;
+  }
+  .icon-angel-right.twc-icon-after {
+    font-size: 1.25em;
+    padding-left: 0.75em;
+  }
+  .cta.omega.bluebutton.icon-angel-right.twc-icon-after span {
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-weight: 600;
+  }
+
+  @media (max-width: $medium) {
+    .imagecontent-panel {
+      @include background-gradient(#3c3c3c, #1e1e1e);    // Theme
+    }
+  }
+}

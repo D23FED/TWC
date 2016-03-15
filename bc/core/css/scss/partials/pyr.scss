@@ -1,0 +1,31 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    PYR -- Version: 1.0.0.3 - Updated: 3/10/2014
+   ========================================================================== */
+
+.pyr {
+
+  .remote-holder {
+    @include box-shadow(inset 0 0 40px #e1e1e1);    // Framework
+    @include padding(1em,0,0);    // Framework
+  }
+
+  .blue-bar {
+    overflow: auto;    // Framework
+    width: 100%;    // Framework
+    height: auto;    // Framework
+    @include margin(-1em,0,0);    // Framework
+    @include padding(1em);    // Framework
+    // @include background-gradient(#5d92c0,#2c608f);    // Theme
+    // color: $white;    // Theme
+    @include bp(small) {
+      margin-top: 0;    // Framework
+    }
+    a {
+      // color: $white;    // Theme
+    }
+  }
+
+}

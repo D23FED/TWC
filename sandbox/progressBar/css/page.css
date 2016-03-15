@@ -1,0 +1,158 @@
+.progress-bar li {
+  display: inline-block;
+  width: 20%;
+  margin-left: -4px;
+  border-right: 2px solid #387ab4;
+}
+.progress-bar li:first-of-type {
+  margin-left: 0;
+}
+.progress-bar li:last-of-type {
+  border-right: none;
+}
+.progress-bar li.js-active {
+  width: 40%;
+  background: #387ab4;
+}
+.progress-bar li.complete {
+  background: #e6e6e7;
+}
+.progress-bar li.complete .uncompleted {
+  display: none;
+}
+.progress-bar li .completed:before {
+  display: none;
+  font-family: "FontAwesome";
+  content: "\f14a";
+  color: #29be0b;
+  line-height: 57px;
+}
+.progress-bar li.complete .completed:before {
+  display: block;
+}
+.progress-bar .color-block {
+  background: #fff;
+  padding: 0;
+  min-height: 57px;
+}
+.progress-bar .stepNumber {
+  font-family: "TWC Round Book";
+  color: #02a9e0;
+  display: inline-block;
+  width: 42px;
+  float: left;
+  font-size: 2.8rem;
+  font-size: 28px;
+  line-height: 49px;
+  max-width: 20%;
+}
+.progress-bar .js-active .stepNumber {
+  background: #fff;
+  border: 4px solid #387ab4;
+}
+.progress-bar .stepContent {
+  display: inline-block;
+  float: left;
+  width: 80%;
+  color: #333333;
+  padding: 0.5em 0;
+}
+.progress-bar .stepContent table {
+  border-collapse: collapse;
+}
+.progress-bar .stepContent table.linesOfBusiness {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.progress-bar .stepContent table.linesOfBusiness td {
+  text-align: center;
+  width: 33%;
+  position: relative;
+  height: 22px;
+}
+.progress-bar .stepContent table.linesOfBusiness td.js-completed {
+  background: #00427C;
+}
+.progress-bar .stepContent h4 {
+  margin-bottom: 0;
+}
+.progress-bar li:not(.js-active) .stepContent h4,
+.progress-bar li.js-active:not(.first-step) {
+  line-height: 42px;
+}
+.progress-bar li.first-step.js-active ~ li .stepNumber {
+  line-height: 57px;
+}
+.progress-bar .js-active .stepContent {
+  color: #fff;
+}
+.progress-bar li:not(.js-active) .stepContentDetails {
+  display: none;
+}
+.progress-bar .stepContent table.linesOfBusiness td.js-active {
+  background: #fff none repeat scroll 0 0;
+  color: #02a9e0;
+}
+.progress-bar .stepContent table.linesOfBusiness td.js-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -11px;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 11px solid #fff;
+}
+
+@media (max-width: 48em) {
+  .progress-bar li,
+  .progress-bar li.js-active {
+    width: 25%;
+  }
+  .progress-bar .stepNumber {
+    max-width: 30%;
+  }
+  .progress-bar li.js-active .stepNumber {
+    width: 30%;
+  }
+  .progress-bar li:not(.js-active) .stepNumber {
+    line-height: 57px;
+  }
+  .progress-bar .stepContent {
+    width: 70%;
+  }
+  .progress-bar .stepContent table.linesOfBusiness {
+    display: none;
+  }
+  .progress-bar li.js-active .stepContent h4 {
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 40em) {
+  .progress-bar li {
+    width: 15%;
+  }
+  .progress-bar li.js-active {
+    width: 55%;
+  }
+  .progress-bar li .stepContent {
+    display: none;
+  }
+  .progress-bar li.js-active .stepContent {
+    display: inline-block;
+  }
+  .progress-bar li .stepNumber {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    float: left;
+  }
+}
+
+

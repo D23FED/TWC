@@ -1,0 +1,24 @@
+/* ==========================================================================
+    Tooltips -- Version: 1.9.0.1 - Updated: 2/6/2014
+   ========================================================================== */
+.tooltip {
+  color: #3376b2;
+  text-decoration: none;
+}
+.tooltip span.tooltip-text {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #e0e7eb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e0e7eb), to(white));
+  background-image: -webkit-linear-gradient(top, #e0e7eb, white);
+  background-image: -moz-linear-gradient(top, #e0e7eb, white);
+  background-image: -ms-linear-gradient(top, #e0e7eb, white);
+  background-image: -o-linear-gradient(top, #e0e7eb, white);
+  background-image: linear-gradient(top, #e0e7eb, white);
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e0e7eb', EndColorStr='white')"; */
+  color: #333333;
+}

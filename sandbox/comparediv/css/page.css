@@ -1,0 +1,337 @@
+.equipmentSelect {
+  display: none;
+}
+
+.js-sticky-past {
+  display: none;
+}
+.sticky.js-sticky > tr {
+  display: inline-table;
+  width: 100%;
+}
+.triple .sticky.js-sticky > tr th {
+  width: 33%;
+}
+.double .sticky.js-sticky > tr th {
+  width: 50%
+}
+.stickySpacing {
+  display: none;
+}
+.sticky.js-sticky ~ .stickyElement .stickySpacing{
+  display: block;
+}
+.sbsCompare table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.sbsCompare table td {
+  padding: 1em;
+}
+
+.sbsCompare table.double td {
+  width: 50%;
+  padding: 1em;
+}
+
+.sbsCompare table.triple td {
+  width: 33%;
+  padding: .5em;
+}
+
+.sbsCompare tr {
+  font-size: 1.5rem;
+}
+
+.sbsCompare tr th {
+  padding: .5em;
+  color: #fff;
+  background: #4f6f88;
+  border-right: 1px solid #fff;
+  text-align: center;
+  font-family: "TWC Round Book";
+}
+
+.sbsCompare tbody tr:nth-of-type(2) th {
+  background: #13446d;
+}
+.sbsCompare tbody tr th {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
+}
+
+.sbsCompare tr th a.tooltip {
+  color: #fff;
+  text-decoration: underline;
+}
+.sbsCompare tr td {
+  border-right: 1px solid #fff;
+}
+.sbsCompare tr th:last-of-type,
+.sbsCompare tr td:last-of-type {
+  border-right: none;
+}
+
+.sbsCompare tbody > tr:first-of-type th {
+  background: #164367;
+}
+
+.sbsCompare tr.subhead th {
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  font-size: 2.0rem;
+  font-weight: 400;
+  padding: 1em 0;
+}
+
+.sbsCompare td .icon-only {
+  font-size: 22px;
+  font-size: 2.2rem;
+  color: #009033;
+}
+
+.sbsCompare thead tr th.single {
+  background: #00579d;
+}
+.sbsCompare thead tr th.double {
+  background: #5B1F69;
+}
+.sbsCompare thead tr th.triple {
+  background: #747679;
+}
+
+.sbsCompare tr th:nth-child(3) {
+  background: #7e649e;
+}
+
+.sbsCompare td:nth-of-type(odd) {
+  background: #f8f8f8;
+}
+
+.sbsCompare td:nth-of-type(even) {
+  background: #eeeeee;
+}
+
+.sbsCompare .whiteCTA a {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #00559f;
+  color: #00559f;
+}
+
+.sbsCompare .whiteCTA a:active {
+  background-color: #0052a1;
+  color: #fff;
+}
+
+.sbsCompare .orderCTA a {
+  background-color: #00559f;
+  background-image: none;
+  border: 1px solid #00559f;
+  color: #fff;
+}
+
+/* SBS Compare Sticky Header */
+
+.sbsCompare .js-sticky {
+  background: transparent;
+  padding: 0;
+}
+
+.backLink .cta a {
+  padding: 0.75em 0;
+  font-size: 1.8rem;
+}
+
+
+/* Begin Page specific CSS */
+.discountTerm {
+    clear: both;
+}
+
+.packageSelect .package {
+    position: relative;
+    margin:0px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 33%;
+    float: left;
+    margin: 0px 1px !important;
+}
+.packageSelect .package:nth-of-type(2n){
+    margin-right: 1px;
+    background: #eeeeee;
+}
+
+.detailsExpansion {
+    background: #fff;
+    box-shadow: 0 -2px 4px -1px #999;
+    position: absolute;
+    bottom: 4.2em;
+    width: 100%;
+    border: 2px solid #4578af;
+    background: rgb(248,250,252); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(248,250,252) 0%, rgb(225,236,245) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(248,250,252)), color-stop(100%,rgb(225,236,245))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgb(248,250,252) 0%,rgb(225,236,245) 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, rgb(248,250,252) 0%,rgb(225,236,245) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgb(248,250,252) 0%,rgb(225,236,245) 100%); /* W3C */
+}
+
+.plans .cta {
+    margin: 1em 0em;    
+}
+
+.orderCTA a {
+    background-color: #00559f;
+    background-image: none;
+    border: 1px solid #00559f;
+    color: #fff;
+}
+
+.detailsContent {
+    padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+    text-align: center;
+}
+
+.quickCheckoutContent {
+    text-align: left;
+    display: none;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+.packageSelect .package .pricing {
+    margin-top: 1em;
+}
+
+.quickCheckoutContent input {
+    vertical-align: top;
+}
+
+.quickCheckoutContent label, .quickCheckoutContent .priceTally td {
+    font-size: 1.15rem;
+}
+
+.quickCheckoutContent .productSelect {
+    text-align: left;
+}
+.quickCheckoutContent .priceTally {
+    margin-bottom: 2em;
+}
+
+.quickCheckoutContent .productSelect table, .quickCheckoutContent .priceTally table {
+    width: 100%;
+}
+
+.quickCheckoutContent .productSelect table tr {
+    width: 100%;
+}
+
+.quickCheckoutContent .price {
+    text-align: right;
+}
+
+.quickCheckoutContent .disclaimer-text.text-center {
+    text-align: center;
+}
+
+.quickCheckoutContent .productSelect a {
+    display: inline-block;
+    max-width: none; 
+}
+
+.total {
+    border-top: 1px dotted #666;
+    background: #ccc9c9;
+    padding: 0.25em;
+}
+
+
+.sticky.js-sticky {
+    
+    max-width: 980px;
+    width: 100%;
+    background: #F0F2F4; 
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.sticky.js-sticky .package {
+     -webkit-box-shadow: 0 1px 2px 0 #666;
+    -moz-box-shadow: 0 1px 2px 0 #666;
+    box-shadow: 0 1px 2px 0 #666;
+}
+.background-blue {
+    background: #205381;
+}
+.offers {
+    margin: 0px 4px 0px 1px;
+    margin-bottom: 0px;
+    background: #4f6f88;
+    padding: 0.3em;
+}
+
+.packageSelect .pack-details {
+    border-bottom: 0;
+    font-size: 1.1em;
+}
+.packageSelect .pack-details p {
+    padding: 1em;
+}
+.packageSelect .package .packageHead .packageTitle {
+     float: none; 
+     max-width: 100%; 
+}
+
+.row {
+    display: inline-flex;
+    width: 100%;
+}
+.table {
+    width: 100%;
+}
+.compare-ok {
+    color: #009033;
+    font-size: 2em;
+    padding: 0.3em;
+}
+.box {
+   margin-top: 0;
+}
+
+
+@media (max-width: 48em) {
+    .sbsCompare td:nth-of-type(3), .sbsCompare th:nth-of-type(3) {
+        display: none;
+    }
+    .sticky.js-sticky {
+        left: 0;
+        padding: 0 2.5%;
+    }
+   
+    .packageSelect .package:nth-of-type(3n) {
+        margin-right: 0.3em;
+    }
+    .offers {
+        margin: 0px 2px 0px 1px;
+    }
+  
+}
+
+@media (max-width: 40em) {
+    .packageSelect .package {
+        width: 49%;
+    }
+    .offers {
+        margin: 0px 6px 0px 1px;
+    }
+    
+}

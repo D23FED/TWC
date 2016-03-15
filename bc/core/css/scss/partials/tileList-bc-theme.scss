@@ -1,0 +1,53 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tile List - Version: 1.9.0.3 - Updated: 2/25/2014
+   ========================================================================== */
+
+.tileList {
+  background: $background-white;    // Theme
+  @include border-radius();    // Theme
+  @include box-shadow(0 1px 2px 0 #888);    // Theme
+  li {
+    &:hover {
+      background: #f3f6f9;    // Theme
+    }
+    a {
+      @include font-size(16);    // Theme
+      color: $text-black;    // Theme
+    }
+  }
+}
+
+[class*='twc-col3_252550-c'] {
+  li {
+    a {
+      font-family: Arial, Helvetica, sans-serif;    // Theme
+      font-weight: 700;    // Theme
+      line-height: 2;    // Theme
+      color: $link;    // Theme
+      text-transform: none;    // Theme
+    }
+  }
+}
+
+@media (max-width: $medium) {
+
+  .tileList {
+    background: $background-white;    // Theme
+    &:hover {
+      background: #f6f6f6;    // Theme
+    }
+    a {
+      @include font-size(16);    // Theme
+      color: #3376b2;    // Theme
+      text-align: center;    // Theme
+      &:after {
+        font-family: $fontawesome;    // Theme
+        @include font-size(20);    // Theme
+        color: #b1b2af;    // Theme
+      }
+    }
+  }
+}
