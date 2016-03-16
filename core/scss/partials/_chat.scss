@@ -233,7 +233,7 @@
     background-image: -o-linear-gradient(top, #fcfdfd, #eaf0f4);
     background-image: -ms-linear-gradient(top, #fcfdfd, #eaf0f4);
     background-image: linear-gradient(top, #fcfdfd, #eaf0f4);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fcfdfd', EndColorStr='#eaf0f4');
+    filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fcfdfd', EndColorStr='#eaf0f4')";
   }
 }
 
@@ -254,7 +254,7 @@
   background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(215, 215, 215));
   background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(215, 215, 215));
   background-image: linear-gradient(top, rgb(255, 255, 255), rgb(215, 215, 215));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$text-white', EndColorStr='#d7d7d7');
+  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$text-white', EndColorStr='#d7d7d7')";
   color: $text;
   a {
     color: $text;

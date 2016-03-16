@@ -142,7 +142,7 @@ span.FAQLabel.active , span.FAQLabel.active+div+div {
     background: -o-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
     background: -ms-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
     background: linear-gradient(to right, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=1 );
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=1 )";
     color: #333;
     padding-right:1em;
 }

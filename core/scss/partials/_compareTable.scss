@@ -67,7 +67,7 @@ ul.table li {
         background-image: -o-linear-gradient(top, #7e9db7, #6f93af);
         background-image: -ms-linear-gradient(top, #7e9db7, #6f93af);
         background-image: linear-gradient(top, #7e9db7, #6f93af);
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#7e9db7', EndColorStr='#6f93af');
+        filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#7e9db7', EndColorStr='#6f93af')";
         text-align: center;
       }
       &.feature {
@@ -81,7 +81,7 @@ ul.table li {
         background-image: -o-linear-gradient(top, #edf0f2, #e2e6e9);
         background-image: -ms-linear-gradient(top, #edf0f2, #e2e6e9);
         background-image: linear-gradient(top, #edf0f2, #e2e6e9);
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#edf0f2', EndColorStr='#e2e6e9');
+        filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#edf0f2', EndColorStr='#e2e6e9')";
         color: #3376B2;
         font-size: 18px;
         font-weight: 700;
@@ -98,7 +98,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #d3dae1, #c0c9d3);
       background-image: -ms-linear-gradient(top, #d3dae1, #c0c9d3);
       background-image: linear-gradient(top, #d3dae1, #c0c9d3);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d3dae1', EndColorStr='#c0c9d3');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d3dae1', EndColorStr='#c0c9d3')";
     }
     li.desc {
       width: 26%;
@@ -111,7 +111,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #dbdfe4, #c6ccd3);
       background-image: -ms-linear-gradient(top, #dbdfe4, #c6ccd3);
       background-image: linear-gradient(top, #dbdfe4, #c6ccd3);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#dbdfe4', EndColorStr='#c6ccd3');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#dbdfe4', EndColorStr='#c6ccd3')";
     }
     &:hover li.desc {
       border-top: 2px solid #8698aa;
@@ -123,7 +123,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #aebcc8, #8698aa);
       background-image: -ms-linear-gradient(top, #aebcc8, #8698aa);
       background-image: linear-gradient(top, #aebcc8, #8698aa);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#aebcc8', EndColorStr='#8698aa');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#aebcc8', EndColorStr='#8698aa')";
     }
     li {
       &.desc-details {
@@ -141,7 +141,7 @@ ul.table li {
         background-image: -o-linear-gradient(top, #edf0f2, #e2e6e9);
         background-image: -ms-linear-gradient(top, #edf0f2, #e2e6e9);
         background-image: linear-gradient(top, #edf0f2, #e2e6e9);
-        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#edf0f2', EndColorStr='#e2e6e9');
+        filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#edf0f2', EndColorStr='#e2e6e9')";
         text-align: center;
       }
       a.viewDetail:after {
@@ -161,7 +161,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #d3dae1, #c0c9d3);
       background-image: -ms-linear-gradient(top, #d3dae1, #c0c9d3);
       background-image: linear-gradient(top, #d3dae1, #c0c9d3);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d3dae1', EndColorStr='#c0c9d3');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#d3dae1', EndColorStr='#c0c9d3')";
     }
   }
   li span.badge {
@@ -184,7 +184,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #dbdfe4, #c6ccd3);
       background-image: -ms-linear-gradient(top, #dbdfe4, #c6ccd3);
       background-image: linear-gradient(top, #dbdfe4, #c6ccd3);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#dbdfe4', EndColorStr='#c6ccd3');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#dbdfe4', EndColorStr='#c6ccd3')";
       box-shadow: inset 7px 0 15px -11px #454545;
       text-align: center;
       .cta {
@@ -202,7 +202,7 @@ ul.table li {
       background-image: -o-linear-gradient(top, #aebcc8, #8698aa);
       background-image: -ms-linear-gradient(top, #aebcc8, #8698aa);
       background-image: linear-gradient(top, #aebcc8, #8698aa);
-      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#aebcc8', EndColorStr='#8698aa');
+      filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#aebcc8', EndColorStr='#8698aa')";
     }
   }
 }

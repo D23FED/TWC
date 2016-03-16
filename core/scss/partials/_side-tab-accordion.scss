@@ -10,7 +10,7 @@
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180deg), M12=-sin(-180deg), M21=sin(-180deg), M22=cos(-180deg))";
-    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod = 'auto expand', M11 = cos(-180deg), M12 = -sin(-180deg), M21 = sin(-180deg), M22 = cos(-180deg));
+    filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod = 'auto expand', M11 = cos(-180deg), M12 = -sin(-180deg), M21 = sin(-180deg), M22 = cos(-180deg))";
     zoom: 1;
 }
 

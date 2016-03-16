@@ -128,10 +128,10 @@
 }
 
 .twc-ie8 .allLOBs {
-    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=0),
-    progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=90),
-    progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=180),
-    progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=270);
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=0),
+        progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=90),
+        progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=180),
+        progid:DXImageTransform.Microsoft.Shadow(Color=#888888, Strength=2, Direction=270)";
 }
 
 .twc-ie8 section {

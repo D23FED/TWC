@@ -92,7 +92,7 @@ audio:not([controls]) {
     background-image: -o-linear-gradient(top, #bcbcbc, #838383)!important;
     background-image: -ms-linear-gradient(top, #bcbcbc, #838383)!important;
     background-image: linear-gradient(top, #bcbcbc, #838383)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383');
+    filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383')";
     color: #FFFFFF;
 }
 .youtube-search .twc-box-column {

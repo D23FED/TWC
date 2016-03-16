@@ -33,7 +33,7 @@
     background: -o-linear-gradient(top,  #333534 0%,#1a1b1f 100%);
     background: -ms-linear-gradient(top,  #333534 0%,#1a1b1f 100%);
     background: linear-gradient(to bottom,  #333534 0%,#1a1b1f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333534', endColorstr='#1a1b1f',GradientType=0 );
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#333534', endColorstr='#1a1b1f',GradientType=0 )";
     color: #fff; }
 
 .youtube-search .page-header .twc-module { width: 300px; }
@@ -210,7 +210,7 @@
     background-image: -o-linear-gradient(top, #bcbcbc, #838383)!important;
     background-image: -ms-linear-gradient(top, #bcbcbc, #838383)!important;
     background-image: linear-gradient(top, #bcbcbc, #838383)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383');
+    filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383')";
     color: #FFFFFF;
 }
 .youtube-search .twc-box-column {

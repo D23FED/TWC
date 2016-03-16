@@ -212,7 +212,7 @@ input.twc-text:focus {
   background-image: -o-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
   background: -pie-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
   background-image: linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3678b2', EndColorStr='#044680');
+  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3678b2', EndColorStr='#044680')";
   width: 94px;
   border: 0;
   @include border-radius(5);
