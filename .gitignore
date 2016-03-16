@@ -50,3 +50,5 @@ Temporary Items
 UIuploads/
 _archive/
 node_modules
+bc/
+.sass-cache
