@@ -148,3 +148,43 @@
       -ms-column-gap: $gap;
           column-gap: $gap;
 }
+
+// Convert pixel values to ems, assuming browser default font-size of 16px
+@function pxToEm($pixels,$base: 16) {
+  @return ($pixels/$base)+px;
+}
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    // @media only screen and (min-width: $screen-xs) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $screen-sm) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $screen-md) { @content; }
+  }
+  @else if $media == widescreens {
+    @media only screen and (min-width: $screen-lg) { @content; }
+  }
+  @else if $media == mobile-sm-only {
+    @media only screen and (max-width: $screen-xs - 1) { @content; }
+  }
+  @else if $media == tablet-only {
+    @media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) { @content; }
+  }
+  @else if $media == desktop-only {
+    @media only screen and (min-width: $screen-md) and (max-width: $screen-md-max) { @content; }
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
