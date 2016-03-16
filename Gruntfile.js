@@ -7,11 +7,12 @@ module.exports = function(grunt) {
 
     jshint: {
       options: { //https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+        jshintrc: '.jshintrc',
         asi: true,
         curly: true,
         eqeqeq: true,
         immed: true,
-        latedef: true,
+        latedef: false,
         newcap: true,
         noarg: true,
         sub: true,
@@ -21,16 +22,18 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         globals: {
-          jQuery: true,
-          node: true
+          jQuery: false,
+          node: true,
+          '$': false
         }
       },
-      beforeconcat: [
-        '<%= pkg.paths.scripts %>' + '*.js',
-        '!' + '<%= pkg.paths.vendorScripts %>' + '*.js'
+      main: [
+        'core/js/*.js',
+        '!core/js/build/production.js',
+        '!core/js/build/production.min.js',
       ],
-      afterconcat: [
-        '<%= pkg.files.distJs %>'
+      sandbox: [
+        'sandbox/**/js/*.js'
       ],
       gruntfile: {
         src: 'Gruntfile.js'
@@ -41,7 +44,7 @@ module.exports = function(grunt) {
     	stripBanners: true,
     	seperator: ';\n',
     	sourceMap: true,
-      dist: {
+      main: {
         src: [
           'core/js/*.js'
         ],
@@ -73,14 +76,22 @@ module.exports = function(grunt) {
 	  	    expand: true,
 	  	    cwd: '',
 	  	    src: ['**/*.scss'],
-	  	    dest: 'css',
+	  	    dest: '',
 	  	    ext: '.css'
-	  	  }],
-	  	  'main.css': 'main.scss'
+	  	  }]
 			},
-	    dev: {
+      sandbox: {
+        files: [{
+          expand: true,
+          cwd: 'sandbox/',
+          src: ['**/*.scss'],
+          dest: 'sandbox/',
+          ext: '.css'
+        }]
+      },
+	    main: {
 	      files: [{
-	      	'core/css/main.css': 'core/css/scss/main.scss'
+	      	'core/css/main.css': 'core/scss/main.scss'
 	      }]
 	    }
     },
@@ -92,33 +103,39 @@ module.exports = function(grunt) {
           require('pixrem')(), // add fallbacks for rem units
           require('autoprefixer')({ // add vendor prefixes
             browsers: 'last 3 versions'
-          }), // add vendor prefixes
-          require('cssnano')({
-					  sourcemap: true,
-					  safe: true
-					}),
+          }),
           require('css-mqpacker')() // group media queries
 	      ]
       },
-      dist: {
-        src: '*.css'
+      main: {
+        options: {
+          processors: [
+            require('pixrem')(), // add fallbacks for rem units
+            require('autoprefixer')({ // add vendor prefixes
+              browsers: 'last 3 versions'
+            }),
+            require('cssnano')({
+              sourcemap: true,
+              safe: true
+            }),
+            require('css-mqpacker')() // group media queries
+          ]
+        },
+        src: 'core/css/main.css'
+      },
+      sandbox: {
+        options: {
+          processors: [
+            require('pixrem')(), // add fallbacks for rem units
+            require('autoprefixer')({ // add vendor prefixes
+              browsers: 'last 3 versions'
+            }),
+            require('css-mqpacker')() // group media queries
+          ]
+        },
+        src: 'sandbox/**/*.css'
       }
     }, //postcss
-
-    concat: {
-      options: {
-        stripBanners: true,
-        seperator: ';\n',
-        sourceMap: true
-      },
-      dist: {
-        src: [
-          // '<%= pkg.paths.scripts %>' + 'libs/*.js',
-          '<%= pkg.paths.scripts %>' + '*.js'
-        ],
-        dest: '<%= pkg.files.distJs %>'
-      }
-    },
 
     cssmin: {
       combine: {
@@ -147,18 +164,6 @@ module.exports = function(grunt) {
       }
     },//clean
 
-    npmcopy: {
-      // Javascript
-      libs: {
-        options: {
-          destPrefix: '<%= pkg.paths.vendorScripts %>'
-        },
-        files: {
-          'jquery.js': 'jquery/dist/jquery.min.js'
-        }
-      }
-    },//npmcopy
-
     watch: {
       scripts: {
         files: ['core/js/*.js'],
@@ -180,11 +185,41 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('build', ['concat:dist', 'uglify', 'sass', 'cssmin', 'imagemin', 'watch']);
-  grunt.registerTask('dev', ['concat:dist', 'uglify', 'sass', 'cssmin', 'watch']);
-  grunt.registerTask('js', ['concat:dist', 'uglify', 'watch']);
-  grunt.registerTask('css', ['sass', 'cssmin', 'watch']);
-  grunt.registerTask('prefix', ['sass', 'cssmin', 'watch']);
-  grunt.registerTask('default', ['sass:dist']);
+  grunt.registerTask('build', [
+    'concat:dist',
+    'uglify',
+    'sass',
+    'cssmin',
+    'imagemin',
+    'watch'
+  ]);
+
+  grunt.registerTask('dev', [
+    'concat:dist',
+    'uglify', 'sass',
+    'cssmin',
+    'watch'
+  ]);
+
+  grunt.registerTask('js', [
+    'jshint:main',
+    'concat:main',
+    'uglify']);
+
+  grunt.registerTask('css', [
+    'sass',
+    'cssmin',
+    'watch'
+  ]);
+  // grunt.registerTask('prefix', ['sass', 'cssmin', 'watch']);
+
+  grunt.registerTask('main', [
+    'sass:main',
+    'postcss:main'
+  ]);
+  grunt.registerTask('sandbox', [
+    'sass:sandbox',
+    'postcss:sandbox'
+  ]);
 
 };
