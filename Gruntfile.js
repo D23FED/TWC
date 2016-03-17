@@ -89,6 +89,15 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       },
+      test: {
+        files: [{
+          expand: true,
+          cwd: 'test/',
+          src: ['**/*.scss'],
+          dest: 'test/',
+          ext: '.css'
+        }]
+      },
 	    main: {
 	      files: [{
 	      	'core/css/main.css': 'core/scss/main.scss'
@@ -134,6 +143,18 @@ module.exports = function(grunt) {
           ]
         },
         src: 'sandbox/**/*.css'
+      },
+      test: {
+        options: {
+          processors: [
+            require('pixrem')(), // add fallbacks for rem units
+            require('autoprefixer')({ // add vendor prefixes
+              browsers: 'last 3 versions'
+            }),
+            require('css-mqpacker')() // group media queries
+          ]
+        },
+        src: 'test/**/*.css'
       }
     }, //postcss
 
@@ -220,6 +241,10 @@ module.exports = function(grunt) {
   grunt.registerTask('sandbox', [
     'sass:sandbox',
     'postcss:sandbox'
+  ]);
+  grunt.registerTask('test', [
+    'sass:test',
+    'postcss:test'
   ]);
 
 };
