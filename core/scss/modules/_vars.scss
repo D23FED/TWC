@@ -1,3 +1,8 @@
+// Convert pixel values to ems, assuming browser default font-size of 16px
+@function pxToEm($pixels,$base: 16) {
+  @return ($pixels/$base)+em;
+}
+
 // TWC sitewide variables
 $site-width: 980px;
 
