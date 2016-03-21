@@ -1,42 +1,65 @@
+/* Remove .twc-backgroundGradient-6 twc-gradient */
+/* Remove .twc-gradient */
 .twc-footer {
-  background-color: transparent;
-  border-color: #c2c2c2;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  padding-top: 11px;
+  background-color: #fff;
+  background-image: none;
 }
 .twc-footer h3.label {
   font-size: 2rem;
+  color: #333;
+  margin-bottom: 0;
+}
+.twc-footer p {
   color: #333;
 }
 .twc-footer a,
 .twc-footer a:link,
 .twc-footer a:visited {
-  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.6rem;
   color: #00549f;
+  font-weight: normal;
 }
-.twc-footer .footer > .section {
+.twc-footer > .footer {
+  border-color: #c2c2c2;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  /* section of the footer with all the lists/menus. (It currently has no identifying class) */
+}
+.twc-footer > .footer div .footer > .section:nth-of-type(1) {
   border-color: #c2c2c2;
   border-width: 0 0 1px 0;
   border-style: solid;
-  padding-bottom: 6px;
+  /* Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total */
+  padding-top: 7px;
+  /* Spec for space between vertical list bottom and bottom border is 30px */
 }
-.twc-footer .footer .section:nth-of-type(3),
-.twc-footer .footer .section:nth-of-type(4) {
+.twc-footer > .footer div .footer > .section:nth-of-type(1) [class*='twc-col3_333333-c'] {
+  margin-bottom: 22px;
+}
+.twc-footer > .footer div .footer > .section:nth-of-type(3),
+.twc-footer > .footer div .footer > .section:nth-of-type(4) {
   text-align: center;
 }
-.twc-footer .footer .section:nth-of-type(3) p,
-.twc-footer .footer .section:nth-of-type(3) a,
-.twc-footer .footer .section:nth-of-type(3) a:link,
-.twc-footer .footer .section:nth-of-type(3) a:visited,
-.twc-footer .footer .section:nth-of-type(4) p,
-.twc-footer .footer .section:nth-of-type(4) a,
-.twc-footer .footer .section:nth-of-type(4) a:link,
-.twc-footer .footer .section:nth-of-type(4) a:visited {
+.twc-footer > .footer div .footer > .section:nth-of-type(3) p,
+.twc-footer > .footer div .footer > .section:nth-of-type(3) a,
+.twc-footer > .footer div .footer > .section:nth-of-type(3) a:link,
+.twc-footer > .footer div .footer > .section:nth-of-type(3) a:visited,
+.twc-footer > .footer div .footer > .section:nth-of-type(4) p,
+.twc-footer > .footer div .footer > .section:nth-of-type(4) a,
+.twc-footer > .footer div .footer > .section:nth-of-type(4) a:link,
+.twc-footer > .footer div .footer > .section:nth-of-type(4) a:visited {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 1.4rem;
+  color: #333;
+}
+.twc-footer > .footer div .footer > .section:nth-of-type(3) li:after,
+.twc-footer > .footer div .footer > .section:nth-of-type(4) li:after {
+  color: #e0e0e0;
+}
+.twc-footer > .footer .footer-copyright-msg {
+  margin-top: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

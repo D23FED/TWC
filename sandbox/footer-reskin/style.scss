@@ -9,51 +9,65 @@
 	// Column headings
 	h3.label {
 		font-size: 2rem;
-		color: $text; //#333
+		color: $text-color;
+		margin-bottom: 0;
+	}
+	p {
+		color: $text-color;
 	}
 	// Links
 	a,
 	a:link,
 	a:visited {
-		font-family: $twc-book;
 		font-family: $twc-light;
 		font-size: 1.6rem;
 		color: $skyDark-darkish;
+		font-weight: normal;
 	}
 	> .footer {
 		// Add top border
 		border-color: #c2c2c2;
 		border-width: 1px 0 0 0;
 		border-style: solid;
-		/* Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total */
 		// padding-top: 11px;
-		padding-top: 31px;
+		// padding-top: 31px;
 		/* section of the footer with all the lists/menus. (It currently has no identifying class) */
-		// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
-		> .section:nth-of-type(1) {
-			border-color: #c2c2c2;
-			border-width: 0 0 1px 0;
-			border-style: solid;
-			padding-top: 7px;
-			/* Spec for space between vertical list bottom and bottom border is 30px */
-			.twc-footer [class*='twc-col3_333333-c'] {
-				margin-bottom: 22px;
+		div .footer {
+
+			// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
+			> .section:nth-of-type(1) {
+				border-color: #c2c2c2;
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				/* Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total */
+				padding-top: 7px;
+				/* Spec for space between vertical list bottom and bottom border is 30px */
+				[class*='twc-col3_333333-c'] {
+					margin-bottom: 22px;
+				}
+			}
+			// div.section containing the horizontal list beginning with Privacy Policy
+			> .section:nth-of-type(3),
+			// div.section containing copyright
+			> .section:nth-of-type(4) {
+				text-align: center;
+				p,
+				a,
+				a:link,
+				a:visited {
+					font-family: $twc-light;
+					font-weight: normal;
+					font-size: 1.4rem;
+					color: $text-color;
+				}
+				// Horizontal list item dividers
+				li:after {
+					color: #e0e0e0;
+				}
 			}
 		}
-		/* div.section containing the horizontal list beginning with Privacy Policy */
-		> .section:nth-of-type(3),
-		/* div.section containing copyright */
-		> .section:nth-of-type(4),
-		 {
-			text-align: center;
-			p,
-			a,
-			a:link,
-			a:visited {
-				font-family: $twc-light;
-				font-weight: normal;
-				font-size: 1.4rem;
-			}
+		.footer-copyright-msg {
+			margin-top: 4px;
 		}
 	}
 }
