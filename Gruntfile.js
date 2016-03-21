@@ -200,6 +200,12 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         }
+      },
+      sandbox: {
+        files: [
+          'sandbox/**/*.scss'
+        ],
+        tasks: ['sandbox']
       }
     }//watch
 
@@ -244,6 +250,13 @@ module.exports = function(grunt) {
   grunt.registerTask('test', [
     'sass:test',
     'postcss:test'
+  ]);
+
+  grunt.registerTask('default', [
+    'sass:main',
+    'sass:sandbox',
+    'postcss:main',
+    'postcss:sandbox'
   ]);
 
 };
