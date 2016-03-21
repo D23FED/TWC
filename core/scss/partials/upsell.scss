@@ -1,0 +1,134 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 3/6/2014
+   ========================================================================== */
+
+.upsell {
+  width: 100%;
+  padding: 2em 1.5em 1.5em;
+  background: #2c89ce;
+  position: relative;
+  .blue {
+    color: #185ea3;
+  }
+  .upsell-content-teaser {
+    cursor: pointer;
+  }
+  .close-button {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    &.cta {
+      a {
+        padding: 0;
+        span {
+          color: #fff;
+        }
+      }
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  .twc-col2_4555-c0.parsys_column {
+    border-right: 1px solid #ccc;
+  }
+  .upsell-content-wrapper {
+    border-radius: 3px;
+    background: #fff;
+    padding: 1em;
+    position: relative;
+    .upsell-content {
+      max-width: 85%;
+      display: inline-block;
+      .pricing {
+        display: inline;
+        color: #185ea3;
+        margin: 0 .5em;
+      }
+      .h2 {
+        margin-bottom: 0;
+      }
+    }
+    .pricing {
+      .h4 {
+        span {
+          &.dollars {
+            font-size: 44px;
+            font-size: 4.4rem;
+          }
+        }
+        sup {
+          font-size: 22px;
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .upsell-content-expanded {
+      display: none;
+      margin-top: 1em;
+      border-top: 1px solid #ccc;
+      padding-top: 1em;
+      .upsell-expanded-wrapper {
+        padding: 1em;
+        ul {
+          li {
+            list-style: disc;
+            margin-bottom: .5em;
+            padding-right: 1em;
+            color: #185ea3;
+            span {
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+    .expandButton {
+      max-width: 15%;
+      display: inline-block;
+      margin-right: 0;
+      &:hover {
+        span {
+          text-decoration: underline;
+          &:after {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: $medium) {
+  .upsell {
+
+
+
+  }
+}
+
+
+@media (max-width: $small) {
+  .upsell {
+    .upsell-content-teaser {
+      display: inline-block;
+    }
+    .upsell-content-wrapper {
+      .upsell-content {
+        max-width: 100%;
+        width: 100%;
+      }
+      .expandButton {
+        max-width: 100%;
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+}

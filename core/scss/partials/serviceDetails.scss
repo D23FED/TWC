@@ -1,0 +1,94 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Service Details  -- Version: 1.0.0 - Updated: 12/17/2015
+   ========================================================================== */
+
+/* Order Summary CSS Begin */
+
+.service-details {
+  .color-block {
+    padding: 1em;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  table {
+    border: 1px solid #ccc;
+    &.order-summary-table {
+      background: #f6f6f6;
+      figure img {
+        margin: 0 auto;
+      }
+      td {
+        padding: 0.5em;
+      }
+      th {
+        padding: 0.5em;
+        p {
+          margin-bottom: 0;
+        }
+      }
+      td p {
+        margin-bottom: 0;
+      }
+      .tableSubHead td {
+        padding: 0;
+      }
+      td {
+        border-top: 1px solid #ccc;
+      }
+    }
+    &.special-offer td {
+      &:first-of-type {
+        width: 10%;
+        padding: 0;
+      }
+      &:nth-of-type(2) {
+        width: 90%;
+      }
+      > span {
+        vertical-align: top;
+      }
+    }
+    td:first-of-type {
+      width: 15%;
+    }
+    .tableSubhead td:nth-of-type(2) {
+      padding: 1em 0;
+    }
+    td {
+      &:nth-of-type(2) {
+        width: 60%;
+        border-right: 1px solid #ccc;
+        padding-left: 1em;
+      }
+      &:nth-of-type(3) {
+        width: 25%;
+      }
+    }
+    .tableSubHead td {
+      border-right: none;
+    }
+  }
+}
+
+@media (max-width: 40em) {
+  .service-details table {
+    td {
+      &:first-of-type {
+        display: none;
+      }
+      &:nth-of-type(2), &:nth-of-type(3) {
+        width: 50%;
+      }
+    }
+    &.order-summary-table .tableSubHead td {
+      padding: 0.5em;
+    }
+  }
+}

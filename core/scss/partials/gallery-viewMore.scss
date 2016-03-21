@@ -1,0 +1,21 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Gallery - View More -- Version: 1.0.0.1 - Updated: 3/10/2014
+   ========================================================================== */
+
+.half-circle-bottom {
+  @include inline-block;
+  width: 90px;
+  height: 45px;
+  margin-bottom: .5em;
+  padding-right: .45em;
+  @include border-radius(0 0 90px 90px);
+  background: $link;
+  @include font-size(34);
+  color: $white;
+  .icon-angle-down.js-expanded {
+    @include rotate(180);
+  }
+}

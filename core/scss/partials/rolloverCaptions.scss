@@ -1,0 +1,87 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Rollover Captions -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.rolloverCaptions {
+
+  figure {
+    display: block;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    img { width: 100%; }
+    &:before {
+      font-family: $fontawesome;
+      content: "\f077";
+      position: absolute;
+      text-shadow: 0 0 5px $text;
+      color: $text-white;
+      text-align: center;
+      @include font-size(16);
+      @include transition(all, .6s, ease);
+      @include opacity(.75);
+    }
+    &:hover:before {
+      opacity: 0;
+    }
+    &:hover {
+      figcaption {
+        @include opacity(1);
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    background: $black;
+    background: rgba(0,0,0,.75);
+    color: $white;
+    @include padding(1em);
+    @include opacity(0);
+    @include transition(all, .6s, ease);
+  }
+
+  .caption-top {
+    figcaption {
+      left: 0;
+      top: -1em;
+    }
+    &:before {
+      top: .5em;
+      right: 1em;
+      content: "\f078";
+    }
+    &:hover figcaption {
+      top: 0;
+    }
+  }
+
+  .caption-bottom {
+    figcaption {
+      left: 0;
+      bottom: -1em;
+    }
+    &:before {
+      bottom: 1.5em;
+      left: 1em;
+    }
+    &:hover figcaption {
+      bottom: 0;
+    }
+  }
+
+  @media (max-width: $medium) {
+
+    .touch {
+      figcaption {
+        display: none;
+      }
+    }
+
+  }
+
+}

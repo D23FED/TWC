@@ -1,0 +1,110 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tabs -- Version: 1.9.0.3 - Updated: 1/8/2013
+   ========================================================================== */
+
+.tab-component {
+  .tab-content-container {
+    @include padding(1em);
+    @include border-radius(0 0 3px 3px);
+    background: $background-white;
+    @include box-shadow(0 1px 2px 0 #888);
+  }
+
+  .tabs {
+    display: table;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 #888;
+    @include border-radius();
+    ul {
+      display: table-row;
+    }
+    li {
+      display: table-cell;
+      position: relative;
+      @include padding(0.5em);
+      @include border-radius(3px 3px 0 0);
+      border-left: 1px solid #ededed;
+      @include background-gradient(#eeeeef, #dddfe2);
+      color: $text;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      &.js-first {
+          border-left: none;
+      }
+      a {
+        @include inline-block();
+        position: relative;
+        @include font-family($twc-book);
+        font-weight: normal;
+        text-decoration: none;
+      }
+      &.active, &.js-active {
+        background: $background-white;
+        filter: none;
+        a {
+          color: $text;
+        }
+      }
+    }
+  }
+  .tab-content {
+    display: none;
+    &.active, &.js-active {
+      display: block;
+    }
+  }
+
+  @media (max-width: $medium) {
+
+    .tabs {
+      display: block;
+      ul {
+        display: block;
+      }
+      li {
+        display: block;
+        border: none;
+        @include border-radius(0);
+        border-bottom: 1px solid $lightgrey;
+        text-align: left;
+        width: 100%;
+        &.js-last {
+          border-bottom: none;
+        }
+        a {
+          width: 100%;
+          &:after {
+            font-family: $fontawesome;
+            content: '\f107';
+            float: right;
+            @include transition(all, .5s, ease-in-out);
+          }
+         }
+        &.active, &.js-active {
+          a {
+            &:after {
+              @include rotate(180deg);
+              float: right;
+            }
+          }
+        }
+        &.js-first {
+          @include border-radius(3px 3px 0 0);
+        }
+      }
+    }
+    .tab-content-container {
+      display: none;
+    }
+    .tab-content {
+      @include padding(1em);
+      background: $background-white;
+      filter: none;
+    }
+  }
+
+}

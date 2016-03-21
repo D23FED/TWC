@@ -1,0 +1,85 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+.twc-alert-section {
+
+  .twc-alert {
+    border-bottom: 1px solid #eeeeef;
+    background: #d14853;
+    @include box-shadow(inset 0 -10px 14px 0 rgba(0, 0, 0, 0.2));
+    color: $text-white;
+  }
+  .twc-container {
+    @include padding(1em,2em,1em,3em);
+  }
+  p.twc-alert-text {
+    position: relative;
+    @include font-family($arial);
+    .twc-container {
+      padding: 1em 2em 1em 0;
+    }
+  }
+
+  .twc-customerLocation p.twc-alert-text:before, p.twc-alert-text:before {
+    padding-right: 10px;
+    @include font-family($fontawesome);
+    content: '\f071';
+    @include font-size(24);
+    font-weight: 100;
+    color: #f6b42a;
+    text-shadow: 0 1px 3px #333;
+    vertical-align: middle;
+    margin-left: -1.4em; //    Fixes from Back End - 5/15/14
+    float: left; //    Fixes from Back End - 5/15/14
+  }
+
+  .twc-alert-close:after {
+    position: relative;
+    float: right;
+    top: 0;
+    right: 0;
+    @include padding(0,1em);
+    @include font-family($fontawesome);
+    content: '\f057';
+    color: #fff;
+    font-weight: lighter;
+  }
+
+  a.twc-icon:hover {
+    color: inherit;
+  }
+
+
+  @media (max-width: $medium) {
+
+    p.twc-alert-text.twc-container {
+      @include padding(1em,1.4em,1em,4em);
+    }
+    .twc-alert-close:after {
+      top: 0;
+      right: 4%;
+      @include font-size(24);
+    }
+
+  }
+
+  @media (max-width: $small) {
+
+    .twc-alert-text:before {
+      @include font-size(18);
+      vertical-align: baseline;
+    }
+    .twc-content {
+      padding-top: 0;
+    }
+    .twc-alert-close:after {
+      @include padding(0,0,0,.5em);
+    }
+  }
+
+}
+

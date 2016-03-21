@@ -1,0 +1,68 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Feedback  -- Version: 1.0.0 - Updated: 5/23/2014
+   ========================================================================== */
+
+#feedback {
+
+  input,
+  select,
+  textarea {
+    border: 1px solid #e1e1e1;
+  }
+
+  .feedback-container {
+  margin-top: 2em;
+  padding: 1em;
+  background: #eff0ef; }
+
+  .feedback-container [class*="twc-col2_4060-c"] { padding: 2em; }
+
+  .feedback-container [class*="twc-col2_4060-c0"] { border-right: 1px dotted #ccc; }
+
+  .feedback-container [class*="twc-col2_4060-c1"] { padding-left: 3em; }
+
+  .form-item { margin-bottom: 1em; }
+
+  .feedback-container .form-item label {
+    font-weight: bold;
+    line-height: 2; }
+
+  .feedback-container textarea { min-height: 200px; }
+
+  .feedback-response {
+    display: none;
+    text-align: center; }
+
+  .channel-suggestions { -webkit-font-smoothing: antialiased; }
+  .channel-suggestions .twc-subHead h3 { color: rgb(51, 51, 51); }
+  .channel-suggestions p { font-family: Arial, Helvetica, sans-serif; }
+  .feedback-container .form-item .valid { color:black; }
+
+  #channel-suggestions-form .error {
+    background-color: white;
+  }
+
+  #channel-suggestions-form label.error {
+    background-color: transparent;
+  }
+
+}
+
+@media (max-width: 48em) {
+
+  .feedback-container [class*="twc-col2_4060-c0"] {
+    border-right: none;
+    border-bottom: 1px dotted #ccc; }
+
+  .feedback-container [class*="twc-col2_4060-c"] { padding: 0; }
+
+  .feedback-container [class*="twc-col2_4060-c1"] { padding-top: 1em; }
+
+}
+
+@media (max-width: 40em) {
+
+}
