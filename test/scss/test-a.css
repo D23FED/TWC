@@ -1,0 +1,23 @@
+a {
+  font-size: 187px;
+}
+
+@media only screen and (min-width: 40em) {
+
+  a {
+    color: blue;
+  }
+
+  a {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+
+  a {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=test-a.css.map */
