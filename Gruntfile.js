@@ -52,7 +52,6 @@ module.exports = function(grunt) {
       },
       dist2: {
         src: [
-          // '<%= pkg.paths.scripts %>' + 'libs/*.js',
           '<%= pkg.paths.scripts %>' + '*.js'
         ],
         dest: '<%= pkg.files.distJs %>'
