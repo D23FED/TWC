@@ -123,7 +123,7 @@ module.exports = function(grunt) {
               browsers: 'last 3 versions'
             }),
             require('cssnano')({
-              sourcemap: true,
+              sourcemap: false,
               safe: true
             }),
             require('css-mqpacker')() // group media queries
@@ -138,8 +138,12 @@ module.exports = function(grunt) {
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
+            require('postcss-discard-duplicates')(),
             require('css-mqpacker')() // group media queries
-          ]
+          ],
+          map: {
+            inline: false
+          }
         },
         src: 'sandbox/**/*.css'
       },
@@ -244,8 +248,8 @@ module.exports = function(grunt) {
     'postcss:main'
   ]);
   grunt.registerTask('sandbox', [
-    'sass:sandbox',
-    'postcss:sandbox'
+    'newer:sass:sandbox',
+    'newer:postcss:sandbox'
   ]);
   grunt.registerTask('test', [
     'sass:test',
