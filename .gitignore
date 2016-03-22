@@ -48,7 +48,7 @@ Temporary Items
 
 # Site specific
 UIuploads/
-_archive/
+!_archive/
 node_modules
 bc/
 .sass-cache
