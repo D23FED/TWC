@@ -241,12 +241,12 @@ module.exports = function(grunt) {
     'cssmin',
     'watch'
   ]);
-  // grunt.registerTask('prefix', ['sass', 'cssmin', 'watch']);
 
   grunt.registerTask('main', [
     'sass:main',
     'postcss:main'
   ]);
+
   grunt.registerTask('sandbox', [
     'newer:sass:sandbox',
     'newer:postcss:sandbox'

@@ -1,12 +1,9 @@
 @import '../../init';
-/* Version 1.5 */
-//- FOOTER.twc-footer
-/* Remove .twc-backgroundGradient-6 twc-gradient */
-/* Remove .twc-gradient */
 .twc-footer {
 	// Remove gradient
 	background-color: #fff;
 	background-image: none;
+
 	// Column headings
 	h3.label {
 		font-size: 2rem;
@@ -17,28 +14,24 @@
 		font-family: $twc-book;
 		background-image: none;
 		background-color: transparent;
-		color: $skyDark-darkish;
 		min-height: auto;
 		padding: 0;
 		font-weight: normal;
-		@include respond-to(tablet) {
-			color: $text-color;
-		}
+		color: $text-color;
+
 		+ ul {
 			display: block;
 			position: static;
 			width: auto;
 			padding-left: 0;
+
 			li {
 				border-width: 0;
 				border-style: none;
 				padding: 0;
 				background-image: none;
 				background-color: transparent;
-				line-height: 1.4;
-				@include respond-to(tablet) {
-					line-height: 2;
-				}
+
 				a:after {
 					float: none;
 					content:'';
@@ -51,6 +44,7 @@
 	p {
 		color: $text-color;
 	}
+
 	// Links
 	a,
 	a:link,
@@ -63,6 +57,7 @@
 	a:hover {
 		color: #02a9e0;
 	}
+
 	> .footer {
 		// Add top border
 		border-color: #c2c2c2;
@@ -70,24 +65,44 @@
 		border-style: solid;
 		// padding-top: 11px;
 		// padding-top: 31px;
-		/* section of the footer with all the lists/menus. (It currently has no identifying class) */
+		// section of the footer with all the lists/menus. (It currently has no identifying class)
 		div .footer {
 
-			// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
 			> .section:nth-of-type(1) {
+				// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
 				border-color: #c2c2c2;
 				border-width: 0 0 1px 0;
 				border-style: solid;
-				/* Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total */
+				// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
 				padding-top: 7px;
-				/* Spec for space between vertical list bottom and bottom border is 30px */
+				padding-bottom: 20px;
+				@include respond-to(tablet) {
+					padding-bottom: 0;
+				}
+				// Spec for space between vertical list bottom and bottom border is 30px
 				[class*='twc-col3_333333-c'] {
-					margin-bottom: 22px;
+					margin-bottom: pxToEm(32);
+					@include respond-to(tablet) {
+						margin-bottom: 22px;
+					}
 				}
 			}
-			// div.section containing the horizontal list beginning with Privacy Policy
+			// "Privacy Policy..."
+			> .section:nth-of-type(3) {
+				.horizontal {
+					padding-top: 0;
+					padding-bottom: 0;
+					margin-top: 11px;
+					@include respond-to(tablet) {
+						margin-top: 0px;
+					}
+				}
+			}
+
+			// Horizontal list beginning with Privacy Policy
 			> .section:nth-of-type(3),
-			// div.section containing copyright
+
+			// Copyright
 			> .section:nth-of-type(4) {
 				text-align: center;
 				p,
@@ -99,14 +114,38 @@
 					font-size: 1.4rem;
 					color: $text-color;
 				}
+
 				// Horizontal list item dividers
 				li:after {
 					color: #e0e0e0;
 				}
 			}
 		}
-		.footer-copyright-msg {
-			margin-top: 4px;
+		.twc-footer-copyright-msg {
+			margin-top: 15px;
+			padding-top: 0;
+			br {
+				display: none;
+			}
+			@include respond-to(tablet) {
+				margin-top: 19px;
+			}
+		}
+	}
+
+	// Temp hide last column for testing
+	.twc-col2_5050-c1 .twc-col3_333333-c2 {
+		// display: none;
+	}
+	.horizontal.pipes {
+		li.js-last:after {
+			padding: 0;
+		}
+	}
+	/* Overwrite styles that are introduced by js that will eventually be removed */
+	ul.mobile {
+		.smartLink.horizontal-center a {
+			padding: 0;
 		}
 	}
 }

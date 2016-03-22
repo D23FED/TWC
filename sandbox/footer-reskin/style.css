@@ -1,9 +1,7 @@
-/* Version 1.5 */
-/* Remove .twc-backgroundGradient-6 twc-gradient */
-/* Remove .twc-gradient */
 .twc-footer {
   background-color: #fff;
   background-image: none;
+  /* Overwrite styles that are introduced by js that will eventually be removed */
 }
 .twc-footer h3.label {
   font-size: 32px;
@@ -15,10 +13,10 @@
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   background-image: none;
   background-color: transparent;
-  color: #00549f;
   min-height: auto;
   padding: 0;
   font-weight: normal;
+  color: #333;
 }
 .twc-footer h3.label + ul {
   display: block;
@@ -32,7 +30,6 @@
   padding: 0;
   background-image: none;
   background-color: transparent;
-  line-height: 1.4;
 }
 .twc-footer h3.label + ul li a:after {
   float: none;
@@ -59,18 +56,21 @@
   border-color: #c2c2c2;
   border-width: 1px 0 0 0;
   border-style: solid;
-  /* section of the footer with all the lists/menus. (It currently has no identifying class) */
 }
 .twc-footer > .footer div .footer > .section:nth-of-type(1) {
   border-color: #c2c2c2;
   border-width: 0 0 1px 0;
   border-style: solid;
-  /* Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total */
   padding-top: 7px;
-  /* Spec for space between vertical list bottom and bottom border is 30px */
+  padding-bottom: 20px;
 }
 .twc-footer > .footer div .footer > .section:nth-of-type(1) [class*='twc-col3_333333-c'] {
-  margin-bottom: 22px;
+  margin-bottom: 2em;
+}
+.twc-footer > .footer div .footer > .section:nth-of-type(3) .horizontal {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 11px;
 }
 .twc-footer > .footer div .footer > .section:nth-of-type(3),
 .twc-footer > .footer div .footer > .section:nth-of-type(4) {
@@ -94,16 +94,33 @@
 .twc-footer > .footer div .footer > .section:nth-of-type(4) li:after {
   color: #e0e0e0;
 }
-.twc-footer > .footer .footer-copyright-msg {
-  margin-top: 4px;
+.twc-footer > .footer .twc-footer-copyright-msg {
+  margin-top: 15px;
+  padding-top: 0;
+}
+.twc-footer > .footer .twc-footer-copyright-msg br {
+  display: none;
+}
+.twc-footer .horizontal.pipes li.js-last:after {
+  padding: 0;
+}
+.twc-footer ul.mobile .smartLink.horizontal-center a {
+  padding: 0;
 }
 
 @media only screen and (min-width: 40em) {
-  .twc-footer h3.label {
-    color: #333;
+  .twc-footer > .footer div .footer > .section:nth-of-type(1) {
+    padding-bottom: 0;
   }
-  .twc-footer h3.label + ul li {
-    line-height: 2;
+  .twc-footer > .footer div .footer > .section:nth-of-type(1) [class*='twc-col3_333333-c'] {
+    margin-bottom: 22px;
+  }
+  .twc-footer > .footer div .footer > .section:nth-of-type(3) .horizontal {
+    margin-top: 0px;
+  }
+  .twc-footer > .footer .twc-footer-copyright-msg {
+    margin-top: 19px;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
