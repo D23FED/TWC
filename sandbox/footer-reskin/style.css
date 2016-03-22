@@ -1,3 +1,4 @@
+/* Version 1.5 */
 /* Remove .twc-backgroundGradient-6 twc-gradient */
 /* Remove .twc-gradient */
 .twc-footer {
@@ -7,8 +8,37 @@
 .twc-footer h3.label {
   font-size: 32px;
   font-size: 2rem;
-  color: #333;
   margin-bottom: 0;
+  border-width: 0;
+  border-style: none;
+  text-align: left;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-image: none;
+  background-color: transparent;
+  color: #00549f;
+  min-height: auto;
+  padding: 0;
+  font-weight: normal;
+}
+.twc-footer h3.label + ul {
+  display: block;
+  position: static;
+  width: auto;
+  padding-left: 0;
+}
+.twc-footer h3.label + ul li {
+  border-width: 0;
+  border-style: none;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+  line-height: 1.4;
+}
+.twc-footer h3.label + ul li a:after {
+  float: none;
+  content: '';
+  position: initial;
+  right: auto;
 }
 .twc-footer p {
   color: #333;
@@ -21,6 +51,9 @@
   font-size: 1.6rem;
   color: #00549f;
   font-weight: normal;
+}
+.twc-footer a:hover {
+  color: #02a9e0;
 }
 .twc-footer > .footer {
   border-color: #c2c2c2;
@@ -65,4 +98,12 @@
   margin-top: 4px;
 }
 
+@media only screen and (min-width: 40em) {
+  .twc-footer h3.label {
+    color: #333;
+  }
+  .twc-footer h3.label + ul li {
+    line-height: 2;
+  }
+}
 /*# sourceMappingURL=style.css.map */
