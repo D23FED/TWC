@@ -251,6 +251,7 @@ module.exports = function(grunt) {
     'newer:sass:sandbox',
     'newer:postcss:sandbox'
   ]);
+
   grunt.registerTask('test', [
     'sass:test',
     'postcss:test'
