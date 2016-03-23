@@ -1,151 +1,104 @@
-@import '../../init';
-.twc-footer {
-	// Remove gradient
-	background-color: #fff;
-	background-image: none;
-
-	// Column headings
-	h3.label {
-		font-size: 2rem;
-		margin-bottom: 0;
-		border-width: 0;
-		border-style: none;
-		text-align: left;
-		font-family: $twc-book;
-		background-image: none;
+$menu-item-height: 40px;
+$color-bright-blue: #02a9e0;
+$color-light-blue: #f2fbfd;
+body > .header {
+	// Contains logo and newHeaderIcons
+	.twc-header {
+		// Overwrite .twc-backgroundGradient-2
 		background-color: transparent;
-		min-height: auto;
-		padding: 0;
-		font-weight: normal;
-		color: $text-color;
+		background-image: none;
 
-		+ ul {
-			display: block;
-			position: static;
-			width: auto;
-			padding-left: 0;
-
-			li {
-				border-width: 0;
-				border-style: none;
-				padding: 0;
-				background-image: none;
-				background-color: transparent;
-
-				a:after {
-					float: none;
-					content:'';
-					position: initial;
-					right: auto;
-				}
+		// Logo
+		.twc-logo {
+			// Temporary until we can use new image
+			background-color: $skyDark-darkish;
+			-webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: 7px 4px;
+			img {
+				height: 0;
+				padding-bottom: 47px;
+				padding-left: 180px;
 			}
+
 		}
 	}
-	p {
-		color: $text-color;
-	}
-
-	// Links
-	a,
-	a:link,
-	a:visited {
-		font-family: $twc-light;
-		font-size: 1.6rem;
-		color: $skyDark-darkish;
-		font-weight: normal;
-	}
-	a:hover {
-		color: #02a9e0;
-	}
-
-	> .footer {
-		// Add top border
-		border-color: #c2c2c2;
-		border-width: 1px 0 0 0;
-		border-style: solid;
-		// padding-top: 11px;
-		// padding-top: 31px;
-		// section of the footer with all the lists/menus. (It currently has no identifying class)
-		div .footer {
-
-			> .section:nth-of-type(1) {
-				// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
-				border-color: #c2c2c2;
-				border-width: 0 0 1px 0;
-				border-style: solid;
-				// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
-				padding-top: 7px;
-				padding-bottom: 20px;
-				@include respond-to(tablet) {
-					padding-bottom: 0;
+	// Primary nav (Explore, All Plans, etc)
+	.new-mega-menu {
+		.twc-new-navigation {
+			background-color: $color-light-blue;
+			background-image: none;
+			height: $menu-item-height;
+			> .twc-container {
+				&,
+				& .twc-new-nav {
+					height: 100%;
 				}
-				// Spec for space between vertical list bottom and bottom border is 30px
-				[class*='twc-col3_333333-c'] {
-					margin-bottom: pxToEm(32);
-					@include respond-to(tablet) {
-						margin-bottom: 22px;
+			}
+
+			.twc-new-nav {
+				// Top level
+				> ul {
+					> li {
+						border-color: #7eabd0;
 					}
 				}
+				ul {
+					li {
+						label {
+							color: $skyDark-darkish;
+							font-family: $twc-book;
+							font-size: 1.2rem;
+							line-height: $menu-item-height;
+						}
+						.mobile-nav {
+							> label {
+								top: auto;
+								padding: 0;
+							}
+						}
+						// Active top-level menu item
+						.mega-menu-item {
+							&.js-active {
+								background-color: $color-bright-blue;
+								background-image: none;
+
+								label {
+									color: #fff;
+								}
+							}
+						}
+					}
+
+				}
+
+				// temporarily hide nav icons
+				figure {
+					display: none;
+				}
 			}
-			// "Privacy Policy..."
-			> .section:nth-of-type(3) {
-				.horizontal {
-					padding-top: 0;
-					padding-bottom: 0;
-					margin-top: 11px;
-					@include respond-to(tablet) {
-						margin-top: 0px;
+			// submenus
+			.twc-submenu {
+				.labelList {
+					.label {
+						text-transform: none;
+						color: $skyDark-darkish;
+						font-family: $twc-medium;
+						// Active
+						&.js-active {
+							background-color: $color-bright-blue;
+							color: #fff;
+						}
+					}
+					// sub-submenu
+					ul {
+						background-color: $color-light-blue;
+						color: $skyDark-darkish;
 					}
 				}
-			}
 
-			// Horizontal list beginning with Privacy Policy
-			> .section:nth-of-type(3),
-
-			// Copyright
-			> .section:nth-of-type(4) {
-				text-align: center;
-				p,
-				a,
-				a:link,
-				a:visited {
-					font-family: $twc-light;
-					font-weight: normal;
-					font-size: 1.4rem;
-					color: $text-color;
-				}
-
-				// Horizontal list item dividers
-				li:after {
-					color: #e0e0e0;
-				}
 			}
-		}
-		.twc-footer-copyright-msg {
-			margin-top: 15px;
-			padding-top: 0;
-			br {
-				display: none;
-			}
-			@include respond-to(tablet) {
-				margin-top: 19px;
-			}
-		}
-	}
+		} // end .twc-new-navigation
 
-	// Temp hide last column for testing
-	.twc-col2_5050-c1 .twc-col3_333333-c2 {
-		// display: none;
-	}
-	.horizontal.pipes {
-		li.js-last:after {
-			padding: 0;
-		}
-	}
-	/* Overwrite styles that are introduced by js that will eventually be removed */
-	ul.mobile {
-		.smartLink.horizontal-center a {
-			padding: 0;
-		}
 	}
 }

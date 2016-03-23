@@ -248,7 +248,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('sandbox', [
-    'newer:sass:sandbox',
+    'sass:sandbox',
     'newer:postcss:sandbox'
   ]);
 

@@ -1,3 +1,64 @@
+body > .header .twc-header {
+  background-color: transparent;
+  background-image: none;
+}
+body > .header .twc-header .twc-logo {
+  background-color: #00549f;
+  -webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 7px 4px;
+}
+body > .header .twc-header .twc-logo img {
+  height: 0;
+  padding-bottom: 47px;
+  padding-left: 180px;
+}
+body > .header .new-mega-menu .twc-new-navigation {
+  background-color: #f2fbfd;
+  background-image: none;
+  height: 40px;
+}
+body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
+  height: 100%;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li {
+  border-color: #7eabd0;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li label {
+  color: #00549f;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  line-height: 40px;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mobile-nav > label {
+  top: auto;
+  padding: 0;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mega-menu-item.js-active {
+  background-color: #02a9e0;
+  background-image: none;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mega-menu-item.js-active label {
+  color: #fff;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav figure {
+  display: none;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList .label {
+  text-transform: none;
+  color: #00549f;
+  font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList .label.js-active {
+  background-color: #02a9e0;
+  color: #fff;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList ul {
+  background-color: #f2fbfd;
+  color: #00549f;
+}
+
 .twc-footer {
   background-color: #fff;
   background-image: none;
@@ -122,4 +183,5 @@
     margin-top: 19px;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
