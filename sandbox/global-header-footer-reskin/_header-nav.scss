@@ -3,6 +3,9 @@
 	// NAV element. Contains entire top-level nav menu
 	.twc-new-navigation {
 		background-color: $color-light-blue;
+		@include respond-to(tablet) {
+			background-color: #fff;
+		}
 		background-image: none;
 		height: $menu-item-height;
 
@@ -12,17 +15,31 @@
 			// Top level
 			> ul {
 				> li {
-					border-color: #7eabd0;
-
-					label {
+					border-color: $color-menu-divider;
+					&:hover {
+						background-color: $color-bright-blue;
+						background-image: none;
+						box-shadow: none;
+						.desktopLink a {
+							color: #fff;
+						}
+					}
+					label,
+					.desktopLink a {
 						color: $skyDark-darkish;
 						font-family: $twc-book;
-						font-size: 1.2rem;
 						line-height: $menu-item-height;
 					}
-
+					// Top-level links on desktop
+					.desktopLink a {
+						font-size: 1.8rem;
+						font-weight: normal;
+					}
+					// Top-level links on mobile
 					.mobile-nav {
 						> label {
+							// line-height: $menu-item-height;
+							font-size: 1.2rem;
 							top: auto;
 							padding: 0;
 						}
@@ -31,6 +48,9 @@
 					// Wrapper for top-level items.
 					// Wraps all content of each top-level nav item submenu
 					.mega-menu-item {
+						padding: 0;
+						height: $menu-item-height;
+						border-color: $color-menu-divider;
 						// Active top-level menu item
 						&.js-active {
 							background-color: $color-bright-blue;
@@ -64,6 +84,11 @@
 				box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
 				top: $menu-item-height + 1px;
 				border-top: 1px solid white;
+				@include respond-to(tablet) {
+					padding-left: 30px;
+					padding-top: 25px;
+					padding-bottom: 25px;
+				}
 
 				// List of sub-items inside a single mega menu item
 				.labelList {
@@ -92,6 +117,10 @@
 						& ~ ul {
 							background-color: $color-light-blue;
 							color: $skyDark-darkish;
+							@include respond-to(tablet) {
+								background-color: transparent;
+							}
+
 							li {
 								&::before {
 									// temporary !important

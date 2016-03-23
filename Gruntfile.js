@@ -108,7 +108,10 @@ module.exports = function(grunt) {
       options: {
         map: true, // inline sourcemaps
         processors: [
-          require('pixrem')(), // add fallbacks for rem units
+          // add fallbacks for rem units
+          require('pixrem')({
+            rootValue: 10
+          }),
           require('autoprefixer')({ // add vendor prefixes
             browsers: 'last 3 versions'
           }),
@@ -118,7 +121,10 @@ module.exports = function(grunt) {
       main: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
@@ -134,7 +140,10 @@ module.exports = function(grunt) {
       sandbox: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
@@ -148,7 +157,10 @@ module.exports = function(grunt) {
       test: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),

@@ -3,6 +3,45 @@
 	.twc-header {
 		.twc-top {
 			background-color: $skyDark-darker;
+			border-color: #a1a1a1;
+			// Topmost navigation list
+			.twc-top-nav {
+				ul {}
+				li {
+					a,
+					a:link,
+					a:active {
+						color: #fff;
+					}
+					// Active tab
+					.twc-active {
+						background-color: #fff;
+						border-color: #a1a1a1;
+						box-shadow: none;
+						border-bottom-color: #fff;
+						border-bottom-width: 1px;
+						border-bottom-style: solid;
+						a,
+						a:link,
+						a:active {
+							color: $text-color;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+	// Header Icons: Shop, Pay Bill, Email etc
+	.newHeaderIcons {
+		.list.horizontal {
+			ul {
+				> li {
+					a {
+						color: $skyDark-darkish;
+					}
+				}
+			}
 		}
 	}
 }

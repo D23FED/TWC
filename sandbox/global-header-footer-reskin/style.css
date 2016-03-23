@@ -1,3 +1,44 @@
+body > .header .header_v2 .twc-header .twc-top {
+  background-color: #00315c;
+  border-color: #a1a1a1;
+}
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li a,
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li a:link,
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li a:active {
+  color: #fff;
+}
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active {
+  background-color: #fff;
+  border-color: #a1a1a1;
+  box-shadow: none;
+  border-bottom-color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a,
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a:link,
+body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a:active {
+  color: #333;
+  font-weight: bold;
+}
+body > .header .header_v2 .newHeaderIcons .list.horizontal ul > li a {
+  color: #00549f;
+}
+body > .header .twc-header {
+  background-color: transparent;
+  background-image: none;
+}
+body > .header .twc-header .twc-logo {
+  background-color: #00549f;
+  -webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 7px 4px;
+}
+body > .header .twc-header .twc-logo img {
+  height: 0;
+  padding-bottom: 47px;
+  padding-left: 180px;
+}
 body > .header .new-mega-menu .twc-new-navigation {
   background-color: #f2fbfd;
   background-image: none;
@@ -6,16 +47,35 @@ body > .header .new-mega-menu .twc-new-navigation {
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li {
   border-color: #7eabd0;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover {
+  background-color: #02a9e0;
+  background-image: none;
+  box-shadow: none;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a {
+  color: #fff;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
   color: #00549f;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 19.2px;
-  font-size: 1.2rem;
   line-height: 40px;
 }
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mobile-nav > label {
+  font-size: 12px;
+  font-size: 1.2rem;
   top: auto;
   padding: 0;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item {
+  padding: 0;
+  height: 40px;
+  border-color: #7eabd0;
 }
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active {
   background-color: #02a9e0;
@@ -39,7 +99,7 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   text-transform: none;
   color: #00549f;
   font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 25.6px;
+  font-size: 16px;
   font-size: 1.6rem;
   width: 100%;
 }
@@ -54,7 +114,7 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   text-transform: none;
   color: #00549f;
   font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 25.6px;
+  font-size: 16px;
   font-size: 1.6rem;
   width: 100%;
 }
@@ -75,7 +135,7 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   color: #00549f;
   padding-right: 0;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 25.6px;
+  font-size: 16px;
   font-size: 1.6rem;
   text-transform: none;
 }
@@ -97,24 +157,6 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
 body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
   height: 100%;
 }
-body > .header .header_v2 .twc-header .twc-top {
-  background-color: #00315c;
-}
-body > .header .twc-header {
-  background-color: transparent;
-  background-image: none;
-}
-body > .header .twc-header .twc-logo {
-  background-color: #00549f;
-  -webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 7px 4px;
-}
-body > .header .twc-header .twc-logo img {
-  height: 0;
-  padding-bottom: 47px;
-  padding-left: 180px;
-}
 
 .twc-footer {
   background-color: #fff;
@@ -122,7 +164,7 @@ body > .header .twc-header .twc-logo img {
   /* Overwrite styles that are introduced by js that will eventually be removed */
 }
 .twc-footer h3.label {
-  font-size: 32px;
+  font-size: 20px;
   font-size: 2rem;
   margin-bottom: 0;
   border-width: 0;
@@ -162,7 +204,7 @@ body > .header .twc-header .twc-logo img {
 .twc-footer a:link,
 .twc-footer a:visited {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 25.6px;
+  font-size: 16px;
   font-size: 1.6rem;
   color: #00549f;
   font-weight: normal;
@@ -204,7 +246,7 @@ body > .header .twc-header .twc-logo img {
 .twc-footer > .footer div .footer > .section:nth-of-type(4) a:visited {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 22.4px;
+  font-size: 14px;
   font-size: 1.4rem;
   color: #333;
 }
@@ -227,6 +269,37 @@ body > .header .twc-header .twc-logo img {
 }
 
 @media only screen and (min-width: 40em) {
+  body > .header .new-mega-menu .twc-new-navigation {
+    background-color: #fff;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a {
+    color: #333;
+    font-size: 1.8rem;
+    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a::after {
+    content: '';
+    margin: 0;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
+    color: #333;
+    font-size: 1.8rem;
+    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
+    background-color: transparent;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
+    content: '';
+    margin: 0;
+  }
   .twc-footer > .footer div .footer > .section:nth-of-type(1) {
     padding-bottom: 0;
   }
