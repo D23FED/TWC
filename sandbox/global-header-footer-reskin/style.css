@@ -1,18 +1,3 @@
-body > .header .twc-header {
-  background-color: transparent;
-  background-image: none;
-}
-body > .header .twc-header .twc-logo {
-  background-color: #00549f;
-  -webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: 7px 4px;
-}
-body > .header .twc-header .twc-logo img {
-  height: 0;
-  padding-bottom: 47px;
-  padding-left: 180px;
-}
 body > .header .new-mega-menu .twc-new-navigation {
   background-color: #f2fbfd;
   background-image: none;
@@ -111,6 +96,24 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
 }
 body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
   height: 100%;
+}
+body > .header .header_v2 .twc-header .twc-top {
+  background-color: #00315c;
+}
+body > .header .twc-header {
+  background-color: transparent;
+  background-image: none;
+}
+body > .header .twc-header .twc-logo {
+  background-color: #00549f;
+  -webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 7px 4px;
+}
+body > .header .twc-header .twc-logo img {
+  height: 0;
+  padding-bottom: 47px;
+  padding-left: 180px;
 }
 
 .twc-footer {

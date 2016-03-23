@@ -1,0 +1,185 @@
+// Primary nav (Explore, All Plans, etc) wrapper for mega menu. Contains entire top-level nav menu
+.new-mega-menu {
+	// NAV element. Contains entire top-level nav menu
+	.twc-new-navigation {
+		background-color: $color-light-blue;
+		background-image: none;
+		height: $menu-item-height;
+
+		// List inside NAV, top-level. 'Explore Plans' etc. Contains entire top-level nav menu.
+		// First child UL is top-level nav menu
+		.twc-new-nav {
+			// Top level
+			> ul {
+				> li {
+					border-color: #7eabd0;
+
+					label {
+						color: $skyDark-darkish;
+						font-family: $twc-book;
+						font-size: 1.2rem;
+						line-height: $menu-item-height;
+					}
+
+					.mobile-nav {
+						> label {
+							top: auto;
+							padding: 0;
+						}
+					}
+
+					// Wrapper for top-level items.
+					// Wraps all content of each top-level nav item submenu
+					.mega-menu-item {
+						// Active top-level menu item
+						&.js-active {
+							background-color: $color-bright-blue;
+							background-image: none;
+
+							label {
+								color: #fff;
+							}
+							form label {
+								color: #000;
+							}
+						}
+					}
+
+				}
+			}
+
+			ul {
+				li {
+				}
+			}
+
+			// temporarily hide nav icons
+			figure {
+				display: none;
+			}
+
+			// Wraps mega menu, same element as .twc-new-mega-section
+			// Child of .mega-menu-item > ul >li
+			.twc-submenu {
+				box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+				top: $menu-item-height + 1px;
+				border-top: 1px solid white;
+
+				// List of sub-items inside a single mega menu item
+				.labelList {
+					// No Accordion
+					ul:first-child {
+						li {
+							a {
+								@include submenu-top-level-item();
+								&::after {
+									@include right-chevron();
+								}
+							}
+						}
+					}
+					// With accordion
+					// Mega Menu heading. ex. 'Explore Products'
+					.label {
+						@include submenu-top-level-item();
+
+						// Active
+						&.js-active {
+							background-color: $color-bright-blue;
+							color: #fff;
+						}
+						// Accordion sub-menu
+						& ~ ul {
+							background-color: $color-light-blue;
+							color: $skyDark-darkish;
+							li {
+								&::before {
+									// temporary !important
+									content: none !important;
+								}
+								a,
+								a:link,
+								a:visited {
+									color: $skyDark-darkish;
+									padding-right: 0;
+									font-family: $font-stack-book;
+									font-size: 1.6rem;
+									text-transform: none;
+									// width: auto;
+
+									&::after {
+										content: '';
+										text-decoration: none;
+									}
+
+									&::after {
+										@include right-chevron();
+									}
+								}
+							}
+						}
+					}
+
+					// "Tertiary" Nav (accordion-submenu)
+					// ul,
+					// > ul:first-child {
+					// 	background-color: $color-light-blue;
+					// 	color: $skyDark-darkish;
+
+					// 	li,
+					// 	> li {
+					// 		&::before {
+					// 			// temporary !important
+					// 			content: none !important;
+					// 		}
+					// 	}
+
+
+					// 	a,
+					// 	a:link,
+					// 	a:visited {
+					// 		color: $skyDark-darkish;
+					// 		padding-right: 0;
+					// 		font-family: $font-stack-book;
+					// 		font-size: 1.6rem;
+					// 		text-transform: none;
+					// 		// width: auto;
+
+					// 		&::after {
+					// 			content: '';
+					// 			text-decoration: none;
+					// 		}
+
+					// 		&::after {
+					// 			content: '\f054';
+					// 			font-family: $fontawesome;
+					// 			font-weight: normal;
+					// 			margin-left: 4px;
+					// 			font-size: 80%;
+					// 		}
+					// 	}
+					// 	.smartLink {
+					// 	}
+					// }
+				}
+			}
+
+			//end .twc-submenu
+
+		}
+
+		// Set to allow full-height top-level menu items
+		> .twc-container {
+			&,
+			& .twc-new-nav {
+				height: 100%;
+			}
+		}
+
+		// end .twc-new-nav
+
+	}
+
+	// end .twc-new-navigation
+
+}
