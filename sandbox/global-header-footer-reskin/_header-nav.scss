@@ -3,9 +3,12 @@
 	// NAV element. Contains entire top-level nav menu
 	.twc-new-navigation {
 		background-color: $color-light-blue;
+
 		@include respond-to(tablet) {
 			background-color: #fff;
 		}
+
+
 		background-image: none;
 		height: $menu-item-height;
 
@@ -16,25 +19,41 @@
 			> ul {
 				> li {
 					border-color: $color-menu-divider;
+
 					&:hover {
 						background-color: $color-bright-blue;
 						background-image: none;
 						box-shadow: none;
+
 						.desktopLink a {
 							color: #fff;
 						}
 					}
+
+					// 'My Account'
+					&:nth-of-type(4) {
+						position: relative;
+
+						.twc-submenu {
+							position: absolute;
+							right: 0;
+							// top: 1px;
+						}
+					}
+
 					label,
 					.desktopLink a {
 						color: $skyDark-darkish;
 						font-family: $twc-book;
 						line-height: $menu-item-height;
 					}
+
 					// Top-level links on desktop
 					.desktopLink a {
 						font-size: 1.8rem;
 						font-weight: normal;
 					}
+
 					// Top-level links on mobile
 					.mobile-nav {
 						> label {
@@ -51,6 +70,7 @@
 						padding: 0;
 						height: $menu-item-height;
 						border-color: $color-menu-divider;
+
 						// Active top-level menu item
 						&.js-active {
 							background-color: $color-bright-blue;
@@ -59,18 +79,17 @@
 							label {
 								color: #fff;
 							}
+
 							form label {
 								color: #000;
 							}
 						}
 					}
-
 				}
 			}
 
 			ul {
-				li {
-				}
+				li {}
 			}
 
 			// temporarily hide nav icons
@@ -84,11 +103,15 @@
 				box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
 				top: $menu-item-height + 1px;
 				border-top: 1px solid white;
+
 				@include respond-to(tablet) {
 					padding-left: 30px;
 					padding-top: 25px;
 					padding-bottom: 25px;
+					background-color: #fff;
+					background-image: none;
 				}
+
 
 				// List of sub-items inside a single mega menu item
 				.labelList {
@@ -96,36 +119,42 @@
 					ul:first-child {
 						li {
 							a {
-								@include submenu-top-level-item();
+								@include submenu-top-level-item;
+
 								&::after {
-									@include right-chevron();
+									@include right-chevron;
 								}
 							}
 						}
 					}
+
 					// With accordion
 					// Mega Menu heading. ex. 'Explore Products'
 					.label {
-						@include submenu-top-level-item();
+						@include submenu-top-level-item;
 
 						// Active
 						&.js-active {
 							background-color: $color-bright-blue;
 							color: #fff;
 						}
+
 						// Accordion sub-menu
 						& ~ ul {
 							background-color: $color-light-blue;
 							color: $skyDark-darkish;
+
 							@include respond-to(tablet) {
 								background-color: transparent;
 							}
+
 
 							li {
 								&::before {
 									// temporary !important
 									content: none !important;
 								}
+
 								a,
 								a:link,
 								a:visited {
@@ -134,6 +163,7 @@
 									font-family: $font-stack-book;
 									font-size: 1.6rem;
 									text-transform: none;
+
 									// width: auto;
 
 									&::after {
@@ -142,54 +172,12 @@
 									}
 
 									&::after {
-										@include right-chevron();
+										@include right-chevron;
 									}
 								}
 							}
 						}
 					}
-
-					// "Tertiary" Nav (accordion-submenu)
-					// ul,
-					// > ul:first-child {
-					// 	background-color: $color-light-blue;
-					// 	color: $skyDark-darkish;
-
-					// 	li,
-					// 	> li {
-					// 		&::before {
-					// 			// temporary !important
-					// 			content: none !important;
-					// 		}
-					// 	}
-
-
-					// 	a,
-					// 	a:link,
-					// 	a:visited {
-					// 		color: $skyDark-darkish;
-					// 		padding-right: 0;
-					// 		font-family: $font-stack-book;
-					// 		font-size: 1.6rem;
-					// 		text-transform: none;
-					// 		// width: auto;
-
-					// 		&::after {
-					// 			content: '';
-					// 			text-decoration: none;
-					// 		}
-
-					// 		&::after {
-					// 			content: '\f054';
-					// 			font-family: $fontawesome;
-					// 			font-weight: normal;
-					// 			margin-left: 4px;
-					// 			font-size: 80%;
-					// 		}
-					// 	}
-					// 	.smartLink {
-					// 	}
-					// }
 				}
 			}
 
@@ -210,5 +198,4 @@
 	}
 
 	// end .twc-new-navigation
-
 }

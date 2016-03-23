@@ -55,6 +55,13 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover {
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a {
   color: #fff;
 }
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
+  position: relative;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
+  position: absolute;
+  right: 0;
+}
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label,
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
   color: #00549f;
@@ -276,11 +283,14 @@ body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .head
     padding-left: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
+    background-color: #fff;
+    background-image: none;
   }
   body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a {
     color: #333;
     font-size: 1.8rem;
     font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
   }
   body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a::after {
     content: '';
@@ -290,6 +300,7 @@ body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .head
     color: #333;
     font-size: 1.8rem;
     font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
   }
   body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
     background-color: transparent;
