@@ -50,6 +50,21 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
   top: 41px;
   border-top: 1px solid white;
 }
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a {
+  text-transform: none;
+  color: #00549f;
+  font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  width: 100%;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a::after {
+  content: '\f054';
+  font-family: "FontAwesome";
+  font-weight: normal;
+  margin-left: 4px;
+  font-size: 80%;
+}
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
   text-transform: none;
   color: #00549f;
@@ -62,23 +77,16 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   background-color: #02a9e0;
   color: #fff;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
   background-color: #f2fbfd;
   color: #00549f;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li::before,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul > li::before,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child li::before,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child > li::before {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li::before {
   content: none !important;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited {
   color: #00549f;
   padding-right: 0;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -86,21 +94,15 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   font-size: 1.6rem;
   text-transform: none;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited::after {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
   content: '';
   text-decoration: none;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited::after {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
   content: '\f054';
   font-family: "FontAwesome";
   font-weight: normal;
