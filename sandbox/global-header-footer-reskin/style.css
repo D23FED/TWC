@@ -18,45 +18,97 @@ body > .header .new-mega-menu .twc-new-navigation {
   background-image: none;
   height: 40px;
 }
-body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
-  height: 100%;
-}
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li {
   border-color: #7eabd0;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li label {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label {
   color: #00549f;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 19.2px;
   font-size: 1.2rem;
   line-height: 40px;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mobile-nav > label {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mobile-nav > label {
   top: auto;
   padding: 0;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mega-menu-item.js-active {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active {
   background-color: #02a9e0;
   background-image: none;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav ul li .mega-menu-item.js-active label {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active label {
   color: #fff;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active form label {
+  color: #000;
 }
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav figure {
   display: none;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList .label {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+  top: 41px;
+  border-top: 1px solid white;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
   text-transform: none;
   color: #00549f;
   font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  width: 100%;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList .label.js-active {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label.js-active {
   background-color: #02a9e0;
   color: #fff;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList ul {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child {
   background-color: #f2fbfd;
   color: #00549f;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li::before,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul > li::before,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child li::before,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child > li::before {
+  content: none !important;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited {
+  color: #00549f;
+  padding-right: 0;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited::after {
+  content: '';
+  text-decoration: none;
+}
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul a:visited::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:link::after,
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList > ul:first-child a:visited::after {
+  content: '\f054';
+  font-family: "FontAwesome";
+  font-weight: normal;
+  margin-left: 4px;
+  font-size: 80%;
+}
+body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
+  height: 100%;
 }
 
 .twc-footer {
@@ -183,5 +235,3 @@ body > .header .new-mega-menu .twc-new-navigation .twc-submenu .labelList ul {
     margin-top: 19px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

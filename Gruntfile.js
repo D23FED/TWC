@@ -67,8 +67,8 @@ module.exports = function(grunt) {
 
     sass: {
 		  options: {
-		    style: 'expanded'
-		    // sourceMap: true
+		    style: 'expanded',
+		    sourceMap: false
 		  },
 	  	dist: {
 	  	  files: [{
@@ -141,9 +141,7 @@ module.exports = function(grunt) {
             require('postcss-discard-duplicates')(),
             require('css-mqpacker')() // group media queries
           ],
-          map: {
-            inline: false
-          }
+          map: false
         },
         src: 'sandbox/**/*.css'
       },

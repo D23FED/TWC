@@ -1,7 +1,9 @@
 $menu-item-height: 40px;
 $color-bright-blue: #02a9e0;
 $color-light-blue: #f2fbfd;
+
 body > .header {
+
 	// Contains logo and newHeaderIcons
 	.twc-header {
 		// Overwrite .twc-backgroundGradient-2
@@ -15,50 +17,47 @@ body > .header {
 			-webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
 			-webkit-mask-repeat: no-repeat;
 			-webkit-mask-position: 7px 4px;
+
 			img {
 				height: 0;
 				padding-bottom: 47px;
 				padding-left: 180px;
 			}
-
 		}
 	}
-	// Primary nav (Explore, All Plans, etc)
+
+	// Primary nav (Explore, All Plans, etc) wrapper for mega menu. Contains entire top-level nav menu
 	.new-mega-menu {
+		// NAV element. Contains entire top-level nav menu
 		.twc-new-navigation {
 			background-color: $color-light-blue;
 			background-image: none;
 			height: $menu-item-height;
-			> .twc-container {
-				&,
-				& .twc-new-nav {
-					height: 100%;
-				}
-			}
 
+			// List inside NAV, top-level. 'Explore Plans' etc. Contains entire top-level nav menu.
+			// First child UL is top-level nav menu
 			.twc-new-nav {
 				// Top level
 				> ul {
 					> li {
 						border-color: #7eabd0;
-					}
-				}
-				ul {
-					li {
 						label {
 							color: $skyDark-darkish;
 							font-family: $twc-book;
 							font-size: 1.2rem;
 							line-height: $menu-item-height;
 						}
+
 						.mobile-nav {
 							> label {
 								top: auto;
 								padding: 0;
 							}
 						}
-						// Active top-level menu item
+
+						// Wrapper for submenu/ mega menu item
 						.mega-menu-item {
+							// Active top-level menu item
 							&.js-active {
 								background-color: $color-bright-blue;
 								background-image: none;
@@ -66,39 +65,109 @@ body > .header {
 								label {
 									color: #fff;
 								}
+								form label {
+									color: #000;
+								}
 							}
 						}
-					}
 
+					}
+				}
+
+				ul {
+					li {
+					}
 				}
 
 				// temporarily hide nav icons
 				figure {
 					display: none;
 				}
-			}
-			// submenus
-			.twc-submenu {
-				.labelList {
-					.label {
-						text-transform: none;
-						color: $skyDark-darkish;
-						font-family: $twc-medium;
-						// Active
-						&.js-active {
-							background-color: $color-bright-blue;
-							color: #fff;
+
+				// Wraps mega menu, same as .twc-new-mega-section
+				.twc-submenu {
+					box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+					top: $menu-item-height + 1px;
+					border-top: 1px solid white;
+
+					// List of sub-items inside a single mega menu item
+					.labelList {
+						// Mega Menu heading. ex. 'Explore Products'
+						.label {
+							text-transform: none;
+							color: $skyDark-darkish;
+							font-family: $twc-medium;
+							font-size: 1.6rem;
+							width: 100%;
+
+							// Active
+							&.js-active {
+								background-color: $color-bright-blue;
+								color: #fff;
+							}
 						}
-					}
-					// sub-submenu
-					ul {
-						background-color: $color-light-blue;
-						color: $skyDark-darkish;
+
+						// Tertiary Nav (sub-submenu)
+						ul,
+						> ul:first-child {
+							background-color: $color-light-blue;
+							color: $skyDark-darkish;
+
+							li,
+							> li {
+								&::before {
+									// temporary !important
+									content: none !important;
+								}
+							}
+
+
+							a,
+							a:link,
+							a:visited {
+								color: $skyDark-darkish;
+								padding-right: 0;
+								font-family: $font-stack-book;
+								font-size: 1.6rem;
+								text-transform: none;
+								// width: auto;
+
+								&::after {
+									content: '';
+									text-decoration: none;
+								}
+
+								&::after {
+									content: '\f054';
+									font-family: $fontawesome;
+									font-weight: normal;
+									margin-left: 4px;
+									font-size: 80%;
+								}
+							}
+							.smartLink {
+							}
+						}
 					}
 				}
 
+				//end .twc-submenu
+
 			}
-		} // end .twc-new-navigation
+
+			// Set to allow full-height top-level menu items
+			> .twc-container {
+				&,
+				& .twc-new-nav {
+					height: 100%;
+				}
+			}
+
+			// end .twc-new-nav
+
+		}
+
+		// end .twc-new-navigation
 
 	}
 }
