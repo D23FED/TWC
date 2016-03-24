@@ -81,7 +81,7 @@
 				padding-top: 7px;
 				padding-bottom: 20px;
 
-				@include respond-to(tablet) {
+				@include respond-to(desktop) {
 					padding-bottom: 0;
 				}
 
@@ -90,7 +90,7 @@
 				[class*='twc-col3_333333-c'] {
 					margin-bottom: pxToEm(32);
 
-					@include respond-to(tablet) {
+					@include respond-to(desktop) {
 						margin-bottom: 22px;
 					}
 				}
@@ -103,7 +103,7 @@
 					padding-bottom: 0;
 					margin-top: 11px;
 
-					@include respond-to(tablet) {
+					@include respond-to(desktop) {
 						margin-top: 0px;
 					}
 				}
@@ -139,7 +139,7 @@
 				display: none;
 			}
 
-			@include respond-to(tablet) {
+			@include respond-to(desktop) {
 				margin-top: 19px;
 			}
 		}

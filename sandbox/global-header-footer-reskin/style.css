@@ -14,6 +14,7 @@ body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active {
   border-bottom-color: #fff;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  margin-bottom: -1px;
 }
 body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a,
 body > .header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a:link,
@@ -55,13 +56,6 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover {
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a {
   color: #fff;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
-  position: relative;
-}
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
-  position: absolute;
-  right: 0;
-}
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label,
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
   color: #00549f;
@@ -99,10 +93,12 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav figure {
 }
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
   box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
-  top: 41px;
+  top: 40px;
   border-top: 1px solid white;
+  background-color: #fff;
+  background-image: none;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
   text-transform: none;
   color: #00549f;
   font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -110,7 +106,7 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   font-size: 1.6rem;
   width: 100%;
 }
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a::after {
+body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
   content: '\f054';
   font-family: "FontAwesome";
   font-weight: normal;
@@ -145,12 +141,6 @@ body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .lab
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: none;
-}
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
-body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
-  content: '';
-  text-decoration: none;
 }
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
 body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
@@ -275,24 +265,35 @@ body > .header .new-mega-menu .twc-new-navigation > .twc-container, body > .head
   padding: 0;
 }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 48em) {
   body > .header .new-mega-menu .twc-new-navigation {
     background-color: #fff;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
+    position: relative;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
+    position: absolute;
+    right: 0;
+  }
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
+    color: #00549f;
+    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6rem;
+    text-transform: none;
   }
   body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
     padding-left: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #fff;
-    background-image: none;
   }
-  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a {
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
     color: #333;
     font-size: 1.8rem;
     font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: normal;
   }
-  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul:first-child li a::after {
+  body > .header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
     content: '';
     margin: 0;
   }

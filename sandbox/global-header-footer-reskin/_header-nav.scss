@@ -4,7 +4,7 @@
 	.twc-new-navigation {
 		background-color: $color-light-blue;
 
-		@include respond-to(tablet) {
+		@include respond-to(desktop) {
 			background-color: #fff;
 		}
 
@@ -32,12 +32,20 @@
 
 					// 'My Account'
 					&:nth-of-type(4) {
-						position: relative;
+						@include respond-to(desktop) {
+							position: relative;
 
-						.twc-submenu {
-							position: absolute;
-							right: 0;
-							// top: 1px;
+							.twc-submenu {
+								position: absolute;
+								right: 0;
+
+								// top: 1px;
+								li {
+									a {
+										@include submenu-link();
+									}
+								}
+							}
 						}
 					}
 
@@ -101,22 +109,22 @@
 			// Child of .mega-menu-item > ul >li
 			.twc-submenu {
 				box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
-				top: $menu-item-height + 1px;
+				top: $menu-item-height;
 				border-top: 1px solid white;
+				background-color: #fff;
+				background-image: none;
 
-				@include respond-to(tablet) {
+				@include respond-to(desktop) {
 					padding-left: 30px;
 					padding-top: 25px;
 					padding-bottom: 25px;
-					background-color: #fff;
-					background-image: none;
 				}
 
 
 				// List of sub-items inside a single mega menu item
 				.labelList {
 					// No Accordion
-					ul:first-child {
+					ul {
 						li {
 							a {
 								@include submenu-top-level-item;
@@ -144,7 +152,7 @@
 							background-color: $color-light-blue;
 							color: $skyDark-darkish;
 
-							@include respond-to(tablet) {
+							@include respond-to(desktop) {
 								background-color: transparent;
 							}
 
@@ -167,8 +175,8 @@
 									// width: auto;
 
 									&::after {
-										content: '';
-										text-decoration: none;
+										// content: '';
+										// text-decoration: none;
 									}
 
 									&::after {

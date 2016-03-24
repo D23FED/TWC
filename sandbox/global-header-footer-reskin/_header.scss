@@ -10,12 +10,19 @@ $color-menu-divider: #7eabd0;
 	font-size: 1.6rem;
 	width: 100%;
 
-	@include respond-to(tablet) {
+	@include respond-to(desktop) {
 		color: $text-color;
 		font-size: 1.8rem;
 		font-family: $twc-book;
 		font-weight: normal;
 	}
+}
+
+@mixin submenu-link() {
+	color: $skyDark-darkish;
+	font-family: $font-stack-book;
+	font-size: 1.6rem;
+	text-transform: none;
 }
 
 @mixin right-chevron {
@@ -25,7 +32,7 @@ $color-menu-divider: #7eabd0;
 	margin-left: 4px;
 	font-size: 80%;
 
-	@include respond-to(tablet) {
+	@include respond-to(desktop) {
 		content: '';
 		margin: 0;
 	}
