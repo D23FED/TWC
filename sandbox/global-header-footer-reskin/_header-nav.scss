@@ -39,7 +39,6 @@
 								position: absolute;
 								right: 0;
 
-								// top: 1px;
 								li {
 									a {
 										@include submenu-link();
@@ -65,7 +64,6 @@
 					// Top-level links on mobile
 					.mobile-nav {
 						> label {
-							// line-height: $menu-item-height;
 							font-size: 1.2rem;
 							top: auto;
 							padding: 0;
@@ -78,6 +76,10 @@
 						padding: 0;
 						height: $menu-item-height;
 						border-color: $color-menu-divider;
+
+						&.expand-left .twc-submenu {
+							top: auto;
+						}
 
 						// Active top-level menu item
 						&.js-active {
@@ -94,10 +96,6 @@
 						}
 					}
 				}
-			}
-
-			ul {
-				li {}
 			}
 
 			// temporarily hide nav icons
@@ -124,20 +122,16 @@
 				// List of sub-items inside a single mega menu item
 				.labelList {
 					// No Accordion
-					ul {
-						li {
-							a {
-								@include submenu-top-level-item;
+					ul li a {
+						@include submenu-top-level-item;
 
-								&::after {
-									@include right-chevron;
-								}
-							}
+						&::after {
+							@include right-chevron;
 						}
 					}
 
 					// With accordion
-					// Mega Menu heading. ex. 'Explore Products'
+					// Mega Menu heading (ex. 'Explore Products')
 					.label {
 						@include submenu-top-level-item;
 
@@ -172,13 +166,6 @@
 									font-size: 1.6rem;
 									text-transform: none;
 
-									// width: auto;
-
-									&::after {
-										// content: '';
-										// text-decoration: none;
-									}
-
 									&::after {
 										@include right-chevron;
 									}
@@ -187,9 +174,7 @@
 						}
 					}
 				}
-			}
-
-			//end .twc-submenu
+			} //end .twc-submenu
 
 		}
 
@@ -199,11 +184,7 @@
 			& .twc-new-nav {
 				height: 100%;
 			}
-		}
+		} // end .twc-new-nav
 
-		// end .twc-new-nav
-
-	}
-
-	// end .twc-new-navigation
+	} // end .twc-new-navigation
 }

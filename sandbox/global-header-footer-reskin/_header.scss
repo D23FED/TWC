@@ -38,7 +38,7 @@ $color-menu-divider: #7eabd0;
 	}
 }
 
-body > .header {
+#site-header {
 	@import 'header-top';
 	@import 'header-nav';
 }

@@ -1,18 +1,19 @@
-// Tophat tab bar ("Your Home", "Your Business" etc)
+// Tophat tab bar ('Your Home', 'Your Business' etc)
 .header_v2 {
 	.twc-header {
 		.twc-top {
 			background-color: $skyDark-darker;
 			border-color: #a1a1a1;
+
 			// Topmost navigation list
 			.twc-top-nav {
-				ul {}
 				li {
 					a,
 					a:link,
 					a:active {
 						color: #fff;
 					}
+
 					// Active tab
 					.twc-active {
 						background-color: #fff;
@@ -22,6 +23,7 @@
 						border-bottom-width: 1px;
 						border-bottom-style: solid;
 						margin-bottom: -1px;
+
 						a,
 						a:link,
 						a:active {
@@ -33,37 +35,20 @@
 			}
 		}
 	}
+
 	// Header Icons: Shop, Pay Bill, Email etc
 	.newHeaderIcons {
 		.list.horizontal {
-			ul {
-				> li {
-					a {
-						color: $skyDark-darkish;
-					}
-				}
+			ul > li a {
+				color: $skyDark-darkish;
 			}
 		}
 	}
 }
+
 // Logo and Header Icons
 .twc-header {
 	// Overwrite .twc-backgroundGradient-2
 	background-color: transparent;
 	background-image: none;
-
-	// Logo
-	.twc-logo {
-		// Temporary until we can use new image
-		background-color: $skyDark-darkish;
-		-webkit-mask-image: url(http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo.png);
-		-webkit-mask-repeat: no-repeat;
-		-webkit-mask-position: 7px 4px;
-
-		img {
-			height: 0;
-			padding-bottom: 47px;
-			padding-left: 180px;
-		}
-	}
 }
