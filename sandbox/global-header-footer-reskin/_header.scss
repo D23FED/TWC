@@ -1,0 +1,44 @@
+$menu-item-height: 40px;
+$color-bright-blue: #02a9e0;
+$color-light-blue: #f2fbfd;
+$color-menu-divider: #7eabd0;
+
+@mixin submenu-top-level-item {
+	text-transform: none;
+	color: $skyDark-darkish;
+	font-family: $twc-medium;
+	font-size: 1.6rem;
+	width: 100%;
+
+	@include respond-to(desktop) {
+		color: $text-color;
+		font-size: 1.8rem;
+		font-family: $twc-book;
+		font-weight: normal;
+	}
+}
+
+@mixin submenu-link() {
+	color: $skyDark-darkish;
+	font-family: $font-stack-book;
+	font-size: 1.6rem;
+	text-transform: none;
+}
+
+@mixin right-chevron {
+	content: '\f054';
+	font-family: $fontawesome;
+	font-weight: normal;
+	margin-left: 4px;
+	font-size: 80%;
+
+	@include respond-to(desktop) {
+		content: '';
+		margin: 0;
+	}
+}
+
+body > .header {
+	@import 'header-top';
+	@import 'header-nav';
+}

@@ -67,8 +67,8 @@ module.exports = function(grunt) {
 
     sass: {
 		  options: {
-		    style: 'expanded'
-		    // sourceMap: true
+		    style: 'expanded',
+		    sourceMap: false
 		  },
 	  	dist: {
 	  	  files: [{
@@ -108,7 +108,10 @@ module.exports = function(grunt) {
       options: {
         map: true, // inline sourcemaps
         processors: [
-          require('pixrem')(), // add fallbacks for rem units
+          // add fallbacks for rem units
+          require('pixrem')({
+            rootValue: 10
+          }),
           require('autoprefixer')({ // add vendor prefixes
             browsers: 'last 3 versions'
           }),
@@ -118,7 +121,10 @@ module.exports = function(grunt) {
       main: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
@@ -134,23 +140,27 @@ module.exports = function(grunt) {
       sandbox: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
             require('postcss-discard-duplicates')(),
             require('css-mqpacker')() // group media queries
           ],
-          map: {
-            inline: false
-          }
+          map: false
         },
         src: 'sandbox/**/*.css'
       },
       test: {
         options: {
           processors: [
-            require('pixrem')(), // add fallbacks for rem units
+            // add fallbacks for rem units
+            require('pixrem')({
+              rootValue: 10
+            }),
             require('autoprefixer')({ // add vendor prefixes
               browsers: 'last 3 versions'
             }),
@@ -248,9 +258,10 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('sandbox', [
-    'newer:sass:sandbox',
+    'sass:sandbox',
     'newer:postcss:sandbox'
   ]);
+
   grunt.registerTask('test', [
     'sass:test',
     'postcss:test'

@@ -1,4 +1,5 @@
 @import '../../init';
+
 .twc-footer {
 	// Remove gradient
 	background-color: #fff;
@@ -34,13 +35,14 @@
 
 				a:after {
 					float: none;
-					content:'';
+					content: '';
 					position: initial;
 					right: auto;
 				}
 			}
 		}
 	}
+
 	p {
 		color: $text-color;
 	}
@@ -54,6 +56,7 @@
 		color: $skyDark-darkish;
 		font-weight: normal;
 	}
+
 	a:hover {
 		color: #02a9e0;
 	}
@@ -63,37 +66,44 @@
 		border-color: #c2c2c2;
 		border-width: 1px 0 0 0;
 		border-style: solid;
+
 		// padding-top: 11px;
 		// padding-top: 31px;
 		// section of the footer with all the lists/menus. (It currently has no identifying class)
 		div .footer {
-
 			> .section:nth-of-type(1) {
 				// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
 				border-color: #c2c2c2;
 				border-width: 0 0 1px 0;
 				border-style: solid;
+
 				// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
 				padding-top: 7px;
 				padding-bottom: 20px;
-				@include respond-to(tablet) {
+
+				@include respond-to(desktop) {
 					padding-bottom: 0;
 				}
+
+
 				// Spec for space between vertical list bottom and bottom border is 30px
 				[class*='twc-col3_333333-c'] {
 					margin-bottom: pxToEm(32);
-					@include respond-to(tablet) {
+
+					@include respond-to(desktop) {
 						margin-bottom: 22px;
 					}
 				}
 			}
-			// "Privacy Policy..."
+
+			// 'Privacy Policy...'
 			> .section:nth-of-type(3) {
 				.horizontal {
 					padding-top: 0;
 					padding-bottom: 0;
 					margin-top: 11px;
-					@include respond-to(tablet) {
+
+					@include respond-to(desktop) {
 						margin-top: 0px;
 					}
 				}
@@ -101,10 +111,9 @@
 
 			// Horizontal list beginning with Privacy Policy
 			> .section:nth-of-type(3),
-
-			// Copyright
 			> .section:nth-of-type(4) {
 				text-align: center;
+
 				p,
 				a,
 				a:link,
@@ -121,13 +130,16 @@
 				}
 			}
 		}
+
 		.twc-footer-copyright-msg {
 			margin-top: 15px;
 			padding-top: 0;
+
 			br {
 				display: none;
 			}
-			@include respond-to(tablet) {
+
+			@include respond-to(desktop) {
 				margin-top: 19px;
 			}
 		}
@@ -136,12 +148,15 @@
 	// Temp hide last column for testing
 	.twc-col2_5050-c1 .twc-col3_333333-c2 {
 		// display: none;
+
 	}
+
 	.horizontal.pipes {
 		li.js-last:after {
 			padding: 0;
 		}
 	}
+
 	/* Overwrite styles that are introduced by js that will eventually be removed */
 	ul.mobile {
 		.smartLink.horizontal-center a {
