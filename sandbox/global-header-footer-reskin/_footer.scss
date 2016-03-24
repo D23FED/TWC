@@ -70,85 +70,99 @@
 		// padding-top: 11px;
 		// padding-top: 31px;
 		// section of the footer with all the lists/menus. (It currently has no identifying class)
-		div .footer {
-			> .section:nth-of-type(1) {
-				// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
-				border-color: #c2c2c2;
-				border-width: 0 0 1px 0;
-				border-style: solid;
+		// #site-footer {
 
-				// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
-				padding-top: 7px;
-				padding-bottom: 20px;
-
-				@include respond-to(desktop) {
-					padding-bottom: 0;
-				}
-
-
-				// Spec for space between vertical list bottom and bottom border is 30px
-				[class*='twc-col3_333333-c'] {
-					margin-bottom: pxToEm(32);
-
-					@include respond-to(desktop) {
-						margin-bottom: 22px;
-					}
-				}
-			}
-
-			// 'Privacy Policy...'
-			> .section:nth-of-type(3) {
-				.horizontal {
-					padding-top: 0;
-					padding-bottom: 0;
-					margin-top: 11px;
-
-					@include respond-to(desktop) {
-						margin-top: 0px;
-					}
-				}
-			}
-
-			// Horizontal list beginning with Privacy Policy
-			> .section:nth-of-type(3),
-			> .section:nth-of-type(4) {
-				text-align: center;
-
-				p,
-				a,
-				a:link,
-				a:visited {
-					font-family: $twc-light;
-					font-weight: normal;
-					font-size: 1.4rem;
-					color: $text-color;
-				}
-
-				// Horizontal list item dividers
-				li:after {
-					color: #e0e0e0;
-				}
-			}
-		}
+		// }
 
 		.twc-footer-copyright-msg {
-			margin-top: 15px;
-			padding-top: 0;
+			// margin-top: 15px;
+			// padding-top: 0;
 
-			br {
-				display: none;
-			}
+			// br {
+			// 	display: none;
+			// }
+
+		}
+	}
+
+	//end .footer
+	// > .section:nth-of-type(1),
+	#footer-menu {
+		// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
+		border-color: #c2c2c2;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+
+		// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
+		padding-top: 7px;
+		padding-bottom: 20px;
+
+		@include respond-to(desktop) {
+			padding-bottom: 0;
+		}
+
+
+		// Spec for space between vertical list bottom and bottom border is 30px
+		[class*='twc-col5'] {
+			margin-bottom: pxToEm(32);
 
 			@include respond-to(desktop) {
-				margin-top: 19px;
+				margin-bottom: 22px;
 			}
 		}
 	}
 
-	// Temp hide last column for testing
-	.twc-col2_5050-c1 .twc-col3_333333-c2 {
-		// display: none;
+	// 'Privacy Policy...'
+	// > .section:nth-of-type(3),
+	#footer-links {
+		margin-top: 34px;
 
+		ul {
+			line-height: 1;
+		}
+
+		.horizontal {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-top: 11px;
+
+			@include respond-to(desktop) {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	// Copyright
+	#footer-legal {
+		margin-top: 15px;
+		padding-top: 0;
+
+		@include respond-to(desktop) {
+			margin-top: 19px;
+		}
+	}
+
+	// Horizontal list beginning with Privacy Policy
+	// > .section:nth-of-type(3),
+	// > .section:nth-of-type(4),
+	#footer-links,
+	#footer-legal {
+		text-align: center;
+
+		p,
+		a,
+		a:link,
+		a:visited {
+			font-family: $twc-light;
+			font-weight: normal;
+			font-size: 1.4rem;
+			color: $text-color;
+		}
+
+		// Horizontal list item dividers
+		li:after {
+			color: #e0e0e0;
+		}
 	}
 
 	.horizontal.pipes {
