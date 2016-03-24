@@ -41,6 +41,10 @@
 		.list.horizontal {
 			ul > li a {
 				color: $skyDark-darkish;
+				img {
+					height: auto;
+					min-width: 100%
+				}
 			}
 		}
 	}

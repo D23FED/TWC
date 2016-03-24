@@ -25,6 +25,10 @@
 #site-header .header_v2 .newHeaderIcons .list.horizontal ul > li a {
   color: #00549f;
 }
+#site-header .header_v2 .newHeaderIcons .list.horizontal ul > li a img {
+  height: auto;
+  min-width: 100%;
+}
 #site-header .twc-header {
   background-color: transparent;
   background-image: none;
