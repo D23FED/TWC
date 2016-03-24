@@ -62,31 +62,12 @@
 	}
 
 	> .footer {
-		// Add top border
 		border-color: #c2c2c2;
 		border-width: 1px 0 0 0;
 		border-style: solid;
 
-		// padding-top: 11px;
-		// padding-top: 31px;
-		// section of the footer with all the lists/menus. (It currently has no identifying class)
-		// #site-footer {
-
-		// }
-
-		.twc-footer-copyright-msg {
-			// margin-top: 15px;
-			// padding-top: 0;
-
-			// br {
-			// 	display: none;
-			// }
-
-		}
 	}
 
-	//end .footer
-	// > .section:nth-of-type(1),
 	#footer-menu {
 		// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
 		border-color: #c2c2c2;
@@ -112,8 +93,7 @@
 		}
 	}
 
-	// 'Privacy Policy...'
-	// > .section:nth-of-type(3),
+	// Horizontal list of links beginning with 'Privacy Policy'
 	#footer-links {
 		margin-top: 34px;
 
@@ -142,9 +122,6 @@
 		}
 	}
 
-	// Horizontal list beginning with Privacy Policy
-	// > .section:nth-of-type(3),
-	// > .section:nth-of-type(4),
 	#footer-links,
 	#footer-legal {
 		text-align: center;
@@ -171,7 +148,7 @@
 		}
 	}
 
-	/* Overwrite styles that are introduced by js that will eventually be removed */
+	// Overwrite styles that are introduced by js that will eventually be removed
 	ul.mobile {
 		.smartLink.horizontal-center a {
 			padding: 0;
