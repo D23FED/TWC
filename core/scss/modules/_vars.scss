@@ -15,15 +15,15 @@ $screen-md: $medium;
 $screen-lg: $big;
 
 // TWC Residential Fonts
-$font-stack-light: 'TWC Round Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$font-stack-book: 'TWC Round Book', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$font-stack-medium: 'TWC Round Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-light: 'TWC Round Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-book: 'TWC Round Book', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-medium: 'TWC Round Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $font-stack-monospace: Inconsolata,Monaco,Consolas,'Andale Mono','Bitstream Vera Sans Mono','Courier New',Courier,monospace;
 $font-icon: 'FontAwesome';
 // Legacy
-$twc-light: $font-stack-light;
-$twc-book: $font-stack-book;
-$twc-medium: $font-stack-medium;
+$twc-light: $font-stack-sans-light;
+$twc-book: $font-stack-sans-book;
+$twc-medium: $font-stack-sans-medium;
 $pre: $font-stack-monospace;
 $italic: italic;
 $bold: bold;

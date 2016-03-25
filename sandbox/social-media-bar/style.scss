@@ -1,36 +1,46 @@
 @import '../../init';
+
 .soc {
   display: block;
   width: 100%;
-  background: #12314c;
+  background: $steelSky-darker;
   list-style: none;
   text-align: center;
+  padding: 14px 0;
+
   li {
     display: inline-block;
     margin: 0 2em 0 0;
-    a, svg {
+
+    &:first-child {
+      position: relative;
+      top: -3px;
+    }
+
+    a,
+    svg {
       display: block;
     }
+
     a {
       color: #fff;
       fill: #fff;
       text-decoration: none;
+      font-size: 1.6rem;
+      font-family: $font-stack-sans-light;
+      font-weight: 100;
+
       svg {
         display: inline-block;
         height: auto;
         width: 100%;
         max-width: 3em;
       }
+
       span {
         display: inline-block;
         vertical-align: calc(100%);
       }
     }
-  }
-}
-
-@media (max-width: 40em) {
-  .mobile-hidden{
-    display: none;
   }
 }

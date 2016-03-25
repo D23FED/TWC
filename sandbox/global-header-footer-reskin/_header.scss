@@ -20,7 +20,7 @@ $color-menu-divider: #7eabd0;
 
 @mixin submenu-link() {
 	color: $skyDark-darkish;
-	font-family: $font-stack-book;
+	font-family: $font-stack-sans-book;
 	font-size: 1.6rem;
 	text-transform: none;
 }

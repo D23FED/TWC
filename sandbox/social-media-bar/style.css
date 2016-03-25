@@ -1,0 +1,39 @@
+.soc {
+  display: block;
+  width: 100%;
+  background: #12314c;
+  list-style: none;
+  text-align: center;
+  padding: 14px 0;
+}
+.soc li {
+  display: inline-block;
+  margin: 0 2em 0 0;
+}
+.soc li:first-child {
+  position: relative;
+  top: -4px;
+}
+.soc li a,
+.soc li svg {
+  display: block;
+}
+.soc li a {
+  color: #fff;
+  fill: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+}
+.soc li a svg {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  max-width: 3em;
+}
+.soc li a span {
+  display: inline-block;
+  vertical-align: calc(100%);
+}
