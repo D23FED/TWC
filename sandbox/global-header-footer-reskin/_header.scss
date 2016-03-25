@@ -39,6 +39,7 @@ $color-menu-divider: #7eabd0;
 }
 
 #site-header {
+	border-bottom: 7px solid $color-bright-blue;
 	@import 'header-top';
 	@import 'header-nav';
 }

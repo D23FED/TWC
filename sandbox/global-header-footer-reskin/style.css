@@ -1,3 +1,6 @@
+#site-header {
+  border-bottom: 7px solid #02a9e0;
+}
 #site-header .header_v2 .twc-header .twc-top {
   background-color: #00315c;
   border-color: #a1a1a1;
@@ -88,7 +91,7 @@
   display: none;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
-  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
   top: 40px;
   border-top: 1px solid white;
   background-color: #fff;
