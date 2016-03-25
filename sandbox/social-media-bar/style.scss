@@ -6,7 +6,10 @@
   background: $steelSky-darker;
   list-style: none;
   text-align: center;
-  padding: 14px 0;
+  padding-top: 1px;
+  @include respond-to(desktop) {
+    padding: 14px 0;
+  }
 
   li {
     display: inline-block;

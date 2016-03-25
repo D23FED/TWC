@@ -4,7 +4,7 @@
   background: #12314c;
   list-style: none;
   text-align: center;
-  padding: 14px 0;
+  padding-top: 1px;
 }
 .soc li {
   display: inline-block;
@@ -12,7 +12,7 @@
 }
 .soc li:first-child {
   position: relative;
-  top: -4px;
+  top: -3px;
 }
 .soc li a,
 .soc li svg {
@@ -36,4 +36,10 @@
 .soc li a span {
   display: inline-block;
   vertical-align: calc(100%);
+}
+
+@media only screen and (min-width: 48em) {
+  .soc {
+    padding: 14px 0;
+  }
 }
