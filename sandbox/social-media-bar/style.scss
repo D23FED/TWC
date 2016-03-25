@@ -1,0 +1,36 @@
+@import '../../init';
+.soc {
+  display: block;
+  width: 100%;
+  background: #12314c;
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0 2em 0 0;
+    a, svg {
+      display: block;
+    }
+    a {
+      color: #fff;
+      fill: #fff;
+      text-decoration: none;
+      svg {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        max-width: 3em;
+      }
+      span {
+        display: inline-block;
+        vertical-align: calc(100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 40em) {
+  .mobile-hidden{
+    display: none;
+  }
+}
