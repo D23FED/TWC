@@ -7,12 +7,13 @@
 $site-width: 980px;
 
 // TWC Residential Breakpoints
-$small: pxToEm(640);
-$medium: pxToEm(768);
-$big: pxToEm(1100);
+$small: pxToEm(640); // 40em
+$medium: pxToEm(768); // 48em
+$big: pxToEm(1100); // 68.75em
 $screen-sm: $small;
 $screen-md: $medium;
 $screen-lg: $big;
+$fixed-width-container: $site-width;
 
 // TWC Residential Fonts
 $font-stack-sans-light: 'TWC Round Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;

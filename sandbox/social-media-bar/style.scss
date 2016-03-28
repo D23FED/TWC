@@ -1,23 +1,37 @@
 @import '../../init';
 
-.soc {
-  display: block;
+.soc-wrapper {
+  background-color: $steelSky-darker;
+}
+.inner {
+  display: table;
   width: 100%;
-  background: $steelSky-darker;
+  max-width: $fixed-width-container;
+  text-align: center;
+  margin: 0 auto;
+}
+.soc {
+  display: table-row;
+  width: 100%;
+  // background: $steelSky-darker;
   list-style: none;
   text-align: center;
-  padding-top: 1px;
+  // padding-top: 1px;
+  height: 52px;
   @include respond-to(desktop) {
-    padding: 14px 0;
+    // padding: 14px 0;
+    height: 79px;
   }
 
   li {
-    display: inline-block;
-    margin: 0 2em 0 0;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 1em;
+    white-space: nowrap;
 
     &:first-child {
       position: relative;
-      top: -3px;
+      top: -2px;
     }
 
     a,

@@ -1,18 +1,31 @@
-.soc {
-  display: block;
+.soc-wrapper {
+  background-color: #12314c;
+}
+
+.inner {
+  display: table;
   width: 100%;
-  background: #12314c;
+  max-width: 980px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.soc {
+  display: table-row;
+  width: 100%;
   list-style: none;
   text-align: center;
-  padding-top: 1px;
+  height: 52px;
 }
 .soc li {
-  display: inline-block;
-  margin: 0 2em 0 0;
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 1em;
+  white-space: nowrap;
 }
 .soc li:first-child {
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 .soc li a,
 .soc li svg {
@@ -39,7 +52,8 @@
 }
 
 @media only screen and (min-width: 48em) {
+
   .soc {
-    padding: 14px 0;
+    height: 79px;
   }
 }
