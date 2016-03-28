@@ -74,9 +74,6 @@
   height: 40px;
   border-color: #7eabd0;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.expand-left .twc-submenu {
-  top: auto;
-}
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active {
   background-color: #02a9e0;
   background-image: none;
@@ -92,7 +89,7 @@
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
   box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
-  top: 40px;
+  top: 47px;
   border-top: 1px solid white;
   background-color: #fff;
   background-image: none;

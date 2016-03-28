@@ -2,7 +2,7 @@ $menu-item-height: 40px;
 $color-bright-blue: #02a9e0;
 $color-light-blue: #f2fbfd;
 $color-menu-divider: #7eabd0;
-
+$header-border-bottom-width: 7px;
 @mixin submenu-top-level-item {
 	text-transform: none;
 	color: $skyDark-darkish;
@@ -39,7 +39,7 @@ $color-menu-divider: #7eabd0;
 }
 
 #site-header {
-	border-bottom: 7px solid $color-bright-blue;
+	border-bottom: $header-border-bottom-width solid $color-bright-blue;
 	@import 'header-top';
 	@import 'header-nav';
 }

@@ -78,7 +78,7 @@
 						border-color: $color-menu-divider;
 
 						&.expand-left .twc-submenu {
-							top: auto;
+							// top: auto;
 						}
 
 						// Active top-level menu item
@@ -107,7 +107,7 @@
 			// Child of .mega-menu-item > ul >li
 			.twc-submenu {
 				box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
-				top: $menu-item-height;
+				top: $menu-item-height + $header-border-bottom-width;
 				border-top: 1px solid white;
 				background-color: #fff;
 				background-image: none;
