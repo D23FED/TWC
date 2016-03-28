@@ -154,15 +154,20 @@
   @if $media == mobile {
     // @media only screen and (min-width: $screen-xs) { @content; }
   }
+  // Mobile-first queries
+  // 640px and larger
   @else if $media == tablet {
     @media only screen and (min-width: $screen-sm) { @content; }
   }
+  // 768 and larger
   @else if $media == desktop {
     @media only screen and (min-width: $screen-md) { @content; }
   }
+  // 1100 and larger
   @else if $media == widescreens {
     @media only screen and (min-width: $screen-lg) { @content; }
   }
+
   @else if $media == mobile-sm-only {
     @media only screen and (max-width: $screen-xs - 1) { @content; }
   }
@@ -172,6 +177,22 @@
   @else if $media == desktop-only {
     @media only screen and (min-width: $screen-md) and (max-width: $screen-md-max) { @content; }
   }
+
+  // Target minimums to ovecome desktop-first queries
+  // Mobile-first queries
+  // 640px and larger
+  @else if $media == larger-than-tablet {
+    @media only screen and (min-width: $screen-md-min) { @content; }
+  }
+  // 768 and larger
+  @else if $media == desktop {
+    @media only screen and (min-width: $screen-md) { @content; }
+  }
+  // 1100 and larger
+  @else if $media == widescreens {
+    @media only screen and (min-width: $screen-lg) { @content; }
+  }
+
 }
 
 @mixin clearfix() {

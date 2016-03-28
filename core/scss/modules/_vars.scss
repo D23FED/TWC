@@ -7,12 +7,25 @@
 $site-width: 980px;
 
 // TWC Residential Breakpoints
-$small: pxToEm(640); // 40em
-$medium: pxToEm(768); // 48em
-$big: pxToEm(1100); // 68.75em
+$small: pxToEm(640); // 40em 'Tablet'
+$medium: pxToEm(768); // 48em 'Desktop'
+$big: pxToEm(1100); // 68.75em 'Widescreen'
+// 'Mobile'
+$screen-xs: pxToEm(425);
+// 'Tablet'
 $screen-sm: $small;
+// 'Desktop'
 $screen-md: $medium;
+// 'Widescreen'
 $screen-lg: $big;
+// Minimums
+$screen-sm-min: $screen-xs + 1px;
+$screen-md-min: $screen-sm + 1px;
+$screen-lg-min: $screen-md + 1px;
+// Maximums
+$screen-sm-max: $screen-sm - 1px;
+$screen-md-max: $screen-md - 1px;
+$screen-lg-max: $screen-lg - 1px;
 $fixed-width-container: $site-width;
 
 // TWC Residential Fonts
