@@ -22,6 +22,7 @@
   display: table-cell;
   margin: 0 1em;
   white-space: nowrap;
+  overflow: hidden;
 }
 .soc li:first-child {
   position: relative;
