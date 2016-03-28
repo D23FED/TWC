@@ -147,10 +147,23 @@
 
 @mixin respond-to($media) {
 
-  // Mobile first
-  @if $media == mobile {
-    // @media (min-width: $screen-xs) { @content; }
+  // Desktop-first
+  @if $media == desktop {
+    @media (max-width: $screen-lg) {
+      @content;
+    }
   }
+  @else if $media == tablet {
+    @media (max-width: $screen-md) {
+      @content;
+    }
+  }
+  @else if $media == mobile {
+    @media (max-width: $screen-sm) {
+      @content;
+    }
+  }
+
   @else if $media == mobile-and-up {
     @media (min-width: $screen-sm) {
       @content;
@@ -167,22 +180,6 @@
     }
   }
 
-  // Desktop-first
-  @else if $media == desktop {
-    @media (max-width: $screen-lg) {
-      @content;
-    }
-  }
-  @else if $media == tablet {
-    @media (max-width: $screen-md) {
-      @content;
-    }
-  }
-  @else if $media == mobile {
-    @media (max-width: $screen-sm) {
-      @content;
-    }
-  }
 
   // Target one screen size
   @else if $media == mobile-only {

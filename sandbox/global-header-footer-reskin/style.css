@@ -155,10 +155,6 @@
 #site-header .new-mega-menu .twc-new-navigation > .twc-container, #site-header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
   height: 100%;
 }
-#site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
-  right: 0;
-  position: absolute;
-}
 
 .twc-footer {
   background-color: #fff;
@@ -300,6 +296,16 @@
     font-weight: normal;
     margin-left: 4px;
     font-size: 80%;
+  }
+  #site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
+    right: 0;
+    top: 7px;
+  }
+}
+
+@media (max-width: 40em) {
+  #site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
+    top: 47px;
   }
 }
 

@@ -184,14 +184,18 @@
 			& .twc-new-nav {
 				height: 100%;
 			}
-
-		.expand-left {
-			.twc-submenu {
-				right: 0;
-				position: absolute;
+			.expand-left {
+				.twc-submenu {
+					@include respond-to(tablet) {
+						right: 0;
+						top: $header-border-bottom-width;
+					}
+					@include respond-to(mobile) {
+						top: $menu-item-height + $header-border-bottom-width;
+					}
+				}
 			}
 		}
-		} // end .twc-new-nav
 
 	} // end .twc-new-navigation
 }
