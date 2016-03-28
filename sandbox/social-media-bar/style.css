@@ -15,7 +15,7 @@
   width: 100%;
   list-style: none;
   text-align: center;
-  height: 52px;
+  height: 79px;
 }
 .soc li {
   vertical-align: middle;
@@ -51,9 +51,9 @@
   vertical-align: calc(100%);
 }
 
-@media only screen and (min-width: 48em) {
+@media (max-width: 68.75em) {
 
   .soc {
-    height: 79px;
+    height: 52px;
   }
 }

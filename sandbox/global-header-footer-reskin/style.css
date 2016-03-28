@@ -5,9 +5,7 @@
   background-color: #00315c;
   border-color: #a1a1a1;
 }
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li a,
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li a:link,
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li a:active {
+#site-header .header_v2 .twc-header .twc-top .twc-top-nav li a {
   color: #fff;
 }
 #site-header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active {
@@ -19,9 +17,7 @@
   border-bottom-style: solid;
   margin-bottom: -1px;
 }
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a,
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a:link,
-#site-header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a:active {
+#site-header .header_v2 .twc-header .twc-top .twc-top-nav li .twc-active a {
   color: #333;
   font-weight: bold;
 }
@@ -37,7 +33,7 @@
   background-image: none;
 }
 #site-header .new-mega-menu .twc-new-navigation {
-  background-color: #f2fbfd;
+  background-color: #fff;
   background-image: none;
   height: 40px;
 }
@@ -51,6 +47,20 @@
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a {
   color: #fff;
+}
+#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
+  position: relative;
+}
+#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
+  position: absolute;
+  right: 0;
+}
+#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
+  color: #00549f;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-transform: none;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label,
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
@@ -93,44 +103,44 @@
   border-top: 1px solid white;
   background-color: #fff;
   background-image: none;
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
   text-transform: none;
-  color: #00549f;
-  font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
   width: 100%;
+  color: #333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
-  content: '\f054';
-  font-family: "FontAwesome";
-  font-weight: normal;
-  margin-left: 4px;
-  font-size: 80%;
+  content: '';
+  margin: 0;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
   text-transform: none;
-  color: #00549f;
-  font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
   width: 100%;
+  color: #333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label.js-active {
   background-color: #02a9e0;
   color: #fff;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
-  background-color: #f2fbfd;
+  background-color: transparent;
   color: #00549f;
 }
 #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li::before {
   content: none !important;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a,
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link,
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited {
+#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a {
   color: #00549f;
   padding-right: 0;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -138,17 +148,16 @@
   font-size: 1.6rem;
   text-transform: none;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
-  content: '\f054';
-  font-family: "FontAwesome";
-  font-weight: normal;
-  margin-left: 4px;
-  font-size: 80%;
+#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+  content: '';
+  margin: 0;
 }
 #site-header .new-mega-menu .twc-new-navigation > .twc-container, #site-header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
   height: 100%;
+}
+#site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
+  right: 0;
+  position: absolute;
 }
 
 .twc-footer {
@@ -192,9 +201,7 @@
 .twc-footer p {
   color: #333;
 }
-.twc-footer a,
-.twc-footer a:link,
-.twc-footer a:visited {
+.twc-footer a {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -240,12 +247,8 @@
 }
 .twc-footer #footer-links p,
 .twc-footer #footer-links a,
-.twc-footer #footer-links a:link,
-.twc-footer #footer-links a:visited,
 .twc-footer #footer-legal p,
-.twc-footer #footer-legal a,
-.twc-footer #footer-legal a:link,
-.twc-footer #footer-legal a:visited {
+.twc-footer #footer-legal a {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -263,53 +266,44 @@
   padding: 0;
 }
 
-@media only screen and (min-width: 48em) {
+@media (max-width: 48em) {
   #site-header .new-mega-menu .twc-new-navigation {
-    background-color: #fff;
-  }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
-    position: relative;
-  }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
-    position: absolute;
-    right: 0;
-  }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
-    color: #00549f;
-    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.6rem;
-    text-transform: none;
+    background-color: #f2fbfd;
   }
   #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
-    padding-left: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 0;
+    border-top-width: 0;
   }
   #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
-    color: #333;
-    font-size: 1.8rem;
-    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: normal;
+    color: #00549f;
+    font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6rem;
   }
   #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
-    content: '';
-    margin: 0;
+    content: '\f054';
+    font-family: "FontAwesome";
+    font-weight: normal;
+    margin-left: 4px;
+    font-size: 80%;
   }
   #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
-    color: #333;
-    font-size: 1.8rem;
-    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: normal;
+    color: #00549f;
+    font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6rem;
   }
   #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
-    background-color: transparent;
+    background-color: #f2fbfd;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after,
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:link::after,
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:visited::after {
-    content: '';
-    margin: 0;
+  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+    content: '\f054';
+    font-family: "FontAwesome";
+    font-weight: normal;
+    margin-left: 4px;
+    font-size: 80%;
   }
+}
+
+@media (max-width: 68.75em) {
   .twc-footer #footer-menu {
     padding-bottom: 0;
   }

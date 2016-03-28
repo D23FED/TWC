@@ -8,9 +8,7 @@
 			// Topmost navigation list
 			.twc-top-nav {
 				li {
-					a,
-					a:link,
-					a:active {
+					a {
 						color: #fff;
 					}
 
@@ -24,9 +22,7 @@
 						border-bottom-style: solid;
 						margin-bottom: -1px;
 
-						a,
-						a:link,
-						a:active {
+						a {
 							color: $text-color;
 							font-weight: bold;
 						}

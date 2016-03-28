@@ -5,16 +5,16 @@ $color-menu-divider: #7eabd0;
 $header-border-bottom-width: 7px;
 @mixin submenu-top-level-item {
 	text-transform: none;
-	color: $skyDark-darkish;
-	font-family: $twc-medium;
-	font-size: 1.6rem;
 	width: 100%;
+	color: $text-color;
+	font-size: 1.8rem;
+	font-family: $twc-book;
+	font-weight: normal;
 
-	@include respond-to(desktop) {
-		color: $text-color;
-		font-size: 1.8rem;
-		font-family: $twc-book;
-		font-weight: normal;
+	@include respond-to(tablet) {
+		color: $skyDark-darkish;
+		font-family: $twc-medium;
+		font-size: 1.6rem;
 	}
 }
 
@@ -26,15 +26,15 @@ $header-border-bottom-width: 7px;
 }
 
 @mixin right-chevron {
-	content: '\f054';
-	font-family: $fontawesome;
-	font-weight: normal;
-	margin-left: 4px;
-	font-size: 80%;
+	content: '';
+	margin: 0;
 
-	@include respond-to(desktop) {
-		content: '';
-		margin: 0;
+	@include respond-to(tablet) {
+		content: '\f054';
+		font-family: $fontawesome;
+		font-weight: normal;
+		margin-left: 4px;
+		font-size: 80%;
 	}
 }
 

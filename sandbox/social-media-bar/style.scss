@@ -17,10 +17,10 @@
   list-style: none;
   text-align: center;
   // padding-top: 1px;
-  height: 52px;
+  height: 79px;
   @include respond-to(desktop) {
+    height: 52px;
     // padding: 14px 0;
-    height: 79px;
   }
 
   li {

@@ -48,9 +48,7 @@
 	}
 
 	// Links
-	a,
-	a:link,
-	a:visited {
+	a {
 		font-family: $twc-light;
 		font-size: 1.6rem;
 		color: $skyDark-darkish;
@@ -127,9 +125,7 @@
 		text-align: center;
 
 		p,
-		a,
-		a:link,
-		a:visited {
+		a {
 			font-family: $twc-light;
 			font-weight: normal;
 			font-size: 1.4rem;

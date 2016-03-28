@@ -2,10 +2,10 @@
 .new-mega-menu {
 	// NAV element. Contains entire top-level nav menu
 	.twc-new-navigation {
-		background-color: $color-light-blue;
+		background-color: #fff;
 
-		@include respond-to(desktop) {
-			background-color: #fff;
+		@include respond-to(tablet) {
+			background-color: $color-light-blue;
 		}
 
 
@@ -32,19 +32,19 @@
 
 					// 'My Account'
 					&:nth-of-type(4) {
-						@include respond-to(desktop) {
-							position: relative;
+						position: relative;
 
-							.twc-submenu {
-								position: absolute;
-								right: 0;
+						.twc-submenu {
+							position: absolute;
+							right: 0;
 
-								li {
-									a {
-										@include submenu-link();
-									}
+							li {
+								a {
+									@include submenu-link();
 								}
 							}
+						}
+						@include respond-to(tablet) {
 						}
 					}
 
@@ -111,11 +111,13 @@
 				border-top: 1px solid white;
 				background-color: #fff;
 				background-image: none;
+				padding-left: 30px;
+				padding-top: 25px;
+				padding-bottom: 25px;
 
-				@include respond-to(desktop) {
-					padding-left: 30px;
-					padding-top: 25px;
-					padding-bottom: 25px;
+				@include respond-to(tablet) {
+					padding: 0;
+					border-top-width: 0;
 				}
 
 
@@ -143,11 +145,11 @@
 
 						// Accordion sub-menu
 						& ~ ul {
-							background-color: $color-light-blue;
+							background-color: transparent;
 							color: $skyDark-darkish;
 
-							@include respond-to(desktop) {
-								background-color: transparent;
+							@include respond-to(tablet) {
+								background-color: $color-light-blue;
 							}
 
 
@@ -157,9 +159,7 @@
 									content: none !important;
 								}
 
-								a,
-								a:link,
-								a:visited {
+								a {
 									color: $skyDark-darkish;
 									padding-right: 0;
 									font-family: $font-stack-sans-book;
@@ -184,6 +184,13 @@
 			& .twc-new-nav {
 				height: 100%;
 			}
+
+		.expand-left {
+			.twc-submenu {
+				right: 0;
+				position: absolute;
+			}
+		}
 		} // end .twc-new-nav
 
 	} // end .twc-new-navigation
