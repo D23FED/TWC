@@ -1,5 +1,6 @@
 @import '../../init';
-
+$bar-height: 79px;
+$bar-height-tablet: 52px;
 .soc-wrapper {
   background-color: $steelSky-darker;
 }
@@ -17,9 +18,9 @@
   list-style: none;
   text-align: center;
   // padding-top: 1px;
-  height: 79px;
-  @include respond-to(desktop) {
-    height: 52px;
+  height: $bar-height;
+  @include respond-to(tablet) {
+    height: $bar-height-tablet;
     // padding: 14px 0;
   }
 
@@ -47,17 +48,27 @@
       font-size: 1.6rem;
       font-family: $font-stack-sans-light;
       font-weight: 100;
+      @include respond-to(tablet) {
+        max-width: 48px;
+        margin: 0 auto;
+      }
 
       svg {
         display: inline-block;
         height: auto;
         width: 100%;
         max-width: 3em;
+        max-height: 3em;
+        vertical-align: middle;
       }
 
       span {
         display: inline-block;
-        vertical-align: calc(100%);
+        // vertical-align: calc(100%);
+        line-height: $bar-height;
+        @include respond-to(tablet) {
+          line-height: $bar-height-tablet;
+        }
       }
     }
   }

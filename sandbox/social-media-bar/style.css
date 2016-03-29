@@ -46,15 +46,26 @@
   height: auto;
   width: 100%;
   max-width: 3em;
+  max-height: 3em;
+  vertical-align: middle;
 }
 .soc li a span {
   display: inline-block;
-  vertical-align: calc(100%);
+  line-height: 79px;
 }
 
-@media (max-width: 68.75em) {
+@media (max-width: 48em) {
 
   .soc {
     height: 52px;
+  }
+
+  .soc li a {
+    max-width: 48px;
+    margin: 0 auto;
+  }
+
+  .soc li a span {
+    line-height: 52px;
   }
 }
