@@ -1,5 +1,60 @@
 // TWC base mixins
 
+@mixin respond-to($media) {
+
+  // Desktop-first
+  @if $media == desktop {
+    @media (max-width: $screen-lg) {
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media (max-width: $screen-md) {
+      @content;
+    }
+  }
+  @else if $media == mobile {
+    @media (max-width: $screen-sm) {
+      @content;
+    }
+  }
+
+  // Mobile first
+  @else if $media == mobile-and-up {
+    @media (min-width: $screen-sm) {
+      @content;
+    }
+  }
+  @else if $media == tablet-and-up {
+    @media (min-width: $screen-md) {
+      @content;
+    }
+  }
+  @else if $media == desktop-and-up {
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+
+
+  // Target one screen size
+  @else if $media == mobile-only {
+    @media (max-width: $screen-xs - 1) {
+      @content;
+    }
+  }
+  @else if $media == tablet-only {
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+      @content;
+    }
+  }
+  @else if $media == desktop-only {
+    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
+      @content;
+    }
+  }
+}
+
 // Breakpoint
 @mixin bp($point) {
   @if $point == medium {
@@ -145,59 +200,6 @@
   column-gap: $gap;
 }
 
-@mixin respond-to($media) {
-
-  // Desktop-first
-  @if $media == desktop {
-    @media (max-width: $screen-lg) {
-      @content;
-    }
-  }
-  @else if $media == tablet {
-    @media (max-width: $screen-md) {
-      @content;
-    }
-  }
-  @else if $media == mobile {
-    @media (max-width: $screen-sm) {
-      @content;
-    }
-  }
-
-  @else if $media == mobile-and-up {
-    @media (min-width: $screen-sm) {
-      @content;
-    }
-  }
-  @else if $media == tablet-and-up {
-    @media (min-width: $screen-md) {
-      @content;
-    }
-  }
-  @else if $media == desktop-and-up {
-    @media (min-width: $screen-lg) {
-      @content;
-    }
-  }
-
-
-  // Target one screen size
-  @else if $media == mobile-only {
-    @media (max-width: $screen-xs - 1) {
-      @content;
-    }
-  }
-  @else if $media == tablet-only {
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-      @content;
-    }
-  }
-  @else if $media == desktop-only {
-    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
-      @content;
-    }
-  }
-}
 
 @mixin clearfix {
   &:before,
