@@ -31,12 +31,7 @@
 
 				// 'My Account'
 				&:nth-of-type(4) {
-					// position: relative;
-
 					.twc-submenu {
-						// position: absolute;
-						// right: 0;
-
 						li a {
 							@include submenu-link;
 						}
@@ -66,17 +61,11 @@
 				}
 			}
 
-			// Wrapper for top-level items.
-			// Wraps all content of each top-level nav item submenu
+			// Wraps each top-level nav item's submenu
 			.mega-menu-item {
 				padding: 0;
 				height: $menu-item-height;
 				border-color: $color-menu-divider;
-
-				&.expand-left .twc-submenu {
-					// top: auto;
-
-				}
 
 				// Active top-level menu item
 				&.js-active {
@@ -96,12 +85,10 @@
 
 		.expand-left {
 			.twc-submenu {
+				top: $header-border-bottom-width;
 				@include respond-to(tablet) {
 					// right: 0;
-					top: $header-border-bottom-width;
 				}
-
-
 				@include respond-to(mobile) {
 					top: $menu-item-height + $header-border-bottom-width;
 				}
