@@ -1,201 +1,190 @@
-// Primary nav (Explore, All Plans, etc) wrapper for mega menu. Contains entire top-level nav menu
-.new-mega-menu {
-	// NAV element. Contains entire top-level nav menu
-	.twc-new-navigation {
-		background-color: #fff;
+// NAV element. Contains entire top-level nav menu
+.twc-new-navigation {
+	background-color: #fff;
+	background-image: none;
+	height: $menu-item-height;
 
-		@include respond-to(tablet) {
-			background-color: $color-light-blue;
-		}
+	@include respond-to(tablet) {
+		background-color: $color-light-blue;
+	}
 
 
-		background-image: none;
-		height: $menu-item-height;
+	// List inside NAV, top-level. 'Explore Plans' etc. Contains entire top-level nav menu.
+	.twc-new-nav {
+		height: 100%;
 
-		// List inside NAV, top-level. 'Explore Plans' etc. Contains entire top-level nav menu.
 		// First child UL is top-level nav menu
-		.twc-new-nav {
-			// Top level
-			> ul {
-				> li {
-					border-color: $color-menu-divider;
+		> ul {
+			> li {
+				border-color: $color-menu-divider;
 
-					&:hover {
-						background-color: $color-bright-blue;
-						background-image: none;
-						box-shadow: none;
+				&:hover {
+					background-color: $color-bright-blue;
+					background-image: none;
+					box-shadow: none;
 
-						.desktopLink a {
-							color: #fff;
-						}
+					.desktopLink a,
+					label {
+						color: #fff;
 					}
+				}
 
-					// 'My Account'
-					&:nth-of-type(4) {
-						position: relative;
+				// 'My Account'
+				&:nth-of-type(4) {
+					// position: relative;
 
-						.twc-submenu {
-							position: absolute;
-							right: 0;
+					.twc-submenu {
+						// position: absolute;
+						// right: 0;
 
-							li {
-								a {
-									@include submenu-link();
-								}
-							}
-						}
-						@include respond-to(tablet) {
-						}
-					}
-
-					label,
-					.desktopLink a {
-						color: $skyDark-darkish;
-						font-family: $twc-book;
-						line-height: $menu-item-height;
-					}
-
-					// Top-level links on desktop
-					.desktopLink a {
-						font-size: 1.8rem;
-						font-weight: normal;
-					}
-
-					// Top-level links on mobile
-					.mobile-nav {
-						> label {
-							font-size: 1.2rem;
-							top: auto;
-							padding: 0;
-						}
-					}
-
-					// Wrapper for top-level items.
-					// Wraps all content of each top-level nav item submenu
-					.mega-menu-item {
-						padding: 0;
-						height: $menu-item-height;
-						border-color: $color-menu-divider;
-
-						&.expand-left .twc-submenu {
-							// top: auto;
-						}
-
-						// Active top-level menu item
-						&.js-active {
-							background-color: $color-bright-blue;
-							background-image: none;
-
-							label {
-								color: #fff;
-							}
-
-							form label {
-								color: #000;
-							}
+						li a {
+							@include submenu-link;
 						}
 					}
 				}
 			}
 
-			// temporarily hide nav icons
-			figure {
-				display: none;
+			label,
+			.desktopLink a {
+				color: $skyDark-darkish;
+				font-family: $twc-book;
+				line-height: $menu-item-height;
 			}
 
-			// Wraps mega menu, same element as .twc-new-mega-section
-			// Child of .mega-menu-item > ul >li
-			.twc-submenu {
-				box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
-				top: $menu-item-height + $header-border-bottom-width;
-				border-top: 1px solid white;
-				background-color: #fff;
-				background-image: none;
-				padding-left: 30px;
-				padding-top: 25px;
-				padding-bottom: 25px;
+			// Top-level links on desktop
+			.desktopLink a {
+				font-size: 1.8rem;
+				font-weight: normal;
+			}
 
-				@include respond-to(tablet) {
+			// Top-level links on mobile
+			.mobile-nav {
+				> label {
+					font-size: 1.2rem;
+					top: auto;
 					padding: 0;
-					border-top-width: 0;
 				}
-
-
-				// List of sub-items inside a single mega menu item
-				.labelList {
-					// No Accordion
-					ul li a {
-						@include submenu-top-level-item;
-
-						&::after {
-							@include right-chevron;
-						}
-					}
-
-					// With accordion
-					// Mega Menu heading (ex. 'Explore Products')
-					.label {
-						@include submenu-top-level-item;
-
-						// Active
-						&.js-active {
-							background-color: $color-bright-blue;
-							color: #fff;
-						}
-
-						// Accordion sub-menu
-						& ~ ul {
-							background-color: transparent;
-							color: $skyDark-darkish;
-
-							@include respond-to(tablet) {
-								background-color: $color-light-blue;
-							}
-
-
-							li {
-								&::before {
-									// temporary !important
-									content: none !important;
-								}
-
-								a {
-									color: $skyDark-darkish;
-									padding-right: 0;
-									font-family: $font-stack-sans-book;
-									font-size: 1.6rem;
-									text-transform: none;
-
-									&::after {
-										@include right-chevron;
-									}
-								}
-							}
-						}
-					}
-				}
-			} //end .twc-submenu
-
-		}
-
-		// Set to allow full-height top-level menu items
-		> .twc-container {
-			&,
-			& .twc-new-nav {
-				height: 100%;
 			}
-			.expand-left {
-				.twc-submenu {
-					@include respond-to(tablet) {
-						right: 0;
-						top: $header-border-bottom-width;
+
+			// Wrapper for top-level items.
+			// Wraps all content of each top-level nav item submenu
+			.mega-menu-item {
+				padding: 0;
+				height: $menu-item-height;
+				border-color: $color-menu-divider;
+
+				&.expand-left .twc-submenu {
+					// top: auto;
+
+				}
+
+				// Active top-level menu item
+				&.js-active {
+					background-color: $color-bright-blue;
+					background-image: none;
+
+					label {
+						color: #fff;
 					}
-					@include respond-to(mobile) {
-						top: $menu-item-height + $header-border-bottom-width;
+
+					form label {
+						color: #000;
 					}
 				}
 			}
 		}
 
-	} // end .twc-new-navigation
-}
+		.expand-left {
+			.twc-submenu {
+				@include respond-to(tablet) {
+					// right: 0;
+					top: $header-border-bottom-width;
+				}
+
+
+				@include respond-to(mobile) {
+					top: $menu-item-height + $header-border-bottom-width;
+				}
+			}
+		}
+
+		// Wraps mega menu, same element as .twc-new-mega-section
+		// Child of .mega-menu-item > ul >li
+		.twc-submenu {
+			box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
+			top: $menu-item-height + $header-border-bottom-width;
+			border-top: 1px solid white;
+			background-color: #fff;
+			background-image: none;
+			padding-left: 30px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			@include respond-to(tablet) {
+				padding: 0;
+				border-top-width: 0;
+			}
+
+
+			// List of sub-items inside a single mega menu item
+			.labelList {
+				// No Accordion
+				ul li a {
+					@include submenu-top-level-item;
+
+					&::after {
+						@include right-chevron;
+					}
+				}
+
+				// With accordion
+				// Mega Menu heading (ex. 'Explore Products')
+				.label {
+					@include submenu-top-level-item;
+
+					// Active
+					&.js-active {
+						background-color: $color-bright-blue;
+						color: #fff;
+					}
+
+					// Accordion sub-menu
+					& ~ ul {
+						background-color: transparent;
+						color: $skyDark-darkish;
+
+						@include respond-to(tablet) {
+							background-color: $color-light-blue;
+						}
+
+
+						li {
+							&::before {
+								// temporary '!important' rule
+								content: none !important;
+							}
+
+							a {
+								color: $skyDark-darkish;
+								padding-right: 0;
+								font-family: $font-stack-sans-book;
+								font-size: 1.6rem;
+								text-transform: none;
+
+								&::after {
+									@include right-chevron;
+								}
+							}
+						}
+					}
+				}
+			}
+		} //end .twc-submenu
+
+	} //end twc-new-nav
+
+	// temporarily hide nav icons
+	figure {
+		display: none;
+	}
+} // end .twc-new-navigation

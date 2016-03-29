@@ -32,72 +32,66 @@
   background-color: transparent;
   background-image: none;
 }
-#site-header .new-mega-menu .twc-new-navigation {
+#site-header .twc-new-navigation {
   background-color: #fff;
   background-image: none;
   height: 40px;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li {
+#site-header .twc-new-navigation .twc-new-nav {
+  height: 100%;
+}
+#site-header .twc-new-navigation .twc-new-nav > ul > li {
   border-color: #7eabd0;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover {
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover {
   background-color: #02a9e0;
   background-image: none;
   box-shadow: none;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a {
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
   color: #fff;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) {
-  position: relative;
-}
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu {
-  position: absolute;
-  right: 0;
-}
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
+#site-header .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
   color: #00549f;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   text-transform: none;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li label,
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
+#site-header .twc-new-navigation .twc-new-nav > ul label,
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
   color: #00549f;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 40px;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .desktopLink a {
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: normal;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mobile-nav > label {
+#site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label {
   font-size: 12px;
   font-size: 1.2rem;
   top: auto;
   padding: 0;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item {
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item {
   padding: 0;
   height: 40px;
   border-color: #7eabd0;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active {
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active {
   background-color: #02a9e0;
   background-image: none;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active label {
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active label {
   color: #fff;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav > ul > li .mega-menu-item.js-active form label {
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active form label {
   color: #000;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav figure {
-  display: none;
-}
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu {
   box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
   top: 47px;
   border-top: 1px solid white;
@@ -107,7 +101,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
   text-transform: none;
   width: 100%;
   color: #333;
@@ -116,11 +110,11 @@
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
   content: '';
   margin: 0;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
   text-transform: none;
   width: 100%;
   color: #333;
@@ -129,18 +123,18 @@
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label.js-active {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label.js-active {
   background-color: #02a9e0;
   color: #fff;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
   background-color: transparent;
   color: #00549f;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li::before {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li::before {
   content: none !important;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a {
   color: #00549f;
   padding-right: 0;
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -148,12 +142,12 @@
   font-size: 1.6rem;
   text-transform: none;
 }
-#site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
   content: '';
   margin: 0;
 }
-#site-header .new-mega-menu .twc-new-navigation > .twc-container, #site-header .new-mega-menu .twc-new-navigation > .twc-container .twc-new-nav {
-  height: 100%;
+#site-header .twc-new-navigation figure {
+  display: none;
 }
 
 .twc-footer {
@@ -263,48 +257,47 @@
 }
 
 @media (max-width: 48em) {
-  #site-header .new-mega-menu .twc-new-navigation {
+  #site-header .twc-new-navigation {
     background-color: #f2fbfd;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu {
+  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+    top: 7px;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu {
     padding: 0;
     border-top-width: 0;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
     color: #00549f;
     font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.6rem;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
     content: '\f054';
     font-family: "FontAwesome";
     font-weight: normal;
     margin-left: 4px;
     font-size: 80%;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
     color: #00549f;
     font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.6rem;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
     background-color: #f2fbfd;
   }
-  #site-header .new-mega-menu .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
     content: '\f054';
     font-family: "FontAwesome";
     font-weight: normal;
     margin-left: 4px;
     font-size: 80%;
-  }
-  #site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
-    right: 0;
-    top: 7px;
   }
 }
 
 @media (max-width: 40em) {
-  #site-header .new-mega-menu .twc-new-navigation > .twc-container .expand-left .twc-submenu {
+  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
     top: 47px;
   }
 }
