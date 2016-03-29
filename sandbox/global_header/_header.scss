@@ -1,0 +1,45 @@
+$menu-item-height: 40px;
+$color-bright-blue: #02a9e0;
+$color-light-blue: #f2fbfd;
+$color-menu-divider: #7eabd0;
+$header-border-bottom-width: 7px;
+@mixin submenu-top-level-item {
+	text-transform: none;
+	width: 100%;
+	color: $text-color;
+	font-size: 1.8rem;
+	font-family: $twc-book;
+	font-weight: normal;
+
+	@include respond-to(tablet) {
+		color: $skyDark-darkish;
+		font-family: $twc-medium;
+		font-size: 1.6rem;
+	}
+}
+
+@mixin submenu-link() {
+	color: $skyDark-darkish;
+	font-family: $font-stack-sans-book;
+	font-size: 1.6rem;
+	text-transform: none;
+}
+
+@mixin right-chevron {
+	content: '';
+	margin: 0;
+
+	@include respond-to(tablet) {
+		content: '\f054';
+		font-family: $fontawesome;
+		font-weight: normal;
+		margin-left: 4px;
+		font-size: 80%;
+	}
+}
+
+#site-header {
+	border-bottom: $header-border-bottom-width solid $color-bright-blue;
+	@import 'header-top';
+	@import 'header-nav';
+}
