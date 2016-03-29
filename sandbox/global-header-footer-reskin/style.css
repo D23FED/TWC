@@ -28,10 +28,10 @@
   background-color: transparent;
   background-image: none;
 }
-#site-header #logo-row .newHeaderIcons .list.horizontal ul > li a {
+#site-header #logo-row .newHeaderIcons a {
   color: #00549f;
 }
-#site-header #logo-row .newHeaderIcons .list.horizontal ul > li a img {
+#site-header #logo-row .newHeaderIcons a img {
   height: auto;
   min-width: 100%;
 }

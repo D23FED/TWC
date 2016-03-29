@@ -46,47 +46,12 @@
 
 	// Header Icons: Shop, Pay Bill, Email etc
 	.newHeaderIcons {
-		.list.horizontal ul > li a {
+		a {
 			color: $skyDark-darkish;
-
 			img {
 				height: auto;
 				min-width: 100%;
 			}
 		}
 	}
-}
-
-.header_v2 {
-	// .twc-header {
-	// 	.twc-top {
-	// 		background-color: $skyDark-darker;
-	// 		border-color: #a1a1a1;
-
-	// 		// Topmost navigation list
-	// 		.twc-top-nav {
-	// 			li {
-	// 				a {
-	// 					color: #fff;
-	// 				}
-
-	// 				// Active tab
-	// 				.twc-active {
-	// 					background-color: #fff;
-	// 					border-color: #a1a1a1;
-	// 					box-shadow: none;
-	// 					border-bottom-color: #fff;
-	// 					border-bottom-width: 1px;
-	// 					border-bottom-style: solid;
-	// 					margin-bottom: -1px;
-
-	// 					a {
-	// 						color: $text-color;
-	// 						font-weight: bold;
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
