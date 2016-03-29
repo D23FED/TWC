@@ -71,22 +71,20 @@
 		border-color: #c2c2c2;
 		border-width: 0 0 1px 0;
 		border-style: solid;
-
-		// Spec for total space between top border and footer content is 35px. The DIV.footer child has 24px padding-top. Set the parent's padding to acheive 35px total
 		padding-top: 7px;
-		padding-bottom: 20px;
+		padding-bottom: 0;
 
-		@include respond-to(desktop) {
-			padding-bottom: 0;
+		@include respond-to(tablet) {
+			padding-bottom: 20px;
 		}
 
 
 		// Spec for space between vertical list bottom and bottom border is 30px
 		[class*='twc-col5'] {
-			margin-bottom: pxToEm(32);
+			margin-bottom: 22px;
 
-			@include respond-to(desktop) {
-				margin-bottom: 22px;
+			@include respond-to(tablet) {
+				margin-bottom: pxToEm(32);
 			}
 		}
 	}
@@ -102,21 +100,21 @@
 		.horizontal {
 			padding-top: 0;
 			padding-bottom: 0;
-			margin-top: 11px;
+			margin-top: 0px;
 
-			@include respond-to(desktop) {
-				margin-top: 0px;
+			@include respond-to(tablet) {
+				margin-top: 11px;
 			}
 		}
 	}
 
 	// Copyright
 	#footer-legal {
-		margin-top: 15px;
 		padding-top: 0;
+		margin-top: 19px;
 
-		@include respond-to(desktop) {
-			margin-top: 19px;
+		@include respond-to(tablet) {
+			margin-top: 15px;
 		}
 	}
 
