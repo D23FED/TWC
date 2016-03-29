@@ -36,9 +36,9 @@
   min-width: 100%;
 }
 #site-header .twc-new-navigation {
-  background-color: #fff;
   background-image: none;
   height: 40px;
+  background-color: #f2fbfd;
 }
 #site-header .twc-new-navigation .twc-new-nav {
   height: 100%;
@@ -160,7 +160,19 @@
   background-color: #fff;
   background-image: none;
 }
-.twc-footer h3.label {
+.twc-footer > .footer {
+  border-color: #c2c2c2;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+.twc-footer #footer-menu {
+  border-color: #c2c2c2;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  padding-top: 7px;
+  padding-bottom: 0;
+}
+.twc-footer #footer-menu h3.label {
   font-size: 20px;
   font-size: 2rem;
   margin-bottom: 0;
@@ -175,49 +187,37 @@
   font-weight: normal;
   color: #333;
 }
-.twc-footer h3.label + ul {
+.twc-footer #footer-menu h3.label + ul {
   display: block;
   position: static;
   width: auto;
   padding-left: 0;
 }
-.twc-footer h3.label + ul li {
+.twc-footer #footer-menu h3.label + ul li {
   border-width: 0;
   border-style: none;
   padding: 0;
   background-image: none;
   background-color: transparent;
 }
-.twc-footer h3.label + ul li a:after {
+.twc-footer #footer-menu h3.label + ul li a:after {
   float: none;
   content: '';
   position: initial;
   right: auto;
 }
-.twc-footer p {
+.twc-footer #footer-menu p {
   color: #333;
 }
-.twc-footer a {
+.twc-footer #footer-menu a {
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   color: #00549f;
   font-weight: normal;
 }
-.twc-footer a:hover {
+.twc-footer #footer-menu a:hover {
   color: #02a9e0;
-}
-.twc-footer > .footer {
-  border-color: #c2c2c2;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-}
-.twc-footer #footer-menu {
-  border-color: #c2c2c2;
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  padding-top: 7px;
-  padding-bottom: 0;
 }
 .twc-footer #footer-menu [class*='twc-col5'] {
   margin-bottom: 22px;
@@ -262,10 +262,13 @@
   padding: 0;
 }
 
-@media (max-width: 48em) {
-  #site-header .twc-new-navigation {
-    background-color: #f2fbfd;
+@media (max-width: 40em) {
+  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+    top: 47px;
   }
+}
+
+@media (max-width: 48em) {
   #site-header .twc-new-navigation .twc-new-nav .twc-submenu {
     padding: 0;
     border-top-width: 0;
@@ -308,11 +311,5 @@
   }
   .twc-footer #footer-legal {
     margin-top: 15px;
-  }
-}
-
-@media (max-width: 40em) {
-  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
-    top: 47px;
   }
 }
