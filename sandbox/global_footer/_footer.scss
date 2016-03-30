@@ -87,6 +87,10 @@
 				margin-bottom: pxToEm(32);
 			}
 		}
+		a,
+		.parsys_column a {
+			color: $skyDark-darkish;
+		}
 	}
 
 	// Horizontal list of links beginning with 'Privacy Policy'

@@ -64,6 +64,10 @@
 .twc-footer #footer-menu [class*='twc-col5'] {
   margin-bottom: 22px;
 }
+.twc-footer #footer-menu a,
+.twc-footer #footer-menu .parsys_column a {
+  color: #00549f;
+}
 .twc-footer #footer-links {
   margin-top: 34px;
 }
