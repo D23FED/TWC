@@ -36,7 +36,7 @@
   min-width: 100%;
 }
 #site-header .twc-new-navigation {
-  background-color: #fff;
+  background-color: #f2fbfd;
   background-image: none;
   height: 40px;
 }
@@ -54,6 +54,9 @@
 #site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
 #site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
   color: #fff;
+}
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover form label {
+  color: #000;
 }
 #site-header .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
   color: #00549f;
@@ -156,10 +159,13 @@
   display: none;
 }
 
-@media (max-width: 48em) {
-  #site-header .twc-new-navigation {
-    background-color: #f2fbfd;
+@media (max-width: 40em) {
+  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+    top: 47px;
   }
+}
+
+@media (max-width: 48em) {
   #site-header .twc-new-navigation .twc-new-nav .twc-submenu {
     padding: 0;
     border-top-width: 0;
@@ -190,11 +196,5 @@
     font-weight: normal;
     margin-left: 4px;
     font-size: 80%;
-  }
-}
-
-@media (max-width: 40em) {
-  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
-    top: 47px;
   }
 }
