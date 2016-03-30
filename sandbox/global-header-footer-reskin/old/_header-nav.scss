@@ -1,11 +1,11 @@
 // NAV element. Contains entire top-level nav menu
 .twc-new-navigation {
-	background-color: #fff;
+	// background-color: #fff;
 	background-image: none;
 	height: $menu-item-height;
+	background-color: $color-light-blue;
 
 	@include respond-to(tablet) {
-		background-color: $color-light-blue;
 	}
 
 
