@@ -5,7 +5,7 @@
 	height: $menu-item-height;
 	background-color: $color-light-blue;
 
-	@include respond-to(tablet) {
+	@include respond-to(medium) {
 	}
 
 
@@ -86,10 +86,10 @@
 		.expand-left {
 			.twc-submenu {
 				top: $header-border-bottom-width;
-				@include respond-to(tablet) {
+				@include respond-to(medium) {
 					// right: 0;
 				}
-				@include respond-to(mobile) {
+				@include respond-to(small) {
 					top: $menu-item-height + $header-border-bottom-width;
 				}
 			}
@@ -107,7 +107,7 @@
 			padding-top: 25px;
 			padding-bottom: 25px;
 
-			@include respond-to(tablet) {
+			@include respond-to(medium) {
 				padding: 0;
 				border-top-width: 0;
 			}
@@ -140,7 +140,7 @@
 						background-color: transparent;
 						color: $skyDark-darkish;
 
-						@include respond-to(tablet) {
+						@include respond-to(medium) {
 							background-color: $color-light-blue;
 						}
 

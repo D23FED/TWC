@@ -3,52 +3,51 @@
 @mixin respond-to($media) {
 
   // Desktop-first
-  @if $media == desktop {
+  @if  $media == large {
     @media (max-width: $screen-lg) {
       @content;
     }
   }
-  @else if $media == tablet {
+  @else if $media == medium {
     @media (max-width: $screen-md) {
       @content;
     }
   }
-  @else if $media == mobile {
+  @else if $media == small  {
     @media (max-width: $screen-sm) {
       @content;
     }
   }
 
   // Mobile first
-  @else if $media == mobile-and-up {
+  @else if $media == small-and-up {
     @media (min-width: $screen-sm) {
       @content;
     }
   }
-  @else if $media == tablet-and-up {
+  @else if $media == medium-and-up {
     @media (min-width: $screen-md) {
       @content;
     }
   }
-  @else if $media == desktop-and-up {
+  @else if $media == large-and-up {
     @media (min-width: $screen-lg) {
       @content;
     }
   }
 
-
   // Target one screen size
-  @else if $media == mobile-only {
+  @else if $media == small-only {
     @media (max-width: $screen-xs - 1) {
       @content;
     }
   }
-  @else if $media == tablet-only {
+  @else if $media == medium-only {
     @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
       @content;
     }
   }
-  @else if $media == desktop-only {
+  @else if $media == large-only {
     @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
       @content;
     }

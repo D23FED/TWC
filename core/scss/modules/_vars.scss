@@ -1,5 +1,5 @@
 // Convert pixel values to ems, assuming browser default font-size of 16px
-@function pxToEm($pixels, $base: 16) {
+@function px-to-em($pixels, $base: 16) {
 	@return $pixels / $base + em;
 }
 
@@ -8,11 +8,11 @@ $site-width: 980px;
 $fixed-width-container: $site-width;
 
 // TWC Residential Breakpoints
-$small: pxToEm(640); // 40em 'Tablet'
-$medium: pxToEm(768); // 48em 'Desktop'
-$big: pxToEm(1100); // 68.75em 'Widescreen'
+$small: px-to-em(640); // 40em 'Tablet'
+$medium: px-to-em(768); // 48em 'Desktop'
+$big: px-to-em(1100); // 68.75em 'Widescreen'
 // 'Mobile'
-$screen-xs: pxToEm(425);
+$screen-xs: px-to-em(425);
 
 // 'Tablet'
 $screen-sm: $small;

@@ -11,7 +11,7 @@ $header-border-bottom-width: 7px;
 	font-family: $twc-book;
 	font-weight: normal;
 
-	@include respond-to(tablet) {
+	@include respond-to(medium) {
 		color: $skyDark-darkish;
 		font-family: $twc-medium;
 		font-size: 1.6rem;
@@ -29,7 +29,7 @@ $header-border-bottom-width: 7px;
 	content: '';
 	margin: 0;
 
-	@include respond-to(tablet) {
+	@include respond-to(medium) {
 		content: '\f054';
 		font-family: $fontawesome;
 		font-weight: normal;

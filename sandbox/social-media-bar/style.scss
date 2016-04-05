@@ -19,7 +19,7 @@ $bar-height-tablet: 52px;
   text-align: center;
   // padding-top: 1px;
   height: $bar-height;
-  @include respond-to(tablet) {
+  @include respond-to(medium) {
     height: $bar-height-tablet;
     // padding: 14px 0;
   }
@@ -48,7 +48,7 @@ $bar-height-tablet: 52px;
       font-size: 1.6rem;
       font-family: $font-stack-sans-light;
       font-weight: 100;
-      @include respond-to(tablet) {
+      @include respond-to(medium) {
         max-width: 48px;
         margin: 0 auto;
       }
@@ -66,7 +66,7 @@ $bar-height-tablet: 52px;
         display: inline-block;
         // vertical-align: calc(100%);
         line-height: $bar-height;
-        @include respond-to(tablet) {
+        @include respond-to(medium) {
           line-height: $bar-height-tablet;
         }
       }
