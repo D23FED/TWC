@@ -1,6 +1,6 @@
 // Convert pixel values to ems, assuming browser default font-size of 16px
 @function px-to-em($pixels, $base: 16) {
-	@return $pixels / $base + em;
+	@return ($pixels / $base) * 1em;
 }
 
 // TWC sitewide variables
