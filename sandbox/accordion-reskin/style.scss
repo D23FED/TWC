@@ -1,0 +1,146 @@
+@import '../../init';
+
+$light-grey: #f7f7f7;
+$color-border: rgb(225, 225, 225);
+$color-indicator: #02a9e0;
+$accordion-item-height: 39px;
+$menu-item-indent: 12px;
+$submenu-item-indent: 23px;
+$highlight-edge-width: 4px;
+
+// Class names
+$accordion-section: expandableHybrid;
+$accordion-item: side-tab-accordion;
+$accordion-heading: side-accordion-heading;
+$accordion-submenu: side-tab-accordion-list;
+$accordion-submenu-heading: side-tab-topic-heading;
+$active: js-active;
+$active-submenu-item: liState;
+
+@mixin accordion-border {
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: $color-border;
+}
+
+// $text-color
+// $color-sky-dark-darkish
+// SECTION wrapping accordion
+.#{$accordion-section} {
+	// Each accordion item (li)
+	.#{$accordion-item} {
+		// Accordion item title (H6)
+		.#{$accordion-heading} {
+			@include accordion-border;
+
+			background-color: $light-grey;
+			background-image: none;
+			color: $color-sky-dark-darkish;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: $menu-item-indent;
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: $accordion-item-height;
+			font-size: 1.6rem;
+			font-family: $font-stack-sans-book;
+			cursor: pointer;
+
+			// Open/close icon
+			&::after {
+				font-family: $font-icon;
+				content: '\f13a';
+				right: 20px;
+			}
+		}
+
+		// Accordion sub-menu (UL)
+		.#{$accordion-submenu} {
+			padding-left: 0;
+
+			// Overwrite old styles
+			border-right-style: none;
+
+			// Submenu items
+			li {
+				@include accordion-border;
+
+				line-height: 1;
+				padding: 0;
+
+				// Active submenu item
+				&.#{$active-submenu-item} {
+					background-color: $color-pale-blue;
+
+					a {
+						border-color: $color-bright-blue;
+					}
+				}
+
+				// Submenu item hover
+
+				a {
+					line-height: $accordion-item-height;
+					width: 100%;
+					padding-left: $submenu-item-indent - $highlight-edge-width;
+					border: {
+						left: {
+							width: $highlight-edge-width;
+							color: #fff;
+							style: solid;
+						};
+					};
+					transition-property: border-color;
+					transition-duration: 0.2s;
+
+					&:hover {
+						border-left-color: $color-bright-blue;
+					}
+				}
+			}
+
+			// Submenu item links
+			a {
+				font-size: 1.4rem;
+				font-family: $font-stack-sans-book;
+				display: inline-block;
+				font-weight: normal;
+			}
+
+			// Paragraph tags inside anchor tags for some reason
+			p {
+				margin-bottom: 0;
+				display: inline-block;
+				font-family: inherit;
+			}
+		}
+
+		// Active
+		&.#{$active} {
+			.#{$accordion-heading} {
+				color: $text-color;
+
+				&::after {
+					content: '\f139';
+					transform: none;
+				}
+			}
+		}
+	}
+
+	// Space below accordion
+	li.filler {
+		background-color: transparent;
+		background-image: none;
+	}
+}
+
+// Overwrite old styles
+.side-tab-wrapper {
+	.grad-steel-blue {
+		background-image: none;
+		background-color: transparent;
+	}
+}
+
+// DIV contatining UL that contains the accordion

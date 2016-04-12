@@ -2,7 +2,9 @@
 @function px-to-em($pixels, $base: 16) {
 	@return ($pixels / $base) * 1em;
 }
-
+@function px-to-rem($pixels, $base: 0.1) {
+	@return ($pixels * $base) * 0.1rem;
+}
 // TWC sitewide variables
 $site-width: 980px;
 $fixed-width-container: $site-width;
@@ -24,14 +26,14 @@ $screen-md: $medium;
 $screen-lg: $big;
 
 // Minimums
-$screen-sm-min: $screen-xs + 1px;
-$screen-md-min: $screen-sm + 1px;
-$screen-lg-min: $screen-md + 1px;
+$screen-sm-min: $screen-xs + px-to-em(1);
+$screen-md-min: $screen-sm + px-to-em(1);
+$screen-lg-min: $screen-md + px-to-em(1);
 
 // Maximums
-$screen-sm-max: $screen-sm - 1px;
-$screen-md-max: $screen-md - 1px;
-$screen-lg-max: $screen-lg - 1px;
+$screen-sm-max: $screen-sm - px-to-em(1);
+$screen-md-max: $screen-md - px-to-em(1);
+$screen-lg-max: $screen-lg - px-to-em(1);
 
 // Typography
 // TWC Residential Fonts
