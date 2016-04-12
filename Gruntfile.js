@@ -1,277 +1,287 @@
 module.exports = function(grunt) {
-  require('jit-grunt')(grunt, {});
-  require('time-grunt')(grunt);
+	require('jit-grunt')(grunt, {});
+	require('time-grunt')(grunt);
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 
-    jshint: {
-      options: { //https://github.com/jshint/jshint/blob/master/examples/.jshintrc
-        jshintrc: '.jshintrc',
-        asi: true,
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: false,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: false,
-          node: true,
-          '$': false
-        }
-      },
-      main: [
-        'core/js/*.js',
-        '!core/js/build/production.js',
-        '!core/js/build/production.min.js',
-      ],
-      sandbox: [
-        'sandbox/**/js/*.js'
-      ],
-      gruntfile: {
-        src: 'Gruntfile.js'
-      }
-    },// jshint
-
-    concat: {
-    	stripBanners: true,
-    	seperator: ';\n',
-    	sourceMap: true,
-      main: {
-        src: [
-          'core/js/*.js'
-        ],
-        dest: 'core/js/build/production.js'
-      },
-      dist2: {
-        src: [
-          '<%= pkg.paths.scripts %>' + '*.js'
-        ],
-        dest: '<%= pkg.files.distJs %>'
-      }
-    },
-
-    uglify: {
-      build: {
-        src: 'core/js/build/production.js',
-        dest: 'core/js/build/production.min.js'
-      }
-    },
-
-    sass: {
-		  options: {
-		    style: 'expanded',
-		    sourceMap: false
-		  },
-	  	dist: {
-	  	  files: [{
-	  	    expand: true,
-	  	    cwd: '',
-	  	    src: ['**/*.scss'],
-	  	    dest: '',
-	  	    ext: '.css'
-	  	  }]
+		jshint: {
+			options: { //https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+				jshintrc: '.jshintrc',
+				asi: true,
+				curly: true,
+				eqeqeq: true,
+				immed: true,
+				latedef: false,
+				newcap: true,
+				noarg: true,
+				sub: true,
+				undef: true,
+				unused: true,
+				boss: true,
+				eqnull: true,
+				browser: true,
+				globals: {
+					jQuery: false,
+					node: true,
+					'$': false
+				}
 			},
-      sandbox: {
-        files: [{
-          expand: true,
-          cwd: 'sandbox/',
-          src: ['**/*.scss'],
-          dest: 'sandbox/',
-          ext: '.css'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/',
-          src: ['**/*.scss'],
-          dest: 'test/',
-          ext: '.css'
-        }]
-      },
-	    main: {
-	      files: [{
-	      	'core/css/main.css': 'core/scss/main.scss'
-	      }]
-	    }
-    },
+			main: [
+				'core/js/*.js',
+				'!core/js/build/production.js',
+				'!core/js/build/production.min.js',
+			],
+			sandbox: [
+				'sandbox/**/js/*.js'
+			],
+			gruntfile: {
+				src: 'Gruntfile.js'
+			}
+		},// jshint
 
-    postcss: {
-      options: {
-        map: true, // inline sourcemaps
-        processors: [
-          // add fallbacks for rem units
-          require('pixrem')({
-            rootValue: 10
-          }),
-          require('autoprefixer')({ // add vendor prefixes
-            browsers: 'last 3 versions'
-          }),
-          require('css-mqpacker')() // group media queries
-	      ]
-      },
-      main: {
-        options: {
-          processors: [
-            // add fallbacks for rem units
-            require('pixrem')({
-              rootValue: 10
-            }),
-            require('autoprefixer')({ // add vendor prefixes
-              browsers: 'last 3 versions'
-            }),
-            require('cssnano')({
-              sourcemap: false,
-              safe: true
-            }),
-            require('css-mqpacker')() // group media queries
-          ]
-        },
-        src: 'core/css/main.css'
-      },
-      sandbox: {
-        options: {
-          processors: [
-            // add fallbacks for rem units
-            require('pixrem')({
-              rootValue: 10
-            }),
-            require('autoprefixer')({ // add vendor prefixes
-              browsers: 'last 3 versions'
-            }),
-            require('postcss-discard-duplicates')(),
-            require('css-mqpacker')() // group media queries
-          ],
-          map: false
-        },
-        src: 'sandbox/**/*.css'
-      },
-      test: {
-        options: {
-          processors: [
-            // add fallbacks for rem units
-            require('pixrem')({
-              rootValue: 10
-            }),
-            require('autoprefixer')({ // add vendor prefixes
-              browsers: 'last 3 versions'
-            }),
-            require('css-mqpacker')() // group media queries
-          ]
-        },
-        src: 'test/**/*.css'
-      }
-    }, //postcss
+		concat: {
+			stripBanners: true,
+			seperator: ';\n',
+			sourceMap: true,
+			main: {
+				src: [
+					'core/js/*.js'
+				],
+				dest: 'core/js/build/production.js'
+			},
+			dist2: {
+				src: [
+					'<%= pkg.paths.scripts %>' + '*.js'
+				],
+				dest: '<%= pkg.files.distJs %>'
+			}
+		},
 
-    cssmin: {
-      combine: {
-        files: {
-          'core/css/main.min.css': [ 'core/css/main.css' ]
-        }
-      }
-    },
+		uglify: {
+			build: {
+				src: 'core/js/build/production.js',
+				dest: 'core/js/build/production.min.js'
+			}
+		},
 
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'core/images/orig_assets',
-          src: ['*.{png,jpg,gif}'],
-          dest: 'core/images'
-        }]
-      }
-    },
+		sass: {
+			options: {
+				style: 'expanded',
+				sourceMap: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: '',
+					src: ['**/*.scss'],
+					dest: '',
+					ext: '.css'
+				}]
+			},
+			sandbox: {
+				files: [{
+					expand: true,
+					cwd: 'sandbox/',
+					src: ['**/*.scss'],
+					dest: 'sandbox/',
+					ext: '.css'
+				}]
+			},
+			test: {
+				files: [{
+					expand: true,
+					cwd: 'test/',
+					src: ['**/*.scss'],
+					dest: 'test/',
+					ext: '.css'
+				}]
+			},
+			main: {
+				files: [{
+					'core/css/main.css': 'core/scss/main.scss'
+				}]
+			}
+		},
 
-    clean: {
-      dist: {
-        files: [{
-          src: ['<%= pkg.paths.dist %>']
-        }]
-      }
-    },//clean
+		postcss: {
+			options: {
+				map: true, // inline sourcemaps
+				processors: [
+					// add fallbacks for rem units
+					require('pixrem')({
+						rootValue: 10
+					}),
+					require('autoprefixer')({ // add vendor prefixes
+						browsers: 'last 3 versions'
+					}),
+					require('css-mqpacker')() // group media queries
+				]
+			},
+			main: {
+				options: {
+					processors: [
+						// add fallbacks for rem units
+						require('pixrem')({
+							rootValue: 10
+						}),
+						require('autoprefixer')({ // add vendor prefixes
+							browsers: 'last 3 versions'
+						}),
+						require('cssnano')({
+							sourcemap: false,
+							safe: true
+						}),
+						require('css-mqpacker')() // group media queries
+					]
+				},
+				src: 'core/css/main.css'
+			},
+			sandbox: {
+				options: {
+					processors: [
+						// add fallbacks for rem units
+						require('pixrem')({
+							rootValue: 10
+						}),
+						require('autoprefixer')({ // add vendor prefixes
+							browsers: 'last 3 versions'
+						}),
+						require('postcss-discard-duplicates')(),
+						require('css-mqpacker')() // group media queries
+					],
+					map: false
+				},
+				src: 'sandbox/**/*.css'
+			},
+			test: {
+				options: {
+					processors: [
+						// add fallbacks for rem units
+						require('pixrem')({
+							rootValue: 10
+						}),
+						require('autoprefixer')({ // add vendor prefixes
+							browsers: 'last 3 versions'
+						}),
+						require('css-mqpacker')() // group media queries
+					]
+				},
+				src: 'test/**/*.css'
+			}
+		}, //postcss
 
-    watch: {
-      scripts: {
-        files: ['core/js/*.js'],
-        tasks: ['concat', 'uglify'],
-        options: {
-          spawn: false,
-        }
-      },
-      css: {
-        files: [
-          'core/css/scss/partials/*.scss',
-          'core/css/scss/modules/*.scss'],
-        tasks: ['sass', 'cssmin'],
-        options: {
-          spawn: false,
-        }
-      },
-      sandbox: {
-        files: [
-          'sandbox/**/*.scss'
-        ],
-        tasks: ['sandbox']
-      }
-    }//watch
+		cssmin: {
+			combine: {
+				files: {
+					'core/css/main.min.css': [ 'core/css/main.css' ]
+				}
+			}
+		},
 
-  });
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'core/images/orig_assets',
+					src: ['*.{png,jpg,gif}'],
+					dest: 'core/images'
+				}]
+			}
+		},
 
-  grunt.registerTask('build', [
-    'concat:dist',
-    'uglify',
-    'sass',
-    'cssmin',
-    'imagemin',
-    'watch'
-  ]);
+		clean: {
+			dist: {
+				files: [{
+					src: ['<%= pkg.paths.dist %>']
+				}]
+			}
+		},//clean
 
-  grunt.registerTask('dev', [
-    'concat:dist',
-    'uglify', 'sass',
-    'cssmin',
-    'watch'
-  ]);
+		watch: {
+			scripts: {
+				files: ['core/js/*.js'],
+				tasks: ['concat', 'uglify'],
+				options: {
+					spawn: false,
+				}
+			},
+			css: {
+				files: [
+					'core/css/scss/partials/*.scss',
+					'core/css/scss/modules/*.scss'],
+				tasks: ['sass', 'cssmin'],
+				options: {
+					spawn: false,
+				}
+			},
+			sandbox: {
+				files: [
+					'sandbox/**/*.scss'
+				],
+				tasks: ['sandbox']
+			}
+		},//watch
 
-  grunt.registerTask('js', [
-    'jshint:main',
-    'concat:main',
-    'uglify']);
+		eslint: {
+			options: {
+				configFile: 'eslint.json',
+				rulePaths: ['conf/rules'],
+				cache: true,
+				fix: true
+			},
+			target: ['file.js']
+		}
 
-  grunt.registerTask('css', [
-    'sass',
-    'cssmin',
-    'watch'
-  ]);
+	});
 
-  grunt.registerTask('main', [
-    'sass:main',
-    'postcss:main'
-  ]);
+	grunt.registerTask('build', [
+		'concat:dist',
+		'uglify',
+		'sass',
+		'cssmin',
+		'imagemin',
+		'watch'
+	]);
 
-  grunt.registerTask('sandbox', [
-    'sass:sandbox',
-    'newer:postcss:sandbox'
-  ]);
+	grunt.registerTask('dev', [
+		'concat:dist',
+		'uglify', 'sass',
+		'cssmin',
+		'watch'
+	]);
 
-  grunt.registerTask('test', [
-    'sass:test',
-    'postcss:test'
-  ]);
+	grunt.registerTask('js', [
+		'jshint:main',
+		'concat:main',
+		'uglify']);
 
-  grunt.registerTask('default', [
-    'sass:main',
-    'sass:sandbox',
-    'postcss:main',
-    'postcss:sandbox'
-  ]);
+	grunt.registerTask('css', [
+		'sass',
+		'cssmin',
+		'watch'
+	]);
+
+	grunt.registerTask('main', [
+		'sass:main',
+		'postcss:main'
+	]);
+
+	grunt.registerTask('sandbox', [
+		'sass:sandbox',
+		'newer:postcss:sandbox'
+	]);
+
+	grunt.registerTask('test', [
+		'sass:test',
+		'postcss:test'
+	]);
+
+	grunt.registerTask('default', [
+		'sass:main',
+		'sass:sandbox',
+		'postcss:main',
+		'postcss:sandbox'
+	]);
 
 };

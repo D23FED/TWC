@@ -51,7 +51,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: new_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -92,8 +92,8 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: space # or 'tab'
-    width: 2
+    character: tab # or 'tab'
+    width: 1
 
   LeadingZero:
     enabled: true

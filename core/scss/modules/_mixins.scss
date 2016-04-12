@@ -2,230 +2,231 @@
 
 @mixin respond-to($media) {
 
-  // Desktop-first
-  @if  $media == large {
-    @media (max-width: $screen-lg) {
-      @content;
-    }
-  }
-  @else if $media == medium {
-    @media (max-width: $screen-md) {
-      @content;
-    }
-  }
-  @else if $media == small  {
-    @media (max-width: $screen-sm) {
-      @content;
-    }
-  }
+	// Desktop-first
+	@if  $media == large {
+		@media (max-width: $screen-lg) {
+			@content;
+		}
+	}
+	@else if $media == medium {
+		@media (max-width: $screen-md) {
+			@content;
+		}
+	}
+	@else
+	if $media == small  {
+		@media (max-width: $screen-sm) {
+			@content;
+		}
+	}
 
-  // Mobile first
-  @else if $media == small-and-up {
-    @media (min-width: $screen-sm) {
-      @content;
-    }
-  }
-  @else if $media == medium-and-up {
-    @media (min-width: $screen-md) {
-      @content;
-    }
-  }
-  @else if $media == large-and-up {
-    @media (min-width: $screen-lg) {
-      @content;
-    }
-  }
+	// Mobile first
+	@else if $media == small-and-up {
+		@media (min-width: $screen-sm) {
+			@content;
+		}
+	}
+	@else if $media == medium-and-up {
+		@media (min-width: $screen-md) {
+			@content;
+		}
+	}
+	@else if $media == large-and-up {
+		@media (min-width: $screen-lg) {
+			@content;
+		}
+	}
 
-  // Target one screen size
-  @else if $media == small-only {
-    @media (max-width: $screen-xs - 1) {
-      @content;
-    }
-  }
-  @else if $media == medium-only {
-    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-      @content;
-    }
-  }
-  @else if $media == large-only {
-    @media (min-width: $screen-md) and (max-width: $screen-lg-max) {
-      @content;
-    }
-  }
+	// Target one screen size
+	@else if $media == small-only {
+		@media (max-width: $screen-xs - 1) {
+			@content;
+		}
+	}
+	@else if $media == medium-only {
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			@content;
+		}
+	}
+	@else if $media == large-only {
+		@media (min-width: $screen-md) and (max-width: $screen-lg-max) {
+			@content;
+		}
+	}
 }
 
 // Breakpoint
 @mixin bp($point) {
-  @if $point == medium {
-    @media (max-width: $medium) {
-      @content;
-    }
-  }
-  @else if $point == small {
-    @media (max-width: $small) {
-      @content;
-    }
-  }
+	@if $point == medium {
+		@media (max-width: $medium) {
+			@content;
+		}
+	}
+	@else if $point == small {
+		@media (max-width: $small) {
+			@content;
+		}
+	}
 }
 
 // Margin
 @mixin margin($top: 0, $right: $top or $left, $bottom: $top, $left: $right or $top) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
+	margin-top: $top;
+	margin-right: $right;
+	margin-bottom: $bottom;
+	margin-left: $left;
 }
 
 // Padding
 @mixin padding($top: 0, $right: $top or $left, $bottom: $top, $left: $right or $top) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
+	padding-top: $top;
+	padding-right: $right;
+	padding-bottom: $bottom;
+	padding-left: $left;
 }
 
 // Background Clip
 @mixin background-clip($type: padding-box) {
-  -webkit-background-clip: $type;
-  -moz-background-clip: $type;
-  background-clip: $type;
+	-webkit-background-clip: $type;
+	-moz-background-clip: $type;
+	background-clip: $type;
 }
 
 // Border Radius
 @mixin border-radius($radius: 3px) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
 
-  @include background-clip;
+	@include background-clip;
 }
 
 // Background Gradients
 @mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
-  background-color: $startColor;
-  background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
-  background-image: -webkit-linear-gradient(top, $startColor, $endColor);
-  background-image: -moz-linear-gradient(top, $startColor, $endColor);
-  background-image: -ms-linear-gradient(top, $startColor, $endColor);
-  background-image: -o-linear-gradient(top, $startColor, $endColor);
-  background-image: linear-gradient(top, $startColor, $endColor);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', EndColorStr='#{$endColor}')";
-  zoom: 1;
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image: -moz-linear-gradient(top, $startColor, $endColor);
+	background-image: -ms-linear-gradient(top, $startColor, $endColor);
+	background-image: -o-linear-gradient(top, $startColor, $endColor);
+	background-image: linear-gradient(top, $startColor, $endColor);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', EndColorStr='#{$endColor}')";
+	zoom: 1;
 }
 
 @mixin horizontal-gradient($startColor, $to, $endColor: 100%) {
-  /* fallback/image non-cover color */
-  background-color: $startColor;
-  background-image: -moz-linear-gradient(left, $startColor 0%, $to $endColor);
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop($endColor, $to));
-  background-image: -webkit-linear-gradient(left, $startColor 0%, $to $endColor);
-  background-image: -o-linear-gradient(left, $startColor 0%, $to $endColor);
-  background: -ms-linear-gradient(left, $startColor 0%, $to $endColor);
-  background: linear-gradient(to right, $startColor 0%, $to $endColor);
+	/* fallback/image non-cover color */
+	background-color: $startColor;
+	background-image: -moz-linear-gradient(left, $startColor 0%, $to $endColor);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop($endColor, $to));
+	background-image: -webkit-linear-gradient(left, $startColor 0%, $to $endColor);
+	background-image: -o-linear-gradient(left, $startColor 0%, $to $endColor);
+	background: -ms-linear-gradient(left, $startColor 0%, $to $endColor);
+	background: linear-gradient(to right, $startColor 0%, $to $endColor);
 }
 
 // Box-Shadow
 @mixin box-shadow($value: 0 1px 2px 0 #888) {
-  -webkit-box-shadow: $value;
-  -moz-box-shadow: $value;
-  box-shadow: $value;
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
 }
 
 // Vertical Align
 @mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 // Inline-Block IE
 @mixin inline-block {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
 }
 
 // Opacity
 @mixin opacity($opacity) {
-  filter: alpha(opacity = $opacity * 100);
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})';
-  -moz-opacity: $opacity;
-  -khtml-opacity: $opacity;
-  opacity: $opacity;
+	filter: alpha(opacity = $opacity * 100);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})';
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
 }
 
 // Transform
 @mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -moz-transform: rotate($degrees);
-  -o-transform: rotate($degrees);
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})';
-  filter: 'progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})';
-  zoom: 1;
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})';
+	filter: 'progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})';
+	zoom: 1;
 }
 
 // Transitions
 @mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
-  -webkit-transition: $what $length $easing;
-  -moz-transition: $what $length $easing;
-  -ms-transition: $what $length $easing;
-  -o-transition: $what $length $easing;
-  transition: $what $length $easing;
+	-webkit-transition: $what $length $easing;
+	-moz-transition: $what $length $easing;
+	-ms-transition: $what $length $easing;
+	-o-transition: $what $length $easing;
+	transition: $what $length $easing;
 }
 
 @mixin font-family($font, $style: normal, $weight: normal) {
-  font-family: $font, Arial, Sans-Serif;
-  font-style: $style;
-  font-weight: $weight;
+	font-family: $font, Arial, Sans-Serif;
+	font-style: $style;
+	font-weight: $weight;
 }
 
 // Font Size
 @mixin font-size($size) {
-  font-size: $size * 1px;
-  font-size: $size * 0.1rem;
+	font-size: $size * 1px;
+	font-size: $size * 0.1rem;
 }
 
 // Column Count
 @mixin columns($count, $gap) {
-  -webkit-column-count: $count;
-  -moz-column-count: $count;
-  -ms-column-count: $count;
-  column-count: $count;
-  -webkit-column-gap: $gap;
-  -moz-column-gap: $gap;
-  -ms-column-gap: $gap;
-  column-gap: $gap;
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	-ms-column-count: $count;
+	column-count: $count;
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	-ms-column-gap: $gap;
+	column-gap: $gap;
 }
 
 
 @mixin clearfix {
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
 
-  &:after {
-    clear: both;
-  }
+	&:after {
+		clear: both;
+	}
 }
 
 @mixin center($horizontal: true, $vertical: true) {
-  position: absolute;
+	position: absolute;
 
-  @if $horizontal and $vertical {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  @else if $horizontal {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-  @else if $vertical {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+	@if $horizontal and $vertical {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@else if $horizontal {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	@else if $vertical {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
 }

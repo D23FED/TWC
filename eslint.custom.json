@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "comma-dangle": [1,"never"],
+    "no-console": 1,
+    "no-empty": 1,
+    "no-extra-semi": 1,
+    "no-irregular-whitespace": 1,
+    "curly": [1,"multi"],
+    "dot-notation": 1,
+    "eqeqeq": [1,"smart"],
+    "no-alert": 1,
+    "no-eval": 1,
+    "no-new-func": 1,
+    "strict": [1,"global"],
+    "no-undefined": 1,
+    "no-unused-vars": 1,
+    "brace-style": [1,"1tbs",{"allowSingleLine":true}],
+    "camelcase": [1,{"properties":"always"}],
+    "comma-spacing": [1,{"after":true}],
+    "eol-last": 1,
+    "indent": [1,"Error parsing input"],
+    "key-spacing": [1,{"afterColon":true}],
+    "no-mixed-spaces-and-tabs": 1,
+    "no-multiple-empty-lines": [1,{"max":1}],
+    "no-trailing-spaces": [1,{"skipBlankLines":true}],
+    "semi-spacing": [1,{"after":true}],
+    "space-after-keywords": [1,"always"],
+    "space-before-blocks": 1
+  }
+}
