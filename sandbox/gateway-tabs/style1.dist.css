@@ -1,0 +1,171 @@
+header + twc-box-column {
+  border-radius: 0 0 3px 3px;
+}
+
+.tabs {
+  display: table;
+  width: 100%;
+  border-radius: 3px;
+}
+.tabs li {
+  display: table-cell;
+  position: relative;
+  padding: 1em;
+  border-radius: 3px 3px 0 0;
+  background-color: #3779b3;
+  background-image: linear-gradient(top, #3779b3, #02447e);
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.tabs li a {
+  display: inline-block;
+  position: relative;
+  font-family: 'TWC Round Book',Arial,Sans-Serif;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+}
+.tabs li.active {
+  background: #fff;
+  background-image: none;
+  color: #222;
+}
+
+/* Gateway tabs */
+.gateway-tabs li {
+  display: table-cell;
+  position: relative;
+  padding: 1em;
+  /* border-radius: 3px 3px 0 0; */
+  /* background-color: #3779b3; */
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#3779b3), to(#02447e)); */
+  /* background-image: -webkit-linear-gradient(top, #3779b3, #02447e); */
+  background-image: linear-gradient(top, #3779b3, #02447e);
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.gateway-tabs li a {
+  display: inline-block;
+  position: relative;
+  font-family: 'TWC Round Book',Arial,Sans-Serif;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+}
+.gateway-tabs li.active {
+  background: #fff;
+  background-image: none;
+  color: #222;
+}
+.gateway-tabs li.active a {
+  color: #222;
+}
+
+#gateway .gateway-tabs {
+  display: table;
+  width: 100%;
+  border-radius: 3px;
+}
+#gateway .gateway-tabs ul {
+  display: table-row;
+}
+#gateway .gateway-tabs li {
+  width: 50%;
+  border: 2px solid #c2d6e8;
+}
+#gateway .gateway-tabs li a {
+  padding: 1em;
+}
+#gateway .gateway-tabs li.active {
+  background: rgba(255, 255, 255, 0.95);
+  background-image: none;
+}
+
+.twc-ie #gateway .gateway-tabs li {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#05000000,endColorstr=#05000000);
+}
+
+.tabs {
+  border-radius: 0;
+}
+.tabs ul {
+  display: table-row;
+}
+.tabs li {
+  display: table-cell;
+  padding: 0;
+  border-radius: 0;
+  background-color: #fff;
+  background-image: none;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.tabs li a {
+  color: #333;
+}
+.tabs li.active {
+  color: #222;
+}
+.tabs li.active a {
+  color: #222;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Gateway tabs */
+.gateway-tabs {
+  display: table;
+  width: 100%;
+  border-radius: 3px;
+}
+.gateway-tabs ul {
+  display: table-row;
+}
+.gateway-tabs li {
+  display: table-cell;
+  position: relative;
+  padding: 0;
+  background-image: none;
+  color: #333;
+}
+.gateway-tabs li a {
+  color: #00549f;
+}
+.gateway-tabs li.active {
+  background: #fff;
+  background-image: none;
+  color: #00549f;
+}
+.gateway-tabs li.active a {
+  color: #00549f;
+}
+
+#gateway .gateway-tabs {
+  border-radius: 0;
+}
+#gateway .gateway-tabs li {
+  border-width: 0;
+}
+#gateway .gateway-tabs li a {
+  padding: 0;
+}
+#gateway .gateway-tabs li.active {
+  background: #fff;
+  background-image: none;
+}
+
+.twc-ie #gateway .gateway-tabs li {
+  background-image: none;
+}
