@@ -115,6 +115,10 @@ module.exports = function(grunt) {
 		},
 
 		postcss: {
+			// TODO: consider adding
+			// - color-rgba-fallback: rgba => hex
+			// - opacity: ie8
+			// - pseudoelements: ie8
 			options: {
 				map: true, // inline sourcemaps
 				processors: [
@@ -196,6 +200,7 @@ module.exports = function(grunt) {
 						require('autoprefixer')({ // add vendor prefixes
 							browsers: 'last 3 versions'
 						}),
+						require('postcss-font-awesome')(), // allows shorthand for FA icons, ex: 'font-awesome: camera;'
 						require('postcss-discard-duplicates')(),
 						require('css-mqpacker')() // group media queries
 					],
@@ -204,9 +209,9 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= currentProjectPath %>',
-					src: ['**/*.scss'],
-					dest: '',
-					ext: '.css'
+					src: ['**/*.css'],
+					dest: '<%= currentProjectPath %>',
+					ext: '.dist.css'
 				}]
 			}
 		},
@@ -261,6 +266,12 @@ module.exports = function(grunt) {
 					'sandbox/**/*.scss'
 				],
 				tasks: ['sandbox']
+			},
+			current: {
+				files: [
+					'<%= currentProjectPath %>' + '**/*.scss'
+				],
+				tasks: ['current']
 			}
 		}, //watch
 
