@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		currentProjectPath: 'sandbox/gateway-tabs/',
+		currentProjectPath: 'sandbox/accordion-reskin/',
 
 		jshint: {
 			options: { //https://github.com/jshint/jshint/blob/master/examples/.jshintrc
