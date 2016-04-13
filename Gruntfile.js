@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: '',
 					src: ['**/*.scss'],
-					dest: '',
+					dest: 'dist/',
 					ext: '.css'
 				}]
 			},
@@ -162,7 +162,14 @@ module.exports = function(grunt) {
 					],
 					map: false
 				},
-				src: 'sandbox/**/*.css'
+				files: [
+					{
+						cwd: 'sandbox/',
+						src: '**/*.css',
+						dest: 'build/',
+						expand: true
+					}
+				 ]
 			},
 			test: {
 				options: {
@@ -304,7 +311,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('sandbox', [
 		'sass:sandbox',
-		'newer:postcss:sandbox'
+		// 'newer:postcss:sandbox'
 	]);
 
 	grunt.registerTask('test', [
