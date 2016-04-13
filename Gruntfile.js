@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		currentProjectPath: 'sandbox/accordion-reskin/',
 
 		jshint: {
 			options: { //https://github.com/jshint/jshint/blob/master/examples/.jshintrc
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
 			gruntfile: {
 				src: 'Gruntfile.js'
 			}
-		},// jshint
+		}, // jshint
 
 		concat: {
 			stripBanners: true,
@@ -94,6 +95,15 @@ module.exports = function(grunt) {
 					cwd: 'test/',
 					src: ['**/*.scss'],
 					dest: 'test/',
+					ext: '.css'
+				}]
+			},
+			current: {
+				files: [{
+					expand: true,
+					cwd: '<%= currentProjectPath %>',
+					src: ['**/*.scss'],
+					dest: '',
 					ext: '.css'
 				}]
 			},
@@ -168,13 +178,36 @@ module.exports = function(grunt) {
 					]
 				},
 				src: 'test/**/*.css'
+			},
+			current: {
+				options: {
+					processors: [
+						// add fallbacks for rem units
+						require('pixrem')({
+							rootValue: 10
+						}),
+						require('autoprefixer')({ // add vendor prefixes
+							browsers: 'last 3 versions'
+						}),
+						require('postcss-discard-duplicates')(),
+						require('css-mqpacker')() // group media queries
+					],
+					map: false
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= currentProjectPath %>',
+					src: ['**/*.scss'],
+					dest: '',
+					ext: '.css'
+				}]
 			}
-		}, //postcss
+		},
 
 		cssmin: {
 			combine: {
 				files: {
-					'core/css/main.min.css': [ 'core/css/main.css' ]
+					'core/css/main.min.css': ['core/css/main.css']
 				}
 			}
 		},
@@ -196,7 +229,7 @@ module.exports = function(grunt) {
 					src: ['<%= pkg.paths.dist %>']
 				}]
 			}
-		},//clean
+		}, //clean
 
 		watch: {
 			scripts: {
@@ -209,7 +242,8 @@ module.exports = function(grunt) {
 			css: {
 				files: [
 					'core/css/scss/partials/*.scss',
-					'core/css/scss/modules/*.scss'],
+					'core/css/scss/modules/*.scss'
+				],
 				tasks: ['sass', 'cssmin'],
 				options: {
 					spawn: false,
@@ -221,7 +255,7 @@ module.exports = function(grunt) {
 				],
 				tasks: ['sandbox']
 			}
-		},//watch
+		}, //watch
 
 		eslint: {
 			options: {
@@ -254,7 +288,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('js', [
 		'jshint:main',
 		'concat:main',
-		'uglify']);
+		'uglify'
+	]);
 
 	grunt.registerTask('css', [
 		'sass',
@@ -277,7 +312,13 @@ module.exports = function(grunt) {
 		'postcss:test'
 	]);
 
+	grunt.registerTask('current', [
+		'sass:current',
+		'postcss:current'
+	]);
+
 	grunt.registerTask('default', [
+		'sass:current',
 		'sass:main',
 		'sass:sandbox',
 		'postcss:main',
