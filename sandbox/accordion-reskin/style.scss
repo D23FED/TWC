@@ -23,11 +23,9 @@ $active-submenu-item: liState;
 	border-color: $color-border;
 }
 
-// $text-color
-// $color-sky-dark-darkish
 // SECTION wrapping accordion
 .#{$accordion-section} {
-	// Each accordion item (li)
+	// Each accordion item (LI)
 	.#{$accordion-item} {
 		// Accordion item title (H6)
 		.#{$accordion-heading} {
@@ -78,7 +76,6 @@ $active-submenu-item: liState;
 				}
 
 				// Submenu item hover
-
 				a {
 					line-height: $accordion-item-height;
 					width: 100%;
@@ -142,5 +139,3 @@ $active-submenu-item: liState;
 		background-color: transparent;
 	}
 }
-
-// DIV contatining UL that contains the accordion
