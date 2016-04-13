@@ -240,6 +240,9 @@ module.exports = function(grunt) {
 				files: [{
 					src: ['<%= pkg.paths.dist %>']
 				}]
+			},
+			current: {
+				src: ['<%= currentProjectPath %>*.dist.css']
 			}
 		}, //clean
 
@@ -331,7 +334,8 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('current', [
-		'sass:current',
+		'clean:current',
+		'newer:sass:current',
 		'postcss:current'
 	]);
 

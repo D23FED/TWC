@@ -9,6 +9,11 @@ $border-color: $color-steel-dark-lighter;
 	#gateway {
 		.gateway-tabs {
 			display: block;
+			border-bottom: {
+				color: $color-bright-blue;
+				style: solid;
+				width: 7px;
+			}
 
 			// List
 			ul {
@@ -21,7 +26,6 @@ $border-color: $color-steel-dark-lighter;
 				width: auto;
 				line-height: 4em;
 				padding: 0 1em;
-				border-radius: 5px 5px 0 0;
 
 				&:not(.active) {
 					border:  {
@@ -39,6 +43,21 @@ $border-color: $color-steel-dark-lighter;
 					}
 				}
 
+				// Active Tab
+				&.active {
+					color: #00549f;
+					margin-bottom: -1px;
+					position: relative;
+					z-index: 187;
+					box-shadow: none;
+					cursor: default;
+					background-color: $color-bright-blue;
+
+					a {
+						color: #fff;
+						cursor: default;
+					}
+				}
 				// Links
 				a {
 					color: $color-sky-dark-lightish;
@@ -54,37 +73,9 @@ $border-color: $color-steel-dark-lighter;
 					&.active {}
 				}
 
-				// Active Tab
-				&.active {
-					color: #00549f;
-					border: 1px solid $border-color;
-					border-bottom: {
-						color: #fff;
-						width: 1px;
-						style: solid;
-					};
-					margin-bottom: -1px;
-					position: relative;
-					z-index: 187;
-					box-shadow: none;
-					cursor: default;
-
-					a {
-						color: $color-sky-dark-darkish;
-						cursor: default;
-					}
-				}
 			}
 		}
 	}
-}
-
-.tab-content {
-	border-top: {
-		color: $border-color;
-		width: 1px;
-		style: solid;
-	};
 }
 
 html {
