@@ -1,7 +1,3 @@
-header + twc-box-column {
-  border-radius: 0 0 3px 3px;
-}
-
 .tabs {
   display: table;
   width: 100%;
@@ -107,7 +103,6 @@ header + twc-box-column {
 
 #content {
   /* reset */
-  /* Gateway tabs */
 }
 #content html {
   overflow-y: scroll;
@@ -128,15 +123,16 @@ header + twc-box-column {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  color: #333;
 }
 #content .tabs li a {
-  color: #333;
+  color: inherit;
 }
 #content .tabs li.active {
   color: #222;
 }
 #content .tabs li.active a {
-  color: #222;
+  color: inherit;
 }
 #content .tab-content {
   display: none;
@@ -160,9 +156,10 @@ header + twc-box-column {
   background-color: #fff;
   color: #333;
   border-radius: 0;
+  color: #00549f;
 }
 #content .gateway-tabs li a {
-  color: #00549f;
+  color: inherit;
 }
 #content .gateway-tabs li.active {
   background: #fff;
@@ -170,7 +167,7 @@ header + twc-box-column {
   color: #00549f;
 }
 #content .gateway-tabs li.active a {
-  color: #00549f;
+  color: inherit;
 }
 #content #gateway .gateway-tabs {
   border-radius: 0;
@@ -243,4 +240,4 @@ html {
   overflow-y: scroll;
 }
 
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=style-03.css.map */

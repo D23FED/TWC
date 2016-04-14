@@ -103,7 +103,6 @@
 
 #content {
   /* reset */
-  /* Gateway tabs */
 }
 #content html {
   overflow-y: scroll;
@@ -124,15 +123,16 @@
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  color: #333;
 }
 #content .tabs li a {
-  color: #333;
+  color: inherit;
 }
 #content .tabs li.active {
   color: #222;
 }
 #content .tabs li.active a {
-  color: #222;
+  color: inherit;
 }
 #content .tab-content {
   display: none;
@@ -156,9 +156,10 @@
   background-color: #fff;
   color: #333;
   border-radius: 0;
+  color: #00549f;
 }
 #content .gateway-tabs li a {
-  color: #00549f;
+  color: inherit;
 }
 #content .gateway-tabs li.active {
   background: #fff;
@@ -166,7 +167,7 @@
   color: #00549f;
 }
 #content .gateway-tabs li.active a {
-  color: #00549f;
+  color: inherit;
 }
 #content #gateway .gateway-tabs {
   border-radius: 0;
@@ -184,27 +185,16 @@
 #content .twc-ie #gateway .gateway-tabs li {
   background-image: none;
 }
-#content #gateway .gateway-tabs {
-  display: block;
-  border-bottom-color: #02a9e0;
-  border-bottom-style: solid;
-  border-bottom-width: 7px;
-}
-#content #gateway .gateway-tabs ul {
-  display: block;
-}
 #content #gateway .gateway-tabs li {
-  display: inline-block;
   width: auto;
   line-height: 4em;
   padding: 0 1em;
 }
 #content #gateway .gateway-tabs li:not(.active) {
-  border-width: 1px 1px 0 1px;
+  border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: #e6e6e7;
-  box-shadow: inset 0px -4px 5px 0px rgba(223, 231, 238, 0.15);
-  background-color: #f6f6f6;
+  border-color: #747679;
+  background-color: transparent;
 }
 #content #gateway .gateway-tabs li:not(.active) a:hover {
   color: #00549f;
@@ -218,18 +208,21 @@
   z-index: 187;
   box-shadow: none;
   cursor: default;
-  background-color: #02a9e0;
+  background-color: #fff;
+  border-width: 1px;
+  border-color: #747679;
+  border-bottom-color: #fff;
 }
 #content #gateway .gateway-tabs li.active a {
-  color: #fff;
+  color: #333;
   cursor: default;
 }
 #content #gateway .gateway-tabs li a {
-  color: #6b9cc7;
+  color: #00549f;
 }
 
 html {
   overflow-y: scroll;
 }
 
-/*# sourceMappingURL=style3.css.map */
+/*# sourceMappingURL=style-05.css.map */
