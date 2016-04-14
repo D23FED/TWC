@@ -8,32 +8,39 @@ $border-color: $color-steel-dark-lighter;
 
 	#gateway {
 		.gateway-tabs {
-			display: block;
+			border-bottom: 4px solid $color-sky-dark-darkish;
 
 			// List
 			ul {
-				display: block;
-				margin-bottom: 10px;
 			}
 
 			// List Items
 			li {
-				display: inline-block;
 				width: auto;
 				line-height: 4em;
 				padding: 0 1em;
 				border-style: solid;
-				border-radius: 10px;
-				margin-right: 7px;
+
+				&::after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					line-height: .3;
+					font-size: 20px;
+					right: 0;
+				}
 
 				&:not(.active) {
-					background-color: #f2fbfd;
+					background-color: transparent;
 					color: $color-sky-dark-lightish;
 
 					&:hover {
 						color: $color-sky-dark-darkish;
 						transition-property: color;
 						transition-duration: .3s;
+						&::after {
+							font-awesome: caret-up;
+						}
 					}
 
 					a {
@@ -43,14 +50,16 @@ $border-color: $color-steel-dark-lighter;
 
 				// Active Tab
 				&.active {
-					background-color: $color-sky-dark-darkish;
+					background-color: white;
 					position: relative;
 					z-index: 187;
 					cursor: default;
-					color: #fff;
+					color: $color-sky-dark-darkish;
+					&::after {
+						font-awesome: caret-up;
+					}
 
 					a {
-						cursor: default;
 					}
 				}
 

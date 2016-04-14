@@ -27,10 +27,11 @@ $border-color: $color-steel-dark-lighter;
 				margin-right: 7px;
 
 				&:not(.active) {
-					background-color: #f2fbfd;
+					background-color: transparent;
 					color: $color-sky-dark-lightish;
 
 					&:hover {
+						background-color: #f2fbfd;
 						color: $color-sky-dark-darkish;
 						transition-property: color;
 						transition-duration: .3s;
@@ -43,11 +44,11 @@ $border-color: $color-steel-dark-lighter;
 
 				// Active Tab
 				&.active {
-					background-color: $color-sky-dark-darkish;
+					background-color: white;
 					position: relative;
 					z-index: 187;
 					cursor: default;
-					color: #fff;
+					color: $color-sky-dark-darkish;
 
 					a {
 						cursor: default;

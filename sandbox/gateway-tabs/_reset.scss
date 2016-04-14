@@ -71,9 +71,11 @@ html {
       background: #fff;
       background-image: none;
       color: $color-sky-dark-darkish;
+      cursor: default;
 
       a {
         color: inherit;
+        cursor: default;
       }
     }
   }

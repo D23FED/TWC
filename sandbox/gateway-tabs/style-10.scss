@@ -8,27 +8,20 @@ $border-color: $color-steel-dark-lighter;
 
 	#gateway {
 		.gateway-tabs {
-			display: block;
-
 			// List
-			ul {
-				display: block;
-				margin-bottom: 10px;
-			}
+			ul {}
 
 			// List Items
 			li {
-				display: inline-block;
 				width: auto;
 				line-height: 4em;
 				padding: 0 1em;
 				border-style: solid;
-				border-radius: 10px;
-				margin-right: 7px;
 
 				&:not(.active) {
-					background-color: #f2fbfd;
+					background-color: transparent;
 					color: $color-sky-dark-lightish;
+					border-top: 2px solid transparent;
 
 					&:hover {
 						color: $color-sky-dark-darkish;
@@ -43,15 +36,29 @@ $border-color: $color-steel-dark-lighter;
 
 				// Active Tab
 				&.active {
-					background-color: $color-sky-dark-darkish;
+					box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, .5);
 					position: relative;
-					z-index: 187;
+					z-index: 100;
+					background-color: white;
+					position: relative;
+					z-index: 100;
 					cursor: default;
-					color: #fff;
+					color: $color-sky-dark-darkish;
+					border-top: 2px solid $color-sky-dark-darkish;
 
-					a {
-						cursor: default;
+					&::after {
+						bottom: -20px;
+						content: '';
+						display: block;
+						height: 20px;
+						left: 0;
+						position: absolute;
+						width: 100%;
+						background-color: #fff;
+						z-index: 200;
 					}
+
+					a {}
 				}
 
 				// Links
@@ -64,7 +71,9 @@ $border-color: $color-steel-dark-lighter;
 
 				// Last
 				&:last-child {
-					&.active {}
+					&.active {
+						box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, .5);
+					}
 				}
 			}
 		}

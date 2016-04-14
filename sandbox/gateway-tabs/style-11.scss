@@ -8,27 +8,23 @@ $border-color: $color-steel-dark-lighter;
 
 	#gateway {
 		.gateway-tabs {
-			display: block;
-
 			// List
-			ul {
-				display: block;
-				margin-bottom: 10px;
-			}
+			ul {}
 
 			// List Items
 			li {
-				display: inline-block;
 				width: auto;
 				line-height: 4em;
 				padding: 0 1em;
 				border-style: solid;
-				border-radius: 10px;
-				margin-right: 7px;
+				border-radius: 8px 8px 0 0;
 
 				&:not(.active) {
-					background-color: #f2fbfd;
-					color: $color-sky-dark-lightish;
+					background-color: transparent;
+					color: #999;
+					background-color: #f6f6f6;
+					box-shadow: inset 0px -5px 29px 0px rgba(0,0,0,0.08);
+
 
 					&:hover {
 						color: $color-sky-dark-darkish;
@@ -43,15 +39,29 @@ $border-color: $color-steel-dark-lighter;
 
 				// Active Tab
 				&.active {
-					background-color: $color-sky-dark-darkish;
 					position: relative;
-					z-index: 187;
+					z-index: 100;
+					background-color: white;
+					position: relative;
+					z-index: 100;
 					cursor: default;
-					color: #fff;
+					color: $color-sky-dark-darkish;
+					border-right: 1px solid #ddd;
+					border-top: 1px solid #eee;
 
-					a {
-						cursor: default;
+					&::after {
+						bottom: -20px;
+						content: '';
+						display: block;
+						height: 20px;
+						left: 0;
+						position: absolute;
+						width: 100%;
+						background-color: #fff;
+						z-index: 200;
 					}
+
+					a {}
 				}
 
 				// Links
@@ -64,7 +74,10 @@ $border-color: $color-steel-dark-lighter;
 
 				// Last
 				&:last-child {
-					&.active {}
+					&.active {
+						border-left: 1px solid #ddd;
+						border-right: none;
+					}
 				}
 			}
 		}
