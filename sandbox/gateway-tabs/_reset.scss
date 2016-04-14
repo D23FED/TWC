@@ -1,7 +1,8 @@
 /* reset */
 html {
-       overflow-y: scroll;
+  overflow-y: scroll;
 }
+
 .tabs {
   border-radius: 0;
 
@@ -19,16 +20,17 @@ html {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    color: #333;
 
     a {
-      color: #333;
+      color: inherit;
     }
 
     &.active {
       color: #222;
 
       a {
-        color: #222;
+        color: inherit;
       }
     }
   }
@@ -42,13 +44,10 @@ html {
   }
 }
 
-/* Gateway tabs */
-
 .gateway-tabs {
   display: table;
   width: 100%;
   border-radius: 3px;
-
 
   ul {
     display: table-row;
@@ -62,18 +61,21 @@ html {
     background-color: #fff;
     color: #333;
     border-radius: 0;
+    color: $color-sky-dark-darkish;
 
     a {
-      color: $color-sky-dark-darkish;
+      color: inherit;
     }
 
     &.active {
       background: #fff;
       background-image: none;
       color: $color-sky-dark-darkish;
+      cursor: default;
 
       a {
-        color: $color-sky-dark-darkish;
+        color: inherit;
+        cursor: default;
       }
     }
   }

@@ -1,11 +1,10 @@
-header + twc-box-column {
-  border-radius: 0 0 3px 3px;
-}
-
 .tabs {
   display: table;
   width: 100%;
   border-radius: 3px;
+}
+.tabs ul {
+  display: table-row;
 }
 .tabs li {
   display: table-cell;
@@ -13,7 +12,6 @@ header + twc-box-column {
   padding: 1em;
   border-radius: 3px 3px 0 0;
   background-color: #3779b3;
-  background-image: linear-gradient(top, #3779b3, #02447e);
   color: #fff;
   text-align: center;
   vertical-align: middle;
@@ -32,17 +30,30 @@ header + twc-box-column {
   background-image: none;
   color: #222;
 }
+.tabs li.active a {
+  color: #222;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
 
 /* Gateway tabs */
+.gateway-tabs {
+  display: table;
+  width: 100%;
+  border-radius: 3px;
+}
+.gateway-tabs ul {
+  display: table-row;
+}
 .gateway-tabs li {
   display: table-cell;
   position: relative;
   padding: 1em;
-  /* border-radius: 3px 3px 0 0; */
-  /* background-color: #3779b3; */
-  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#3779b3), to(#02447e)); */
-  /* background-image: -webkit-linear-gradient(top, #3779b3, #02447e); */
-  background-image: linear-gradient(top, #3779b3, #02447e);
   color: #fff;
   text-align: center;
   vertical-align: middle;
@@ -90,13 +101,19 @@ header + twc-box-column {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#05000000,endColorstr=#05000000);
 }
 
-.tabs {
+#content {
+  /* reset */
+}
+#content html {
+  overflow-y: scroll;
+}
+#content .tabs {
   border-radius: 0;
 }
-.tabs ul {
+#content .tabs ul {
   display: table-row;
 }
-.tabs li {
+#content .tabs li {
   display: table-cell;
   padding: 0;
   border-radius: 0;
@@ -106,66 +123,126 @@ header + twc-box-column {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-}
-.tabs li a {
   color: #333;
 }
-.tabs li.active {
+#content .tabs li a {
+  color: inherit;
+}
+#content .tabs li.active {
   color: #222;
 }
-.tabs li.active a {
-  color: #222;
+#content .tabs li.active a {
+  color: inherit;
 }
-
-.tab-content {
+#content .tab-content {
   display: none;
 }
-.tab-content.active {
+#content .tab-content.active {
   display: block;
 }
-
-/* Gateway tabs */
-.gateway-tabs {
+#content .gateway-tabs {
   display: table;
   width: 100%;
   border-radius: 3px;
 }
-.gateway-tabs ul {
+#content .gateway-tabs ul {
   display: table-row;
 }
-.gateway-tabs li {
+#content .gateway-tabs li {
   display: table-cell;
   position: relative;
   padding: 0;
   background-image: none;
+  background-color: #fff;
   color: #333;
-}
-.gateway-tabs li a {
+  border-radius: 0;
   color: #00549f;
 }
-.gateway-tabs li.active {
+#content .gateway-tabs li a {
+  color: inherit;
+}
+#content .gateway-tabs li.active {
   background: #fff;
   background-image: none;
   color: #00549f;
+  cursor: default;
 }
-.gateway-tabs li.active a {
-  color: #00549f;
+#content .gateway-tabs li.active a {
+  color: inherit;
+  cursor: default;
 }
-
-#gateway .gateway-tabs {
+#content #gateway .gateway-tabs {
   border-radius: 0;
 }
-#gateway .gateway-tabs li {
+#content #gateway .gateway-tabs li {
   border-width: 0;
 }
-#gateway .gateway-tabs li a {
+#content #gateway .gateway-tabs li a {
   padding: 0;
 }
-#gateway .gateway-tabs li.active {
+#content #gateway .gateway-tabs li.active {
   background: #fff;
   background-image: none;
 }
-
-.twc-ie #gateway .gateway-tabs li {
+#content .twc-ie #gateway .gateway-tabs li {
   background-image: none;
 }
+#content #gateway .gateway-tabs {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.37);
+  z-index: 187;
+  position: relative;
+}
+#content #gateway .gateway-tabs li {
+  width: auto;
+  line-height: 4em;
+  padding: 0 1em;
+  border-style: solid;
+  background-color: #00549f;
+  color: #fff;
+}
+#content #gateway .gateway-tabs li:not(.active):hover::after {
+  font-awesome: caret-down;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  height: 20px;
+  width: 100%;
+  z-index: 200;
+  color: #00549f;
+  line-height: 1;
+  font-size: 35px;
+}
+#content #gateway .gateway-tabs li:not(.active):hover a {
+  transition-property: opacity;
+  transition-duration: .3s;
+  opacity: 1;
+}
+#content #gateway .gateway-tabs li:not(.active) a {
+  opacity: .6;
+}
+#content #gateway .gateway-tabs li.active {
+  position: relative;
+  z-index: 100;
+  background-color: #00549f;
+}
+#content #gateway .gateway-tabs li.active::after {
+  font-awesome: caret-down;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  height: 20px;
+  width: 100%;
+  z-index: 200;
+  color: #00549f;
+  line-height: 1;
+  font-size: 35px;
+}
+#content #gateway .gateway {
+  padding-top: 10px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+/*# sourceMappingURL=style-12.css.map */
