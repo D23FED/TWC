@@ -42,7 +42,6 @@ g.task('style', function() {
 		.pipe($.changed(paths.dist + paths.css, { extension: '.css' }))
 		// Output names of files being processed
 		.pipe($.debug({title: 'Processing:'}))
-		.pipe($.print())
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())
 		// Compile Sass
@@ -50,7 +49,7 @@ g.task('style', function() {
 		// CSS processing
 		.pipe($.postcss(postCssProcessors))
 		// Write Sourcemaps
-		.pipe($.sourcemaps.write(paths.dist + paths.css))
+		.pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
 		.pipe(g.dest(paths.dist + paths.css))
 		.on('end', function() {
