@@ -24,22 +24,22 @@ var
 		css: 'css/',
 		test: 'test/',
 		sandbox: './sandbox/',
-		dist: './dist/',
+		dist: 'dist/',
 		css: 'css/'
 	},
 	globs = {
 		css: './css/**',
 		sass: '**/*.scss',
+		jade: '**/*.jade',
 		scripts: '**/*.js'
 	};
 
 // Tasks
 g.task('style', function() {
 	return g.src(
-		['./test/' + globs.sass],
-		{base: '.'})
+		['sandbox/' + globs.sass], {base: '.'})
 		// Only process changed files
-		.pipe($.changed(paths.dist + paths.css, { extension: '.css' }))
+		.pipe($.changed(paths.dist, { extension: '.css' }))
 		// Output names of files being processed
 		.pipe($.debug({title: 'Processing:'}))
 		// Begin recording sourcemaps
@@ -51,16 +51,30 @@ g.task('style', function() {
 		// Write Sourcemaps
 		.pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
-		.pipe(g.dest(paths.dist + paths.css))
+		.pipe(g.dest(paths.dist))
+		.pipe($.debug({title: 'Output:', minimal: false}))
 		.on('end', function() {
 			$.util.log('CSS Processed');
 		})
 });
 
+g.task('markup', function() {
+	return g.src(
+		['./test/' + globs.jade],
+		{base: '.'})
+	.pipe($.debug({title: 'Processing:'}))
+	.pipe($.jade({
+		pretty: '\t'
+		}))
+	.pipe(g.dest(paths.dist))
+});
+
 // Everything below is placeholder / WIP
 /*
 TODO:
+Create seperate dev/dist tasks
 
+Add plugins:
 JS
 ==
 concat
@@ -79,6 +93,10 @@ General
 plumber
 notify
 postcss-assets
+zip
+browser-sync
+environment
+
 */
 g.task('scripts', function() {
 	return g.src(paths.scripts, {
@@ -119,6 +137,6 @@ g.task('watch', function() {
 	// g.watch(paths.images, ['images']);
 	// g.watch(paths.scripts, ['scripts']);
 });
-g.task('default', ['clean'], function() {
-	g.start('styles', 'scripts', 'images');
+g.task('default', function() {
+	g.start('style', 'markup')
 });
