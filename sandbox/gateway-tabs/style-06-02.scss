@@ -25,19 +25,21 @@ $border-color: $color-steel-dark-lighter;
 				border-style: solid;
 
 				&:not(.active) {
-					background-color: $color-steel-dark-lighter;
+					background-color: transparent;
 					border: {
 						width: 7px 0 0 0;
 						style: solid;
 						color: transparent;
 					};
-					color: $color-steel-dark-lightish;
+					border-left: 1px solid white;
+					border-right: 1px solid white;
+					color: $color-sky-dark-darkish;
 
 					&:hover {
-						border-color: $color-steel-dark-lightish;
+						border-top-color: $color-bright-blue;
 						transition-property: border-color;
 						transition-duration: .3s;
-						color: #333;
+						// color: #333;
 						transition-property: color;
 						transition-duration: .3s;
 					}
