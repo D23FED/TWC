@@ -1,10 +1,10 @@
 <?php
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 define("CORE", ROOT . '/TWC/core/');
-define("INC", ROOT . '/TWC/core/includes/');
+define("CORE_INC", ROOT . '/TWC/core/includes/');
 
 function include_core($file, $once = true) {
-	$file = INC . $file;
+	$file = CORE_INC . $file;
 	if ($once) {
 		include_once($file);
 	} else {
@@ -17,7 +17,7 @@ function get_header() {
 }
 
 function get_footer() {
-	include_once(INC.'footer.php');
+	include_once(CORE_INC.'footer.php');
 }
 
 function the_title() {
@@ -37,7 +37,7 @@ function the_title() {
 // Include all needed template pieces
 
 // Load Header -- includes TopHat
-include_once(INC.'head.php');
+include_once(CORE_INC.'head.php');
 
 // Load Browser Alerts
 if ( (isset($browserAlerts)) && ($browserAlerts === true) ) {

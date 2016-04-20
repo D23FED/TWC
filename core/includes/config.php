@@ -1,10 +1,10 @@
 <?php
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 define("CORE", ROOT . '/TWC/core/');
-define("INC", ROOT . '/TWC/core/includes/');
+define("CORE_INC", ROOT . '/TWC/core/includes/');
 
 // function include_core($file, $once = true) {
-// 	$file = INC . $file;
+// 	$file = CORE_INC . $file;
 // 	if ($once) {
 // 		include_once($file);
 // 	} else {
