@@ -23,7 +23,7 @@
 		if ( file_exists($scripts) ) {
 			include('includes/scripts.php');
 		} else {
-			echo '<!-- ' . $scripts . ' not found -->';
+			echo "<!--  $scripts not found -->";
 		}
 
 		if ( (isset($persist)) && ($persist === true) ) {

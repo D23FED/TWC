@@ -38,7 +38,9 @@
 			<div class="new section"></div>
 		</div>
 		<h1 class='<?php if ( (isset($banner_title_position)) && ($banner_title_position === 'center') ) { echo "text-center"; } ?>'>
-			<?php echo $banner_title; ?>
+			<?php if ( isset($banner_title) ) {
+				echo $banner_title;
+			} ?>
 		</h1>
 		<span>
 		<?php

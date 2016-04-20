@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <?php
-	$global_vars = 'variables/global_variables.php';
+	include_core('variables/global_variables.php');
+	// $global_vars = 'variables/global_variables.php';
+	// if ( file_exists($global_vars) ) {
+	// 	include($global_vars);
+	// } else {
+	// 	echo '<!-- Global vars not found -->';
+	// }
 	$page_vars = 'includes/variables/page_variables.php';
-	if ( file_exists($global_vars) ) {
-		include($global_vars);
-	} else {
-		echo '<!-- Global vars not found -->';
-	}
 	if ( file_exists($page_vars) ) {
 		include($page_vars);
 	} else {
@@ -23,12 +24,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="expires" content="Mon, 26 Jul 1997 05:00:00 GMT"/>
-
-	<title><?php if ($title !='') { echo($title); } else { echo ($banner_title); } ?> | Time Warner Cable</title>
 	<meta name="description" content="<?=$description?>">
 	<meta name="keywords" content="<?=$keywords?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
+	<title><?php the_title() ?></title>
 	<link rel="icon" href="/TWC/core/images/favicon.ico" type="image/x-icon">
 
 	<!-- Global Element & Page CSS -->
@@ -47,6 +47,4 @@
 </head>
 
 <body id="<?php if ($body_ID !='') { echo($body_ID);}?>">
-		<!--[if lt IE 7]>
-			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
+<?php	include_core('browse-happy.php') ?>
