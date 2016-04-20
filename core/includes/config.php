@@ -2,7 +2,6 @@
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 define("CORE", ROOT . '/TWC/core/');
 define("CORE_INC", ROOT . '/TWC/core/includes/');
-
 // function include_core($file, $once = true) {
 // 	$file = CORE_INC . $file;
 // 	if ($once) {
