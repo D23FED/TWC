@@ -2,9 +2,9 @@
 <!-- Footer Component -->
 <footer class="twc-footer twc-backgroundGradient-6 twc-gradient" role="contentinfo">
 	<div class="parsys twc-row twc-container footer-menu">
-		<? if ($legalOnly): ?>
+		<?php if ( (isset($legalOnly)) && ($legalOnly === true) ): ?>
 
-	<? else: ?>
+	<?php else: ?>
 	<!-- Column Control 50/50 -->
 	<div class="parysys 50-50 section columnControl">
 		<div class="parsys_column twc-col2_5050">
@@ -316,41 +316,41 @@
 <div class="parsys twc-footer-links twc-row">
 	<div class="list section">
 <ul>
-  <li class="twc-first">
-      <div class="smartLink parbase">
-          <a analyticsname="Privacy Policy:1:1:privacy policy" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy.html">Privacy Policy</a>
-      </div>
-  </li>
+	<li class="twc-first">
+			<div class="smartLink parbase">
+					<a analyticsname="Privacy Policy:1:1:privacy policy" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy.html">Privacy Policy</a>
+			</div>
+	</li>
 
-  <li>
-      <div class="smartLink parbase">
-          <a analyticsname="Terms, Conditions &amp; Policies:1:2:terms, conditions &amp; policies" target="_blank" href="http://help.twcable.com/html/policies.html">Terms, Conditions &amp; Policies</a>
-      </div>
-  </li>
+	<li>
+			<div class="smartLink parbase">
+					<a analyticsname="Terms, Conditions &amp; Policies:1:2:terms, conditions &amp; policies" target="_blank" href="http://help.twcable.com/html/policies.html">Terms, Conditions &amp; Policies</a>
+			</div>
+	</li>
 
-  <li>
-      <div class="smartLink parbase">
-          <a analyticsname="Regulatory:1:3:regulatory" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/regulatory-notices.html">Regulatory</a>
-      </div>
-  </li>
+	<li>
+			<div class="smartLink parbase">
+					<a analyticsname="Regulatory:1:3:regulatory" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/regulatory-notices.html">Regulatory</a>
+			</div>
+	</li>
 
-  <li>
-      <div class="smartLink parbase">
-          <a analyticsname="Forward-Looking Statements Caution:1:4:forward-looking statements caution" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy/caution-concerning-forward-looking-statements.html">Forward-Looking Statememts Caution</a>
-      </div>
-  </li>
+	<li>
+			<div class="smartLink parbase">
+					<a analyticsname="Forward-Looking Statements Caution:1:4:forward-looking statements caution" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy/caution-concerning-forward-looking-statements.html">Forward-Looking Statememts Caution</a>
+			</div>
+	</li>
 
-  <li>
-      <div class="smartLink parbase">
-          <a analyticsname="California Privacy Rights:1:5:california privacy rights" target="_blank" href="http://help.twcable.com/html/twc_sub_agreement_california.html">California Privacy Rights</a>
-      </div>
-  </li>
+	<li>
+			<div class="smartLink parbase">
+					<a analyticsname="California Privacy Rights:1:5:california privacy rights" target="_blank" href="http://help.twcable.com/html/twc_sub_agreement_california.html">California Privacy Rights</a>
+			</div>
+	</li>
 
-  <li class="twc-last">
-      <div class="smartLink parbase">
-          <a analyticsname="Website Terms of Use:1:6:website terms of use" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy/website-terms-of-use.html">Website Terms of Use</a>
-      </div>
-  </li>
+	<li class="twc-last">
+			<div class="smartLink parbase">
+					<a analyticsname="Website Terms of Use:1:6:website terms of use" target="_blank" href="http://www.timewarnercable.com/en/about-us/legal/privacy-policy/website-terms-of-use.html">Website Terms of Use</a>
+			</div>
+	</li>
 </ul>
 	</div>
 
@@ -360,16 +360,17 @@
 		</div>
 	</div>
 
-	<?
-                	// Load Custom Footer
-	if ($customFooter) {
-		include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/customFooter.php');
-	} ?>
+	<?php
+		// Load Custom Footer
+		if ( (isset($customFooter)) && ($customFooter === true) ) {
+			include(ROOT . '/TWC/core/includes/customFooter.php');
+		}
+	?>
 
 	<div class="new section"></div>
 </div>
-<!-- .Footer Legal -->
+<!-- /Footer Legal -->
 
 </div>
 </footer>
-	<!-- .Footer Component -->
+<!-- /Footer Component <?php echo __FILE__ ?>-->
