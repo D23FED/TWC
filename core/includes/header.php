@@ -1,5 +1,8 @@
 <?php
-
+include_once('constants.php');
+// $_SERVER['DOCUMENT_ROOT']);
+// define("CORE", ROOT . '/TWC/core/');
+// define("CORE_INC", ROOT . '/TWC/core/includes/
 // Include all needed template pieces
 
 // Load Header -- includes TopHat

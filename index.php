@@ -1,8 +1,5 @@
 <?php
-// Constants
-define("ROOT", $_SERVER['DOCUMENT_ROOT']);
-define("CORE", ROOT . '/TWC/core/');
-define("CORE_INC", ROOT . '/TWC/core/includes/');
+include_once("$_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php");
 
 // Get page name
 if ( isset($_GET['p']) ) {
