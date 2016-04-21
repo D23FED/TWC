@@ -32,5 +32,9 @@ function stylesheet($url) {
 	$style_str = "<link rel='stylesheet' href='$url'>";
 	echo $style_str;
 }
+function script_tag($url) {
+	$script_str = "<script src='$url'></script>";
+	echo $script_str;
+}
 ?>
 

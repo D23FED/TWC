@@ -1,4 +1,5 @@
 <?php
+// Constants
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 define("CORE", ROOT . '/TWC/core/');
 define("CORE_INC", ROOT . '/TWC/core/includes/');
@@ -50,7 +51,7 @@ if ( file_exists($page) ) {
 	}
 	include_once(CORE_INC . 'functions.php');
 	include_once(CORE_INC . 'header.php');
-	// Image files realtive to their project folder will break, search and replace img tags to make them relative to root
+	// Image files relative to their project folder will break, search and replace img tags to make them relative to root
 	ob_start();
 	include($page);
 	$page_content = ob_get_clean();
