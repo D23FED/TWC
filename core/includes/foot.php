@@ -310,7 +310,7 @@
 		<div class="columnClear"></div>
 	</div>
 	<!-- .Column Control 50/50 -->
-<? endif; ?>
+<?php endif; ?>
 
 <!-- Footer Legal -->
 <div class="parsys twc-footer-links twc-row">
