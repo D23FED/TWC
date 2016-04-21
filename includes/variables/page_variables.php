@@ -59,6 +59,6 @@
 
 		$content = true;
 
-		$footer = tr;
+		$footer = true;
 
 ?>

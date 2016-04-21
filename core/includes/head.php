@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <?php
-	include_core('variables/global_variables.php');
+	include_once(CORE_INC . 'variables/global_variables.php');
 	// $global_vars = 'variables/global_variables.php';
 	// if ( file_exists($global_vars) ) {
 	// 	include($global_vars);
 	// } else {
 	// 	echo '<!-- Global vars not found -->';
 	// }
-	$page_vars = 'includes/variables/page_variables.php';
+	// $page_vars = 'includes/variables/page_variables.php';
 	if ( file_exists($page_vars) ) {
 		include($page_vars);
 	} else {
@@ -35,16 +35,20 @@
 	<link rel="stylesheet" href="/TWC/core/css/main.min.css">
 	<?php
 		if ( (isset($componentName)) && ($componentName !='') ) { echo '<link rel="stylesheet" href="css/' . $componentName . '.css">'; }
+	  if (isset($page_dir) && $page_dir) {
+	  	stylesheet($page_dir.'css/page.css');
+	  }
 	  if (file_exists('../../css/page.css')) { echo '<link rel="stylesheet" href="../../css/page.css">'; }
 	  if (file_exists('../css/page.css')) { echo '<link rel="stylesheet" href="../css/page.css">'; }
 	  if (file_exists('css/page.css')) { echo '<link rel="stylesheet" href="css/page.css">'; }
 	// Load Page Module Specific CSS
 	  if (file_exists('includes/css.php')) { include('includes/css.php');}
 	?>
+
 	<link id='printCSS' media='print' rel='stylesheet' type='text/css' href='/TWC/core/css/print.css' />
 	<script src="/TWC/core/js/vendor/modernizr-2.6.2.min.js"></script>
 
 </head>
 
 <body id="<?php if ($body_ID !='') { echo($body_ID);}?>">
-<?php	include_core('browse-happy.php') ?>
+<?php	include_once(CORE_INC . 'browse-happy.php') ?>

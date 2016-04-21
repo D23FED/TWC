@@ -1,124 +1,114 @@
 <?php
-define("ROOT", $_SERVER['DOCUMENT_ROOT']);
-define("CORE", ROOT . '/TWC/core/');
-define("CORE_INC", ROOT . '/TWC/core/includes/');
-
-function include_core($file, $once = true) {
-	$file = CORE_INC . $file;
-	if ($once) {
-		include_once($file);
-	} else {
-		include($file);
-	}
-}
-
-function get_header() {
-	include_core('header.php');
-}
-
-function get_footer() {
-	include_once(CORE_INC.'footer.php');
-}
-
-function the_title() {
-	$site_title = 'Time Warner Cable';
-	if ( (isset($GLOBALS['title'] )) && ($GLOBALS['title'] !== '') ) {
-		echo($GLOBALS['title']);
-	} elseif ( (isset($GLOBALS['banner_title'] )) && ($GLOBALS['banner_title'] !== '') ) {
-		echo ($GLOBALS['banner_title']);
-	} else {
-		echo 'Page Title';
-	}
-	echo " | $site_title";
-}
-
-// include_once($_SERVER['DOCUMENT_ROOT'] . '/TWC/core/includes/config.php');
 
 // Include all needed template pieces
 
 // Load Header -- includes TopHat
 include_once(CORE_INC.'head.php');
 
+$arr = array(
+	'browserAlerts',
+	'tophat',
+	'tophat_redesign',
+	'logoHeader',
+	'nav',
+	'subnav',
+	'simpleNav',
+	'alert',
+	'banner',
+	'supportSearch',
+	'content',
+	'panel',
+	'carousel',
+	'share',
+	'slider'
+	);
+foreach ($arr as $value) {
+  if (isset(${$value}) && ${$value} ) {
+  	include_once(CORE_INC.$value.'.php');
+  }
+}
+
 // Load Browser Alerts
-if ( (isset($browserAlerts)) && ($browserAlerts === true) ) {
-	include_core('browserAlerts.php');
-}
+// if ( isset($browserAlerts) && $browserAlerts ) {
+// 	include_once(CORE_INC.'browserAlerts.php');
+// }
 
-// Load TopHat
-if ( (isset($tophat)) && ($tophat === true) ) {
-	include_core('tophat.php');
+// // Load TopHat
+// if ( isset($tophat) && $tophat ) {
+// 	include_once(CORE_INC.'tophat.php');
+// } else {
+// }
+
+// // Load TopHat Redesign
+// if ( isset($tophat_redesign) && $tophat_redesign ) {
+// 	include_once(CORE_INC.'tophat_redesign.php');
+// }
+
+// // Load Logo-only Header
+// if ( isset($logoHeader) && $logoHeader ) {
+// 	include_once(CORE_INC.'logoHeader.php');
+// }
+
+// // Load Main Nav -- Mega-Menu
+// if ( isset($nav) && $nav ) {
+// 	include_once(CORE_INC.'nav.php');
+// }
+
+// // Load SubNav if present
+// if ( isset($subnav) && $subnav ) {
+// 	include_once(CORE_INC.'subnav.php');
+// }
+
+// // Load SubNav if present
+// if ( isset($simpleNav) && $simpleNav ) {
+// 	include_once(CORE_INC.'simpleNav.php');
+// }
+
+// // Conditionally Load Alert if required
+// if ( isset($alert) && $alert ) {
+// 	include_once(CORE_INC.'alert.php');
+// }
+
+// // Conditionally Load Banner if required
+// if ( isset($banner) && $banner ) {
+// 	include_once(CORE_INC.'banner.php');
+// }
+
+// // Load Supprt Pages Search
+// if ( isset($supportSearch) && $supportSearch ) {
+// 	include_once(CORE_INC.'supportSearch.php');
+// }
+
+// // Load Content opening tags
+// if ( isset($content) && $content ) {
+// 	include_once(CORE_INC.'content.php');
+// }
+
+if ( isset($container) && ($container !== true) ) {
+	include_once(CORE_INC.'container.php');
 } else {
+	include_once(CORE_INC.'containerFull.php');
 }
 
-// Load TopHat Redesign
-if ( (isset($tophat_redesign)) && ($tophat_redesign === true) ) {
-	include_core('tophat_redesign.php');
-}
+// // Conditionally Load Image Content Panel if required
+// if ( isset($panel) && $panel ) {
+// 	include_once(CORE_INC.'panel.php');
+// }
 
-// Load Logo-only Header
-if ( (isset($logoHeader)) && ($logoHeader === true) ) {
-	include_core('logoHeader.php');
-}
+// // Conditionally Load Carousel if required
+// if ( isset($carousel) && $carousel ) {
+// 	include_once(CORE_INC.'carousel.php');
+// }
 
-// Load Main Nav -- Mega-Menu
-if ( (isset($nav)) && ($nav === true) ) {
-	include_core('nav.php');
-}
+// // Conditionally Load Share Component if required
+// if ( isset($share) && $share ) {
+// 	include_once(CORE_INC.'share.php');
+// }
 
-// Load SubNav if present
-if ( (isset($subnav)) && ($subnav === true) ) {
-	include_core('subnav.php');
-}
-
-// Load SubNav if present
-if ( (isset($simpleNav)) && ($simpleNav === true) ) {
-	include_core('simpleNav.php');
-}
-
-// Conditionally Load Alert if required
-if ( isset($alert) && ($alert === true) ) {
-	include_core('alert.php');
-}
-
-// Conditionally Load Banner if required
-if ( (isset($banner)) && ($banner === true) ) {
-	include_core('banner.php');
-}
-
-// Load Supprt Pages Search
-if ( isset($supportSearch) && ($supportSearch === true) ) {
-	include_core('supportSearch.php');
-}
-
-// Load Content opening tags
-if ( (isset($content)) && ($content === true) ) {
-	include_core('content.php');
-}
-
-if ( (isset($container)) && ($container != true) ) {
-	include_core('container.php');
-} else {
-	include_core('containerFull.php');
-}
-
-// Conditionally Load Image Content Panel if required
-if ( (isset($panel)) && ($panel === true) ) {
-	include_core('panel.php');
-}
-
-// Conditionally Load Carousel if required
-if ( (isset($carousel)) && ($carousel === true) ) {
-	include_core('carousel.php');
-}
-
-// Conditionally Load Share Component if required
-if ( (isset($share)) && ($share === true) ) {
-	include_core('share.php');
-}
-
-  // Conditionally Load Slider if required
-if ( (isset($slider)) && ($slider === true) ) {
-	include_core('slider.php');
-}
+// // Conditionally Load Slider if required
+// if ( isset($slider) && $slider ) {
+// 	include_once(CORE_INC.'slider.php');
+// }
 
 ?>
+
