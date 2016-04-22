@@ -202,17 +202,18 @@
   border-style: solid;
 }
 #content #gateway .gateway-tabs li:not(.active) {
-  background-color: #e6e6e7;
+  background-color: transparent;
   border-width: 7px 0 0 0;
   border-style: solid;
   border-color: transparent;
-  color: #98999b;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  color: #00549f;
 }
 #content #gateway .gateway-tabs li:not(.active):hover {
-  border-color: #98999b;
+  border-top-color: #02a9e0;
   transition-property: border-color;
   transition-duration: .3s;
-  color: #333;
   transition-property: color;
   transition-duration: .3s;
 }

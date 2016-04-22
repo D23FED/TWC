@@ -1,0 +1,93 @@
+@import '../../init';
+@import 'old';
+
+$gutter: 14px;
+$half-gutter: $gutter/2; // sass does not interpret vars inside calc()
+
+// Version "7"
+.twc-content {
+  background-image: none;
+  background-color: #fff;
+}
+
+#content {
+	@import 'reset';
+
+	#gateway {
+		.gateway-tabs {
+			// List
+			ul {
+				display: block;
+				position: relative;
+			}
+
+			// List Items
+			li {
+				width: auto;
+				line-height: 4em;
+				padding: 0 1em;
+				border-style: solid;
+				color: $color-sky-dark-darkish;
+				display: inline-block;
+				width: calc(50% - #{$half-gutter});
+
+				&:not(.active) {
+					background-color: $color-steel-dark-lightest;
+					border: {
+						width: 0 0 2px 0;
+						style: solid;
+						color: transparent;
+					};
+					// color: $color-steel-dark-lightish;
+
+					&:hover {
+						border-color: $color-sky-dark-darkish;
+						transition-property: border-color;
+					}
+				}
+
+				// Active Tab
+				&.active {
+					background-color: #effbff;
+					border-width: 0 0 2px 0;
+					border-color: $color-sky-dark-darkish;
+					position: relative;
+					z-index: 187;
+					box-shadow: none;
+					cursor: default;
+					// color: $color-sky-dark-darkish;
+
+					a {
+						cursor: default;
+						&::after {
+							font-awesome: chevron-down;
+							position: absolute;
+							right: -25px;
+							font-size: 80%;
+						}
+					}
+				}
+
+				// Links
+				a {
+				}
+
+				// First
+				&:first-child {
+					&.active {}
+				}
+
+				// Last
+				&:last-child {
+					position: absolute;
+					right: 0;
+					&.active {}
+				}
+			}
+		}
+	}
+}
+
+html {
+	overflow-y: scroll;
+}

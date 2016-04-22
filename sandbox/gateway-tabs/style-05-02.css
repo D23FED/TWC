@@ -101,11 +101,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#05000000,endColorstr=#05000000);
 }
 
-.twc-content {
-  background-image: none;
-  background-color: #fff;
-}
-
 #content {
   /* reset */
 }
@@ -124,6 +119,7 @@
   border-radius: 0;
   background-color: #fff;
   background-image: none;
+  color: #333;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -198,43 +194,50 @@
   width: auto;
   line-height: 4em;
   padding: 0 1em;
-  border-style: solid;
 }
 #content #gateway .gateway-tabs li:not(.active) {
-  background-color: transparent;
-  border-width: 7px 0 0 0;
+  border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: transparent;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  color: #00549f;
+  border-color: #747679;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-color: transparent;
 }
-#content #gateway .gateway-tabs li:not(.active):hover {
-  border-top-color: #02a9e0;
-  transition-property: border-color;
+#content #gateway .gateway-tabs li:not(.active) a:hover {
+  color: #00549f;
   transition-property: color;
   transition-duration: .3s;
 }
 #content #gateway .gateway-tabs li.active {
-  background-color: #fff;
-  border-width: 7px 0 0 0;
-  border-top-color: #02a9e0;
-  border-left: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
-  border-bottom: 1px solid #fff;
+  color: #00549f;
   position: relative;
   z-index: 187;
   box-shadow: none;
   cursor: default;
-  color: #00549f;
+  background-color: #fff;
+  border-width: 1px;
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #fff;
 }
 #content #gateway .gateway-tabs li.active a {
+  color: #333;
   cursor: default;
+}
+#content #gateway .gateway-tabs li a {
+  color: #00549f;
 }
 #content #gateway .gateway {
   border: 1px solid #e1e1e1;
+}
+#content #gateway #buyflow-current .input-section {
+  border-right-width: 0;
 }
 
 html {
   overflow-y: scroll;
 }
+
+/*# sourceMappingURL=style-05-02.css.map */
