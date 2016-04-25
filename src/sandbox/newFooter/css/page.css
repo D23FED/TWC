@@ -1,0 +1,210 @@
+.socialStrip {
+  background: #12314c;
+  padding: 1em 0.5em;
+  color: #fff;
+}
+
+.socialStrip ul {
+  display: table;
+  width: 100%;
+}
+
+.socialStrip li {
+  display: table-cell;
+  padding-right: 0.25em;
+}
+
+.socialStrip li:last-child {
+  margin-right: 0;
+}
+
+.socialStrip a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.socialStrip a img {
+  max-height: 18px;
+  margin-right: 0.125em;
+}
+
+.socialStrip a span {
+  vertical-align: top;
+}
+
+.socialStrip .twc-container {
+  padding: 0;
+}
+
+.emailSubscribe .cta {
+  display: inline;
+  vertical-align: top;
+}
+
+.emailSubscribe .emailSubscribeForm {
+  text-align: center;
+}
+.emailSubscribe .twc-container {
+  padding: 2em 0 0;
+}
+.emailSubscribe label {
+  width: 40%;
+}
+.emailSubscribe input {
+  width: 30%;
+}
+.emailSubscribe .cta {
+  width: 30%;
+}
+.twc-footer {
+  padding: 0;
+  background: transparent;
+}
+.twc-footer .twc-container {
+  padding: 0 0.5em;
+}
+
+.twc-footer .section.labelList {
+  width: 20%;
+  float: left;
+}
+
+.twc-footer .labelList a {
+  display: block;
+  color: #00549f;
+  font-family: "TWC Round Light", Arial, Sans-Serif;
+  margin-top: 0;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.twc-footer .twc-footer-links ul,
+.twc-footer-copyright-msg {
+  text-align: center;
+}
+
+.twc-footer .twc-footer-links a {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-family: "TWC Round Light", Arial, Sans-Serif;
+}
+
+.twc-footer p.label {
+  background-color: transparent;
+  background-image: none;
+  border-right: none;
+  color: #000;
+  font-family: "TWC Round Book", Arial, Sans-Serif;
+  font-size: 35.2px;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+}
+@media (max-width: 48em) {
+
+  .socialStrip li {
+    display: table-cell;
+  }
+
+  .socialStrip a img {
+    max-height: 30px;
+  }
+
+  .emailSubscribe label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+
+  .emailSubscribe input,
+  .emailSubscribe .cta {
+    width: 49%;
+    margin-bottom: 0.5em;
+    margin-right: 2%;
+  }
+
+  .emailSubscribe .cta {
+    margin-right: 0;
+  }
+
+  .twc-footer .section.labelList {
+    float: left;
+    width: 33%;
+    margin-bottom: 2em;
+  }
+}
+@media (max-width: 40em) {
+
+  .emailSubscribe label,
+  .emailSubscribe input,
+  .emailSubscribe .cta {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+
+  .twc-footer p.label {
+    background-color: transparent;
+    background-image: none;
+    border-right: none;
+    color: #000;
+    font-family: "TWC Round Book", Arial, Sans-Serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .twc-footer .section.labelList {
+    float: left;
+    width: 50%;
+    margin-bottom: 3em;
+  }
+
+  .twc-footer .labelList ul {
+    padding-left: 0;
+  }
+
+  .twc-footer .labelList a {
+    margin-top: 0.5em;
+  }
+
+  .twc-footer h3.label + ul {
+    display: block;
+    width: 100%;
+  }
+
+  .twc-footer h3.label + ul li {
+    background-color: transparent;
+    background-image: none;
+    border-top: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0;
+    text-align: left;
+  }
+
+  .twc-footer .labelList li {
+    line-height: 1;
+  }
+
+  .twc-footer h3.label + ul li a {
+    font-weight: 300;
+  }
+
+  .twc-footer h3.label + ul li a:after {
+    content: none;
+  }
+
+  .twc-footer .section.labelList:nth-child(6) {
+    clear: both;
+  }
+}
+/*# sourceMappingURL=page.css.map */

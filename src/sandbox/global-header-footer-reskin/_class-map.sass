@@ -1,0 +1,31 @@
+// All header menu items
+
+div.new-mega-menu
+	nav.twc-new-navigation
+		div.twc-new-nav.list
+			ul (top-level menu)
+				li
+					div.mega-menu-item
+						div.mobile-hidden.tablet-hidden
+							.smartLink
+								a span ("Explore TWC")
+						div.mobile-nav.desktop-hidden
+							label ("Explore", "All Planes")
+						ul
+							li
+								.submenu.twc-submenu.twc-new-mega-section.teaser (submenu wrapper)
+										.campaign
+											.megamenu (submenu wrapper)
+												.labelList (submenu item list)
+
+Header menu item with dropdown accordion
+													h4.label.accordion
+													ul (accordion item submenu)
+														li
+															.smartLink a span.link-label::after
+
+Header menu item withOUT dropdown accordion
+													ul (accordion item submenu)
+														li
+															.smartLink a span.link-label::after
+

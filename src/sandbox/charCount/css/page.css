@@ -1,0 +1,24 @@
+.twc-container {
+  height: 800px;
+}
+.twc-content {
+  background-image: none;
+  background: #fff;
+}
+.segmentedBorderHeading {
+  padding: 0 2em;
+  position: absolute;
+  top: -15%;
+  background: #fff;
+  width: 50%;
+  left: 25%;
+}
+.segmentedBorder {
+  position: relative;
+  border: 1px #02a9e0;
+  border-style: solid;
+  border-top-width: 20%;
+  padding: 2em 1em;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=page.css.map */

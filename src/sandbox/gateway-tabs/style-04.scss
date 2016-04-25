@@ -1,0 +1,83 @@
+@import '../../init';
+@import 'old';
+
+$border-color: $color-steel-dark-lighter;
+
+#content {
+	@import 'reset';
+
+	#gateway {
+		.gateway-tabs {
+			display: block;
+			border-bottom: {
+				color: $color-sky-dark-darkish;
+				style: solid;
+				width: 7px;
+			}
+
+			// List
+			ul {
+				display: block;
+			}
+
+			// List Items
+			li {
+				display: inline-block;
+				width: auto;
+				line-height: 4em;
+				padding: 0 1em;
+
+				&:not(.active) {
+					border:  {
+						width: 1px 1px 0 1px;
+						style: solid;
+						color: $color-steel-dark-lighter;
+					}
+					box-shadow: inset 0px -4px 5px 0px rgba(223, 231, 238, 0.15);
+					background-color: #f6f6f6;
+
+					a:hover {
+						color: $color-sky-dark-darkish;
+						transition-property: color;
+						transition-duration: .3s;
+					}
+				}
+
+				// Active Tab
+				&.active {
+					color: #00549f;
+					margin-bottom: -1px;
+					position: relative;
+					z-index: 187;
+					box-shadow: none;
+					cursor: default;
+					background-color: $color-sky-dark-darkish;
+
+					a {
+						color: #fff;
+						cursor: default;
+					}
+				}
+				// Links
+				a {
+					color: $color-sky-dark-lightish;
+				}
+
+				// First
+				&:first-child {
+					&.active {}
+				}
+
+				// Last
+				&:last-child {
+					&.active {}
+				}
+
+			}
+		}
+	}
+}
+
+html {
+	overflow-y: scroll;
+}

@@ -1,0 +1,125 @@
+.twc-footer {
+  background-color: #fff;
+  background-image: none;
+}
+.twc-footer h3.label {
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 0;
+  border-width: 0;
+  border-style: none;
+  text-align: left;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-image: none;
+  background-color: transparent;
+  min-height: auto;
+  padding: 0;
+  font-weight: normal;
+  color: #333;
+}
+.twc-footer h3.label + ul {
+  display: block;
+  position: static;
+  width: auto;
+  padding-left: 0;
+}
+.twc-footer h3.label + ul li {
+  border-width: 0;
+  border-style: none;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+}
+.twc-footer h3.label + ul li a:after {
+  float: none;
+  content: '';
+  position: initial;
+  right: auto;
+}
+.twc-footer p {
+  color: #333;
+}
+.twc-footer a {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #00549f;
+  font-weight: normal;
+}
+.twc-footer a:hover {
+  color: #02a9e0;
+}
+.twc-footer > .footer {
+  border-color: #c2c2c2;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+.twc-footer #footer-menu {
+  border-color: #c2c2c2;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  padding-top: 7px;
+  padding-bottom: 0;
+}
+.twc-footer #footer-menu [class*='twc-col5'] {
+  margin-bottom: 22px;
+}
+.twc-footer #footer-menu a,
+.twc-footer #footer-menu .parsys_column a {
+  color: #00549f;
+  font-weight: normal;
+}
+.twc-footer #footer-links {
+  margin-top: 34px;
+}
+.twc-footer #footer-links ul {
+  line-height: 1;
+}
+.twc-footer #footer-links .horizontal {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0px;
+}
+.twc-footer #footer-legal {
+  padding-top: 0;
+  margin-top: 19px;
+}
+.twc-footer #footer-links,
+.twc-footer #footer-legal {
+  text-align: center;
+}
+.twc-footer #footer-links p,
+.twc-footer #footer-links a,
+.twc-footer #footer-legal p,
+.twc-footer #footer-legal a {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #333;
+}
+.twc-footer #footer-links li:after,
+.twc-footer #footer-legal li:after {
+  color: #e0e0e0;
+}
+.twc-footer .horizontal.pipes li.js-last:after {
+  padding: 0;
+}
+.twc-footer ul.mobile .smartLink.horizontal-center a {
+  padding: 0;
+}
+
+@media (max-width: 48em) {
+  .twc-footer #footer-menu {
+    padding-bottom: 20px;
+  }
+  .twc-footer #footer-menu [class*='twc-col5'] {
+    margin-bottom: 2em;
+  }
+  .twc-footer #footer-links .horizontal {
+    margin-top: 11px;
+  }
+  .twc-footer #footer-legal {
+    margin-top: 15px;
+  }
+}

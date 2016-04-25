@@ -1,0 +1,743 @@
+.twc-backgroundGradient-5, .twc-content {
+  background: #fff;
+  background-image: none;
+  overflow: hidden;
+}
+.h1, h1 {
+  font-family: "TWC Round Light";
+}
+
+.twc-new-navigation ul.twc-new-nav > li input[type="checkbox"] ~ label {
+  margin-top: 0!important;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+.twc-new-nav h4.label, .twc-new-nav h5.label, .twc-new-nav .login label {
+    color: #02a9e0;
+    font-weight: 700;
+
+}
+.twc-top {
+  background: #12314d;
+  border-bottom: 1px solid #fff;
+}
+
+.newBlue {
+  color: #02a9e0 !important;
+}
+
+.segmentedBorder .pricing {
+  width: 50%;
+  float: left;
+}
+
+.heroContainer .cta span, .wifiContainer .cta span, .ondemand .cta span, #sales_contacts .cta span {
+  font-family: "TWC Round Book";
+    /*color: #00549f;*/
+}
+.heroContainer .cta a {
+  padding: 0.75em 0;
+}
+.wifiContainer {
+    margin-top: 7em;
+}
+.flyout .cta span {
+  font-family: "TWC Round Medium";
+}
+.imageArtDirection .cta a, .internal .cta a {
+  padding: 0 0 0.75em;
+}
+.pricing .h4 sup {
+  line-height: 0.5;
+  display: inline-block;
+}
+
+.pricing .term {
+  font-size: 10px;
+  line-height: 0.8;
+  margin-left: -2em;
+  text-align: left;
+}
+
+.twc-top-nav li.twc-active .smartLink {
+  background: #fff;
+  border-left: 1px solid #fff;
+  border-radius: 5px 5px 0 0;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  box-shadow: none;
+  position: relative;
+  z-index: 7999;
+}
+
+.twc-drop-nav.js-persist a, .twc-drop-nav.persist a, .twc-top-nav li a:hover, .twc-top-nav li.twc-active .smartLink a {
+  color: #333;
+}
+
+.twc-new-navigation .twc-new-nav .twc-new-mega-section {
+  background-color: #fff;
+  background-image: none;
+}
+.twc-new-navigation .twc-new-nav .twc-new-mega-section.expand-left {
+  right: 1px;
+}
+
+.twc-new-navigation li a, .twc-new-navigation li span, flyout li a {
+  color: #00549f;
+}
+.twc-new-navigation li a:hover, .flyout li a:hover {
+    color: #02a9e0;
+    text-decoration: none;
+}
+
+.twc-top-nav .smartLink a {
+  color: #fff;
+  font-weight: inherit;
+  font-family: "TWC Round Light";
+}
+.twc-top-nav .smartLink a:hover {
+  color: #04aadd;
+}
+
+.twc-backgroundGradient-2 {
+  background-color: #fff;
+  background-image: none;
+}
+
+.twc-new-navigation {
+  background-color: #f3fbfe;
+  background-image: none;
+  border-bottom: 7px solid #04aadd;
+  font-family: "TWC Round Light";
+}
+.twc-new-navigation .twc-new-nav>li[class*=nav-menu-]>a {
+    font-family: "TWC Round light";
+    font-size: 25.6px;
+    font-size: 1.6rem;
+}
+.twc-new-navigation .twc-new-nav > li > a, .twc-new-navigation .twc-new-nav > li > label {
+  color: #00549f;
+  text-transform: capitalize;
+}
+
+.twc-new-navigation .twc-new-nav > li:hover > a, .twc-new-navigation .twc-new-nav > li:hover > label {
+  color: #fff;
+}
+
+.twc-new-navigation .twc-new-nav > li {
+  border-right: 1px solid #64CDF3;
+  padding: 0.7em 0 0.6em;
+  width: 20%;
+}
+
+.twc-new-navigation .twc-new-nav > li:hover {
+  background-color: #02a9df;
+  background-image: none;
+  box-shadow: none;
+}
+
+.expand-left {
+  right: 0;
+}
+
+.twc-new-navigation .twc-new-nav > li:nth-of-type(4) {
+  border-right: 1px solid #64CDF3;
+}
+
+.newHead .newHeaderIcons ul.horizontal {
+  width: 50%;
+}
+
+.newHead .newHeaderIcons ul.horizontal > li {
+  width: 20%;
+}
+
+.newHead li .clickIcon > a figure {
+  height: 35px;
+}
+
+.newHead .newHeaderIcons ul.horizontal > li .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li span,
+.newHead .newHeaderIcons ul.horizontal > li:hover .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li:hover span {
+  color: #00549f;
+  opacity: 1;
+  font-family: "TWC Round Light";
+}
+
+.newHead .newHeaderIcons ul.horizontal > li:hover .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li:hover span {
+  opacity: 0.75;
+}
+
+.segmentedBorder {
+  position: relative;
+  border: 1px solid #02a9e0;
+  padding: 3em 0.5em;
+  border-radius: 7px;
+  margin: 3em 2em 0;
+}
+
+.segmentedBorderHeading {
+    padding: 0 1em;
+    position: absolute;
+    top: -11%;
+    width: 27em;
+    background: #fff;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.segmentedBorder [class*="twc-col4_25252525-c"] {
+  border-right: 1px solid #02a9e0;
+}
+
+.segmentedBorder .twc-col4_25252525-c3 {
+  border-right: none;
+}
+
+.flyout {
+  text-align: center;
+  margin-left: inherit;
+}
+.flyout a {
+  font-family: "TWC Round Light";
+}
+
+.flyoutIcon {
+  max-width: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.flyoutIcon img {
+    margin: 0;
+}
+.flyoutIcon a {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  opacity:1;
+}
+.flyoutIcon a:hover {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  opacity:0.75;
+}
+.sales_contacts cta {
+    opacity: 0.75;
+}
+.sales_contacts cta:hover {
+    opacity: 1;
+}
+
+.newHead li .clickIcon>a img {
+  opacity: 1;
+}
+.newHead li:hover .clickIcon>a img {
+  opacity: 0.75;
+}
+.flyoutContent-down {
+  right: auto;
+  top: 150px;
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.5);
+  background: #fff;
+  opacity: 0.95;
+}
+.flyoutContent-down .vertical.lined>ul>li {
+  border: none;
+  text-align: left;
+}
+.flyoutContent-down a span {
+  border: medium none;
+  color: #00549f;
+  font-family: 'TWC Round Light',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 0 1em;
+  font-size: 14px;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+}
+.flyoutContent-down a:hover {
+  text-decoration: underline;
+}
+.alternative {
+  background: #00315c;
+  border: none;
+}
+.alternative a span, .alternative a:hover {
+  color: #fff;
+}
+.flyoutContent-left {
+  left: 1em;
+}
+.flyoutContent-last {
+  right: 1em;
+}
+
+.heroBG {
+  background: #f8f8f8;
+}
+.heroBG figure img {
+  margin: 0 auto;
+}
+.heroContainer {
+     margin: 1em 0 12em;
+}
+.ondemand {
+    margin-top: 9em;
+  text-align: left;
+}
+
+.internal {
+  color: #333;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+[class*="flyoutContent-"] {
+  max-width: inherit;
+  min-width: inherit;
+  width: 150%;
+}
+
+.flyout .cta.icon-angle-up a {
+  background-color: #00315c;
+  border: 1px solid #00315c;
+  color: #fff;
+}
+
+.imageArtDirection {
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.imageArtDirection .twc-container {
+  padding: 0;
+}
+
+.imageArtDirection figure img {
+  margin: 0 auto;
+}
+
+.imageArtDirection .heroContentWrapper {
+  -webkit-transform: translateY(65%);
+      -ms-transform: translateY(65%);
+          transform: translateY(65%);
+}
+
+.offerBar {
+  width: 100%;
+  min-height: 40px;
+  background-color: #00315c;
+}
+
+.offerBar .twc-container {
+  padding: 0.5em 0;
+}
+
+.offerBar .h6 strong {
+  font-weight: 700;
+}
+.offerBar .white a:hover {
+   background-color: #02a9e0;
+}
+
+.flyoutHR {
+  margin: 0 auto;
+  border-top: 1px solid #02a9e0;
+  max-width: 70%;
+}
+
+.scroll-arrow {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0.5em;
+    z-index: 1;
+}
+.scroll-arrow > span {
+    background: #5b1f69 none repeat scroll 0 0;
+    border: 1px solid #6e8298;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-family: TWC Round Medium;
+    font-size: 16px;
+    font-size: 1rem;
+    height: 52px;
+    padding: 1.5em 0;
+    width: 52px;
+}
+.scroll-arrow .twc-icon-only span {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+
+/* New Footer CSS */
+
+.socialStrip {
+  background: #12314c;
+  padding: 1em 0.5em;
+  color: #fff;
+}
+
+.socialStrip ul {
+  display: table;
+  width: 100%;
+}
+
+.socialStrip li {
+  display: table-cell;
+  padding-right: 0.25em;
+}
+
+.socialStrip li:last-child {
+  margin-right: 0;
+}
+
+.socialStrip a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.socialStrip a img {
+  max-height: 18px;
+  margin-right: 0.125em;
+}
+
+.socialStrip a span {
+  vertical-align: top;
+}
+
+.socialStrip .twc-container {
+  padding: 0;
+}
+
+.emailSubscribe .cta {
+  display: inline;
+  vertical-align: top;
+}
+
+.emailSubscribe .emailSubscribeForm {
+  text-align: center;
+  padding: 1.5em;
+}
+.emailSubscribe .twc-container {
+  padding: 2em 0 0;
+}
+.emailSubscribe label {
+  width: 40%;
+}
+.emailSubscribe input {
+  width: 30%;
+}
+.emailSubscribe .cta {
+  width: 30%;
+}
+.twc-footer {
+  padding: 0 1em;
+  background: transparent;
+}
+.twc-footer .twc-container {
+  padding: 0 0.5em;
+}
+
+.twc-footer .section.labelList {
+  width: 20%;
+  float: left;
+}
+
+.twc-footer .labelList a {
+  display: block;
+  color: #00549f;
+  font-family: "TWC Round Light", Arial, Sans-Serif;
+  margin-top: 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.twc-footer .twc-footer-links ul,
+.twc-footer-copyright-msg {
+  text-align: center;
+}
+
+.twc-footer .twc-footer-links a {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-family: "TWC Round Light", Arial, Sans-Serif;
+}
+
+.twc-footer p.label {
+  background-color: transparent;
+  background-image: none;
+  border-right: none;
+  color: #000;
+  font-family: "TWC Round Book", Arial, Sans-Serif;
+  font-size: 27.2px;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+}
+@media (max-width: 48em) {
+  .newHead .newHeaderIcons ul.horizontal {
+    width: 70%;
+  }
+  .twc-new-navigation {
+    height: auto;
+  }
+  .twc-new-navigation .twc-new-nav > li {
+    padding-bottom: 7px;
+    width: 20%;
+    font-weight: bold;
+  }
+  .twc-new-navigation ul.twc-new-nav > li {
+    height: 40px;
+  }
+  .twc-new-navigation ul.twc-new-nav > li:hover {
+    background-color: #02a9df;
+    background-image: none;
+    box-shadow: none;
+    border-right: 1px solid #64CDF3;
+  }
+  .twc-new-navigation ul.twc-new-nav > li input[type="checkbox"] ~ label:hover {
+    color: #fff;
+  }
+  .twc-new-navigation ul.twc-new-nav>li input[type=checkbox]:checked~label {
+    background-color: #02a9df;
+    background-image: none;
+    box-shadow: none;
+    padding: 0px;
+    color: #fff;
+    padding: 1em 0 0.25em;
+    height: 40px;
+  }
+  .twc-new-navigation ul.twc-new-nav > li:nth-of-type(4) {
+    border-right: 1px solid #64CDF3;
+  }
+  .twc-new-navigation ul.twc-new-nav > li input[type="checkbox"] ~ label {
+    margin-top: -4em;
+    font-size: 1.2rem;
+    color: #00549f;
+    padding: 1em 0 0.25em;
+  }
+  .twc-new-navigation form#login-form {
+    margin: 1em;
+  }
+  .segmentedBorder {
+    padding: 1em 0;
+    margin: 0em 2em;
+  }
+  .segmentedBorderHeading {
+    padding: 1em 0;
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .segmentedBorder [class*="twc-col4_25252525-c"] {
+    margin-bottom: 1em;
+    padding: 1em 0;
+  }
+  .segmentedBorder .twc-col4_25252525-c3,
+  .segmentedBorder .twc-col4_25252525-c1 {
+    border-right: none;
+  }
+  .flyoutContent-left {
+    left: 0;
+  }
+  .flyoutContent-right {
+    right: 0;
+  }
+  .imageArtDirection .heroContentWrapper {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .ondemand {
+    margin-top: 0em;
+    text-align: center;
+  }
+  .heroContainer {
+    margin: 1em 0 10em;
+  }
+  .wifiContainer {
+    margin-top: 0em;
+    text-align: center;
+  }
+  .internal {
+    margin: 0;
+  }
+  .mobileBG {
+    background: #fff;
+    opacity: .85;
+    padding-top: 2em;
+  }
+  .socialStrip li {
+    display: table-cell;
+  }
+  .socialStrip a img {
+    max-height: 30px;
+  }
+  .emailSubscribe label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+  .emailSubscribe input,
+  .emailSubscribe .cta {
+    width: 49%;
+    margin-bottom: 0.5em;
+    margin-right: 2%;
+  }
+  .emailSubscribe .cta {
+    margin-right: 0;
+  }
+  .twc-footer .section.labelList {
+    float: left;
+    width: 33%;
+    margin-bottom: 2em;
+  }
+  .flyoutContent-last {
+    width: 100%;
+    right: 0em;
+  }
+  .flyout {
+    min-height: 265px;
+  }
+}
+@media (max-width: 40em) {
+  .newHead .newHeaderIcons {
+    width: 50%;
+  }
+  .newHead .twc-logo {
+    width: 30%;
+  }
+  /*  .newHead .newHeaderIcons.ebf ul.horizontal {
+    width: 100%;
+  }
+  .newHead .newHeaderIcons.ebf ul.horizontal > li {
+    width: 25%;
+  }*/
+  .newHead .newHeaderIcons ul.horizontal > li {
+    width: 33%;
+  }
+  .marginless [class*="twc-col4_25252525-c"] {
+    width: 100%;
+  }
+  .segmentedBorder {
+    border: none;
+  }
+  .segmentedBorder [class*="twc-col4_25252525-c"] {
+    border-right: none;
+    border-bottom: 1px solid #04aadd;
+  }
+  .offerStripContainer {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .newHead li .clickIcon > a {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .imageArtDirection .heroContentWrapper {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .twc-new-navigation ul.twc-new-nav > li input[type="checkbox"] ~ label {
+    margin-top: -4em;
+  }
+  #sales_contacts [class*=twc-col4_25252525-c] {
+    width: 48.75%;
+  }
+  [class*="twc-col6_151515151515-c"] {
+    width: 15%;
+  }
+  .marginless [class*=twc-col5_2020202020-c] {
+    width: 100%;
+  }
+  .flyoutContent-down {
+    width: 100%;
+    right: 0em;
+  }
+  .emailSubscribe label,
+  .emailSubscribe input,
+  .emailSubscribe .cta {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+  .twc-footer p.label {
+    background-color: transparent;
+    background-image: none;
+    border-right: none;
+    color: #000;
+    font-family: "TWC Round Book", Arial, Sans-Serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .twc-footer .section.labelList {
+    float: left;
+    width: 50%;
+    margin-bottom: 3em;
+  }
+  .twc-footer .labelList ul {
+    padding-left: 0;
+  }
+  .twc-footer .labelList a {
+    margin-top: 0.5em;
+  }
+  .twc-footer h3.label + ul {
+    display: block;
+    width: 100%;
+  }
+  .twc-footer h3.label + ul li {
+    background-color: transparent;
+    background-image: none;
+    border-top: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0;
+    text-align: left;
+  }
+  .twc-footer .labelList li {
+    line-height: 1;
+  }
+  .twc-footer h3.label + ul li a {
+    font-weight: 300;
+  }
+  .twc-footer h3.label + ul li a:after {
+    content: none;
+  }
+  .twc-footer .section.labelList:nth-child(6) {
+    clear: both;
+  }
+  .flyout {
+    min-height: 100%;
+  }
+  #hphero.imageArtDirection > div {
+    background-size: 180%;
+    max-height: 345px;
+    background-position: 50% bottom;
+  }
+  .heroContainer {
+    margin: 1em 0 9em;
+  }
+}
+/*# sourceMappingURL=page.css.map */

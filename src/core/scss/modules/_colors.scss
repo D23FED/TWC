@@ -1,0 +1,146 @@
+// TWC residential colors.
+$white: #fff;
+$black: #000;
+$grey: #666;
+$link: #3376b2;
+$lightgrey: #e1e1e1;
+$footer-link: $grey;
+$text: #333;
+$text-color: $text;
+$text-black: #010101;
+$text-grey: #666;
+$text-lightgrey: #e1e1e1;
+$text-link: $link;
+$text-white: $white;
+$text-error: #f00;
+$text-almost-black: #010101;
+$text-blue-dark: #174061;
+$text-slategrey-dark: #222e36;
+$text-grey: $grey;
+
+// Non-scheme colors
+$color-bright-blue: #02a9e0;
+
+// Backgrounds
+$background-black: $black;
+$background-white: $white;
+$background-darkest: #161d22;
+$background-darker: #1e262c;
+$slategrey: #424e57;
+$grey-blue: #445f74;
+$light-blue: #5d84a3;
+$color-pale-blue: #f2fbfd;
+$light-slategrey: #8e96a0;
+$light-slategrey-lighter: #c6c9cf;
+$light-slategrey-lightest: #d2d5da;
+$offwhite: #f2f4f6;
+
+// Component Gradients
+$color-steel-blue-start: #92b9dd;
+$color-steel-blue-end: #5384af;
+$color-deep-blue-start: #5d92c0;
+$color-deep-blue-end: #1e5688;
+$color-steel-grey-start: #babbbc;
+$color-steel-grey-end: #3d3f43;
+$color-deep-grey-start: #99999b;
+$color-deep-grey-end: #515151;
+
+// Schemes
+// Steel Dark
+$color-steel-dark: #747679;
+$color-steel-dark-darkest: #191a1b;
+$color-steel-dark-darker: #2d2e30;
+$color-steel-dark-dark: #3c3e41;
+$color-steel-dark-darkish: #4d4f53;
+$color-steel-dark-lightish: #98999b;
+$color-steel-dark-light: #d4d5d6;
+$color-steel-dark-lighter: #e6e6e7;
+$color-steel-dark-lightest: #f6f6f6;
+
+
+// Steel Sky
+$color-steel-sky: #4f799e;
+$color-steel-sky-darkest: #0a1c2b;
+$color-steel-sky-darker: #12314c;
+$color-steel-sky-dark: #184266;
+$color-steel-sky-darkish: #205381;
+$color-steel-sky-lightish: #7b9cb9;
+$color-steel-sky-light: #c8d6e3;
+$color-steel-sky-lighter: #dfe7ee;
+$color-steel-sky-lightest: #f3f6f9;
+
+// Sky Dark
+$color-sky-dark: #387ab4;
+$color-sky-dark-darkest: #001c34;
+$color-sky-dark-darker: #00315c;
+$color-sky-dark-dark: #00427c;
+$color-sky-dark-darkish: #00549f;
+$color-sky-dark-lightish: #6b9cc7;
+$color-sky-dark-light: #c2d6e8;
+$color-sky-dark-lighter: #dbe7f1;
+$color-sky-dark-lightest: #f2f6fa;
+
+// Rich Black
+$color-rich-black: #383838;
+$color-rich-black-dark: $white;
+$color-rich-black-darkish: $black;
+$color-rich-black-lightish: #6b6b6b;
+$color-rich-black-light: #c2c2c2;
+$color-rich-black-lighter: #f2f2f2;
+$color-rich-black-lightest: #f2f6fa;
+
+// Plum Dark
+$color-plum-dark: #7f508a;
+$color-plum-dark-darkest: #1e0a23;
+$color-plum-dark-darker: #35123d;
+$color-plum-dark-dark: #471852;
+$color-plum-dark-darkish: #5b1f69;
+$color-plum-dark-lightish: #a07da8;
+
+// Schemes: Legacy naming convention
+// Steel Dark: Legacy
+$steelDark-darkest: $color-steel-dark-darkest;
+$steelDark-darker: $color-steel-dark-darker;
+$steelDark-dark: $color-steel-dark-dark;
+$steelDark-darkish: $color-steel-dark-darkish;
+$steelDark: $color-steel-dark;
+$steelDark-lightish: $color-steel-dark-lightish;
+$steelDark-light: $color-steel-dark-light;
+$steelDark-lighter: $color-steel-dark-lighter;
+$steelDark-lightest: $color-steel-dark-lightest;
+// Steel Sky: Legacy
+$steelSky-darkest: $color-steel-sky-darkest;
+$steelSky-darker: $color-steel-sky-darker;
+$steelosky-dark: $color-steel-sky-dark;
+$steelSky-dark: $color-steel-sky-dark;
+$steelSky-darkish: $color-steel-sky-darkish;
+$steelSky: $color-steel-sky;
+$steelSky-lightish: $color-steel-sky-lightish;
+$steelSky-light: $color-steel-sky-light;
+$steelSky-lighter: $color-steel-sky-lighter;
+$steelSky-lightest: $color-steel-sky-lightest;
+// Sky Dark: Legacy
+$skyDark: $color-sky-dark;
+$skyDark-darkest: $color-sky-dark-darkest;
+$skyDark-darker: $color-sky-dark-darker;
+$skyDark-dark: $color-sky-dark-dark;
+$skyDark-darkish: $color-sky-dark-darkish;
+$skyDark-lightish: $color-sky-dark-lightish;
+$skyDark-light: $color-sky-dark-light;
+$skyDark-lighter: $color-sky-dark-lighter;
+$skyDark-lightest: $color-sky-dark-lightest;
+// Rich Black: Legacy
+$richBlack: color-rich-black;
+$richBlack-dark: $white;
+$richBlack-darkish: $black;
+$richBlack-lightish: $color-rich-black-lightish;
+$richBlack-light: $color-rich-black-light;
+$richBlack-lighter: $color-rich-black-lighter;
+$richBlack-lightest: $color-rich-black-lightest;
+// Plum Dark: Legacy
+$plumDark-darkest: $color-plum-dark-darkest;
+$plumDark-darker: $color-plum-dark-darker;
+$plumDark-dark: $color-plum-dark-dark;
+$plumDark-darkish: $color-plum-dark-darkish;
+$plumDark: $color-plum-dark;
+$plumDark-lightish: $color-plum-dark-lightish;

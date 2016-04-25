@@ -1,0 +1,79 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Wrapping Columns -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+
+.wrappingColumns {
+  [class*='column-count'] {
+    &> {
+      li {
+        @include inline-block();
+        width: 100%;
+        h5 {
+          cursor: pointer;
+          margin-bottom: .5em;
+          padding: .5em 5%;
+          border-bottom: 1px solid $white;
+          @include background-gradient(#eeeeef, #dddfe2);
+        }
+        ul.content {
+          margin-bottom: 1em;
+          @include padding(0, 5%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $small) {
+
+    .twc-box-column {
+      @include padding();
+    }
+    ul {
+      margin-bottom: 0;
+      li.heading {
+        &.js-first {
+          @include border-radius(3px 3px 0 0);
+        }
+        h5 {
+          margin: 0;
+          border-bottom: 1px solid #34546f;
+          background-color: #5d92c0;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#5d92c0), to(#2c608f));
+          background-image: -webkit-linear-gradient(top, #5d92c0, #2c608f);
+          background-image: -moz-linear-gradient(top, #5d92c0, #2c608f);
+          background-image: -o-linear-gradient(top, #5d92c0, #2c608f);
+          background-image: -ms-linear-gradient(top, #5d92c0, #2c608f);
+          background-image: linear-gradient(top, #5d92c0, #2c608f);
+          filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5d92c0', EndColorStr='#2c608f')";
+          font-size: 20px;
+          font-weight: lighter;
+          color: #fff;
+          &:after {
+            content: "\f106";
+            float: right;
+            font-family: $fontawesome;
+          }
+        }
+        .expanded:after {
+          content: "\f107";
+          float: right;
+          font-family: $fontawesome;
+        }
+      }
+      ul {
+        margin-top: .5em;
+        &.content {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* ie8 (.ie8) */
+.no-csscolumns {
+  visibility: inherit;
+}

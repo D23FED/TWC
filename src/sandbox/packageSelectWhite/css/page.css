@@ -1,0 +1,17 @@
+.twc-content {
+  background: #fff;
+  background-image: none;
+}
+
+.discountTerm {
+  clear: both;
+}
+
+/* Begin BYOB CSS */
+@media (max-width: 66.15em) {
+
+  .twc-container {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=page.css.map */

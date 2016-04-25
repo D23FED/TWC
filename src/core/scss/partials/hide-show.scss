@@ -1,0 +1,17 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 3/6/2014
+   ========================================================================== */
+
+.hideshow {
+
+  .show-container {
+    display: inline;
+  }
+  .hideshow-container {
+    display: none;
+  }
+
+}

@@ -1,0 +1,115 @@
+.twc-content {
+  background: #fff;
+  background-image: none;
+}
+
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 3/6/2014
+   ========================================================================== */
+
+  /* entire container, keeps perspective */
+[class*="flip-container"] {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+  /*  UPDATED! flip the pane when hovered */
+[id*="flipToggle"] {
+  display: none;
+}
+
+[class*="flip-container-"] input[id*="flipToggle"]:checked ~ .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+[class*="flip-container-"] input[id*="flipToggle"]:checked ~ .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  min-height: 260px;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  width: 100%;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  position: absolute;
+}
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  top: 0;
+}
+
+.detailsExpansion {
+  display: block;
+}
+
+.closeDetails {
+  cursor: pointer;
+}
+
+.whiteCTA {
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.whiteCTA span {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #0252a1;
+  color: #0252a1;
+  padding: 0.75em 1em;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 13px;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,3 @@
+[30-Jun-2015 15:21:50 UTC] PHP Warning:  include(includes/scripts.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/dstock/public_html/TWC/core/includes/close.php on line 25
+[30-Jun-2015 15:21:50 UTC] PHP Warning:  include(includes/scripts.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/dstock/public_html/TWC/core/includes/close.php on line 25
+[30-Jun-2015 15:21:50 UTC] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'includes/scripts.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dstock/public_html/TWC/core/includes/close.php on line 25

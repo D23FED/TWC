@@ -1,0 +1,151 @@
+@import '../../init';
+
+.twc-footer {
+	// Remove gradient
+	background-color: #fff;
+	background-image: none;
+
+
+
+	> .footer {
+		border-color: #c2c2c2;
+		border-width: 1px 0 0 0;
+		border-style: solid;
+
+	}
+
+	#footer-menu {
+		// Add bottom border before horizontal footer list (Privacy Policy, Terms, etc)
+		border-color: #c2c2c2;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		padding-top: 7px;
+		padding-bottom: 0;
+
+		@include respond-to(tablet) {
+			padding-bottom: 20px;
+		}
+
+		// Column headings
+		h3.label {
+			font-size: 2rem;
+			margin-bottom: 0;
+			border-width: 0;
+			border-style: none;
+			text-align: left;
+			font-family: $twc-book;
+			background-image: none;
+			background-color: transparent;
+			min-height: auto;
+			padding: 0;
+			font-weight: normal;
+			color: $text-color;
+
+			+ ul {
+				display: block;
+				position: static;
+				width: auto;
+				padding-left: 0;
+
+				li {
+					border-width: 0;
+					border-style: none;
+					padding: 0;
+					background-image: none;
+					background-color: transparent;
+
+					a:after {
+						float: none;
+						content: '';
+						position: initial;
+						right: auto;
+					}
+				}
+			}
+		}
+
+		p {
+			color: $text-color;
+		}
+
+		// Links
+		a {
+			font-family: $twc-light;
+			font-size: 1.6rem;
+			color: $skyDark-darkish;
+			font-weight: normal;
+		}
+
+		a:hover {
+			color: #02a9e0;
+		}
+		// Spec for space between vertical list bottom and bottom border is 30px
+		[class*='twc-col5'] {
+			margin-bottom: 22px;
+
+			@include respond-to(medium) {
+				margin-bottom: pxToEm(32);
+			}
+		}
+	}
+
+	// Horizontal list of links beginning with 'Privacy Policy'
+	#footer-links {
+		margin-top: 34px;
+
+		ul {
+			line-height: 1;
+		}
+
+		.horizontal {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-top: 0px;
+
+			@include respond-to(medium) {
+				margin-top: 11px;
+			}
+		}
+	}
+
+	// Copyright
+	#footer-legal {
+		padding-top: 0;
+		margin-top: 19px;
+
+		@include respond-to(medium) {
+			margin-top: 15px;
+		}
+	}
+
+	#footer-links,
+	#footer-legal {
+		text-align: center;
+
+		p,
+		a {
+			font-family: $twc-light;
+			font-weight: normal;
+			font-size: 1.4rem;
+			color: $text-color;
+		}
+
+		// Horizontal list item dividers
+		li:after {
+			color: #e0e0e0;
+		}
+	}
+
+	.horizontal.pipes {
+		li.js-last:after {
+			padding: 0;
+		}
+	}
+
+	// Overwrite styles that are introduced by js that will eventually be removed
+	ul.mobile {
+		.smartLink.horizontal-center a {
+			padding: 0;
+		}
+	}
+}

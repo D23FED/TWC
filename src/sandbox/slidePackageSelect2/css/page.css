@@ -1,0 +1,162 @@
+/* Begin global overrides */
+
+.tooltip {
+    border-bottom: 1px dotted #3376b2;
+    pointer-events: initial;
+}
+
+.tooltip-text {
+    display: none;
+    pointer-events: none;
+}
+
+a:hover > .tooltip-text {
+    display: block;
+}
+
+.packageSelect .package .packageFooter {
+    position: relative;
+}
+
+.packageSelect .package .quickCheckoutAccordion hr {
+    margin: 1em 0;
+}
+
+.packageSelect .box {
+    background: #f2f2f2;
+}
+
+.side-by-side .buttonWrapper {
+    width: 100%;
+}
+
+.side-by-side .buttonWrapper .whiteCTA {
+    padding: 0 0.5em;
+}
+
+.side-by-side .buttonWrapper .whiteCTA a {
+    width: 100%;
+}
+
+.packageSelect .package .packageInfo {
+    overflow:visible;
+}
+
+.packageSelect .package .specialOffer {
+    display: table;
+    width: 100%;
+    height: 72px;
+    /**TODO: replace background image with gradient**/
+}
+.packageSelect .package .specialOffer h5 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.packageInfo .cta {
+    text-align: center;
+    width: 100%;
+}
+/* End global overrides */
+
+/* Begin Page specific CSS */
+.discountTerm {
+    clear: both;
+}
+
+.packageSelect .package {
+    position: relative;
+}
+
+.detailsExpansion {
+    background: #fff;
+    box-shadow: 0 -2px 4px -1px #999;
+    position: absolute;
+    bottom: 4.2em;
+    left: 0;
+    width: 100%;
+    border: 2px solid #4578af;
+    background: rgb(248,250,252); /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* IE10+ */
+    background: linear-gradient(to bottom, rgb(248,250,252) 0%,rgb(225,236,245) 100%); /* W3C */
+}
+
+.detailsContent {
+    padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.quickCheckoutContent {
+    text-align: left;
+    display: none;
+    font-size: 12px;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+.quickCheckoutContent input {
+    vertical-align: top;
+}
+
+.quickCheckoutContent label, .quickCheckoutContent .priceTally td {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+}
+
+.quickCheckoutContent .productSelect {
+    text-align: left;
+}
+.quickCheckoutContent .priceTally {
+    margin-bottom: 2em;
+}
+
+.quickCheckoutContent .productSelect table, .quickCheckoutContent .priceTally table {
+    width: 100%;
+}
+
+.quickCheckoutContent .productSelect table tr {
+    width: 100%;
+}
+
+.quickCheckoutContent .price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.quickCheckoutContent .disclaimer-text.text-center {
+    text-align: center;
+}
+
+.quickCheckoutContent .productSelect a {
+    display: inline-block;
+    max-width: none;
+}
+
+.cta.quickCheckoutBtn {
+    width: 100%;
+}
+.total {
+    border-top: 1px dotted #666;
+    background: #ccc9c9;
+    padding: 0.25em;
+}
+
+.cta.quickCheckoutBtn a {
+    background-color: #00b0f0;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    padding: 0.75em 0.25em;
+}
+
+/* Begin BYOB CSS */
+@media (max-width: 66.15em) {
+
+    .twc-container {
+        padding: 0;
+    }
+}
+/*# sourceMappingURL=page.css.map */

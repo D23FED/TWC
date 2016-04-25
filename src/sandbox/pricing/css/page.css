@@ -1,0 +1,22 @@
+.newPricing {
+    position: relative;
+    display: inline;
+}
+.newPricing .dollars {
+  width: 100%;
+}
+.newPricing sup,
+.newPricing sub {
+    font-size: 55%;
+    left: 100%;
+}
+.newPricing sup {
+  position: absolute;
+  top: 0;
+}
+.newPricing sub {
+    bottom: 0;
+    position: absolute;
+    left: 100%;
+}
+/*# sourceMappingURL=page.css.map */

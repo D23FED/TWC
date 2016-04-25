@@ -1,0 +1,176 @@
+/* Begin global overrides */
+
+.tooltip {
+    border-bottom: 1px dotted #3376b2;
+    pointer-events: initial;
+}
+
+.tooltip-text {
+    display: none;
+    pointer-events: none;
+}
+
+a:hover > .tooltip-text {
+    display: block;
+}
+
+.packageSelect .package .quickCheckoutAccordion hr {
+    margin: 1em 0;
+}
+
+.packageSelect .box {
+    background: #f2f9ff;
+    border: 1px solid #9a9c9e;
+    padding: 0;
+}
+
+.side-by-side .buttonWrapper {
+    width: 100%;
+}
+
+.side-by-side .buttonWrapper .whiteCTA {
+    padding: 0 0.5em;
+}
+.orderCTA, .packageSelect .package .whiteCTA {
+    width: auto;
+}
+
+.side-by-side .buttonWrapper .whiteCTA a {
+    width: 100%;
+}
+
+.packageSelect .package .packageInfo {
+    overflow:visible;
+}
+
+.packageSelect .package .specialOffer {
+    display: table;
+    width: 100%;
+    height: 72px;
+    /**TODO: replace background image with gradient**/
+}
+.packageSelect .package .specialOffer h5 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.packageInfo .cta {
+    text-align: center;
+    width: 100%;
+}
+/* End global overrides */
+
+/* Begin Page specific CSS */
+.discountTerm {
+    clear: both;
+}
+
+.packageSelect .package {
+    position: relative;
+}
+
+.detailsExpansion {
+    position: relative;
+    width: 100%;
+}
+
+.detailsContent {
+    padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.quickCheckoutContent {
+    text-align: left;
+    display: none;
+    font-size: 12px;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+.quickCheckoutContent .cta {
+    font-size: 13px;
+    font-size: 20.8px;
+    font-size: 1.3rem;
+}
+
+.quickCheckoutContent input {
+    vertical-align: top;
+}
+
+.quickCheckoutContent label, .quickCheckoutContent .priceTally td {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+}
+
+.quickCheckoutContent .productSelect {
+    text-align: left;
+}
+
+.quickCheckoutContent .productSelect table, .quickCheckoutContent .priceTally table {
+    width: 100%;
+}
+.quickCheckoutContent .priceTally table {
+    border-collapse: collapse;
+}
+.quickCheckoutContent .productSelect table tr {
+    width: 100%;
+}
+
+.quickCheckoutContent .price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.quickCheckoutContent .disclaimer-text.text-center {
+    text-align: center;
+}
+
+.quickCheckoutContent .productSelect a {
+    display: inline-block;
+    max-width: none;
+}
+
+.closeAccordion {
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.totals {
+    background: #b7e3ff;
+}
+.box p {
+    padding: 0 0.5em;
+}
+table tr td:first-of-type {
+    padding-left: 0.5em;
+}
+table tr td:last-of-type {
+    padding-right: 0.5em;
+}
+.totals td {
+    padding: 0.5em 0;
+}
+.totals td.text-right {
+    padding-right: 0.5em;
+}
+.quickCheckoutContent .priceTally .totals td {
+    font-size: 25.6px;
+    font-size: 1.6rem;
+    font-size: 16px;
+}
+.priceTally tr:nth-of-type(2) td {
+    padding-top: 1em;
+}
+
+/* Begin BYOB CSS */
+@media (max-width: 66.15em) {
+
+    .twc-container {
+        padding: 0;
+    }
+}
+/*# sourceMappingURL=page.css.map */

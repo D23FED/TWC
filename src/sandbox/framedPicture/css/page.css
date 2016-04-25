@@ -1,0 +1,30 @@
+body {
+  background-image: url(superman.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100vw;
+}
+
+.twc-container {
+  padding: 0;
+  box-shadow: none;
+}
+
+.twc-backgroundGradient-5, .twc-content {
+  background-image: none;
+  overflow: visible;
+}
+
+.imagecontent-panel {
+  height: 76vh;
+  background-size: contain;
+}
+@media (max-width: 48em) {
+
+  .imagecontent-panel {
+    background-color: transparent;
+  }
+}
+/*# sourceMappingURL=page.css.map */

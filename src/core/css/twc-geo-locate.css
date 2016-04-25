@@ -1,0 +1,40 @@
+/* ==========================================================================
+    TWC Geo Locate  -- Version: 1.0.0 - Updated: 7/10/2014
+   ========================================================================== */
+.twc-modal-geo-soaid.display-hide {
+  display: none;
+}
+.twc-modal-geo-soaid .radioButton {
+  display: block;
+  text-align: left;
+  padding-left: 20%;
+  line-height: 20px;
+}
+.twc-modal-geo-soaid input[type="radio"] {
+  margin-bottom: 0;
+  margin-top: 3px;
+  float: left;
+}
+.twc-modal-geo-soaid .bordered-solid {
+  margin: 0 auto;
+}
+.twc-modal-geo-soaid .modal-body .bordered-solid {
+  width: 270px;
+  padding: 0.4em;
+}
+.twc-modal-geo-soaid .modal-footer a:hover {
+  color: white;
+  /*WEBCMS-12587*/
+  text-decoration: none;
+  /*WEBCMS-12587*/
+}
+
+.twc-ie .twc-modal-geo-soaid span.divisionName {
+  padding-left: 4px;
+}
+
+@media (max-width: 40em) {
+  .twc-modal-geo-soaid .modal-body .bordered-solid {
+    width: 80%;
+  }
+}

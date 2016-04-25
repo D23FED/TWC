@@ -1,0 +1,85 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Side Tab Accordion  -- Version: 1.0.0 - Updated: 7/24/2014
+   ========================================================================== */
+
+.side-tab-accordion .expandable li.js-expandable.js-active h6:after, .expandable li.js-expandableHybrid.js-active h6:after, .expandableHybrid li.js-expandable.js-active h6:after, .expandableHybrid li.js-expandableHybrid.js-active h6:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=cos(-180deg), M12=-sin(-180deg), M21=sin(-180deg), M22=cos(-180deg))";
+    filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod = 'auto expand', M11 = cos(-180deg), M12 = -sin(-180deg), M21 = sin(-180deg), M22 = cos(-180deg))";
+    zoom: 1;
+}
+
+.side-tab-wrapper .expandableHybrid li ul {
+    background: #ffffff;
+}
+
+.side-tab-wrapper .expandableHybrid li li.liState {
+    background: none repeat scroll 0% 0% #C8D6E3;
+}
+
+.side-tab-wrapper .sbs-content .content-parsys {
+    display: none;
+}
+
+@media (max-width: 48em) {
+    .side-tab-wrapper .marginless [class*="twc-col2"] {
+        width: 100%;
+    }
+
+    .side-tab-wrapper .expandableHybrid li ul {
+        display: block;
+    }
+}
+
+.side-tab-wrapper .grad-steel-blue {
+    background-color: #92b9dd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#92b9dd), to(#5384af));
+    background-image: -webkit-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -moz-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -ms-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -o-linear-gradient(top, #92b9dd, #5384af);
+    background-image: linear-gradient(top, #92b9dd, #5384af);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#92b9dd', EndColorStr='#5384af')";
+    zoom: 1;
+}
+
+.side-tab-wrapper .grad-deep-blue {
+    background-color: #5d92c0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5d92c0), to(#1e5688));
+    background-image: -webkit-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -moz-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -ms-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -o-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: linear-gradient(top, #5d92c0, #1e5688);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#5d92c0', EndColorStr='#1e5688')";
+    zoom: 1;
+}
+
+.side-tab-wrapper .grad-steel-grey {
+    background-color: #babbbc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#babbbc), to(#3d3f43));
+    background-image: -webkit-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -moz-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -ms-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -o-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: linear-gradient(top, #babbbc, #3d3f43);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#babbbc', EndColorStr='#3d3f43')";
+    zoom: 1;
+}
+
+.side-tab-wrapper .grad-deep-grey {
+    background-color: #99999b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#99999b), to(#515151));
+    background-image: -webkit-linear-gradient(top, #99999b, #515151);
+    background-image: -moz-linear-gradient(top, #99999b, #515151);
+    background-image: -ms-linear-gradient(top, #99999b, #515151);
+    background-image: -o-linear-gradient(top, #99999b, #515151);
+    background-image: linear-gradient(top, #99999b, #515151);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#99999b', EndColorStr='#515151')";
+    zoom: 1;
+}

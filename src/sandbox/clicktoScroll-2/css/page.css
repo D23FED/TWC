@@ -1,0 +1,95 @@
+/*START SCROLL ARROW*/
+.scroll-arrow {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    bottom: 3.2em;
+    z-index: 1; 
+}
+.scroll-arrow .scroll {
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 5px 5px 5px; 
+	box-sizing: content-box;
+    color: #00549f;
+    background: #ffffff;
+	border: 2px solid #00549f;
+    opacity: 0.8;
+    width: 35px;
+    height: 27px;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    display: inline-block;
+    
+}
+.scroll-arrow .twc-icon-before {
+    margin: 0;
+    padding: 0px;
+    font-size: 1.3em;
+    margin-left: 0.4em;
+    margin-top: 1px;
+    font-weight: initial;
+}
+/*END SCROLL ARROW*/
+
+/* Sonar Effect */
+.sonar-effect a {
+	background: rgba(0,0,0,0.2);
+	transition: background 0.2s, -webkit-transform ease-out 0.1s;
+	transition: transform ease-out 0.1s, background 0.2s;
+	transition: transform ease-out 0.1s, background 0.2s, -webkit-transform ease-out 0.1s;
+}
+
+.sonar-effect a:after {
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+	opacity: 0;
+}
+
+.sonar-effect a:hover {
+	background: rgba(0,0,0,0.5);
+	color: #000000;
+    opacity: 1;
+    transition: all 500ms linear 0.1s;
+}
+
+.sonar-effect a:hover:after {
+	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+	animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+@-webkit-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+@keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(0,0,0,0,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(0,0,0,0,0.5);
+		-webkit-transform: scale(1.5);
+		        transform: scale(1.5);
+		opacity: 0;
+	}
+}
+/*STICKY ARROW*/
+/*# sourceMappingURL=page.css.map */

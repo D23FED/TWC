@@ -1,0 +1,12 @@
+HTML
+====
+Please remove "grad-steel-blue" class from accordion elements, such as div.expandableHybrid and h6.side-accordion-heading
+
+allComponents.css
+=================
+Line 4701
+Remove the rule: .side-tab-wrapper .expandableHybrid li ul
+Line 13313
+Remove the rule: .expandableHybrid li.filler
+Line 13231
+Remove the rule: .expandableHybrid li h6

@@ -1,0 +1,91 @@
+/* ==========================================================================
+    Rollover Captions -- Version: 1.9.0.1 - Updated: 2/12/2014
+   ========================================================================== */
+.rolloverCaptions figure {
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.rolloverCaptions figure img {
+  width: 100%;
+}
+.rolloverCaptions figure:before {
+  font-family: "FontAwesome";
+  content: "\f077";
+  position: absolute;
+  text-shadow: 0 0 5px #333333;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  filter: alpha(opacity=75);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  opacity: 0.75;
+}
+.rolloverCaptions figure:hover:before {
+  opacity: 0;
+}
+.rolloverCaptions figure:hover figcaption {
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  margin-bottom: 1em;
+}
+.rolloverCaptions figcaption {
+  position: absolute;
+  background: black;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.rolloverCaptions .caption-top figcaption {
+  left: 0;
+  top: -1em;
+}
+.rolloverCaptions .caption-top:before {
+  top: .5em;
+  right: 1em;
+  content: "\f078";
+}
+.rolloverCaptions .caption-top:hover figcaption {
+  top: 0;
+}
+.rolloverCaptions .caption-bottom figcaption {
+  left: 0;
+  bottom: -1em;
+}
+.rolloverCaptions .caption-bottom:before {
+  bottom: 1.5em;
+  left: 1em;
+}
+.rolloverCaptions .caption-bottom:hover figcaption {
+  bottom: 0;
+}
+@media (max-width: 48em) {
+  .rolloverCaptions .touch figcaption {
+    display: none;
+  }
+}

@@ -1,0 +1,433 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    FAQ Nav  -- Version: 1.0.0 - Updated: 5/20/2014
+   ========================================================================== */
+
+.faq-related ul li.FAQLabel {
+    padding: .5em 0;
+    border-bottom: 1px dotted #e1e1e1;
+}
+
+span.FAQLabel {
+    font: inherit;
+    line-height: 1.4;
+}
+.faq-nav-display .twc-box-column {
+    margin-bottom: 2em;
+    padding: 0;
+    margin-right: 1px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 #888888;
+}
+.twc-topicFAQs ul li:nth-of-type(4) {
+    margin-top: 0px;
+}
+.twc-FAQTopics {
+    position: relative;
+    float: left;
+    width: 27%;
+    padding: 2em 0em 2em 2em;
+    background-color: #487a97;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#487a97), to(#0e4460));
+    background-image: -webkit-linear-gradient(top, #487a97, #0e4460);
+    background-image: -moz-linear-gradient(top, #487a97, #0e4460);
+    background-image: -o-linear-gradient(top, #487a97, #0e4460);
+    background-image: -ms-linear-gradient(top, #487a97, #0e4460);
+    background-image: linear-gradient(top, #487a97, #0e4460);
+    overflow: hidden;
+}
+.twc-topicFAQs {
+    position: relative;
+    padding: 2em 2em 2em 0;
+    float: left;
+    width: 70%;
+    margin-left: 2.5%;
+}
+.twc-FAQs h3 {
+    margin: 0 0 10px;
+}
+.twc-FAQTopics h3 {
+    color: #fff;
+}
+span.FAQLabel {
+    display: block;
+    padding: .7em 1em;
+    margin-right: 2em;
+    background: none;
+    border-bottom: 1px dotted #ccc;
+    color: #fff;
+}
+.twc-FAQTopics span.FAQLabel.removeBorder {
+    border-bottom: 1px solid transparent;
+}
+.twc-FAQTopics span.FAQLabel {
+    cursor: pointer;
+}
+.twc-FAQTopics span.FAQLabel.js-last,
+.twc-FAQTopics ul li.js-last,
+.twc-topicFAQs li.js-last {
+    margin-bottom: 20px;
+    border-bottom: none;
+}
+.twc-FAQTopics span.FAQLabel.js-last {
+    margin-bottom: 0;
+}
+.twc-topicFAQs li {
+    padding: 5px 0;
+}
+.twc-topicFAQs ul div {
+    display: block;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+    color: #000;
+}
+.twc-topicFAQs ul a, .twc-topicFAQs ul li:hover a {
+    color: #487a97;
+    font-weight: bold;
+}
+.twc-topicFAQs ul li:hover {
+    border: none;
+}
+.twc-topicFAQs .twc-FAQListings li,
+.twc-topicFAQs .twc-FAQListings li:hover,
+.twc-topicFAQs .twc-SubTopics li,
+.twc-topicFAQs .twc-SubTopics li:hover {
+    border-bottom: 1px dotted #ccc;
+}
+.twc-topicFAQs .twc-FAQListings li.js-last,
+.twc-topicFAQs .twc-FAQListings li.js-last:hover,
+.twc-topicFAQs .twc-SubTopics li.js-last,
+.twc-topicFAQs .twc-SubTopics li.js-last:hover {
+    border-bottom: none;
+}
+.twc-topicFAQs ul div > li {
+    display: table-cell;
+    width: 26.9%;
+    padding: 3%;
+    border-bottom: none;
+}
+.twc-topicFAQs li > p {
+    margin-top: 1em;
+    color: #333;
+}
+.twc-topicFAQs h3 {
+    color: #acacac;
+    font-weight: bold;
+}
+.twc-FAQTopics h6 {
+    color: #fff;
+}
+.twc-topicFAQs h3.twc-FeaturedFAQsTitle {
+    color: #000;
+}
+.twc-topicFAQs .twc-SubTopics h3 {
+    padding-top: 50px;
+}
+.twc-topicFAQs a:after {
+    content: none !important;
+}
+#twc-FAQTopicsContent {
+    padding-bottom: 30px;
+}
+span.FAQLabel.active , span.FAQLabel.active+div+div {
+    width:100%;
+    border-bottom: none;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(left, #ebebeb 0%, #ebebeb 23%, #ffffff 76%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ebebeb), color-stop(23%,#ebebeb), color-stop(76%,#ffffff));
+    background: -webkit-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
+    background: -o-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
+    background: -ms-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
+    background: linear-gradient(to right, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=1 )";
+    color: #333;
+    padding-right:1em;
+}
+span.FAQLabel.active {
+    padding-right: 3em;
+}
+span.FAQLabel.active+div+div span.FAQLabel {
+    color: #333;
+    padding-left:2em;
+    border-bottom: 1px dotted #e1e1e1;
+    margin-left: 0;
+}
+span.FAQLabel.js-last.arrow.active {
+    margin-bottom: 0;
+}
+.catSubtopic span.FAQLabel.expanded+div+div {
+    width: 100%;
+    margin-left: 1em;
+}
+.catSubtopic ul {
+    display: none;
+}
+.catSubtopic span.FAQLabel.active {
+    margin-left:1em;
+    padding-right: 4em;
+}
+span.FAQLabel.expanded {
+    border-bottom: none;
+}
+.catSubtopic span.FAQLabel.expanded {
+    margin-left:1em;
+}
+.catSubtopic span.FAQLabel.arrow.expanded {
+    margin-right: 2em;
+}
+.catSubtopic span.FAQLabel {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+.catSubtopic .catSubtopic span.FAQLabel {
+    padding-right: 2em;
+}
+.catSubtopic .catSubtopic span.FAQLabel.active {
+    padding-right: 5em;
+}
+.twc-FAQTopics div.content {
+    display: none;
+}
+span.selected {
+    width: 85%;
+    -webkit-box-shadow: inset 0 0 1px 0 #333;
+    -moz-box-shadow: inset 0 0 1px 0 #333;
+    box-shadow: inset 0 0 1px 0 #333;
+    z-index: 99999;
+}
+span.selectArrow {
+    width: 15%;
+}
+.faq-nav-display .selectBox {
+    max-width: 100%;
+    padding: .675em 1em;
+    margin-right: 2em;
+    border: 1px solid #ccc;
+    min-height: 40px;
+    color: #333;
+    border-radius: 3px;
+    align-items: center;
+    background-color: white;
+}
+span.selectOption {
+    width: 80%;
+    cursor: pointer;
+}
+div.selectOptions {
+    position: relative;
+    top: 13px;
+    width: 84%;
+    margin-bottom: 15px;
+    overflow: visible;
+}
+.twc-FAQTopics select {
+   width: 87%;
+   -webkit-appearance: menulist-button;
+}
+span.FAQLabel.arrow:after {
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    content: '\f107';
+    color: #B1B2AF;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    right: 26px;
+}
+
+.faq-nav-display .twc-FAQTopics select {
+    margin-bottom: 30px;
+}
+
+.faq-nav-display .grad-steel-blue {
+    background-color: #92b9dd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#92b9dd), to(#5384af));
+    background-image: -webkit-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -moz-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -ms-linear-gradient(top, #92b9dd, #5384af);
+    background-image: -o-linear-gradient(top, #92b9dd, #5384af);
+    background-image: linear-gradient(top, #92b9dd, #5384af);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#92b9dd', EndColorStr='#5384af')";
+}
+
+.faq-nav-display .grad-deep-blue {
+    background-color: #5d92c0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5d92c0), to(#1e5688));
+    background-image: -webkit-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -moz-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -ms-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: -o-linear-gradient(top, #5d92c0, #1e5688);
+    background-image: linear-gradient(top, #5d92c0, #1e5688);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#5d92c0', EndColorStr='#1e5688')";
+}
+
+.faq-nav-display .grad-steel-grey {
+    background-color: #babbbc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#babbbc), to(#3d3f43));
+    background-image: -webkit-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -moz-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -ms-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: -o-linear-gradient(top, #babbbc, #3d3f43);
+    background-image: linear-gradient(top, #babbbc, #3d3f43);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#babbbc', EndColorStr='#3d3f43')";
+}
+
+.faq-nav-display .grad-deep-grey {
+    background-color: #99999b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#99999b), to(#515151));
+    background-image: -webkit-linear-gradient(top, #99999b, #515151);
+    background-image: -moz-linear-gradient(top, #99999b, #515151);
+    background-image: -ms-linear-gradient(top, #99999b, #515151);
+    background-image: -o-linear-gradient(top, #99999b, #515151);
+    background-image: linear-gradient(top, #99999b, #515151);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#99999b', EndColorStr='#515151')";
+}
+
+.twc-ie8 section {
+    border: 1px solid #c2c2c2;
+}
+.twc-ie8 .twc-topicFAQs ul.content li:first-child,
+.twc-ie8 .twc-topicFAQs ul.content li:first-child + li,
+.twc-ie8 .twc-topicFAQs ul.content li:first-child + li + li {
+    display: inline-block;
+    width: 28%;
+    padding: 2%;
+    margin-bottom: 10px;
+    border-bottom: none;
+    vertical-align: top;
+}
+.twc-ie8 span.FAQLabel.active,
+.twc-ie8 span.FAQLabel.removeBorder {
+    border-bottom: none;
+}
+.twc-ie8 .selectBox {
+    min-height: 150px;
+}
+@media (max-width: 48em) {
+    .twc-FAQTopics .content ul li {
+        padding-left: 15px;
+    }
+    .twc-FAQTopics {
+        width: 100%;
+        padding: 4%;
+        border-right: none;
+        background: #fff;
+    }
+    .twc-FAQTopics h3 {
+        color: #333;
+    }
+    .twc-FAQs ul {
+        margin: 10px 0 20px;
+    }
+    .twc-FAQTopics div.content.mobile {
+        display: block;
+    }
+    span.FAQLabel,
+    span.FAQLabel.active {
+        border-bottom: 1px solid #fff;
+        background: #eeeeef;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #eeeeef 0%, #dddfe2 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(100%,#dddfe2));
+        background: -webkit-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+        background: -o-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+        background: -ms-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
+        background: linear-gradient(to bottom,  #eeeeef 0%,#dddfe2 100%);
+        font-size: 18px;
+        font-size: 1.8rem;
+        font-family: 'TWC Round Book',Arial,Sans-Serif;
+        color: #333;
+        line-height: 1.4;
+        margin: 0;
+    }
+    span.FAQLabel.active {
+        width: 100%;
+        padding-right: 1em;
+    }
+    span.FAQLabel:after,
+    span.FAQLabel.active:after {
+        float: right;
+        font-family: 'FontAwesome', sans-serif;
+        font-size: 18px;
+        font-size: 1.8rem;
+        content:'\f107';
+        color: #B1B2AF;
+        line-height: 1.4;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    span.FAQLabel.expanded:after {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .twc-FAQTopics li a,
+    .twc-FAQTopics li.active a {
+        font-size: 13px;
+        font-size: 1.3rem;
+    }
+    .twc-FAQTopics p.expandedFAQContent,
+    .twc-FAQTopics a.contReading {
+        display: none;
+    }
+    .twc-FAQTopics ul li {
+        padding: 7px 0;
+    }
+    span.FAQLabel.js-last {
+        margin-bottom: 20px;
+    }
+    .twc-FAQTopics h6 {
+        color: #333;
+    }
+    .twc-topicFAQs {
+        display: none;
+    }
+    span.selected {
+        width: 89%;
+    }
+    .selectBox {
+        min-height: 0;
+    }
+    div.selectOptions {
+        width: 88%;
+    }
+    .catSubtopic {
+        display: none;
+    }
+    span.FAQLabel.arrow:after {
+        position: static;
+    }
+    .faq-nav-display .twc-FAQTopics {
+      width: 100%;
+      padding: 4%;
+      border-right: none;
+      background: #fff;
+    }
+}
+@media (max-width: 40em) {
+    span.FAQLabel {
+        width: 100%;
+        padding: 7px 6% 7px 3%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    span.FAQLabel.active {
+        width: 100%;
+    }
+    span.FAQLabel:after {
+        position: absolute;
+        right: 6%;
+        line-height: 1.4;
+    }
+    .catSubtopic {
+        display: none;
+    }
+}
