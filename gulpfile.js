@@ -155,16 +155,22 @@ g.task('images', function() {
 	return g.src(paths.source + globs.img, {
 			base: './src/'
 		})
+		.pipe($.plumber())
+		.pipe($.changed(paths.dist))
 		.pipe($.imagemin({
 			optimizationLevel: 3,
 			progressive: true,
 			interlaced: true,
 			multipass: true
 		}))
+		.pipe($.plumber.stop())
 		.pipe(g.dest(paths.dist))
-		.pipe($.notify({
-			message: 'Images task complete'
-		}));
+		.pipe($.debug({
+			title: 'Processing image:'
+		}))
+		// .pipe($.notify({
+		// 	message: 'Images task complete'
+		// }));
 });
 g.task('watch', function() {
 	g.watch(paths.sandbox + globs.styles, ['styles']);
