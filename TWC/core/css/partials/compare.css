@@ -1,0 +1,120 @@
+/* ==========================================================================
+    Component  -- Version: 1.0.0 - Updated: 3/6/2014
+   ========================================================================== */
+.js-sticky-past {
+  display: none; }
+
+.sticky.js-sticky > tr {
+  display: inline-table;
+  width: 100%; }
+
+.triple .sticky.js-sticky > tr th {
+  width: 33%; }
+
+.double .sticky.js-sticky > tr th {
+  width: 50%; }
+
+.stickySpacing {
+  display: none; }
+
+.sticky.js-sticky ~ .stickyElement .stickySpacing {
+  display: block; }
+
+.sbsCompare table {
+  border-collapse: collapse;
+  width: 100%; }
+  .sbsCompare table td {
+    padding: 1em; }
+  .sbsCompare table.double td {
+    width: 50%;
+    padding: 1em; }
+  .sbsCompare table.triple td {
+    width: 33%;
+    padding: .5em; }
+
+.sbsCompare tr th {
+  padding: .5em;
+  color: #fff;
+  background: #4f6f88;
+  border-right: 1px solid #fff;
+  text-align: center;
+  font-family: "TWC Round Book"; }
+
+.sbsCompare tbody tr:nth-of-type(2) th {
+  background: #13446d; }
+
+.sbsCompare tbody tr th {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif; }
+
+.sbsCompare tr th a.tooltip {
+  color: #fff;
+  text-decoration: underline; }
+
+.sbsCompare tr td {
+  border-right: 1px solid #fff; }
+
+.sbsCompare tr th:last-of-type, .sbsCompare tr td:last-of-type {
+  border-right: none; }
+
+.sbsCompare tbody > tr:first-of-type th {
+  background: #164367; }
+
+.sbsCompare tr.subhead th {
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  font-size: 2.0rem;
+  font-weight: 400;
+  padding: 1em 0; }
+
+.sbsCompare td .icon-only {
+  font-size: 22px;
+  font-size: 2.2rem;
+  color: #009033; }
+
+.sbsCompare thead tr th.single {
+  background: #00579d; }
+
+.sbsCompare thead tr th.double {
+  background: #5B1F69; }
+
+.sbsCompare thead tr th.triple {
+  background: #747679; }
+
+.sbsCompare tr th:nth-child(3) {
+  background: #7e649e; }
+
+.sbsCompare td:nth-of-type(odd) {
+  background: #f8f8f8; }
+
+.sbsCompare td:nth-of-type(even) {
+  background: #eeeeee; }
+
+.sbsCompare .whiteCTA a {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #00559f;
+  color: #00559f; }
+  .sbsCompare .whiteCTA a:active {
+    background-color: #0052a1;
+    color: #fff; }
+
+.sbsCompare .orderCTA a {
+  background-color: #00559f;
+  background-image: none;
+  border: 1px solid #00559f;
+  color: #fff; }
+
+.sbsCompare .sticky.js-sticky {
+  background: transparent;
+  padding: 0; }
+
+/* SBS Compare Sticky Header */
+
+@media (max-width: 48em) {
+  .sbsCompare td:nth-of-type(3), .sbsCompare th:nth-of-type(3) {
+    display: none; }
+  .sticky.js-sticky {
+    left: 0; } }
+
+/*# sourceMappingURL=compare.css.map */

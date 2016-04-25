@@ -1,0 +1,151 @@
+/* ==========================================================================
+    Modals -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.modal .modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  z-index: 9999; }
+
+.modal .modal-container {
+  display: none;
+  position: fixed;
+  overflow: visible;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 45em;
+  max-width: 90%;
+  margin: auto;
+  margin-top: -16em;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background: none repeat scroll 0 0 #fff;
+  color: #333;
+  z-index: 99999; }
+  .modal .modal-container > .modal-content {
+    box-shadow: 0 0 5px 2px #555; }
+
+.modal .modal-close {
+  position: absolute;
+  float: right;
+  top: -1.5em;
+  right: -1.5em;
+  height: 3.25em;
+  width: 3.25em;
+  background: url(../images/modal_close.png) no-repeat;
+  cursor: pointer; }
+
+.modal .modal-header {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  border-radius: 3px 3px 0 0;
+  background-clip: padding-box;
+  background: #f0f2f5; }
+
+.modal .modal-body {
+  overflow: auto;
+  max-height: 25em;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em; }
+
+.modal .modal-footer {
+  overflow: auto;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  border-radius: 0 0 3px 3px;
+  background-clip: padding-box;
+  background: #f0f2f5; }
+
+.modal-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: auto;
+  max-height: 650px;
+  /*width: 600px;*/
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: visible;
+  border-radius: 3px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  color: #333;
+  z-index: 99999; }
+
+.modal-box > .modal_content {
+  max-height: 650px;
+  box-shadow: 0 0 5px 2px #555;
+  padding: 1em;
+  overflow: auto;
+  max-width: 100%; }
+
+#backgroundPopup, .modal .background {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: .5;
+  z-index: 9999; }
+
+.modal-box iframe {
+  max-width: 100%; }
+
+.modal-box .iframe {
+  height: 100%;
+  width: 100%; }
+
+.modal-box {
+  left: 50%;
+  margin: 0 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%); }
+
+.twc-ie8 .modal-box {
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.modal .close {
+  /* close rule in modals.css uses wrong selector and background url path is incorrect */
+  position: absolute;
+  float: right;
+  top: -1.5em;
+  right: -1.5em;
+  height: 3.25em;
+  width: 3.25em;
+  background: url(../../images/modal_close.png) no-repeat;
+  cursor: pointer; }
+
+@media (max-width: 40em) {
+  .modal-component {
+    min-height: 500px; }
+  .modal .modal-body {
+    max-height: 15.625em; } }
+
+/*# sourceMappingURL=modal.css.map */

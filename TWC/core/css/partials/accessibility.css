@@ -1,0 +1,30 @@
+/* ==========================================================================
+    Accessibility -- Version: 1.9.0.1 - Updated: 1/1/14 timestamp()
+   ========================================================================== */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  overflow: hidden;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  position: absolute;
+  width: 1px; }
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/*# sourceMappingURL=accessibility.css.map */

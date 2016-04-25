@@ -1,0 +1,282 @@
+/* ==========================================================================
+    Header -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-top {
+  background: #000;
+  border-bottom: 1px solid #4d4f53; }
+  .twc-top .twc-container {
+    overflow: inherit;
+    padding: 5px 0 0; }
+
+/* ==========================
+	  Top-Nav Menu
+   ========================== */
+ul.twc-top-nav {
+  margin-bottom: 0; }
+
+.twc-top-nav li {
+  display: inline-block; }
+
+.twc-top-nav .smartLink {
+  padding: .5em; }
+  .twc-top-nav .smartLink a {
+    font-weight: inherit;
+    color: #6b6b6b; }
+    .twc-top-nav .smartLink a img {
+      padding-right: .5em; }
+  .twc-top-nav .smartLink.align-middle a img {
+    vertical-align: middle; }
+  .twc-top-nav .smartLink.align-top a img {
+    vertical-align: top; }
+  .twc-top-nav .smartLink.align-bottom a img {
+    vertical-align: bottom; }
+
+.twc-top-nav li.twc-active .smartLink {
+  position: relative;
+  background: #2d2e2e;
+  border-radius: 5px 5px 0 0;
+  background-clip: padding-box;
+  border-top: 1px solid #4d4f53;
+  border-right: 1px solid #4d4f53;
+  border-left: 1px solid #4d4f53;
+  box-shadow: 0 1px 0 0 #2d2e2e;
+  z-index: 7999; }
+  .twc-top-nav li.twc-active .smartLink a {
+    color: #fff; }
+
+.twc-top-nav li a:hover {
+  color: #fff; }
+
+/* ==========================
+	  Top-Nav Drop Down
+   ========================== */
+.twc-drop-nav.persist a, .twc-drop-nav.js-persist a {
+  color: #fff; }
+
+.twc-top-nav ul li ul {
+  display: none;
+  position: absolute;
+  width: 150px;
+  padding: 5px;
+  background: #677986;
+  border-radius: 3px 0 3px 3px;
+  background-clip: padding-box;
+  visibility: hidden;
+  z-index: 9999; }
+  .twc-top-nav ul li ul li {
+    display: block;
+    color: #fff; }
+
+.twc-top-nav ul li.persist ul, .twc-top-nav ul li.js-persist ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  visibility: visible;
+  z-index: 99999; }
+
+/* ==========================
+	  Top Search
+   ========================== */
+header > .twc-container {
+  overflow: auto; }
+
+.twc-user-input {
+  padding-right: 20px; }
+
+.twc-header-search {
+  float: left;
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 1em; }
+
+.twc-search-input-wrap {
+  margin: 0 auto; }
+
+.twc-header-search .twc-search-input-wrap input {
+  float: left;
+  width: 80%;
+  background: #fff;
+  border: 0 none;
+  border-radius: 3px;
+  background-clip: padding-box;
+  overflow: hidden; }
+
+.twc-header-search .twc-search-input-wrap button.btn {
+  height: 30px;
+  padding-left: 10%;
+  border-radius: 0 3px 3px 0;
+  background-clip: padding-box;
+  background: #fff;
+  color: #3376b2; }
+
+.twc-header-search .twc-search-btn {
+  float: none;
+  background: #fff;
+  -webkit-filter: 0;
+          filter: 0;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-clip: padding-box;
+  color: #3376b2; }
+  .twc-header-search .twc-search-btn:hover {
+    background: #fff;
+    color: #3376b2; }
+  .twc-header-search .twc-search-btn icon-search {
+    float: right; }
+
+/* Specific Buttons */
+.btn.search-btn, .btn.geoloc-btn {
+  width: 20%; }
+
+.cta.search-btn, .cta.geoloc-btn {
+  width: 21%; }
+  .cta.search-btn button, .cta.geoloc-btn button {
+    width: 100%; }
+
+.twc-search-input-wrap input#search-support {
+  width: 76%; }
+
+.twc-logo {
+  float: left;
+  width: 30%; }
+  .twc-logo img {
+    height: auto; }
+
+.twc-icon-twitter:before {
+  content: "\f099";
+  color: #f7f7f7; }
+
+.twc-icon-facebook:before {
+  content: "\f09a";
+  color: #f7f7f7; }
+
+.twc-header-icons {
+  background-color: #2f3032;
+  background-image: linear-gradient(top, #2f3032, #191a1c);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#2f3032', EndColorStr='#191a1c')";
+  zoom: 1;
+  padding: 4px 10px 23px 6px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  border: 2px solid #3a3b3d;
+  font-size: 9px;
+  font-size: 0.9rem;
+  text-align: center; }
+
+.header-icons div.twc-image-link {
+  display: inline; }
+
+.header-icons.list > ul {
+  height: 25px; }
+
+.twc-header-search button:before {
+  content: '\f002';
+  font-family: "FontAwesome";
+  color: #3376b2;
+  line-height: 1; }
+
+.btn.icon-search {
+  font-family: "FontAwesome"; }
+
+.twc-contact {
+  float: right; }
+  .twc-contact li {
+    display: inline;
+    padding: 0 1px; }
+  .twc-contact a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+#logoHeader .twc-contact {
+  margin-bottom: 20px; }
+  #logoHeader .twc-contact li {
+    display: inline;
+    padding: 0 5px 0 8px;
+    border-left: 1px solid #fff; }
+    #logoHeader .twc-contact li:first-child {
+      border-left: 0; }
+  #logoHeader .twc-contact a {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff; }
+
+#logoHeader.twc-header span {
+  color: #fff;
+  margin-top: 5px; }
+
+#logoHeader.twc-header button {
+  float: right; }
+
+.twc-email {
+  float: left;
+  padding-right: 15px;
+  border-right: 1px solid #9d9d9e; }
+
+.twc-follow {
+  margin-top: 3px;
+  color: #9d9d9e; }
+
+.twc-container.twc-mega-menu {
+  display: table;
+  max-width: 980px;
+  padding: 0; }
+
+/*WEBCMS-8565 fixes for elicit styles*/
+.elc-app-header .elc-hint-container {
+  width: 440px !important;
+  height: 35px !important; }
+
+.twc-header-search .twc-search-input-wrap input {
+  width: 100%; }
+
+.elc-searchWrapper {
+  float: left; }
+
+.twc-header-search .twc-search-btn {
+  margin-left: -43px;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  float: right; }
+
+.twc-search-input-wrap {
+  position: relative; }
+
+/* WEBCMS-9636 For Follow Us Text */
+.twc-follow .text {
+  color: #9D9D9E;
+  text-transform: uppercase; }
+
+.twc-top-nav ul li ul {
+  width: 225px; }
+
+/* Webkit: Chrome/Safari */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {/* Webkit browsers add a 2px margin outside the chrome of form elements */
+  .twc-header-search .twc-search-input-wrap input, .twc-header-search .twc-search-btn {
+    height: 39px; }
+  .twc-top-nav ul li ul {
+    right: 0; } }
+
+@media (max-width: 48em) {
+  header .twc-top, header .twc-header-search {
+    display: none; }
+  .twc-header-icons, header .twc-share-module {
+    display: none; } }
+
+@media (max-width: 40em) {
+  .twc-header .twc-container {
+    padding: 10px 4%; }
+  .twc-logo {
+    width: 21%; }
+  .twc-logo img {
+    width: 230%; } }
+
+/*# sourceMappingURL=header.css.map */
