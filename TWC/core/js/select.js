@@ -2,17 +2,17 @@
     Select with Link -- Version: 1.9.0.2 - Updated: 3/24/2014
    ========================================================================== */
 
-(function($) {
+( function( $ ) {
 
-  $.fn.selectLink = function() {
-  	$('.selectLink').change(function(){
-  		// Ignore null value -- shown at top of dropdown
-  		if ($(this).val().length){
-  			window.location.href = $(this).val();
-  		}
-  	});
-  }
+	$.fn.selectLink = function() {
+		$( '.selectLink' ).change( function() {
+			// Ignore null value -- shown at top of dropdown
+			if ( $( this ).val().length ) {
+				window.location.href = $( this ).val();
+			}
+		} );
+	}
 
-}(jQuery));
+}( jQuery ) );
 
-$('.selectLink').selectLink();
+$( '.selectLink' ).selectLink();

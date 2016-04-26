@@ -3,16 +3,16 @@
    ========================================================================== */
 
 //$(function(){
-	//adjustContent();
+//adjustContent();
 
-	$('.cta#email').click(function(){
-			$('.email-module').toggle();
-			return false;
-	});
+$( '.cta#email' ).click( function() {
+	$( '.email-module' ).toggle();
+	return false;
+} );
 
-	$('.email-module .close').click(function() {
-		$('.email-module').toggle();
-	});
+$( '.email-module .close' ).click( function() {
+	$( '.email-module' ).toggle();
+} );
 
 /*
 	$(window).resize(function(){

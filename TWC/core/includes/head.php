@@ -8,12 +8,20 @@
 	// 	echo '<!-- Global vars not found -->';
 	// }
 	// $page_vars = 'includes/variables/page_variables.php';
+
+	if (!isset($page_vars)) {
+		$page_vars = 'includes/variables/page_variables.php';
+		$page_vars_alt = 'includes/vars.php';
+	}
 	if ( file_exists($page_vars) ) {
 		include($page_vars);
+	} elseif ( file_exists($page_vars_alt) ) {
+		include($page_vars_alt);
 	} else {
 		echo '<!-- Page vars not found -->';
 	}
 ?>
+
 <!--[if IE 8 ]><html class="twc-ie twc-ie8 no-js" lang="en"><![endif]-->
 <!--[if IE 9 ]><html class="twc-ie twc-ie9 no-js" lang="en"><![endif]-->
 <!--[if gt IE 9]><!-->
@@ -38,9 +46,23 @@
 	  if (isset($page_dir) && $page_dir) {
 	  	stylesheet($page_dir.'css/page.css');
 	  }
-	  if (file_exists('../../css/page.css')) { echo '<link rel="stylesheet" href="../../css/page.css">'; }
-	  if (file_exists('../css/page.css')) { echo '<link rel="stylesheet" href="../css/page.css">'; }
-	  if (file_exists('css/page.css')) { echo '<link rel="stylesheet" href="css/page.css">'; }
+	  $stylesheets = array(
+	  	'../../css/page.css',
+	  	'../css/page.css',
+	  	'css/page.css',
+	  	'css/style.css',
+	  	'style/style.css',
+	  	'style/page.css'
+  	);
+  	foreach ($stylesheets as $value) {
+  	  if ( file_exists($value) ) {
+  	  	stylesheet($value);
+  	  }
+  	}
+
+	  // if (file_exists('../../css/page.css')) { echo '<link rel="stylesheet" href="../../css/page.css">'; }
+	  // if (file_exists('../css/page.css')) { echo '<link rel="stylesheet" href="../css/page.css">'; }
+	  // if (file_exists('css/page.css')) { echo '<link rel="stylesheet" href="css/page.css">'; }
 	// Load Page Module Specific CSS
 	  if (file_exists('includes/css.php')) { include('includes/css.php');}
 	?>
