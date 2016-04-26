@@ -1,0 +1,151 @@
+@import '../../init';
+@import 'old';
+
+$border-color: $color-steel-dark-lighter;
+$bar-height: 7px;
+$top-border-width: 1px;
+
+.twc-content {
+	background-image: none;
+	background-color: #fff;
+}
+
+#content {
+	@import 'reset';
+
+	#gateway {
+		.gateway-tabs {
+			margin-bottom: -1px;
+
+			// List
+			ul {}
+
+			// List Items
+			li {
+				width: auto;
+				line-height: 4em;
+				padding: 0 1em;
+				border-style: solid;
+
+				&::before {
+					background-color: transparent;
+					position: absolute;
+					width: 100%;
+					height: 7px;
+					display: block;
+					content: '';
+					left: 0;
+					top: -$bar-height;
+				}
+
+				&:not(.active) {
+					background-color: transparent;
+
+					// border: {
+					// 	width: 7px 0 0 0;
+					// 	style: solid;
+					// 	color: transparent;
+					// };
+					// border-left: 1px solid white;
+					// border-right: 1px solid white;
+					border-top: 1px solid #e1e1e1;
+					color: $color-sky-dark-darkish;
+
+					&:hover {
+						border-top-color: transparent;
+
+						// transition-property: border-color;
+						// transition-duration: .3s;
+
+						// color: #333;
+						// transition-property: color;
+						// transition-duration: .3s;
+						&::before {
+							background-color: rgba(2, 169, 224, 0.3);
+						}
+					}
+
+					a {
+						&:hover {}
+					}
+				}
+
+				// Active Tab
+				&.active {
+					box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+					background-color: #fff;
+					border-width: 7px 0 0 0;
+					border-top-color: $color-bright-blue;
+					border-left: 1px solid #e1e1e1;
+					border-right: 1px solid #e1e1e1;
+					border-bottom: 1px solid #fff;
+					border-top: 1px solid transparent;
+					position: relative;
+					z-index: 187;
+					cursor: default;
+					color: $color-sky-dark-darkish;
+
+					&::before {
+						background-color: $color-bright-blue;
+					}
+
+					&::after {
+						bottom: -20px;
+						content: '';
+						display: block;
+						height: 20px;
+						left: 0;
+						position: absolute;
+						width: 100%;
+						background-color: #fff;
+						z-index: 200;
+					}
+
+					a {
+						cursor: default;
+					}
+				}
+
+				// Links
+				a {}
+
+				// First
+				&:first-child {
+					border-left: 1px solid #e1e1e1;
+
+					&.active {}
+				}
+
+				// Last
+				&:last-child {
+					border-right: 1px solid #e1e1e1;
+
+					&.active {
+						box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+					}
+				}
+			}
+		}
+
+		.gateway {
+			border: 1px solid #e1e1e1;
+		}
+
+		// 'Sign in with your TWC ID'
+		.gateway-headline {
+			border-width: 0;
+			border-style: none;
+		}
+
+		// 'Benefits of a TWC ID' box
+		#buyflow-current .skip-section {
+			background: none;
+			background-image: none;
+			background-color: transparent;
+		}
+	}
+}
+
+html {
+	overflow-y: scroll;
+}
