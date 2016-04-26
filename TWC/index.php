@@ -1,5 +1,5 @@
 <?php
-include_once("$_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php');
 
 // Get page name
 if ( isset($_GET['p']) ) {

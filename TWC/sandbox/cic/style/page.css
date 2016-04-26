@@ -1,0 +1,29 @@
+/*.twc-content {
+  background: #fff;
+  background-image: none;
+}*/
+.discountTerm {
+  clear: both; }
+
+.packageSelect .package .pricing .h4 sup.pre-text {
+  top: -0.5em;
+  margin-right: 0.25em; }
+
+.test1 {
+  color: #000; }
+
+.packageSelect .package .pricing .term .discountTerm,
+.sbsCompare .main-content .pricing .term .discountTerm,
+.packageSelect .package .pricing .term .postTerm,
+.sbsCompare .main-content .pricing .term .postTerm {
+  margin-top: -3px; }
+
+/* Begin BYOB CSS */
+
+@media (max-width: 66.15em) {
+  .twc-container {
+    padding: 0; } }
+
+/*# sourceMappingURL=page.css.map */
+
+/*# sourceMappingURL=page.css.map */

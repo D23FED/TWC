@@ -1,5 +1,18 @@
 "use strict";
 
+var mapNewer = function (relativePath) {
+	var find = 'scss';
+	var replace = 'css';
+	var log = false;
+	if (log) {
+		if ( relativePath.indexOf(find) !== -1 ) {
+			console.log(relativePath,' => ',relativePath.replace(find, replace))
+		} else {
+			console.log('Not remapped: ',relativePath)
+		}
+	}
+	return relativePath.replace(find, replace);
+}
 // Config
 var
 	gulp, g = require('gulp'),
@@ -38,16 +51,21 @@ var
 		img: '**/*.{jpg,jpeg,gif,png}'
 	};
 
+
+
+
 // Tasks
 g.task('style', function() {
 	return g.src(
-			[paths.source + globs.sass], {
+			[paths.source + globs.sass,'!node_modules/**/*'], {
 				base: './src/'
 			})
 		// Only process changed files
-		.pipe($.changed(paths.dist, {
-			extension: '.css'
-		}))
+		// .pipe($.changed(paths.dist, {
+		// 	extension: '.css'
+		// }))
+		.pipe($.newer({dest: paths.dist, map: mapNewer, ext:'.css'}))
+		// .pipe($.cached('style'))
 		// Output names of files being processed
 		.pipe($.debug({
 			title: 'Processing:'
@@ -69,7 +87,7 @@ g.task('style', function() {
 		// .pipe(browserSync.stream({match: '**/*.css'}));
 		.pipe($.debug({
 			title: 'Output:',
-			minimal: false
+			minimal: true
 		}))
 		.on('end', function() {
 			$.util.log('CSS Processed');
@@ -106,7 +124,11 @@ g.task('php', function() {
 			[paths.source + globs.php], {
 				base: './src/'
 			})
+		.pipe($.newer(paths.dist))
 		.pipe(g.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Output:'
+		}))
 })
 
 // Everything below is placeholder / WIP
@@ -114,6 +136,7 @@ g.task('scripts', function() {
 	return g.src(paths.source + globs.scripts, {
 			base: './src/'
 		})
+		.pipe($.changed(paths.dist))
 		.pipe($.debug({
 			title: 'Processing:'
 		}))
@@ -143,7 +166,7 @@ g.task('scripts', function() {
 		.pipe(g.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
-			minimal: false
+			minimal: true
 		}))
 		.pipe($.stripDebug())
 		.pipe($.rename({
@@ -152,9 +175,9 @@ g.task('scripts', function() {
 		// Uglify
 		// .pipe($.uglify())
 		.pipe(g.dest(paths.dist))
-		.pipe($.notify({
-			message: 'Scripts task complete'
-		}));
+		// .pipe($.notify({
+		// 	message: 'Scripts task complete'
+		// }));
 });
 g.task('clean', function() {
 	return del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img']);
@@ -189,13 +212,13 @@ g.task('watch', function() {
 g.task('markup',
 	g.parallel('jade', 'html', 'php'));
 
-gulp.task('serve', ['sass'], function() {
-  browserSync.init({
-      server: paths.dist
-  });
-  gulp.watch("app/scss/*.scss", ['sass']);
-  gulp.watch("app/*.html").on('change', browserSync.reload);
-});
+// g.task('serve', ['style'], function() {
+//   $.browserSync.init({
+//       server: paths.dist
+//   });
+//   // gulp.watch("app/scss/*.scss", ['style']);
+//   // gulp.watch("app/*.html").on('change', browserSync.reload);
+// });
 
 g.task('default',
 	g.parallel('style', 'markup', 'scripts', 'images'));
