@@ -1,0 +1,173 @@
+/*remove*/
+.twc-content {
+  min-height: 800px;
+}
+
+.twc-container {
+  background: #fff;
+  padding: 1em 2.5%;
+  max-width: 1280px;
+}
+header.simply {
+  width: 100%;
+  max-width: 1280px;
+  clear: both;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  margin-left: -2.5%;
+  padding: 0.5em 2.5% 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.simply {
+  clear: both;
+}
+
+.simpleLogo {
+  text-align: left;
+  max-width: 20%;
+  float: left;
+}
+
+.simpleNav {
+  text-align: right;
+  max-width: 80%;
+  float: right;
+  line-height: 2;
+}
+
+.simpleNav a {
+  color: #3f454f;
+}
+
+.simpleNav a:hover {
+  color: #5f656f;
+}
+
+.simpleNav .navContainer {
+  position: absolute;
+  right: -50%;
+  left: 160%;
+  text-align: left;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  color: #3f454f;
+  padding: 1em;
+  box-shadow: -2px 2px 1px 1px #d5d5d5;
+  display: none;
+}
+
+.simpleNav .navContainer > ul {
+  max-width: 75%;
+  display: none;
+}
+
+.simpleNav .navContainer > ul.js-active {
+  display: block;
+}
+
+.simpleNav .navContainer > ul li.js-last a {
+  border-bottom: none;
+}
+
+.simpleNav .navContainer fieldset.login {
+  max-width: 50%;
+}
+
+.simpleNav .navContainer a {
+  color: #3f454f;
+  display: inline-block;
+  width: 50%;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.simpleNav .navContainer a:after {
+  font-family: "FontAwesome";
+  content: "\f054";
+  float: right;
+}
+
+.simpleNav ul.horizontal li {
+  border-right: 1px solid #3376b2;
+  padding: 0 .5em;
+}
+.simpleNav ul.horizontal li:last-of-type {
+  border-right: none;
+  padding-right: 0;
+}
+
+.simpleNavHidden {
+  display: none;
+}
+
+.simpleNavToggle:after {
+  font-family: "FontAwesome";
+  font-size: 26px;
+  font-size: 41.6px;
+  font-size: 2.6rem;
+  content: "\f0c9";
+  color: #fff;
+  line-height: 2;
+  background: #3376b2;
+  border-radius: 3px;
+  padding: .125em .25em;
+}
+
+.simpleNavToggle {
+  display: none;
+}
+@media (max-width: 48em) {
+  .simpleLogo {
+    max-width: 75%;
+    margin-bottom: 1em;
+  }
+  .simpleNav {
+    width: 100%;
+    max-width: 100%;
+  }
+  .simpleNavItems {
+    display: none;
+  }
+  .simpleNavToggle {
+    display: block;
+    position: absolute;
+    max-width: 10%;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  .simpleNavItems {
+    position: relative;
+    width: 105%;
+    margin-left: -2.5%;
+    line-height: 3;
+    padding: 0.5em 1em;
+    background: #fff;
+    float: left;
+  }
+  .simpleNav ul.horizontal li {
+    display: block;
+    text-align: left;
+    border-right: none;
+    float: left;
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #e2e3e6;
+  }
+  .simpleNav ul.horizontal li.js-last {
+    border-bottom: none;
+  }
+  .simpleNav ul.horizontal li a:after {
+    font-family: "FontAwesome";
+    content: "\f054";
+    color: #3376b2;
+    float: right;
+  }
+  .simpleNavItems li a {
+    display: inline-block;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=page.css.map */

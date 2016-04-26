@@ -1,0 +1,133 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    My Move  -- Version: 1.0.0 - Updated: 6/15/2014
+   ========================================================================== */
+
+.my-move {
+  .twc-banner {
+    background-image: url('../images/my-move-bnr-new.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 290px;
+  }
+  .call-back {
+    display: none;
+  }
+  .regrets {
+    display: none;
+  }
+  .zip-input {
+    display: inline-block;
+    width: 50%;
+  }
+  .zip-form {
+    text-align: center;
+  }
+  .twc-box-column {
+    &.blue {
+      background-color: #68838E;
+      color: #fff;
+    }
+    &.gray {
+      background-color: #7a7a7a;
+      color: #fff;
+    }
+  }
+  .box {
+    background-color: #5f81a0;
+    margin: 0;
+    padding: 2em 1em;
+  }
+  .bordered-right {
+    padding-right: .5em;
+  }
+  .cta {
+    &.omega {
+      &.share {
+        button {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  .thank-you-box {
+    display: none;
+  }
+  .formitem {
+    &.state {
+      ul {
+        &.parsley-errors-list {
+          li {
+            &.parsley-required {
+              left: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    &.zip {
+      .parsley-errors-list {
+        &.filled {
+          li {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .multi-form {
+    .box {
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .my-move {
+    .parsys_column {
+      margin-left: 2.5%;
+    }
+    [class*="twc-col2_5050-c"] {
+      width: 48.75%;
+    }
+    [class*="twc-col2_6040-c0"] {
+      width: 58.75%;
+    }
+    [class*="twc-col2_6040-c1"] {
+      width: 38.75%;
+    }
+    .bordered-right {
+      border-right: 1px solid #e1e1e1;
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .my-move {
+    .parsys_column {
+      margin-left: 0;
+    }
+    [class*="twc-col2_5050-c"] {
+      width: 100%;
+    }
+    [class*="twc-col2_6040-c0"] {
+      width: 100%;
+    }
+    [class*="twc-col2_6040-c1"] {
+      width: 100%;
+    }
+    .box {
+      padding: 1em;
+    }
+    .bordered-right {
+      border-right: none;
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}

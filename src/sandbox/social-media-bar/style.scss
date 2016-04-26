@@ -1,0 +1,75 @@
+@import '../../init';
+$bar-height: 79px;
+$bar-height-tablet: 52px;
+.soc-wrapper {
+  background-color: $steelSky-darker;
+}
+.inner {
+  display: table;
+  width: 100%;
+  max-width: $fixed-width-container;
+  text-align: center;
+  margin: 0 auto;
+}
+.soc {
+  display: table-row;
+  width: 100%;
+  // background: $steelSky-darker;
+  list-style: none;
+  text-align: center;
+  // padding-top: 1px;
+  height: $bar-height;
+  @include respond-to(medium) {
+    height: $bar-height-tablet;
+    // padding: 14px 0;
+  }
+
+  li {
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 1em;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:first-child {
+      position: relative;
+      top: -2px;
+    }
+
+    a,
+    svg {
+      display: block;
+    }
+
+    a {
+      color: #fff;
+      fill: #fff;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-family: $font-stack-sans-light;
+      font-weight: 100;
+      @include respond-to(medium) {
+        max-width: 48px;
+        margin: 0 auto;
+      }
+
+      svg {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        max-width: 3em;
+        max-height: 3em;
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block;
+        // vertical-align: calc(100%);
+        line-height: $bar-height;
+        @include respond-to(medium) {
+          line-height: $bar-height-tablet;
+        }
+      }
+    }
+  }
+}

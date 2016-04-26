@@ -1,0 +1,156 @@
+/* ==========================================================================
+    Modules -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+hr {
+  margin: 1.5em 0;
+  border: 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #fff; }
+
+hr.solid {
+  border-top: none;
+  border-right: none;
+  border-bottom: 3px solid #333;
+  border-left: none;
+  margin: 0 0 1em 0; }
+
+hr.spacer {
+  border: medium none;
+  margin: 1.5em 0 0 0;
+  background: none; }
+
+.hr-line {
+  border-top: 1px solid #e1e1e1;
+  margin: 1.5em 0;
+  text-align: center;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none; }
+  .hr-line legend {
+    color: #555555;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0 1em; }
+
+/* Shadows */
+/*==================================================
+ * Shadow 1
+ =================================================*/
+.shadow-1:before {
+  position: absolute;
+  left: 1%;
+  bottom: -22px;
+  width: 98%;
+  margin: 30px auto;
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 12px 7px #333;
+  z-index: -1; }
+
+.shadow-1:after {
+  position: absolute;
+  left: -1.5%;
+  bottom: -25px;
+  width: 103%;
+  margin: 30px auto;
+  content: '';
+  box-shadow: 0 0 15px 4px #555;
+  z-index: -1; }
+
+/*==================================================
+ * Shadow 2
+ =================================================*/
+.shadow-2:before {
+  position: absolute;
+  left: -1%;
+  bottom: -30px;
+  width: 102%;
+  margin: 30px auto;
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 8px #333;
+  z-index: -1; }
+
+/*==================================================
+ * Shadow 3
+ =================================================*/
+.shadow-3:before, .shadow-3:after {
+  position: absolute;
+  content: "";
+  bottom: 20px;
+  left: 1%;
+  width: 52%;
+  top: 83%;
+  box-shadow: 0 15px 10px #101010;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  z-index: -1; }
+
+.shadow-3:after {
+  right: 1%;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg); }
+
+/*==================================================
+ * Shadow 4
+ =================================================*/
+.shadow-4:before, .shadow-4:after {
+  position: absolute;
+  content: "";
+  width: 52%;
+  z-index: -1; }
+
+.shadow-4:before {
+  bottom: 5%;
+  top: 20px;
+  left: 1%;
+  box-shadow: 0 -15px 10px #101010;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg); }
+
+.shadow-4:after {
+  bottom: 20px;
+  top: 5%;
+  right: 1%;
+  left: auto;
+  box-shadow: 0 15px 10px #101010;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg); }
+
+.divider-shadow {
+  position: relative;
+  overflow: hidden;
+  margin: 1em 0 0;
+  padding: 1em 0;
+  border: none;
+  border-top: 1px solid #f3f3f3; }
+  .divider-shadow:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 96%;
+    top: -1em;
+    height: 10px;
+    left: 2%;
+    border-radius: 20;
+    background-clip: padding-box;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.25); }
+
+/* ie8 (.ie8) */
+.twc-ie8 .divider-shadow {
+  margin: 1.5em 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0;
+  border-top: 1px solid #c2c2c2;
+  border-bottom: 1px solid #fff; }
+
+/*# sourceMappingURL=modules.css.map */

@@ -1,0 +1,95 @@
+/* ==========================================================================
+    User Location -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-location {
+  padding-right: 0;
+  text-align: right; }
+
+.twc-customerLocation {
+  position: relative;
+  color: #fff; }
+  .twc-customerLocation li {
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em; }
+    .twc-customerLocation li ul {
+      display: none; }
+  .twc-customerLocation ul li.twc-drop-nav.js-persist {
+    border-radius: 3px 3px 0 0;
+    background-clip: padding-box;
+    background: #677986; }
+  .twc-customerLocation p.twc-alert-text {
+    font-weight: 700; }
+  .twc-customerLocation ul li ul {
+    display: none;
+    position: absolute;
+    width: 225px;
+    top: 28px;
+    background: #677986;
+    border-radius: 3px 0 3px 3px;
+    background-clip: padding-box;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999; }
+    .twc-customerLocation ul li ul li {
+      display: block;
+      color: #fff; }
+  .twc-customerLocation button.btn {
+    background: #444545; }
+    .twc-customerLocation button.btn:hover {
+      background: #333; }
+  .twc-customerLocation ul li li {
+    padding: 0; }
+
+a.twc-change {
+  font-weight: 100;
+  color: #9d9d9e; }
+  a.twc-change:after {
+    font-family: "FontAwesome";
+    content: '\f078';
+    margin-left: 4px; }
+
+li.twc-drop-nav.js-persist a.twc-change:after {
+  font-family: "FontAwesome";
+  content: '\f00d';
+  padding: 0 1px; }
+
+.message {
+  top: 4px;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+  background-clip: padding-box;
+  background: #c6c9cf;
+  z-index: 9999; }
+
+.twc-customerLocation .message p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #333;
+  line-height: 1;
+  text-align: center; }
+  .twc-customerLocation .message p a {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: #3376b2; }
+
+.oof-error-text {
+  display: inline-block; }
+
+/* ie (.ie) */
+.twc-ie .twc-customerLocation ul li ul {
+  right: 0; }
+@media (max-width: 40em) {
+  div.twc-mobile-custLoc input {
+    margin-right: 0; } }
+
+/*# sourceMappingURL=userLocation.css.map */

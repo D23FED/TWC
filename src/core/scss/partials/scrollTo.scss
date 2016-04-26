@@ -1,0 +1,33 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Scroll To -- Version: 1.9.0.1 - Updated: 2/7/2014
+   ========================================================================== */
+
+.scrollToTop {
+  position: fixed;
+  @include inline-block();
+  right: 1em;
+  bottom: .5em;
+  @include margin(.5em, 0);
+  @include padding(.5em, 1em);
+  @include border-radius();
+  background: rgba(0,0,0,.1);
+  font-weight: 100;
+  z-index: 999999;
+  -webkit-transform: translateZ(0);
+  &:after {
+    padding-left: .5em;
+    font-family: $fontawesome;
+    font-size: inherit;
+    font-weight: inherit;
+    content: '\f093';
+  }
+}
+
+.scrollToTop-modal {
+  @extend .scrollToTop;
+  position: relative;
+  float: right;
+}

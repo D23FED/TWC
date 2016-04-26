@@ -1,0 +1,96 @@
+/* ==========================================================================
+    My Move  -- Version: 1.0.0 - Updated: 6/15/2014
+   ========================================================================== */
+.my-move .twc-banner {
+  background-image: url("../images/my-move-bnr-new.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 290px;
+}
+.my-move .call-back {
+  display: none;
+}
+.my-move .regrets {
+  display: none;
+}
+.my-move .zip-input {
+  display: inline-block;
+  width: 50%;
+}
+.my-move .zip-form {
+  text-align: center;
+}
+.my-move .twc-box-column.blue {
+  background-color: #68838E;
+  color: #fff;
+}
+.my-move .twc-box-column.gray {
+  background-color: #7a7a7a;
+  color: #fff;
+}
+.my-move .box {
+  background-color: #5f81a0;
+  margin: 0;
+  padding: 2em 1em;
+}
+.my-move .bordered-right {
+  padding-right: .5em;
+}
+.my-move .cta.omega.share button {
+  margin-bottom: 1em;
+}
+.my-move .thank-you-box {
+  display: none;
+}
+.my-move .formitem.state ul.parsley-errors-list li.parsley-required {
+  left: 0;
+  width: 100%;
+}
+.my-move .formitem.zip .parsley-errors-list.filled li {
+  left: 0;
+  width: 100%;
+}
+.my-move .multi-form .box {
+  position: relative;
+}
+
+@media (max-width: 48em) {
+  .my-move .parsys_column {
+    margin-left: 2.5%;
+  }
+  .my-move [class*="twc-col2_5050-c"] {
+    width: 48.75%;
+  }
+  .my-move [class*="twc-col2_6040-c0"] {
+    width: 58.75%;
+  }
+  .my-move [class*="twc-col2_6040-c1"] {
+    width: 38.75%;
+  }
+  .my-move .bordered-right {
+    border-right: 1px solid #e1e1e1;
+  }
+}
+@media (max-width: 40em) {
+  .my-move .parsys_column {
+    margin-left: 0;
+  }
+  .my-move [class*="twc-col2_5050-c"] {
+    width: 100%;
+  }
+  .my-move [class*="twc-col2_6040-c0"] {
+    width: 100%;
+  }
+  .my-move [class*="twc-col2_6040-c1"] {
+    width: 100%;
+  }
+  .my-move .box {
+    padding: 1em;
+  }
+  .my-move .bordered-right {
+    border-right: none;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+}

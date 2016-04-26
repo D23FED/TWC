@@ -6,6 +6,8 @@ var
 	$ = require('gulp-load-plugins')({
 		pattern: ['gulp-*', 'gulp.*', 'autoprefixer', 'pixrem', 'postcss-*', 'css-*']
 	}),
+	path = require('path'),
+	browserSync = require('browser-sync').create(),
 	postCssProcessors = [
 		$.autoprefixer({
 			browsers: 'last 3 versions'
@@ -18,30 +20,38 @@ var
 		$.cssMqpacker
 	],
 	paths = {
-		scripts: [
-			'./js/'
-		],
+		source: 'src/',
+		scripts: 'js/',
 		css: 'css/',
 		test: 'test/',
-		sandbox: './sandbox/',
-		dist: 'dist/',
+		sandbox: 'sandbox/',
+		dist: 'twc/',
 		css: 'css/'
 	},
 	globs = {
 		css: './css/**',
 		sass: '**/*.scss',
+		html: '**/*.html',
+		php: '**/*.php',
 		jade: '**/*.jade',
-		scripts: '**/*.js'
+		scripts: '**/*.js',
+		img: '**/*.{jpg,jpeg,gif,png}'
 	};
 
 // Tasks
 g.task('style', function() {
 	return g.src(
-		['sandbox/' + globs.sass], {base: '.'})
+			[paths.source + globs.sass], {
+				base: './src/'
+			})
 		// Only process changed files
-		.pipe($.changed(paths.dist, { extension: '.css' }))
+		.pipe($.changed(paths.dist, {
+			extension: '.css'
+		}))
 		// Output names of files being processed
-		.pipe($.debug({title: 'Processing:'}))
+		.pipe($.debug({
+			title: 'Processing:'
+		}))
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())
 		// Compile Sass
@@ -50,26 +60,146 @@ g.task('style', function() {
 		.pipe($.postcss(postCssProcessors))
 		// Write Sourcemaps
 		.pipe($.sourcemaps.write('.'))
+		.pipe($.rename(function(path) {
+			path.dirname = path.dirname.replace('scss', 'css');
+			return path;
+		}))
 		// Write CSS to disk
 		.pipe(g.dest(paths.dist))
-		.pipe($.debug({title: 'Output:', minimal: false}))
+		// .pipe(browserSync.stream({match: '**/*.css'}));
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: false
+		}))
 		.on('end', function() {
 			$.util.log('CSS Processed');
 		})
 });
 
-g.task('markup', function() {
+g.task('jade', function() {
 	return g.src(
-		['./test/' + globs.jade],
-		{base: '.'})
-	.pipe($.debug({title: 'Processing:'}))
-	.pipe($.jade({
-		pretty: '\t'
+			[paths.source + globs.jade], {
+				base: './src/'
+			})
+		.pipe($.debug({
+			title: 'Processing:'
 		}))
-	.pipe(g.dest(paths.dist))
+		.pipe($.jade({
+			pretty: '\t'
+		}))
+		.pipe(g.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Output:'
+		}))
+
 });
 
+g.task('html', function() {
+	return g.src(
+			[paths.source + globs.html], {
+				base: './src/'
+			})
+		.pipe(g.dest(paths.dist))
+})
+g.task('php', function() {
+	return g.src(
+			[paths.source + globs.php], {
+				base: './src/'
+			})
+		.pipe(g.dest(paths.dist))
+})
+
 // Everything below is placeholder / WIP
+g.task('scripts', function() {
+	return g.src(paths.source + globs.scripts, {
+			base: './src/'
+		})
+		.pipe($.debug({
+			title: 'Processing:'
+		}))
+		// Lint
+		.pipe($.eslint({
+			extends: 'eslint:recommended',
+			ecmaFeatures: {
+				'impliedStrict': true
+			},
+			rules: {
+				'strict': 2
+			},
+			globals: {
+				'jQuery': true,
+				'$': true
+			}
+		}))
+		.pipe($.eslint.format())
+		// Concat
+		// .pipe($.concat('main.js'))
+		.pipe($.jsbeautifier({
+		    // config: './config.json',
+		    indent_char: '\t',
+		    indent_size: 1,
+		    space_in_paren: true
+  	}))
+		.pipe(g.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: false
+		}))
+		.pipe($.stripDebug())
+		.pipe($.rename({
+			suffix: '.dist'
+		}))
+		// Uglify
+		// .pipe($.uglify())
+		.pipe(g.dest(paths.dist))
+		.pipe($.notify({
+			message: 'Scripts task complete'
+		}));
+});
+g.task('clean', function() {
+	return del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img']);
+});
+g.task('images', function() {
+	return g.src(paths.source + globs.img, {
+			base: './src/'
+		})
+		.pipe($.plumber())
+		.pipe($.changed(paths.dist))
+		.pipe($.imagemin({
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true,
+			multipass: true
+		}))
+		.pipe($.plumber.stop())
+		.pipe(g.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Processing image:'
+		}))
+		// .pipe($.notify({
+		// 	message: 'Images task complete'
+		// }));
+});
+g.task('watch', function() {
+	g.watch(paths.sandbox + globs.styles, ['styles']);
+	g.watch(paths.test + globs.styles, ['styles']);
+	// g.watch(paths.images, ['images']);
+	// g.watch(paths.scripts, ['scripts']);
+});
+g.task('markup',
+	g.parallel('jade', 'html', 'php'));
+
+gulp.task('serve', ['sass'], function() {
+  browserSync.init({
+      server: paths.dist
+  });
+  gulp.watch("app/scss/*.scss", ['sass']);
+  gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
+g.task('default',
+	g.parallel('style', 'markup', 'scripts', 'images'));
+
 /*
 TODO:
 Create seperate dev/dist tasks
@@ -98,45 +228,3 @@ browser-sync
 environment
 
 */
-g.task('scripts', function() {
-	return g.src(paths.scripts, {
-			base: '.'
-		})
-		.pipe($.jshint('.jshintrc'))
-		.pipe($.jshint.reporter('default'))
-		.pipe($.concat('main.js'))
-		.pipe(g.dest('dist/assets/js'))
-		.pipe($.rename({
-			suffix: '.min'
-		}))
-		.pipe($.uglify())
-		.pipe(g.dest('dist/js'))
-		.pipe($.notify({
-			message: 'Scripts task complete'
-		}));
-});
-g.task('clean', function() {
-	return del(['dist/assets/css', 'dist/assets/js', 'dist/assets/img']);
-});
-g.task('images', function() {
-	return g.src('src/images/**/*')
-		.pipe(imagemin({
-			optimizationLevel: 3,
-			progressive: true,
-			interlaced: true,
-			multipass: true
-		}))
-		.pipe(g.dest('dist/assets/img'))
-		.pipe(notify({
-			message: 'Images task complete'
-		}));
-});
-g.task('watch', function() {
-	g.watch(paths.sandbox + globs.styles, ['styles']);
-	g.watch(paths.test + globs.styles, ['styles']);
-	// g.watch(paths.images, ['images']);
-	// g.watch(paths.scripts, ['scripts']);
-});
-g.task('default', function() {
-	g.start('style', 'markup')
-});

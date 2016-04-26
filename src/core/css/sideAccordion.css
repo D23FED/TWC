@@ -1,0 +1,14 @@
+/* ==========================================================================
+    Side Accordion -- Version: 1.9.0.0 - Updated: 3/11/2014
+   ========================================================================== */
+.sideAccordion .js-expandable > ul > li.js-notexpandable:after {
+  float: right;
+  font-family: "FontAwesome";
+  content: '\f105';
+  color: inherit;
+}
+@media (max-width: 48em) {
+  .sideAccordion .js-expandable > ul > li.js-notexpandable:after {
+    content: '\f107';
+  }
+}

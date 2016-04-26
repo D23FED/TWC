@@ -1,0 +1,83 @@
+/* ==========================================================================
+    Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-alert-section .twc-alert {
+  border-bottom: 1px solid #eeeeef;
+  background: #d14853;
+  box-shadow: inset 0 -10px 14px 0 rgba(0, 0, 0, 0.2);
+  color: #fff; }
+
+.twc-alert-section .twc-container {
+  padding-top: 1em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  padding-left: 3em; }
+
+.twc-alert-section p.twc-alert-text {
+  position: relative;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: normal; }
+  .twc-alert-section p.twc-alert-text .twc-container {
+    padding: 1em 2em 1em 0; }
+
+.twc-alert-section .twc-customerLocation p.twc-alert-text:before, .twc-alert-section p.twc-alert-text:before {
+  padding-right: 10px;
+  font-family: "FontAwesome", Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  content: '\f071';
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 100;
+  color: #f6b42a;
+  text-shadow: 0 1px 3px #333;
+  vertical-align: middle;
+  margin-left: -1.4em;
+  float: left; }
+
+.twc-alert-section .twc-alert-close:after {
+  position: relative;
+  float: right;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  padding-left: 1em;
+  font-family: "FontAwesome", Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  content: '\f057';
+  color: #fff;
+  font-weight: lighter; }
+
+.twc-alert-section a.twc-icon:hover {
+  color: inherit; }
+
+@media (max-width: 48em) {
+  .twc-alert-section p.twc-alert-text.twc-container {
+    padding-top: 1em;
+    padding-right: 1.4em;
+    padding-bottom: 1em;
+    padding-left: 4em; }
+  .twc-alert-section .twc-alert-close:after {
+    top: 0;
+    right: 4%;
+    font-size: 24px;
+    font-size: 2.4rem; } }
+
+@media (max-width: 40em) {
+  .twc-alert-section .twc-alert-text:before {
+    font-size: 18px;
+    font-size: 1.8rem;
+    vertical-align: baseline; }
+  .twc-alert-section .twc-content {
+    padding-top: 0; }
+  .twc-alert-section .twc-alert-close:after {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0.5em; } }
+
+/*# sourceMappingURL=alerts.css.map */

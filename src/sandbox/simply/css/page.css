@@ -1,0 +1,633 @@
+/*remove*/
+
+  .fold, .loadtime, .viewport {
+    display: none;
+  }
+  header.simply {
+    width: 100%;
+    clear: both;
+    position: fixed;
+    background: rgba(250, 250, 250, 0.95);
+    top: 0;
+    z-index: 9999;
+    padding: .5em 2.5%;
+    border-bottom: 2px solid rgba(212,213,214,0.75);
+  }
+  header.simply .twc-container {
+    background: transparent;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+  }
+  header.simply .simply.header {
+    clear: both;
+    left: 0;
+  }
+  header.simply .simpleLogo {
+    text-align: left;
+    max-width: 20%;
+    float: left;
+  }
+  header.simply .simpleNav {
+    text-align: right;
+    max-width: 100%;
+  }
+  header.simply .simpleNavItems {
+    line-height: 4;
+  }
+  header.simply .simpleNav ul.horizontal li {
+    border-right: 1px solid rgba(212,213,214,1);
+    padding: 0 0.25em 0 0.75em;
+  }
+  header.simply .simpleNav ul.horizontal .subNavListItems form li {
+    border-right: none;
+  }
+  header.simply .simpleNav ul.horizontal .subNavListItems li {
+    border-right: 1px solid rgba(255,255,255,0.4);
+  }
+  header.simply .simpleNav ul.horizontal li:last-of-type {
+    border-right: none;
+    padding-right: 0;
+  }
+  header.simply .navContainer {
+    display: none;
+  }
+  header.simply .simpleNavHidden {
+    display: none;
+  }
+  header.simply .simpleNavToggle {
+    display: none;
+  }
+  header.simply .headerSpacing {
+    display: block;
+  }
+  header.simply .subNavListItems {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #3376b2;
+    padding: 0 1em;
+    top: 4.65em;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 3px #333;
+  }
+  header.simply li.subNavHead.js-active .subNavListItems {
+    display: block;
+  }
+  header.simply .simpleNav ul.horizontal li.subNavHead.js-inactive {
+    display: none;
+  }
+  header.simply .subNavListItems form li {
+    display: inline-block;
+  }
+  header.simply .subNavListItems form li label {
+    color: #fff;
+  }
+  header.simply .simpleNav ul li.subNavHead .subNavListItems li a {
+    color: rgba(255,255,255, 1);
+  }
+  header.simply .simpleNav ul li.subNavHead .subNavListItems li a:hover {
+    color: rgba(255,255,255, 0.8);
+  }
+  header.simply .simplaNav .cta a {
+    color: #fff;
+  }
+  header.simply .simpleNav ul.horizontal li.subNavHead > a:after {
+    font-family: "FontAwesome";
+    content: "\f078";
+    color: #3376B2;
+    padding-left: 0.5em;
+  }
+  header.simply .simpleNav ul.horizontal li.subNavHead > a:hover:after {
+    color: #1b405d;
+  }
+  header.simply .simpleNav ul.horizontal li.subNavHead > a.js-active:after {
+    content: "\f00d";
+    margin-left: 2px;
+  }
+
+  .generic-accordion figure img {
+    width: 100%;
+  }
+/* End Simply Styling All Breakpoints */
+/* Begin Simply Styling for Tablet / Mobile */
+/* End Simply Styling for Tablet / Mobile */
+
+.twc-container {
+  background: #fff;
+  max-width: 100vw;
+  position: relative;
+  padding: 0;
+}
+header.simply {
+  width: 100%;
+  clear: both;
+  position: fixed;
+  background: rgba(250, 250, 250, 0.95);
+  top: 0;
+  z-index: 9999;
+  padding: .5em 2.5%;
+  height: 70px;
+}
+
+header.simply .twc-container {
+  background: transparent;
+}
+
+.simply.header {
+  clear: both;
+  left: 0;
+  position: absolute;
+}
+
+.simpleLogo {
+  text-align: left;
+  max-width: 20%;
+  float: left;
+}
+
+.simpleNavItems {
+  line-height: 4;
+}
+
+.simpleNav ul.horizontal li {
+  border-right: 1px solid #3376b2;
+  padding: 0 .5em;
+}
+.simpleNav ul.horizontal li:last-of-type {
+  border-right: none;
+  padding-right: 0;
+}
+
+.navContainer {
+  display: none;
+}
+
+.simpleNavHidden {
+  display: none;
+}
+
+.simpleNavToggle {
+  display: none;
+}
+
+.headerSpacing {
+  display: block;
+}
+
+section {
+  position: relative;
+  margin-top: 70px;
+  height: 70vh;
+  background: #777;
+  overflow: hidden;
+}
+
+.huge-hero {
+  height: 100%;
+  overflow: hidden;
+}
+
+.huge-hero .huge-hero-image {
+  height: 100%;
+  width: 100%;
+  background-image: url(mega-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+.huge-hero .huge-hero-image-2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(dodgers.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.huge-hero .huge-hero-image-3 {
+  height: 100%;
+  width: 100%;
+  background-image: url(mega-hero.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.huge-hero .huge-hero-image .huge-hero-image-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  color: #fff;
+  width: 80%;
+}
+
+.box {
+  background: #3376b2;
+  margin: 0;
+  color: #fff;
+  min-height: 23vh;
+  overflow: hidden;
+  padding: 1em 2em;
+}
+
+footer.new .box-padding {
+  display: table-cell;
+  width: 33%;
+  vertical-align: top;
+  border-right: 1px solid #aaa;
+}
+
+footer.new .box-padding:last-of-type {
+  border-right: none;
+}
+
+.box-padding {
+  padding: 0 2em;
+}
+
+.twc-col3_333333-c0 .box-padding {
+  padding-left: 0;
+}
+
+.twc-col3_333333-c2 .box-padding {
+  padding-right: 0;
+}
+
+.parsys.bordered {
+  border-right: 1px solid #aaa;
+}
+
+footer {
+  height: 23vh;
+}
+
+.box h3, .box p, .box a {
+  color: #fff;
+}
+
+.carousel-progress {
+  position: absolute;
+  right: 0;
+  height: 15%;
+  min-height: 90px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  background: rgba(0,0,0,0.8);
+  border-radius: 8px 0 0 8px;
+}
+
+.carousel-circles {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em;
+  height: 100%;
+  width: 40px;
+}
+
+[class*="slide-"] {
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  border-radius: 25px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+[class*="slide-"]:hover {
+  border: 1px solid #fff;
+}
+
+.slide-1 {
+  background: #3376b2;
+  top: 5%;
+}
+
+.slide-2 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+
+.slide-3 {
+  bottom: 5%;
+}
+
+.forward-carousel {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  padding: 0.5em;
+  text-align: center;
+  color: #fff;
+  width: 20%;
+  margin: 0 auto;
+  left: 40%;
+  bottom: 1px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+}
+
+.forward-carousel span:after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  font-size: 20px;
+  display: block;
+}
+@media (max-width: 48em) {
+
+    header.simply {
+        height: 5em;
+        min-height: 5em;
+    }
+
+    header.simply .simpleLogo {
+        max-width: 75%;
+    }
+
+    header.simply .simpleNav {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header.simply .simpleNavToggle {
+        display: block;
+        position: absolute;
+        background: #3376b2;
+        border: 1px solid #3376b2;
+        padding: 0.5em;
+        border-radius: 3px;
+        right: 2.5%;
+        top: 0.75em;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: #fff;
+        font-family: Arial;
+    }
+
+    header.simply .simpleNavToggle:after {
+        font-family: "FontAwesome";
+        content: "\f0c9";
+        transition: content .5s ease 0s;
+    }
+
+    header.simply .simpleNavToggle.js-active:after {
+        font-family: "FontAwesome";
+        content: "\f00d";
+        transition: content .5s ease 0s;
+    }
+
+    header.simply .simpleNavToggle.js-active {
+        background: #fff;
+        color: #3376b2;
+    }
+
+    header.simply .simpleNav ul.horizontal li.subNavHead.js-active {
+        display: block;
+    }
+
+    header.simply .simpleNav ul.horizontal li.subNavHead > a:hover:after {
+        color: #fff;
+    }
+
+    header.simply .simpleNavToggle ~ .simpleNavItems {
+        position: absolute;
+        width: 75%;
+        line-height: 3;
+        padding: 0.5em 1em;
+        background: #3376b2;
+        border-radius: 0 0 0 3px;
+        right: -100%;
+        top: 64px;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s, right .6s ease 0s;
+    }
+
+    header.simply .simpleNavToggle.js-active ~ .simpleNavItems {
+        right: -2.75%;
+        opacity: 1;
+    }
+
+    header.simply .simpleNav ul.horizontal li {
+        display: block;
+        text-align: left;
+        border-right: none;
+        float: left;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    header.simply .simpleNav ul.horizontal li.js-last {
+        border-bottom: none;
+    }
+
+    header.simply .simpleNav ul.horizontal li.subNavHead > a:after {
+        color: #fff;
+        float: right;
+    }
+
+    header.simply .simpleNav ul.horizontal li.subNavHead > ul li > a:after {
+        font-family: "FontAwesome";
+        content: "\f054";
+        color: #3376b2;
+        float: right;
+    }
+
+    header.simply .subNavListItems {
+        position: relative;
+        padding: 0;
+        top: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    header.simply .simpleNavItems li a {
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+    }
+
+    header.simply .simpleNav ul li.subNavHead .subNavListItems li {
+        background: #fff;
+        padding: 0 .5em;
+    }
+
+    header.simply .simpleNav ul li.subNavHead .subNavListItems li a {
+        color: #3376b2;
+    }
+
+    header.simply .simpleNav ul li.subNavHead .subNavListItems li a:hover {
+        color: #3376B2;
+    }
+
+    header.simply .simpleNav ul li.subNavHead .subNavListItems li .cta a {
+        color: #fff;
+    }
+
+    header.simply .simpleNav ul li.subNavHead .subNavListItems form li {
+        line-height: 1.75;
+    }
+
+    section {
+        margin-top: 5em;
+    }
+
+    .simpleLogo {
+        max-width: 75%;
+        margin-bottom: 1em;
+    }
+
+    .simpleNav {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .simpleNavToggle {
+        display: block;
+        position: absolute;
+        background: #3376b2;
+        border: 1px solid #3376b2;
+        padding: 0.5em;
+        border-radius: 3px;
+        right: 2.5%;
+        top: 0.5em;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: #fff;
+        font-family: Arial;
+    }
+
+    .simpleNavToggle:after {
+        font-family: "FontAwesome";
+        content: "\f0c9";
+    }
+
+    .simpleNavToggle.js-active {
+        background: #fff;
+        color: #3376b2;
+    }
+
+    .simpleNavToggle ~ .simpleNavItems {
+        position: absolute;
+        width: 75%;
+        line-height: 3;
+        padding: 0.5em 1em;
+        background: #3376b2;
+        right: -100%;
+        transition: right 0.5s;
+    }
+
+    .simpleNavToggle.js-active ~ .simpleNavItems {
+        right: 0;
+    }
+
+    .simpleNav ul.horizontal li {
+        display: block;
+        text-align: left;
+        border-right: none;
+        float: left;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .simpleNav ul.horizontal li.js-last {
+        border-bottom: none;
+    }
+
+    .simpleNav ul.horizontal li a:after {
+        font-family: "FontAwesome";
+        content: "\f054";
+        color: #fff;
+        float: right;
+    }
+
+    .simpleNavItems li a {
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    .parsys.bordered {
+        border-right: none;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .carousel-progress {
+        position: absolute;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+        height: 3em;
+        min-height: 0;
+        width: 150px;
+        top: auto;
+        bottom: 0;
+        padding: 0.5em;
+        background: rgba(0,0,0,0.4);
+        border-radius: 8px 8px 0 0;
+        text-align: center;
+    }
+
+    .carousel-circles {
+        display: table;
+        padding: 0;
+        height: 40px;
+        width: 100%;
+    }
+
+    [class*="slide-"] {
+        margin: 0 auto;
+        display: table-cell;
+        width: 20px;
+        height: 20px;
+        top: 5px;
+    }
+
+    .slide-1 {
+        left: 5%;
+    }
+
+    .slide-2 {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .slide-3 {
+        right: 5%;
+    }
+
+    .forward-carousel {
+        display: none;
+    }
+
+    .box {
+        min-height: 0;
+    }
+
+    footer.new .box-padding {
+        display: inline-block;
+        margin: 1em 0 0;
+        padding: 0 0 1em;
+        width: 100%;
+        vertical-align: top;
+        border-right: none;
+        border-bottom: 1px solid #aaa;
+    }
+
+    footer.new .box-padding:last-of-type {
+        border-bottom: none;
+    }
+}
+/*# sourceMappingURL=page.css.map */

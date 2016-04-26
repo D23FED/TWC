@@ -1,0 +1,63 @@
+/* ==========================================================================
+    List Accordion -- Version: 1.9.0.4 - Updated: 12/31/2013
+   ========================================================================== */
+.listAccordion .listAccordionItem .cta.nostyle {
+  padding: .675em 0;
+  border-radius: 0;
+  text-align: left;
+}
+.listAccordion .listAccordionItem .cta.nostyle a {
+  color: #3376b2;
+}
+.listAccordion .listAccordionItem .cta.nostyle a:after {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f107";
+  padding-left: .5em;
+}
+.listAccordion .listAccordionItem .cta.nostyle a.active:after {
+  content: "\f106";
+}
+.listAccordion .listAccordionItem .cta.nostyle.empty a {
+  color: #333333;
+}
+.listAccordion .listAccordionItem .cta.nostyle.empty a:after {
+  content: none;
+}
+.listAccordion .listAccordionItem .cta.nostyle.empty a .active:after {
+  content: none;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title {
+  cursor: pointer;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  padding-top: 0.75em;
+  padding-right: 0;
+  padding-bottom: 0.75em;
+  padding-left: 0;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title a {
+  color: #3376b2;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title a:after {
+  font-family: "FontAwesome";
+  content: "\f107";
+  padding-left: .5em;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title.active a:after, .listAccordion .listAccordionItem .listAccordionItem-title.js-active a:after {
+  content: "\f106";
+}
+.listAccordion .listAccordionItem .listAccordionItem-title.empty a {
+  color: #333333;
+}
+.listAccordion .listAccordionItem .listAccordionItem-title.empty a:after {
+  content: none;
+}
+.listAccordion .details {
+  display: none;
+  margin-top: .5em;
+}
+
+.listAccordionItem .details {
+  display: none;
+}

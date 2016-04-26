@@ -1,0 +1,93 @@
+.swirly {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: visible;
+}
+.swirly > svg {
+  display: block;
+  overflow: visible;
+}
+.swirly > svg > * {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body:not(:-moz-handler-blocked) svg > * {
+  transform: none !important;
+  transform-origin: 0 0;
+}
+
+.swirly {
+  width: 52px;
+  height: 52px;
+}
+@-webkit-keyframes spin-cycle {
+  from {
+    fill: rgba(55, 139, 213, 0.25);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    fill: rgba(195, 228, 253, 0.25);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes spin-cycle {
+   from {
+    fill: rgba(55, 139, 213, 0.25);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    fill: rgba(195, 228, 253, 0.25);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.swirly > svg {
+  width: 50px;
+  height: 50px;
+}
+.swirly > svg > * {
+  fill: rgba(55, 139, 213, 0.25);
+  -webkit-animation-name: spin-cycle;
+          animation-name: spin-cycle;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+.swirly > svg > *:nth-of-type(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.swirly > svg > *:nth-of-type(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.swirly > svg > *:nth-of-type(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.swirly > svg > *:nth-of-type(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.swirly > svg > *:nth-of-type(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.swirly > svg > *:nth-of-type(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.swirly > svg > *:nth-of-type(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+/*# sourceMappingURL=page.css.map */

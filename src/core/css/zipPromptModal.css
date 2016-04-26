@@ -1,0 +1,10 @@
+/* ==========================================================================
+    Zip Prompt Modal  -- Version: 1.0.0 - Updated: 5/23/2014
+   ========================================================================== */
+.contactUsOOF, .contactUsPrompt {
+  top: 40% !important;
+}
+
+.contactUsOOF > .modal_content, .contactUsPrompt > .modal_content {
+  padding: 1.5em;
+}

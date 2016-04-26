@@ -1,0 +1,192 @@
+.twc-content .twc-container, .huge-hero {
+    max-width: 100% !important;
+    padding: 0px;
+}
+.huge-hero {
+   position: relative;
+   height: auto;
+   overflow: hidden;
+}
+.hero-slider-progress {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px 0 0 8px;
+    padding: 5px;
+    z-index: 1;
+}
+.hero-slider-progress .slide {
+    margin: 20px 6px;
+    cursor: pointer;
+}
+
+
+.hero-slider-progress img {
+    max-width: 40px;
+}
+.hero-slider-controls img:nth-child(1) {
+    display: block;
+}
+.hero-slider-controls img:nth-child(2) {
+    display: none;
+}
+
+.hero-slider-controls .active {
+ transition: all 0.5s ease-in-out;
+}
+.hero-slider-controls .active img:nth-child(1) {
+    display: none;
+}
+.hero-slider-controls .active img:nth-child(2) {
+    display: block;
+}
+.hero-wrapper {
+    height: 5000px;
+    position: absolute;
+    top: 0px;
+}
+.huge-hero-image video, .huge-hero-image img {
+    margin: 0;
+    width:100%;
+}
+.huge-hero-image {
+    overflow: hidden;
+}
+.huge-hero-image video {
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+}
+.forward-carousel {
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    padding: 0.5em;
+    text-align: center;
+    color: #fff;
+    width: 20%;
+    margin: 0 auto;
+    left: 40%;
+    bottom: 1px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+      z-index: 1;
+}
+
+.forward-carousel span:after {
+    font-family: "FontAwesome";
+    content: "\f078";
+    font-size: 20px;
+    display: block;
+}
+.huge-hero-image-content {
+    position: absolute;
+    width: 90%;
+    z-index: 1
+}
+.heroslider-0 .huge-hero-image-content {
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+/*Generic positions*/
+.huge-hero-image-content > div {
+    position: absolute;
+}
+.huge-hero-image-content .top {
+    top: 7em;
+}
+.huge-hero-image-content .left {
+    left:2em;
+}
+.huge-hero-image-content .right {
+    right:2em;
+}
+/* video exception*/
+@media (max-width: 48em) {
+    .hero-wrapper {
+        height: auto;
+        width: 5000px;
+        left: 0px;
+    }
+    .huge-hero, .huge-hero-image figure img {
+        width: 100%;
+        height: auto;
+    }
+    .hero-slider-progress {
+        position: absolute;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+        min-height: 0;
+        top: auto;
+        bottom: 0;
+        padding: 0.5em 0;
+        background: rgba(0,0,0,0.6);
+        border-radius: 12px 12px 0 0;
+        text-align: center;
+    }
+    .hero-slider-progress .slide {
+        margin: 0 8px;
+        display: inline-block;
+    }
+    .forward-carousel {
+        display: none;
+    }
+    .hero-slider-progress .slide {
+        background: rgba(255,255,255,0.5);
+        border-radius: 25px;
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        border: 1px solid rgba(5, 5, 5, 0.8);
+        box-shadow: 0px 0px 3px 0px #FFFFFF;
+        -moz-box-shadow: 0px 0px 3px 0px #FFFFFF;
+        -webkit-box-shadow: 0px 0px 3px 0px#FFFFFF;
+        -o-box-shadow: 0px 0px 3px 0px #FFFFFF;
+    }
+    .hero-slider-progress .active {
+        background: #3376b2;
+    }
+    .hero-slider-progress .slide:hover {
+        border: 1px solid #fff;
+    }
+    .hero-slider-progress .slide img {
+        display: none !important;
+    }
+    .huge-hero-image {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .heroslider-0 .huge-hero-image-content {
+        width: 100%;
+    }
+}
+@media (min-aspect-ratio: 16/9) {
+    .huge-hero-image video {
+        height: 300%;
+        top: -100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .huge-hero-image video {
+        width: 300%;
+        left: -100%;
+    }
+}
+/*# sourceMappingURL=page.css.map */

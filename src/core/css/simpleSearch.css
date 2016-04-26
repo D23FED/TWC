@@ -1,0 +1,629 @@
+/* ==========================================================================
+    Simple Search  -- Version: 1.0.0 - Updated: 5/19/2014
+   ========================================================================== */
+.simpleSearch .pagination {
+  text-align: right;
+  width: 100%;
+}
+.simpleSearch .twc-search input {
+  width: 100%;
+}
+.simpleSearch .border-bottom {
+  border-bottom: 1px solid #D4DBED;
+}
+.simpleSearch hr {
+  margin: 0.5em 0 1em;
+}
+.simpleSearch .twc-box-column {
+  padding: .5em;
+  overflow: hidden;
+  border: 0;
+}
+.simpleSearch .twc-col2_7624-c1.twc-box-column {
+  padding: 1em;
+}
+.simpleSearch .resultNumbers {
+  margin: 0.5em;
+}
+.simpleSearch form {
+  background-color: #4d78a1;
+  padding: 1em 0.5em 1em 1em;
+  border-radius: 0 3px 0 0;
+}
+.simpleSearch form.searchInput {
+  background-color: #4d78a1;
+  padding: 1em;
+  border-radius: 0 3px 0 0;
+  margin: -0.5em -0.6em 1em 0;
+}
+.simpleSearch form.searchInput .twc-search {
+  width: 100%;
+}
+.simpleSearch form.searchInput .twc-search .twc-search-input-wrap {
+  text-align: center;
+}
+.simpleSearch form.searchInput .twc-search .twc-search-input-wrap input {
+  width: 85%;
+  float: left;
+  padding: .4125em;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+}
+.simpleSearch form.searchInput-bottom {
+  width: 100%;
+  border-radius: 0;
+}
+.simpleSearch .filters {
+  background-color: #f0f4fb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f4fb), to(white));
+  background-image: -webkit-linear-gradient(top, #f0f4fb, white);
+  background-image: -moz-linear-gradient(top, #f0f4fb, white);
+  background-image: -ms-linear-gradient(top, #f0f4fb, white);
+  background-image: -o-linear-gradient(top, #f0f4fb, white);
+  background-image: linear-gradient(top, #f0f4fb, white);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f4fb', EndColorStr='white')";
+  zoom: 1;
+  margin-right: -1.5em;
+  display: none;
+}
+.simpleSearch .filters .filter-applied {
+  display: none;
+}
+.simpleSearch .filters .filters-bar {
+  position: static;
+  background-color: #7BABDC;
+  cursor: pointer;
+}
+.simpleSearch .filters .filters-bar .cta.filter-toggle {
+  position: relative;
+}
+.simpleSearch .filters .filters-bar .cta.filter-toggle a {
+  color: #fff;
+}
+.simpleSearch .filters .filters-bar .cta.filter-applied {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.simpleSearch .filters .filters-bar div {
+  position: relative;
+}
+.simpleSearch .filters .filter-list {
+  position: relative;
+  padding: 1em;
+}
+.simpleSearch .filters .filter-list ul {
+  margin: 0;
+}
+.simpleSearch .filters .filter-list ul li {
+  clear: both;
+  margin-bottom: 1em;
+}
+.simpleSearch .filters .filter-list ul.js-last {
+  padding-bottom: 0;
+}
+.simpleSearch .filters .filter-list ul a {
+  display: block;
+  word-wrap: break-word;
+}
+.simpleSearch .filters .filter-list ul .icon-remove-sign span:before {
+  content: "\f057";
+  font-family: FontAwesome;
+  line-height: 1;
+  margin-right: 0.5em;
+}
+.simpleSearch .filters .filter-list .remove-filter {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.simpleSearch .filters .filter-list h5 {
+  margin: 0 0 0.5em;
+}
+.simpleSearch .searchResults ul li a {
+  font-size: 15px;
+  font-weight: 700;
+}
+.simpleSearch .searchResults ul li p {
+  margin-top: 1em;
+}
+.simpleSearch .search-bar .searchInput input {
+  float: left;
+  max-width: 75%;
+  min-width: 60%;
+}
+.simpleSearch .search-bar .searchInput .cta.omega[class*="icon-"] {
+  margin-right: 0;
+}
+.simpleSearch .search-bar form input {
+  float: left;
+  max-width: 75%;
+  min-width: 60%;
+}
+.simpleSearch .search-bar form .cta.omega[class*="icon-"] {
+  margin-right: 0;
+}
+.simpleSearch form .twc-search button:before {
+  color: #3376B2;
+  content: "\f002";
+  font-family: FontAwesome;
+  line-height: 1;
+}
+.simpleSearch ul.bordered > li {
+  border-bottom: 1px dotted #eee;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.simpleSearch ul.bordered > li.last {
+  border-bottom: none;
+}
+.simpleSearch ul.bordered > li a {
+  display: block;
+}
+.simpleSearch .bordered .list ul > li {
+  border-bottom: 1px solid #eee;
+  margin: 0 1em 1em 1em;
+  padding-bottom: 1em;
+}
+.simpleSearch .bordered .list ul > li.js-last {
+  border-bottom: none;
+}
+.simpleSearch .bordered .list ul > li a {
+  display: block;
+}
+.simpleSearch .cta {
+  display: inline-block;
+  width: auto;
+}
+.simpleSearch .cta.flat a, .simpleSearch .cta.flat button, .simpleSearch .cta.flat input[type="button"] {
+  background-color: #7babdc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7babdc), to(#7babdc));
+  background-image: -webkit-linear-gradient(top, #7babdc, #7babdc);
+  background-image: -moz-linear-gradient(top, #7babdc, #7babdc);
+  background-image: -ms-linear-gradient(top, #7babdc, #7babdc);
+  background-image: -o-linear-gradient(top, #7babdc, #7babdc);
+  background-image: linear-gradient(top, #7babdc, #7babdc);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7babdc', EndColorStr='#7babdc')";
+  zoom: 1;
+  color: white;
+}
+.simpleSearch .cta.flat a:hover, .simpleSearch .cta.flat button:hover, .simpleSearch .cta.flat input[type="button"]:hover {
+  background-color: #375a7e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#375a7e), to(#375a7e));
+  background-image: -webkit-linear-gradient(top, #375a7e, #375a7e);
+  background-image: -moz-linear-gradient(top, #375a7e, #375a7e);
+  background-image: -ms-linear-gradient(top, #375a7e, #375a7e);
+  background-image: -o-linear-gradient(top, #375a7e, #375a7e);
+  background-image: linear-gradient(top, #375a7e, #375a7e);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#375a7e', EndColorStr='#375a7e')";
+  zoom: 1;
+}
+.simpleSearch .cta.omega a.disabled {
+  display: none;
+}
+.simpleSearch .cta.omega a.active {
+  background-image: none;
+  background-color: #C5D7E8;
+}
+
+body .simpleSearch {
+  line-height: 1.231;
+}
+
+a .simpleSearch {
+  text-decoration: none;
+}
+
+.pageWrap {
+  background: url(../img/gradient-background-container.png) repeat-x scroll 0 -285px #f2f4f6;
+  width: 100%;
+}
+
+.splashLine {
+  background: url(../img/sub-feature-splash.jpg) repeat-x scroll center top #282828;
+  height: 132px;
+  width: 100%;
+}
+
+.scanLine {
+  background: url(../img/overlay-scanline-noshadow.png) repeat scroll 0 0 transparent;
+  top: 0;
+  width: 100%;
+}
+
+.headTitleWrap {
+  max-width: 980px;
+  height: 132px;
+  padding: 2em;
+}
+
+.headTitle {
+  margin-top: 60px;
+  font-family: 'TWC Round Light',Arial,Sans-Serif;
+  font-size: 36px;
+  margin-left: 25px;
+}
+
+.line {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+}
+
+.cw {
+  color: #fff;
+}
+
+.simpleSearch .appview {
+  max-width: 980px;
+  float: left;
+  width: 100%;
+}
+
+.simpleSearch.twc-container {
+  max-width: 980px;
+}
+
+.simpleSearch .resultsArea {
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0px;
+}
+
+.simpleSearch .resultsArea .result {
+  margin: 0 0 17px;
+  padding: 0 0 15px;
+  border-bottom: 1px dotted #E5E5E5;
+}
+
+.simpleSearch .resultsArea .result.last {
+  border-bottom: none;
+}
+
+.simpleSearch .resultsArea .result img {
+  min-width: 90px;
+}
+
+.simpleSearch .resultsArea .result a.linkTarget {
+  padding-right: 10px;
+}
+
+.simpleSearch .resultsArea .result p {
+  line-height: 18px;
+}
+
+.simpleSearch .resultsArea .result .itemInfo {
+  font-size: 13px;
+  margin: 0px;
+}
+
+.simpleSearch .resultsArea .itemPrice {
+  font-size: 24px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.simpleSearch .resultsArea .itemCollection {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.simpleSearch .resultsArea .itemTitle {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.simpleSearch .resultsArea a.itemLinkTarget {
+  font-size: 13px;
+  font-weight: bold;
+  color: #3275AA;
+}
+
+.simpleSearch .resultsArea .result .teaser {
+  font-size: 13px;
+  margin: 0;
+}
+
+.simpleSearch .noResultsText {
+  margin: 0 1em 2em;
+  display: none;
+}
+
+.simpleSearch .noResultsText a {
+  color: #3275AA;
+}
+
+.simpleSearch .bordered .list ul,
+.simpleSearch .bordered .list ul > li,
+.simpleSearch .bordered .list h4,
+.simpleSearch .bordered .list h3,
+.simpleSearch .bordered .list h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.simpleSearch [class*='twc-col2_2476-c'], .simpleSearch [class*='twc-col2_7624-c0'] {
+  width: 73.75%;
+  margin-left: 3.5%;
+}
+
+.marginless .simpleSearch [class*='twc-col2_2476-c'] {
+  width: 76%;
+}
+
+.simpleSearch [class*='twc-col2_2476-c0'] {
+  width: 22.75%;
+}
+
+.marginless .simpleSearch [class*='twc-col2_2476-c0'] {
+  width: 24%;
+}
+
+.simpleSearch .searchTabs li {
+  background: url(../img/searchresults-border.png) no-repeat scroll 0 8px transparent;
+}
+
+.simpleSearch .searchTabs li a {
+  display: block;
+  padding: 10px 11px 19px 11px;
+}
+
+.simpleSearch .searchTabs li.first {
+  background: none  transparent;
+}
+
+.simpleSearch .searchTabs li.active, .searchTabs li:hover {
+  background: none  #FFFFFF;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.simpleSearch .searchTabs li.active a, .searchTabs li:hover a {
+  color: #444444;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.simpleSearch .pageWrap {
+  background: url(../img/gradient-background-container.png) repeat-x scroll 0 -285px #f2f4f6;
+  width: 100%;
+}
+
+.simpleSearch .tabWrap {
+  background: url(../img/gradient-light-blue.png) repeat-x scroll 0 0 #63829d;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+}
+
+@media (max-width: 48em) {
+  .simpleSearch .filters {
+    width: 100%;
+  }
+  .simpleSearch .filters .filter-list .remove-filter {
+    top: 100%;
+    left: 0;
+  }
+  .simpleSearch form {
+    margin: -0.5em -2em 1em 0;
+  }
+  .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 74.75%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 76%;
+  }
+  .simpleSearch [class*='twc-col2_2476-c0'] {
+    width: 22.75%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c0'] {
+    width: 24%;
+  }
+
+  .searchInput.desktop-hidden {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .simpleSearch [class*='twc-col2'] {
+    width: 100%;
+  }
+
+  .simpleSearch .desktop-hidden, .simpleSearch .mobile-hidden {
+    display: block;
+  }
+
+  .simpleSearch .tablet-hidden {
+    display: none;
+  }
+
+  .simpleSearch .filters {
+    width: 100%;
+  }
+
+  .simpleSearch [class*=twc-col2_2476-c] {
+    width: 75.75%;
+    margin-left: 1.5%;
+  }
+
+  .simpleSearch [class*=twc-col2_2476-c0] {
+    width: 22.75%;
+  }
+
+  .simpleSearch .searchInput .twc-search-input-wrap input {
+    max-width: 85%;
+  }
+}
+@media (max-width: 40em) {
+  .simpleSearch .resultNumbers {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+  }
+  .marginless .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+  }
+  .simpleSearch .searchInput.desktop-hidden {
+    width: auto;
+    margin-bottom: 1em;
+  }
+  .simpleSearch form.searchInput {
+    margin: -2.5% -2.5% 1em -2.5%;
+    border-radius: 0;
+  }
+  .simpleSearch form.searchInput .twc-search .twc-search-input-wrap input {
+    max-width: 88%;
+  }
+  .simpleSearch .desktop-hidden.tablet-hidden,
+  .simpleSearch .desktop-hidden, .simpleSearch .tablet-hidden {
+    display: block !important;
+  }
+  .simpleSearch .filters {
+    background-color: #E7EEF4;
+    background-image: none;
+  }
+  .simpleSearch .filters a {
+    font-weight: 400;
+  }
+  .simpleSearch .filters .box {
+    display: none;
+  }
+  .simpleSearch .filters .filters-bar {
+    margin: -0.5em -0.5em 0 -0.5em;
+    border-radius: 3px 3px 0 0;
+  }
+  .simpleSearch .filters .filters-bar .cta.filter-applied {
+    top: 10%;
+    border-left: 1px solid #6595C5;
+  }
+  .simpleSearch .filters .filters-bar .filter-applied a {
+    color: #fff;
+  }
+  .simpleSearch .filters .filter-list {
+    display: none;
+  }
+  .simpleSearch .filters .filter-list .remove-filter {
+    left: auto;
+    top: 1em;
+  }
+  .simpleSearch .search-bar {
+    margin: 1em 0;
+  }
+  .simpleSearch .twc-search input {
+    width: 84%;
+  }
+  .simpleSearch .box {
+    margin: 0;
+  }
+
+  .simpleSearch .desktop-hidden, .simpleSearch .tablet-hidden {
+    display: block;
+  }
+
+  .simpleSearch .mobile-hidden {
+    display: none;
+  }
+
+  .simpleSearch .twc-box-column {
+    padding: 0em;
+  }
+
+  .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .marginless .simpleSearch [class*='twc-col2_2476-c'] {
+    width: 100%;
+  }
+
+  .simpleSearch .searchInput {
+    margin: 0 -2.5% 0 0;
+    border-radius: 0;
+  }
+
+  .simpleSearch .searchInput input {
+    width: 84%;
+  }
+
+  .simpleSearch .searchInput .twc-search-input-wrap input {
+    width: 80%;
+  }
+
+  .simpleSearch .pagination {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  .simpleSearch .desktop-hidden.tablet-hidden,
+  .simpleSearch .desktop-hidden, .simpleSearch .tablet-hidden {
+    display: block !important;
+  }
+
+  .simpleSearch .filters {
+    background-color: #E7EEF4;
+    background-image: none;
+  }
+
+  .simpleSearch .filters .box {
+    display: none;
+  }
+
+  .simpleSearch .filters .filters-bar {
+    margin-right: 0;
+  }
+
+  .simpleSearch .filters .filters-bar .cta.filter-applied {
+    top: 10%;
+    float: right;
+    font-size: 1.2em;
+    border-left: 1px solid #6595C5;
+  }
+
+  .simpleSearch .filters .filters-bar .filter-applied a {
+    color: #fff;
+    padding: 0.75em .75em;
+  }
+
+  .simpleSearch .filters .filter-list {
+    display: none;
+  }
+
+  .simpleSearch .filters .filter-list .remove-filter {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    left: auto;
+  }
+
+  .simpleSearch .leftNav {
+    background-color: #7BABDC;
+  }
+
+  .simpleSearch .pagination {
+    margin-bottom: 1.5em;
+  }
+
+  .simpleSearch .resultsArea {
+    margin: 0 1em;
+  }
+
+  .simpleSearch .search-bar {
+    margin: 1em 0;
+  }
+
+  .simpleSearch .box {
+    margin: 0;
+  }
+}

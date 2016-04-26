@@ -1,0 +1,32 @@
+/* ==========================================================================
+    Sticky -- Version: 1.9.0.1 - Updated: 12/31/2013
+   ========================================================================== */
+.sticky {
+  background: #3a647b;
+  text-align: center;
+}
+.sticky .twc-container {
+  padding: .675em 0;
+}
+.sticky .twc-icon {
+  padding: 0 .5em;
+}
+.sticky.js-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 980px;
+  background: #e1e1e1;
+  padding: 1em;
+  -webkit-box-shadow: 0 1px 2px 0 #666666;
+  -moz-box-shadow: 0 1px 2px 0 #666666;
+  box-shadow: 0 1px 2px 0 #666666;
+}
+.sticky.js-sticky ~ .stickySpacing {
+  display: block;
+}
+.sticky .stickySpacing {
+  display: none;
+  margin-bottom: 1em;
+}

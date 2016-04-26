@@ -1,0 +1,2 @@
+#php_value include_path ".;/Users/E240907/Dev/;/Users/E240907/Dev/TWC/core/includes/;/home/dstockbr/public_html/TWC;/home/dstockbr/public_html/TWC/core/includes/"
+#php_value auto_prepend_file config.php

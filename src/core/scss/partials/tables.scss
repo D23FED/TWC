@@ -1,0 +1,129 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Tables -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+
+table.checkboxTables {
+  display: none;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  tr {
+    &:nth-of-type(odd) td {
+      background: #fff;
+    }
+    &:nth-of-type(even) {
+        background: #f7f8fc;
+      }
+    &:last-of-type {
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+  th {
+    height: 30px;
+    max-width: 100px;
+    padding: .675em 1em;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    border-left: 1px solid #e1e1e1;
+    @include background-gradient(#6f93af, #59768d);
+    color: $text-white;
+    vertical-align: middle;
+    &:empty {
+      min-width: 200px;
+      background-color: transparent;
+      background-image: none;
+      border: none;
+    }
+  }
+  td {
+    height: 40px;
+    padding: 5px 2%;
+    border-left: 1px solid #cdd2d8;
+    border-right: 1px solid #cdd2d8;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #5a5a5a;
+    vertical-align: middle;
+    &.row-title {
+      background: #F7F8FC;
+      text-align: left;
+    }
+  }
+}
+
+table.checkboxTables.alt-color {
+  tr {
+    &:nth-of-type(odd) td {
+      background: #fff;
+    }
+    &:nth-of-type(even) {
+      background: #ecf1f7;
+    }
+  }
+  th {
+    @include background-gradient(#387ab4, #387ab4);
+    &:empty {
+      min-width: 200px;
+      background-color: transparent;
+      background-image: none;
+      border: none;
+    }
+  }
+  td {
+    &.row-title {
+      background: #ecf1f7;
+    }
+  }
+}
+
+// Added in 7/24/14 ingestion from ETA
+.checkBoxTableWrapper .checklist-table .blank.first {
+    text-indent: 0;
+    color: black;
+}
+
+@media (max-width: $small) {
+
+  table.checkboxTables {
+    thead, tbody, th, td, tr {
+      border: none;
+      text-align: left;
+    }
+    tr {
+      &.column-title {
+        td {
+          @include background-gradient(#6f93af, #59768d);
+          color: white;
+          font-weight: 700;
+          width: 100%;
+          .h5 {
+            padding-top: .375em;
+          }
+        }
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+    table td {
+      width: 50%;
+      border: none;
+      position: relative;
+      min-height: 30px;
+      &:before {
+        left: 6px;
+        position: absolute;
+        top: 6px;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+    }
+    .cta {
+      float: right;
+    }
+  }
+}

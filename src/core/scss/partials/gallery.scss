@@ -1,0 +1,93 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Gallery -- Version: 1.0.0.0 - Updated: 2/20/2014
+   ========================================================================== */
+
+.gallery {
+  .gallery-header-container {
+    @include border-radius(3px 3px 0 0);
+    @include box-shadow();
+    & + .twc-box-column {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  .gallery-head {
+    padding: 1em;
+    @include background-gradient(#333534, #1a1b1f);
+    color: #fff;
+    border-radius: 3px 3px 0 0;
+  }
+  .gallery-subhead {
+    padding: 1em;
+    background: none repeat scroll 0 0 #E4E7EA;
+  }
+  .twc-box-column {
+    @include padding(1em);
+    .showing {
+      margin-bottom: .5em;
+      display: block;
+    }
+  }
+  .asset-block {
+    width: 25%;
+    padding: 1em;
+    float: left;
+    &.three-up {
+      width: 33.3333333%;
+    }
+  }
+  .asset-container {
+    figure {
+      img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium) {
+
+  .gallery {
+    .asset-block {
+      height: auto;
+      width: 50%;
+      padding: 1em;
+      float: left;
+      &.three-up {
+        width: 50%;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $small) {
+
+  .gallery {
+    .asset-block {
+      width: 100%;
+      figure img {
+        margin: 0 auto;
+      }
+      &.three-up {
+        width: 100%;
+      }
+      .asset-container {
+        float: left;
+        max-width: 48.75%;
+        margin: 0;
+      }
+      .asset-info {
+        float: right;
+        margin-left: 2.5%;
+        max-width: 48.75%;
+      }
+    }
+  }
+
+}
+

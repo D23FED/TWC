@@ -1,0 +1,59 @@
+// Convert pixel values to ems, assuming browser default font-size of 16px
+@function px-to-em($pixels, $base: 16) {
+	@return ($pixels / $base) * 1em;
+}
+@function px-to-rem($pixels, $base: 0.1) {
+	@return ($pixels * $base) * 0.1rem;
+}
+// TWC sitewide variables
+$site-width: 980px;
+$fixed-width-container: $site-width;
+
+// TWC Residential Breakpoints
+$small: px-to-em(640); // 40em 'Tablet'
+$medium: px-to-em(768); // 48em 'Desktop'
+$big: px-to-em(1100); // 68.75em 'Widescreen'
+// 'Mobile'
+$screen-xs: px-to-em(425);
+
+// 'Tablet'
+$screen-sm: $small;
+
+// 'Desktop'
+$screen-md: $medium;
+
+// 'Widescreen'
+$screen-lg: $big;
+
+// Minimums
+$screen-sm-min: $screen-xs + px-to-em(1);
+$screen-md-min: $screen-sm + px-to-em(1);
+$screen-lg-min: $screen-md + px-to-em(1);
+
+// Maximums
+$screen-sm-max: $screen-sm - px-to-em(1);
+$screen-md-max: $screen-md - px-to-em(1);
+$screen-lg-max: $screen-lg - px-to-em(1);
+
+// Typography
+// TWC Residential Fonts
+$font-stack-sans-light: 'TWC Round Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-book: 'TWC Round Book', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-medium: 'TWC Round Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-monospace: Inconsolata, Monaco, Consolas, 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+$font-stack-sans: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-icon: 'FontAwesome';
+$italic: italic;
+$bold: bold;
+$base-font-size: 13;
+$base-line-height: 1.25;
+
+// Legacy naming conventions
+$twc-light: $font-stack-sans-light;
+$twc-book: $font-stack-sans-book;
+$twc-medium: $font-stack-sans-medium;
+$pre: $font-stack-monospace;
+$arial: $font-stack-sans;
+$fontawesome: $font-icon;
+
+@import 'colors';

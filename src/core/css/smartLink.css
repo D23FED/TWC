@@ -1,0 +1,15 @@
+/* ==========================================================================
+    Smart Link  -- Version: 1.0.0 - Updated: 5/23/2014
+   ========================================================================== */
+.smartLink a img {
+  padding-right: .5em;
+}
+.smartLink.align-middle a img {
+  vertical-align: middle;
+}
+.smartLink.align-top a img {
+  vertical-align: top;
+}
+.smartLink.align-bottom a img {
+  vertical-align: bottom;
+}

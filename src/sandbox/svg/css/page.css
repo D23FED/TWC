@@ -1,0 +1,42 @@
+.stickyScrolNav {
+  position: fixed;
+  bottom: 0;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 99999;
+}
+.stickyScrolNav ul {
+  width: 100%;
+  text-align: center;
+}
+.stickyScrolNav li.stickyScrollItem a {
+  display: inline-block;
+  width: 22%;
+  max-width: 120px;
+  height: auto;
+  padding: 0.5em;
+  margin-right: 4%;
+  border: 3px solid #98999b;
+  background: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  text-align: center;
+  float: left;
+  transition : border 300ms linear;
+}
+.stickyScrolNav li.stickyScrollItem:last-of-type a {
+  margin-right: 0;
+}
+.stickyScrolNav li.stickyScrollItem a:hover {
+  border: 3px solid #4578af;
+}
+.stickyScrolNav li.stickyScrollItem a svg {
+  fill: rgba(152,153,155,1);
+  max-width: 50%;
+  transition : fill 300ms linear;
+}
+
+.stickyScrolNav li.stickyScrollItem a:hover svg {
+  fill: #4578af;
+}
+/*# sourceMappingURL=page.css.map */

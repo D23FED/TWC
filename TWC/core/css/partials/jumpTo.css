@@ -1,0 +1,25 @@
+/* ==========================================================================
+    Jump To -- Version: 1.9.0.0 - Updated: 2/11/2014
+   ========================================================================== */
+.jumpTo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  border: none;
+  border-radius: 3px 0 0 0;
+  background-clip: padding-box;
+  background: white;
+  background: rgba(255, 255, 255, 0.675);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  z-index: 999999;
+  -webkit-transform: translateZ(0);
+  text-indent: 0.01px;
+  text-overflow: ''; }
+
+/*# sourceMappingURL=jumpTo.css.map */

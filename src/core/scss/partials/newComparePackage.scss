@@ -1,0 +1,160 @@
+// Pull modules for individually compiled css files
+@import "../modules/allModules";
+
+/* ==========================================================================
+    Side-by-side Compare Package  -- Version: 1.0.0 - Updated: 5/1/2015
+   ========================================================================== */
+.sbsCompare {
+  .js-sticky-past {
+    display: none;
+  }
+
+  .sticky.js-sticky > tr {
+    display: inline-table;
+    width: 100%;
+  }
+
+  .triple .sticky.js-sticky > tr th {
+    width: 33%;
+  }
+
+  .double .sticky.js-sticky > tr th {
+    width: 50%;
+  }
+
+  .stickySpacing {
+    display: none;
+  }
+
+  .sticky.js-sticky ~ .stickyElement .stickySpacing {
+    display: block;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    td {
+      padding: 1em;
+    }
+    &.double td {
+      width: 50%;
+      padding: 1em;
+    }
+    &.triple td {
+      width: 33%;
+      padding: .5em;
+    }
+  }
+  tr th {
+    padding: .5em;
+    color: #fff;
+    background: #4f6f88;
+    border-right: 1px solid #fff;
+    text-align: center;
+    font-family: "TWC Round Book";
+  }
+  tbody tr {
+    &:nth-of-type(2) th {
+      background: #13446d;
+    }
+    th {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
+    }
+  }
+  tr {
+    th a.tooltip {
+      color: #fff;
+      text-decoration: underline;
+    }
+    td {
+      border-right: 1px solid #fff;
+    }
+    th:last-of-type, td:last-of-type {
+      border-right: none;
+    }
+  }
+  tbody > tr:first-of-type th {
+    background: #164367;
+  }
+  tr.subhead th {
+    background: #fff;
+    color: #333;
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 400;
+    padding: 1em 0;
+  }
+  td .icon-only {
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #009033;
+  }
+  thead tr th {
+    &.single {
+      background: #00579d;
+    }
+    &.double {
+      background: #5B1F69;
+    }
+    &.triple {
+      background: #747679;
+    }
+  }
+  tr th:nth-child(3) {
+    background: #7e649e;
+  }
+  td {
+    &:nth-of-type(odd) {
+      background: #f8f8f8;
+    }
+    &:nth-of-type(even) {
+      background: #eeeeee;
+    }
+  }
+  .whiteCTA a {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #00559f;
+    color: #00559f;
+    &:active {
+      background-color: #0052a1;
+      color: #fff;
+    }
+  }
+  .orderCTA a {
+    background-color: #00559f;
+    background-image: none;
+    border: 1px solid #00559f;
+    color: #fff;
+  }
+  .sticky.js-sticky {
+    background: transparent;
+    padding: 0;
+  }
+  .pricing {
+    margin-bottom: 1em;
+    .h4 {
+      sup {
+        font-size: 22px;
+        font-size: 2.2rem;
+        position: relative;
+      }
+      span.dollars {
+        font-size: 44px;
+        font-size: 4.4rem;
+      }
+    }
+  }
+}
+
+/* SBS Compare Sticky Header */
+
+@media (max-width: 48em) {
+  .sbsCompare {
+    td:nth-of-type(3), th:nth-of-type(3) {
+      display: none;
+    }
+  }
+  .sticky.js-sticky {
+    left: 0;
+  }
+}
