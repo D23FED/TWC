@@ -7,6 +7,7 @@ var
 		pattern: ['gulp-*', 'gulp.*', 'autoprefixer', 'pixrem', 'postcss-*', 'css-*']
 	}),
 	path = require('path'),
+	browserSync = require('browser-sync').create(),
 	postCssProcessors = [
 		$.autoprefixer({
 			browsers: 'last 3 versions'
@@ -65,6 +66,7 @@ g.task('style', function() {
 		}))
 		// Write CSS to disk
 		.pipe(g.dest(paths.dist))
+		// .pipe(browserSync.stream({match: '**/*.css'}));
 		.pipe($.debug({
 			title: 'Output:',
 			minimal: false
@@ -132,6 +134,12 @@ g.task('scripts', function() {
 		.pipe($.eslint.format())
 		// Concat
 		// .pipe($.concat('main.js'))
+		.pipe($.jsbeautifier({
+		    // config: './config.json',
+		    indent_char: '\t',
+		    indent_size: 1,
+		    space_in_paren: true
+  	}))
 		.pipe(g.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
@@ -180,8 +188,18 @@ g.task('watch', function() {
 });
 g.task('markup',
 	g.parallel('jade', 'html', 'php'));
+
+gulp.task('serve', ['sass'], function() {
+  browserSync.init({
+      server: paths.dist
+  });
+  gulp.watch("app/scss/*.scss", ['sass']);
+  gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
 g.task('default',
 	g.parallel('style', 'markup', 'scripts', 'images'));
+
 /*
 TODO:
 Create seperate dev/dist tasks
