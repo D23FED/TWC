@@ -134,6 +134,8 @@ $top-border-width: 1px;
 		// Tab content's title
 		.tab-content .title {
 			color: $text-color;
+			position: relative;
+			z-index: 287;
 		}
 		// 'Sign in with your TWC ID'
 		.gateway-headline {
