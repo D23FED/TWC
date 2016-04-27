@@ -83,7 +83,7 @@ $top-border-width: 1px;
 					position: relative;
 					z-index: 187;
 					cursor: default;
-					color: $color-sky-dark-darkish;
+					color: $text-color;
 
 					&::before {
 						background-color: $color-bright-blue;
@@ -131,6 +131,10 @@ $top-border-width: 1px;
 			border: 1px solid #e1e1e1;
 		}
 
+		// Tab content's title
+		.tab-content .title {
+			color: $text-color;
+		}
 		// 'Sign in with your TWC ID'
 		.gateway-headline {
 			border-width: 0;
