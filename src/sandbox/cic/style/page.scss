@@ -1,7 +1,97 @@
-/*.twc-content {
-  background: #fff;
-  background-image: none;
-}*/
+@import '../../../init';
+// Version 1.0
+.twc-content {
+  // background: #fff;
+  // background-image: none;
+}
+
+$color-bold-blue: #0070c0;
+$color-border: #ececec;
+// wrapper for all packages
+.packageSelect {
+  .package {
+    .packageHead {
+      background-color: transparent;
+      padding: 0;
+      fieldset {
+         background-color: #0070c0;
+         width: auto;
+         float: none;
+         max-width: none;
+         text-align: center;
+         min-height: 36px;
+      }
+      .packageTitle {
+        color: $text-color;
+        float: none;
+        text-align: center;
+        max-width: none;
+        padding-top: 45px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        display: none;
+        &[data-packagetitle="Internet"] {
+          background-image: url('http://d23.us/TWC/images/cic/icon-internet-45x35.png');
+          background-repeat: no-repeat;
+          background-position: center 5px;
+        }
+        .package-name {
+
+        }
+        .package-name-tv {
+
+        }
+        .package-name-internet {
+
+        }
+        .package-name-phone {
+
+        }
+        .right {
+          float: none;
+          right: auto;
+        }
+
+      }
+      .compare-label {
+        font-size: 1.6rem;
+        &::after {
+          content: ' Plan';
+        }
+
+      }
+    }
+    &.single.js-compare,
+    &.double.js-compare,
+    &.triple.js-compare {
+
+      border-color: #0070c0;
+    }
+  }
+  // Custom grid for now
+  .wrap {
+    display: table;
+    width: 100%;
+    .row {
+      display: table-row;
+      .col {
+        display: table-cell;
+        width: 50%;
+        text-align: center;
+        + .col {
+          border-left: 1px solid $color-border;
+        }
+      }
+      .col-third {
+        width: 33%;
+      }
+    }
+  }
+}
+
+.expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
+  background-color: #fff;
+}
 
 .discountTerm {
   clear: both;
@@ -28,4 +118,5 @@
     padding: 0;
   }
 }
-/*# sourceMappingURL=page.css.map */
+
+// [data-packagetitle="TV, Internet"]
