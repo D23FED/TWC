@@ -6,7 +6,8 @@
     width: auto;
     float: none;
     max-width: none;
-    text-align: center; }
+    text-align: center;
+    min-height: 36px; }
   .packageSelect .package .packageHead .packageTitle {
     color: #333;
     float: none;
@@ -14,7 +15,8 @@
     max-width: none;
     padding-top: 45px;
     padding-left: 0.5em;
-    padding-right: 0.5em; }
+    padding-right: 0.5em;
+    display: none; }
     .packageSelect .package .packageHead .packageTitle[data-packagetitle="Internet"] {
       background-image: url("http://d23.us/TWC/images/cic/icon-internet-45x35.png");
       background-repeat: no-repeat;
@@ -27,6 +29,9 @@
     font-size: 1.6rem; }
     .packageSelect .package .packageHead .compare-label::after {
       content: ' Plan'; }
+
+.packageSelect .package.single.js-compare, .packageSelect .package.double.js-compare, .packageSelect .package.triple.js-compare {
+  border-color: #0070c0; }
 
 .packageSelect .wrap {
   display: table;
@@ -41,6 +46,9 @@
         border-left: 1px solid #ececec; }
     .packageSelect .wrap .row .col-third {
       width: 33%; }
+
+.expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
+  background-color: #fff; }
 
 .discountTerm {
   clear: both; }

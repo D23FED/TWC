@@ -19,8 +19,7 @@ $color-border: #ececec;
          float: none;
          max-width: none;
          text-align: center;
-
-
+         min-height: 36px;
       }
       .packageTitle {
         color: $text-color;
@@ -30,6 +29,7 @@ $color-border: #ececec;
         padding-top: 45px;
         padding-left: 0.5em;
         padding-right: 0.5em;
+        display: none;
         &[data-packagetitle="Internet"] {
           background-image: url('http://d23.us/TWC/images/cic/icon-internet-45x35.png');
           background-repeat: no-repeat;
@@ -61,6 +61,12 @@ $color-border: #ececec;
 
       }
     }
+    &.single.js-compare,
+    &.double.js-compare,
+    &.triple.js-compare {
+
+      border-color: #0070c0;
+    }
   }
   // Custom grid for now
   .wrap {
@@ -81,6 +87,10 @@ $color-border: #ececec;
       }
     }
   }
+}
+
+.expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
+  background-color: #fff;
 }
 
 .discountTerm {
