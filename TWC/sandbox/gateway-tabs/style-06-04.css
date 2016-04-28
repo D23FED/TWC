@@ -5,6 +5,9 @@
 #gateway .gateway-tabs {
   margin-bottom: -1px;
   border-radius: 0; }
+  #gateway .gateway-tabs ul li a {
+    padding: 0;
+    color: inherit; }
   #gateway .gateway-tabs li {
     width: auto;
     line-height: 4em;
@@ -15,9 +18,6 @@
     border-color: #e1e1e1;
     background-color: #fff;
     color: #00549f; }
-    #gateway .gateway-tabs li a {
-      padding: 0;
-      color: inherit; }
     #gateway .gateway-tabs li::before {
       background-color: transparent;
       position: absolute;
@@ -69,16 +69,15 @@
 
 #gateway .gateway {
   border: 1px solid #e1e1e1; }
+  #gateway .gateway .gateway-headline {
+    border-width: 0;
+    border-style: none; }
+    #gateway .gateway .gateway-headline .text {
+      color: #333;
+      position: relative;
+      z-index: 300; }
 
-#gateway .gateway-headline {
-  border-width: 0;
-  border-style: none; }
-  #gateway .gateway-headline .text {
-    color: #333;
-    position: relative;
-    z-index: 300; }
-
-#gateway #buyflow-current .skip-section {
+#gateway #buyflow-current .gateway-form .skip-section {
   background-image: none;
   background-color: transparent; }
 

@@ -17,7 +17,14 @@ $top-border-width: 1px;
 	  // display: table;
 	  // width: 100%;
 	  border-radius: 0;
-
+		ul {
+			li {
+				a {
+					padding: 0;
+					color: inherit;
+				}
+			}
+		}
 
 		// List Items
 		li {
@@ -30,10 +37,7 @@ $top-border-width: 1px;
 			border-color: $border-color;
 			background-color: #fff;
 			color: $color-sky-dark-darkish;
-			a {
-				padding: 0;
-				color: inherit;
-			}
+
 			&::before {
 				background-color: transparent;
 				position: absolute;
@@ -116,23 +120,23 @@ $top-border-width: 1px;
 
 	.gateway {
 		border: 1px solid $border-color;
-	}
+		// 'Sign in with your TWC ID'
+		.gateway-headline {
+			border-width: 0;
+			border-style: none;
 
-	// 'Sign in with your TWC ID'
-	.gateway-headline {
-		border-width: 0;
-		border-style: none;
-
-		// Tab content's title
-		.text {
-			color: $text-color;
-			position: relative;
-			z-index: 300;
+			// Tab content's title
+			.text {
+				color: $text-color;
+				position: relative;
+				z-index: 300;
+			}
 		}
 	}
 
+
 	// 'Benefits of a TWC ID' box
-	#buyflow-current .skip-section {
+	#buyflow-current .gateway-form .skip-section {
 		background-image: none;
 		background-color: transparent;
 	}
