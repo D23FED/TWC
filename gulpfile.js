@@ -147,7 +147,13 @@ g.task('scripts', function() {
 				'impliedStrict': true
 			},
 			rules: {
-				'strict': 2
+				'strict': ['off','global'],
+				'indent': 'off',
+				'no-console': 'warn',
+				'no-debugger': 'warn',
+				'no-extra-semi': 'warn',
+				'no-empty': 'warn',
+				'comma-dangle': 'warn'
 			},
 			globals: {
 				'jQuery': true,
@@ -168,7 +174,7 @@ g.task('scripts', function() {
 			title: 'Output:',
 			minimal: true
 		}))
-		.pipe($.stripDebug())
+		//.pipe($.stripDebug())
 		.pipe($.rename({
 			suffix: '.dist'
 		}))

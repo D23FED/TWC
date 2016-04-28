@@ -1,0 +1,52 @@
+.packageSelect {
+	.package {
+		&.triple {
+			&.js-compare {
+				border: 5px solid #00549f;
+			}
+			&.js-selected {
+				border: 5px solid #00549f;
+			}
+		}
+		.specialOffer {
+			background-image: none;
+		}
+		hr.spacer {
+			margin: 1.5em 0 0;
+		}
+		.quickCheckoutAccordion hr {
+			margin: 1em 0;
+		}
+	}
+	[class*="twc-col3_333333"] {
+		margin-bottom: 0;
+	}
+	.box {
+		background: #f2f9ff;
+		border: 1px solid #9a9c9e;
+		padding: 0;
+	}
+}
+.w30 {
+	margin-right: 5%;
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+.bordered-right {
+	padding-left: 0;
+}
+.tooltip {
+	border-bottom: 1px dotted #3376b2;
+	pointer-events: initial;
+}
+.tooltip-text {
+	display: none;
+	pointer-events: none;
+}
+figure img {
+	margin: 0 auto 0.25em;
+}
+a:hover > .tooltip-text {
+	display: block;
+}

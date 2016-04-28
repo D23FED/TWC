@@ -1,0 +1,104 @@
+$color-bold-blue: #0070c0;
+$color-border: #ececec;
+
+// wrapper for all packages
+.packageSelect {
+	.package {
+		.packageHead {
+			background-color: transparent;
+			padding: 0;
+
+			> fieldset {
+				background-color: #0070c0;
+				width: auto;
+				float: none;
+				max-width: none;
+				text-align: center;
+				min-height: 36px;
+
+				input {
+					~ label.compare-label {
+						font-size: 1.6rem;
+					}
+				}
+			}
+
+			.packageTitle {
+				display: none;
+			}
+
+			.compare-label {
+				&::after {
+					content: ' Plan';
+				}
+			}
+		}
+
+		// end .packageHead
+		.packageBody {
+			padding: 6px;
+		}
+
+		// Actively being compared
+		&.single.js-compare,
+		&.double.js-compare,
+		&.triple.js-compare {
+			border-color: $color-bold-blue;
+
+			.packageBody {
+				padding-top: 5px;
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+		}
+
+		&.js-compare {
+			.side-by-side .buttonWrapper {
+				width: calc(50% - 3px);
+
+				.cta:not(.expandDetails) {
+					margin-right: -8px;
+				}
+			}
+		}
+	}
+
+	.packageFooter {
+		[class*=icon-] {
+			margin-right: 4px;
+		}
+	}
+}
+
+.expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
+	background-color: #fff;
+}
+
+.discountTerm {
+	clear: both;
+}
+
+.packageSelect .package .pricing .h4 sup.pre-text {
+	top: -0.5em;
+	margin-right: 0.25em;
+}
+
+.test1 {
+	color: #000;
+}
+
+.packageSelect .package .pricing .term .discountTerm,
+.sbsCompare .main-content .pricing .term .discountTerm,
+.packageSelect .package .pricing .term .postTerm,
+.sbsCompare .main-content .pricing .term .postTerm {
+	margin-top: -3px;
+}
+
+/* Begin BYOB CSS */
+@media (max-width: 66.15em) {
+	.twc-container {
+		padding: 0;
+	}
+}
+
+// [data-packagetitle='TV, Internet']
