@@ -67,9 +67,6 @@ a:hover > .tooltip-text {
       margin-left: 3px;
       margin-top: -6px; }
 
-.discountTerm {
-  clear: both; }
-
 .detailsExpansion {
   position: relative;
   width: 100%; }
@@ -147,6 +144,63 @@ table tr td:last-of-type {
 
 .priceTally tr:nth-of-type(2) td {
   padding-top: 1em; }
+
+.packageSelect .package .packageHead {
+  background-color: transparent;
+  padding: 0; }
+  .packageSelect .package .packageHead > fieldset {
+    background-color: #0070c0;
+    width: auto;
+    float: none;
+    max-width: none;
+    text-align: center;
+    min-height: 36px; }
+    .packageSelect .package .packageHead > fieldset input ~ label.compare-label {
+      font-size: 16px;
+      font-size: 1.6rem; }
+  .packageSelect .package .packageHead .packageTitle {
+    display: none; }
+  .packageSelect .package .packageHead .compare-label::after {
+    content: ' Plan'; }
+
+.packageSelect .package .packageBody {
+  padding: 6px; }
+
+.packageSelect .package.single.js-compare, .packageSelect .package.double.js-compare, .packageSelect .package.triple.js-compare {
+  border-color: #0070c0; }
+  .packageSelect .package.single.js-compare .packageBody, .packageSelect .package.double.js-compare .packageBody, .packageSelect .package.triple.js-compare .packageBody {
+    padding-top: 5px;
+    padding-left: 3px;
+    padding-right: 3px; }
+
+.packageSelect .package.js-compare .side-by-side .buttonWrapper {
+  width: calc(50% - 3px); }
+  .packageSelect .package.js-compare .side-by-side .buttonWrapper .cta:not(.expandDetails) {
+    margin-right: -8px; }
+
+.packageSelect .packageFooter [class*=icon-] {
+  margin-right: 4px; }
+
+.expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
+  background-color: #fff; }
+
+.discountTerm {
+  clear: both; }
+
+.packageSelect .package .pricing .h4 sup.pre-text {
+  top: -0.5em;
+  margin-right: 0.25em; }
+
+.test1 {
+  color: #000; }
+
+.packageSelect .package .pricing .term .discountTerm,
+.sbsCompare .main-content .pricing .term .discountTerm,
+.packageSelect .package .pricing .term .postTerm,
+.sbsCompare .main-content .pricing .term .postTerm {
+  margin-top: -3px; }
+
+/* Begin BYOB CSS */
 
 @media (max-width: 66.15em) {
 
