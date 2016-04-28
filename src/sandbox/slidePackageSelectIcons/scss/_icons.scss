@@ -1,0 +1,104 @@
+.discountTerm {
+	clear: both;
+}
+.detailsExpansion {
+	position: relative;
+	width: 100%;
+}
+.detailsContent {
+	padding: 2em 1em 1em;
+}
+.quickCheckoutAccordion {
+	text-align: center;
+	padding: 1em 0;
+	&.js-open .quickCheckoutBtn {
+		display: none;
+	}
+}
+.quickCheckoutContent {
+	text-align: left;
+	display: none;
+	font-size: 12px;
+	font-size: 1.2rem;
+	.cta {
+		font-size: 13px;
+		font-size: 1.3rem;
+	}
+	input {
+		vertical-align: top;
+	}
+	label {
+		font-size: 1.15rem;
+	}
+	.priceTally {
+		td {
+			font-size: 1.15rem;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.totals td {
+			font-size: 1.6rem;
+			font-size: 16px;
+		}
+	}
+	.productSelect {
+		text-align: left;
+		table {
+			width: 100%;
+			tr {
+				width: 100%;
+			}
+		}
+		a {
+			display: inline-block;
+			max-width: none;
+		}
+		td:first-of-type {
+			width: 5%;
+		}
+	}
+	.price {
+		text-align: right;
+		white-space: nowrap;
+	}
+	.disclaimer-text.text-center {
+		text-align: center;
+	}
+}
+.closeAccordion {
+	cursor: pointer;
+	margin-top: 0.5em;
+}
+.totals {
+	background: #b7e3ff;
+	td {
+		padding: 0.5em 0;
+		&.text-right {
+			padding-right: 0.5em;
+		}
+	}
+}
+@media(max-width: 66.15em) {
+	.twc-container {
+		padding: 0;
+	}
+}
+.packageSelect .package {
+	position: relative;
+}
+.box p {
+	padding: 0 0.5em;
+}
+table tr td {
+	&:first-of-type {
+		padding-left: 0.5em;
+	}
+	&:last-of-type {
+		padding-right: 0.5em;
+	}
+}
+.priceTally tr:nth-of-type(2) td {
+	padding-top: 1em;
+}
