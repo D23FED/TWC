@@ -1,0 +1,169 @@
+.slideUp {
+  border-radius: 0 0 3px 3px;
+  background: rgba(255,255,255,1);
+}
+.slideUp .sectionList {
+  display: table;
+  width: 100%;
+  border: #777;
+  min-height: 2em;
+  border: 1px solid #777;
+}
+.slideUp .sectionList li {
+  width: 25%;
+  min-height: 2em;
+  display: table-cell;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+.slideUp .sectionList li .slideToggle {
+  display: inline-block;
+  padding: 1em 0;
+  width: 100%;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.slideUp .sectionList li.js-first .slideToggle {
+  border-left: none;
+}
+
+.slideUp .sectionList li.js-last .slideToggle {
+  border-right: none;
+}
+
+.slideUp .slideUpContainer {
+  display: none;
+  bottom: 3.25em;
+  padding: 0.5em;
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  background: rgba(255,255,255,1);
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #777;
+  text-align: center;
+}
+
+.slideUp .slideUpContainer ~ a {
+  background: #fff;
+  color: #333;
+  transition: all linear 0.25s;
+}
+
+.slideUp .expandUp .slideUpContainer.js-active ~ a,
+.slideUp .expandUp .slideUpContainer ~ a:hover {
+  background: #777;
+  color: #fff;
+}
+
+/* Flipper */
+  /* entire container, keeps perspective */
+.flip-container, .flip-container-2 {
+  -webkit-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+  /*  UPDATED! flip the pane when hovered */
+#flipToggle {
+  display: none;
+}
+
+.flip-container-2 input#flipToggle:checked ~ .back {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flip-container-2 input#flipToggle:checked ~ .front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  min-height: 260px;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition: 0.6s;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+
+  position: absolute;
+  width: 100%;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  position: absolute;
+}
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  top: 0;
+}
+
+.detailsExpansion {
+  display: block;
+}
+
+.closeDetails {
+  cursor: pointer;
+}
+@media (max-width: 48em) {
+  .slideUp .slideUpContainer {
+    display: none;
+    bottom: 0;
+    padding: 0.5em;
+    position: relative;
+    border: none;
+    background: #dfeaf3;
+  }
+  .slideUp .sectionList {
+    display: inline-block;
+    padding: 0 1em;
+  }
+  .slideUp .sectionList li {
+    width: 100%;
+    display: list-item;
+    border-right: none;
+    border-bottom: 1px solid #777;
+    padding: 0.5em 0;
+  }
+  .slideUp .sectionList li.js-last {
+    border-bottom: none;
+  }
+  .slideUp .expandNav .cta.mobile-full {
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=page.css.map */

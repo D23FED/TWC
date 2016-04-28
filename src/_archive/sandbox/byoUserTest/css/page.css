@@ -1,0 +1,253 @@
+/* Begin global overrides */
+.tooltip {
+    border-bottom: 1px dotted #3376b2;
+    pointer-events: initial;
+}
+
+.tooltip-text {
+    display: none;
+    pointer-events: none;
+}
+
+a:hover > .tooltip-text {
+    display: block;
+}
+
+.packageSelect .package .quickCheckoutAccordion hr {
+    margin: 1em 0;
+}
+
+.packageSelect .box {
+    background: #f2f2f2;
+}
+
+
+.side-by-side .buttonWrapper {
+    width: 100%;
+}
+
+.side-by-side .buttonWrapper .whiteCTA {
+    padding: 0 0.5em;
+}
+
+.side-by-side .buttonWrapper .whiteCTA a {
+    width: 100%;
+}
+
+.packageSelect .package .packageInfo {
+    overflow:visible;
+}
+
+.packageSelect .package .specialOffer {
+    display: table;
+    width: 100%;
+    height: 72px;
+    /**TODO: replace background image with gradient**/
+}
+.packageSelect .package .specialOffer h5 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.packageInfo .cta {
+    text-align: center;
+    width: 100%;
+}
+
+.box {
+    margin: 0 auto 1em;
+    max-width: 300px;
+    padding: 3em 6em;
+}
+.box li input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.alignCenter {
+    width: 100%;
+    text-align: center;
+}
+/* End global overrides */
+
+/* Begin Page specific CSS */
+.box ul li {
+    margin-bottom: 1em;
+}
+.box ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.discountTerm {
+    clear: both;
+}
+
+.packageSelect .package {
+    position: relative;
+}
+.detailsExpansion {
+    position: relative;
+    width: 100%;
+}
+
+/*
+.detailsExpansion {
+    background: #fff;
+    box-shadow: 0 -2px 4px -1px #999;
+    position: absolute;
+    bottom: 4.2em;
+    width: 100%;
+    border: 2px solid #4578af;
+    background: rgb(248,250,252); 
+    background: -moz-linear-gradient(top, rgb(248,250,252) 0%, rgb(225,236,245) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(248,250,252)), color-stop(100%,rgb(225,236,245))); 
+    background: -webkit-linear-gradient(top, rgb(248,250,252) 0%,rgb(225,236,245) 100%); 
+    background: -ms-linear-gradient(top, rgb(248,250,252) 0%,rgb(225,236,245) 100%); 
+    background: linear-gradient(to bottom, rgb(248,250,252) 0%,rgb(225,236,245) 100%); 
+}
+*/
+.detailsContent {
+    padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.quickCheckoutContent {
+    text-align: left;
+    display: none;
+    font-size: 12px;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+.quickCheckoutContent input {
+    vertical-align: top;
+}
+
+.quickCheckoutContent label, .quickCheckoutContent .priceTally td {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+}
+
+.quickCheckoutContent .productSelect {
+    text-align: left;
+}
+.quickCheckoutContent .priceTally {
+    margin-bottom: 2em;
+}
+
+.quickCheckoutContent .productSelect table, .quickCheckoutContent .priceTally table {
+    width: 100%;
+}
+
+.quickCheckoutContent .productSelect table tr {
+    width: 100%;
+}
+
+.quickCheckoutContent .price {
+    text-align: right;
+}
+
+.quickCheckoutContent .disclaimer-text.text-center {
+    text-align: center;
+}
+
+.quickCheckoutContent .productSelect a {
+    display: inline-block;
+    max-width: none;
+}
+
+.cta.quickCheckoutBtn {
+    width: 100%;
+}
+.total {
+    border-top: 1px dotted #666;
+    background: #ccc9c9;
+    padding: 0.25em;
+}
+
+.cta.quickCheckoutBtn a {
+    background-color: #00b0f0;
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    padding: 0.75em 0.25em;
+}
+.cross {
+    position: relative;
+    display: inline-block;
+}
+.cross::before, .cross::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.cross::before {
+    border-bottom: 2px solid red;
+    -webkit-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+}
+
+.selectedBox {
+    float: left;
+    font-size: 21px;
+    margin-top: -5px;
+    border-radius: 50%;
+    background: #29be0b;
+    height: 23px;
+    width: 23px;
+        margin-right: 4px;
+    
+}
+.selectedBox .icon-ok {
+    margin-top: 1px;
+    margin-left: -10px;
+}
+.change-remove {
+    position: absolute;
+    width: 100%;
+}
+.overlayButton {
+    display: none;
+    background: #000;
+    opacity: 0.75;
+    position: absolute;
+    height: 146px;
+    width: 100%;
+    top: 137px;
+    left: 0px;
+    z-index: 1;
+}
+.iconRemove {
+    right: 0;
+    position: absolute;
+    color: #c9c9c9;
+    cursor: pointer;
+    border: 0;    
+}
+.overlayContinue {
+    display:none;
+    text-align: center;
+    width: 97%;
+    position: absolute;
+    z-index: 1;
+    top: 183px;
+}
+.nextStep a {
+    pointer-events: none;
+    color: #99999b;
+}
+
+/* Begin BYOB CSS */
+@media (max-width: 66.15em) {
+    .twc-container {
+        padding: 0;
+    }
+}
+/*# sourceMappingURL=page.css.map */
