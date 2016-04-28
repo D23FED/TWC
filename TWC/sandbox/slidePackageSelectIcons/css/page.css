@@ -1,0 +1,156 @@
+.packageSelect .package.triple.js-compare {
+  border: 5px solid #00549f; }
+
+.packageSelect .package.triple.js-selected {
+  border: 5px solid #00549f; }
+
+.packageSelect .package .specialOffer {
+  background-image: none; }
+
+.packageSelect .package hr.spacer {
+  margin: 1.5em 0 0; }
+
+.packageSelect .package .quickCheckoutAccordion hr {
+  margin: 1em 0; }
+
+.packageSelect [class*="twc-col3_333333"] {
+  margin-bottom: 0; }
+
+.packageSelect .box {
+  background: #f2f9ff;
+  border: 1px solid #9a9c9e;
+  padding: 0; }
+
+.w30 {
+  margin-right: 5%; }
+  .w30:last-of-type {
+    margin-right: 0; }
+
+.bordered-right {
+  padding-left: 0; }
+
+.tooltip {
+  border-bottom: 1px dotted #3376b2;
+  pointer-events: initial; }
+
+.tooltip-text {
+  display: none;
+  pointer-events: none; }
+
+figure img {
+  margin: 0 auto 0.25em; }
+
+a:hover > .tooltip-text {
+  display: block; }
+
+.packageSelect .package .pricing {
+  margin-bottom: 1em; }
+  .packageSelect .package .pricing .term {
+    display: inline-block;
+    font-size: 9px;
+    line-height: 1;
+    margin-left: -2.75em;
+    text-align: right; }
+    .packageSelect .package .pricing .term.under {
+      display: block;
+      margin-left: 0;
+      text-align: center; }
+    .packageSelect .package .pricing .term .discountTerm {
+      float: left;
+      margin-top: 0.25em;
+      margin-top: -6px; }
+    .packageSelect .package .pricing .term .preTerm {
+      float: left;
+      margin-top: 0.25em; }
+    .packageSelect .package .pricing .term .postTerm {
+      float: left;
+      margin-left: 3px;
+      margin-top: -6px; }
+
+.discountTerm {
+  clear: both; }
+
+.detailsExpansion {
+  position: relative;
+  width: 100%; }
+
+.detailsContent {
+  padding: 2em 1em 1em; }
+
+.quickCheckoutAccordion {
+  text-align: center;
+  padding: 1em 0; }
+  .quickCheckoutAccordion.js-open .quickCheckoutBtn {
+    display: none; }
+
+.quickCheckoutContent {
+  text-align: left;
+  display: none;
+  font-size: 12px;
+  font-size: 1.2rem; }
+  .quickCheckoutContent .cta {
+    font-size: 13px;
+    font-size: 1.3rem; }
+  .quickCheckoutContent input {
+    vertical-align: top; }
+  .quickCheckoutContent label {
+    font-size: 11.5px;
+    font-size: 1.15rem; }
+  .quickCheckoutContent .priceTally td {
+    font-size: 11.5px;
+    font-size: 1.15rem; }
+  .quickCheckoutContent .priceTally table {
+    width: 100%;
+    border-collapse: collapse; }
+  .quickCheckoutContent .priceTally .totals td {
+    font-size: 1.6rem;
+    font-size: 16px; }
+  .quickCheckoutContent .productSelect {
+    text-align: left; }
+    .quickCheckoutContent .productSelect table {
+      width: 100%; }
+      .quickCheckoutContent .productSelect table tr {
+        width: 100%; }
+    .quickCheckoutContent .productSelect a {
+      display: inline-block;
+      max-width: none; }
+    .quickCheckoutContent .productSelect td:first-of-type {
+      width: 5%; }
+  .quickCheckoutContent .price {
+    text-align: right;
+    white-space: nowrap; }
+  .quickCheckoutContent .disclaimer-text.text-center {
+    text-align: center; }
+
+.closeAccordion {
+  cursor: pointer;
+  margin-top: 0.5em; }
+
+.totals {
+  background: #b7e3ff; }
+  .totals td {
+    padding: 0.5em 0; }
+    .totals td.text-right {
+      padding-right: 0.5em; }
+
+.packageSelect .package {
+  position: relative; }
+
+.box p {
+  padding: 0 0.5em; }
+
+table tr td:first-of-type {
+  padding-left: 0.5em; }
+
+table tr td:last-of-type {
+  padding-right: 0.5em; }
+
+.priceTally tr:nth-of-type(2) td {
+  padding-top: 1em; }
+
+@media (max-width: 66.15em) {
+
+  .twc-container {
+    padding: 0; } }
+
+/*# sourceMappingURL=page.css.map */
