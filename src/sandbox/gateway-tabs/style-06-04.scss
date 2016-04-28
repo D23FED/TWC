@@ -1,7 +1,8 @@
 @import '../../init';
-@import 'old';
-
-$border-color: $color-steel-dark-lighter;
+// @import 'old';
+// @import 'reset';
+// v
+$border-color: #e1e1e1;
 $bar-height: 7px;
 $top-border-width: 1px;
 
@@ -10,148 +11,129 @@ $top-border-width: 1px;
 	background-color: #fff;
 }
 
-#content {
-	@import 'reset';
+#gateway {
+	.gateway-tabs {
+		margin-bottom: -1px;
+	  // display: table;
+	  // width: 100%;
+	  border-radius: 0;
 
-	#gateway {
-		.gateway-tabs {
-			margin-bottom: -1px;
 
-			// List
-			ul {}
+		// List Items
+		li {
+			width: auto;
+			line-height: 4em;
+			padding: 0 1em;
+			background-image: none;
+			border-style: solid;
+			border-width: 1px 0 0 0;
+			border-color: $border-color;
+			background-color: #fff;
+			color: $color-sky-dark-darkish;
+			a {
+				padding: 0;
+				color: inherit;
+			}
+			&::before {
+				background-color: transparent;
+				position: absolute;
+				width: 100%;
+				height: 7px;
+				display: block;
+				content: '';
+				left: 0;
+				top: -$bar-height;
+			}
 
-			// List Items
-			li {
-				width: auto;
-				line-height: 4em;
-				padding: 0 1em;
-				border-style: solid;
+			&:hover {
+				border-top-color: transparent;
 
 				&::before {
-					background-color: transparent;
-					position: absolute;
-					width: 100%;
-					height: 7px;
-					display: block;
-					content: '';
-					left: 0;
-					top: -$bar-height;
+					background-color: rgba(2, 169, 224, 0.3);
 				}
+			}
+			// Inactive tab
+			&:not(.active) {
+			}
 
-				&:not(.active) {
-					background-color: transparent;
+			// Active Tab
+			&.active {
+				box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+				background-color: #fff;
+				border-width: 1px;
+				border-style: solid;
+				border-top-color: transparent;
+				border-left-color: $border-color;
+				border-right-color: $border-color;
+				border-bottom-color: #fff;
+				position: relative;
+				z-index: 187;
+				cursor: default;
+				color: $text-color;
 
-					// border: {
-					// 	width: 7px 0 0 0;
-					// 	style: solid;
-					// 	color: transparent;
-					// };
-					// border-left: 1px solid white;
-					// border-right: 1px solid white;
-					border-top: 1px solid #e1e1e1;
-					color: $color-sky-dark-darkish;
-
-					&:hover {
-						border-top-color: transparent;
-
-						// transition-property: border-color;
-						// transition-duration: .3s;
-
-						// color: #333;
-						// transition-property: color;
-						// transition-duration: .3s;
-						&::before {
-							background-color: rgba(2, 169, 224, 0.3);
-						}
-					}
-
-					a {
-						&:hover {}
-					}
-				}
-
-				// Active Tab
-				&.active {
-					box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, 0.5);
-					background-color: #fff;
-					border-width: 7px 0 0 0;
-					border-top-color: $color-bright-blue;
-					border-left: 1px solid #e1e1e1;
-					border-right: 1px solid #e1e1e1;
-					border-bottom: 1px solid #fff;
-					border-top: 1px solid transparent;
-					position: relative;
-					z-index: 187;
-					cursor: default;
-					color: $text-color;
-
+				&:hover {
 					&::before {
 						background-color: $color-bright-blue;
 					}
-
-					&::after {
-						bottom: -20px;
-						content: '';
-						display: block;
-						height: 20px;
-						left: 0;
-						position: absolute;
-						width: 100%;
-						background-color: #fff;
-						z-index: 200;
-					}
-
-					a {
-						cursor: default;
-					}
+				}
+				&::before {
+					background-color: $color-bright-blue;
 				}
 
-				// Links
-				a {}
-
-				// First
-				&:first-child {
-					border-left: 1px solid #e1e1e1;
-
-					&.active {}
+				&::after {
+					bottom: -20px;
+					content: '';
+					display: block;
+					height: 20px;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					background-color: #fff;
+					z-index: 200;
 				}
 
-				// Last
-				&:last-child {
-					border-right: 1px solid #e1e1e1;
-
-					&.active {
-						box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, 0.5);
-					}
+				a {
+					cursor: default;
 				}
 			}
-		}
 
-		.gateway {
-			border: 1px solid #e1e1e1;
-		}
+			// First
+			&:first-child {
+				border-left: 1px solid $border-color;
+			}
 
-		// Tab content's title
-		.tab-content .title {
-			color: $text-color;
-			position: relative;
-			z-index: 287;
-		}
-		// 'Sign in with your TWC ID'
-		.gateway-headline {
-			border-width: 0;
-			border-style: none;
-		}
+			// Last
+			&:last-child {
+				border-right: 1px solid $border-color;
 
-		// 'Benefits of a TWC ID' box
-		#buyflow-current .skip-section {
-			background: none;
-			background-image: none;
-			background-color: transparent;
+				&.active {
+					box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+				}
+			}
+
 		}
 	}
-}
 
-html {
-	overflow-y: scroll;
+	.gateway {
+		border: 1px solid $border-color;
+	}
+
+	// 'Sign in with your TWC ID'
+	.gateway-headline {
+		border-width: 0;
+		border-style: none;
+
+		// Tab content's title
+		.text {
+			color: $text-color;
+			position: relative;
+			z-index: 300;
+		}
+	}
+
+	// 'Benefits of a TWC ID' box
+	#buyflow-current .skip-section {
+		background-image: none;
+		background-color: transparent;
+	}
 }
