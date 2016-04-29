@@ -1,0 +1,1 @@
+<div class="session-id-dummy sessionIdDummy"></div>
