@@ -1,0 +1,104 @@
+@import '../../../init';
+.twc-content .twc-container {
+	background-color: #fff;
+}
+.checkout-review {
+	padding: 20px;
+	* {
+		box-sizing: border-box;
+	}
+	> section {
+		+ section {
+			margin-top: 30px;
+		}
+		.body {
+			padding-left: 20px;
+		}
+	}
+	.page-title {
+		font-family: $font-stack-sans-book;
+		border-bottom: 1px solid #00549f;
+		padding-bottom: 8px;
+	}
+	h2 {
+		border-left: 5px solid $color-lex-bright-sky;
+		padding-left: 15px;
+	}
+	.review-services {
+		.services-section {
+			> header {
+				padding: 5px;
+				padding-bottom: 10px;
+				background-color: $color-lex-light-sky;
+				border-top: 1px solid $color-lex-sky;
+				color: $color-lex-sky;
+
+			}
+			+ .services-section {
+				margin-top: 50px;
+			}
+		}
+	}
+	// Grid
+	.row {
+		@include clearfix;
+	}
+	.column {
+		float: left;
+		position: relative;
+		min-height: 1px;
+	}
+	.col-50 {
+		width: 50%;
+	}
+	.monthly-charges {
+		.lob {
+			header {
+				padding: 5px;
+				padding-bottom: 10px;
+				background-color: $color-lex-light-gray;
+				border-top: 1px solid $color-lex-deep-gray;
+			}
+			+ .lob {
+				margin-top: 30px;
+			}
+		}
+		h4 {
+			display: inline-block;
+			margin-right: 30px;
+			margin-bottom: 0;
+			// color: $color-lex-sky;
+		}
+
+		.cta-modify-features {
+			display: inline-block;
+
+		}
+		.modify-features {
+
+		}
+
+	}
+	.form-install {
+		.datepicker {
+			max-width: 50%;
+		}
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-bottom: 1px solid $color-lex-light-gray;
+		tr:nth-child(even) {
+			background-color: $color-lex-light-gray;
+		}
+		td {
+			padding: 10px;
+		}
+		.feature {
+			width: 75%;
+		}
+		.price {
+			width: 25%;
+		}
+	}
+}

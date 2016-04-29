@@ -18,8 +18,7 @@ $text-blue-dark: #174061;
 $text-slategrey-dark: #222e36;
 $text-grey: $grey;
 
-// Non-scheme colors
-$color-bright-blue: #02a9e0;
+
 
 // Backgrounds
 $background-black: $black;
@@ -97,6 +96,18 @@ $color-plum-dark-dark: #471852;
 $color-plum-dark-darkish: #5b1f69;
 $color-plum-dark-lightish: #a07da8;
 
+// LEX
+// --Main
+$color-lex-sky: $color-sky-dark-darkish;
+$color-lex-deep-gray: #333;
+// --Secondary
+$color-lex-bright-sky: #02a9e0;
+$color-lex-plum: $color-plum-dark-darkish;
+$color-lex-deep-sky: $color-sky-dark-darker;
+// --Tertiary
+$color-lex-light-sky: #e0f3fc;
+$color-lex-light-gray: #dddddc;
+
 // Schemes: Legacy naming convention
 // Steel Dark: Legacy
 $steelDark-darkest: $color-steel-dark-darkest;
@@ -144,3 +155,5 @@ $plumDark-dark: $color-plum-dark-dark;
 $plumDark-darkish: $color-plum-dark-darkish;
 $plumDark: $color-plum-dark;
 $plumDark-lightish: $color-plum-dark-lightish;
+// Non-scheme colors
+$color-bright-blue: $color-lex-bright-sky;
