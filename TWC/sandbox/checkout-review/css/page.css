@@ -8,33 +8,75 @@
   .checkout-review > section + section {
     margin-top: 30px; }
   .checkout-review > section .body {
-    padding-left: 20px; }
-  .checkout-review .page-title {
-    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    border-bottom: 1px solid #00549f;
-    padding-bottom: 8px; }
-  .checkout-review h2 {
-    border-left: 5px solid #02a9e0;
-    padding-left: 15px; }
-  .checkout-review .review-services .services-section > header {
-    padding: 5px;
-    padding-bottom: 10px;
-    background-color: #e0f3fc;
-    border-top: 1px solid #00549f;
-    color: #00549f; }
-  .checkout-review .review-services .services-section + .services-section {
-    margin-top: 50px; }
+    padding: 0 25px; }
   .checkout-review .row:before, .checkout-review .row:after {
     content: ' ';
     display: table; }
   .checkout-review .row:after {
     clear: both; }
-  .checkout-review .column {
+  .checkout-review .row .column {
     float: left;
     position: relative;
     min-height: 1px; }
-  .checkout-review .col-50 {
+  .checkout-review .row .col-50 {
     width: 50%; }
+  .checkout-review table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #dddddc; }
+    .checkout-review table tr + tr {
+      border-top: 1px solid #dddddc; }
+    .checkout-review table td {
+      padding: 10px; }
+    .checkout-review table .feature {
+      width: 75%; }
+    .checkout-review table .price {
+      width: 25%; }
+  .checkout-review .section-title {
+    border-left: 5px solid #00549f;
+    padding-left: 15px;
+    color: #00549f; }
+  .checkout-review .page-title {
+    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border-bottom: 1px solid #02a9e0;
+    padding-bottom: 8px; }
+  .checkout-review .table-install-options {
+    border: none; }
+    .checkout-review .table-install-options td:first-child {
+      width: 40px; }
+    .checkout-review .table-install-options td:last-child {
+      width: 25%; }
+  .checkout-review .form-install .column {
+    width: calc(50% - 20px); }
+    .checkout-review .form-install .column:first-child {
+      margin-right: 20px; }
+    .checkout-review .form-install .column:last-child {
+      margin-left: 20px; }
+  .checkout-review .form-install .select-install-date {
+    margin-left: 40px;
+    margin-right: 25%; }
+    .checkout-review .form-install .select-install-date h3 {
+      font-size: 13px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+    .checkout-review .form-install .select-install-date fieldset {
+      margin: 15px 0 20px 0; }
+    .checkout-review .form-install .select-install-date .note {
+      font-style: italic; }
+  .checkout-review .form-install .option-description .details {
+    font-style: italic;
+    display: block; }
+  .checkout-review .form-install .datepicker {
+    max-width: 50%; }
+  .checkout-review .section-review-services .services-section > header {
+    padding: 5px;
+    padding-bottom: 10px;
+    font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  .checkout-review .section-review-services .services-section + .services-section {
+    margin-top: 50px; }
+  .checkout-review .total td {
+    font-weight: bold; }
   .checkout-review .monthly-charges .lob header {
     padding: 5px;
     padding-bottom: 10px;
@@ -48,24 +90,17 @@
     margin-bottom: 0; }
   .checkout-review .monthly-charges .cta-modify-features {
     display: inline-block; }
-  .checkout-review .form-install .datepicker {
-    max-width: 50%; }
-  .checkout-review table {
-    width: 100%;
-    border-collapse: collapse;
-    border-bottom: 1px solid #dddddc; }
-    .checkout-review table tr:nth-child(even) {
-      background-color: #dddddc; }
-    .checkout-review table td {
-      padding: 10px; }
-    .checkout-review table .feature {
-      width: 75%; }
-    .checkout-review table .price {
-      width: 25%; }
   .checkout-review .upsell {
     width: auto;
     padding: 0;
     background: transparent;
     position: relative; }
+  .checkout-review .section-continue .cta a::after {
+    font-family: FontAwesome;
+    content: '\f054';
+    font-size: 75%;
+    padding-left: 5px; }
+  .checkout-review .section-disclaimer {
+    display: none; }
 
 /*# sourceMappingURL=page.css.map */

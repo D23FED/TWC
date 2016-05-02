@@ -18,7 +18,17 @@ $text-blue-dark: #174061;
 $text-slategrey-dark: #222e36;
 $text-grey: $grey;
 
-
+// LEX
+// --Main
+$color-lex-sky: #00549f;
+$color-lex-deep-gray: #333;
+// --Secondary
+$color-lex-bright-sky: #02a9e0;
+$color-lex-plum: #5b1f69;
+$color-lex-deep-sky: #00315c;
+// --Tertiary
+$color-lex-light-sky: #e0f3fc;
+$color-lex-light-gray: #dddddc;
 
 // Backgrounds
 $background-black: $black;
@@ -98,12 +108,12 @@ $color-plum-dark-lightish: #a07da8;
 
 // LEX
 // --Main
-$color-lex-sky: $color-sky-dark-darkish;
+$color-lex-sky: #00549f;
 $color-lex-deep-gray: #333;
 // --Secondary
 $color-lex-bright-sky: #02a9e0;
-$color-lex-plum: $color-plum-dark-darkish;
-$color-lex-deep-sky: $color-sky-dark-darker;
+$color-lex-plum: #5b1f69;
+$color-lex-deep-sky: #00315c;
 // --Tertiary
 $color-lex-light-sky: #e0f3fc;
 $color-lex-light-gray: #dddddc;
