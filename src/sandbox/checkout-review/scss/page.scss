@@ -1,0 +1,225 @@
+@import '../../../init';
+
+$gutter: 40px;
+
+.twc-content .twc-container {
+	background-color: #fff;
+}
+
+.checkout-review {
+	padding: 20px;
+
+	// Multiple sections
+	* {
+		box-sizing: border-box;
+	}
+
+	> section {
+		+ section {
+			margin-top: 30px;
+		}
+
+		.body {
+			padding: 0 25px;
+		}
+	}
+
+	// Grid
+	.row {
+		@include clearfix;
+
+		.column {
+			float: left;
+			position: relative;
+			min-height: 1px;
+		}
+
+		.col-50 {
+			width: 50%;
+		}
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-bottom: 1px solid $color-lex-light-gray;
+
+		tr:nth-child(even) {
+			// background-color: hsl(0, 0%, 95%);
+
+		}
+
+		tr + tr {
+			border-top: 1px solid $color-lex-light-gray;
+		}
+
+		td {
+			padding: 10px;
+		}
+
+		.feature {
+			width: 75%;
+		}
+
+		.price {
+			width: 25%;
+		}
+	}
+
+	.section-title {
+		border-left: 5px solid $color-lex-sky;
+		padding-left: 15px;
+		color: $color-lex-sky;
+	}
+
+	// Page header
+	.page-title {
+		font-family: $font-stack-sans-book;
+		border-bottom: 1px solid $color-lex-bright-sky;
+		padding-bottom: 8px;
+	}
+
+	// Section: Installation Options
+	.section-installation-options {}
+
+	.table-install-options {
+		border: none;
+		td {
+			// width: 50%;
+			&:first-child {
+				width: 40px;
+			}
+
+			&:last-child {
+				width: 25%;
+			}
+		}
+	}
+
+	.form-install {
+		.column {
+			width: calc(50% - #{$gutter / 2});
+
+			&:first-child {
+				margin-right: $gutter / 2;
+			}
+
+			&:last-child {
+				margin-left: $gutter / 2;
+			}
+		}
+
+		.select-install-date {
+			margin-left: 40px;
+			margin-right: 25%;
+
+			h3 {
+				font-size: $base-font-size;
+				font-weight: bold;
+				font-family: $font-stack-sans;
+			}
+
+			fieldset + fieldset {
+				margin-top: 20px;
+			}
+			label {
+				font-size: $base-font-size;
+			}
+
+			.note {
+				font-style: italic;
+			}
+		}
+
+		.option-description {
+			.details {
+				font-style: italic;
+				display: block;
+			}
+		}
+
+		.datepicker {
+			max-width: 50%;
+		}
+	}
+
+	// Section: Review services
+	.section-review-services {
+		.services-section {
+			> header {
+				padding: 5px;
+				padding-bottom: 10px;
+
+				// background-color: $color-lex-light-sky;
+				// border-top: 1px solid $color-lex-sky;
+				// font-weight: bold;
+				font-family: $font-stack-sans-book;
+			}
+
+			+ .services-section {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	.total {
+		td {
+			font-weight: bold;
+		}
+	}
+
+	.monthly-charges {
+		.lob {
+			header {
+				padding: 5px;
+				padding-bottom: 10px;
+				background-color: $color-lex-light-gray;
+				border-top: 1px solid $color-lex-deep-gray;
+			}
+
+			+ .lob {
+				margin-top: 30px;
+			}
+		}
+
+		h4 {
+			display: inline-block;
+			margin-right: 30px;
+			margin-bottom: 0;
+
+			// color: $color-lex-sky;
+
+		}
+
+		.cta-modify-features {
+			display: inline-block;
+		}
+
+		.modify-features {}
+	}
+
+	// Section: Upsell
+	.section-upsell {}
+
+	// Override default upsell styles
+	.upsell {
+		width: auto;
+		padding: 0;
+		background: transparent;
+		position: relative;
+	}
+
+	// Section: Continue
+	.section-continue {
+		.cta a::after {
+			font-awesome: chevron-right;
+			font-size: 75%;
+			padding-left: 5px;
+		}
+	}
+
+	// Section: Disclaimer
+	.section-disclaimer {
+		display: none;
+	}
+}

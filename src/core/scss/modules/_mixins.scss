@@ -213,6 +213,15 @@
 	}
 }
 
+@mixin row {
+	@include clearfix;
+}
+@mixin column($width: 50%) {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	width: $width;
+}
 @mixin center($horizontal: true, $vertical: true) {
 	position: absolute;
 

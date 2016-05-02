@@ -17,7 +17,7 @@ html {
 }
 
 body, button, input, select, textarea {
-  @include font-size($base-font-size);
+  font-size: $base-font-size;
   line-height: normal;
 }
 

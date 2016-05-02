@@ -210,11 +210,13 @@ g.task('images', function() {
 		// }));
 });
 g.task('watch', function() {
-	g.watch(paths.sandbox + globs.styles, ['styles']);
-	g.watch(paths.test + globs.styles, ['styles']);
+	g.watch( paths.sandbox + globs.sass, g.parallel('style') );
+	g.watch( paths.source + globs.html, g.parallel('html') );
+	g.watch( paths.source + globs.php, g.parallel('php') );
 	// g.watch(paths.images, ['images']);
 	// g.watch(paths.scripts, ['scripts']);
 });
+//g.task('watch-markup', function() {});
 g.task('markup',
 	g.parallel('jade', 'html', 'php'));
 
