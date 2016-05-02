@@ -160,8 +160,6 @@ table tr td:last-of-type {
       font-size: 1.6rem; }
   .packageSelect .package .packageHead .packageTitle {
     display: none; }
-  .packageSelect .package .packageHead .compare-label::after {
-    content: ' Plan'; }
 
 .packageSelect .package .packageBody {
   padding: 6px; }

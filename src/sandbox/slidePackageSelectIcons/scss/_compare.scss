@@ -27,11 +27,6 @@ $color-border: #ececec;
 				display: none;
 			}
 
-			.compare-label {
-				&::after {
-					content: ' Plan';
-				}
-			}
 		}
 
 		// end .packageHead
