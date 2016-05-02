@@ -1,17 +1,14 @@
+<?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php'); ?>
+
 <div class="checkout-review"><!-- Page Header -->
 	<header>
 		<h1 class="page-title">Choose Installation &amp; Review Order</h1>
 	</header>
-	<section class="installation-options">
-		<header>
-			<h2 class="section-title">Installation options available to you:</h2>
-		</header>
+	<section class="section-installation-options">
+		<header><h2 class="section-title">Installation options available to you:</h2></header>
 		<div class="body">
 			<form action="" id="form-install" class="form-install">
 				<!-- Select install option -->
-				<div class="row">
-					<div class="column col-50">
-
 						<div class="select-install-type">
 							<fieldset>
 							<table class="table-install-options">
@@ -254,4 +251,6 @@
 	<!-- More popular offers -->
 		<!-- Offer -->
 		<!-- Offer -->
-	<!-- Continue</div>
+	<!-- Continue-->
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/footer.php'); ?>

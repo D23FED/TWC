@@ -1,17 +1,14 @@
+<?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php'); ?>
+
 <div class="checkout-review"><!-- Page Header -->
 	<header>
 		<h1 class="page-title">Choose Installation &amp; Review Order</h1>
 	</header>
-	<section class="installation-options">
-		<header>
-			<h2 class="section-title">Installation options available to you:</h2>
-		</header>
+	<section class="section-installation-options">
+		<header><h2 class="section-title">Installation options available to you:</h2></header>
 		<div class="body">
 			<form action="" id="form-install" class="form-install">
 				<!-- Select install option -->
-				<div class="row">
-					<div class="column col-50">
-
 						<div class="select-install-type">
 							<fieldset>
 							<table class="table-install-options">
@@ -19,7 +16,7 @@
 									<tr>
 										<td><input type="radio" id="input-appointment"></td>
 										<td><label for="appointment">
-												<span class="option-description"><span><strong>Schedule an appointment for a technician to install my services.</strong> Additional charges may apply.</span><span class="details">Any applicable service charges will be itemized under One-Time Charges below.</span></span>
+												<span class="option-description"><span><strong>Schedule an appointment for a technician to install my services.</strong></span> <span class="details">Additional charges may apply. Any applicable service charges will be itemized under One-Time Charges below.</span></span>
 											</label></td>
 										<td><div class="price">$39.99</div></td>
 									</tr>
@@ -32,17 +29,15 @@
 									<div class="column"></div>
 								</div> -->
 						</div>
-					</div>
 
-					<div class="column col-50">
 						<!-- Select install date -->
 						<div class="select-install-date">
 							<header>
 								<h3>Installation: All Services</h3>
-								<p>Choose two dates and times that work for you. We’ll do our best to accommodate your preferences and contact you via email to confirm your appointment date.</p>
 							</header>
 							<div class="row">
 								<div class="column col-50">
+								<p><strong>Choose two dates and times that work for you. </strong></p>
 									<fieldset class="select-date select-date-01">
 										<label for="">Your First Choice</label>
 										<div class="input-group">
@@ -50,11 +45,8 @@
 										  <!-- <span class="input-group-addon" id="selected-date-01">@</span> -->
 										</div>
 									</fieldset>
-
-								</div>
-								<div class="column col-50">
 									<fieldset class="select-date select-date-02">
-										<label for="">Your First Choice</label>
+										<label for="">Your Second Choice</label>
 										<div class="input-group">
 										  <input type="text" class="form-control datepicker" placeholder="MM/DD/YYYY" aria-describedby="selected-date-02">
 										  <!-- <span class="input-group-addon" id="selected-date-02">@</span> -->
@@ -62,9 +54,25 @@
 									</fieldset>
 
 								</div>
+
+								<div class="column col-50">
+								<p>We’ll do our best to accommodate your preferences and contact you via email to confirm your appointment date.</p>
+
+								<p class="note">Please note that someone 18 or over must be at home to let our technicians into your home.</p>
+
+								</div>
 							</div>
-							<p class="note">Please note that someone 18 or over must be at home to let our technicians into your home.</p>
 						</div>
+
+				<div class="row">
+					<div class="column col-50">
+
+
+
+
+					</div>
+
+					<div class="column col-50">
 
 					</div>
 				</div>
@@ -78,21 +86,23 @@
 			</form>
 		</div>
 	</section>
+
 	<!-- Review your new services -->
-	<section class="review-services">
+	<section class="section-review-services">
 		<header><h2 class="section-title">Review Your New Services</h2></header>
 		<div class="body">
 			<!-- Monthly Charges -->
 			<div class="services-section monthly-charges">
 				<header>
 					<h3>Monthly Charges</h3>
-					<table>
-						<tr>
-							<td>Package Price</td>
-							<td>$99.99</td>
-						</tr>
-					</table>
 				</header>
+				<!-- Package -->
+				<table class="total">
+					<tr>
+						<td class="feature">Package Price</td>
+						<td class="price">$99.99</td>
+					</tr>
+				</table>
 				<!-- TV -->
 				<div class="lob tv">
 					<header>
@@ -143,14 +153,14 @@
 							<td class="feature">Voicemail</td>
 							<td class="price">Included</td>
 						</tr>
+						<tfoot class="total">
+							<tr>
+								<td class="feature">Total Monthly Charges</td>
+								<td class="price">$109.99</td>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
-				<table class="total">
-					<tr>
-						<td class="feature">Total Monthly Charges</td>
-						<td class="price">$109.99</td>
-					</tr>
-				</table>
 			</div>
 			<div class="services-section one-time-charges">
 				<header>
@@ -160,26 +170,26 @@
 					<tbody>
 						<tr>
 							<td class="feature">Service Installation Fee</td>
-							<td class="price"></td>
+							<td class="price">$9.99</td>
 						</tr>
 						<tr>
 							<td class="feature">Included Outlet</td>
-							<td class="price"></td>
+							<td class="price">$9.99</td>
 						</tr>
 						<tr>
 							<td class="feature">TWC WiFi Router Installation Fee</td>
-							<td class="price"></td>
+							<td class="price">$9.99</td>
 						</tr>
 						<tr>
 							<td class="feature">Phone Activation Fee</td>
-							<td class="price"></td>
+							<td class="price">$9.99</td>
 						</tr>
 						<tr>
 							<td class="feature">Phone Jack</td>
-							<td class="price"></td>
+							<td class="price">$9.99</td>
 						</tr>
 					</tbody>
-					<tfoot>
+					<tfoot class="total">
 						<tr>
 							<td class="feature">Total One-Time Charges</td>
 							<td class="price">$0.00</td>
@@ -198,8 +208,7 @@
 	</section>
 	<!-- Upsell -->
 	<section class="section-upsell">
-		<header>
-			<h2 class="section-title">More Popular Offers</h2>
+		<header> <h2 class="section-title">More Popular Offers</h2>
 		</header>
 		<div class="body">
 			<div class="row">
@@ -233,15 +242,15 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="section-continue">
 		<nav class="body">
-		<div class="cta flatOmega twc-icon-after icon-angle-right mobile-full">
-			<a href="#">Continue</button>
-		</div>
+			<div class="cta flatOmega twc-icon-after icon-angle-right mobile-full">
+				<a href="#" rel="next">Continue</button>
+			</div>
 		</nav>
 	</section>
-	<section class="disclaimer">
-		<?php include('includes/_disclaimer.php') ?>
+	<section class="section-disclaimer">
+		<div class="body"><?php include('includes/_disclaimer.php') ?></div>
 	</section>
 	<!-- Installation option -->
 		<!-- Schedule checkbox -->
@@ -254,4 +263,6 @@
 	<!-- More popular offers -->
 		<!-- Offer -->
 		<!-- Offer -->
-	<!-- Continue</div>
+	<!-- Continue-->
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/footer.php'); ?>
