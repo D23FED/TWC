@@ -62,5 +62,10 @@
       width: 75%; }
     .checkout-review table .price {
       width: 25%; }
+  .checkout-review .upsell {
+    width: auto;
+    padding: 0;
+    background: transparent;
+    position: relative; }
 
 /*# sourceMappingURL=page.css.map */

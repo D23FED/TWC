@@ -206,25 +206,27 @@
 				<div class="column col-50">
 
 					<div class="upsell upsell-01">
-						<h3 class="title">Add Battery Backup for your Phone</h3>
+						<img src="img/upsell-01.jpg" alt="">
+						<!-- <h3 class="title">Add Battery Backup for your Phone</h3>
 						<div class="photo"><img src="#" alt=""></div>
 						<div class="description">
 							<p class="price">$35.00</p>
 							<p>Don't worry about power outages. Get peace of mind with 8 hours of standby power.</p>
 							<button class="add">Add To Order</button>
-						</div>
+						</div> -->
 					</div>
 
 				</div>
 				<div class="column col-50">
 
 					<div class="upsell upsell-02">
-						<h3 class="title">How about 200Mbps?</h3>
+					<img src="img/upsell-02.jpg" alt="">
+						<!-- <h3 class="title">How about 200Mbps?</h3>
 						<div class="photo"><img src="#" alt=""></div>
 						<div class="description">
 							<p class="price">Up to 200Mbps and Home WiFi - super-fast download speeds.</p>
 							<button class="add">Add To Order</button>
-						</div>
+						</div> -->
 					</div>
 
 				</div>
@@ -233,7 +235,9 @@
 	</section>
 	<section>
 		<nav class="body">
-			<button>Continue</button>
+		<div class="cta flatOmega twc-icon-after icon-angle-right mobile-full">
+			<a href="#">Continue</button>
+		</div>
 		</nav>
 	</section>
 	<section class="disclaimer">

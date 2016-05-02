@@ -101,4 +101,12 @@
 			width: 25%;
 		}
 	}
+
+	// Override default upsell styles
+	.upsell {
+		width: auto;
+		padding: 0;
+		background: transparent;
+		position: relative;
+	}
 }
