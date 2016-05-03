@@ -73,13 +73,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
@@ -283,13 +283,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
@@ -477,13 +477,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
@@ -599,13 +599,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
@@ -809,13 +809,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
@@ -1006,13 +1006,13 @@
       <div class="packageHead">
         <fieldset>
           <input class="comparePackage" id="compare-1a" type="checkbox">
-          <label class="compare-label" for="compare-1a">Compare</label>
+          <label class="compare-label" for="compare-1a">Compare Plan</label>
           <div class="alertTooltip">
             <p>This is an alert</p>
           </div>
           <div class="compare-button cta">
             <a href="">
-              <span>Compare</span>
+              <span>Compare Plan</span>
             </a>
           </div>
         </fieldset>
