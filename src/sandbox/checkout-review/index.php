@@ -106,7 +106,7 @@
 				<!-- TV -->
 				<div class="lob tv">
 					<header>
-						<h4>TV</h4><a href="#" class="modify-features">Add/Edit boxes or channels</a>
+						<h4 class='lob-title'>TV</h4><a href="#" class="modify-features">Add/Edit boxes or channels</a>
 					</header>
 					<table>
 						<tr>
@@ -126,7 +126,7 @@
 				<!-- Internet -->
 				<div class="lob internet">
 					<header>
-						<h4>Internet</h4><a href="#" class="modify-features">Add/Edit speed or equipment</a>
+						<h4 class='lob-title'>Internet</h4><a href="#" class="modify-features">Add/Edit speed or equipment</a>
 					</header>
 					<table>
 						<tr>
@@ -142,7 +142,7 @@
 				<!-- Phone -->
 				<div class="lob phone">
 					<header>
-						<h4>Phone</h4> <a href="#" class="modify-features">Add/Edit features</a>
+						<h4 class='lob-title'>Phone</h4> <a href="#" class="modify-features">Add/Edit features</a>
 					</header>
 					<table>
 						<tr>
