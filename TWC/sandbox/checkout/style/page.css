@@ -46,6 +46,7 @@
     margin-top: 1px; }
   .listAccordionItem .details {
     padding-top: 20px;
+    padding-bottom: 30px;
     border-width: 0 1px 1px 1px;
     border-style: solid;
     border-color: #f7f7f7; }

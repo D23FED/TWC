@@ -1,5 +1,5 @@
 <?php
-include_once("$_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php');
 
 // Get page name
 if ( isset($_GET['p']) ) {
@@ -53,6 +53,7 @@ if ( file_exists($page) ) {
 	include($page);
 	$page_content = ob_get_clean();
 	$body = str_replace('"images/','"'.$page_dir.'images/',$page_content);
+	$body = str_replace('"img/','"'.$page_dir.'img/',$page_content);
 	echo $body;
 	// include_once($page);
 	include_once(CORE_INC . 'footer.php');
