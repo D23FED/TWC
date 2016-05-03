@@ -4,6 +4,7 @@ $color-border: #ececec;
 // wrapper for all packages
 .packageSelect {
 	.package {
+		margin-bottom: 13px;
 		.packageHead {
 			background-color: transparent;
 			padding: 0;
@@ -27,11 +28,6 @@ $color-border: #ececec;
 				display: none;
 			}
 
-			.compare-label {
-				&::after {
-					content: ' Plan';
-				}
-			}
 		}
 
 		// end .packageHead
@@ -53,6 +49,7 @@ $color-border: #ececec;
 		}
 
 		&.js-compare {
+			margin-bottom: 10px;
 			.side-by-side .buttonWrapper {
 				width: calc(50% - 3px);
 

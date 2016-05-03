@@ -145,38 +145,37 @@ table tr td:last-of-type {
 .priceTally tr:nth-of-type(2) td {
   padding-top: 1em; }
 
-.packageSelect .package .packageHead {
-  background-color: transparent;
-  padding: 0; }
-  .packageSelect .package .packageHead > fieldset {
-    background-color: #0070c0;
-    width: auto;
-    float: none;
-    max-width: none;
-    text-align: center;
-    min-height: 36px; }
-    .packageSelect .package .packageHead > fieldset input ~ label.compare-label {
-      font-size: 16px;
-      font-size: 1.6rem; }
-  .packageSelect .package .packageHead .packageTitle {
-    display: none; }
-  .packageSelect .package .packageHead .compare-label::after {
-    content: ' Plan'; }
-
-.packageSelect .package .packageBody {
-  padding: 6px; }
-
-.packageSelect .package.single.js-compare, .packageSelect .package.double.js-compare, .packageSelect .package.triple.js-compare {
-  border-color: #0070c0; }
-  .packageSelect .package.single.js-compare .packageBody, .packageSelect .package.double.js-compare .packageBody, .packageSelect .package.triple.js-compare .packageBody {
-    padding-top: 5px;
-    padding-left: 3px;
-    padding-right: 3px; }
-
-.packageSelect .package.js-compare .side-by-side .buttonWrapper {
-  width: calc(50% - 3px); }
-  .packageSelect .package.js-compare .side-by-side .buttonWrapper .cta:not(.expandDetails) {
-    margin-right: -8px; }
+.packageSelect .package {
+  margin-bottom: 13px; }
+  .packageSelect .package .packageHead {
+    background-color: transparent;
+    padding: 0; }
+    .packageSelect .package .packageHead > fieldset {
+      background-color: #0070c0;
+      width: auto;
+      float: none;
+      max-width: none;
+      text-align: center;
+      min-height: 36px; }
+      .packageSelect .package .packageHead > fieldset input ~ label.compare-label {
+        font-size: 16px;
+        font-size: 1.6rem; }
+    .packageSelect .package .packageHead .packageTitle {
+      display: none; }
+  .packageSelect .package .packageBody {
+    padding: 6px; }
+  .packageSelect .package.single.js-compare, .packageSelect .package.double.js-compare, .packageSelect .package.triple.js-compare {
+    border-color: #0070c0; }
+    .packageSelect .package.single.js-compare .packageBody, .packageSelect .package.double.js-compare .packageBody, .packageSelect .package.triple.js-compare .packageBody {
+      padding-top: 5px;
+      padding-left: 3px;
+      padding-right: 3px; }
+  .packageSelect .package.js-compare {
+    margin-bottom: 10px; }
+    .packageSelect .package.js-compare .side-by-side .buttonWrapper {
+      width: calc(50% - 3px); }
+      .packageSelect .package.js-compare .side-by-side .buttonWrapper .cta:not(.expandDetails) {
+        margin-right: -8px; }
 
 .packageSelect .packageFooter [class*=icon-] {
   margin-right: 4px; }
