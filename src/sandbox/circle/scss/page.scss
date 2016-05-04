@@ -1,0 +1,63 @@
+@import '../../../init';
+$wedge-size: 40px;
+$animation-vars: 4s infinite linear;
+.wrap {
+	width: $wedge-size;
+	height: $wedge-size;
+	left: calc(50% - $wedge-size);
+	&::after {
+		content: '';
+		background-color: #fff;
+		border-radius: 50%;
+		width: $wedge-size * .75;
+		height: $wedge-size  * .75;
+		position: absolute;
+		top:  $wedge-size /8;
+		left: $wedge-size /8;
+	}
+	.container {
+		// left: $wedge-size/2;
+		// height: $wedge-size;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: $wedge-size/2;
+		overflow: hidden;
+		.half-cirle {
+			border-radius: 0 $wedge-size $wedge-size 0;
+			background-color: $color-lex-sky;
+			width: $wedge-size/2;
+			height: $wedge-size;
+			transform-origin: 0% 50%;
+			animation: rotate 4s infinite linear;
+			left: 0;
+		}
+	}
+	.container-a {
+		left: $wedge-size/2;
+		.half-cirle {
+			animation: rotate-a $animation-vars;
+		}
+	}
+	.container-b {
+		left: 0;
+		.half-cirle {
+			animation: rotate-b $animation-vars;
+			border-radius: $wedge-size 0 0 $wedge-size;
+			transform-origin: $wedge-size/2 $wedge-size/2;
+		}
+	}
+}
+@keyframes rotate-a {
+	50%, 100% {
+		transform: rotateZ(180deg);
+	}
+}
+@keyframes rotate-b {
+	0%, 50% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(180deg);
+	}
+}

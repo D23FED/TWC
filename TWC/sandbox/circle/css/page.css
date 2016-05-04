@@ -1,0 +1,72 @@
+.wrap {
+  width: 40px;
+  height: 40px;
+  left: calc(50% - $wedge-size); }
+  .wrap::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 5px; }
+  .wrap .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    overflow: hidden; }
+    .wrap .container .half-cirle {
+      border-radius: 0 40px 40px 0;
+      background-color: #00549f;
+      width: 20px;
+      height: 40px;
+      -webkit-transform-origin: 0% 50%;
+          -ms-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-animation: rotate 4s infinite linear;
+              animation: rotate 4s infinite linear;
+      left: 0; }
+  .wrap .container-a {
+    left: 20px; }
+    .wrap .container-a .half-cirle {
+      -webkit-animation: rotate-a 4s infinite linear;
+              animation: rotate-a 4s infinite linear; }
+  .wrap .container-b {
+    left: 0; }
+    .wrap .container-b .half-cirle {
+      -webkit-animation: rotate-b 4s infinite linear;
+              animation: rotate-b 4s infinite linear;
+      border-radius: 40px 0 0 40px;
+      -webkit-transform-origin: 20px 20px;
+          -ms-transform-origin: 20px 20px;
+              transform-origin: 20px 20px; }
+
+@-webkit-keyframes rotate-a {
+  50%, 100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg); } }
+
+@keyframes rotate-a {
+  50%, 100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg); } }
+
+@-webkit-keyframes rotate-b {
+  0%, 50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg); } }
+
+@keyframes rotate-b {
+  0%, 50% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg); } }
+
+/*# sourceMappingURL=page.css.map */
