@@ -1,0 +1,111 @@
+.heading, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+h3, .h3 {
+  font-size: 27px;
+  font-size: 2.7rem;
+}
+
+h4, .h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+h5, .h5 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+h6, .h6 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+  color: #00549f;
+}
+
+a:hover {
+  color: #02a9e0;
+}
+
+@media (max-width: 48em) {
+
+  h1, .h1 {
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+
+  h2, .h2 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
+  h3, .h3 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+
+  h4, .h4 {
+    font-size: 20px;
+    font-size: 2.0rem;
+  }
+
+  h5, .h5 {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+
+  h6, .h6 {
+    font-size: 17px;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 40em) {
+
+  h1, .h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
+  h2, .h2 {
+    font-size: 21px;
+    font-size: 2.1rem;
+  }
+
+  h3, .h3 {
+    font-size: 19px;
+    font-size: 1.9rem;
+  }
+
+  h4, .h4 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+
+  h5, .h5 {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+
+  h6, .h6 {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
