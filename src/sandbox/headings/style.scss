@@ -1,0 +1,81 @@
+// Global Headings
+@import 'init';
+
+$h1Size: 3.6rem;
+$h2Size: 3rem;
+$h3Size: 2.7rem;
+$h4Size: 2.4rem;
+$h5Size: 2rem;
+$h6Size: $h5Size;
+$headingSizes: $h1Size $h2Size $h3Size $h4Size $h5Size $h6Size;
+
+@mixin heading-size($size, $scale: 'medium') {
+	$scalingFactorMedium: 0.75;
+	$scalingFactorSmall: 0.65;
+
+	// h5 and h6 are same size
+	@if $size == 6 {
+		$size: 5;
+	}
+
+	@if $scale == 'medium' {
+		$scalingFactor: $scalingFactorMedium;
+	}
+	@else {
+		$scalingFactor: $scalingFactorSmall;
+	}
+
+	font-size: nth($headingSizes, $size) * ($i * 0.02 + $scalingFactor);
+}
+
+.heading {
+	font-family: $font-stack-sans-light;
+	font-weight: normal;
+}
+
+@for $i from 1 through 6 {
+	h#{$i}, .h#{$i} {
+		@extend .heading;
+
+		font-size: nth($headingSizes, $i);
+
+		@if $i == 6 {
+			font-family: $font-stack-sans-book;
+		}
+
+		@include respond-to('medium') {
+			@include heading-size($i);
+		}
+
+		@include respond-to('small') {
+			@include heading-size($i, 'small');
+		}
+	}
+}
+
+// Links
+a {
+	color: $color-lex-sky;
+
+	&:hover {
+		color: $color-lex-bright-sky;
+	}
+}
+
+// h1,
+// .h1 {}
+
+// h2,
+// .h2 {}
+
+// h3,
+// .h3 {}
+
+// h4,
+// .h4 {}
+
+// h5,
+// .h5 {}
+
+// h6,
+// .h6 {}
