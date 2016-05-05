@@ -450,8 +450,6 @@ $color-order-alt-hover: #d9eaf9;
             h5 {
               position: relative;
               top: 50%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
               transform: translateY(-50%);
             }
           }
@@ -538,8 +536,6 @@ $color-order-alt-hover: #d9eaf9;
             span {
               position: relative;
               top: 50%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
               transform: translateY(-50%);
             }
           }
@@ -567,8 +563,6 @@ $color-order-alt-hover: #d9eaf9;
               @include vertical-align;
               position: relative;
               top: 50%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
               transform: translateY(-50%);
             }
           }

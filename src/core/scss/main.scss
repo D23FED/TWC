@@ -10,176 +10,94 @@
     Layout
    ========================================================================== */
 
-@import "partials/layout";
-
-@import "partials/browserAlerts";
-
-@import "partials/header";
-
-@import "partials/newHeader";
-
-@import "partials/userLocation";
-
-// @import "partials/newNav";
-
-@import "partials/nav";
-
-@import "partials/subNav";
-
-@import "partials/alerts";
-
-@import "partials/banner";
-
-@import "partials/breadcrumbs";
-
-@import "partials/footer";
+@import
+	"partials/layout",
+	"partials/browserAlerts",
+	"partials/header",
+	"partials/newHeader",
+	"partials/userLocation",
+	"partials/nav",
+	"partials/subNav",
+	"partials/alerts",
+	"partials/banner",
+	"partials/breadcrumbs",
+	"partials/footer";
 
 /* ==========================================================================
     Modules
    ========================================================================== */
 
-@import "partials/typography";
-
-@import "partials/colors";
-
-@import "partials/cardFlip";
-
-@import "partials/bottom-boxes";
-
-@import "partials/icons";
-
-@import "partials/helpers";
-
-@import "partials/lists";
-
-@import "partials/buttons";
-
-@import "partials/pagination";
-
-@import "partials/share";
-
-@import "partials/images";
-
-@import "partials/image-content-panel";
-
-@import "partials/videos";
-
-@import "partials/gallery";
-
-@import "partials/gallery-viewMore";
-
-@import "partials/accessibility";
-
-@import "partials/forms";
-
-@import "partials/tooltips";
-
-@import "partials/search";
-
-@import "partials/simpleSearch";
-
-@import "partials/operationalMessage";
-
-@import "partials/feedback-survey";
-
-@import "partials/faq-survey";
-
-@import "partials/faq-nav-display";
-
-@import "partials/faq-related";
-
-@import "partials/chat";
-
-@import "partials/chat-prompt";
-
-@import "partials/accordion";
-
-@import "partials/side-tab-accordion";
-
-@import "partials/carousel";
-
-@import "partials/tileList";
-
-@import "partials/wrappingColumns";
-
-@import "partials/contact-us";
-
-@import "partials/meters";
-
-@import "partials/modal";
-
-@import "partials/modules";
-
-@import "partials/flyout";
-
-@import "partials/leftRail-list";
-
-@import "partials/listAccordion";
-
-@import "partials/tables";
-
-@import "partials/compareTable";
-
-@import "partials/newComparePackage";
-
-@import "partials/compEritTable";
-
-@import "partials/tabs";
-
-@import "partials/pricing";
-
-@import "partials/sticky";
-
-@import "partials/scrollTo";
-
-@import "partials/jumpTo";
-
-@import "partials/clu";
-
-@import "partials/clu-location";
-
-@import "partials/stores";
-
-@import "partials/calculator";
-
-@import "partials/rolloverCaptions";
-
-@import "partials/prototype";
-
-@import "partials/styleguide";
-
-@import "partials/smartLink";
-
-@import "partials/ytsearch";
-
-@import "partials/pyr";
-
-@import "partials/how-to-videos";
-
-@import "partials/marquee";
-
-@import "partials/feedback";
-
-@import "partials/hide-show";
-
-@import "partials/speed";
-
-@import "partials/twc-geo-locate";
-
-@import "partials/lob";
-
-@import "partials/serviceDetails";
-
-@import "partials/generic-accordion";
-
-@import "partials/zipPromptModal";
-
-@import "partials/mymove";
-
-@import "partials/upsell";
-
-@import "partials/injectioncontainer";
-
-@import "partials/compare";
-
-@import "partials/packageSelect";
+@import
+	"partials/typography",
+	"partials/colors",
+	"partials/cardFlip",
+	"partials/bottom-boxes",
+	"partials/icons",
+	"partials/helpers",
+	"partials/lists",
+	"partials/buttons",
+	"partials/pagination",
+	"partials/share",
+	"partials/images",
+	"partials/image-content-panel",
+	"partials/videos",
+	"partials/gallery",
+	"partials/gallery-viewMore",
+	"partials/accessibility",
+	"partials/forms",
+	"partials/tooltips",
+	"partials/search",
+	"partials/simpleSearch",
+	"partials/operationalMessage",
+	"partials/feedback-survey",
+	"partials/faq-survey",
+	"partials/faq-nav-display",
+	"partials/faq-related",
+	"partials/chat",
+	"partials/chat-prompt",
+	"partials/accordion",
+	"partials/side-tab-accordion",
+	"partials/carousel",
+	"partials/tileList",
+	"partials/wrappingColumns",
+	"partials/contact-us",
+	"partials/meters",
+	"partials/modal",
+	"partials/modules",
+	"partials/flyout",
+	"partials/leftRail-list",
+	"partials/listAccordion",
+	"partials/tables",
+	"partials/compareTable",
+	"partials/newComparePackage",
+	"partials/compEritTable",
+	"partials/tabs",
+	"partials/pricing",
+	"partials/sticky",
+	"partials/scrollTo",
+	"partials/jumpTo",
+	"partials/clu",
+	"partials/clu-location",
+	"partials/stores",
+	"partials/calculator",
+	"partials/rolloverCaptions",
+	"partials/prototype",
+	"partials/styleguide",
+	"partials/smartLink",
+	"partials/ytsearch",
+	"partials/pyr",
+	"partials/how-to-videos",
+	"partials/marquee",
+	"partials/feedback",
+	"partials/hide-show",
+	"partials/speed",
+	"partials/twc-geo-locate",
+	"partials/lob",
+	"partials/serviceDetails",
+	"partials/generic-accordion",
+	"partials/zipPromptModal",
+	"partials/mymove",
+	"partials/upsell",
+	"partials/injectioncontainer",
+	"partials/compare",
+	"partials/packageSelect";

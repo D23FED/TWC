@@ -31,12 +31,7 @@ span.FAQLabel {
     width: 27%;
     padding: 2em 0em 2em 2em;
     background-color: #487a97;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#487a97), to(#0e4460));
-    background-image: -webkit-linear-gradient(top, #487a97, #0e4460);
-    background-image: -moz-linear-gradient(top, #487a97, #0e4460);
-    background-image: -o-linear-gradient(top, #487a97, #0e4460);
-    background-image: -ms-linear-gradient(top, #487a97, #0e4460);
-    background-image: linear-gradient(top, #487a97, #0e4460);
+    background-image: linear-gradient(to bottom, #487a97, #0e4460);
     overflow: hidden;
 }
 .twc-topicFAQs {
@@ -135,14 +130,7 @@ span.FAQLabel {
 span.FAQLabel.active , span.FAQLabel.active+div+div {
     width:100%;
     border-bottom: none;
-    // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    background: -moz-linear-gradient(left, #ebebeb 0%, #ebebeb 23%, #ffffff 76%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ebebeb), color-stop(23%,#ebebeb), color-stop(76%,#ffffff));
-    background: -webkit-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
-    background: -o-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
-    background: -ms-linear-gradient(left, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
     background: linear-gradient(to right, #ebebeb 0%,#ebebeb 23%,#ffffff 76%);
-    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=1 )";
     color: #333;
     padding-right:1em;
 }
@@ -193,8 +181,6 @@ span.FAQLabel.expanded {
 }
 span.selected {
     width: 85%;
-    -webkit-box-shadow: inset 0 0 1px 0 #333;
-    -moz-box-shadow: inset 0 0 1px 0 #333;
     box-shadow: inset 0 0 1px 0 #333;
     z-index: 99999;
 }
@@ -234,8 +220,6 @@ span.FAQLabel.arrow:after {
     font-weight: bold;
     content: '\f107';
     color: #B1B2AF;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     position: absolute;
     right: 26px;
@@ -247,46 +231,22 @@ span.FAQLabel.arrow:after {
 
 .faq-nav-display .grad-steel-blue {
     background-color: #92b9dd;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#92b9dd), to(#5384af));
-    background-image: -webkit-linear-gradient(top, #92b9dd, #5384af);
-    background-image: -moz-linear-gradient(top, #92b9dd, #5384af);
-    background-image: -ms-linear-gradient(top, #92b9dd, #5384af);
-    background-image: -o-linear-gradient(top, #92b9dd, #5384af);
-    background-image: linear-gradient(top, #92b9dd, #5384af);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#92b9dd', EndColorStr='#5384af')";
+    background-image: linear-gradient(to bottom, #92b9dd, #5384af);
 }
 
 .faq-nav-display .grad-deep-blue {
     background-color: #5d92c0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#5d92c0), to(#1e5688));
-    background-image: -webkit-linear-gradient(top, #5d92c0, #1e5688);
-    background-image: -moz-linear-gradient(top, #5d92c0, #1e5688);
-    background-image: -ms-linear-gradient(top, #5d92c0, #1e5688);
-    background-image: -o-linear-gradient(top, #5d92c0, #1e5688);
-    background-image: linear-gradient(top, #5d92c0, #1e5688);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#5d92c0', EndColorStr='#1e5688')";
+    background-image: linear-gradient(to bottom, #5d92c0, #1e5688);
 }
 
 .faq-nav-display .grad-steel-grey {
     background-color: #babbbc;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#babbbc), to(#3d3f43));
-    background-image: -webkit-linear-gradient(top, #babbbc, #3d3f43);
-    background-image: -moz-linear-gradient(top, #babbbc, #3d3f43);
-    background-image: -ms-linear-gradient(top, #babbbc, #3d3f43);
-    background-image: -o-linear-gradient(top, #babbbc, #3d3f43);
-    background-image: linear-gradient(top, #babbbc, #3d3f43);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#babbbc', EndColorStr='#3d3f43')";
+    background-image: linear-gradient(to bottom, #babbbc, #3d3f43);
 }
 
 .faq-nav-display .grad-deep-grey {
     background-color: #99999b;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#99999b), to(#515151));
-    background-image: -webkit-linear-gradient(top, #99999b, #515151);
-    background-image: -moz-linear-gradient(top, #99999b, #515151);
-    background-image: -ms-linear-gradient(top, #99999b, #515151);
-    background-image: -o-linear-gradient(top, #99999b, #515151);
-    background-image: linear-gradient(top, #99999b, #515151);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#99999b', EndColorStr='#515151')";
+    background-image: linear-gradient(to bottom, #99999b, #515151);
 }
 
 .twc-ie8 section {
@@ -333,13 +293,7 @@ span.FAQLabel.arrow:after {
         border-bottom: 1px solid #fff;
         background: #eeeeef;
         background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-        background: -moz-linear-gradient(top,  #eeeeef 0%, #dddfe2 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(100%,#dddfe2));
-        background: -webkit-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
-        background: -o-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
-        background: -ms-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
         background: linear-gradient(to bottom,  #eeeeef 0%,#dddfe2 100%);
-        font-size: 18px;
         font-size: 1.8rem;
         font-family: 'TWC Round Book',Arial,Sans-Serif;
         color: #333;
@@ -354,18 +308,13 @@ span.FAQLabel.arrow:after {
     span.FAQLabel.active:after {
         float: right;
         font-family: 'FontAwesome', sans-serif;
-        font-size: 18px;
         font-size: 1.8rem;
         content:'\f107';
         color: #B1B2AF;
         line-height: 1.4;
-        -webkit-transition: all .4s ease-in-out;
-        -moz-transition: all .4s ease-in-out;
         transition: all .4s ease-in-out;
     }
     span.FAQLabel.expanded:after {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
         transform: rotate(180deg);
     }
     .twc-FAQTopics li a,

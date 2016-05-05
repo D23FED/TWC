@@ -97,13 +97,7 @@ hr.spacer {
   left: 1%;
   width: 52%;
   top: 83%;
-  -webkit-box-shadow: 0 15px 10px #101010;
-  -moz-box-shadow: 0 15px 10px #101010;
   box-shadow: 0 15px 10px #101010;
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
   z-index: -1;
 }
@@ -111,10 +105,6 @@ hr.spacer {
 .shadow-3:after {
   right: 1%;
   left: auto;
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
   transform: rotate(2deg);
 }
 
@@ -133,13 +123,7 @@ hr.spacer {
   bottom: 5%;
   top: 20px;
   left: 1%;
-  -webkit-box-shadow: 0 1-5px 10px #101010;
-  -moz-box-shadow: 0 -15px 10px #101010;
   box-shadow: 0 -15px 10px #101010;
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
   transform: rotate(2deg);
 }
 
@@ -148,13 +132,7 @@ hr.spacer {
   top: 5%;
   right: 1%;
   left: auto;
-  -webkit-box-shadow: 0 15px 10px #101010;
-  -moz-box-shadow: 0 15px 10px #101010;
   box-shadow: 0 15px 10px #101010;
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
   transform: rotate(2deg);
 }
 

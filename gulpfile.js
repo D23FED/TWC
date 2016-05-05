@@ -1,18 +1,18 @@
 "use strict";
 
-var mapNewer = function (relativePath) {
-	var find = 'scss';
-	var replace = 'css';
-	var log = false;
-	if (log) {
-		if ( relativePath.indexOf(find) !== -1 ) {
-			console.log(relativePath,' => ',relativePath.replace(find, replace))
-		} else {
-			console.log('Not remapped: ',relativePath)
+var mapNewer = function(relativePath) {
+		var find = 'scss';
+		var replace = 'css';
+		var log = false;
+		if (log) {
+			if (relativePath.indexOf(find) !== -1) {
+				console.log(relativePath, ' => ', relativePath.replace(find, replace))
+			} else {
+				console.log('Not remapped: ', relativePath)
+			}
 		}
+		return relativePath.replace(find, replace);
 	}
-	return relativePath.replace(find, replace);
-}
 // Config
 var
 	gulp, g = require('gulp'),
@@ -25,6 +25,7 @@ var
 		$.autoprefixer({
 			browsers: 'last 3 versions'
 		}),
+		$.postcssFilterGradient,
 		$.pixrem({
 			rootValue: 10
 		}),
@@ -51,21 +52,21 @@ var
 		img: '**/*.{jpg,jpeg,gif,png}'
 	};
 
-
-
-
 // Tasks
 g.task('style', function() {
 	return g.src(
-			[paths.source + globs.sass,'!node_modules/**/*'], {
+			[paths.source + globs.sass, '!node_modules/**/*'], {
 				base: './src/'
 			})
 		// Only process changed files
 		// .pipe($.changed(paths.dist, {
 		// 	extension: '.css'
 		// }))
-		.pipe($.newer({dest: paths.dist, map: mapNewer, ext:'.css'}))
-		// .pipe($.cached('style'))
+		.pipe($.newer({
+			dest: paths.dist,
+			map: mapNewer,
+			ext: '.css'
+		}))
 		// Output names of files being processed
 		.pipe($.debug({
 			title: 'Processing:'
@@ -73,7 +74,17 @@ g.task('style', function() {
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())
 		// Compile Sass
-		.pipe($.sass())
+		.pipe($.sass({
+			includePaths: [
+				'src',
+				'src/core',
+				'src/core/scss',
+				'src/core/scss/partials',
+				'src/core/scss/modules',
+				'style',
+				'scss'
+			]
+		}))
 		// CSS processing
 		.pipe($.postcss(postCssProcessors))
 		// Write Sourcemaps
@@ -131,7 +142,6 @@ g.task('php', function() {
 		}))
 })
 
-// Everything below is placeholder / WIP
 g.task('scripts', function() {
 	return g.src(paths.source + globs.scripts, {
 			base: './src/'
@@ -147,7 +157,7 @@ g.task('scripts', function() {
 				'impliedStrict': true
 			},
 			rules: {
-				'strict': ['off','global'],
+				'strict': ['off', 'global'],
 				'indent': 'off',
 				'no-console': 'warn',
 				'no-debugger': 'warn',
@@ -164,11 +174,11 @@ g.task('scripts', function() {
 		// Concat
 		// .pipe($.concat('main.js'))
 		.pipe($.jsbeautifier({
-		    // config: './config.json',
-		    indent_char: '\t',
-		    indent_size: 1,
-		    space_in_paren: true
-  	}))
+			// config: './config.json',
+			indent_char: '\t',
+			indent_size: 1,
+			space_in_paren: true
+		}))
 		.pipe(g.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
@@ -210,15 +220,15 @@ g.task('images', function() {
 		// }));
 });
 g.task('watch', function() {
-	g.watch( paths.sandbox + globs.sass, g.parallel('style') );
-	g.watch( paths.source + globs.html, g.parallel('html') );
-	g.watch( paths.source + globs.php, g.parallel('php') );
-	// g.watch(paths.images, ['images']);
-	// g.watch(paths.scripts, ['scripts']);
+	g.watch(paths.sandbox + globs.sass, g.parallel('style'));
+	g.watch(paths.source + globs.html, g.parallel('html'));
+	g.watch(paths.source + globs.php, g.parallel('php'));
 });
-//g.task('watch-markup', function() {});
 g.task('markup',
 	g.parallel('jade', 'html', 'php'));
+
+g.task('default',
+	g.parallel('style', 'markup', 'scripts', 'images'));
 
 // g.task('serve', ['style'], function() {
 //   $.browserSync.init({
@@ -227,9 +237,6 @@ g.task('markup',
 //   // gulp.watch("app/scss/*.scss", ['style']);
 //   // gulp.watch("app/*.html").on('change', browserSync.reload);
 // });
-
-g.task('default',
-	g.parallel('style', 'markup', 'scripts', 'images'));
 
 /*
 TODO:

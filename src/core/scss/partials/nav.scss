@@ -51,11 +51,7 @@ nav.twc-mobile-navigation { display: none; }
   }
 }
 .twc-customerLocation ul li.twc-drop-nav.persist {
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
   background-clip: padding-box;
   background: #677986;
 }
@@ -665,24 +661,14 @@ li.twc-drop-nav.persist a.twc-change:after {
                       font-family: "FontAwesome";
                       content: '\f078';
                       float: right;
-                      -webkit-transition:all .5s ease;
-                      -moz-transition:all .5s ease;
-                      -o-transition:all .5s ease;
                       transition:all .5s ease;
                     }
                     &.js-active {
                       background: #6C9BC7;
                       color: #fff;
                       border-bottom: none;
-                      -webkit-transition:all .5s ease;
-                      -moz-transition:all .5s ease;
-                      -o-transition:all .5s ease;
                       transition:all .5s ease;
                       &:after {
-                        -webkit-transform:rotate(-180deg);
-                        -moz-transform:rotate(-180deg);
-                        -ms-transform:rotate(-180deg);
-                        -o-transform:rotate(-180deg);
                         transform:rotate(-180deg);
                       }
                     }

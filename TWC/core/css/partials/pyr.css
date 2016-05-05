@@ -24,8 +24,8 @@
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     background-color: #5d92c0;
-    background-image: linear-gradient(top, #5d92c0, #2c608f);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#5d92c0', EndColorStr='#2c608f')";
+    background-image: linear-gradient(to bottom, #5d92c0, #2c608f);
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr="#5d92c0", EndColorStr="#2c608f")";
     zoom: 1;
     color: #fff; }
     .pyr .blue-bar a {

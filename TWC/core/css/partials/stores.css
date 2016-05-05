@@ -94,8 +94,8 @@
 
 .locate-stores-filters ul.two_column_list {
   -webkit-column-gap: 0;
-  -moz-column-gap: 0;
-  column-gap: 0; }
+     -moz-column-gap: 0;
+          column-gap: 0; }
 
 .locate-stores-filters .filter-section input {
   width: auto; }

@@ -11,9 +11,6 @@
   background: #000;
   zoom: 1;
   filter: alpha(opacity=50);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
   opacity: 0.5;
   z-index: 9999; }
 
@@ -106,7 +103,7 @@
   height: 100%;
   width: 100%;
   background: #000;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   opacity: .5;
   z-index: 9999; }

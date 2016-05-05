@@ -8,14 +8,8 @@
 .twc-footer {
   @include padding(2em,0,2em,0);
   background: rgb(211, 211, 212);
-  background: -moz-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(211, 211, 212, 1)), color-stop(3%, rgba(231, 231, 232, 1)), color-stop(16%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
-  background: -webkit-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
-  background: -o-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
-  background: -ms-linear-gradient(top, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
   background: linear-gradient(to bottom, rgba(211, 211, 212, 1) 0%, rgba(231, 231, 232, 1) 3%, rgba(255, 255, 255, 1) 16%, rgba(255, 255, 255, 1) 100%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3d3d4', endColorstr='#ffffff',GradientType=0 )";
-  @include font-size(12);
+  font-size: 1.2rem;
   [class*='twc-col3_333333-c'] {
     width: 30%;
     margin-left: 5%;

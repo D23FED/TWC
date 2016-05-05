@@ -44,8 +44,8 @@ li.twc-drop-nav.persist a.twc-change:after {
 .twc-new-navigation {
   height: 3em;
   background-color: #65676C;
-  background-image: linear-gradient(top, #65676C, #303136);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#65676C', EndColorStr='#303136')";
+  background-image: linear-gradient(to bottom, #65676C, #303136);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr="#65676C", EndColorStr="#303136")";
   zoom: 1; }
   .twc-new-navigation .mobile-only {
     display: none; }
@@ -68,8 +68,8 @@ li.twc-drop-nav.persist a.twc-change:after {
       border-right: 1px solid #5A5B60; }
       .twc-new-navigation .twc-new-nav > li:hover {
         background-color: #3B71A5;
-        background-image: linear-gradient(top, #3B71A5, #1D5387);
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3B71A5', EndColorStr='#1D5387')";
+        background-image: linear-gradient(to bottom, #3B71A5, #1D5387);
+        filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr="#3B71A5", EndColorStr="#1D5387")";
         zoom: 1;
         box-shadow: 0 4px 4px 0px #000; }
         .twc-new-navigation .twc-new-nav > li:hover > ul .twc-new-mega-section {
@@ -101,8 +101,8 @@ li.twc-drop-nav.persist a.twc-change:after {
       text-align: left;
       top: 3em;
       background-color: #fbfbfb;
-      background-image: linear-gradient(top, #fbfbfb, #f5f5f5);
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbfbfb', EndColorStr='#f5f5f5')";
+      background-image: linear-gradient(to bottom, #fbfbfb, #f5f5f5);
+      filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr="#fbfbfb", EndColorStr="#f5f5f5")";
       zoom: 1;
       box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
       display: none; }
@@ -325,8 +325,8 @@ li.twc-drop-nav.persist a.twc-change:after {
     width: 100%; }
   .twc-new-navigation ul.twc-new-nav > li input[type="checkbox"]:checked ~ label {
     background-color: #3B71A5;
-    background-image: linear-gradient(top, #3B71A5, #1D5387);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3B71A5', EndColorStr='#1D5387')";
+    background-image: linear-gradient(to bottom, #3B71A5, #1D5387);
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr="#3B71A5", EndColorStr="#1D5387")";
     zoom: 1;
     z-index: 0;
     position: relative;

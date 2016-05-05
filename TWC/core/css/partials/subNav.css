@@ -19,8 +19,8 @@
     .twc-sub-navigation li:hover {
       border-bottom: 6px solid #3376b2;
       background-color: rgba(255, 255, 255, 0) 50%;
-      background-image: linear-gradient(top, rgba(255, 255, 255, 0) 50%, rgba(254, 254, 254, 0.6) 100%);
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(255, 255, 255, 0) 50%', EndColorStr='rgba(254, 254, 254, 0.6) 100%')";
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(254, 254, 254, 0.6) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#99fefefe', GradientType=0);
       zoom: 1; }
     .twc-sub-navigation li .smartLink {
       display: inline; }
@@ -43,8 +43,8 @@
     .twc-sub-navigation li.twc-active {
       box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.7);
       background-color: #fefefe 0%;
-      background-image: linear-gradient(top, #fefefe 0%, rgba(255, 255, 255, 0) 75%);
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fefefe 0%', EndColorStr='rgba(255, 255, 255, 0) 75%')";
+      background-image: linear-gradient(to bottom, #fefefe 0%, rgba(255, 255, 255, 0) 75%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#00ffffff', GradientType=0);
       zoom: 1; }
       .twc-sub-navigation li.twc-active a {
         color: #3376b2; }
@@ -67,7 +67,7 @@
 .twc-sub-navigation li a:hover {
   border-bottom: 6px solid #3376b2;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(254, 254, 254, 0.6) 100%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00ffffff', endColorstr = '#99fefefe', GradientType = 0)"; }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#99fefefe', GradientType=0); }
 
 .twc-sub-navigation li a {
   padding: 1.2em .9em; }
@@ -75,7 +75,7 @@
 .twc-sub-navigation li.twc-active a {
   box-shadow: 0 -8px 16px -8px rgba(0, 0, 0, 0.7);
   background: linear-gradient(to bottom, #fefefe 0%, rgba(255, 255, 255, 0) 75%);
-  filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#00ffffff',GradientType=0 )"; }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#00ffffff', GradientType=0); }
 
 .twc-sub-navigation li.twc-active {
   box-shadow: none;

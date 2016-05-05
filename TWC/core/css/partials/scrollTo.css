@@ -4,8 +4,6 @@
 .scrollToTop, .scrollToTop-modal {
   position: fixed;
   display: inline-block;
-  *zoom: 1;
-  *display: inline;
   right: 1em;
   bottom: .5em;
   margin-top: 0.5em;
@@ -21,7 +19,8 @@
   background: rgba(0, 0, 0, 0.1);
   font-weight: 100;
   z-index: 999999;
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   .scrollToTop:after, .scrollToTop-modal:after {
     padding-left: .5em;
     font-family: "FontAwesome";
