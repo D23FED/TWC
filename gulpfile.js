@@ -27,7 +27,9 @@ var
 		}),
 		$.postcssFilterGradient,
 		$.pixrem({
-			rootValue: 10
+			rootValue: 10,
+			atrules: true,
+			unitPrecision: 1
 		}),
 		$.postcssFontAwesome,
 		$.postcssDiscardDuplicates,
@@ -83,7 +85,9 @@ g.task('style', function() {
 				'src/core/scss/modules',
 				'style',
 				'scss'
-			]
+			],
+			outputStyle: 'expanded',
+			precision: 1
 		}))
 		// CSS processing
 		.pipe($.postcss(postCssProcessors))
