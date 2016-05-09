@@ -8,13 +8,13 @@
     padding: 1em 4%; }
   .twc-search-module .cta button {
     background-color: #3779b3;
-    background-image: linear-gradient(top, #3779b3, #02447e);
-    /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3779b3', EndColorStr='#02447e')"; */
+    background-image: linear-gradient(to bottom, #3779b3, #02447e);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3779b3', endColorstr='#ff02447e', GradientType=0);
     color: white; }
     .twc-search-module .cta button:hover {
       background-color: #265a83;
-      background-image: linear-gradient(top, #265a83, #1b405e);
-      /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#265a83', EndColorStr='#1b405e')"; */ }
+      background-image: linear-gradient(to bottom, #265a83, #1b405e);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff265a83', endColorstr='#ff1b405e', GradientType=0); }
 
 .twc-search-module .cta button:active, .twc-search-module .cta button.active, .twc-search-module .cta button:focus {
   background: #444545;
@@ -23,14 +23,14 @@
 .twc-search-module .cta:disabled button, .twc-search-module .cta.disabled button {
   cursor: default;
   background-color: #666666;
-  background-image: linear-gradient(top, #666666, #666666);
-  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#666666')"; */
+  background-image: linear-gradient(to bottom, #666666, #666666);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff666666', GradientType=0);
   color: white; }
 
 .twc-search-module .cta:disabled button:hover, .twc-search-module .cta:disabled button:active, .twc-search-module .cta.disabled button:hover, .twc-search-module .cta.disabled button:active {
   background-color: #666666;
-  background-image: linear-gradient(top, #666666, #666666);
-  /* -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#666666')"; */
+  background-image: linear-gradient(to bottom, #666666, #666666);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff666666', GradientType=0);
   color: white; }
 
 .twc-module ul {
@@ -39,8 +39,6 @@
 
 .twc-module li {
   display: inline-block;
-  *zoom: 1;
-  *display: inline;
   padding: 0 10px;
   border-right: 1px solid #9d9d9e; }
   .twc-module li.js-first {
@@ -60,8 +58,6 @@ header .twc-module {
 
 .twc-banner-search {
   display: inline-block;
-  *zoom: 1;
-  *display: inline;
   width: 100%;
   margin: 0 auto; }
 

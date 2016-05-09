@@ -124,8 +124,6 @@
   font-weight: 900; }
 
 .locate-stores-filters ul.two_column_list {
-  -webkit-column-gap: 0;
-  -moz-column-gap: 0;
   column-gap: 0; }
 
 .locate-stores-filters li {
@@ -765,9 +763,7 @@ span.flag {
     background-color: transparent;
     background-image: none;
     border-radius: none;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-          box-shadow: none; }
+    box-shadow: none; }
 
 .stores_signup,
 .stores_download,
@@ -788,11 +784,6 @@ span.flag {
           padding: 15px 4%;
           background: #eeeeef;
           background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-          background: -moz-linear-gradient(top,  #eeeeef 0%, #dddfe2 100%);
-          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeef), color-stop(100%,#dddfe2));
-          background: -webkit-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
-          background: -o-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
-          background: -ms-linear-gradient(top,  #eeeeef 0%,#dddfe2 100%);
           background: linear-gradient(to bottom,  #eeeeef 0%,#dddfe2 100%);
           font-family: arial, sans-serif;
           font-size: 14px;

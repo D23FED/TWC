@@ -36,8 +36,8 @@
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .calculator-box .cta-holder {
   float: left;
@@ -50,8 +50,8 @@
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 @media (max-width: 48em) {
   .js-fixed {

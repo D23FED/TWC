@@ -205,14 +205,7 @@ input.twc-text:focus {
 .form_button_submit {
   padding: 10px 15px;
   background: #387ab4;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #387ab4), color-stop(18%, #3173ad), color-stop(74, #0d4f89), color-stop(100, #01437d));
-  background-image: -webkit-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  background-image: -moz-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  background-image: -ms-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  background-image: -o-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  background: -pie-linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  background-image: linear-gradient(top, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
-  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3678b2', EndColorStr='#044680')";
+  background-image: linear-gradient(to bottom, #387ab4 0%, #3173ad 18%, #0d4f89 74%, #01437d 100%);
   width: 94px;
   border: 0;
   @include border-radius(5);

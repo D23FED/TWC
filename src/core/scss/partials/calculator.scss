@@ -37,8 +37,6 @@
   .calculator-box .cart-price .pricing {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .calculator-box .cta-holder {
@@ -51,8 +49,6 @@
   .calculator-box .cta-holder .cta {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   @media (max-width: 48em) {

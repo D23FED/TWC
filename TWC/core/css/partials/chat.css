@@ -167,8 +167,8 @@
   border-radius: 2px;
   box-shadow: 0 0 2px #444;
   background-color: #fcfdfd;
-  background-image: linear-gradient(top, #fcfdfd, #eaf0f4);
-  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fcfdfd', EndColorStr='#eaf0f4')"; }
+  background-image: linear-gradient(to bottom, #fcfdfd, #eaf0f4);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcfdfd', endColorstr='#ffeaf0f4', GradientType=0); }
 
 #ccWait, #ChatDisplay, #ccContainer, .chatUI-.conversation {
   display: none; }
@@ -180,8 +180,8 @@
   border: 1px solid #e1e1e1;
   border-radius: 3px;
   background-color: #fff;
-  background-image: linear-gradient(top, white, #d7d7d7);
-  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$text-white', EndColorStr='#d7d7d7')";
+  background-image: linear-gradient(to bottom, white, #d7d7d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd7d7d7', GradientType=0);
   color: #333; }
   #ccRemoteControl a {
     color: #333; }
@@ -369,8 +369,8 @@ a#transcript.active:after {
   border-top: 1px solid #fff;
   box-shadow: 0 -1px 0 #e2e2e2;
   background-color: #e2e2e2;
-  background-image: linear-gradient(top, #e2e2e2, #f7f7f7);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e2e2e2', EndColorStr='#f7f7f7')";
+  background-image: linear-gradient(to bottom, #e2e2e2, #f7f7f7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe2e2e2', endColorstr='#fff7f7f7', GradientType=0);
   zoom: 1;
   text-align: center; }
 

@@ -165,11 +165,6 @@
     margin-left: -12px; }
 .tooltip-popup.top .tooltip-wrap, .tooltip-popup.bottom .tooltip-wrap {
     background-color: #eaeff1;
-    background-image: -moz-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom,  color-stop(0%, #e0e7eb), color-stop(100%, #f5f7f8));
-    background-image: -webkit-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
-    background-image: -o-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
-    background-image: -ms-linear-gradient(270deg,  #e0e7eb 0%, #f5f7f8 100%);
     background-image: linear-gradient(to bottom,  #e0e7eb 0%, #f5f7f8 100%); }
 .tooltip-popup.top .tooltip-wrap:before, .tooltip-popup.bottom .tooltip-wrap:before {
     border-left-width: 11px;

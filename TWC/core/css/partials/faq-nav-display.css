@@ -26,7 +26,8 @@ span.FAQLabel {
   width: 27%;
   padding: 2em 0em 2em 2em;
   background-color: #487a97;
-  background-image: linear-gradient(top, #487a97, #0e4460);
+  background-image: linear-gradient(to bottom, #487a97, #0e4460);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff487a97', endColorstr='#ff0e4460', GradientType=0);
   overflow: hidden; }
 
 .twc-topicFAQs {
@@ -126,7 +127,7 @@ span.FAQLabel.active, span.FAQLabel.active + div + div {
   width: 100%;
   border-bottom: none;
   background: linear-gradient(to right, #ebebeb 0%, #ebebeb 23%, #ffffff 76%);
-  filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#ffffff',GradientType=1 )";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#ffffffff', GradientType=1);
   color: #333;
   padding-right: 1em; }
 
@@ -228,23 +229,23 @@ span.FAQLabel.arrow:after {
 
 .faq-nav-display .grad-steel-blue {
   background-color: #92b9dd;
-  background-image: linear-gradient(top, #92b9dd, #5384af);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#92b9dd', EndColorStr='#5384af')"; }
+  background-image: linear-gradient(to bottom, #92b9dd, #5384af);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff92b9dd', endColorstr='#ff5384af', GradientType=0); }
 
 .faq-nav-display .grad-deep-blue {
   background-color: #5d92c0;
-  background-image: linear-gradient(top, #5d92c0, #1e5688);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#5d92c0', EndColorStr='#1e5688')"; }
+  background-image: linear-gradient(to bottom, #5d92c0, #1e5688);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5d92c0', endColorstr='#ff1e5688', GradientType=0); }
 
 .faq-nav-display .grad-steel-grey {
   background-color: #babbbc;
-  background-image: linear-gradient(top, #babbbc, #3d3f43);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#babbbc', EndColorStr='#3d3f43')"; }
+  background-image: linear-gradient(to bottom, #babbbc, #3d3f43);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbabbbc', endColorstr='#ff3d3f43', GradientType=0); }
 
 .faq-nav-display .grad-deep-grey {
   background-color: #99999b;
-  background-image: linear-gradient(top, #99999b, #515151);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#99999b', EndColorStr='#515151')"; }
+  background-image: linear-gradient(to bottom, #99999b, #515151);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff99999b', endColorstr='#ff515151', GradientType=0); }
 
 .twc-ie8 section {
   border: 1px solid #c2c2c2; }
@@ -286,7 +287,7 @@ span.FAQLabel.arrow:after {
     background: #eeeeef;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
     background: linear-gradient(to bottom, #eeeeef 0%, #dddfe2 100%);
-    font-size: 18px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeef', endColorstr='#ffdddfe2', GradientType=0);
     font-size: 1.8rem;
     font-family: 'TWC Round Book',Arial,Sans-Serif;
     color: #333;
@@ -299,7 +300,6 @@ span.FAQLabel.arrow:after {
   span.FAQLabel.active:after {
     float: right;
     font-family: 'FontAwesome', sans-serif;
-    font-size: 18px;
     font-size: 1.8rem;
     content: '\f107';
     color: #B1B2AF;

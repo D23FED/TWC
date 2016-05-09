@@ -227,12 +227,7 @@ label.cta input {
 
 .cta.orange a{
   background-color:  #f28300;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f28300),color-stop(100%, #f28300));
-  background-image: -webkit-linear-gradient(top, #f28300 0%,#f28300 100%);
-  background-image: -moz-linear-gradient(top, #f28300 0%,#f28300 100%);
-  background-image: -ms-linear-gradient(top, #f28300 0%,#f28300 100%);
-  background-image: -o-linear-gradient(top, #f28300 0%,#f28300 100%);
-  background-image: linear-gradient(top, #f28300 0%,#f28300 100%);
+  background-image: linear-gradient(to bottom, #f28300 0%,#f28300 100%);
   color: #fff;
 }
 

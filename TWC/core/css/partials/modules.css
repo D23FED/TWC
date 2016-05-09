@@ -84,16 +84,16 @@ hr.spacer {
   top: 83%;
   box-shadow: 0 15px 10px #101010;
   -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
   z-index: -1; }
 
 .shadow-3:after {
   right: 1%;
   left: auto;
   -webkit-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg); }
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg); }
 
 /*==================================================
  * Shadow 4
@@ -110,8 +110,8 @@ hr.spacer {
   left: 1%;
   box-shadow: 0 -15px 10px #101010;
   -webkit-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg); }
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg); }
 
 .shadow-4:after {
   bottom: 20px;
@@ -120,8 +120,8 @@ hr.spacer {
   left: auto;
   box-shadow: 0 15px 10px #101010;
   -webkit-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg); }
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg); }
 
 .divider-shadow {
   position: relative;

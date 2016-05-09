@@ -30,7 +30,7 @@
   background: #333534;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzMzUzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYTFiMWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: linear-gradient(to bottom, #333534 0%, #1a1b1f 100%);
-  filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#333534', endColorstr='#1a1b1f',GradientType=0 )";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333534', endColorstr='#ff1a1b1f', GradientType=0);
   color: #fff; }
 
 .youtube-search .page-header .twc-module {
@@ -188,7 +188,8 @@
   text-align: center;
   text-decoration: none;
   background-color: #3779b3;
-  background-image: linear-gradient(top, #3779b3, #02447e) !important; }
+  background-image: linear-gradient(to bottom, #3779b3, #02447e) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3779b3', endColorstr='#ff02447e', GradientType=0) !important; }
 
 .youtube-search .twc-box-column .pagination .disabled a {
   margin: 0 auto;
@@ -198,8 +199,8 @@
   text-align: center;
   text-decoration: none;
   background-color: #BCBCBC !important;
-  background-image: linear-gradient(top, #bcbcbc, #838383) !important;
-  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383')";
+  background-image: linear-gradient(to bottom, #bcbcbc, #838383) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbcbcbc', endColorstr='#ff838383', GradientType=0) !important;
   color: #FFFFFF; }
 
 .youtube-search .twc-box-column {

@@ -2,14 +2,10 @@
     Videos -- Version: 1.9.0.0 - Updated: 12/29/2013
    ========================================================================== */
 audio, canvas {
-  display: inline-block;
-  *zoom: 1;
-  *display: inline; }
+  display: inline-block; }
 
 video {
   display: inline-block;
-  *zoom: 1;
-  *display: inline;
   top: 0;
   left: 0;
   min-width: 290px;
@@ -34,6 +30,7 @@ audio:not([controls]) {
   margin-bottom: 1em;
   background-color: #262626;
   background: linear-gradient(to right, #262626 0%, #6b6d6d 28%, #6b6d6d 72%, #262626 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff262626', endColorstr='#ff262626', GradientType=1);
   behavior: url(pie/PIE.htc);
   text-align: center; }
 
@@ -51,7 +48,8 @@ audio:not([controls]) {
   text-align: center;
   text-decoration: none;
   background-color: #3779b3;
-  background-image: linear-gradient(top, #3779b3, #02447e) !important; }
+  background-image: linear-gradient(to bottom, #3779b3, #02447e) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3779b3', endColorstr='#ff02447e', GradientType=0) !important; }
 
 .youtube-search .twc-box-column .pagination .disabled a {
   margin: 0 auto;
@@ -61,8 +59,8 @@ audio:not([controls]) {
   text-align: center;
   text-decoration: none;
   background-color: #BCBCBC !important;
-  background-image: linear-gradient(top, #bcbcbc, #838383) !important;
-  filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcbcbc', EndColorStr='#838383')";
+  background-image: linear-gradient(to bottom, #bcbcbc, #838383) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbcbcbc', endColorstr='#ff838383', GradientType=0) !important;
   color: #FFFFFF; }
 
 .youtube-search .twc-box-column {
