@@ -12,7 +12,8 @@
   cursor: pointer;
   transition: -webkit-transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s; }
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
 
 .selectFilter .stickyWrapper.js-closed .collapse-button span:after {
   transition: -webkit-transform 0.5s ease 0s;
@@ -20,11 +21,13 @@
   transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
+          transform: rotate(45deg);
+}
 
 .selectFilter.js-sticky .collapse-button span:after {
   right: 1em;
-  top: 1em; }
+  top: 1em;
+}
 
 .selectFilter {
   padding: 1em;
@@ -33,25 +36,40 @@
   color: #fff;
   font-size: 18px;
   font-size: 1.8rem;
-  border-radius: 3px; }
-  .selectFilter.js-sticky {
-    border-radius: 0; }
-  .selectFilter p {
-    font-family: "TWC Round Book"; }
-  .selectFilter table {
-    width: 100%; }
-    .selectFilter table tr {
-      width: 100%; }
-  .selectFilter input[type="checkbox"] {
-    vertical-align: text-bottom; }
-    .selectFilter input[type="checkbox"] ~ label {
-      display: inline-block;
-      margin: 0 auto;
-      font-size: 24px;
-      font-size: 2.4rem;
-      font-family: "TWC Round Light"; }
-  .selectFilter .stickyWrapper {
-    position: relative; }
+  border-radius: 3px;
+}
+
+.selectFilter.js-sticky {
+  border-radius: 0;
+}
+
+.selectFilter p {
+  font-family: "TWC Round Book";
+}
+
+.selectFilter table {
+  width: 100%;
+}
+
+.selectFilter table tr {
+  width: 100%;
+}
+
+.selectFilter input[type="checkbox"] {
+  vertical-align: text-bottom;
+}
+
+.selectFilter input[type="checkbox"] ~ label {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: "TWC Round Light";
+}
+
+.selectFilter .stickyWrapper {
+  position: relative;
+}
 
 .packageSelectTabs .sticky.js-sticky {
   max-width: 100vw;
@@ -59,18 +77,27 @@
   box-shadow: none;
   width: 100%;
   padding: 0;
-  left: 0; }
-  .packageSelectTabs .sticky.js-sticky .stickyWrapper {
-    margin: 0 auto;
-    max-width: 980px;
-    padding: 1em;
-    border-radius: 0 0 3px 3px; }
-  .packageSelectTabs .sticky.js-sticky.js-sticky-past {
-    display: none; }
-  .packageSelectTabs .sticky.js-sticky.selectFilter {
-    background: #4578af; }
-  .packageSelectTabs .sticky.js-sticky.byoSelectFilter {
-    background: #dddddd; }
+  left: 0;
+}
+
+.packageSelectTabs .sticky.js-sticky .stickyWrapper {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 1em;
+  border-radius: 0 0 3px 3px;
+}
+
+.packageSelectTabs .sticky.js-sticky.js-sticky-past {
+  display: none;
+}
+
+.packageSelectTabs .sticky.js-sticky.selectFilter {
+  background: #4578af;
+}
+
+.packageSelectTabs .sticky.js-sticky.byoSelectFilter {
+  background: #dddddd;
+}
 
 /* Packages*/
 .packageSelect .package {
@@ -82,156 +109,237 @@
   margin-left: -4px;
   /* Fix for Inline-block's default margin */
   display: inline-block;
-  vertical-align: top; }
-  .packageSelect .package:nth-of-type(3n+1) {
-    margin-left: 0; }
-  .packageSelect .package:nth-of-type(3n) {
-    margin-right: 0; }
-  .packageSelect .package .packageHead {
-    color: #fff;
-    background: #0070c0;
-    padding: 0.5em;
-    display: inline-block;
-    width: 100%;
-    position: relative; }
-  .packageSelect .package.single .packageHead {
-    background: #0352a1; }
-  .packageSelect .package.double .packageHead {
-    background: #747679; }
-  .packageSelect .package.triple .packageHead {
-    background: #5B1F69; }
-  .packageSelect .package.single.js-compare, .packageSelect .package.single.js-selected {
-    border: 5px solid #0352a1; }
-  .packageSelect .package.double.js-compare, .packageSelect .package.double.js-selected {
-    border: 5px solid #747679; }
-  .packageSelect .package.triple.js-compare, .packageSelect .package.triple.js-selected {
-    border: 5px solid #5B1F69; }
-  .packageSelect .package .packageBody {
-    padding: 0.5em; }
-  .packageSelect .package .packageHead > fieldset {
-    max-width: 55%;
-    float: left; }
-    .packageSelect .package .packageHead > fieldset input {
-      display: inline-block; }
-      .packageSelect .package .packageHead > fieldset input ~ label.compare-label {
-        display: inline-block;
-        font-size: 14px;
-        font-size: 1.4rem;
-        line-height: 2.4; }
-      .packageSelect .package .packageHead > fieldset input:checked ~ label.compare-label {
-        display: none; }
-      .packageSelect .package .packageHead > fieldset input:checked ~ .compare-button {
-        display: inline-block; }
-      .packageSelect .package .packageHead > fieldset input ~ .compare-button {
-        display: none; }
-  .packageSelect .package .packageHead .packageTitle {
-    font-size: 14px;
-    font-size: 1.4rem;
-    font-family: "TWC Round Medium";
-    padding: 0.75em 0 0.25em;
-    float: right;
-    max-width: 45%; }
-  .packageSelect .package .packageInfo {
-    min-height: 72px;
-    overflow: hidden; }
-  .packageSelect .package .specialOffer {
-    min-height: 72px;
-    overflow: hidden;
-    text-align: center;
-    background-image: url("/TWC/sandbox/packageSelect/css/offer-bg.png");
-    background-repeat: repeat-y;
-    background-size: contain; }
-    .packageSelect .package .specialOffer .blue {
-      color: #02549d; }
-  .packageSelect .package .packageFooter {
-    min-height: 50px; }
-  .packageSelect .package hr {
-    margin: 0; }
-  .packageSelect .package .pricing {
-    margin-bottom: 1em; }
-    .packageSelect .package .pricing .term {
-      display: inline-block;
-      font-size: 9px;
-      line-height: 1;
-      margin-left: -2.75em;
-      text-align: right; }
-      .packageSelect .package .pricing .term.under {
-        display: block;
-        margin-left: 0;
-        text-align: center; }
-      .packageSelect .package .pricing .term .discountTerm, .packageSelect .package .pricing .term .preTerm {
-        float: left;
-        margin-top: 0.25em; }
-      .packageSelect .package .pricing .term .postTerm {
-        float: left;
-        margin-left: 3px;
-        margin-top: -6px; }
-      .packageSelect .package .pricing .term .discountTerm {
-        margin-top: -6px; }
-    .packageSelect .package .pricing .h4 sup {
-      font-size: 22px;
-      font-size: 2.2rem;
-      position: relative;
-      top: -0.75em; }
-    .packageSelect .package .pricing .h4 span.dollars {
-      font-size: 44px;
-      font-size: 4.4rem; }
-  .packageSelect .package .whiteCTA {
-    width: 100%; }
+  vertical-align: top;
+}
+
+.packageSelect .package:nth-of-type(3n+1) {
+  margin-left: 0;
+}
+
+.packageSelect .package:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.packageSelect .package .packageHead {
+  color: #fff;
+  background: #0070c0;
+  padding: 0.5em;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.packageSelect .package.single .packageHead {
+  background: #0352a1;
+}
+
+.packageSelect .package.double .packageHead {
+  background: #747679;
+}
+
+.packageSelect .package.triple .packageHead {
+  background: #5B1F69;
+}
+
+.packageSelect .package.single.js-compare, .packageSelect .package.single.js-selected {
+  border: 5px solid #0352a1;
+}
+
+.packageSelect .package.double.js-compare, .packageSelect .package.double.js-selected {
+  border: 5px solid #747679;
+}
+
+.packageSelect .package.triple.js-compare, .packageSelect .package.triple.js-selected {
+  border: 5px solid #5B1F69;
+}
+
+.packageSelect .package .packageBody {
+  padding: 0.5em;
+}
+
+.packageSelect .package .packageHead > fieldset {
+  max-width: 55%;
+  float: left;
+}
+
+.packageSelect .package .packageHead > fieldset input {
+  display: inline-block;
+}
+
+.packageSelect .package .packageHead > fieldset input ~ label.compare-label {
+  display: inline-block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 2.4;
+}
+
+.packageSelect .package .packageHead > fieldset input:checked ~ label.compare-label {
+  display: none;
+}
+
+.packageSelect .package .packageHead > fieldset input:checked ~ .compare-button {
+  display: inline-block;
+}
+
+.packageSelect .package .packageHead > fieldset input ~ .compare-button {
+  display: none;
+}
+
+.packageSelect .package .packageHead .packageTitle {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "TWC Round Medium";
+  padding: 0.75em 0 0.25em;
+  float: right;
+  max-width: 45%;
+}
+
+.packageSelect .package .packageInfo {
+  min-height: 72px;
+  overflow: hidden;
+}
+
+.packageSelect .package .specialOffer {
+  min-height: 72px;
+  overflow: hidden;
+  text-align: center;
+  background-image: url("/TWC/sandbox/packageSelect/css/offer-bg.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.packageSelect .package .specialOffer .blue {
+  color: #02549d;
+}
+
+.packageSelect .package .packageFooter {
+  min-height: 50px;
+}
+
+.packageSelect .package hr {
+  margin: 0;
+}
+
+.packageSelect .package .pricing {
+  margin-bottom: 1em;
+}
+
+.packageSelect .package .pricing .term {
+  display: inline-block;
+  font-size: 9px;
+  line-height: 1;
+  margin-left: -2.75em;
+  text-align: right;
+}
+
+.packageSelect .package .pricing .term.under {
+  display: block;
+  margin-left: 0;
+  text-align: center;
+}
+
+.packageSelect .package .pricing .term .discountTerm, .packageSelect .package .pricing .term .preTerm {
+  float: left;
+  margin-top: 0.25em;
+}
+
+.packageSelect .package .pricing .term .postTerm {
+  float: left;
+  margin-left: 3px;
+  margin-top: -6px;
+}
+
+.packageSelect .package .pricing .term .discountTerm {
+  margin-top: -6px;
+}
+
+.packageSelect .package .pricing .h4 sup {
+  font-size: 22px;
+  font-size: 2.2rem;
+  position: relative;
+  top: -0.75em;
+}
+
+.packageSelect .package .pricing .h4 span.dollars {
+  font-size: 44px;
+  font-size: 4.4rem;
+}
+
+.packageSelect .package .whiteCTA {
+  width: 100%;
+}
 
 .orderCTA {
-  width: 100%; }
-  .orderCTA a {
-    background-color: #0252a1;
-    background-image: none;
-    border: 1px solid #0252a1;
-    color: #fff; }
+  width: 100%;
+}
+
+.orderCTA a {
+  background-color: #0252a1;
+  background-image: none;
+  border: 1px solid #0252a1;
+  color: #fff;
+}
 
 .packageFooter.side-by-side {
-  width: 100%; }
+  width: 100%;
+}
 
 .side-by-side .buttonWrapper {
   width: 50%;
   margin: 0;
   float: left;
-  text-align: center; }
+  text-align: center;
+}
 
 .packageFooter.stacked-buttons .cta, .packageFooter.stacked-buttons-below .cta {
   margin-bottom: 0.5em;
-  width: 100%; }
+  width: 100%;
+}
 
 .packageFooter.stacked-buttons .cta a, .packageFooter.stacked-buttons-below .cta a {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
 .packageSelect [class*="twc-col3_333333"] {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 .compare-button.cta a {
   background-color: #ededed;
-  background-image: none; }
+  background-image: none;
+}
 
 .detailsExpansion {
   display: none;
-  position: relative; }
+  position: relative;
+}
 
 .detailsContent {
-  padding: 2em 1em 0; }
+  padding: 2em 1em 0;
+}
 
 .bulleted ul li.listHead {
-  list-style: none; }
+  list-style: none;
+}
 
 .closeDetails a {
   color: #333;
-  font-family: Arial; }
-  .closeDetails a:after {
-    color: #333;
-    font-family: Arial; }
+  font-family: Arial;
+}
+
+.closeDetails a:after {
+  color: #333;
+  font-family: Arial;
+}
 
 .closeDetails:hover a {
-  color: #333; }
-  .closeDetails:hover a:after {
-    color: #333; }
+  color: #333;
+}
+
+.closeDetails:hover a:after {
+  color: #333;
+}
 
 .alertTooltip {
   display: none;
@@ -239,10 +347,12 @@
   color: red;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+}
 
 input.comparePackage.js-alert ~ .alertTooltip {
-  display: block; }
+  display: block;
+}
 
 /* Compare Alert */
 .compareAlert {
@@ -254,336 +364,477 @@ input.comparePackage.js-alert ~ .alertTooltip {
   z-index: 99999;
   background: #e3ecf4;
   color: #333;
-  box-shadow: 0px 5px 10px #888888; }
-  .compareAlert .compareAlertBody {
-    position: relative;
-    width: 100%;
-    padding: 5%; }
-  .compareAlert .cta a {
-    text-decoration: underline; }
-  .compareAlert .compareAlertBody .closeBtn {
-    background: url("http://d23.us/TWC/core/images/modal_close.png");
-    background-size: 2em;
-    cursor: pointer;
-    float: right;
-    height: 2em;
-    position: absolute;
-    right: -1em;
-    top: -1em;
-    width: 2em; }
-  .compareAlert:before {
-    border-bottom: 10px solid #e3ecf4;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    content: " ";
-    height: 0;
-    left: 18%;
-    position: absolute;
-    top: -9px;
-    width: 0;
-    z-index: 5; }
+  box-shadow: 0px 5px 10px #888888;
+}
+
+.compareAlert .compareAlertBody {
+  position: relative;
+  width: 100%;
+  padding: 5%;
+}
+
+.compareAlert .cta a {
+  text-decoration: underline;
+}
+
+.compareAlert .compareAlertBody .closeBtn {
+  background: url("http://d23.us/TWC/core/images/modal_close.png");
+  background-size: 2em;
+  cursor: pointer;
+  float: right;
+  height: 2em;
+  position: absolute;
+  right: -1em;
+  top: -1em;
+  width: 2em;
+}
+
+.compareAlert:before {
+  border-bottom: 10px solid #e3ecf4;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: " ";
+  height: 0;
+  left: 18%;
+  position: absolute;
+  top: -9px;
+  width: 0;
+  z-index: 5;
+}
 
 /* Build Your Own */
 .packageSelect .byoPackages .package {
   display: block;
-  margin: 1em 0; }
-  .packageSelect .byoPackages .package.js-selected, .packageSelect .byoPackages .package .js-notSelected {
-    display: block; }
-  .packageSelect .byoPackages .package .deSelect {
-    display: none; }
-  .packageSelect .byoPackages .package.js-selected .deSelect {
-    display: block; }
-  .packageSelect .byoPackages .package.js-selected .select {
-    display: none; }
+  margin: 1em 0;
+}
+
+.packageSelect .byoPackages .package.js-selected, .packageSelect .byoPackages .package .js-notSelected {
+  display: block;
+}
+
+.packageSelect .byoPackages .package .deSelect {
+  display: none;
+}
+
+.packageSelect .byoPackages .package.js-selected .deSelect {
+  display: block;
+}
+
+.packageSelect .byoPackages .package.js-selected .select {
+  display: none;
+}
 
 .buildYourOwn {
   width: 31.667%;
   margin-right: 2%;
   margin-bottom: 1em;
-  float: left; }
-  .buildYourOwn:last-of-type {
-    margin-right: 0; }
-  .buildYourOwn .package {
-    width: 100%; }
-  .buildYourOwn .byoHeader {
-    position: relative;
-    padding: .5em;
-    background: #dfeaf3;
-    border-radius: 3px;
-    color: #084ca7; }
-    .buildYourOwn .byoHeader p {
-      margin-bottom: 0;
-      width: 100%;
-      font-size: 22px;
-      font-size: 2.2rem;
-      font-weight: 700; }
-      .buildYourOwn .byoHeader p:after {
-        font-family: "FontAwesome";
-        content: "\f068";
-        float: right; }
-      .buildYourOwn .byoHeader p.js-active:after {
-        content: "\f067"; }
+  float: left;
+}
+
+.buildYourOwn:last-of-type {
+  margin-right: 0;
+}
+
+.buildYourOwn .package {
+  width: 100%;
+}
+
+.buildYourOwn .byoHeader {
+  position: relative;
+  padding: .5em;
+  background: #dfeaf3;
+  border-radius: 3px;
+  color: #084ca7;
+}
+
+.buildYourOwn .byoHeader p {
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.buildYourOwn .byoHeader p:after {
+  font-family: "FontAwesome";
+  content: "\f068";
+  float: right;
+}
+
+.buildYourOwn .byoHeader p.js-active:after {
+  content: "\f067";
+}
 
 .byoSelectFilter {
-  margin-bottom: 1em; }
-  .byoSelectFilter .monthlyEstimate {
-    background: #e6e6e7;
-    display: inline-block;
-    width: 100%;
-    padding: 0.5em; }
-    .byoSelectFilter .monthlyEstimate .estimate-left {
-      float: left;
-      width: 50%; }
-      .byoSelectFilter .monthlyEstimate .estimate-left .price, .byoSelectFilter .monthlyEstimate .estimate-left .term {
-        display: block; }
-    .byoSelectFilter .monthlyEstimate .estimate-right {
-      float: right;
-      width: 50%; }
-      .byoSelectFilter .monthlyEstimate .estimate-right .monthlyEstimateCTA {
-        text-align: right; }
+  margin-bottom: 1em;
+}
+
+.byoSelectFilter .monthlyEstimate {
+  background: #e6e6e7;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.byoSelectFilter .monthlyEstimate .estimate-left {
+  float: left;
+  width: 50%;
+}
+
+.byoSelectFilter .monthlyEstimate .estimate-left .price, .byoSelectFilter .monthlyEstimate .estimate-left .term {
+  display: block;
+}
+
+.byoSelectFilter .monthlyEstimate .estimate-right {
+  float: right;
+  width: 50%;
+}
+
+.byoSelectFilter .monthlyEstimate .estimate-right .monthlyEstimateCTA {
+  text-align: right;
+}
 
 .byoUpsellPanel {
   display: none;
   position: relative;
   background: #387ab4;
   padding: 1em;
-  margin-bottom: 1em; }
-  .byoUpsellPanel .byoUpsellContent {
-    border-radius: 8px;
-    background: #fff;
-    padding: 1em;
-    width: 100%; }
-    .byoUpsellPanel .byoUpsellContent h2, .byoUpsellPanel .byoUpsellContent .h2 {
-      display: inline-block;
-      margin-bottom: 0;
-      max-width: 85%; }
-    .byoUpsellPanel .byoUpsellContent .upsellPricing {
-      color: #084ca7;
-      display: inline-block;
-      vertical-align: middle; }
-    .byoUpsellPanel .byoUpsellContent .upsellPricing .dollar-sign, .byoUpsellPanel .byoUpsellContent .upsellPricing .cents {
-      font-size: 28px;
-      font-size: 2.8rem; }
-    .byoUpsellPanel .byoUpsellContent .upsellPricing .dollars {
-      font-size: 44px;
-      font-size: 4.4rem; }
-    .byoUpsellPanel .byoUpsellContent .upsellPricing sup {
-      vertical-align: top; }
-    .byoUpsellPanel .byoUpsellContent .byoUpsellViewMore {
-      max-width: 10%;
-      display: inline;
-      float: right;
-      color: #084ca7;
-      cursor: pointer; }
-      .byoUpsellPanel .byoUpsellContent .byoUpsellViewMore:after {
-        font-family: "FontAwesome";
-        content: "\f067"; }
+  margin-bottom: 1em;
+}
+
+.byoUpsellPanel .byoUpsellContent {
+  border-radius: 8px;
+  background: #fff;
+  padding: 1em;
+  width: 100%;
+}
+
+.byoUpsellPanel .byoUpsellContent h2, .byoUpsellPanel .byoUpsellContent .h2 {
+  display: inline-block;
+  margin-bottom: 0;
+  max-width: 85%;
+}
+
+.byoUpsellPanel .byoUpsellContent .upsellPricing {
+  color: #084ca7;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.byoUpsellPanel .byoUpsellContent .upsellPricing .dollar-sign, .byoUpsellPanel .byoUpsellContent .upsellPricing .cents {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
+.byoUpsellPanel .byoUpsellContent .upsellPricing .dollars {
+  font-size: 44px;
+  font-size: 4.4rem;
+}
+
+.byoUpsellPanel .byoUpsellContent .upsellPricing sup {
+  vertical-align: top;
+}
+
+.byoUpsellPanel .byoUpsellContent .byoUpsellViewMore {
+  max-width: 10%;
+  display: inline;
+  float: right;
+  color: #084ca7;
+  cursor: pointer;
+}
+
+.byoUpsellPanel .byoUpsellContent .byoUpsellViewMore:after {
+  font-family: "FontAwesome";
+  content: "\f067";
+}
 
 /* Tabs */
 .packageSelectTabs {
-  width: 100%; }
-  .packageSelectTabs [class*="tab-head-"] {
-    position: relative;
-    min-width: 25%;
-    float: left;
-    padding: .5em;
-    border-radius: 3px 3px 0 0;
-    text-align: center;
-    cursor: pointer;
-    background: #fff;
-    z-index: 1; }
-    .packageSelectTabs [class*="tab-head-"].js-active {
-      margin-top: -.5em;
-      padding-top: 1em;
-      box-shadow: 1px -3px 2px 1px #999;
-      z-index: 2; }
-    .packageSelectTabs [class*="tab-head-"] h2 {
-      margin-bottom: 0; }
-  .packageSelectTabs [class*="tab-content-"] {
-    clear: both;
-    position: relative;
-    padding: 1em;
-    width: 100%;
-    background: #fff;
-    display: none;
-    box-shadow: 0 0px 3px 0 #999;
-    z-index: 1; }
-    .packageSelectTabs [class*="tab-content-"].js-active {
-      display: block; }
-  .packageSelectTabs .psTabs {
-    width: 100%;
-    display: inline-block; }
-  .packageSelectTabs .tab-links:after {
-    display: block;
-    clear: both;
-    content: ''; }
-  .packageSelectTabs .tab-links li {
-    position: relative;
-    padding: 0.75em 0.5em;
-    float: left;
-    width: 25%;
-    text-align: center;
-    background: #dfeaf3;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 0 3px 0 0;
-    box-shadow: 0px -1px 3px 1px #999; }
-  .packageSelectTabs .tab-links span {
-    padding: 0;
-    display: inline-block;
-    border-radius: 3px 3px 0px 0px; }
-  .packageSelectTabs li.tabHead.js-active {
-    box-shadow: 0 -3px 3px 0 #b5b5b5;
-    background: #fff;
-    z-index: 2;
-    margin-top: -0.5em;
-    padding: 1em 0;
-    border-radius: 3px 3px 0 0; }
-    .packageSelectTabs li.tabHead.js-active span {
-      font-weight: 700;
-      color: #000; }
-  .packageSelectTabs li.tabHead span {
-    color: #084ca7;
-    font-size: 22px;
-    font-size: 2.2rem; }
-  .packageSelectTabs .tab-content {
-    position: relative;
-    padding: 1em;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 0px 3px 0 #999;
-    z-index: 1; }
-  .packageSelectTabs .tab {
-    display: none;
-    width: 100%; }
-    .packageSelectTabs .tab.js-active {
-      display: inline-block; }
-  .packageSelectTabs .tab-links .cta {
-    margin-top: -0.5em; }
+  width: 100%;
+}
+
+.packageSelectTabs [class*="tab-head-"] {
+  position: relative;
+  min-width: 25%;
+  float: left;
+  padding: .5em;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  z-index: 1;
+}
+
+.packageSelectTabs [class*="tab-head-"].js-active {
+  margin-top: -.5em;
+  padding-top: 1em;
+  box-shadow: 1px -3px 2px 1px #999;
+  z-index: 2;
+}
+
+.packageSelectTabs [class*="tab-head-"] h2 {
+  margin-bottom: 0;
+}
+
+.packageSelectTabs [class*="tab-content-"] {
+  clear: both;
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  background: #fff;
+  display: none;
+  box-shadow: 0 0px 3px 0 #999;
+  z-index: 1;
+}
+
+.packageSelectTabs [class*="tab-content-"].js-active {
+  display: block;
+}
+
+.packageSelectTabs .psTabs {
+  width: 100%;
+  display: inline-block;
+}
+
+.packageSelectTabs .tab-links:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.packageSelectTabs .tab-links li {
+  position: relative;
+  padding: 0.75em 0.5em;
+  float: left;
+  width: 25%;
+  text-align: center;
+  background: #dfeaf3;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 0 3px 0 0;
+  box-shadow: 0px -1px 3px 1px #999;
+}
+
+.packageSelectTabs .tab-links span {
+  padding: 0;
+  display: inline-block;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.packageSelectTabs li.tabHead.js-active {
+  box-shadow: 0 -3px 3px 0 #b5b5b5;
+  background: #fff;
+  z-index: 2;
+  margin-top: -0.5em;
+  padding: 1em 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.packageSelectTabs li.tabHead.js-active span {
+  font-weight: 700;
+  color: #000;
+}
+
+.packageSelectTabs li.tabHead span {
+  color: #084ca7;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+.packageSelectTabs .tab-content {
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0px 3px 0 #999;
+  z-index: 1;
+}
+
+.packageSelectTabs .tab {
+  display: none;
+  width: 100%;
+}
+
+.packageSelectTabs .tab.js-active {
+  display: inline-block;
+}
+
+.packageSelectTabs .tab-links .cta {
+  margin-top: -0.5em;
+}
 
 .packageSelect .showLess,
 .packageSelect .showMore,
 .buildYourOwn .byoHeader p:after {
-  display: none; }
+  display: none;
+}
 
 .price-box {
   background: none repeat scroll 0 0 #ddd;
   display: table;
   width: 100%;
   border: 1px solid #333;
-  border-radius: 4px; }
-  .price-box .price {
-    display: table-cell;
-    font-size: 28px;
-    font-size: 2.8rem;
-    font-family: "TWC Round Medium";
-    padding: 0.5em;
-    text-align: center; }
-    .price-box .price span {
-      font-size: 10px;
-      font-size: 1.0rem;
-      font-weight: bold; }
-    .price-box .price sup {
-      font-family: "TWC Round Book";
-      font-size: 16px;
-      font-size: 1.6rem; }
-  .price-box .btn-container {
-    position: relative;
-    display: table-cell;
-    padding: 0.5em;
-    text-align: center;
-    border-left: 1px solid #333; }
-    .price-box .btn-container.js-disabled {
-      opacity: 0.5; }
-      .price-box .btn-container.js-disabled .disabled-overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: 99999; }
-      @media (max-width: 48em) {
+  border-radius: 4px;
+}
+
+.price-box .price {
+  display: table-cell;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-family: "TWC Round Medium";
+  padding: 0.5em;
+  text-align: center;
+}
+
+.price-box .price span {
+  font-size: 10px;
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.price-box .price sup {
+  font-family: "TWC Round Book";
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.price-box .btn-container {
+  position: relative;
+  display: table-cell;
+  padding: 0.5em;
+  text-align: center;
+  border-left: 1px solid #333;
+}
+
+.price-box .btn-container.js-disabled {
+  opacity: 0.5;
+}
+
+.price-box .btn-container.js-disabled .disabled-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+}
+
+@media (max-width: 48em) {
   .packageSelect .package {
     width: 49%;
-    margin-right: 2%; }
+    margin-right: 2%;
+  }
   .packageSelect .package:nth-of-type(3n) {
-    margin-right: 2%; }
+    margin-right: 2%;
+  }
   .packageSelect .package:nth-of-type(2n) {
-    margin-right: 0; }
+    margin-right: 0;
+  }
   .packageSelect .package:nth-of-type(3n+1) {
-    margin-left: -4px; }
+    margin-left: -4px;
+  }
   .packageSelect .package:nth-of-type(2n+1) {
-    margin-left: 0; }
+    margin-left: 0;
+  }
   .packageSelectTabs li.tabHead span {
     font-size: 18px;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+  }
   .compareAlert {
-    max-width: 90%; }
+    max-width: 90%;
+  }
   .selectFilter table tr td {
     display: inline-block;
     float: left;
-    width: 50%; }
+    width: 50%;
+  }
   .selectFilter input[type="checkbox"] ~ label {
     font-size: 18px;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+  }
   .packageSelect .package .packageHead .packageTitle, .packageSelect .package .packageHead > fieldset {
-    max-width: 50%; }/* Build your own */
-  .buildYourOwn .package {
-    width: 100%; }/* Tabs */
+    max-width: 50%;
+  }/* Build your own *//* Tabs */
   .packageSelectTabs ul.tab-links {
     display: block;
-    width: 100%; }
+    width: 100%;
+  }
   .packageSelectTabs ul.tab-links li.tabHead {
-    width: 50%; }
+    width: 50%;
+  }
   .packageSelectTabs .tab-content {
-    display: block; }
+    display: block;
+  }
   .packageSelectTabs .psTabs li.tabHead {
-    color: inherit; }
+    color: inherit;
+  }
   .byoSelectFilter .monthlyEstimate {
     width: 100%;
-    margin-top: 1em; }
+    margin-top: 1em;
+  }
   .byoSelectFilter .monthlyEstimate .estimate-right .monthlyEstimateCTA {
-    text-align: center; }/* Build your own */
+    text-align: center;
+  }/* Build your own */
   .buildYourOwn {
     width: 100%;
-    margin-right: 0; }
+    margin-right: 0;
+  }
   .buildYourOwn .package {
-    width: 100%; }
+    width: 100%;
+  }
   .byoHeader {
-    cursor: pointer; }
+    cursor: pointer;
+  }
   .byoHeader .showMore {
-    display: none; }
+    display: none;
+  }
   .byoHeader .js-active ~ .showLess {
-    display: none; }
+    display: none;
+  }
   .byoHeader .js-active ~ .showMore {
-    display: block; }
+    display: block;
+  }
   .packageSelect .showLess, .packageSelect .showMore {
     position: absolute;
     display: none;
     right: 3em;
-    top: 30%; }
+    top: 30%;
+  }
   .packageSelect .showLess, .buildYourOwn .byoHeader p:after {
-    display: block; }
+    display: block;
+  }
   .price-box {
     max-width: 320px;
-    margin: 1em auto 0; }
+    margin: 1em auto 0;
+  }
   .js-sticky .sticky-tablet-hidden {
-    display: none; }
+    display: none;
+  }
   .packageSelectTabs .byoSelectFilter.sticky.js-sticky .stickyWrapper {
-    padding: 0 1em 1em; } }
-      @media (max-width: 40em) {
+    padding: 0 1em 1em;
+  }
+}
+
+@media (max-width: 40em) {
   .packageSelectTabs .sticky.js-sticky {
     max-width: 100vw;
-    left: 0; }
+    left: 0;
+  }
   .packageSelect .package {
     width: 100%;
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+  }
   .compareAlert:before {
-    left: 5%; }
+    left: 5%;
+  }
   .packageSelect .package:nth-of-type(3n+1) {
-    margin-left: 0; }
+    margin-left: 0;
+  }
   .packageSelect .package:nth-of-type(3n) {
-    margin-right: 0; }
+    margin-right: 0;
+  }
   .stickyWrapper p.h4 {
-    padding-right: 0.75em; } }
+    padding-right: 0.75em;
+  }
+}
 
 /*# sourceMappingURL=packageSelect.css.map */

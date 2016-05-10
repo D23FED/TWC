@@ -20,16 +20,20 @@
   font-weight: 100;
   z-index: 999999;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0); }
-  .scrollToTop:after, .scrollToTop-modal:after {
-    padding-left: .5em;
-    font-family: "FontAwesome";
-    font-size: inherit;
-    font-weight: inherit;
-    content: '\f093'; }
+          transform: translateZ(0);
+}
+
+.scrollToTop:after, .scrollToTop-modal:after {
+  padding-left: .5em;
+  font-family: "FontAwesome";
+  font-size: inherit;
+  font-weight: inherit;
+  content: '\f093';
+}
 
 .scrollToTop-modal {
   position: relative;
-  float: right; }
+  float: right;
+}
 
 /*# sourceMappingURL=scrollTo.css.map */

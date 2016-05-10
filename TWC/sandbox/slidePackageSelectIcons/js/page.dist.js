@@ -52,7 +52,6 @@ $( ".comparePackage" ).on( "click", function() {
 } );
 // End compare Button Maximum Alert
 
-
 // Compare Button Min Alert
 $( ".compare-button" ).on( "click", function() {
 	var compareSelected = $( ".comparePackage:checked" ).length;
@@ -95,7 +94,6 @@ $( '.compareStartOver' ).click( function() {
 } );
 // End close alert messages
 
-
 //  BYO JS - Expand / Collapse columns
 $( document ).ready( function() {
 	if ( $( window ).width() < 768 ) {
@@ -121,7 +119,6 @@ $( '.byoHeader' ).click( function() {
 		console.log( 'desktop' );
 	}
 } );
-
 
 //  End BYO JS - Expand / Collapse columns
 
@@ -174,7 +171,6 @@ $( '.collapse-button' ).click( function() {
 	return false;
 } );
 // End expand / Collapse Select and Filter
-
 
 // Start Quick Checkout
 $( '.quickCheckoutBtn' ).click( function() {

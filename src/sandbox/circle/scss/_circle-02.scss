@@ -1,0 +1,49 @@
+$color-bg: #fff;
+$color-circle: orange;
+$circle-diameter: 200px;
+$transition-length: 3s;
+$rotation: 200deg;
+$mask-clip:
+rect(0, $circle-diameter, $circle-diameter, $circle-diameter / 2);
+
+$fill-clip: rect(0, $circle-diameter / 2, $circle-diameter, 0);
+
+.circle-02,
+.mask,
+.fill {
+	border-radius: 50%;
+	width: $circle-diameter;
+	height: $circle-diameter;
+	background-color: $color-bg;
+}
+.circle-02 {
+}
+
+.mask,
+.fill {
+	position: absolute;
+	transition: transform $transition-length;
+	background-color: $color-bg;
+	// transform: rotate($rotation);
+	// left: auto;
+	// right: auto;
+}
+
+.fill {
+	background-color: $color-circle;
+	clip: $fill-clip;
+}
+
+.mask {
+	clip: $mask-clip;
+
+	&.full {
+		// transform: rotate($rotation);
+
+		.fill {}
+	}
+
+	&.right {
+		.fill {}
+	}
+}

@@ -1,0 +1,23 @@
+.circle-04 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 220px;
+	.path {
+		stroke-dashoffset: 628.3;
+		animation: dash 5s linear forwards;
+	}
+
+	circle {
+		stroke-width: 2;
+		stroke-opacity: 1;
+		stroke-dasharray: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 630;
+		stroke: #E0236C;
+		fill: none;
+	}
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

@@ -1,0 +1,17 @@
+$stroke-length: 450px;
+
+.circle-08 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	.semicircle {
+		stroke-dashoffset: $stroke-length;
+	}
+	.controls {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

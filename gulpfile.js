@@ -167,7 +167,8 @@ g.task('scripts', function() {
 				'no-debugger': 'warn',
 				'no-extra-semi': 'warn',
 				'no-empty': 'warn',
-				'comma-dangle': 'warn'
+				'comma-dangle': 'warn',
+				'linebreak-style': 'off'
 			},
 			globals: {
 				'jQuery': true,
