@@ -1,6 +1,7 @@
 // Global Headings
 @import 'init';
 
+$h1SuperSize: 4.6rem;
 $h1Size: 3.6rem;
 $h2Size: 3rem;
 $h3Size: 2.7rem;
@@ -8,10 +9,10 @@ $h4Size: 2.4rem;
 $h5Size: 2rem;
 $h6Size: $h5Size;
 $headingSizes: $h1Size $h2Size $h3Size $h4Size $h5Size $h6Size;
+$scalingFactorMedium: 0.75;
+$scalingFactorSmall: 0.65;
 
 @mixin heading-size($size, $scale: 'medium') {
-	$scalingFactorMedium: 0.75;
-	$scalingFactorSmall: 0.65;
 
 	// h5 and h6 are same size
 	@if $size == 6 {
@@ -62,20 +63,14 @@ a {
 	}
 }
 
-// h1,
-// .h1 {}
+.page-heading,
+.super-h1 {
+	font-size: $h1SuperSize;
+	@include respond-to('medium') {
+		font-size: $h1SuperSize * $scalingFactorMedium;
+	}
+	@include respond-to('small') {
+		font-size: $h1SuperSize * $scalingFactorSmall;
+	}
 
-// h2,
-// .h2 {}
-
-// h3,
-// .h3 {}
-
-// h4,
-// .h4 {}
-
-// h5,
-// .h5 {}
-
-// h6,
-// .h6 {}
+}
