@@ -3,6 +3,11 @@
   visibility: hidden;
 }
 
+[class*='circle-0'] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .circle-01 {
   margin-left: auto;
   margin-right: auto;
@@ -1515,6 +1520,14 @@
   display: inline-block;
   text-align: center;
   padding: 5px 0;
+}
+
+.circle-09, canvas {
+  margin-left: auto;
+  margin-right: auto;
+  left: auto;
+  top: auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=page.css.map */

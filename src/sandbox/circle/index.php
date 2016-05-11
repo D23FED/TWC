@@ -1,6 +1,7 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 ?>
+<div class="wrapper" style="max-width: 980px;">
 <div class="hidden wrap circle-01">
 	<div class="container container-a">
 	  <div class="half-cirle"></div>
@@ -10,6 +11,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 	</div>
 </div>
 
+<h1>CSS &amp; clip</h1>
 <div class='circle-02'>
 	<div class="radial-progress" data-progress="0">
 		<div class="circle">
@@ -64,6 +66,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 	</div>
 </div>
 
+<h1>SVG Path Stroke</h1>
 <div class="circle-08">
 	<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 		 x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" xml:space="preserve">
@@ -74,12 +77,12 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 	<div class="controls"></div>
 </div>
 
+<h1>Canvas</h1>
 <div class="circle-09">
-	<canvas id="canvasOne" width="500" height="300">
+	<canvas id="canvas-01" width="300" height="300">(Canvas not supported)</canvas>
+	<!-- <canvas id="canvas-02" width="300" height="300">(Canvas not supported)</canvas> -->
+</div>
 
-	Your browser does not support HTML5 Canvas.
-
-	</canvas>
 </div>
 <script>
 
