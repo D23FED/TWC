@@ -21,6 +21,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 				<div class="fill fix"></div>
 			</div>
 		</div>
+		<div class="inner-circle"></div>
 	<div class="controls">
 		<a href="#" class="btn-rotate">75</a>
 		<a href="#" class="btn-rotate">90</a>
@@ -66,7 +67,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 <div class="circle-08">
 	<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 		 x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" xml:space="preserve">
-		<path class="semicircle" fill="none" stroke="#000000" stroke-miterlimit="10" d="M32.108,181.952c-37.495-37.496-37.496-98.288,0-135.784
+		<path class="semicircle" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M32.108,181.952c-37.495-37.496-37.496-98.288,0-135.784
 		c37.496-37.495,98.29-37.494,135.784,0.001c37.496,37.495,37.496,98.287,0,135.783"/>
 	</svg>
 	<div class="offset">Offset: <span class="raw"></span> | <span class="percent"></span>%</div>

@@ -151,6 +151,16 @@
   background-color: #00549f;
 }
 
+.circle-02 .radial-progress .inner-circle {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
 .circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
   -webkit-transform: rotate(1.8deg);
       -ms-transform: rotate(1.8deg);
@@ -1486,7 +1496,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 200px;
-  height: 200px;
+  height: 250px;
   position: relative;
 }
 
@@ -1498,6 +1508,13 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.circle-08 .controls a {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 0;
 }
 
 /*# sourceMappingURL=page.css.map */
