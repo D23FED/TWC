@@ -4,17 +4,20 @@
 .sticky {
   background: none;
   box-shadow: none;
-  text-align: left; }
+  text-align: left;
+}
 
 .js-fixed {
   top: 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .calculator {
   width: 100%;
   max-width: 980px;
   padding: 1em;
-  border: 1px solid #d2d5da; }
+  border: 1px solid #d2d5da;
+}
 
 .calculator-box {
   overflow: auto;
@@ -22,7 +25,8 @@
   width: 100%;
   max-width: 292px;
   border-radius: 3px;
-  border: 1px solid #d2d5da; }
+  border: 1px solid #d2d5da;
+}
 
 .calculator-box .cart-price {
   float: left;
@@ -30,39 +34,47 @@
   height: 60px;
   padding: 0 1em;
   border-right: 1px solid #d2d5da;
-  text-align: center; }
+  text-align: center;
+}
 
 .calculator-box .cart-price .pricing {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+}
 
 .calculator-box .cta-holder {
   float: left;
   width: 50%;
   height: 60px;
   padding: 0 1em;
-  text-align: center; }
+  text-align: center;
+}
 
 .calculator-box .cta-holder .cta {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+}
 
 @media (max-width: 48em) {
   .js-fixed {
     left: 2.5%;
     right: 2.5%;
-    width: auto; }
+    width: auto;
+  }
   .calculator {
-    text-align: center; }
+    text-align: center;
+  }
   .calculator-box {
     float: none;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=calculator.css.map */

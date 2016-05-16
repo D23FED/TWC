@@ -30,6 +30,7 @@
 		if (file_exists('../../js/page.js')) { echo '<script src="../../js/page.js"></script>'; }
 	  if (file_exists('../js/page.js')) { echo '<script src="../js/page.js"></script>'; }
 	  if (file_exists('js/page.js')) { echo '<script src="js/page.js"></script>'; }
+	  if (file_exists($js_file_alt)) { echo '<script src="'.$js_file_alt.'"></script>'; }
 	  if (file_exists('includes/functions.js')) { echo '<script src="includes/functions.js"></script>'; }
   ?>
 	<?php

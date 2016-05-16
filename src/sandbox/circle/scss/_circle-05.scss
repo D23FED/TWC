@@ -1,0 +1,22 @@
+.circle-05 {
+	body {
+		background-color: #fff;
+	}
+
+	.bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.path {
+		animation: draw 3.5s infinite;
+	}
+}
+
+@keyframes draw {
+	50% {
+		stroke-dashoffset: 0;
+	}
+}

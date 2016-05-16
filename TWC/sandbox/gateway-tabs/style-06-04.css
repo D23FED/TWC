@@ -1,84 +1,118 @@
 .twc-content {
   background-image: none;
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 #gateway .gateway-tabs {
   margin-bottom: -1px;
-  border-radius: 0; }
-  #gateway .gateway-tabs ul li a {
-    padding: 0;
-    color: inherit; }
-  #gateway .gateway-tabs li {
-    width: auto;
-    line-height: 4em;
-    padding: 0 1em;
-    background-image: none;
-    border-style: solid;
-    border-width: 1px 0 0 0;
-    border-color: #e1e1e1;
-    background-color: #fff;
-    color: #00549f; }
-    #gateway .gateway-tabs li::before {
-      background-color: transparent;
-      position: absolute;
-      width: 100%;
-      height: 7px;
-      display: block;
-      content: '';
-      left: 0;
-      top: -7px; }
-    #gateway .gateway-tabs li:hover {
-      border-top-color: transparent; }
-      #gateway .gateway-tabs li:hover::before {
-        background-color: rgba(2, 169, 224, 0.3); }
-    #gateway .gateway-tabs li.active {
-      box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, 0.5);
-      background-color: #fff;
-      border-width: 1px;
-      border-style: solid;
-      border-top-color: transparent;
-      border-left-color: #e1e1e1;
-      border-right-color: #e1e1e1;
-      border-bottom-color: #fff;
-      position: relative;
-      z-index: 187;
-      cursor: default;
-      color: #333; }
-      #gateway .gateway-tabs li.active:hover::before {
-        background-color: #02a9e0; }
-      #gateway .gateway-tabs li.active::before {
-        background-color: #02a9e0; }
-      #gateway .gateway-tabs li.active::after {
-        bottom: -20px;
-        content: '';
-        display: block;
-        height: 20px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        background-color: #fff;
-        z-index: 200; }
-      #gateway .gateway-tabs li.active a {
-        cursor: default; }
-    #gateway .gateway-tabs li:first-child {
-      border-left: 1px solid #e1e1e1; }
-    #gateway .gateway-tabs li:last-child {
-      border-right: 1px solid #e1e1e1; }
-      #gateway .gateway-tabs li:last-child.active {
-        box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, 0.5); }
+  border-radius: 0;
+}
+
+#gateway .gateway-tabs ul li a {
+  padding: 0;
+  color: inherit;
+}
+
+#gateway .gateway-tabs li {
+  width: auto;
+  line-height: 4em;
+  padding: 0 1em;
+  background-image: none;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #e1e1e1;
+  background-color: #fff;
+  color: #00549f;
+}
+
+#gateway .gateway-tabs li::before {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  display: block;
+  content: '';
+  left: 0;
+  top: -7px;
+}
+
+#gateway .gateway-tabs li:hover {
+  border-top-color: transparent;
+}
+
+#gateway .gateway-tabs li:hover::before {
+  background-color: rgba(2, 169, 224, 0.3);
+}
+
+#gateway .gateway-tabs li.active {
+  box-shadow: 5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: #e1e1e1;
+  border-right-color: #e1e1e1;
+  border-bottom-color: #fff;
+  position: relative;
+  z-index: 187;
+  cursor: default;
+  color: #333;
+}
+
+#gateway .gateway-tabs li.active:hover::before {
+  background-color: #02a9e0;
+}
+
+#gateway .gateway-tabs li.active::before {
+  background-color: #02a9e0;
+}
+
+#gateway .gateway-tabs li.active::after {
+  bottom: -20px;
+  content: '';
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 200;
+}
+
+#gateway .gateway-tabs li.active a {
+  cursor: default;
+}
+
+#gateway .gateway-tabs li:first-child {
+  border-left: 1px solid #e1e1e1;
+}
+
+#gateway .gateway-tabs li:last-child {
+  border-right: 1px solid #e1e1e1;
+}
+
+#gateway .gateway-tabs li:last-child.active {
+  box-shadow: -5px 0px 15px -5px rgba(0, 0, 0, 0.5);
+}
 
 #gateway .gateway {
-  border: 1px solid #e1e1e1; }
-  #gateway .gateway .gateway-headline {
-    border-width: 0;
-    border-style: none; }
-    #gateway .gateway .gateway-headline .text {
-      color: #333;
-      position: relative;
-      z-index: 300; }
+  border: 1px solid #e1e1e1;
+}
+
+#gateway .gateway .gateway-headline {
+  border-width: 0;
+  border-style: none;
+}
+
+#gateway .gateway .gateway-headline .text {
+  color: #333;
+  position: relative;
+  z-index: 300;
+}
 
 #gateway #buyflow-current .gateway-form .skip-section {
   background-image: none;
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /*# sourceMappingURL=style-06-04.css.map */

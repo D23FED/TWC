@@ -1,0 +1,27 @@
+$stroke-length: 450px;
+
+.circle-07 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	.bar,
+	.mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.bar {
+		z-index: 50;
+	}
+	.mask {
+		z-index: 100;
+	}
+}
+
+@keyframes draw {
+	50% {
+		stroke-dashoffset: 0;
+	}
+}

@@ -3,89 +3,121 @@
    ========================================================================== */
 .twc-search-module {
   margin: 0 auto;
-  background: #d4d5d6; }
-  .twc-search-module .twc-container {
-    padding: 1em 4%; }
-  .twc-search-module .cta button {
-    background-color: #3779b3;
-    background-image: linear-gradient(to bottom, #3779b3, #02447e);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3779b3', endColorstr='#ff02447e', GradientType=0);
-    color: white; }
-    .twc-search-module .cta button:hover {
-      background-color: #265a83;
-      background-image: linear-gradient(to bottom, #265a83, #1b405e);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff265a83', endColorstr='#ff1b405e', GradientType=0); }
+  background: #d4d5d6;
+}
+
+.twc-search-module .twc-container {
+  padding: 1em 4%;
+}
+
+.twc-search-module .cta button {
+  background-color: #3779b3;
+  background-image: linear-gradient(to bottom, #3779b3, #02447e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3779b3', endColorstr='#ff02447e', GradientType=0);
+  color: white;
+}
+
+.twc-search-module .cta button:hover {
+  background-color: #265a83;
+  background-image: linear-gradient(to bottom, #265a83, #1b405e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff265a83', endColorstr='#ff1b405e', GradientType=0);
+}
 
 .twc-search-module .cta button:active, .twc-search-module .cta button.active, .twc-search-module .cta button:focus {
   background: #444545;
-  background-image: 0; }
+  background-image: 0;
+}
 
 .twc-search-module .cta:disabled button, .twc-search-module .cta.disabled button {
   cursor: default;
   background-color: #666666;
   background-image: linear-gradient(to bottom, #666666, #666666);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff666666', GradientType=0);
-  color: white; }
+  color: white;
+}
 
 .twc-search-module .cta:disabled button:hover, .twc-search-module .cta:disabled button:active, .twc-search-module .cta.disabled button:hover, .twc-search-module .cta.disabled button:active {
   background-color: #666666;
   background-image: linear-gradient(to bottom, #666666, #666666);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666', endColorstr='#ff666666', GradientType=0);
-  color: white; }
+  color: white;
+}
 
 .twc-module ul {
   margin-bottom: 5px;
-  text-align: justify; }
+  text-align: justify;
+}
 
 .twc-module li {
   display: inline-block;
   padding: 0 10px;
-  border-right: 1px solid #9d9d9e; }
-  .twc-module li.js-first {
-    padding-left: 0; }
-  .twc-module li.js-last {
-    border-right: 0; }
+  border-right: 1px solid #9d9d9e;
+}
+
+.twc-module li.js-first {
+  padding-left: 0;
+}
+
+.twc-module li.js-last {
+  border-right: 0;
+}
 
 header .twc-module {
-  width: auto; }
+  width: auto;
+}
 
 .twc-module {
   width: auto;
   max-width: 440px;
-  margin: 0 auto; }
-  .twc-module .twc-search-input-wrap {
-    width: auto; }
+  margin: 0 auto;
+}
+
+.twc-module .twc-search-input-wrap {
+  width: auto;
+}
 
 .twc-banner-search {
   display: inline-block;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .twc-search input {
-  width: 77%; }
+  width: 77%;
+}
 
 @media (max-width: 48em) {
   .twc-search-module {
-    display: none; }
+    display: none;
+  }
   .twc-search-input-wrap {
-    width: auto; }
+    width: auto;
+  }
   .twc-tablet-search {
     display: table-cell;
     height: 40px;
-    vertical-align: middle; }
+    vertical-align: middle;
+  }
   .twc-mobile-search button:before {
     content: '\f002';
-    font-family: "FontAwesome"; } }
+    font-family: "FontAwesome";
+  }
+}
 
 @media (max-width: 40em) {
   .twc-tablet-search {
-    display: none; }
+    display: none;
+  }
   .twc-search-module .twc-module {
-    width: 100%; }
+    width: 100%;
+  }
   .twc-search-module .twc-module ul {
-    display: none; }
+    display: none;
+  }
   .twc-search-module input#submit {
     width: 25%;
-    padding: 9px 0; } }
+    padding: 9px 0;
+  }
+}
 
 /*# sourceMappingURL=search.css.map */

@@ -4,28 +4,38 @@
 .twc-breadcrumbs-gradient {
   position: absolute;
   top: 2px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, transparent 60%, transparent 100%); }
-  .twc-breadcrumbs-gradient .twc-container {
-    padding: 1em 0; }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, transparent 60%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000', GradientType=1);
+}
+
+.twc-breadcrumbs-gradient .twc-container {
+  padding: 1em 0;
+}
 
 .twc-banner ul {
   position: absolute;
   top: 0;
-  color: #e1e1e1; }
+  color: #e1e1e1;
+}
 
 .twc-banner li a {
   color: #e1e1e1;
   font-weight: 100;
-  line-height: 2.5; }
+  line-height: 2.5;
+}
 
 .twc-banner li.js-last a {
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 /* ie9 (.ie9) */
 .twc-ie9 .twc-breadcrumbs {
-  background: none; }
+  background: none;
+}
 @media (max-width: 48em) {
   .twc-breadcrumbs-gradient, .twc-breadcrumbs, .twc-banner ul {
-    display: none; } }
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=breadcrumbs.css.map */

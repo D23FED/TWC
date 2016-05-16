@@ -4,41 +4,52 @@
 ul.table li {
   display: table-cell;
   padding: .5em 1em;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .compareTable [class*="twc-col2_3367-c1"] {
-  width: 64%; }
+  width: 64%;
+}
 
 .compareTable .compareTable-row {
   margin-bottom: .25em;
-  background: #E2E6E9; }
+  background: #E2E6E9;
+}
 
 .compareTable ul.table li {
   display: table-cell;
   padding: .5em 1em;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 .compareTable ul.details-content {
   display: none;
-  padding: 1em; }
-  .compareTable ul.details-content .h3 {
-    font-size: 24px;
-    font-size: 22px;
-    font-size: 2.2rem;
-    font-weight: 100; }
+  padding: 1em;
+}
+
+.compareTable ul.details-content .h3 {
+  font-size: 24px;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 100;
+}
 
 .compareTable .details-content .cta {
   margin-top: 2em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .compareTable .pricing .h4 {
-  font-family: "TWC Round Medium"; }
+  font-family: "TWC Round Medium";
+}
 
 .compareTable ul li h5, .compareTable ul li h6 {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .compareTable ul li.package, .compareTable ul li.feature, .compareTable ul li.desc, .compareTable ul li.pricing {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .compareTable ul li.package {
   width: 24%;
@@ -49,7 +60,8 @@ ul.table li {
   background-color: #7e9db7;
   background-image: linear-gradient(to bottom, #7e9db7, #6f93af);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7e9db7', endColorstr='#ff6f93af', GradientType=0);
-  text-align: center; }
+  text-align: center;
+}
 
 .compareTable ul li.feature {
   width: 17%;
@@ -61,14 +73,16 @@ ul.table li {
   color: #3376B2;
   font-size: 18px;
   font-weight: 700;
-  text-align: center; }
+  text-align: center;
+}
 
 .compareTable ul:hover li.feature {
   border-top: 2px solid #c0c9d3;
   border-bottom: 2px solid #c0c9d3;
   background-color: #d3dae1;
   background-image: linear-gradient(to bottom, #d3dae1, #c0c9d3);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd3dae1', endColorstr='#ffc0c9d3', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd3dae1', endColorstr='#ffc0c9d3', GradientType=0);
+}
 
 .compareTable ul li.desc {
   width: 26%;
@@ -76,17 +90,20 @@ ul.table li {
   border-bottom: 2px solid #c6ccd3;
   background-color: #dbdfe4;
   background-image: linear-gradient(to bottom, #dbdfe4, #c6ccd3);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdfe4', endColorstr='#ffc6ccd3', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdfe4', endColorstr='#ffc6ccd3', GradientType=0);
+}
 
 .compareTable ul:hover li.desc {
   border-top: 2px solid #8698aa;
   border-bottom: 2px solid #8698aa;
   background-color: #aebcc8;
   background-image: linear-gradient(to bottom, #aebcc8, #8698aa);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaebcc8', endColorstr='#ff8698aa', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaebcc8', endColorstr='#ff8698aa', GradientType=0);
+}
 
 .compareTable ul li.desc-details {
-  display: block; }
+  display: block;
+}
 
 .compareTable ul li.pricing {
   position: relative;
@@ -96,28 +113,33 @@ ul.table li {
   background-color: #edf0f2;
   background-image: linear-gradient(to bottom, #edf0f2, #e2e6e9);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffedf0f2', endColorstr='#ffe2e6e9', GradientType=0);
-  text-align: center; }
+  text-align: center;
+}
 
 .compareTable ul li a.viewDetail:after {
   content: "\f107";
   font-family: FontAwesome;
-  padding-left: 0.5em; }
+  padding-left: 0.5em;
+}
 
 .compareTable ul li a.viewDetail.active:after {
-  content: "\f106"; }
+  content: "\f106";
+}
 
 .compareTable ul:hover li.pricing {
   border-top: 2px solid #c0c9d3;
   border-bottom: 2px solid #c0c9d3;
   background-color: #d3dae1;
   background-image: linear-gradient(to bottom, #d3dae1, #c0c9d3);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd3dae1', endColorstr='#ffc0c9d3', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd3dae1', endColorstr='#ffc0c9d3', GradientType=0);
+}
 
 .compareTable li span.badge {
   position: absolute;
   bottom: 30%;
   left: 85%;
-  z-index: 99999; }
+  z-index: 99999;
+}
 
 .compareTable ul li.order {
   width: 16%;
@@ -129,9 +151,12 @@ ul.table li {
   background-image: linear-gradient(to bottom, #dbdfe4, #c6ccd3);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdfe4', endColorstr='#ffc6ccd3', GradientType=0);
   box-shadow: inset 7px 0 15px -11px #454545;
-  text-align: center; }
-  .compareTable ul li.order .cta {
-    float: none; }
+  text-align: center;
+}
+
+.compareTable ul li.order .cta {
+  float: none;
+}
 
 .compareTable ul:hover li.order {
   border-top: 2px solid #8698aa;
@@ -139,33 +164,46 @@ ul.table li {
   border-bottom: 2px solid #8698aa;
   background-color: #aebcc8;
   background-image: linear-gradient(to bottom, #aebcc8, #8698aa);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaebcc8', endColorstr='#ff8698aa', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaebcc8', endColorstr='#ff8698aa', GradientType=0);
+}
 
 .compare-table .compare-table-row-header h5 {
-  color: #fff; }
+  color: #fff;
+}
 
 @-moz-document url-prefix() {}
 
 @media (max-width: 48em) {
   .compareTable ul li.feature, .compareTable ul li.desc {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media (max-width: 40em) {
   .compareTable ul li {
-    padding: .5em; }
+    padding: .5em;
+  }
   .compareTable ul li.package {
-    width: 34%; }
+    width: 34%;
+  }
   .compareTable ul li.feature, .compareTable ul li.desc {
-    display: none; }
+    display: none;
+  }
   .compareTable ul li.pricing {
-    width: 25%; }
+    width: 25%;
+  }
   .compareTable ul li.order {
-    width: 10%; }
+    width: 10%;
+  }
   .compareTable ul.table li {
-    padding: .5em; }
+    padding: .5em;
+  }
   .compareTable .badge {
-    display: none; }
+    display: none;
+  }
   .compareTable .tempBadge {
-    float: right; } }
+    float: right;
+  }
+}
 
 /*# sourceMappingURL=compareTable.css.map */

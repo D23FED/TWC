@@ -48,18 +48,21 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   border: 0;
   background: transparent;
   list-style: none outside none;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* ==========================
 	  HTML5 Display Definitions
    ========================== */
 article, aside, figure, footer, header, hgroup, nav, section {
-  display: block; }
+  display: block;
+}
 
 /* ==========================
 	  Base Stucture
    ========================== */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=base.css.map */

@@ -1,0 +1,16 @@
+$stroke-length: 450px;
+
+.circle-06 {
+	path.semicircle {
+		stroke-width: 4;
+		stroke-dasharray: $stroke-length;
+		stroke-dashoffset: $stroke-length;
+		animation: draw 3.5s infinite;
+	}
+}
+
+@keyframes draw {
+	50% {
+		stroke-dashoffset: 0;
+	}
+}
