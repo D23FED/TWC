@@ -91,8 +91,12 @@ strokeWidth02 = 5;
 window.onload = function() {
 	canvasApp();
 }
-function angleToRadians(angle) {
-	return (Math.PI / 180) * angle;
+function degToRad(degrees) {
+	return (degrees / 180) * Math.PI;
+}
+
+function radToDeg (radians) {
+  return (radians * 180) / Math.PI;
 }
 function canvasApp() {
 	var theCanvas = document.getElementById("canvas-01");
