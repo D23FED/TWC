@@ -2,7 +2,6 @@
 include_once('constants.php');
 include_once(CORE_INC.'functions.php');
 include_once(CORE_INC.'head.php');
-
 $headerComponents = array(
 	'browserAlerts',
 	'tophat',
@@ -13,15 +12,14 @@ $headerComponents = array(
 	'simpleNav',
 	'alert',
 	'banner',
-	'supportSearch',
-	'content'
+	'supportSearch'
 );
 $bodyComponents = array(
 	'panel',
 	'carousel',
 	'share',
 	'slider'
-	);
+);
 ?>
 <div class="parsys header tplparsys">
   <div class="tplparys_inherited">
@@ -57,25 +55,11 @@ $bodyComponents = array(
     </div>
   </div>
 </div>
-
 <?php
-
-// Before container
-$headerComponents = array(
-	'browserAlerts',
-	'tophat',
-	'tophat_redesign',
-	'logoHeader',
-	'nav',
-	'subnav',
-	'simpleNav',
-	'alert',
-	'banner',
-	'supportSearch',
-	'content'
-);
-
-
+// Content Wrapper
+if ( isset($content) && ($content !== true) ) {
+	include_once(CORE_INC.'content.php');
+}
 
 // Container
 if ( isset($container) && ($container !== true) ) {
@@ -84,13 +68,10 @@ if ( isset($container) && ($container !== true) ) {
 	include_once(CORE_INC.'container.php');
 }
 
-// After container
-
+// Inside container
 foreach ($bodyComponents as $value) {
   if (isset(${$value}) && ${$value} ) {
   	include_once(CORE_INC.$value.'.php');
   }
 }
-
 ?>
-
