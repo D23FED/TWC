@@ -1,0 +1,124 @@
+/* ================================
+ 4.	CTA in Promostrip is thinner than all other CTAs
+================================ */
+
+/* This is caused by CSS in the "hp-custom-css" injection container
+Remove this rule: */
+
+.offerBar .cta a {
+		padding: 0.5em 1em;
+}
+
+/* ================================
+5.	Hover (or tap) on Top-Nav items should make the highlighted font color white not blue
+================================ */
+
+/*An inline style is causing this bug:*/
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
+		color: #00549f;
+}
+
+/*This was possibly added to fix the issue with the form label color under the "My Account".
+If we remove the first rule (affecting the A tags) but keep the second rule (affecting the LABEL tags) this should fix the issue with the link hover color without affecting the form label color. */
+
+/* Remove first rule, example below: */
+/*#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a, */
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
+		color: #00549f;
+}
+
+/* It appears that JS is adding the inline style (the bug does not occur until JS has had a chance to fire). */
+
+/* ================================
+6.	Top Nav is css-hard-coded to ALL CAPS on tablet portrait (626px – 750px), should not be
+================================ */
+
+/* This is being caused by the allComponents.css, inside the tablet media query. This rule should be removed: */
+/* allComponents.css */
+/* line 7659 */
+.new-mega-menu .twc-new-navigation .twc-new-nav label {
+	text-transform: uppercase;
+}
+
+/* ================================
+7.	MegaMenu header on tablet portrait (626px – 750px) shows a huge font-size, should be same as mobile
+================================ */
+
+/* This is caused by an !important flag in the injected css "hp-custom-css": */
+
+/* Code excerpt: */
+
+/**TABLET HEADINGS**/
+
+@media (max-width: 48em) {
+	/*...*/
+	h4, .h4  {
+		font-family: "TWC Round Light";
+		font-size: 2.1rem !important;
+		font-size: 21px !important;
+	}
+	/*...*/
+}
+
+/* Remove the !important flags, example below: */
+h4, .h4  {
+	font-family: "TWC Round Light";
+	font-size: 2.1rem;
+	font-size: 21px;
+}
+
+/* ================================
+8.	Links breaking into two lines seem like two different links dues to spacing - WEBCMS-20973. Dan will take a look.
+================================ */
+
+/* Need to change spacing between items to be margin-based, not based on line-height */
+
+/* pages.css */
+/* line 26 */
+/* Add this declaration (change margin-bottom from '0' to '0.5rem') :*/
+.twc-footer h3.label {
+	/*...*/
+	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
+	/*...*/
+}
+
+/* Replace this rule: */
+/* line 46 */
+.twc-footer .labelList li {
+	line-height: 2;
+}
+
+/* ...with this rule: */
+.twc-footer .labelList li {
+	line-height: 1.4;
+}
+
+/* Add this rule immediatley below the rule at line 46: */
+.twc-footer .labelList li + li {
+	margin-top: 10px;
+	margin-top: 1rem;
+}
+
+/* ================================
+13.	Since we killed the More on mobile, do you want to make the mobile top-nav font larger?
+================================ */
+
+/* pages.css */
+/* Line 868 */
+/* Selector: #site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label */
+/*Replace current font-size declarations with:*/
+font-size: 13px;
+font-size: 1.3rem;
+
+/* ================================
+15.	Logo margin-top: make it 1em.
+================================ */
+
+/* pages.css */
+/* Line 642 */
+/* Selector: .twc-logo */
+/* Replace current margin-top declaration with: */
+margin-top: 1em;
