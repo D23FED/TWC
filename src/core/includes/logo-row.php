@@ -2,7 +2,6 @@
 	<div id="logo-row">
 		<div class="parsys">
 			<div class="parbase section teaser">
-				<script>teaserLogo();</script>
 				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830" class="campaign campaign-header-icons">
 					<div class="general">
 						<div class="par parsys">
@@ -23,7 +22,7 @@
 													<div class="parsys header">
 														<div class="twc-logo section">
 															<a href="/en/residential.html" analyticsname="twc logo">
-																<img title="twc-logo" alt="Home" src="/content/dam/residential/images/global/ge-header/twc-logo-blue.png">
+																<img title="twc-logo" alt="Home" src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/twc-logo-blue.png">
 															</a>
 														</div>
 														<div class="section newHeaderIcons">
@@ -32,7 +31,7 @@
 																	<li class="twc-first">
 																		<div class="mobile-label-hidden horizontal-center parbase smartLink align-middle above-label non-indented">
 																			<a analyticsname="header icons:1:1:upgrade" id="75014ab8-d784-44e2-9ea0-a44469dd4949" href="/residential/order?type=ebf&amp;iid=headericons:existing:order:upgrade">
-																				<span class="link-image hide-caret"><img src="/content/dam/residential/images/global/ge-header/icon_shop_green.png" alt="<span style=" color:="" #078f1a;=""></span>
+																				<span class="link-image hide-caret"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon_shop_green.png" alt="<span style=" color:="" #078f1a;=""></span>
 																				<span class="link-label"><span style="color: #078f1a;">Upgrade</span></span>
 																			</a>
 																		</div>
@@ -40,7 +39,7 @@
 																	<li>
 																		<div class="mobile-label-hidden horizontal-center parbase smartLink mobile-hidden align-middle above-label non-indented">
 																			<a analyticsname="header icons:1:2:pay bill" id="35bdaaaa-4dfb-4425-a556-96f869f95786" href="https://myservices.timewarnercable.com/">
-																				<span class="link-image hide-caret"><img src="/content/dam/residential/images/global/ge-header/icon-bill-blue.png" alt="Pay your bill"></span>
+																				<span class="link-image hide-caret"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-bill-blue.png" alt="Pay your bill"></span>
 																				<span class="link-label">Pay Bill</span>
 																			</a>
 																		</div>
@@ -48,7 +47,7 @@
 																	<li>
 																		<div class="mobile-label-hidden horizontal-center parbase smartLink mobile-hidden align-middle above-label non-indented">
 																			<a analyticsname="header icons:1:3:email" id="67e0d0a5-cf60-4aac-940e-dca02fa33cba" target="_blank" href="https://mail.twc.com/">
-																				<span class="link-image hide-caret"><img src="/content/dam/residential/images/global/ge-header/icon-email-blue.png" alt="Email"></span>
+																				<span class="link-image hide-caret"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-email-blue.png" alt="Email"></span>
 																				<span class="link-label">Email</span>
 																			</a>
 																		</div>
@@ -56,7 +55,7 @@
 																	<li>
 																		<div class="mobile-label-hidden horizontal-center parbase zipLink smartLink align-middle above-label non-indented">
 																			<a analyticsname="header icons:1:4:zip" id="2e8ab1c6-12fd-455d-8d51-06a9768999d1" data-modal="b5071b56-d107-46fb-aa2c-ffefefe7bd10" data-message="TWC Header" data-href="/content/admin/x-ref-content/Megamenu/zipmessagebox" href="javascript:void(0)" data-imgurla="/content/dam/residential/images/global/ge-header/icon-localization-alt-red.png" data-alttexta="Your location" data-ooflabel="<p>${/twcprofile/zipcode}</p>" data-notlocalizedlabel="<p>Enter ZIP</p>">
-																				<span class="link-image"><img src="/content/dam/residential/images/global/ge-header/icon-localization-bue.png" alt="Your location"></span>
+																				<span class="link-image"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-localization-bue.png" alt="Your location"></span>
 																				<span class="zipLabel link-label mobile-hidden"><p>10010</p></span>
 																			</a>
 																		</div>
@@ -64,7 +63,7 @@
 																	<li class="twc-last">
 																		<div class="mobile-label-hidden horizontal-center parbase smartLink align-middle above-label non-indented">
 																			<a analyticsname="header icons:1:5:search" id="55968ae2-cc78-487e-ac93-479507f1ad04" data-modal="9d1eaa03-1944-4542-b433-753d51c2cb5d" data-message="TWC Header" data-href="/content/admin/x-ref-content/Megamenu/searchmessagebox" href="javascript:void(0)">
-																				<span class="link-image hide-caret"><img src="/content/dam/residential/images/global/ge-header/icon-search-blue.png" alt="Search"></span>
+																				<span class="link-image hide-caret"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-search-blue.png" alt="Search"></span>
 																				<span class="link-label">Search</span>
 																			</a>
 																		</div>
@@ -96,7 +95,7 @@
 																				<div class="one_column_text richtext section">
 																					<div id="83dd3aa9-849d-4a97-91c8-57770316fc09" class="">
 																						<div>
-																							<p style="color: #333333;"><img src="/content/dam/residential/images/global/ge-header/icon-localization.png"> Your current location is 10010.</p>
+																							<p style="color: #333333;"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-localization.png"> Your current location is 10010.</p>
 																						</div>
 																					</div>
 																				</div>
@@ -130,7 +129,7 @@
 																				<div class="one_column_text richtext section">
 																					<div id="3b8db6d7-4ae1-4cf5-8482-e20be8087bac">
 																						<div>
-																							<p style="color: #333333;"><img src="/content/dam/residential/images/global/ge-header/icon-localization-alt.png">We were unable to detect your location. Please enter your ZIP Code:</p>
+																							<p style="color: #333333;"><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-localization-alt.png">We were unable to detect your location. Please enter your ZIP Code:</p>
 																						</div>
 																					</div>
 																				</div>
@@ -163,7 +162,7 @@
 																			<div class="parsys parsys0 column">
 																				<div class="one_column_text richtext section">
 																					<div id="750700ff-f057-44f6-acbd-0b6807203a02" class="">
-																						<p><span><img src="/content/dam/residential/images/global/ge-header/icon-localization-alt.png" style="padding-right: 10px;"></span></p>
+																						<p><span><img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-localization-alt.png" style="padding-right: 10px;"></span></p>
 																						<p style="color: #333333;">Our services may not be available in 10010. If this is not your ZIP Code, please enter your ZIP Code here. If it is correct, visit <a target="_blank" href="http://cablemover.com/Home?c=9093">cablemover.com</a> to contact the cable provider that serves your area or call 1-855-394-6832.</p>
 																					</div>
 																				</div>
@@ -252,22 +251,19 @@
 	</div>
 </div>
 <script type="text/javascript">
-function teaserLogo() {
-	initializeTeaserLoader([{
-		"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
-		"name": "onnetwork-existing-customer",
-		"campaignName": "header-icons",
-		"id": "header-icons_onnetwork-existing-customer",
-		"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
-	}, {
-		"path": "/content/campaigns/residential/global/header-icons/default",
-		"name": "default",
-		"campaignName": "header-icons",
-		"id": "header-icons_default"
-	}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
-}
+initializeTeaserLoader([{
+	"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
+	"name": "onnetwork-existing-customer",
+	"campaignName": "header-icons",
+	"id": "header-icons_onnetwork-existing-customer",
+	"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
+}, {
+	"path": "/content/campaigns/residential/global/header-icons/default",
+	"name": "default",
+	"campaignName": "header-icons",
+	"id": "header-icons_default"
+}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
 jQuery('.tileList').hide();
-// Ready
 jQuery(document).ready(function() {
 	if ("false" !== "true") {
 		jQuery('#75014ab8-d784-44e2-9ea0-a44469dd4949').closest(".smartLink").addClass("non-indented");
