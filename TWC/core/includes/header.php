@@ -1,29 +1,11 @@
 <?php
-$pathsArr = array(
-	"/TWC",
-	"/core",
-	$_SERVER['DOCUMENT_ROOT'],
-	$_SERVER['DOCUMENT_ROOT'].'/TWC',
-	$_SERVER['DOCUMENT_ROOT'].'/TWC/core',
-	$_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes',
-	$_SERVER['DOCUMENT_ROOT'].'/core';
-);
-$paths = join(PATH_SEPARATOR, $pathsArr);
-// $paths = "/TWC".PATH_SEPARATOR.
-// 	"/core".PATH_SEPARATOR.
-// 	$_SERVER['DOCUMENT_ROOT'].PATH_SEPARATOR.
-// 	$_SERVER['DOCUMENT_ROOT'].'/TWC'.PATH_SEPARATOR.
-// 	$_SERVER['DOCUMENT_ROOT'].'/TWC/core'.PATH_SEPARATOR.
-// 	$_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes'.PATH_SEPARATOR.
-// 	$_SERVER['DOCUMENT_ROOT'].'/core'.PATH_SEPARATOR;
-set_include_path(get_include_path() . PATH_SEPARATOR . $paths);
 
 include_once('constants.php');
 include_once(CORE_INC . 'functions.php');
 include_once(CORE_INC.'head.php');
 
 // Before container
-$arr = array(
+$headerComponents = array(
 	'browserAlerts',
 	'tophat',
 	'tophat_redesign',
@@ -36,7 +18,7 @@ $arr = array(
 	'supportSearch',
 	'content'
 );
-foreach ($arr as $value) {
+foreach ($headerComponents as $value) {
   if (isset(${$value}) && ${$value} ) {
   	include_once(CORE_INC.$value.'.php');
   }
