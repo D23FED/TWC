@@ -2,6 +2,7 @@
 	<div id="logo-row">
 		<div class="parsys">
 			<div class="parbase section teaser">
+				<script>teaserLogo();</script>
 				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830" class="campaign campaign-header-icons">
 					<div class="general">
 						<div class="par parsys">
@@ -251,19 +252,22 @@
 	</div>
 </div>
 <script type="text/javascript">
-initializeTeaserLoader([{
-	"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
-	"name": "onnetwork-existing-customer",
-	"campaignName": "header-icons",
-	"id": "header-icons_onnetwork-existing-customer",
-	"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
-}, {
-	"path": "/content/campaigns/residential/global/header-icons/default",
-	"name": "default",
-	"campaignName": "header-icons",
-	"id": "header-icons_default"
-}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
+function teaserLogo() {
+	initializeTeaserLoader([{
+		"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
+		"name": "onnetwork-existing-customer",
+		"campaignName": "header-icons",
+		"id": "header-icons_onnetwork-existing-customer",
+		"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
+	}, {
+		"path": "/content/campaigns/residential/global/header-icons/default",
+		"name": "default",
+		"campaignName": "header-icons",
+		"id": "header-icons_default"
+	}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
+}
 jQuery('.tileList').hide();
+// Ready
 jQuery(document).ready(function() {
 	if ("false" !== "true") {
 		jQuery('#75014ab8-d784-44e2-9ea0-a44469dd4949').closest(".smartLink").addClass("non-indented");
