@@ -5,7 +5,7 @@ include_once(CORE_INC.'head.php');
 $headerComponents = array(
 	'browserAlerts',
 	'tophat',
-	'tophat_redesign',
+	// 'tophat_redesign',
 	'logoHeader',
 	'nav',
 	'subnav',
@@ -21,6 +21,7 @@ $bodyComponents = array(
 	'slider'
 );
 ?>
+<!-- Begin Page Header -->
 <div class="parsys header tplparsys">
   <div class="tplparys_inherited">
     <div class="parsys header tplparsys">
@@ -55,17 +56,18 @@ $bodyComponents = array(
     </div>
   </div>
 </div>
+<!-- End Page Header -->
 <?php
 // Content Wrapper
-if ( isset($content) && ($content !== true) ) {
+if ( isset($content) && ($content == true) ) {
 	include_once(CORE_INC.'content.php');
 }
 
 // Container
 if ( isset($container) && ($container !== true) ) {
-	include_once(CORE_INC.'containerFull.php');
-} else {
 	include_once(CORE_INC.'container.php');
+} else {
+	include_once(CORE_INC.'containerFull.php');
 }
 
 // Inside container

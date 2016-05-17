@@ -2,6 +2,20 @@
 	<div id="logo-row">
 		<div class="parsys">
 			<div class="parbase section teaser">
+				<script>
+					initializeTeaserLoader([{
+						"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
+						"name": "onnetwork-existing-customer",
+						"campaignName": "header-icons",
+						"id": "header-icons_onnetwork-existing-customer",
+						"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
+					}, {
+						"path": "/content/campaigns/residential/global/header-icons/default",
+						"name": "default",
+						"campaignName": "header-icons",
+						"id": "header-icons_default"
+					}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
+				</script>
 				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830" class="campaign campaign-header-icons">
 					<div class="general">
 						<div class="par parsys">
@@ -249,83 +263,71 @@
 			</div>
 		</div>
 	</div>
-</div>
-<script type="text/javascript">
-initializeTeaserLoader([{
-	"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
-	"name": "onnetwork-existing-customer",
-	"campaignName": "header-icons",
-	"id": "header-icons_onnetwork-existing-customer",
-	"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
-}, {
-	"path": "/content/campaigns/residential/global/header-icons/default",
-	"name": "default",
-	"campaignName": "header-icons",
-	"id": "header-icons_default"
-}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
-jQuery('.tileList').hide();
-jQuery(document).ready(function() {
-	if ("false" !== "true") {
-		jQuery('#75014ab8-d784-44e2-9ea0-a44469dd4949').closest(".smartLink").addClass("non-indented");
-	}
-	if ("false" !== "true") {
-		jQuery('#35bdaaaa-4dfb-4425-a556-96f869f95786').closest(".smartLink").addClass("non-indented");
-	}
-	if ("false" !== "true") {
-		jQuery('#67e0d0a5-cf60-4aac-940e-dca02fa33cba').closest(".smartLink").addClass("non-indented");
-	}
-	jQuery('#67e0d0a5-cf60-4aac-940e-dca02fa33cba').newWindowLink({
-		height: "768",
-		width: "1024",
-		resizable: "yes",
-		menubar: 'yes',
-		toolbar: 'yes',
-		analyticsname: 'header icons:1:3:email'
+	<script>
+	jQuery('.tileList').hide();
+	jQuery(document).ready(function() {
+		if ("false" !== "true") {
+			jQuery('#75014ab8-d784-44e2-9ea0-a44469dd4949').closest(".smartLink").addClass("non-indented");
+		}
+		if ("false" !== "true") {
+			jQuery('#35bdaaaa-4dfb-4425-a556-96f869f95786').closest(".smartLink").addClass("non-indented");
+		}
+		if ("false" !== "true") {
+			jQuery('#67e0d0a5-cf60-4aac-940e-dca02fa33cba').closest(".smartLink").addClass("non-indented");
+		}
+		jQuery('#67e0d0a5-cf60-4aac-940e-dca02fa33cba').newWindowLink({
+			height: "768",
+			width: "1024",
+			resizable: "yes",
+			menubar: 'yes',
+			toolbar: 'yes',
+			analyticsname: 'header icons:1:3:email'
+		});
+		if ("false" !== "true") {
+			jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').closest(".zipLink").addClass("non-indented");
+		}
+		jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').messageboxLink({
+			analyticsname: 'header icons:1:4:zip'
+		});
+		jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').zipLocalization();
+		if ("false" !== "true") {
+			jQuery('#55968ae2-cc78-487e-ac93-479507f1ad04').closest(".smartLink").addClass("non-indented");
+		}
+		jQuery('#55968ae2-cc78-487e-ac93-479507f1ad04').messageboxLink({
+			analyticsname: 'header icons:1:5:search'
+		});
+		var tileListDiv = jQuery('.tileList');
+		tileListDiv.addClass("none");
+		tileListDiv.show();
+		jQuery('#0a4274be-8a33-475c-9aa5-47b0acf1881c').siblings('.messagebox-wrapper').messageBox();
+		//keeps the function call from causing an error in the teaser edit mode if util.js is not loaded in teaser edit mode
+		if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
+			bindUndelagatedAnalyticsTrackingClickEvents();
+		}
 	});
-	if ("false" !== "true") {
-		jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').closest(".zipLink").addClass("non-indented");
-	}
-	jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').messageboxLink({
-		analyticsname: 'header icons:1:4:zip'
-	});
-	jQuery('#2e8ab1c6-12fd-455d-8d51-06a9768999d1').zipLocalization();
-	if ("false" !== "true") {
-		jQuery('#55968ae2-cc78-487e-ac93-479507f1ad04').closest(".smartLink").addClass("non-indented");
-	}
-	jQuery('#55968ae2-cc78-487e-ac93-479507f1ad04').messageboxLink({
-		analyticsname: 'header icons:1:5:search'
-	});
-	var tileListDiv = jQuery('.tileList');
-	tileListDiv.addClass("none");
-	tileListDiv.show();
-	jQuery('#0a4274be-8a33-475c-9aa5-47b0acf1881c').siblings('.messagebox-wrapper').messageBox();
-	//keeps the function call from causing an error in the teaser edit mode if util.js is not loaded in teaser edit mode
-	if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
-		bindUndelagatedAnalyticsTrackingClickEvents();
-	}
-});
-</script>
-<style type="text/css">
-.user-location_v2 .geo-error-content p,
-.user-location_v2 .localized-content p {
-	line-height: 2.7;
-	float: right;
-}
-.messagebox-wrapper img {
- max-width: none;
-}
-@media (max-width: 48em) {
+	</script>
+	<style type="text/css">
 	.user-location_v2 .geo-error-content p,
 	.user-location_v2 .localized-content p {
-		line-height: 2.4;
-		float: none;
-		margin-left: 70px;
+		line-height: 2.7;
+		float: right;
 	}
-}
-@media (max-width: 40em) {
-	.user-location_v2 .geo-error-content p {
-		line-height: 1.4;
-		margin-left: 10px
+	.messagebox-wrapper img {
+	 max-width: none;
 	}
-}
-</style>
+	@media (max-width: 48em) {
+		.user-location_v2 .geo-error-content p,
+		.user-location_v2 .localized-content p {
+			line-height: 2.4;
+			float: none;
+			margin-left: 70px;
+		}
+	}
+	@media (max-width: 40em) {
+		.user-location_v2 .geo-error-content p {
+			line-height: 1.4;
+			margin-left: 10px
+		}
+	}
+	</style>
+</div>

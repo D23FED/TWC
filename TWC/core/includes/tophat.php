@@ -73,18 +73,18 @@
 		</div>
 	</div>
 	<!-- end #top-hat -->
+	<script>
+	// jQuery(document).ready(function() {
+	// 	if ("false" !== "true") {
+	// 		jQuery('#ad67324b-c9a1-46bc-a3d9-88da4eca70ea').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#b71ff5d9-e740-4723-a801-3778b04bb759').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#b30f0de5-b1f2-4d08-b076-5b208dd96d16').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#d0aad444-e2c5-42f6-a036-542f13f0fb85').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#c3fa8658-42d9-4edd-a75c-588c14a17b35').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#2392ae45-8a98-4b70-9520-fc01ee537773').closest(".smartLink").addClass("non-indented");
+	// 		jQuery('#946e2b89-2810-41e3-adfd-923a4b045057').closest(".smartLink").addClass("non-indented");
+	// 	}
+	// });
+	</script>
 </div>
 <?php include('logo-row.php'); ?>
-<script>
-// jQuery(document).ready(function() {
-// 	if ("false" !== "true") {
-// 		jQuery('#ad67324b-c9a1-46bc-a3d9-88da4eca70ea').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#b71ff5d9-e740-4723-a801-3778b04bb759').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#b30f0de5-b1f2-4d08-b076-5b208dd96d16').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#d0aad444-e2c5-42f6-a036-542f13f0fb85').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#c3fa8658-42d9-4edd-a75c-588c14a17b35').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#2392ae45-8a98-4b70-9520-fc01ee537773').closest(".smartLink").addClass("non-indented");
-// 		jQuery('#946e2b89-2810-41e3-adfd-923a4b045057').closest(".smartLink").addClass("non-indented");
-// 	}
-// });
-</script>
