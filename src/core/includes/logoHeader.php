@@ -7,12 +7,12 @@
 		<div class="right">
 			<ul class="horizontal">
 				<li><?php
-					if ($header_title_text !='') {
+					if ( isset($header_title_text) && $header_title_text !='') {
 						echo "<div>$header_title_text</div>";
 					}
 				?></li>
 				<li><?php
-					if ($chat) {
+					if ( isset($chat) ) {
 						echo '
 							<div class="cta omega">
 								<button><span class="twc-icon-before icon-comments-alt"></span>Need Help? Let\'s Chat</button>
