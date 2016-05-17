@@ -17,7 +17,7 @@
 		</div>
 		<div class="mobile-nav desktop-hidden">
 			<figure>
-				<img src="/content/dam/residential/images/global/ge-header/icon-packages.png" alt="">
+				<img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-packages.png" alt="">
 			</figure>
 			<label>All Plans</label>
 		</div>

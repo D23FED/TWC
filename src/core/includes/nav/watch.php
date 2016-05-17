@@ -1,3 +1,4 @@
+<!-- Watch TV -->
 <li class="mobile-hidden tablet-hidden">
 	<div class="mega-menu-item expand-right mobile-label-hidden horizontal-center tablet-hidden parbase smartLink label-left width-25 mobile-hidden align-middle">
 		<div class="mobile-hidden tablet-hidden">
@@ -28,7 +29,7 @@
 		</div>
 		<div class="mobile-nav desktop-hidden">
 			<figure>
-				<img src="/content/dam/residential/images/global/ge-header/icon-tv.png" alt="">
+				<img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-tv.png" alt="">
 			</figure>
 			<label>Watch TV</label>
 		</div>

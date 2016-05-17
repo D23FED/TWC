@@ -1,4 +1,4 @@
-
+<!-- Support -->
 <li>
 	<div class="width-100 mega-menu-item expand-right horizontal-center parbase smartLink label-left align-middle" style="border-right-style: none;">
 		<div class="mobile-hidden tablet-hidden">
@@ -17,7 +17,7 @@
 		</div>
 		<div class="mobile-nav desktop-hidden">
 			<figure>
-				<img src="/content/dam/residential/images/global/ge-header/icon-support.png" alt="">
+				<img src="http://www.timewarnercable.com/content/dam/residential/images/global/ge-header/icon-support.png" alt="">
 			</figure>
 			<label>Support</label>
 		</div>
