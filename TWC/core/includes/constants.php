@@ -1,5 +1,9 @@
 <?php
 // Constants
+// define("ROOT", $_SERVER['DOCUMENT_ROOT'].'/');
+// define("CORE", ROOT . '/core/');
+// define("CORE_INC", ROOT . '/core/includes/');
+
 $url = $_SERVER['HTTP_HOST'];
 $parsedUrl = parse_url($url);
 $host = explode('.', $parsedUrl['host']);
