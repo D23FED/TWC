@@ -1,0 +1,57 @@
+// Tophat tab bar ('Your Home', 'Your Business' etc)
+#top-hat {
+	.twc-top {
+		background-color: $skyDark-darker;
+		border-color: #a1a1a1;
+	}
+
+	// Topmost navigation list
+	.twc-top-nav {
+		li {
+			a {
+				color: #fff;
+			}
+
+			// Active tab
+			.twc-active {
+				background-color: #fff;
+				border-color: #a1a1a1;
+				box-shadow: none;
+				border-bottom-color: #fff;
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+				margin-bottom: -1px;
+
+				a {
+					color: $text-color;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	// Hide empty container
+	.twc-header > .twc-container {
+		display: none;
+	}
+}
+
+// Row containing logo and nav icons
+#logo-row {
+	// Overwrite .twc-backgroundGradient-2
+	.twc-header {
+		background-color: transparent;
+		background-image: none;
+	}
+
+	// Header Icons: Shop, Pay Bill, Email etc
+	.newHeaderIcons {
+		a {
+			color: $skyDark-darkish;
+			img {
+				height: auto;
+				min-width: 100%;
+			}
+		}
+	}
+}

@@ -2,9 +2,11 @@
     Component  -- Version: 1.0.0 - Updated: 3/6/2014
    ========================================================================== */
 .hideshow .show-container {
-  display: inline; }
+  display: inline;
+}
 
 .hideshow .hideshow-container {
-  display: none; }
+  display: none;
+}
 
 /*# sourceMappingURL=hide-show.css.map */

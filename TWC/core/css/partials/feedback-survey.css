@@ -4,8 +4,6 @@
 .feedback-survey .initiate-feedback, .feedback-survey .feedback-survey-yes-response, .feedback-survey .feedback-survey-no-response {
   overflow: auto;
   display: inline-block;
-  *zoom: 1;
-  *display: inline;
   position: relative;
   width: 100%;
   margin: 1em 0;
@@ -16,53 +14,70 @@
   border-radius: 3px;
   background-clip: padding-box;
   border: 1px solid #e1e1e1;
-  background: #f0f3f2; }
-  .feedback-survey .initiate-feedback fieldset, .feedback-survey .feedback-survey-yes-response fieldset, .feedback-survey .feedback-survey-no-response fieldset {
-    padding-top: 0.75em;
-    padding-right: 0;
-    padding-bottom: 0.75em;
-    padding-left: 0; }
+  background: #f0f3f2;
+}
+
+.feedback-survey .initiate-feedback fieldset, .feedback-survey .feedback-survey-yes-response fieldset, .feedback-survey .feedback-survey-no-response fieldset {
+  padding-top: 0.8em;
+  padding-right: 0;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+}
 
 .feedback-survey .feedback-survey-yes-response, .feedback-survey .feedback-survey-no-response {
-  display: none; }
+  display: none;
+}
 
 .feedback-survey .improve-feedback {
-  display: none; }
+  display: none;
+}
 
 .feedback-survey input[type="radio"] + label {
   display: inline-block;
-  width: auto; }
+  width: auto;
+}
 
 .channel-suggestions {
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+}
 
 .channel-suggestions .twc-subHead h3 {
-  color: #333333; }
+  color: #333333;
+}
 
 .channel-suggestions p {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .feedback-container .form-item .valid {
-  color: black; }
+  color: black;
+}
 
 @media (max-width: 48em) {
   .feedback-survey [class*='twc-col3_252550-c'] {
-    width: 23.75%; }
+    width: 23.75%;
+  }
   .feedback-survey [class*='twc-col3_252550-c1'] {
     margin-top: 0;
-    margin-left: 2.5%; }
+    margin-left: 2.5%;
+  }
   .feedback-survey [class*='twc-col3_252550-c2'] {
     margin-left: 0;
-    width: 48.75%; } }
+    width: 48.75%;
+  }
+}
 
 @media (max-width: 40em) {
   .feedback-survey .initiate-feedback, .feedback-survey .feedback-survey-yes-response, .feedback-survey .feedback-survey-no-response {
-    text-align: center; }
+    text-align: center;
+  }
   .feedback-survey [class*='twc-col3_252550-c'], .feedback-survey [class*='twc-col3_252550-c1'], .feedback-survey [class*='twc-col3_252550-c2'] {
     width: 100%;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: 0; } }
+    margin-left: 0;
+  }
+}
 
 /*# sourceMappingURL=feedback-survey.css.map */

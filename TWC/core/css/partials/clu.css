@@ -2,203 +2,315 @@
     Channel Lineup  -- Version: 1.0.0 - Updated: 3/14/2014
    ========================================================================== */
 .clu .mobile-only {
-  display: none; }
+  display: none;
+}
 
 .clu .box .location {
   margin: 0 2em;
-  padding: 0.5em; }
+  padding: 0.5em;
+}
 
 .clu .box .table-input {
   border-right: 1px solid #A4A8AB;
-  padding-right: 2em; }
-  .clu .box .table-input .table-filter-input {
-    width: 70%;
-    margin-left: 2em; }
+  padding-right: 2em;
+}
+
+.clu .box .table-input .table-filter-input {
+  width: 70%;
+  margin-left: 2em;
+}
 
 .clu .box .channel-search .table-input {
-  margin-top: 2em; }
+  margin-top: 2em;
+}
 
 .clu .pdf-before > img {
   height: 1em;
-  width: 1em; }
+  width: 1em;
+}
 
 .clu table {
   width: 100%;
   text-align: center;
-  border-collapse: collapse; }
-  .clu table th, .clu table td {
-    border: 1px solid #b4d6f3; }
-  .clu table thead {
-    display: table;
-    width: 100%;
-    background-color: #4997dc; }
-    .clu table thead tr {
-      display: table-row;
-      width: 100%; }
-    .clu table thead th {
-      width: 18.5%;
-      padding: 1em;
-      color: #fff;
-      font-weight: 100; }
-      .clu table thead th.channels {
-        width: 26%; }
-  .clu table.packages-7 thead th {
-    width: 10.5%; }
-    .clu table.packages-7 thead th.channels {
-      width: 26%; }
-  .clu table.packages-6 thead th {
-    width: 12.33%; }
-    .clu table.packages-6 thead th.channels {
-      width: 26%; }
-  .clu table.packages-5 thead th {
-    width: 14.8%; }
-    .clu table.packages-5 thead th.channels {
-      width: 26%; }
-  .clu table.packages-3 thead th {
-    width: 24.6%; }
-    .clu table.packages-3 thead th.channels {
-      width: 26%; }
-  .clu table tbody {
-    display: block;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden; }
-    .clu table tbody tr {
-      display: table;
-      width: 100%;
-      background: #fff; }
-      .clu table tbody tr > :nth-child(odd) {
-        background-color: #e7f2fb; }
-    .clu table tbody th {
-      padding: 1em; }
-      .clu table tbody th.channels {
-        width: 26%;
-        text-align: left;
-        background-color: #e7f2fb; }
-        .clu table tbody th.channels img {
-          vertical-align: bottom;
-          max-width: 5em;
-          max-height: 2em; }
-      .clu table tbody th .channel-name {
-        color: #333; }
-      .clu table tbody th .table-content {
-        color: #4596df; }
-    .clu table tbody td {
-      width: 18.5%;
-      padding: .5em;
-      color: #4596df;
-      font-size: 1.5em; }
-      .clu table tbody td .channel-name {
-        color: #333; }
-      .clu table tbody td .table-content {
-        color: #4596df; }
-  .clu table.packages-7 tbody td {
-    width: 10.5%; }
-  .clu table.packages-7 tbody th.channels {
-    width: 26%; }
-  .clu table.packages-6 tbody td {
-    width: 12.33%; }
-  .clu table.packages-6 tbody th.channels {
-    width: 26%; }
-  .clu table.packages-5 tbody td {
-    width: 14.8%; }
-  .clu table.packages-5 tbody th.channels {
-    width: 26%; }
-  .clu table.packages-3 tbody td {
-    width: 24.6%; }
-  .clu table.packages-3 tbody.channels {
-    width: 26%; }
+  border-collapse: collapse;
+}
+
+.clu table th, .clu table td {
+  border: 1px solid #b4d6f3;
+}
+
+.clu table thead {
+  display: table;
+  width: 100%;
+  background-color: #4997dc;
+}
+
+.clu table thead tr {
+  display: table-row;
+  width: 100%;
+}
+
+.clu table thead th {
+  width: 18.5%;
+  padding: 1em;
+  color: #fff;
+  font-weight: 100;
+}
+
+.clu table thead th.channels {
+  width: 26%;
+}
+
+.clu table.packages-7 thead th {
+  width: 10.5%;
+}
+
+.clu table.packages-7 thead th.channels {
+  width: 26%;
+}
+
+.clu table.packages-6 thead th {
+  width: 12.33%;
+}
+
+.clu table.packages-6 thead th.channels {
+  width: 26%;
+}
+
+.clu table.packages-5 thead th {
+  width: 14.8%;
+}
+
+.clu table.packages-5 thead th.channels {
+  width: 26%;
+}
+
+.clu table.packages-3 thead th {
+  width: 24.6%;
+}
+
+.clu table.packages-3 thead th.channels {
+  width: 26%;
+}
+
+.clu table tbody {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.clu table tbody tr {
+  display: table;
+  width: 100%;
+  background: #fff;
+}
+
+.clu table tbody tr > :nth-child(odd) {
+  background-color: #e7f2fb;
+}
+
+.clu table tbody th {
+  padding: 1em;
+}
+
+.clu table tbody th.channels {
+  width: 26%;
+  text-align: left;
+  background-color: #e7f2fb;
+}
+
+.clu table tbody th.channels img {
+  vertical-align: bottom;
+  max-width: 5em;
+  max-height: 2em;
+}
+
+.clu table tbody th .channel-name {
+  color: #333;
+}
+
+.clu table tbody th .table-content {
+  color: #4596df;
+}
+
+.clu table tbody td {
+  width: 18.5%;
+  padding: .5em;
+  color: #4596df;
+  font-size: 1.5em;
+}
+
+.clu table tbody td .channel-name {
+  color: #333;
+}
+
+.clu table tbody td .table-content {
+  color: #4596df;
+}
+
+.clu table.packages-7 tbody td {
+  width: 10.5%;
+}
+
+.clu table.packages-7 tbody th.channels {
+  width: 26%;
+}
+
+.clu table.packages-6 tbody td {
+  width: 12.33%;
+}
+
+.clu table.packages-6 tbody th.channels {
+  width: 26%;
+}
+
+.clu table.packages-5 tbody td {
+  width: 14.8%;
+}
+
+.clu table.packages-5 tbody th.channels {
+  width: 26%;
+}
+
+.clu table.packages-3 tbody td {
+  width: 24.6%;
+}
+
+.clu table.packages-3 tbody.channels {
+  width: 26%;
+}
 
 .clu .table-legend {
-  max-width: 33%; }
-  .clu .table-legend table thead th {
-    padding: 0.5em; }
-  .clu .table-legend table tbody th {
-    padding: 0.25em; }
-  .clu .table-legend table tbody td {
-    padding: 0; }
+  max-width: 33%;
+}
+
+.clu .table-legend table thead th {
+  padding: 0.5em;
+}
+
+.clu .table-legend table tbody th {
+  padding: 0.25em;
+}
+
+.clu .table-legend table tbody td {
+  padding: 0;
+}
 
 .clu .table-footer {
   display: block;
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 .clu .channel-logo {
-  margin-right: .5em; }
+  margin-right: .5em;
+}
 
 .clu fieldset.channel-search {
-  min-width: 100%; }
+  min-width: 100%;
+}
 
 .clu-wrapper .clu .box {
-  margin: 2em 0; }
+  margin: 2em 0;
+}
 
 .clu-wrapper .clu .link .tune-in-link {
   margin: 2em 0;
-  padding-bottom: 2em; }
+  padding-bottom: 2em;
+}
 
 @media (max-width: 40em) {
   .clu table {
     font-size: 10px;
-    font-size: 1rem; }
+    font-size: 1rem;
+  }
   .clu table thead th {
     padding-top: 0.5em;
     padding-right: 0;
     padding-bottom: 0.5em;
-    padding-left: 0; }
+    padding-left: 0;
+  }
   .clu table.packages-7 thead th {
-    width: 11.1%; }
+    width: 11.1%;
+  }
   .clu table.packages-7 thead th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-6 thead th {
-    width: 13%; }
+    width: 13%;
+  }
   .clu table.packages-6 thead th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-5 thead th {
-    width: 15.6%; }
+    width: 15.6%;
+  }
   .clu table.packages-5 thead th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-3 thead th {
-    width: 26%; }
+    width: 26%;
+  }
   .clu table.packages-3 thead th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table tbody th {
     padding-top: 0.5em;
     padding-right: 0.5em;
     padding-bottom: 0.5em;
-    padding-left: 0.5em; }
+    padding-left: 0.5em;
+  }
   .clu table tbody th .channel-logo {
-    display: none; }
+    display: none;
+  }
   .clu table tbody td {
     padding-top: 0.5em;
     padding-right: 0.5em;
     padding-bottom: 0.5em;
-    padding-left: 0.5em; }
+    padding-left: 0.5em;
+  }
   .clu table tbody td .channel-logo {
-    display: none; }
+    display: none;
+  }
   .clu table.packages-7 tbody td {
-    width: 11.1%; }
+    width: 11.1%;
+  }
   .clu table.packages-7 tbody th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-6 tbody td {
-    width: 13%; }
+    width: 13%;
+  }
   .clu table.packages-6 tbody th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-5 tbody td {
-    width: 15.6%; }
+    width: 15.6%;
+  }
   .clu table.packages-5 tbody th.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu table.packages-3 tbody td {
-    width: 26%; }
+    width: 26%;
+  }
   .clu table.packages-3 tbody.channels {
-    width: 22%; }
+    width: 22%;
+  }
   .clu .mobile-only {
-    display: block; }
+    display: block;
+  }
   .clu fieldset.channel-search {
-    min-width: 75%; } }
+    min-width: 75%;
+  }
+}
 
 @media (max-width: 48em) {
   .clu table tbody {
-    max-height: 350px; }
+    max-height: 350px;
+  }
   .clu .box .table-input {
-    border: none; } }
+    border: none;
+  }
+}
 
 /*# sourceMappingURL=clu.css.map */
