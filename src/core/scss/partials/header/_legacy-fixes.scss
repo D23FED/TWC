@@ -1,0 +1,258 @@
+// From allComponents.css
+/* Begin new Header*/
+
+.newHead .clickIcon > a, .header_v2 .smartLink > a {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5em 0;
+  margin-bottom: .5em;
+}
+.newHead li .clickIcon > a figure {
+  height: 24px;
+  margin: 0 auto;
+}
+.newHead li:hover .clickIcon > a img {
+  opacity: 1;
+}
+.newHead #header {
+  position: relative;
+}
+.newHead .newHeaderIcons, .header_v2 .newHeaderIcons {
+  float: right;
+  width: 70%;
+}
+.newHead .newHeaderIcons ul.horizontal > li, .header_v2 .newHeaderIcons .horizontal ul > li {
+  float: left;
+  width: 25%;
+}
+.newHead .newHeaderIcons ul.horizontal > li .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li span {
+  margin-top: 0.25em;
+}
+
+/* End Conversion to SCSS */
+
+.newHead .newHeaderIcons ul.horizontal > li:hover .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li:hover span {
+  color: #fff;
+}
+.newHead .newHeaderIcons ul.horizontal > li .noZip span,
+.newHead #header .cust-loc-dropdown .noZip {
+  color: #bd3300;
+}
+.newHead .cust-loc-dropdown.hiddenCheckboxDropdown figure {
+  max-width: 10%;
+  float: left;
+}
+.newHead .cust-loc-dropdown.hiddenCheckboxDropdown .geoLoc {
+  width: 90%;
+  float: right;
+}
+.newHead .cust-loc-dropdown.hiddenCheckboxDropdown .geoLoc input {
+  width: 70%;
+}
+.newHead .newHeaderIcons ul.horizontal > li:hover .noZip span,
+.newHead #header .cust-loc-dropdown .noZip:hover {
+  color: #f04b23;
+}
+.newHead #header input.hiddenCheckbox {
+  display: none;
+}
+.newHead .pushDown {
+  background: #fff;
+}
+.newHead .pushDown .twc-container {
+  padding: 0;
+}
+.newHead .pushDown .hiddenCheckboxDropdown {
+  display: none;
+  padding: 0.75em 1em;
+}
+.newHead .pushDown .hiddenCheckboxDropdown .hiddenCheckboxLabel {
+  float: right;
+  cursor: pointer;
+  font-size: 1.6rem;
+  width: 2%;
+  margin-right: 0;
+}
+.newHead .pushDown .hiddenCheckboxDropdown table {
+  width: 98%;
+}
+.newHead .pushDown .hiddenCheckboxDropdown table tr {
+  width: 100%;
+}
+.newHead .pushDown .hiddenCheckboxDropdown table tr td {
+  width: 60%;
+}
+.newHead .pushDown .hiddenCheckboxDropdown table tr td .localize-head {
+  margin-right: 1em;
+  font-size: 1.4rem;
+}
+.newHead .pushDown .hiddenCheckboxDropdown .twc-search-input-wrap {
+  text-align: center;
+}
+.newHead .pushDown .hiddenCheckboxDropdown .contentSearch .twc-search input {
+  width: 50%;
+}
+.newHead .newHeaderIcons ul.horizontal > li label {
+  display: block;
+  font-size: inherit;
+  height: 70%;
+  width: 100%;
+  cursor: pointer;
+}
+.newHead #header .cust-loc-dropdown,.newHead #header .search-dropdown,.header_v2 .twc-header .message-content,
+.header_v2 .newHeaderIcons .horizontal ul > li a, .newHead .newHeaderIcons ul.horizontal > li .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li span {
+  float: left;
+  width: 100%;
+}
+.newHead #header .cust-loc-dropdown,
+.newHead #header .search-dropdown,
+.header_v2 .twc-header .message-content {
+  position: relative;
+  background: #333;
+  padding: 2%;
+  color: #fff;
+}
+.newHead #header .hiddenCheckboxDropdown {
+  display: none;
+}
+.newHead #header .closeDropdown {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0.25em;
+  font-size: 2rem;
+  z-index: 9999;
+  cursor: pointer;
+}
+.newHead #header .closeDropdown:hover {
+  color: #777;
+}
+.newHead #header .twc-search-input-wrap {
+  width: 100%;
+}
+.newHead #header .search-dropdown .twc-search input {
+  margin: 0
+}
+.newHead #header .cta.geoloc-btn,
+.newHead #header .cta.search-btn {
+  width: auto;
+}
+.landscapeLabel {
+  display: none;
+}
+html.touch [class*="nav-menu-"] > a {
+  display: none;
+}
+html.touch [class*="nav-menu-"] > .landscapeLabel {
+  display: block;
+  font-family: "TWC Round Book";
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 0 1em;
+}
+.header_v2 .zipLabel p {
+  display: inherit;
+}
+.header_v2 li .smartLink > a img, .newHead li .clickIcon > a img {
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: .75;
+  max-height: 100%;
+}
+.header_v2 li .smartLink > a img {
+  margin-bottom: .5em;
+  padding: 0;
+}
+.header_v2 li:hover .smartLink > a img {
+  opacity: 1;
+}
+.header_v2 .twc-header {
+  position: relative;
+}
+.header_v2 .twc-header .smartLink .hidden p {
+  display: none;
+}
+.header_v2 .twc-header .twc-container, header.newHead > .twc-container {
+  overflow: visible;
+  display: table;
+  padding: 0.5em 0 0;
+}
+.header_v2 .newHeaderIcons .horizontal ul, .newHead .newHeaderIcons ul.horizontal {
+  text-align: right;
+  float: right;
+  width: 50%;
+}
+.header_v2 .newHeaderIcons .horizontal ul > li a, .newHead .newHeaderIcons ul.horizontal > li .offPage span,
+.newHead .newHeaderIcons ul.horizontal > li span {
+  text-align: center;
+}
+.header_v2 .newHeaderIcons .horizontal ul > li:hover a {
+  color: #fff;
+}
+.header_v2 #header .cust-loc-dropdown p.localize-head, .newHead #header .cust-loc-dropdown p.localize-head {
+  color: #3376B2;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.header_v2 .newHeaderIcons .horizontal ul > li a:before, .newHead .newHeaderIcons ul.horizontal > li span:before {
+  display: block;
+  font-size: 2.2rem;
+  margin: 0 auto 0.25em;
+}
+.header_v2 .twc-header .twc-search-input-wrap {
+  width: 100%;
+}
+.header_v2 .twc-header .twc-search input, .newHead #header .twc-search input {
+  width: 78%;
+  margin: 0 0 1em;
+}
+.header_v2 .twc-header .header-search .twc-search input {
+  margin: 0
+}
+.header_v2 .twc-header .cta.geoloc-btn,
+.header_v2 .twc-header .cta.search-btn {
+  width: auto;
+}
+.header_v2 .twc-header .searchResults, .newHead #header .searchResults {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-top: 1px solid;
+  margin: 0 -1% -1%;
+  padding: 1%;
+  width: 102%;
+}
+.header_v2 .smartLink div[data-modal] {
+  display: none;
+}
+.user-location_v2 .twc-customerLocation {
+  position: static;
+}
+
+// Imported from injection container .skip-to-content-header-icons-injection
+
+ // Hide the old empty header div that's included by the Header Banner component
+.header > .section > .header_v2 > .twc-header > .twc-container {
+    display: none;
+}
+
+// Hide top hat component in the campaigns
+#hide-tophat .header_v2 .twc-top{
+    display: none;
+
+}
+
+// Header icons space fix in desktop and mobile
+.newHead .newHeaderIcons ul.horizontal > li,
+.header_v2 .newHeaderIcons .horizontal ul > li {
+    width: 20%;
+}
+
+@media (max-width: 40em) {
+  .newHead .newHeaderIcons ul.horizontal > li,
+  .header_v2 .newHeaderIcons .horizontal ul > li {
+    width: 33%;
+  }
+}
