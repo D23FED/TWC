@@ -500,6 +500,10 @@
     border: solid transparent;
     border-width: 0 0 0 1px;
     border-image: url("../images/tall-divider-gray.png") 2 2 stretch stretch;
+    #site-header & {
+    	border-width: 0;
+    	border-style: none;
+    }
     &:first-child {
       border-image: none;
     }
