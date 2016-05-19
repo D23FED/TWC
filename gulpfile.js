@@ -25,7 +25,7 @@ var
 		$.autoprefixer({
 			browsers: 'last 3 versions'
 		}),
-		$.postcssFilterGradient,
+		// $.postcssFilterGradient,
 		$.pixrem({
 			rootValue: 10,
 			atrules: true,
@@ -116,8 +116,9 @@ g.task('style-all', function() {
 g.task('style-core', function() {
 	return g.src(
 			[paths.source + 'core/scss/main.scss', '!node_modules/**/*'], {
-				base: './src/'
+				base: paths.source
 			})
+		.pipe($.sourcemaps.init())
 		// .pipe($.newer({
 		// 	dest: paths.dist,
 		// 	map: mapNewer,
@@ -128,7 +129,6 @@ g.task('style-core', function() {
 			title: 'Processing:'
 		}))
 		// Begin recording sourcemaps
-		.pipe($.sourcemaps.init())
 		// Compile Sass
 		.pipe($.sass({
 			includePaths: sassIncludePaths,
@@ -138,12 +138,12 @@ g.task('style-core', function() {
 		// CSS processing
 		.pipe($.postcss(postCssProcessors))
 		// Write Sourcemaps
-		.pipe($.sourcemaps.write('.'))
 		.pipe($.rename(function(path) {
 			path.dirname = path.dirname.replace('scss', 'css');
 			path.basename += '.min';
 			return path;
 		}))
+		.pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
 		.pipe(g.dest(paths.dist))
 		// .pipe(browserSync.stream({match: '**/*.css'}));
