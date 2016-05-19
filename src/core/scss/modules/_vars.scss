@@ -3,16 +3,16 @@
 	@return ($pixels / $base) * 1em;
 }
 @function px-to-rem($pixels, $base: 0.1) {
-	@return ($pixels * $base) * 0.1rem;
+	@return ($pixels * $base) * 1rem;
 }
 // TWC sitewide variables
 $site-width: 980px;
 $fixed-width-container: $site-width;
 
 // TWC Residential Breakpoints
-$small: px-to-em(640); // 40em 'Tablet'
-$medium: px-to-em(768); // 48em 'Desktop'
-$big: px-to-em(1100); // 68.75em 'Widescreen'
+$small: px-to-em(640);  // 40em    'Tablet'
+$medium: px-to-em(768); // 48em    'Desktop'
+$big: px-to-em(1100);   // 68.75em 'Widescreen'
 // 'Mobile'
 $screen-xs: px-to-em(425);
 
