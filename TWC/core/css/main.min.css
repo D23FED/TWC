@@ -2777,6 +2777,56 @@ li.twc-drop-nav.js-persist a.twc-change:after {
   background: none;
 }
 
+.messagebox-wrapper {
+  display: none;
+  background: #fff;
+  padding: 0.75em 1em;
+}
+
+.messagebox-wrapper img {
+  max-width: 10%;
+  float: left;
+}
+
+.messagebox-wrapper p {
+  color: #000;
+}
+
+.messagebox-wrapper .geoLoc {
+  width: 90%;
+  float: right;
+}
+
+.messagebox-wrapper .geoLoc input {
+  width: 70%;
+}
+
+.messagebox-wrapper .close-message {
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1.6rem;
+  width: 2%;
+  margin-right: 0;
+}
+
+.messagebox-wrapper .twc-search-input-wrap {
+  text-align: center;
+}
+
+.messagebox-wrapper .twc-search-input-wrap .cta {
+  vertical-align: top;
+}
+
+.messagebox-wrapper .header-search .twc-search input {
+  width: 50%;
+  height: 35px;
+}
+
+.header-search.omega .cta button {
+  height: 35px;
+}
+
 /* ==========================================================================
     Footer -- Version: 1.9.0.0 - Updated: 12/29/2013
    ========================================================================== */
@@ -19206,6 +19256,9 @@ input.comparePackage.js-alert ~ .alertTooltip {
   }
   .twc-banner h1 + span {
     width: 100%;
+  }
+  .messagebox-wrapper .header-search .twc-search input {
+    width: 77%;
   }
   .twc-footer {
     padding: 0;
