@@ -36,10 +36,15 @@
 	<meta name="keywords" content="<?=$keywords?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<title><?php the_title() ?></title>
+	<title><?php the_title(); ?></title>
 	<link rel="icon" href="/TWC/core/images/favicon.ico" type="image/x-icon">
 
 	<!-- Global Element & Page CSS -->
+	<?php
+		if ( isset($includeLiveCss) && ($includeLiveCss == true) ) {
+			include_once('live-style.php');
+		}
+	?>
 	<link rel="stylesheet" href="/TWC/core/css/main.min.css">
 	<?php
 		if ( (isset($componentName)) && ($componentName !='') ) { echo '<link rel="stylesheet" href="css/' . $componentName . '.css">'; }

@@ -1,33 +1,34 @@
 <?php
 // Set Page variable values
 // header.php variables
-$title         = 'Package Select';
-$description   = '';
-$keywords      = '';
-$body_ID       = '';
-$tophat        = true;
-$logoHeader    = false;
-$nav           = true;
-$subNav        = true;
-$subNavSection = 'Support';
-$alert         = false; // 'false' or alert text
-$breadcrumbs   = false;
-$banner        = false;
-$supportSearch = false;
-$content       = true;
-$footer        = true;
-$container     = false;
+$title          = 'Global Header';
+$description    = '';
+$keywords       = '';
+$body_ID        = '';
+$tophat         = true;
+$logoHeader     = false;
+$nav            = true;
+$subNav         = true;
+$subNavSection  = 'Support';
+$alert          = false; // 'false' or alert text
+$breadcrumbs    = false;
+$banner         = false;
+$supportSearch  = false;
+$content        = true;
+$footer         = true;
+$container      = false;
+$includeLiveCss = true;
 // primary breadcrumb
-$breadcrumb_A  = '';
+$breadcrumb_A   = '';
 // secondary breadcrumb
-$breadcrumb_B  = '';
+$breadcrumb_B   = '';
 // secondary breadcrumb
-$breadcrumb_C  = '';
+$breadcrumb_C   = '';
 // banner.php variables
 // Banner Title - H1 tag
-$banner_title  = '';
+$banner_title   = '';
 // content.php variables
 // SubHead text
-$subHead       = '';
+$subHead        = '';
 
 ?>
