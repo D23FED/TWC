@@ -3,30 +3,42 @@
    ========================================================================== */
 .operationalMessage .twc-box-column {
   padding: 1em;
-  background: #e1ecf5; }
+  background: #e1ecf5;
+}
 
 .operationalMessage .notices {
   width: 8%;
-  border-right: 1px solid #666; }
+  border-right: 1px solid #666;
+}
 
 .operationalMessage .marquee-messages {
   width: 84%;
   margin: 0 auto;
-  text-align: center; }
-  .operationalMessage .marquee-messages ul {
-    margin-bottom: 0; }
-  .operationalMessage .marquee-messages li {
-    display: none; }
+  text-align: center;
+}
+
+.operationalMessage .marquee-messages ul {
+  margin-bottom: 0;
+}
+
+.operationalMessage .marquee-messages li {
+  display: none;
+}
 
 .operationalMessage .controls {
   display: none;
   width: 3%;
-  text-align: right; }
-  .operationalMessage .controls span {
-    cursor: pointer; }
-  @media (max-width: 48em) {
+  text-align: right;
+}
+
+.operationalMessage .controls span {
+  cursor: pointer;
+}
+
+@media (max-width: 48em) {
   .operationalMessage .notices {
-    border: 0; }
+    border: 0;
+  }
   .operationalMessage .marquee-messages {
     display: block;
     width: 100%;
@@ -34,11 +46,17 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    text-align: left; }
+    text-align: left;
+  }
   .operationalMessage .controls {
-    width: 6%; } }
-  @media (max-width: 40em) {
+    width: 6%;
+  }
+}
+
+@media (max-width: 40em) {
   .operationalMessage .controls {
-    width: 10%; } }
+    width: 10%;
+  }
+}
 
 /*# sourceMappingURL=operationalMessage.css.map */

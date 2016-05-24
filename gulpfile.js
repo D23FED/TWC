@@ -25,7 +25,7 @@ var
 		$.autoprefixer({
 			browsers: 'last 3 versions'
 		}),
-		$.postcssFilterGradient,
+		// $.postcssFilterGradient,
 		$.pixrem({
 			rootValue: 10,
 			atrules: true,
@@ -44,6 +44,15 @@ var
 		dist: 'twc/',
 		css: 'css/'
 	},
+	sassIncludePaths = [
+		'src',
+		'src/core',
+		'src/core/scss',
+		'src/core/scss/partials',
+		'src/core/scss/modules',
+		'style',
+		'scss'
+	],
 	globs = {
 		css: './css/**',
 		sass: '**/*.scss',
@@ -55,9 +64,12 @@ var
 	};
 
 // Tasks
-g.task('style', function() {
-	return g.src(
-			[paths.source + globs.sass, '!node_modules/**/*'], {
+g.task('style-all', function() {
+	return g.src([
+			paths.source + globs.sass,
+			'!node_modules/**/*',
+			'!' + paths.source + 'core/'  + globs.sass,
+			], {
 				base: './src/'
 			})
 		// Only process changed files
@@ -77,15 +89,7 @@ g.task('style', function() {
 		.pipe($.sourcemaps.init())
 		// Compile Sass
 		.pipe($.sass({
-			includePaths: [
-				'src',
-				'src/core',
-				'src/core/scss',
-				'src/core/scss/partials',
-				'src/core/scss/modules',
-				'style',
-				'scss'
-			],
+			includePaths: sassIncludePaths,
 			outputStyle: 'expanded',
 			precision: 1
 		}))
@@ -97,6 +101,49 @@ g.task('style', function() {
 			path.dirname = path.dirname.replace('scss', 'css');
 			return path;
 		}))
+		// Write CSS to disk
+		.pipe(g.dest(paths.dist))
+		// .pipe(browserSync.stream({match: '**/*.css'}));
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: true
+		}))
+		.on('end', function() {
+			$.util.log('CSS Processed');
+		})
+});
+
+g.task('style-core', function() {
+	return g.src(
+			[paths.source + 'core/scss/main.scss', '!node_modules/**/*'], {
+				base: paths.source
+			})
+		.pipe($.sourcemaps.init())
+		// .pipe($.newer({
+		// 	dest: paths.dist,
+		// 	map: mapNewer,
+		// 	ext: '.css'
+		// }))
+		// Output names of files being processed
+		.pipe($.debug({
+			title: 'Processing:'
+		}))
+		// Begin recording sourcemaps
+		// Compile Sass
+		.pipe($.sass({
+			includePaths: sassIncludePaths,
+			outputStyle: 'expanded',
+			precision: 1
+		}))
+		// CSS processing
+		.pipe($.postcss(postCssProcessors))
+		// Write Sourcemaps
+		.pipe($.rename(function(path) {
+			path.dirname = path.dirname.replace('scss', 'css');
+			path.basename += '.min';
+			return path;
+		}))
+		.pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
 		.pipe(g.dest(paths.dist))
 		// .pipe(browserSync.stream({match: '**/*.css'}));
@@ -232,8 +279,12 @@ g.task('watch', function() {
 g.task('markup',
 	g.parallel('jade', 'html', 'php'));
 
+g.task('style',
+	g.parallel('style-all', 'style-core'));
+
 g.task('default',
 	g.parallel('style', 'markup', 'scripts', 'images'));
+
 
 // g.task('serve', ['style'], function() {
 //   $.browserSync.init({

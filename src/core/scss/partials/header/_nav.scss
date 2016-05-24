@@ -1,5 +1,5 @@
 // Pull modules for individually compiled css files
-@import "../modules/allModules";
+@import 'init';
 
 /* ==========================================================================
     Main Navigation -- Version: 1.8.9.9 - Updated: 9/26/2013
@@ -223,13 +223,13 @@ li.twc-drop-nav.persist a.twc-change:after {
   li {
     a, span {
       border: medium none;
-      color: #3376B2;
-      font-family: 'TWC Round Book',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
-      font-weight: 400;
-      line-height: 1;
-      padding: 0 0 1em 0;
-      font-size: 14px;
-      font-size: 1.4rem;
+      // color: #3376B2;
+      // font-family: 'TWC Round Book',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
+      // font-weight: 400;
+      // line-height: 1;
+      // padding: 0 0 1em 0;
+      // font-size: 14px;
+      // font-size: 1.4rem;
     }
     a {
       &:hover {
@@ -237,7 +237,7 @@ li.twc-drop-nav.persist a.twc-change:after {
       }
     }
     span {
-      color: #333;
+      // color: #333;
     }
   }
   [class*="nav-menu-"] {
@@ -738,7 +738,7 @@ li.twc-drop-nav.persist a.twc-change:after {
     }
     li {
       a, span {
-        font-family: Arial,'TWC Round Book',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
+        // font-family: Arial,'TWC Round Book',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
       }
     }
   }

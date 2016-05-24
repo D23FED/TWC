@@ -4,50 +4,82 @@
 .generic-accordion {
   cursor: default;
   /* .accordion-link */
-  /* .details */ }
-  .generic-accordion .accordion-link {
-    /* &.nostyle */ }
-    .generic-accordion .accordion-link.nostyle {
-      padding: .675em 0;
-      border-radius: 0;
-      /* a */
-      /* &.empty */ }
-      .generic-accordion .accordion-link.nostyle * {
-        display: inline; }
-      .generic-accordion .accordion-link.nostyle a {
-        color: #3376b2;
-        /* &:after */
-        /* &:active */ }
-        .generic-accordion .accordion-link.nostyle a:after {
-          font-family: 'FontAwesome', sans-serif;
-          content: "\f107";
-          padding-left: .5em; }
-        .generic-accordion .accordion-link.nostyle a.active {
-          /* &:after */ }
-          .generic-accordion .accordion-link.nostyle a.active:after {
-            content: "\f106"; }
-      .generic-accordion .accordion-link.nostyle.empty {
-        /* a */ }
-        .generic-accordion .accordion-link.nostyle.empty a {
-          color: #333333; }
-          .generic-accordion .accordion-link.nostyle.empty a:after {
-            content: none; }
-          .generic-accordion .accordion-link.nostyle.empty a.active:after {
-            content: none; }
-  .generic-accordion .details {
-    display: none;
-    margin-top: .5em;
-    clear: both; }
-  .generic-accordion .hidedetails {
-    display: none; }
-  .generic-accordion .center {
-    clear: both;
-    text-align: center; }
-  .generic-accordion .clearcss {
-    clear: both; }
+  /* .details */
+}
+
+.generic-accordion .accordion-link {
+  /* &.nostyle */
+}
+
+.generic-accordion .accordion-link.nostyle {
+  padding: .675em 0;
+  border-radius: 0;
+  /* a */
+  /* &.empty */
+}
+
+.generic-accordion .accordion-link.nostyle * {
+  display: inline;
+}
+
+.generic-accordion .accordion-link.nostyle a {
+  color: #3376b2;
+  /* &:after */
+  /* &:active */
+}
+
+.generic-accordion .accordion-link.nostyle a:after {
+  font-family: 'FontAwesome', sans-serif;
+  content: "\f107";
+  padding-left: .5em;
+}
+
+.generic-accordion .accordion-link.nostyle a.active {
+  /* &:after */
+}
+
+.generic-accordion .accordion-link.nostyle a.active:after {
+  content: "\f106";
+}
+
+.generic-accordion .accordion-link.nostyle.empty {
+  /* a */
+}
+
+.generic-accordion .accordion-link.nostyle.empty a {
+  color: #333333;
+}
+
+.generic-accordion .accordion-link.nostyle.empty a:after {
+  content: none;
+}
+
+.generic-accordion .accordion-link.nostyle.empty a.active:after {
+  content: none;
+}
+
+.generic-accordion .details {
+  display: none;
+  margin-top: .5em;
+  clear: both;
+}
+
+.generic-accordion .hidedetails {
+  display: none;
+}
+
+.generic-accordion .center {
+  clear: both;
+  text-align: center;
+}
+
+.generic-accordion .clearcss {
+  clear: both;
+}
 
 /* .generic-accordion */
 .generic-accordion .accordion-link.right ~ .generic-accordion-cta {
-  padding-right: 5px; }
+  padding-right: 5px;
+}
 
 /*# sourceMappingURL=generic-accordion.css.map */

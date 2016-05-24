@@ -1,32 +1,22 @@
-@import "modules/allModules";
+@import "init";
 
-/* ==========================================================================
-    Base
-   ========================================================================== */
-
+// Base
 @import "partials/base";
 
-/* ==========================================================================
-    Layout
-   ========================================================================== */
-
+// Layout
 @import
 	"partials/layout",
-	"partials/browserAlerts",
+	"partials/header/browserAlerts",
+	"partials/header/legacy",
 	"partials/header",
-	"partials/newHeader",
-	"partials/userLocation",
-	"partials/nav",
-	"partials/subNav",
+	"partials/header/userLocation",
 	"partials/alerts",
 	"partials/banner",
 	"partials/breadcrumbs",
+	"partials/message-box",
 	"partials/footer";
 
-/* ==========================================================================
-    Modules
-   ========================================================================== */
-
+// Modules
 @import
 	"partials/typography",
 	"partials/colors",
