@@ -6,7 +6,7 @@
 Remove this rule: */
 
 .offerBar .cta a {
-		padding: 0.5em 1em;
+	padding: 0.5em 1em;
 }
 
 /* ================================
@@ -17,7 +17,7 @@ Remove this rule: */
 
 #site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
 #site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
-		color: #00549f;
+	color: #00549f;
 }
 
 /*This was possibly added to fix the issue with the form label color under the "My Account".
@@ -26,7 +26,7 @@ If we remove the first rule (affecting the A tags) but keep the second rule (aff
 /* Remove first rule, example below: */
 /*#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a, */
 #site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
-		color: #00549f;
+	color: #00549f;
 }
 
 /* It appears that JS is adding the inline style (the bug does not occur until JS has had a chance to fire). */
@@ -109,7 +109,7 @@ h4, .h4  {
 /* pages.css */
 /* Line 868 */
 /* Selector: #site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label */
-/*Replace current font-size declarations with:*/
+/* Replace current font-size declarations with: */
 font-size: 13px;
 font-size: 1.3rem;
 
@@ -122,3 +122,70 @@ font-size: 1.3rem;
 /* Selector: .twc-logo */
 /* Replace current margin-top declaration with: */
 margin-top: 1em;
+
+/* ================================
+As per styleguide, hover on SmartLinks should change color (bright sky blue) and be underlined.
+================================ */
+
+/* pages.css */
+/* line 902 */
+/* Insert this after this rule:
+		#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a
+*/
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a:hover {
+  color: #02a9e0;
+}
+
+/* pages.css */
+/* line 935 */
+/* Insert this after this rule:
+		#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a
+*/
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:hover {
+  color: #02a9e0;
+}
+
+/* ================================
+Scroll for more should be #02A9E0
+================================ */
+
+/* allComponentsCss.css */
+/* line 4929*/
+.scroll-indicator .scroll-marker .scroll-marker-wrapper a > span {
+	/* change*/
+	background: #0289E0;
+	/* to */
+	background: #02a9e0;
+}
+
+/* ================================
+BUG3313 Mega Menu > Menu closes when user moves mouse out of header texts and hovers to dropdown
+================================ */
+
+/* pages.css */
+/* line 863 */
+/* Rule:  */
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
+	/* add: */
+  display: inline-block
+}
+
+/* line 890 */
+#site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+	/* change: */
+  top: 7px;
+  /* to: */
+  top: -11px;
+}
+
+/* (inside 48em media query) */
+@media (max-width: 48em) {
+	/* ... */
+	/* line 976 */
+	/* after existing rule, add new rule : */
+	#site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+		top: 7px;
+	}
+	/* ... */
+}
+
