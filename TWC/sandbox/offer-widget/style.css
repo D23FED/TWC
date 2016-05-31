@@ -1,0 +1,117 @@
+#offer-widget {
+  position: relative;
+}
+
+#offer-widget > .parsys > .twc-container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#offer-widget .richtext.section,
+#offer-widget .form.section,
+#offer-widget .cta.section {
+  float: left;
+}
+
+#offer-widget .richtext.section {
+  width: 20%;
+}
+
+#offer-widget .richtext.section .title {
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #00549f;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 6px;
+  height: 30px;
+  position: relative;
+}
+
+#offer-widget .richtext.section .title::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #00549f;
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
+#offer-widget .richtext.section .description {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#offer-widget .form.section {
+  width: 60%;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul {
+  display: table;
+  width: 100%;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems {
+  display: table-row;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox {
+  display: table-cell;
+  width: 33%;
+  padding-top: 50px;
+  background-image: url("http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-tv-icon.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox:nth-of-type(2) {
+  background-image: url("http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-internet-icon.png");
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox:nth-of-type(3) {
+  background-image: url("http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-phone-icon.png");
+  background-position: center -5px;
+  background-size: 14%;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox input[type='checkbox'] {
+  float: none;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox > li {
+  text-align: center;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox .formitem {
+  display: inline-block;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox .checkboxLabel {
+  display: inline-block;
+}
+
+#offer-widget .form.section .checkboxCollection .formFieldLabel + ul .checkboxItems > .checkbox .checkboxLabel p {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+#offer-widget .cta.section {
+  width: 20%;
+  margin-right: 0;
+}
+
+#offer-widget .cta.section a {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/*# sourceMappingURL=style.css.map */
