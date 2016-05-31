@@ -157,14 +157,11 @@
 	column-gap: $gap;
 }
 
+// Updated clearfix. http://cssmojo.com/the-very-latest-clearfix-reloaded/
 @mixin clearfix {
-	&:before,
-	&:after {
-		content: ' ';
-		display: table;
-	}
-
-	&:after {
+	&::after {
+		content: '';
+		display: block;
 		clear: both;
 	}
 }
