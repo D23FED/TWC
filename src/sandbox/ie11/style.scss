@@ -1,0 +1,61 @@
+@import 'init';
+
+$i: '.icon-angle-right';
+$width: 10px;
+$col1: '.twc-col3_333333-c0';
+$col2: '.twc-col3_333333-c1';
+$col3: '.twc-col3_333333-c2';
+#{$col1} {
+	#{$i} {
+		span,
+		span::after {
+		}
+		span {
+			white-space: pre-wrap;
+		}
+		span::after {
+			white-space: nowrap;
+		}
+	}
+}
+#{$col2} {
+	#{$i} {
+		span,
+		span::after {
+		}
+		span {
+			white-space: pre-wrap;
+		}
+		span::after {
+			// white-space: nowrap;
+		}
+	}
+}
+#{$col3} {
+		#{$i} {
+			span,
+			span::after {
+				display: inline-block;
+			}
+			span::after {
+				width: $width;
+				margin-right: -$width;
+				position: relative;
+				top: 0;
+			}
+		}
+}
+// #{$col1} {
+// 	#{$i} {
+// 		span,
+// 		span::after {
+// 			display: inline-block;
+// 		}
+// 		span::after {
+// 			width: $width;
+// 			margin-right: -$width;
+// 			position: relative;
+// 			top: 0;
+// 		}
+// 	}
+// }

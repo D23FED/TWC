@@ -1,0 +1,25 @@
+.twc-col3_333333-c0 .icon-angle-right span {
+  white-space: pre-wrap;
+}
+
+.twc-col3_333333-c0 .icon-angle-right span::after {
+  white-space: nowrap;
+}
+
+.twc-col3_333333-c1 .icon-angle-right span {
+  white-space: pre-wrap;
+}
+
+.twc-col3_333333-c2 .icon-angle-right span,
+.twc-col3_333333-c2 .icon-angle-right span::after {
+  display: inline-block;
+}
+
+.twc-col3_333333-c2 .icon-angle-right span::after {
+  width: 10px;
+  margin-right: -10px;
+  position: relative;
+  top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
