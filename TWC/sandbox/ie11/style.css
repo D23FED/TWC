@@ -1,25 +1,30 @@
-.twc-col3_333333-c0 .icon-angle-right span {
-  white-space: pre-wrap;
+.smartLink[class*='icon-after'] span::after {
+  margin-left: 2.5px;
+  margin-left: .25rem;
 }
 
-.twc-col3_333333-c0 .icon-angle-right span::after {
-  white-space: nowrap;
+.smartLink[class*='icon-after'].icon-double-angle-left span::after {
+  content: '\00a0\f100';
 }
 
-.twc-col3_333333-c1 .icon-angle-right span {
-  white-space: pre-wrap;
+.smartLink[class*='icon-after'].icon-double-angle-right span::after {
+  content: '\00a0\f101';
 }
 
-.twc-col3_333333-c2 .icon-angle-right span,
-.twc-col3_333333-c2 .icon-angle-right span::after {
-  display: inline-block;
+.smartLink[class*='icon-after'].icon-angle-left span::after {
+  content: '\00a0\f104';
 }
 
-.twc-col3_333333-c2 .icon-angle-right span::after {
-  width: 10px;
-  margin-right: -10px;
-  position: relative;
-  top: 0;
+.smartLink[class*='icon-after'].icon-angle-right span::after {
+  content: '\00a0\f105';
+}
+
+.smartLink[class*='icon-after'].icon-angle-up span::after {
+  content: '\00a0\f106';
+}
+
+.smartLink[class*='icon-after'].icon-angle-down span::after {
+  content: '\00a0\f107';
 }
 
 /*# sourceMappingURL=style.css.map */

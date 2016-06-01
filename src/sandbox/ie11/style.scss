@@ -1,61 +1,40 @@
 @import 'init';
 
-$i: '.icon-angle-right';
-$width: 10px;
-$col1: '.twc-col3_333333-c0';
-$col2: '.twc-col3_333333-c1';
-$col3: '.twc-col3_333333-c2';
-#{$col1} {
-	#{$i} {
-		span,
+.smartLink {
+	&[class*='icon-after'] {
+		// Reduce margin to compensate for non-breaking space
 		span::after {
+			margin-left: .25rem;
 		}
-		span {
-			white-space: pre-wrap;
+
+		// Double Angle Left
+		&.icon-double-angle-left span::after {
+			content: '\00a0\f100';
 		}
-		span::after {
-			white-space: nowrap;
+
+		// Double Angle Right
+		&.icon-double-angle-right span::after {
+			content: '\00a0\f101';
+		}
+
+		// Angle Left
+		&.icon-angle-left span::after {
+			content: '\00a0\f104';
+		}
+
+		// Angle Right
+		&.icon-angle-right span::after {
+			content: '\00a0\f105';
+		}
+
+		// Angle Up
+		&.icon-angle-up span::after {
+			content: '\00a0\f106';
+		}
+
+		// Angle Down
+		&.icon-angle-down span::after {
+			content: '\00a0\f107';
 		}
 	}
 }
-#{$col2} {
-	#{$i} {
-		span,
-		span::after {
-		}
-		span {
-			white-space: pre-wrap;
-		}
-		span::after {
-			// white-space: nowrap;
-		}
-	}
-}
-#{$col3} {
-		#{$i} {
-			span,
-			span::after {
-				display: inline-block;
-			}
-			span::after {
-				width: $width;
-				margin-right: -$width;
-				position: relative;
-				top: 0;
-			}
-		}
-}
-// #{$col1} {
-// 	#{$i} {
-// 		span,
-// 		span::after {
-// 			display: inline-block;
-// 		}
-// 		span::after {
-// 			width: $width;
-// 			margin-right: -$width;
-// 			position: relative;
-// 			top: 0;
-// 		}
-// 	}
-// }
