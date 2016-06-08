@@ -2,8 +2,10 @@
  4.	CTA in Promostrip is thinner than all other CTAs
 ================================ */
 
-/* This is caused by CSS in the "hp-custom-css" injection container
-Remove this rule: */
+/*
+This is caused by CSS in the "hp-custom-css" injection container
+Remove this rule:
+*/
 
 .offerBar .cta a {
 	padding: 0.5em 1em;
@@ -13,31 +15,25 @@ Remove this rule: */
 5.	Hover (or tap) on Top-Nav items should make the highlighted font color white not blue
 ================================ */
 
-/*An inline style is causing this bug:*/
+/*
+The inline style causing this bug has been removed from prod.
+However, we must set form LABELs in the form under the "My Account" mega menu to correct their color (current done via injection)
+add this rule
+pages.css, after line 862
+ */
 
-#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
-#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
-	color: #00549f;
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover form label {
+  color: #000;
 }
-
-/*This was possibly added to fix the issue with the form label color under the "My Account".
-If we remove the first rule (affecting the A tags) but keep the second rule (affecting the LABEL tags) this should fix the issue with the link hover color without affecting the form label color. */
-
-/* Remove first rule, example below: */
-/*#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a, */
-#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
-	color: #00549f;
-}
-
-/* It appears that JS is adding the inline style (the bug does not occur until JS has had a chance to fire). */
 
 /* ================================
 6.	Top Nav is css-hard-coded to ALL CAPS on tablet portrait (626px – 750px), should not be
 ================================ */
 
-/* This is being caused by the allComponents.css, inside the tablet media query. This rule should be removed: */
-/* allComponents.css */
-/* line 7659 */
+/*
+This is being caused by the allComponents.css, inside the tablet media query. This rule should be removed:
+allComponents.css, line 7659
+*/
 .new-mega-menu .twc-new-navigation .twc-new-nav label {
 	text-transform: uppercase;
 }
@@ -46,9 +42,10 @@ If we remove the first rule (affecting the A tags) but keep the second rule (aff
 7.	MegaMenu header on tablet portrait (626px – 750px) shows a huge font-size, should be same as mobile
 ================================ */
 
-/* This is caused by an !important flag in the injected css "hp-custom-css": */
-
-/* Code excerpt: */
+/*
+This is caused by an !important flag in the injected css "hp-custom-css":
+Code excerpt:
+*/
 
 /**TABLET HEADINGS**/
 
@@ -73,11 +70,11 @@ h4, .h4  {
 8.	Links breaking into two lines seem like two different links dues to spacing - WEBCMS-20973. Dan will take a look.
 ================================ */
 
-/* Need to change spacing between items to be margin-based, not based on line-height */
-
-/* pages.css */
-/* line 26 */
-/* Add this declaration (change margin-bottom from '0' to '0.5rem') :*/
+/*
+Need to change spacing between items to be margin-based, not based on line-height
+Add this declaration (change margin-bottom from '0' to '0.5rem')
+pages.css, line 26
+*/
 .twc-footer h3.label {
 	/*...*/
 	margin-bottom: 5px;
@@ -106,10 +103,11 @@ h4, .h4  {
 13.	Since we killed the More on mobile, do you want to make the mobile top-nav font larger?
 ================================ */
 
-/* pages.css */
-/* Line 868 */
-/* Selector: #site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label */
-/* Replace current font-size declarations with: */
+/*
+pages.css, Line 868
+Selector: #site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label
+Replace current font-size declarations with:
+*/
 font-size: 13px;
 font-size: 1.3rem;
 
@@ -117,29 +115,29 @@ font-size: 1.3rem;
 15.	Logo margin-top: make it 1em.
 ================================ */
 
-/* pages.css */
-/* Line 642 */
-/* Selector: .twc-logo */
-/* Replace current margin-top declaration with: */
+/*
+pages.css, Line 642
+Selector: .twc-logo
+Replace current margin-top declaration with:
+*/
 margin-top: 1em;
 
 /* ================================
 As per styleguide, hover on SmartLinks should change color (bright sky blue) and be underlined.
 ================================ */
 
-/* pages.css */
-/* line 902 */
-/* Insert this after this rule:
-		#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a
+/* pages.css, line 902
+Insert this after this rule:
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a
 */
 #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a:hover {
   color: #02a9e0;
 }
 
-/* pages.css */
-/* line 935 */
-/* Insert this after this rule:
-		#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a
+/*
+pages.css, line 935
+Insert this after this rule:
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a
 */
 #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:hover {
   color: #02a9e0;
@@ -149,8 +147,9 @@ As per styleguide, hover on SmartLinks should change color (bright sky blue) and
 Scroll for more should be #02A9E0
 ================================ */
 
-/* allComponentsCss.css */
-/* line 4929*/
+/*
+allComponentsCss.css, line 4929
+*/
 .scroll-indicator .scroll-marker .scroll-marker-wrapper a > span {
 	/* change*/
 	background: #0289E0;
@@ -162,9 +161,10 @@ Scroll for more should be #02A9E0
 BUG3313 Mega Menu > Menu closes when user moves mouse out of header texts and hovers to dropdown
 ================================ */
 
-/* pages.css */
-/* line 863 */
-/* Rule:  */
+/*
+pages.css, line 863
+Rule:
+*/
 #site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
 	/* add: */
   display: inline-block
