@@ -1,26 +1,20 @@
 <?php
-
-	// Load End Content closing tags
+	// Close content tags
 	if ( (isset($content)) && ($content === true) ) {
-		include(CORE_INC . 'endContent.php');
+		include(CORE_INC.'endContent.php');
 	}
-
-	// Load Sticky Bar if present
+	// Sticky Bar
   if ( (isset($sticky)) && ($sticky === true) ) {
-   	include_once(CORE_INC . 'sticky.php');
+   	include_once(CORE_INC.'sticky.php');
   }
-
-	// Load Footer
+	// Footer
 	if ( (isset($footer)) && ($footer === true) ) {
-		include(CORE_INC . 'foot.php');
+		include(CORE_INC.'foot.php');
 	}
-
-	// Conditionally Load Sticky Footer if required
+	// Sticky Footer
 	if ( (isset($stickyFooter)) && ($stickyFooter === true) ) {
-		include_once(CORE_INC . 'stickyFooter.php');
+		include_once(CORE_INC.'stickyFooter.php');
 	}
-
 	// Close the page
-		include(CORE_INC . 'close.php');
-
+	include_once(CORE_INC.'close.php');
 ?>

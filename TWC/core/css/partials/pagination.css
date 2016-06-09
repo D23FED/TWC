@@ -2,88 +2,132 @@
     Pagination -- Version: 1.9.0.0 - Updated: 12/29/2013
    ========================================================================== */
 .pagination {
-  margin-bottom: .5em; }
-  .pagination ol {
-    margin: 0;
-    padding: 0; }
-  .pagination li {
-    display: inline;
-    position: relative; }
-    .pagination li.page_first, .pagination li.page_prev, .pagination li.page_next, .pagination li.page_last {
-      display: block; }
-    .pagination li .cta a {
-      background-image: none;
-      background-color: #f0f5fa;
-      color: #3376B2; }
-      .pagination li .cta a:hover {
-        background-image: none;
-        background-color: #c5d7e8; }
-      .pagination li .cta a:active, .pagination li .cta a:focus {
-        background-image: none;
-        background-color: rgba(255, 255, 255, 0);
-        color: #333; }
-    .pagination li .cta.disabled a {
-      background-image: none;
-      background-color: rgba(255, 255, 255, 0);
-      color: #333; }
-      .pagination li .cta.disabled a:hover {
-        background-image: none;
-        background-color: rgba(255, 255, 255, 0);
-        color: #333; }
-      .pagination li .cta.disabled a:active:hover {
-        background-image: none;
-        background-color: rgba(255, 255, 255, 0);
-        color: #333; }
-    .pagination li .cta .prev:before {
-      content: '\f104';
-      font-family: "FontAwesome";
-      padding-right: .5em; }
-    .pagination li .cta .next:after {
-      content: '\f105';
-      font-family: "FontAwesome";
-      padding-left: .5em; }
-    .pagination li.page_prev button:before {
-      content: '\f104';
-      padding-right: 1em;
-      font-family: "FontAwesome"; }
-    .pagination li.page_next button:after {
-      content: '\f105';
-      padding-left: 1em;
-      font-family: "FontAwesome"; }
-    .pagination li.js-last {
-      margin-right: 0; }
-  .pagination button {
-    font-size: 13px;
-    font-size: 1.3rem; }
-    .pagination button.first:before {
-      content: '\f100';
-      padding-right: 1em;
-      font-family: "FontAwesome"; }
-    .pagination button.last:after {
-      content: '\f101';
-      padding-left: 1em;
-      font-family: "FontAwesome"; }
-  .pagination .number span {
-    background: none repeat scroll 0 0 #ebedec; }
-  @media (max-width: 40em) {
+  margin-bottom: .5em;
+}
+
+.pagination ol {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline;
+  position: relative;
+}
+
+.pagination li.page_first, .pagination li.page_prev, .pagination li.page_next, .pagination li.page_last {
+  display: block;
+}
+
+.pagination li .cta a {
+  background-image: none;
+  background-color: #f0f5fa;
+  color: #3376B2;
+}
+
+.pagination li .cta a:hover {
+  background-image: none;
+  background-color: #c5d7e8;
+}
+
+.pagination li .cta a:active, .pagination li .cta a:focus {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+}
+
+.pagination li .cta.disabled a {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+}
+
+.pagination li .cta.disabled a:hover {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+}
+
+.pagination li .cta.disabled a:active:hover {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+}
+
+.pagination li .cta .prev:before {
+  content: '\f104';
+  font-family: "FontAwesome";
+  padding-right: .5em;
+}
+
+.pagination li .cta .next:after {
+  content: '\f105';
+  font-family: "FontAwesome";
+  padding-left: .5em;
+}
+
+.pagination li.page_prev button:before {
+  content: '\f104';
+  padding-right: 1em;
+  font-family: "FontAwesome";
+}
+
+.pagination li.page_next button:after {
+  content: '\f105';
+  padding-left: 1em;
+  font-family: "FontAwesome";
+}
+
+.pagination li.js-last {
+  margin-right: 0;
+}
+
+.pagination button {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+.pagination button.first:before {
+  content: '\f100';
+  padding-right: 1em;
+  font-family: "FontAwesome";
+}
+
+.pagination button.last:after {
+  content: '\f101';
+  padding-left: 1em;
+  font-family: "FontAwesome";
+}
+
+.pagination .number span {
+  background: none repeat scroll 0 0 #ebedec;
+}
+
+@media (max-width: 40em) {
   .pagination {
     display: inline-block;
-    zoom: 1;
-    display: inline;
     width: 100%;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+  }
   .pagination .btn.number {
-    display: none; }
+    display: none;
+  }
   .pagination li .prev div, .pagination li .next div {
-    display: block; }
+    display: block;
+  }
   .pagination .cta .prev span {
-    display: none; }
+    display: none;
+  }
   .pagination .cta .prev:before {
-    padding-right: 0; }
+    padding-right: 0;
+  }
   .pagination .cta .next span {
-    display: none; }
+    display: none;
+  }
   .pagination .cta .next:after {
-    padding-left: 0; } }
+    padding-left: 0;
+  }
+}
 
 /*# sourceMappingURL=pagination.css.map */

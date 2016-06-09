@@ -1,0 +1,191 @@
+/* ================================
+ 4.	CTA in Promostrip is thinner than all other CTAs
+================================ */
+
+/*
+This is caused by CSS in the "hp-custom-css" injection container
+Remove this rule:
+*/
+
+.offerBar .cta a {
+	padding: 0.5em 1em;
+}
+
+/* ================================
+5.	Hover (or tap) on Top-Nav items should make the highlighted font color white not blue
+================================ */
+
+/*
+The inline style causing this bug has been removed from prod.
+However, we must set form LABELs in the form under the "My Account" mega menu to correct their color (current done via injection)
+add this rule
+pages.css, after line 862
+ */
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover form label {
+  color: #000;
+}
+
+/* ================================
+6.	Top Nav is css-hard-coded to ALL CAPS on tablet portrait (626px – 750px), should not be
+================================ */
+
+/*
+This is being caused by the allComponents.css, inside the tablet media query. This rule should be removed:
+allComponents.css, line 7659
+*/
+.new-mega-menu .twc-new-navigation .twc-new-nav label {
+	text-transform: uppercase;
+}
+
+/* ================================
+7.	MegaMenu header on tablet portrait (626px – 750px) shows a huge font-size, should be same as mobile
+================================ */
+
+/*
+This is caused by an !important flag in the injected css "hp-custom-css":
+Code excerpt:
+*/
+
+/**TABLET HEADINGS**/
+
+@media (max-width: 48em) {
+	/*...*/
+	h4, .h4  {
+		font-family: "TWC Round Light";
+		font-size: 2.1rem !important;
+		font-size: 21px !important;
+	}
+	/*...*/
+}
+
+/* Remove the !important flags, example below: */
+h4, .h4  {
+	font-family: "TWC Round Light";
+	font-size: 2.1rem;
+	font-size: 21px;
+}
+
+/* ================================
+8.	Links breaking into two lines seem like two different links dues to spacing - WEBCMS-20973. Dan will take a look.
+================================ */
+
+/*
+Need to change spacing between items to be margin-based, not based on line-height
+Add this declaration (change margin-bottom from '0' to '0.5rem')
+pages.css, line 26
+*/
+.twc-footer h3.label {
+	/*...*/
+	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
+	/*...*/
+}
+
+/* Replace this rule: */
+/* line 46 */
+.twc-footer .labelList li {
+	line-height: 2;
+}
+
+/* ...with this rule: */
+.twc-footer .labelList li {
+	line-height: 1.4;
+}
+
+/* Add this rule immediatley below the rule at line 46: */
+.twc-footer .labelList li + li {
+	margin-top: 10px;
+	margin-top: 1rem;
+}
+
+/* ================================
+13.	Since we killed the More on mobile, do you want to make the mobile top-nav font larger?
+================================ */
+
+/*
+pages.css, Line 868
+Selector: #site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label
+Replace current font-size declarations with:
+*/
+font-size: 13px;
+font-size: 1.3rem;
+
+/* ================================
+15.	Logo margin-top: make it 1em.
+================================ */
+
+/*
+pages.css, Line 642
+Selector: .twc-logo
+Replace current margin-top declaration with:
+*/
+margin-top: 1em;
+
+/* ================================
+As per styleguide, hover on SmartLinks should change color (bright sky blue) and be underlined.
+================================ */
+
+/* pages.css, line 902
+Insert this after this rule:
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a
+*/
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a:hover {
+  color: #02a9e0;
+}
+
+/*
+pages.css, line 935
+Insert this after this rule:
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a
+*/
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a:hover {
+  color: #02a9e0;
+}
+
+/* ================================
+Scroll for more should be #02A9E0
+================================ */
+
+/*
+allComponentsCss.css, line 4929
+*/
+.scroll-indicator .scroll-marker .scroll-marker-wrapper a > span {
+	/* change*/
+	background: #0289E0;
+	/* to */
+	background: #02a9e0;
+}
+
+/* ================================
+BUG3313 Mega Menu > Menu closes when user moves mouse out of header texts and hovers to dropdown
+================================ */
+
+/*
+pages.css, line 863
+Rule:
+*/
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
+	/* add: */
+  display: inline-block
+}
+
+/* line 890 */
+#site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+	/* change: */
+  top: 7px;
+  /* to: */
+  top: -11px;
+}
+
+/* (inside 48em media query) */
+@media (max-width: 48em) {
+	/* ... */
+	/* line 976 */
+	/* after existing rule, add new rule : */
+	#site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+		top: 7px;
+	}
+	/* ... */
+}
+

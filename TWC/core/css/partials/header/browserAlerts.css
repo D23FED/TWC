@@ -1,0 +1,54 @@
+/* ==========================================================================
+    Alerts -- 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-browser-alert-section {
+  background-color: #fef937;
+  background-image: linear-gradient(to bottom, #fef937, #e8d440);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffef937', endColorstr='#ffe8d440', GradientType=0);
+  zoom: 1;
+}
+
+.twc-browser-alert-section ul {
+  margin-bottom: 0;
+}
+
+.twc-browser-alert-section .twc-alert-close:after {
+  color: #333;
+  font-family: "FontAwesome", Arial, Sans-Serif;
+  font-weight: lighter;
+  content: '\f057';
+}
+
+.twc-alert-section .twc-customerLocation p.twc-alert-text:before, .twc-browser-alert-section .twc-customerLocation p.twc-alert-text:before, .twc-browser-alert-section .twc-customerLocation p.twc-alert-text:before, .twc-alert-section p.twc-alert-text:before, .twc-browser-alert-section p.twc-alert-text:before, .twc-browser-alert-section p.twc-alert-text:before {
+  /* 05/14/14 ticket 10764 */
+  margin-left: -1.4em;
+  float: left;
+}
+
+.twc-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after {
+  top: -1.25em;
+  right: -1em;
+}
+
+.twc-alert-section .twc-container, .twc-browser-alert-section .twc-container, .twc-browser-alert-section .twc-container {
+  padding: 1em 1em 1em 0;
+}
+
+@media (max-width: 48em) {
+  .twc-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after {
+    font-size: 24px;
+    font-size: 2.4rem;
+    right: -0.5em;
+  }
+  .twc-alert-section .twc-container, .twc-browser-alert-section .twc-container, .twc-browser-alert-section .twc-container {
+    padding: 1em 2.5em 1em 1em;
+  }
+}
+
+@media (max-width: 40em) {
+  .twc-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after, .twc-browser-alert-section .twc-alert-close:after {/* 05/14/14 ticket 10764 */
+    padding-left: .5em;
+  }
+}
+
+/*# sourceMappingURL=browserAlerts.css.map */

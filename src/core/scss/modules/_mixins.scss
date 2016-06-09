@@ -129,7 +129,7 @@
 
 // Transform
 @mixin rotate($degrees) {
-	filter: 'progid:DXImageTransform.Microsoft.Matrix(sizingMethod=' auto expand ', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})';
+	filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod=' auto expand ', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
 	zoom: 1;
 	transform: rotate($degrees);
 }
@@ -157,14 +157,11 @@
 	column-gap: $gap;
 }
 
+// Updated clearfix. http://cssmojo.com/the-very-latest-clearfix-reloaded/
 @mixin clearfix {
-	&:before,
-	&:after {
-		content: ' ';
-		display: table;
-	}
-
-	&:after {
+	&::after {
+		content: '';
+		display: block;
 		clear: both;
 	}
 }

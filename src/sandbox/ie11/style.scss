@@ -1,0 +1,40 @@
+@import 'init';
+
+.smartLink {
+	&[class*='icon-after'] {
+		// Reduce margin to compensate for non-breaking space
+		span::after {
+			margin-left: .25rem;
+		}
+
+		// Double Angle Left
+		&.icon-double-angle-left span::after {
+			content: '\00a0\f100';
+		}
+
+		// Double Angle Right
+		&.icon-double-angle-right span::after {
+			content: '\00a0\f101';
+		}
+
+		// Angle Left
+		&.icon-angle-left span::after {
+			content: '\00a0\f104';
+		}
+
+		// Angle Right
+		&.icon-angle-right span::after {
+			content: '\00a0\f105';
+		}
+
+		// Angle Up
+		&.icon-angle-up span::after {
+			content: '\00a0\f106';
+		}
+
+		// Angle Down
+		&.icon-angle-down span::after {
+			content: '\00a0\f107';
+		}
+	}
+}

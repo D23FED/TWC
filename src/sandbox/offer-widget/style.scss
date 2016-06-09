@@ -1,0 +1,124 @@
+@import 'init';
+
+$component-wrapper: '#offer-widget';
+$text-section: '.richtext.section';
+$form-section: '.form.section';
+$cta-section: '.cta.section';
+$image-internet: 'http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-internet-icon.png';
+$image-tv: 'http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-tv-icon.png';
+$image-phone: 'http://www.timewarnercable.com//content/dam/residential/images/discover/services/discover-phone-icon.png';
+$triangle-cap-height: 15px;
+
+#{$component-wrapper} {
+	position: relative;
+
+	> .parsys > .twc-container {
+		@include clearfix;
+	}
+
+	#{$text-section},
+	#{$form-section},
+	#{$cta-section} {
+		float: left;
+	}
+
+	// Text
+	#{$text-section} {
+		width: 20%;
+
+		.title {
+			font-family: $font-stack-sans-book;
+			background-color: $color-lex-sky;
+			color: #fff;
+			font-size: 1.6rem;
+			padding: 6px;
+			height: $triangle-cap-height * 2;
+			position: relative;
+
+			&::after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-top: $triangle-cap-height solid transparent;
+				border-bottom: $triangle-cap-height solid transparent;
+				border-left: $triangle-cap-height solid $color-lex-sky;
+				position: absolute;
+				right: -$triangle-cap-height;
+				top: 0;
+			}
+		}
+
+		.description {
+			font-family: $font-stack-sans-light;
+			font-size: 1.4rem;
+		}
+	}
+
+	// Form
+	#{$form-section} {
+		width: 60%;
+
+		.checkboxCollection {
+			.formFieldLabel + ul {
+				display: table;
+				width: 100%;
+
+				.checkboxItems {
+					display: table-row;
+
+					> .checkbox {
+						display: table-cell;
+						width: 33%;
+						padding-top: 50px;
+						background-image: url($image-tv);
+						background-repeat: no-repeat;
+						background-position: center top;
+
+						// Internet
+						&:nth-of-type(2) {
+							background-image: url($image-internet);
+						}
+
+						// Phone
+						&:nth-of-type(3) {
+							background-image: url($image-phone);
+							background-position: center -5px;
+							background-size: 14%;
+						}
+
+						input[type='checkbox'] {
+							float: none;
+						}
+
+						> li {
+							text-align: center;
+						}
+
+						.formitem {
+							display: inline-block;
+						}
+
+						.checkboxLabel {
+							display: inline-block;
+
+							p {
+								font-family: $font-stack-sans-light;
+								font-size: 1.8rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// CTA
+	#{$cta-section} {
+		width: 20%;
+		margin-right: 0;
+
+		a {
+			@include center(false, true);
+		}
+	}
+}

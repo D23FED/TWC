@@ -1,7 +1,4 @@
 /* ==========================================================================
-    Base
-   ========================================================================== */
-/* ==========================================================================
     CSS Code for all Global Elements and Site-Wide Selectors
 
     Base -- Version: 1.9.0.3  - Updated: 7/9/2014
@@ -68,9 +65,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-    Layout
-   ========================================================================== */
 /* ==========================================================================
     Layout -- Version: 1.9.0.3 - Updated: 7/11/2014
    ========================================================================== */
@@ -1182,6 +1176,21 @@ header > .twc-container {
 
 /* Webkit: Chrome/Safari */
 
+/* Hide the old empty header div that's included by the Header Banner component */
+.header > .section > .header_v2 > .twc-header > .twc-container {
+  display: none;
+}
+
+/* Hide top hat component in the campaigns*/
+#hide-tophat .header_v2 .twc-top {
+  display: none;
+}
+
+/* Header icons space fix in desktop and mobile*/
+.newHead .newHeaderIcons ul.horizontal > li, .header_v2 .newHeaderIcons .horizontal ul > li {
+  width: 20%;
+}
+
 /* ==========================================================================
     Component  -- Version: 1.0.0 - Updated: 10/2/2014
    ========================================================================== */
@@ -1429,124 +1438,6 @@ html.touch [class*="nav-menu-"] > .landscapeLabel {
   font-weight: 700;
   text-transform: uppercase;
   padding: 0 0 1em;
-}
-
-/* ==========================================================================
-    User Location -- Version: 1.9.0.0 - Updated: 12/29/2013
-   ========================================================================== */
-.twc-location {
-  padding-right: 0;
-  text-align: right;
-}
-
-.twc-customerLocation {
-  position: relative;
-  color: #fff;
-}
-
-.twc-customerLocation li {
-  padding-top: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-}
-
-.twc-customerLocation li ul {
-  display: none;
-}
-
-.twc-customerLocation ul li.twc-drop-nav.js-persist {
-  border-radius: 3px 3px 0 0;
-  background-clip: padding-box;
-  background: #677986;
-}
-
-.twc-customerLocation p.twc-alert-text {
-  font-weight: 700;
-}
-
-.twc-customerLocation ul li ul {
-  display: none;
-  position: absolute;
-  width: 225px;
-  top: 28px;
-  background: #677986;
-  border-radius: 3px 0 3px 3px;
-  background-clip: padding-box;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
-}
-
-.twc-customerLocation ul li ul li {
-  display: block;
-  color: #fff;
-}
-
-.twc-customerLocation button.btn {
-  background: #444545;
-}
-
-.twc-customerLocation button.btn:hover {
-  background: #333;
-}
-
-.twc-customerLocation ul li li {
-  padding: 0;
-}
-
-a.twc-change {
-  font-weight: 100;
-  color: #9d9d9e;
-}
-
-a.twc-change:after {
-  font-family: "FontAwesome";
-  content: '\f078';
-  margin-left: 4px;
-}
-
-li.twc-drop-nav.js-persist a.twc-change:after {
-  font-family: "FontAwesome";
-  content: '\f00d';
-  padding: 0 1px;
-}
-
-.message {
-  top: 4px;
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 0 0 3px 3px;
-  background-clip: padding-box;
-  background: #c6c9cf;
-  z-index: 9999;
-}
-
-.twc-customerLocation .message p {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
-  font-style: normal;
-  font-weight: normal;
-  color: #333;
-  line-height: 1;
-  text-align: center;
-}
-
-.twc-customerLocation .message p a {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  color: #3376b2;
-}
-
-.oof-error-text {
-  display: inline-block;
-}
-
-/* ie (.ie) */
-.twc-ie .twc-customerLocation ul li ul {
-  right: 0;
 }
 
 /* ==========================================================================
@@ -1975,6 +1866,318 @@ li.twc-drop-nav.persist a.twc-change:after {
 
 /* Webkit: Chrome/Safari */
 
+#site-header {
+  border-bottom: 7px solid #02a9e0;
+}
+
+#site-header #top-hat .twc-top {
+  background-color: #00315c;
+  border-color: #a1a1a1;
+}
+
+#site-header #top-hat .twc-top-nav li a {
+  color: #fff;
+}
+
+#site-header #top-hat .twc-top-nav li .twc-active {
+  background-color: #fff;
+  border-color: #a1a1a1;
+  box-shadow: none;
+  border-bottom-color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: -1px;
+}
+
+#site-header #top-hat .twc-top-nav li .twc-active a {
+  color: #333;
+  font-weight: bold;
+}
+
+#site-header #top-hat .twc-header > .twc-container {
+  display: none;
+}
+
+#site-header #logo-row .twc-header {
+  background-color: transparent;
+  background-image: none;
+}
+
+#site-header #logo-row .newHeaderIcons a {
+  color: #00549f;
+}
+
+#site-header #logo-row .newHeaderIcons a img {
+  height: auto;
+  min-width: 100%;
+}
+
+#site-header .twc-new-navigation {
+  background-color: #f2fbfd;
+  background-image: none;
+  height: 40px;
+}
+
+#site-header .twc-new-navigation .twc-new-nav {
+  height: 100%;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li {
+  border-color: #7eabd0;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover {
+  background-color: #02a9e0;
+  background-image: none;
+  box-shadow: none;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover .desktopLink a,
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover label {
+  color: #fff;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:hover form label {
+  color: #000;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul > li:nth-of-type(4) .twc-submenu li a {
+  color: #00549f;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul label,
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
+  color: #00549f;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 40px;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .desktopLink a {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .mobile-nav > label {
+  font-size: 12px;
+  font-size: 1.2rem;
+  top: auto;
+  padding: 0;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item {
+  padding: 0;
+  height: 40px;
+  border-color: #7eabd0;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active {
+  background-color: #02a9e0;
+  background-image: none;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active label {
+  color: #fff;
+}
+
+#site-header .twc-new-navigation .twc-new-nav > ul .mega-menu-item.js-active form label {
+  color: #000;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+  top: 7px;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu {
+  box-shadow: 0 5px 18px -4px rgba(0, 0, 0, 0.15);
+  top: 47px;
+  border-top: 1px solid white;
+  background-color: #fff;
+  background-image: none;
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
+  text-transform: none;
+  width: 100%;
+  color: #333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
+  content: '';
+  margin: 0;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
+  text-transform: none;
+  width: 100%;
+  color: #333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label.js-active {
+  background-color: #02a9e0;
+  color: #fff;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
+  background-color: transparent;
+  color: #00549f;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li::before {
+  content: none !important;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a {
+  color: #00549f;
+  padding-right: 0;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+#site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+  content: '';
+  margin: 0;
+}
+
+#site-header .twc-new-navigation figure {
+  display: none;
+}
+
+/* ==========================================================================
+    User Location -- Version: 1.9.0.0 - Updated: 12/29/2013
+   ========================================================================== */
+.twc-location {
+  padding-right: 0;
+  text-align: right;
+}
+
+.twc-customerLocation {
+  position: relative;
+  color: #fff;
+}
+
+.twc-customerLocation li {
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+
+.twc-customerLocation li ul {
+  display: none;
+}
+
+.twc-customerLocation ul li.twc-drop-nav.js-persist {
+  border-radius: 3px 3px 0 0;
+  background-clip: padding-box;
+  background: #677986;
+}
+
+.twc-customerLocation p.twc-alert-text {
+  font-weight: 700;
+}
+
+.twc-customerLocation ul li ul {
+  display: none;
+  position: absolute;
+  width: 225px;
+  top: 28px;
+  background: #677986;
+  border-radius: 3px 0 3px 3px;
+  background-clip: padding-box;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.twc-customerLocation ul li ul li {
+  display: block;
+  color: #fff;
+}
+
+.twc-customerLocation button.btn {
+  background: #444545;
+}
+
+.twc-customerLocation button.btn:hover {
+  background: #333;
+}
+
+.twc-customerLocation ul li li {
+  padding: 0;
+}
+
+a.twc-change {
+  font-weight: 100;
+  color: #9d9d9e;
+}
+
+a.twc-change:after {
+  font-family: "FontAwesome";
+  content: '\f078';
+  margin-left: 4px;
+}
+
+li.twc-drop-nav.js-persist a.twc-change:after {
+  font-family: "FontAwesome";
+  content: '\f00d';
+  padding: 0 1px;
+}
+
+.message {
+  top: 4px;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+  background-clip: padding-box;
+  background: #c6c9cf;
+  z-index: 9999;
+}
+
+.twc-customerLocation .message p {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif, Arial, Sans-Serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #333;
+  line-height: 1;
+  text-align: center;
+}
+
+.twc-customerLocation .message p a {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  color: #3376b2;
+}
+
+.oof-error-text {
+  display: inline-block;
+}
+
+/* ie (.ie) */
+.twc-ie .twc-customerLocation ul li ul {
+  right: 0;
+}
+
 /* ==========================================================================
     Alerts -- Version: 1.9.0.0 - Updated: 12/29/2013
    ========================================================================== */
@@ -2369,9 +2572,6 @@ nav.twc-mobile-navigation .current-nav-list > li.js-first {
   max-width: 960px;
 }
 
-/* ==========================================================================
-    Modules
-   ========================================================================== */
 /* ==========================================================================
     Typography -- Version: 1.9.0.0  - Updated: 12/29/2013
    ========================================================================== */
@@ -16584,6 +16784,39 @@ input.comparePackage.js-alert ~ .alertTooltip {
   .twc-new-navigation li a, .twc-new-navigation li span {
     font-family: Arial,'TWC Round Book',"Helvetica Neue",Helvetica,sans-serif,Arial,Sans-Serif;
   }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu {
+    padding: 0;
+    border-top-width: 0;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a {
+    color: #00549f;
+    font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList ul li a::after {
+    content: '\f054';
+    font-family: "FontAwesome";
+    font-weight: normal;
+    margin-left: 4px;
+    font-size: 80%;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label {
+    color: #00549f;
+    font-family: "TWC Round Medium", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul {
+    background-color: #f2fbfd;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .twc-submenu .labelList .label ~ ul li a::after {
+    content: '\f054';
+    font-family: "FontAwesome";
+    font-weight: normal;
+    margin-left: 4px;
+    font-size: 80%;
+  }
   .twc-alert-section p.twc-alert-text.twc-container, .twc-browser-alert-section p.twc-alert-text.twc-container {
     padding-top: 1em;
     padding-right: 1.4em;
@@ -18157,6 +18390,9 @@ input.comparePackage.js-alert ~ .alertTooltip {
   .twc-logo img {
     width: 230%;
   }
+  .newHead .newHeaderIcons ul.horizontal > li, .header_v2 .newHeaderIcons .horizontal ul > li {
+    width: 33%;
+  }
   .newHead .clickIcon > a {
     margin-bottom: 0;
   }
@@ -18198,9 +18434,6 @@ input.comparePackage.js-alert ~ .alertTooltip {
   .newHead #header .twc-search input {
     width: 75%;
   }
-  div.twc-mobile-custLoc input {
-    margin-right: 0;
-  }
   .twc-new-navigation .mobile-only {
     display: block;
   }
@@ -18224,6 +18457,12 @@ input.comparePackage.js-alert ~ .alertTooltip {
   }
   .twc-new-navigation ul.twc-new-nav .twc-new-mega-section .parbase.section > .labelList .label ~ ul > li {
     padding-left: 1em;
+  }
+  #site-header .twc-new-navigation .twc-new-nav .expand-left .twc-submenu {
+    top: 47px;
+  }
+  div.twc-mobile-custLoc input {
+    margin-right: 0;
   }
   .twc-alert-section .twc-alert-text:before, .twc-browser-alert-section .twc-alert-text:before {
     font-size: 18px;

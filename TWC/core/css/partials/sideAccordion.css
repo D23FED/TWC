@@ -5,9 +5,12 @@
   float: right;
   font-family: "FontAwesome";
   content: '\f105';
-  color: inherit; }
+  color: inherit;
+}
 @media (max-width: 48em) {
   .sideAccordion .js-expandable > ul > li.js-notexpandable:after {
-    content: '\f107'; } }
+    content: '\f107';
+  }
+}
 
 /*# sourceMappingURL=sideAccordion.css.map */

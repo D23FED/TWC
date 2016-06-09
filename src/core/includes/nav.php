@@ -1,509 +1,78 @@
-
-<!-- Begin Nav -->
-<nav role="navigation" class="twc-new-navigation">
-  <div class="twc-container">
-    <ul class="twc-new-nav">
-      <li class="nav-menu-1">
-        <figure>
-          <img src="/TWC/core/images/nav-2.png" alt="What's On">
-        </figure>
-        <input id="mobile-menu-two" class="desktop-hidden  mobile-nav" type="checkbox" role="button">
-        <label for="mobile-menu-two" class="desktop-hidden">What's On ?</label>
-        <a href="" class="tablet-hidden" onclick="return false">What's On TV?</a>
-        <ul>
-          <li>
-            <div class="parbase teaser twc-new-mega-section width-fifty expand-right">
-              <div class="50-50 section columnControl">
-                <div class="parsys_column twc-col2_5050 marginless">
-                  <div class="parsys parsys0 twc-col2_5050-c0 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Find Channels</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TV Listings</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">On Demand</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Watch TV Online</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col2_5050-c1 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Premium Channel Apps</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Kids Apps</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Sports Apps</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">All TV Apps</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                </div>
-                <div class="columnClear"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-menu-2">
-        <figure>
-          <img src="/TWC/core/images/nav-1.png" alt="Plans">
-        </figure>
-        <input id="mobile-menu-one" class="desktop-hidden mobile-nav" type="checkbox" role="button">
-        <label for="mobile-menu-one" class="desktop-hidden">All Plans</label>
-        <a href="" class="tablet-hidden" onclick="return false">Plans & Packages</a>
-        <ul class="plans-packages">
-          <li>
-            <div class="parbase teaser twc-new-mega-section expandable width-ninetyFive">
-              <div class="20-20-20-20-20 section columnControl">
-                <div class="parsys_column twc-col5_2020202020 marginless">
-                  <div class="parsys parsys0 twc-col5_2020202020-c0 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">Packages</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">All Plans & Packages</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">SignatureHome&reg;</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TWC & Verizon Wireless</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col5_2020202020-c1 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">TV</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TV Plans</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Premium Channels</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Sports Packages</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">On Demand</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Channels by Package</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col5_2020202020-c2 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">Internet</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Internet Plans</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Select Your Speed</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Speed Test</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Buy Your Modem</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col5_2020202020-c3 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">Phone</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">National Phone Plans</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">International Calling Plans</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col5_2020202020-c4 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">Home Security</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">IntelligentHome&reg;</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Videos & Features</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Equipment Packages</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Equipment List</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Download the App</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                </div>
-                <div class="columnClear"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-menu-3">
-        <figure>
-          <img src="/TWC/core/images/nav-3.png" alt="Account">
-        </figure>
-        <input id="mobile-menu-three" class="desktop-hidden  mobile-nav" type="checkbox" role="button">
-        <label for="mobile-menu-three" class="desktop-hidden">My Account</label>
-        <a href="" class="tablet-hidden" onclick="return false">My Account</a>
-        <ul>
-          <li>
-            <div class="parbase teaser twc-new-mega-section width-fifty expand-left">
-              <div class="50-50 section columnControl">
-                <div class="parsys_column twc-col2_5050 marginless">
-                  <div class="parsys parsys0 twc-col2_5050-c0 parsys_column push">
-                    <div class="parbase section">
-                      <ul>
-                        <li>
-                          <form action="" method="post" id="login-form">
-                            <fieldset class="login">
-                              <div class="rounded-input-wrap">
-                                <label for="username">Residential Account Sign-in</label>
-                                <input type="text" placeholder="username" id="username" name="username" class="rounded" autocomplete="off"></div>
-                              <div class="rounded-input-wrap">
-                                <label for="password" class="visually-hidden">Password</label>
-                                <input type="password" id="password" placeholder="password" name="password" class="rounded" autocomplete="off"></div>
-                              <div class="cta omega twc-icon-after icon-angle-right right">
-                                <button type="submit">Sign In</button>
-                              </div>
-                            </fieldset>
-                          </form>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col2_5050-c1 parsys_column pull">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Access My Account</a>
-                            </div>
-                          </li>
-                          <li class="tablet-hidden">
-                            <div class="smartLink parbase">
-                              <span>Forgot <a href="">username</a> or <a href="">password</a>?</span>
-                            </div>
-                          </li>
-                          <li class="nav-desktop-hidden">
-                            <div class="smartLink parbase">
-                              <a href="">Forgot Username</a>
-                            </div>
-                          </li>
-                          <li class="nav-desktop-hidden">
-                            <div class="smartLink parbase">
-                              <a href="">Forgot Password</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Register for a TWC ID</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Looking for a Business account?</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Check Email</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                </div>
-                <div class="columnClear"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-menu-4">
-        <figure>
-          <img src="/TWC/core/images/nav-4.png" alt="Support">
-        </figure>
-        <input id="mobile-menu-four" class="desktop-hidden  mobile-nav" type="checkbox" role="button">
-        <label for="mobile-menu-four" class="desktop-hidden">Support</label>
-        <a href="" class="tablet-hidden" onclick="return false">Support</a>
-        <ul>
-          <li>
-            <div class="parbase teaser twc-new-mega-section width-sixty">
-              <div class="33-33-33 section columnControl">
-                <div class="parsys_column twc-col3_333333 marginless">
-                  <div class="parsys parsys0 twc-col3_333333-c0 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <h5 class="label">Help with Services</h5>
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TV</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Internet</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Phone</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">IntelligentHome&reg;</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Support Overview</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col3_333333-c1 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Contact Us</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TWC Store Locations</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">TWC Community Forums</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Moving?</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">How-To Videos</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                  <div class="parsys parsys1 twc-col3_333333-c2 parsys_column">
-                    <div class="parbase section">
-                      <div class="labelList section">
-                        <ul>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Account & Billing</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Frequently Asked Questions</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Buy Your Own Modem</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Program Your Remote</a>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="smartLink parbase">
-                              <a href="">Find Channels</a>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="new section"></div>
-                  </div>
-                </div>
-                <div class="columnClear"></div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="desktop-hidden nav-menu-5">
-        <figure>
-          <img src="/TWC/core/images/nav-5.png" alt="more">
-        </figure>
-        <input id="mobile-menu-five" class="desktop-hidden mobile-nav" type="checkbox" role="button">
-        <label for="mobile-menu-five" class="desktop-hidden">More</label>
-        <ul>
-          <li>
-            <div class="parbase teaser twc-new-mega-section width-sixty">
-              <div class="labelList section">
-                <ul>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">Your Home</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">Your Business</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">TWC Central</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">About Us</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">Investor Relations</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">Careers</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="smartLink parbase">
-                      <a href="">Español</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div id="startContent"></div>
+<div class="manual-id-wrapper section">
+	<div id="primary-nav">
+		<div class="parsys">
+			<div class="parbase section teaser">
+				<script type="text/javascript">teaser();</script>
+				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_283391331_wrapper-parsys_teaser" class="campaign campaign-top-nav">
+					<div class="general">
+						<div class="par parsys">
+							<div class="mega-menu_v2 section">
+								<div class="new-mega-menu">
+									<nav role="navigation" class="twc-new-navigation desktop-hover">
+										<div class="twc-container">
+											<div class="twc-new-nav list">
+												<ul>
+													<?php
+														$menuItems = array(
+															'explore',
+															'services',
+															'watch',
+															'account',
+															'support',
+															'more'
+														);
+														foreach ($menuItems as $value) {
+															include_once('nav/'.$value.'.php');
+														}
+													?>
+												</ul>
+											</div>
+										</div>
+									</nav>
+								</div>
+								<div id="7bd76f3f-db23-49a9-b9ed-84f11ebc4dfd"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<!-- end #primary-nav -->
+	<script type="text/javascript">
+	function teaser() {
+		initializeTeaserLoader([{
+			"path": "/content/campaigns/residential/nav-megamenu-2-1/top-nav/authenticated",
+			"name": "authenticated",
+			"campaignName": "top-nav",
+			"id": "top-nav_authenticated",
+			"segments": "/etc/segmentation/twc-segments/seg-aam/authenticated-users"
+		}, {
+			"path": "/content/campaigns/residential/nav-megamenu-2-1/top-nav/existing-customer-nav",
+			"name": "existing-customer-nav",
+			"campaignName": "top-nav",
+			"id": "top-nav_existing-customer-nav",
+			"segments": ["/etc/segmentation/twc-segments/seg-aam/on-network", "/etc/segmentation/twc-segments/seg-aam/existing-customer"]
+		}, {
+			"path": "/content/campaigns/residential/nav-megamenu-2-1/top-nav/default",
+			"name": "default",
+			"campaignName": "top-nav",
+			"id": "top-nav_default"
+		}], "random", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_283391331_wrapper-parsys_teaser", false);
+	}
+	jQuery('.tileList').hide();
+	jQuery('#7bd76f3f-db23-49a9-b9ed-84f11ebc4dfd').siblings('.new-mega-menu').find('.desktop-hidden').parent('li').addClass('desktop-hidden');
+	// Ready
+	jQuery(document).ready(function() {
+		var tileListDiv = jQuery('.tileList');
+		tileListDiv.addClass("");
+		tileListDiv.show();
+		jQuery('#7bd76f3f-db23-49a9-b9ed-84f11ebc4dfd').siblings('.new-mega-menu').navigation();
+		//keeps the function call from causing an error in the teaser edit mode if util.js is not loaded in teaser edit mode
+		if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
+			bindUndelagatedAnalyticsTrackingClickEvents();
+		}
+	});
+	</script>
+</div>

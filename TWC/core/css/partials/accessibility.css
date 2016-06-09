@@ -15,16 +15,19 @@
   padding-bottom: 0;
   padding-left: 0;
   position: absolute;
-  width: 1px; }
-  .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    overflow: visible;
-    position: static;
-    width: auto; }
+  width: 1px;
+}
+
+.visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
 
 /*# sourceMappingURL=accessibility.css.map */

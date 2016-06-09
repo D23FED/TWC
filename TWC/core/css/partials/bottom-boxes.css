@@ -6,12 +6,17 @@
   background: #98999b;
   color: #fff;
   padding: 1em;
-  min-height: 265px; }
+  min-height: 265px;
+}
 @media (max-width: 48em) {
   .bottom-box:nth-child(1) {
-    margin-bottom: 1em; } }
+    margin-bottom: 1em;
+  }
+}
 @media (max-width: 40em) {
   .bottom-box {
-    margin-bottom: 1em; } }
+    margin-bottom: 1em;
+  }
+}
 
 /*# sourceMappingURL=bottom-boxes.css.map */

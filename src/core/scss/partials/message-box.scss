@@ -1,0 +1,55 @@
+.messagebox-wrapper {
+	display: none;
+	background: #fff;
+	padding: 0.75em 1em;
+
+	img {
+		max-width: 10%;
+		float: left;
+	}
+
+	p {
+		color: #000;
+	}
+
+	.geoLoc {
+		width: 90%;
+		float: right;
+
+		input {
+			width: 70%;
+		}
+	}
+
+	.close-message {
+		float: right;
+		cursor: pointer;
+		font-size: 1.6rem;
+		width: 2%;
+		margin-right: 0;
+	}
+
+	.twc-search-input-wrap {
+		text-align: center;
+
+		.cta {
+			vertical-align: top;
+		}
+	}
+
+	.header-search .twc-search input {
+		width: 50%;
+		height: 35px;
+	}
+}
+
+@include respond-to(small)
+@media (max-width: 40em) {
+	.messagebox-wrapper .header-search .twc-search input {
+		width: 77%;
+	}
+}
+
+.header-search.omega .cta button {
+	height: 35px;
+}
