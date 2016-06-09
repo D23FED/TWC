@@ -1,0 +1,13 @@
+/*
+allComponents.css, line 14057
+(under "Text & Image Styles")
+add "display: block;" declaration
+Final rule:
+*/
+
+@media (max-width: 40em) {
+  .headline-with-icons .h1 span:nth-of-type(1) {
+     float: left;
+     display: block;
+  }
+}
