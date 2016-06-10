@@ -14,11 +14,11 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
-	var clock = document.getElementById('clock');
+	var clock = document.getElementById(id);
 	var daysSpan = clock.querySelector('.days');
 	var hoursSpan = clock.querySelector('.hours');
 	var minutesSpan = clock.querySelector('.minutes');
-	var secondsSpan = clock.querySelector('.seconds');
+	// var secondsSpan = clock.querySelector('.seconds');
 
 	function updateClock() {
 		var t = getTimeRemaining(endtime);
@@ -26,7 +26,7 @@ function initializeClock(id, endtime) {
 		daysSpan.innerHTML = t.days;
 		hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
 		minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+		// secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
 		if (t.total <= 0) {
 			clearInterval(timeinterval);
@@ -38,4 +38,4 @@ function initializeClock(id, endtime) {
 }
 
 var deadline = 'August 29 2016 11:00:00 GMT-0500';
-initializeClock('clockdiv', deadline);
+initializeClock('clock', deadline);

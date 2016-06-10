@@ -1,0 +1,160 @@
+html, body {
+  font-size: 62.5%;
+}
+
+.countdown {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #00549f;
+  min-height: 116px;
+  box-sizing: border-box;
+}
+
+.countdown::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.countdown .container {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.countdown .title {
+  color: white;
+  float: left;
+  margin: 23px 0 0 5%;
+  margin: 2.3rem 0 0 5%;
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-weight: normal;
+  line-height: 1;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.countdown .clock {
+  position: absolute;
+  right: 5%;
+  min-width: 38%;
+  text-align: right;
+}
+
+.countdown .counter {
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-left: calc(10%);
+  height: 66px;
+  box-sizing: border-box;
+  width: 66px;
+}
+
+.countdown .counter.first {
+  margin: 0;
+}
+
+.countdown .counter .count {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1;
+}
+
+.countdown .counter .label {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding-top: 30px;
+  padding-top: 3rem;
+}
+
+.countdown .seconds {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  color: #fff;
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+@media (max-width: 48em) {
+
+  .countdown {
+    max-height: 105px;
+  }
+
+  .countdown .container {
+    max-width: 100%;
+  }
+
+  .countdown .title {
+    font-size: 28px;
+    font-size: 2.8rem;
+    margin-top: 20px;
+    margin-top: 2rem;
+  }
+
+  .countdown .counter {
+    height: 50px;
+    width: 50px;
+  }
+
+  .countdown .counter .count {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+
+  .countdown .counter .label {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 40em) {
+
+  .countdown {
+    min-height: 85px;
+  }
+
+  .countdown .title {
+    font-size: 24px;
+    font-size: 2.4rem;
+    max-width: 54%;
+    margin-top: 2.5px;
+    margin-top: .25rem;
+  }
+
+  .countdown .counter {
+    height: 30px;
+    width: 30px;
+    margin-left: calc(7%);
+  }
+
+  .countdown .counter .count {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  .countdown .counter .label {
+    font-size: 10px;
+    font-size: 1rem;
+    padding-top: 20px;
+    padding-top: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
