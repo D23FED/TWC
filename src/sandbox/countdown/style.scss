@@ -1,0 +1,125 @@
+//  Just for codepen
+@font-face {
+  font-family: "TWC Round Book";
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Book.eot");
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Book.eot?#iefix") format("embedded-opentype"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Book.svg#svgTWCBook") format("svg"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Book.woff") format("woff"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TWC Round Medium";
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Medium.eot");
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Medium.eot?#iefix") format("embedded-opentype"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Medium.svg#svgTWCMedium") format("svg"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Medium.woff") format("woff"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TWC Round Light";
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Light.eot");
+  src: url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Light.eot?#iefix") format("embedded-opentype"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Light.svg#svgTWCLight") format("svg"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Light.woff") format("woff"), url("http://www.timewarnercable.com/etc/clientlibs/responsive/residential/core/css/fonts/TWCRound/TWC-Round-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/////////////////////////////////////////////////
+$container-width: 980px;
+// $container-width: 769px;
+
+$container-margin: 5%;
+$font-stack-sans-light: 'TWC Round Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-book: 'TWC Round Book', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-stack-sans-medium: 'TWC Round Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+@mixin clearfix() {
+		&::after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+}
+html, body {
+	font-size: 62.5%;
+}
+
+.countdown {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	@include clearfix();
+	background-color: #00549f;
+	min-height: 116px;
+
+	.container {
+		max-width: $container-width;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.title {
+		color: white;
+		float: left;
+		margin: 2.3rem 0 0 $container-margin;
+		font-size: 3.6rem;
+		font-weight: normal;
+		line-height: 1;
+		font-family: $font-stack-sans-light;
+	}
+	.clock {
+		// float: right;
+		// margin-right: 4rem;
+		position: absolute;
+		right: $container-margin;
+		min-width: 38%;
+		text-align: right;
+	}
+	.counter {
+		background-color: white;
+		display: inline-block;
+		// padding: 10px;
+		border-radius: 10px;
+		font-size: 1.8rem;
+		text-align: center;
+		margin-left: calc(10%);
+		height: 66px;
+		box-sizing: border-box;
+		width: 66px;
+		// float: right;
+		&.first {
+			margin: 0;
+		}
+		&.last {
+
+		}
+		.count {
+			position: relative;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  font-family: $font-stack-sans-book;
+		  font-size: 4.2rem;
+		  line-height: 1;
+		}
+		.label {
+			font-size: 1.8rem;
+			color: white;
+			width: 100%;
+			text-align: center;
+			line-height: 1;
+			font-family: $font-stack-sans-light;
+			padding-top: 3rem;
+		}
+	}
+	.seconds {
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		color: #fff;
+		font-size: 2.6rem;
+	}
+}
+@media (max-width: 48em) {
+}
+@media (max-width: 40em) {
+	}
+
+
+
