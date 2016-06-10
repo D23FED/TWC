@@ -1,26 +1,213 @@
 @import 'init';
-.hidden {
-	display: none;
-	visibility: hidden;
+
+// Half circle: 190px / 95px
+// Needle: 112px x 12px
+// Bottom of needle: 12 x 6
+// Ultimate 300: 100%
+// Ultimate 200: 66%
+// Ultimate 100: 33%
+// Ultimate 50: 16.6%
+$needle-height: 112px;
+$needle-top-height: 106px;
+$needle-width: 12px;
+$needle-color: #666;
+$circle-radius: 95px;
+$circle-diameter: $circle-radius * 2;
+$circle-color-bg: #f3f6f9;
+$circle-color-bg: #e0f3fc;
+$circle-color-speed: #0590dd;
+$circle-color-cover: #fff;
+
+//$circle-color-cover: pink;
+$dial-stroke-width: 30px;
+$start-pos: -180deg;
+
+@mixin animation {
+	transform-origin: bottom center;
+	animation-name: to-66;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
 }
-[class*='circle-0'] {
-	margin-left: auto;
-	margin-right: auto;
+
+.speedometer {
+	> .wrap {
+		width: $circle-diameter;
+		height: $circle-diameter;
+
+		// border: 1px solid grey;
+		position: relative;
+		margin: 20px;
+	}
+
+	.needle {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: $circle-radius - $needle-height;
+
+		// bottom: 0;
+		width: $needle-width;
+		margin: 0 auto;
+
+		// transform: rotate(270deg);
+		// transform-origin: bottom center;
+		// transform-origin: bottom center;
+		// animation-name: to-66-needle;
+		// animation-duration: .5s;
+		// animation-iteration-count: infinite;
+		// animation-timing-function: ease-out;
+		@include animation;
+
+		.inner {
+			height: $needle-height;
+			width: $needle-width;
+			position: relative;
+			transform: rotate(90deg);
+			transform-origin: bottom center;
+		}
+
+		.top,
+		.bottom {
+			position: absolute;
+		}
+
+		.top {
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 ($needle-width / 2) $needle-top-height ($needle-width / 2);
+			border-color: transparent transparent $needle-color transparent;
+		}
+
+		.bottom {
+			height: $needle-width / 2;
+			width: $needle-width;
+			border-radius: 0 0 $circle-diameter $circle-diameter;
+			background-color: $needle-color;
+			margin: 0 auto;
+			bottom: 1px;
+		}
+	}
+
+	.dial {
+		height: $circle-radius;
+		height: $circle-radius;
+
+		//transform: rotate(-25deg);
+
+	}
+
+	.bar {
+		position: relative;
+		overflow: hidden;
+		height: $circle-radius;
+	}
+
+	.half-circle {
+		content: '';
+		height: $circle-radius;
+		width: $circle-diameter;
+		border-radius: $circle-diameter $circle-diameter 0 0;
+		background: green;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		transform-origin: bottom center;
+		animation-name: to-66;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-out;
+
+		@include animation;
+	}
+
+	.half-circle-speed {
+		background-color: $circle-color-speed;
+	}
+
+	.half-circle-bg {
+		background-color: $circle-color-bg;
+		animation: none;
+	}
+
+	.half-circle-cover {
+		background-color: $circle-color-cover;
+		height: $circle-radius - $dial-stroke-width;
+		width: $circle-diameter - $dial-stroke-width * 2;
+		border-radius: $circle-diameter $circle-diameter 0 0;
+		background: $circle-color-cover;
+		margin: 0 auto;
+		top: $dial-stroke-width;
+		animation: none;
+	}
+
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	[class*='circle-0'] {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
-@import
-	'circle-01',
-	'circle-02b',
-	'circle-03',
-	'circle-04',
-	'circle-05',
-	'circle-06',
-	'circle-07',
-	'circle-08',
-	'circle-09';
 
+@keyframes to-100 {
+	0% {
+		transform: rotate($start-pos);
+	}
 
+	100% {
+		transform: rotate($start-pos + 180deg);
+	}
+}
 
+@keyframes to-66 {
+	0% {
+		transform: rotate($start-pos);
+	}
 
+	100% {
+		transform: rotate($start-pos + 180deg * 0.666);
+	}
+}
 
+@keyframes to-33 {
+	0% {
+		transform: rotate($start-pos);
+	}
 
+	100% {
+		transform: rotate($start-pos + 180deg * 0.333);
+	}
+}
 
+@keyframes to-16 {
+	0% {
+		transform: rotate($start-pos);
+	}
+
+	100% {
+		transform: rotate($start-pos + 180deg * 0.166);
+	}
+}
+
+.controls {
+	width: 200px;
+	position: relative;
+
+	button {
+		margin: 0 auto;
+		position: absolute;
+
+		// left:0;
+		// right:0;
+		width: 100px;
+		margin: 20px;
+	}
+}
