@@ -1,13 +1,27 @@
-.speedometer
+mixin speed-inside
 	.wrap
 		.dial
 			.bar
 				.half-circle.half-circle-bg
-				.half-circle.half-circle-speed
+				.half-circle.half-circle-speed.animated
 				.half-circle.half-circle-cover
-			.needle
+			.needle.animated
 				.inner
 					.top
 					.bottom
-.controls
-	//- button.play Play
+.speedometer
+	+speed-inside
+.speedometer.speedometer-66
+	+speed-inside
+.speedometer.speedometer-60
+	+speed-inside
+.speedometer.speedometer-40
+	+speed-inside
+.speedometer.speedometer-33
+	+speed-inside
+.speedometer.speedometer-30
+	+speed-inside
+.speedometer.speedometer-16
+	+speed-inside
+//- .controls
+	button.play Play

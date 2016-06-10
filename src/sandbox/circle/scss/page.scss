@@ -1,12 +1,20 @@
-@import 'init';
+// @import 'init';
 
 // Half circle: 190px / 95px
 // Needle: 112px x 12px
 // Bottom of needle: 12 x 6
-// Ultimate 300: 100%
-// Ultimate 200: 66%
-// Ultimate 100: 33%
-// Ultimate 50: 16.6%
+// Maxx
+// ====
+// Ultimate 300/300: 100%
+// Ultimate 200/300: 66%
+// Ultimate 100/300: 33%
+// Extreme 50/300  : 16.6%
+// Non-maxx
+// ========
+// Ultimate 50/50  : 100%
+// Extreme 30/50   : 60%
+// Turbo 20/50     : 40%
+// Standard 15/50  : 30%;
 $needle-height: 112px;
 $needle-top-height: 106px;
 $needle-width: 12px;
@@ -17,14 +25,12 @@ $circle-color-bg: #f3f6f9;
 $circle-color-bg: #e0f3fc;
 $circle-color-speed: #0590dd;
 $circle-color-cover: #fff;
-
-//$circle-color-cover: pink;
 $dial-stroke-width: 30px;
 $start-pos: -180deg;
 
 @mixin animation {
 	transform-origin: bottom center;
-	animation-name: to-66;
+	animation-name: to-100;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
@@ -33,31 +39,25 @@ $start-pos: -180deg;
 .speedometer {
 	> .wrap {
 		width: $circle-diameter;
-		height: $circle-diameter;
-
-		// border: 1px solid grey;
+		height: $circle-radius;
 		position: relative;
 		margin: 20px;
 	}
 
+	// contains progress bar and need
+	.dial {
+		height: $circle-radius;
+		height: $circle-radius;
+	}
+
+	// needle is a css triangle above a css half-circle
 	.needle {
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: $circle-radius - $needle-height;
-
-		// bottom: 0;
 		width: $needle-width;
 		margin: 0 auto;
-
-		// transform: rotate(270deg);
-		// transform-origin: bottom center;
-		// transform-origin: bottom center;
-		// animation-name: to-66-needle;
-		// animation-duration: .5s;
-		// animation-iteration-count: infinite;
-		// animation-timing-function: ease-out;
-		@include animation;
 
 		.inner {
 			height: $needle-height;
@@ -72,6 +72,7 @@ $start-pos: -180deg;
 			position: absolute;
 		}
 
+		// upper triangle
 		.top {
 			top: 0;
 			left: 0;
@@ -82,6 +83,7 @@ $start-pos: -180deg;
 			border-color: transparent transparent $needle-color transparent;
 		}
 
+		// lower half circle
 		.bottom {
 			height: $needle-width / 2;
 			width: $needle-width;
@@ -92,14 +94,7 @@ $start-pos: -180deg;
 		}
 	}
 
-	.dial {
-		height: $circle-radius;
-		height: $circle-radius;
-
-		//transform: rotate(-25deg);
-
-	}
-
+	// container/clipping mask for half circles
 	.bar {
 		position: relative;
 		overflow: hidden;
@@ -107,23 +102,15 @@ $start-pos: -180deg;
 	}
 
 	.half-circle {
-		content: '';
 		height: $circle-radius;
 		width: $circle-diameter;
 		border-radius: $circle-diameter $circle-diameter 0 0;
-		background: green;
 		margin: 0 auto;
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: 0;
 		transform-origin: bottom center;
-		animation-name: to-66;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-out;
-
-		@include animation;
 	}
 
 	.half-circle-speed {
@@ -132,7 +119,6 @@ $start-pos: -180deg;
 
 	.half-circle-bg {
 		background-color: $circle-color-bg;
-		animation: none;
 	}
 
 	.half-circle-cover {
@@ -143,17 +129,20 @@ $start-pos: -180deg;
 		background: $circle-color-cover;
 		margin: 0 auto;
 		top: $dial-stroke-width;
-		animation: none;
 	}
 
-	.hidden {
-		display: none;
-		visibility: hidden;
+	.animated {
+		@include animation;
 	}
+}
 
-	[class*='circle-0'] {
-		margin-left: auto;
-		margin-right: auto;
+$percentages: 100, 66, 60, 40, 33, 30, 16;
+
+@each $percent in $percentages {
+	.speedometer-#{$percent} {
+		.animated {
+			animation-name: to-#{$percent};
+		}
 	}
 }
 
@@ -177,6 +166,26 @@ $start-pos: -180deg;
 	}
 }
 
+@keyframes to-60 {
+	0% {
+		transform: rotate($start-pos);
+	}
+
+	100% {
+		transform: rotate($start-pos + 180deg * 0.6);
+	}
+}
+
+@keyframes to-40 {
+	0% {
+		transform: rotate($start-pos);
+	}
+
+	100% {
+		transform: rotate($start-pos + 180deg * 0.4);
+	}
+}
+
 @keyframes to-33 {
 	0% {
 		transform: rotate($start-pos);
@@ -184,6 +193,16 @@ $start-pos: -180deg;
 
 	100% {
 		transform: rotate($start-pos + 180deg * 0.333);
+	}
+}
+
+@keyframes to-30 {
+	0% {
+		transform: rotate($start-pos);
+	}
+
+	100% {
+		transform: rotate($start-pos + 180deg * 0.3);
 	}
 }
 
@@ -197,17 +216,4 @@ $start-pos: -180deg;
 	}
 }
 
-.controls {
-	width: 200px;
-	position: relative;
-
-	button {
-		margin: 0 auto;
-		position: absolute;
-
-		// left:0;
-		// right:0;
-		width: 100px;
-		margin: 20px;
-	}
-}
+// @import 'controls';
