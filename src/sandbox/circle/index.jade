@@ -1,5 +1,5 @@
-mixin speed-inside
-	.wrap
+mixin speedometer
+	.speedometer
 		.dial
 			.bar
 				.half-circle.half-circle-bg
@@ -9,19 +9,21 @@ mixin speed-inside
 				.inner
 					.top
 					.bottom
-.speedometer
-	+speed-inside
-.speedometer.speedometer-66
-	+speed-inside
-.speedometer.speedometer-60
-	+speed-inside
-.speedometer.speedometer-40
-	+speed-inside
-.speedometer.speedometer-33
-	+speed-inside
-.speedometer.speedometer-30
-	+speed-inside
-.speedometer.speedometer-16
-	+speed-inside
+//- .percent-100
+	+speedometer
+.percent-66
+	+speedometer
+.percent-66-static
+	+speedometer
+//- .percent-60
+	+speedometer
+//- .percent-40
+	+speedometer
+//- .percent-33
+	+speedometer
+//- .percent-30
+	+speedometer
+//- .percent-16
+	+speedometer
 //- .controls
-	button.play Play
+	//- button.play Play

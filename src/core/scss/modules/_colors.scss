@@ -22,10 +22,12 @@ $text-grey: $grey;
 // --Main
 $color-lex-sky: #00549f;
 $color-lex-deep-gray: #333;
+
 // --Secondary
 $color-lex-bright-sky: #02a9e0;
 $color-lex-plum: #5b1f69;
 $color-lex-deep-sky: #00315c;
+
 // --Tertiary
 $color-lex-light-sky: #e0f3fc;
 $color-lex-light-gray: #dddddc;
@@ -65,7 +67,6 @@ $color-steel-dark-lightish: #98999b;
 $color-steel-dark-light: #d4d5d6;
 $color-steel-dark-lighter: #e6e6e7;
 $color-steel-dark-lightest: #f6f6f6;
-
 
 // Steel Sky
 $color-steel-sky: #4f799e;
@@ -117,6 +118,7 @@ $steelDark-lightish: $color-steel-dark-lightish;
 $steelDark-light: $color-steel-dark-light;
 $steelDark-lighter: $color-steel-dark-lighter;
 $steelDark-lightest: $color-steel-dark-lightest;
+
 // Steel Sky: Legacy
 $steelSky-darkest: $color-steel-sky-darkest;
 $steelSky-darker: $color-steel-sky-darker;
@@ -128,6 +130,7 @@ $steelSky-lightish: $color-steel-sky-lightish;
 $steelSky-light: $color-steel-sky-light;
 $steelSky-lighter: $color-steel-sky-lighter;
 $steelSky-lightest: $color-steel-sky-lightest;
+
 // Sky Dark: Legacy
 $skyDark: $color-sky-dark;
 $skyDark-darkest: $color-sky-dark-darkest;
@@ -138,6 +141,7 @@ $skyDark-lightish: $color-sky-dark-lightish;
 $skyDark-light: $color-sky-dark-light;
 $skyDark-lighter: $color-sky-dark-lighter;
 $skyDark-lightest: $color-sky-dark-lightest;
+
 // Rich Black: Legacy
 $richBlack: color-rich-black;
 $richBlack-dark: $white;
@@ -146,6 +150,7 @@ $richBlack-lightish: $color-rich-black-lightish;
 $richBlack-light: $color-rich-black-light;
 $richBlack-lighter: $color-rich-black-lighter;
 $richBlack-lightest: $color-rich-black-lightest;
+
 // Plum Dark: Legacy
 $plumDark-darkest: $color-plum-dark-darkest;
 $plumDark-darker: $color-plum-dark-darker;
@@ -153,5 +158,6 @@ $plumDark-dark: $color-plum-dark-dark;
 $plumDark-darkish: $color-plum-dark-darkish;
 $plumDark: $color-plum-dark;
 $plumDark-lightish: $color-plum-dark-lightish;
+
 // Non-scheme colors
 $color-bright-blue: $color-lex-bright-sky;

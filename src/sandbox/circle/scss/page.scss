@@ -27,27 +27,40 @@ $circle-color-speed: #0590dd;
 $circle-color-cover: #fff;
 $dial-stroke-width: 30px;
 $start-pos: -180deg;
+$end-pos: $start-pos + 180deg;
+$end-pos-100: $end-pos;
+$end-pos-66: $start-pos + 180deg * 0.666;
+$end-pos-60: $start-pos + 180deg * 0.6;
+$end-pos-40: $start-pos + 180deg * 0.4;
+$end-pos-33: $start-pos + 180deg * 0.333;
+$end-pos-30: $start-pos + 180deg * 0.3;
+$end-pos-16: $start-pos + 180deg * 0.166;
+
+// List of possible percentages
+$percentages: 100, 66, 60, 40, 33, 30, 16;
+
+// List of possible ending positions (rotations)
+$end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33, $end-pos-30, $end-pos-16;
 
 @mixin animation {
 	transform-origin: bottom center;
-	animation-name: to-100;
 	animation-duration: 1s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
 }
 
 .speedometer {
-	> .wrap {
-		width: $circle-diameter;
-		height: $circle-radius;
-		position: relative;
-		margin: 20px;
-	}
+	width: $circle-diameter;
+	height: $circle-radius;
+	position: relative;
+	margin: 20px auto;
 
-	// contains progress bar and need
+	// contains progress bar and needle
 	.dial {
 		height: $circle-radius;
 		height: $circle-radius;
+		overflow: hidden;
 	}
 
 	// needle is a css triangle above a css half-circle
@@ -58,6 +71,7 @@ $start-pos: -180deg;
 		top: $circle-radius - $needle-height;
 		width: $needle-width;
 		margin: 0 auto;
+		z-index: 50;
 
 		.inner {
 			height: $needle-height;
@@ -113,14 +127,19 @@ $start-pos: -180deg;
 		transform-origin: bottom center;
 	}
 
-	.half-circle-speed {
-		background-color: $circle-color-speed;
-	}
-
+	// Speed indicator/progress bar background
 	.half-circle-bg {
 		background-color: $circle-color-bg;
+		z-index: 10;
+	}
+	// Speed indicator/progress bar
+	.half-circle-speed {
+		background-color: $circle-color-speed;
+		z-index: 20;
 	}
 
+
+	// Speed indicator/progress bar cover, makes the half circle appear as as a circular bar instead
 	.half-circle-cover {
 		background-color: $circle-color-cover;
 		height: $circle-radius - $dial-stroke-width;
@@ -129,19 +148,60 @@ $start-pos: -180deg;
 		background: $circle-color-cover;
 		margin: 0 auto;
 		top: $dial-stroke-width;
+		z-index: 30;
 	}
 
 	.animated {
+		transform: rotate($start-pos);
+
 		@include animation;
 	}
 }
 
-$percentages: 100, 66, 60, 40, 33, 30, 16;
+// Iterate over each possible percentage the progress meter will indicate
+@for $i from 1 through length($percentages) {
+	// Grab our percent from the list, according to the loop index
+	$percent: #{nth($percentages, $i)};
 
-@each $percent in $percentages {
-	.speedometer-#{$percent} {
+	// Add a class name that corresponds to the percentage number
+	.percent-#{$percent} .speedometer.play,
+	// Small versions
+	.percent-#{$percent}-sm .speedometer.play {
+		// 'animated' is the class on elements that animate on animated version
 		.animated {
-			animation-name: to-#{$percent};
+			// Pull the name of the correct animation based on index
+			animation-name: to-#{nth($percentages, $i)};
+		}
+	}
+
+	// Class names for satic versions
+	.percent-#{$percent}-static,
+	// Small versions
+	.percent-#{$percent}-static-sm {
+		.animated {
+			animation: none;
+
+			// Pull the correct ending position based on index
+			transform: rotate(#{nth($end-positions, $i)});
+		}
+	}
+}
+
+// Small versions. When we shrink them down there is a gap between the white half circle that is covered the blue bg circle and the bottom of the blue circle. Add a pseudo element to cover it
+[class*='sm'] {
+	.speedometer {
+		transform: scale(0.6);
+
+		.half-circle-cover::after {
+			background-color: #fff;
+			height: 10px;
+			width: $circle-diameter - $dial-stroke-width * 2;
+			margin: 0 auto;
+			top: $dial-stroke-width * 2;
+			content: '';
+			position: absolute;
+			border-radius: 1px;
+			z-index: 40;
 		}
 	}
 }
@@ -152,7 +212,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg);
+		transform: rotate($end-pos-100);
 	}
 }
 
@@ -162,7 +222,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.666);
+		transform: rotate($end-pos-66);
 	}
 }
 
@@ -172,7 +232,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.6);
+		transform: rotate($end-pos-60);
 	}
 }
 
@@ -182,7 +242,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.4);
+		transform: rotate($end-pos-40);
 	}
 }
 
@@ -192,7 +252,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.333);
+		transform: rotate($end-pos-33);
 	}
 }
 
@@ -202,7 +262,7 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.3);
+		transform: rotate($end-pos-30);
 	}
 }
 
@@ -212,8 +272,6 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 	}
 
 	100% {
-		transform: rotate($start-pos + 180deg * 0.166);
+		transform: rotate($end-pos-16);
 	}
 }
-
-// @import 'controls';
