@@ -99,6 +99,18 @@
   z-index: 30;
 }
 
+.speedometer .half-circle-cover::after {
+  background-color: #fff;
+  height: 10px;
+  width: 130px;
+  margin: 0 auto;
+  top: 60px;
+  content: '';
+  position: absolute;
+  border-radius: 1px;
+  z-index: 40;
+}
+
 .speedometer .animated {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
@@ -225,18 +237,6 @@
   -webkit-transform: scale(0.6);
       -ms-transform: scale(0.6);
           transform: scale(0.6);
-}
-
-[class*='sm'] .speedometer .half-circle-cover::after {
-  background-color: #fff;
-  height: 10px;
-  width: 130px;
-  margin: 0 auto;
-  top: 60px;
-  content: '';
-  position: absolute;
-  border-radius: 1px;
-  z-index: 40;
 }
 
 @-webkit-keyframes to-100 {
