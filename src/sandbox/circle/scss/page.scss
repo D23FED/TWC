@@ -150,6 +150,18 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		margin: 0 auto;
 		top: $dial-stroke-width;
 		z-index: 30;
+
+		&::after {
+			background-color: #fff;
+			height: 10px;
+			width: $circle-diameter - $dial-stroke-width * 2;
+			margin: 0 auto;
+			top: $dial-stroke-width * 2;
+			content: '';
+			position: absolute;
+			border-radius: 1px;
+			z-index: 40;
+		}
 	}
 
 	.animated {
@@ -192,18 +204,6 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 [class*='sm'] {
 	.speedometer {
 		transform: scale(0.6);
-
-		.half-circle-cover::after {
-			background-color: #fff;
-			height: 10px;
-			width: $circle-diameter - $dial-stroke-width * 2;
-			margin: 0 auto;
-			top: $dial-stroke-width * 2;
-			content: '';
-			position: absolute;
-			border-radius: 1px;
-			z-index: 40;
-		}
 	}
 }
 
