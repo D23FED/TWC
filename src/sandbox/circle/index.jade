@@ -1,13 +1,33 @@
-.speedometer
-	.wrap
+mixin speedometer
+	.speedometer
 		.dial
 			.bar
 				.half-circle.half-circle-bg
-				.half-circle.half-circle-speed
+				.half-circle.half-circle-speed.animated
 				.half-circle.half-circle-cover
-			.needle
+			.needle.animated
 				.inner
 					.top
 					.bottom
-.controls
+//- .percent-100
+	+speedometer
+.percent-66
+	+speedometer
+.percent-40-static
+	+speedometer
+.percent-66-sm
+	+speedometer
+.percent-33-static-sm
+	+speedometer
+//- .percent-60
+	+speedometer
+//- .percent-40
+	+speedometer
+//- .percent-33
+	+speedometer
+//- .percent-30
+	+speedometer
+//- .percent-16
+	+speedometer
+//- .controls
 	//- button.play Play

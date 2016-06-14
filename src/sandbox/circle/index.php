@@ -1,26 +1,16 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
 ?>
-<div class="wrapper" style="max-width: 980px;">
-<div class="hidden wrap circle-01">
-	<div class="container container-a">
-	  <div class="half-cirle"></div>
-	</div>
-	<div class="container container-b">
-	  <div class="half-cirle"></div>
-	</div>
-</div>
 
-
-<div class="speedometer">
-  <div class="wrap">
+<div class="percent-100">
+  <div class="speedometer">
     <div class="dial">
       <div class="bar">
         <div class="half-circle half-circle-bg"></div>
-        <div class="half-circle half-circle-speed"></div>
+        <div class="half-circle half-circle-speed animated"></div>
         <div class="half-circle half-circle-cover"></div>
       </div>
-      <div class="needle">
+      <div class="needle animated">
         <div class="inner">
           <div class="top"></div>
           <div class="bottom"></div>
@@ -29,15 +19,106 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php');
     </div>
   </div>
 </div>
-<div class="controls">
+<div class="percent-66">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div class="wrap">
-	<div class="dial"></div>
+<div class="percent-60">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
+<div class="percent-40">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<script>
-
-</script>
+<div class="percent-33">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="percent-30">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="percent-16">
+  <div class="speedometer">
+    <div class="dial">
+      <div class="bar">
+        <div class="half-circle half-circle-bg"></div>
+        <div class="half-circle half-circle-speed animated"></div>
+        <div class="half-circle half-circle-cover"></div>
+      </div>
+      <div class="needle animated">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <?php include_once($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/footer.php'); ?>

@@ -1,1533 +1,396 @@
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-[class*='circle-0'] {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.circle-01 {
-  margin-left: auto;
-  margin-right: auto;
+.speedometer {
+  overflow: hidden;
+  width: 210px;
+  height: 120px;
   position: relative;
+  margin: 20px auto;
 }
 
-.circle-01.wrap {
-  width: 40px;
-  height: 40px;
-  left: calc(50% - $wedge-size);
-}
-
-.circle-01.wrap::after {
-  content: '';
-  background-color: #fff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-.circle-01.wrap .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 20px;
+.speedometer .dial {
+  padding-top: 20px;
   overflow: hidden;
 }
 
-.circle-01.wrap .container .half-cirle {
-  border-radius: 0 40px 40px 0;
-  background-color: #00549f;
-  width: 20px;
-  height: 40px;
-  -webkit-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-animation: rotate 4s infinite linear;
-          animation: rotate 4s infinite linear;
-  left: 0;
-}
-
-.circle-01.wrap .container-a {
-  left: 20px;
-}
-
-.circle-01.wrap .container-a .half-cirle {
-  -webkit-animation: rotate-a 4s infinite linear;
-          animation: rotate-a 4s infinite linear;
-}
-
-.circle-01.wrap .container-b {
-  left: 0;
-}
-
-.circle-01.wrap .container-b .half-cirle {
-  -webkit-animation: rotate-b 4s infinite linear;
-          animation: rotate-b 4s infinite linear;
-  border-radius: 40px 0 0 40px;
-  -webkit-transform-origin: 20px 20px;
-      -ms-transform-origin: 20px 20px;
-          transform-origin: 20px 20px;
-}
-
-@-webkit-keyframes rotate-a {
-  50%, 100% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-}
-
-@keyframes rotate-a {
-  50%, 100% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-}
-
-@-webkit-keyframes rotate-b {
-  0%, 50% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  100% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-}
-
-@keyframes rotate-b {
-  0%, 50% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  100% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-}
-
-.circle-02 {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-.circle-02 .controls {
-  top: 120px;
-  position: absolute;
-}
-
-.circle-02 .radial-progress {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 120px;
-  height: 120px;
-  background-color: transparent;
-  border-radius: 50%;
-}
-
-.circle-02 .radial-progress .circle .mask, .circle-02 .radial-progress .circle .fill, .circle-02 .radial-progress .circle .shadow {
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-02 .radial-progress .circle .mask, .circle-02 .radial-progress .circle .fill {
-  -webkit-backface-visibility: hidden;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  border-radius: 50%;
-}
-
-.circle-02 .radial-progress .circle .mask {
-  clip: rect(0px, 120px, 120px, 60px);
-}
-
-.circle-02 .radial-progress .circle .mask .fill {
-  clip: rect(0px, 60px, 120px, 0px);
-  background-color: #00549f;
-}
-
-.circle-02 .radial-progress .inner-circle {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  margin-left: 15px;
-  margin-top: 15px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(1.8deg);
-      -ms-transform: rotate(1.8deg);
-          transform: rotate(1.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(3.6deg);
-      -ms-transform: rotate(3.6deg);
-          transform: rotate(3.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(3.6deg);
-      -ms-transform: rotate(3.6deg);
-          transform: rotate(3.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(7.2deg);
-      -ms-transform: rotate(7.2deg);
-          transform: rotate(7.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(5.4deg);
-      -ms-transform: rotate(5.4deg);
-          transform: rotate(5.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(10.8deg);
-      -ms-transform: rotate(10.8deg);
-          transform: rotate(10.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(7.2deg);
-      -ms-transform: rotate(7.2deg);
-          transform: rotate(7.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(14.4deg);
-      -ms-transform: rotate(14.4deg);
-          transform: rotate(14.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(9deg);
-      -ms-transform: rotate(9deg);
-          transform: rotate(9deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(18deg);
-      -ms-transform: rotate(18deg);
-          transform: rotate(18deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(10.8deg);
-      -ms-transform: rotate(10.8deg);
-          transform: rotate(10.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(21.6deg);
-      -ms-transform: rotate(21.6deg);
-          transform: rotate(21.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(12.6deg);
-      -ms-transform: rotate(12.6deg);
-          transform: rotate(12.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(25.2deg);
-      -ms-transform: rotate(25.2deg);
-          transform: rotate(25.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(14.4deg);
-      -ms-transform: rotate(14.4deg);
-          transform: rotate(14.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(28.8deg);
-      -ms-transform: rotate(28.8deg);
-          transform: rotate(28.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(16.2deg);
-      -ms-transform: rotate(16.2deg);
-          transform: rotate(16.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(32.4deg);
-      -ms-transform: rotate(32.4deg);
-          transform: rotate(32.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(18deg);
-      -ms-transform: rotate(18deg);
-          transform: rotate(18deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(36deg);
-      -ms-transform: rotate(36deg);
-          transform: rotate(36deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(19.8deg);
-      -ms-transform: rotate(19.8deg);
-          transform: rotate(19.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(39.6deg);
-      -ms-transform: rotate(39.6deg);
-          transform: rotate(39.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(21.6deg);
-      -ms-transform: rotate(21.6deg);
-          transform: rotate(21.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(43.2deg);
-      -ms-transform: rotate(43.2deg);
-          transform: rotate(43.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(23.4deg);
-      -ms-transform: rotate(23.4deg);
-          transform: rotate(23.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(46.8deg);
-      -ms-transform: rotate(46.8deg);
-          transform: rotate(46.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(25.2deg);
-      -ms-transform: rotate(25.2deg);
-          transform: rotate(25.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(50.4deg);
-      -ms-transform: rotate(50.4deg);
-          transform: rotate(50.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(27deg);
-      -ms-transform: rotate(27deg);
-          transform: rotate(27deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(54deg);
-      -ms-transform: rotate(54deg);
-          transform: rotate(54deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(28.8deg);
-      -ms-transform: rotate(28.8deg);
-          transform: rotate(28.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(57.6deg);
-      -ms-transform: rotate(57.6deg);
-          transform: rotate(57.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(30.6deg);
-      -ms-transform: rotate(30.6deg);
-          transform: rotate(30.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(61.2deg);
-      -ms-transform: rotate(61.2deg);
-          transform: rotate(61.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(32.4deg);
-      -ms-transform: rotate(32.4deg);
-          transform: rotate(32.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(64.8deg);
-      -ms-transform: rotate(64.8deg);
-          transform: rotate(64.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(34.2deg);
-      -ms-transform: rotate(34.2deg);
-          transform: rotate(34.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(68.4deg);
-      -ms-transform: rotate(68.4deg);
-          transform: rotate(68.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(36deg);
-      -ms-transform: rotate(36deg);
-          transform: rotate(36deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(72deg);
-      -ms-transform: rotate(72deg);
-          transform: rotate(72deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(37.8deg);
-      -ms-transform: rotate(37.8deg);
-          transform: rotate(37.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(75.6deg);
-      -ms-transform: rotate(75.6deg);
-          transform: rotate(75.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(39.6deg);
-      -ms-transform: rotate(39.6deg);
-          transform: rotate(39.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(79.2deg);
-      -ms-transform: rotate(79.2deg);
-          transform: rotate(79.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(41.4deg);
-      -ms-transform: rotate(41.4deg);
-          transform: rotate(41.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(82.8deg);
-      -ms-transform: rotate(82.8deg);
-          transform: rotate(82.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(43.2deg);
-      -ms-transform: rotate(43.2deg);
-          transform: rotate(43.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(86.4deg);
-      -ms-transform: rotate(86.4deg);
-          transform: rotate(86.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(46.8deg);
-      -ms-transform: rotate(46.8deg);
-          transform: rotate(46.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(93.6deg);
-      -ms-transform: rotate(93.6deg);
-          transform: rotate(93.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(48.6deg);
-      -ms-transform: rotate(48.6deg);
-          transform: rotate(48.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(97.2deg);
-      -ms-transform: rotate(97.2deg);
-          transform: rotate(97.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(50.4deg);
-      -ms-transform: rotate(50.4deg);
-          transform: rotate(50.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(100.8deg);
-      -ms-transform: rotate(100.8deg);
-          transform: rotate(100.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(52.2deg);
-      -ms-transform: rotate(52.2deg);
-          transform: rotate(52.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(104.4deg);
-      -ms-transform: rotate(104.4deg);
-          transform: rotate(104.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(54deg);
-      -ms-transform: rotate(54deg);
-          transform: rotate(54deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(108deg);
-      -ms-transform: rotate(108deg);
-          transform: rotate(108deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(55.8deg);
-      -ms-transform: rotate(55.8deg);
-          transform: rotate(55.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(111.6deg);
-      -ms-transform: rotate(111.6deg);
-          transform: rotate(111.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(57.6deg);
-      -ms-transform: rotate(57.6deg);
-          transform: rotate(57.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(115.2deg);
-      -ms-transform: rotate(115.2deg);
-          transform: rotate(115.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(59.4deg);
-      -ms-transform: rotate(59.4deg);
-          transform: rotate(59.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(118.8deg);
-      -ms-transform: rotate(118.8deg);
-          transform: rotate(118.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(61.2deg);
-      -ms-transform: rotate(61.2deg);
-          transform: rotate(61.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(122.4deg);
-      -ms-transform: rotate(122.4deg);
-          transform: rotate(122.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(63deg);
-      -ms-transform: rotate(63deg);
-          transform: rotate(63deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(126deg);
-      -ms-transform: rotate(126deg);
-          transform: rotate(126deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(64.8deg);
-      -ms-transform: rotate(64.8deg);
-          transform: rotate(64.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(129.6deg);
-      -ms-transform: rotate(129.6deg);
-          transform: rotate(129.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(66.6deg);
-      -ms-transform: rotate(66.6deg);
-          transform: rotate(66.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(133.2deg);
-      -ms-transform: rotate(133.2deg);
-          transform: rotate(133.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(68.4deg);
-      -ms-transform: rotate(68.4deg);
-          transform: rotate(68.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(136.8deg);
-      -ms-transform: rotate(136.8deg);
-          transform: rotate(136.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(70.2deg);
-      -ms-transform: rotate(70.2deg);
-          transform: rotate(70.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(140.4deg);
-      -ms-transform: rotate(140.4deg);
-          transform: rotate(140.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(72deg);
-      -ms-transform: rotate(72deg);
-          transform: rotate(72deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(144deg);
-      -ms-transform: rotate(144deg);
-          transform: rotate(144deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(73.8deg);
-      -ms-transform: rotate(73.8deg);
-          transform: rotate(73.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(147.6deg);
-      -ms-transform: rotate(147.6deg);
-          transform: rotate(147.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(75.6deg);
-      -ms-transform: rotate(75.6deg);
-          transform: rotate(75.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(151.2deg);
-      -ms-transform: rotate(151.2deg);
-          transform: rotate(151.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(77.4deg);
-      -ms-transform: rotate(77.4deg);
-          transform: rotate(77.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(154.8deg);
-      -ms-transform: rotate(154.8deg);
-          transform: rotate(154.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(79.2deg);
-      -ms-transform: rotate(79.2deg);
-          transform: rotate(79.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(158.4deg);
-      -ms-transform: rotate(158.4deg);
-          transform: rotate(158.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(81deg);
-      -ms-transform: rotate(81deg);
-          transform: rotate(81deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(162deg);
-      -ms-transform: rotate(162deg);
-          transform: rotate(162deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(82.8deg);
-      -ms-transform: rotate(82.8deg);
-          transform: rotate(82.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(165.6deg);
-      -ms-transform: rotate(165.6deg);
-          transform: rotate(165.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(84.6deg);
-      -ms-transform: rotate(84.6deg);
-          transform: rotate(84.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(169.2deg);
-      -ms-transform: rotate(169.2deg);
-          transform: rotate(169.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(86.4deg);
-      -ms-transform: rotate(86.4deg);
-          transform: rotate(86.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(172.8deg);
-      -ms-transform: rotate(172.8deg);
-          transform: rotate(172.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(88.2deg);
-      -ms-transform: rotate(88.2deg);
-          transform: rotate(88.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(176.4deg);
-      -ms-transform: rotate(176.4deg);
-          transform: rotate(176.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(91.8deg);
-      -ms-transform: rotate(91.8deg);
-          transform: rotate(91.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(183.6deg);
-      -ms-transform: rotate(183.6deg);
-          transform: rotate(183.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(93.6deg);
-      -ms-transform: rotate(93.6deg);
-          transform: rotate(93.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(187.2deg);
-      -ms-transform: rotate(187.2deg);
-          transform: rotate(187.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(95.4deg);
-      -ms-transform: rotate(95.4deg);
-          transform: rotate(95.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(190.8deg);
-      -ms-transform: rotate(190.8deg);
-          transform: rotate(190.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(97.2deg);
-      -ms-transform: rotate(97.2deg);
-          transform: rotate(97.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(194.4deg);
-      -ms-transform: rotate(194.4deg);
-          transform: rotate(194.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(99deg);
-      -ms-transform: rotate(99deg);
-          transform: rotate(99deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(198deg);
-      -ms-transform: rotate(198deg);
-          transform: rotate(198deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(100.8deg);
-      -ms-transform: rotate(100.8deg);
-          transform: rotate(100.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(201.6deg);
-      -ms-transform: rotate(201.6deg);
-          transform: rotate(201.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(102.6deg);
-      -ms-transform: rotate(102.6deg);
-          transform: rotate(102.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(205.2deg);
-      -ms-transform: rotate(205.2deg);
-          transform: rotate(205.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(104.4deg);
-      -ms-transform: rotate(104.4deg);
-          transform: rotate(104.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(208.8deg);
-      -ms-transform: rotate(208.8deg);
-          transform: rotate(208.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(106.2deg);
-      -ms-transform: rotate(106.2deg);
-          transform: rotate(106.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(212.4deg);
-      -ms-transform: rotate(212.4deg);
-          transform: rotate(212.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(108deg);
-      -ms-transform: rotate(108deg);
-          transform: rotate(108deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(216deg);
-      -ms-transform: rotate(216deg);
-          transform: rotate(216deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(109.8deg);
-      -ms-transform: rotate(109.8deg);
-          transform: rotate(109.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(219.6deg);
-      -ms-transform: rotate(219.6deg);
-          transform: rotate(219.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(111.6deg);
-      -ms-transform: rotate(111.6deg);
-          transform: rotate(111.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(223.2deg);
-      -ms-transform: rotate(223.2deg);
-          transform: rotate(223.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(113.4deg);
-      -ms-transform: rotate(113.4deg);
-          transform: rotate(113.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(226.8deg);
-      -ms-transform: rotate(226.8deg);
-          transform: rotate(226.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(115.2deg);
-      -ms-transform: rotate(115.2deg);
-          transform: rotate(115.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(230.4deg);
-      -ms-transform: rotate(230.4deg);
-          transform: rotate(230.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(117deg);
-      -ms-transform: rotate(117deg);
-          transform: rotate(117deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(234deg);
-      -ms-transform: rotate(234deg);
-          transform: rotate(234deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(118.8deg);
-      -ms-transform: rotate(118.8deg);
-          transform: rotate(118.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(237.6deg);
-      -ms-transform: rotate(237.6deg);
-          transform: rotate(237.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(120.6deg);
-      -ms-transform: rotate(120.6deg);
-          transform: rotate(120.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(241.2deg);
-      -ms-transform: rotate(241.2deg);
-          transform: rotate(241.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(122.4deg);
-      -ms-transform: rotate(122.4deg);
-          transform: rotate(122.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(244.8deg);
-      -ms-transform: rotate(244.8deg);
-          transform: rotate(244.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(124.2deg);
-      -ms-transform: rotate(124.2deg);
-          transform: rotate(124.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(248.4deg);
-      -ms-transform: rotate(248.4deg);
-          transform: rotate(248.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(126deg);
-      -ms-transform: rotate(126deg);
-          transform: rotate(126deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(252deg);
-      -ms-transform: rotate(252deg);
-          transform: rotate(252deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(127.8deg);
-      -ms-transform: rotate(127.8deg);
-          transform: rotate(127.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(255.6deg);
-      -ms-transform: rotate(255.6deg);
-          transform: rotate(255.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(129.6deg);
-      -ms-transform: rotate(129.6deg);
-          transform: rotate(129.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(259.2deg);
-      -ms-transform: rotate(259.2deg);
-          transform: rotate(259.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(131.4deg);
-      -ms-transform: rotate(131.4deg);
-          transform: rotate(131.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(262.8deg);
-      -ms-transform: rotate(262.8deg);
-          transform: rotate(262.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(133.2deg);
-      -ms-transform: rotate(133.2deg);
-          transform: rotate(133.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(266.4deg);
-      -ms-transform: rotate(266.4deg);
-          transform: rotate(266.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-          transform: rotate(270deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(136.8deg);
-      -ms-transform: rotate(136.8deg);
-          transform: rotate(136.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(273.6deg);
-      -ms-transform: rotate(273.6deg);
-          transform: rotate(273.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(138.6deg);
-      -ms-transform: rotate(138.6deg);
-          transform: rotate(138.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(277.2deg);
-      -ms-transform: rotate(277.2deg);
-          transform: rotate(277.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(140.4deg);
-      -ms-transform: rotate(140.4deg);
-          transform: rotate(140.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(280.8deg);
-      -ms-transform: rotate(280.8deg);
-          transform: rotate(280.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(142.2deg);
-      -ms-transform: rotate(142.2deg);
-          transform: rotate(142.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(284.4deg);
-      -ms-transform: rotate(284.4deg);
-          transform: rotate(284.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(144deg);
-      -ms-transform: rotate(144deg);
-          transform: rotate(144deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(288deg);
-      -ms-transform: rotate(288deg);
-          transform: rotate(288deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(145.8deg);
-      -ms-transform: rotate(145.8deg);
-          transform: rotate(145.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(291.6deg);
-      -ms-transform: rotate(291.6deg);
-          transform: rotate(291.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(147.6deg);
-      -ms-transform: rotate(147.6deg);
-          transform: rotate(147.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(295.2deg);
-      -ms-transform: rotate(295.2deg);
-          transform: rotate(295.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(149.4deg);
-      -ms-transform: rotate(149.4deg);
-          transform: rotate(149.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(298.8deg);
-      -ms-transform: rotate(298.8deg);
-          transform: rotate(298.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(151.2deg);
-      -ms-transform: rotate(151.2deg);
-          transform: rotate(151.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(302.4deg);
-      -ms-transform: rotate(302.4deg);
-          transform: rotate(302.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(153deg);
-      -ms-transform: rotate(153deg);
-          transform: rotate(153deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(306deg);
-      -ms-transform: rotate(306deg);
-          transform: rotate(306deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(154.8deg);
-      -ms-transform: rotate(154.8deg);
-          transform: rotate(154.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(309.6deg);
-      -ms-transform: rotate(309.6deg);
-          transform: rotate(309.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(156.6deg);
-      -ms-transform: rotate(156.6deg);
-          transform: rotate(156.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(313.2deg);
-      -ms-transform: rotate(313.2deg);
-          transform: rotate(313.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(158.4deg);
-      -ms-transform: rotate(158.4deg);
-          transform: rotate(158.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(316.8deg);
-      -ms-transform: rotate(316.8deg);
-          transform: rotate(316.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(160.2deg);
-      -ms-transform: rotate(160.2deg);
-          transform: rotate(160.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(320.4deg);
-      -ms-transform: rotate(320.4deg);
-          transform: rotate(320.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(162deg);
-      -ms-transform: rotate(162deg);
-          transform: rotate(162deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(324deg);
-      -ms-transform: rotate(324deg);
-          transform: rotate(324deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(163.8deg);
-      -ms-transform: rotate(163.8deg);
-          transform: rotate(163.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(327.6deg);
-      -ms-transform: rotate(327.6deg);
-          transform: rotate(327.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(165.6deg);
-      -ms-transform: rotate(165.6deg);
-          transform: rotate(165.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(331.2deg);
-      -ms-transform: rotate(331.2deg);
-          transform: rotate(331.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(167.4deg);
-      -ms-transform: rotate(167.4deg);
-          transform: rotate(167.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(334.8deg);
-      -ms-transform: rotate(334.8deg);
-          transform: rotate(334.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(169.2deg);
-      -ms-transform: rotate(169.2deg);
-          transform: rotate(169.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(338.4deg);
-      -ms-transform: rotate(338.4deg);
-          transform: rotate(338.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(171deg);
-      -ms-transform: rotate(171deg);
-          transform: rotate(171deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(342deg);
-      -ms-transform: rotate(342deg);
-          transform: rotate(342deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(172.8deg);
-      -ms-transform: rotate(172.8deg);
-          transform: rotate(172.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(345.6deg);
-      -ms-transform: rotate(345.6deg);
-          transform: rotate(345.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(174.6deg);
-      -ms-transform: rotate(174.6deg);
-          transform: rotate(174.6deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(349.2deg);
-      -ms-transform: rotate(349.2deg);
-          transform: rotate(349.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(176.4deg);
-      -ms-transform: rotate(176.4deg);
-          transform: rotate(176.4deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(352.8deg);
-      -ms-transform: rotate(352.8deg);
-          transform: rotate(352.8deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .mask.full, .circle-02 .radial-progress[data-progress="${i}"] .circle .fill {
-  -webkit-transform: rotate(178.2deg);
-      -ms-transform: rotate(178.2deg);
-          transform: rotate(178.2deg);
-}
-
-.circle-02 .radial-progress[data-progress="${i}"] .circle .fill.fix {
-  -webkit-transform: rotate(356.4deg);
-      -ms-transform: rotate(356.4deg);
-          transform: rotate(356.4deg);
-}
-
-.circle-03 {
-  /* Make things perty */
-}
-
-.circle-03 #svg circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
-  stroke: #666;
-  stroke-width: 1em;
-}
-
-.circle-03 #svg #bar {
-  stroke: #FF9F1E;
-}
-
-.circle-03 #cont {
-  display: block;
-  height: 200px;
-  width: 200px;
-  margin: 2em auto;
-  box-shadow: 0 0 1em black;
-  border-radius: 100%;
-  position: relative;
-}
-
-.circle-03 #cont:after {
-  position: absolute;
-  display: block;
-  height: 160px;
-  width: 160px;
-  left: 50%;
-  top: 50%;
-  box-shadow: inset 0 0 1em black;
-  content: attr(data-pct) "%";
-  margin-top: -80px;
-  margin-left: -80px;
-  border-radius: 100%;
-  line-height: 160px;
-  font-size: 2em;
-  text-shadow: 0 0 0.5em black;
-}
-
-.circle-03 input {
-  color: #000;
-}
-
-.circle-03 html {
-  height: 100%;
-}
-
-.circle-04 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 220px;
-}
-
-.circle-04 .path {
-  stroke-dashoffset: 628.3;
-  -webkit-animation: dash 5s linear forwards;
-          animation: dash 5s linear forwards;
-}
-
-.circle-04 circle {
-  stroke-width: 2;
-  stroke-opacity: 1;
-  stroke-dasharray: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 630;
-  stroke: #E0236C;
-  fill: none;
-}
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.circle-05 body {
-  background-color: #fff;
-}
-
-.circle-05 .bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.circle-05 .path {
-  -webkit-animation: draw 3.5s infinite;
-          animation: draw 3.5s infinite;
-}
-
-@-webkit-keyframes draw {
-  50% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.circle-06 path.semicircle {
-  stroke-width: 4;
-  stroke-dasharray: 450px;
-  stroke-dashoffset: 450px;
-  -webkit-animation: draw 3.5s infinite;
-          animation: draw 3.5s infinite;
-}
-
-.circle-07 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
-
-.circle-07 .bar,
-.circle-07 .mask {
+.speedometer .needle {
   position: absolute;
   left: 0;
-  top: 0;
-}
-
-.circle-07 .bar {
+  right: 0;
+  top: -17px;
+  top: 2px;
+  width: 12px;
+  margin: 0 auto;
   z-index: 50;
 }
 
-.circle-07 .mask {
-  z-index: 100;
+.speedometer .needle .inner {
+  height: 112px;
+  width: 12px;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
 }
 
-@keyframes draw {
-  50% {
-    stroke-dashoffset: 0;
+.speedometer .needle .top,
+.speedometer .needle .bottom {
+  position: absolute;
+}
+
+.speedometer .needle .top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 106px 6px;
+  border-color: transparent transparent #666 transparent;
+}
+
+.speedometer .needle .bottom {
+  height: 6px;
+  width: 12px;
+  border-radius: 0 0 190px 190px;
+  background-color: #666;
+  margin: 0 auto;
+  bottom: 1px;
+}
+
+.speedometer .bar {
+  position: relative;
+  overflow: hidden;
+  height: 95px;
+}
+
+.speedometer .half-circle {
+  height: 95px;
+  width: 190px;
+  border-radius: 190px 190px 0 0;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.speedometer .half-circle-bg {
+  background-color: #e0f3fc;
+  z-index: 10;
+}
+
+.speedometer .half-circle-speed {
+  background-color: #0590dd;
+  z-index: 20;
+}
+
+.speedometer .half-circle-cover {
+  background-color: #fff;
+  height: 65px;
+  width: 130px;
+  border-radius: 190px 190px 0 0;
+  background: #fff;
+  margin: 0 auto;
+  top: 30px;
+  z-index: 30;
+}
+
+.speedometer .animated {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.percent-100 .speedometer.play .animated,
+.percent-100-sm .speedometer.play .animated {
+  -webkit-animation-name: to-100;
+          animation-name: to-100;
+}
+
+.percent-100-static .animated,
+.percent-100-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.percent-66 .speedometer.play .animated,
+.percent-66-sm .speedometer.play .animated {
+  -webkit-animation-name: to-66;
+          animation-name: to-66;
+}
+
+.percent-66-static .animated,
+.percent-66-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-60.1deg);
+      -ms-transform: rotate(-60.1deg);
+          transform: rotate(-60.1deg);
+}
+
+.percent-60 .speedometer.play .animated,
+.percent-60-sm .speedometer.play .animated {
+  -webkit-animation-name: to-60;
+          animation-name: to-60;
+}
+
+.percent-60-static .animated,
+.percent-60-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-72deg);
+      -ms-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+}
+
+.percent-40 .speedometer.play .animated,
+.percent-40-sm .speedometer.play .animated {
+  -webkit-animation-name: to-40;
+          animation-name: to-40;
+}
+
+.percent-40-static .animated,
+.percent-40-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-108deg);
+      -ms-transform: rotate(-108deg);
+          transform: rotate(-108deg);
+}
+
+.percent-33 .speedometer.play .animated,
+.percent-33-sm .speedometer.play .animated {
+  -webkit-animation-name: to-33;
+          animation-name: to-33;
+}
+
+.percent-33-static .animated,
+.percent-33-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-120.1deg);
+      -ms-transform: rotate(-120.1deg);
+          transform: rotate(-120.1deg);
+}
+
+.percent-30 .speedometer.play .animated,
+.percent-30-sm .speedometer.play .animated {
+  -webkit-animation-name: to-30;
+          animation-name: to-30;
+}
+
+.percent-30-static .animated,
+.percent-30-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-126deg);
+      -ms-transform: rotate(-126deg);
+          transform: rotate(-126deg);
+}
+
+.percent-16 .speedometer.play .animated,
+.percent-16-sm .speedometer.play .animated {
+  -webkit-animation-name: to-16;
+          animation-name: to-16;
+}
+
+.percent-16-static .animated,
+.percent-16-static-sm .animated {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(-150.1deg);
+      -ms-transform: rotate(-150.1deg);
+          transform: rotate(-150.1deg);
+}
+
+[class*='sm'] .speedometer {
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+[class*='sm'] .speedometer .half-circle-cover::after {
+  background-color: #fff;
+  height: 10px;
+  width: 130px;
+  margin: 0 auto;
+  top: 60px;
+  content: '';
+  position: absolute;
+  border-radius: 1px;
+  z-index: 40;
+}
+
+@-webkit-keyframes to-100 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
-.circle-08 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 250px;
-  position: relative;
+@keyframes to-100 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
-.circle-08 .semicircle {
-  stroke-dashoffset: 450px;
+@-webkit-keyframes to-66 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-60.1deg);
+            transform: rotate(-60.1deg);
+  }
 }
 
-.circle-08 .controls {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+@keyframes to-66 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-60.1deg);
+            transform: rotate(-60.1deg);
+  }
 }
 
-.circle-08 .controls a {
-  width: 25%;
-  display: inline-block;
-  text-align: center;
-  padding: 5px 0;
+@-webkit-keyframes to-60 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-72deg);
+            transform: rotate(-72deg);
+  }
 }
 
-.circle-09, canvas {
-  margin-left: auto;
-  margin-right: auto;
-  left: auto;
-  top: auto;
-  text-align: center;
+@keyframes to-60 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-72deg);
+            transform: rotate(-72deg);
+  }
+}
+
+@-webkit-keyframes to-40 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-108deg);
+            transform: rotate(-108deg);
+  }
+}
+
+@keyframes to-40 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-108deg);
+            transform: rotate(-108deg);
+  }
+}
+
+@-webkit-keyframes to-33 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-120.1deg);
+            transform: rotate(-120.1deg);
+  }
+}
+
+@keyframes to-33 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-120.1deg);
+            transform: rotate(-120.1deg);
+  }
+}
+
+@-webkit-keyframes to-30 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-126deg);
+            transform: rotate(-126deg);
+  }
+}
+
+@keyframes to-30 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-126deg);
+            transform: rotate(-126deg);
+  }
+}
+
+@-webkit-keyframes to-16 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-150.1deg);
+            transform: rotate(-150.1deg);
+  }
+}
+
+@keyframes to-16 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-150.1deg);
+            transform: rotate(-150.1deg);
+  }
 }
 
 /*# sourceMappingURL=page.css.map */

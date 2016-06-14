@@ -1,0 +1,14 @@
+.controls {
+	width: 200px;
+	position: relative;
+
+	button {
+		margin: 0 auto;
+		position: absolute;
+
+		// left:0;
+		// right:0;
+		width: 100px;
+		margin: 20px;
+	}
+}

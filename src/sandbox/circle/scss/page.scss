@@ -1,12 +1,17 @@
-@import 'init';
+// @import 'init';
 
-// Half circle: 190px / 95px
-// Needle: 112px x 12px
-// Bottom of needle: 12 x 6
-// Ultimate 300: 100%
-// Ultimate 200: 66%
-// Ultimate 100: 33%
-// Ultimate 50: 16.6%
+// Maxx
+// ====
+// Ultimate 300/300: 100%
+// Ultimate 200/300: 66%
+// Ultimate 100/300: 33%
+// Extreme 50/300  : 16.6%
+// Non-maxx
+// ========
+// Ultimate 50/50  : 100%
+// Extreme 30/50   : 60%
+// Turbo 20/50     : 40%
+// Standard 15/50  : 30%;
 $needle-height: 112px;
 $needle-top-height: 106px;
 $needle-width: 12px;
@@ -17,47 +22,57 @@ $circle-color-bg: #f3f6f9;
 $circle-color-bg: #e0f3fc;
 $circle-color-speed: #0590dd;
 $circle-color-cover: #fff;
-
-//$circle-color-cover: pink;
 $dial-stroke-width: 30px;
 $start-pos: -180deg;
+$end-pos: $start-pos + 180deg;
+$end-pos-100: $end-pos;
+$end-pos-66: $start-pos + 180deg * 0.666;
+$end-pos-60: $start-pos + 180deg * 0.6;
+$end-pos-40: $start-pos + 180deg * 0.4;
+$end-pos-33: $start-pos + 180deg * 0.333;
+$end-pos-30: $start-pos + 180deg * 0.3;
+$end-pos-16: $start-pos + 180deg * 0.166;
+
+// List of possible percentages
+$percentages: 100, 66, 60, 40, 33, 30, 16;
+
+// List of possible ending positions (rotations)
+$end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33, $end-pos-30, $end-pos-16;
 
 @mixin animation {
 	transform-origin: bottom center;
-	animation-name: to-66;
 	animation-duration: 1s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
 }
 
 .speedometer {
-	> .wrap {
-		width: $circle-diameter;
-		height: $circle-diameter;
+	// We need to hide overflow on the container or else the rotating 'needle' boundary box will create scrollbars when animated
+	overflow: hidden;
 
-		// border: 1px solid grey;
-		position: relative;
-		margin: 20px;
+	// Add some extra space around the container so that 'needle' isn't cut off while animating
+	width: $circle-diameter + 20px;
+	height: $circle-radius + 25px;
+	position: relative;
+	margin: 20px auto;
+
+	// contains progress bar and needle
+	.dial {
+		padding-top: 20px;
+		overflow: hidden;
 	}
 
+	// needle is a css triangle above a css half-circle
 	.needle {
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: $circle-radius - $needle-height;
-
-		// bottom: 0;
+		top: 2px;
 		width: $needle-width;
 		margin: 0 auto;
-
-		// transform: rotate(270deg);
-		// transform-origin: bottom center;
-		// transform-origin: bottom center;
-		// animation-name: to-66-needle;
-		// animation-duration: .5s;
-		// animation-iteration-count: infinite;
-		// animation-timing-function: ease-out;
-		@include animation;
+		z-index: 50;
 
 		.inner {
 			height: $needle-height;
@@ -72,6 +87,7 @@ $start-pos: -180deg;
 			position: absolute;
 		}
 
+		// upper triangle
 		.top {
 			top: 0;
 			left: 0;
@@ -82,6 +98,7 @@ $start-pos: -180deg;
 			border-color: transparent transparent $needle-color transparent;
 		}
 
+		// lower half circle
 		.bottom {
 			height: $needle-width / 2;
 			width: $needle-width;
@@ -92,14 +109,7 @@ $start-pos: -180deg;
 		}
 	}
 
-	.dial {
-		height: $circle-radius;
-		height: $circle-radius;
-
-		//transform: rotate(-25deg);
-
-	}
-
+	// container/clipping mask for half circles
 	.bar {
 		position: relative;
 		overflow: hidden;
@@ -107,34 +117,30 @@ $start-pos: -180deg;
 	}
 
 	.half-circle {
-		content: '';
 		height: $circle-radius;
 		width: $circle-diameter;
 		border-radius: $circle-diameter $circle-diameter 0 0;
-		background: green;
 		margin: 0 auto;
 		position: absolute;
 		left: 0;
 		right: 0;
 		top: 0;
 		transform-origin: bottom center;
-		animation-name: to-66;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-out;
-
-		@include animation;
 	}
 
-	.half-circle-speed {
-		background-color: $circle-color-speed;
-	}
-
+	// Speed indicator/progress bar background
 	.half-circle-bg {
 		background-color: $circle-color-bg;
-		animation: none;
+		z-index: 10;
 	}
 
+	// Speed indicator/progress bar
+	.half-circle-speed {
+		background-color: $circle-color-speed;
+		z-index: 20;
+	}
+
+	// Speed indicator/progress bar cover, makes the half circle appear as as a circular bar instead
 	.half-circle-cover {
 		background-color: $circle-color-cover;
 		height: $circle-radius - $dial-stroke-width;
@@ -143,71 +149,76 @@ $start-pos: -180deg;
 		background: $circle-color-cover;
 		margin: 0 auto;
 		top: $dial-stroke-width;
-		animation: none;
+		z-index: 30;
 	}
 
-	.hidden {
-		display: none;
-		visibility: hidden;
-	}
-
-	[class*='circle-0'] {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-@keyframes to-100 {
-	0% {
+	.animated {
 		transform: rotate($start-pos);
-	}
 
-	100% {
-		transform: rotate($start-pos + 180deg);
+		@include animation;
 	}
 }
 
-@keyframes to-66 {
-	0% {
-		transform: rotate($start-pos);
+// Iterate over each possible percentage the progress meter will indicate
+@for $i from 1 through length($percentages) {
+	// Grab our percent from the list, according to the loop index
+	$percent: #{nth($percentages, $i)};
+
+	// Add a class name that corresponds to the percentage number
+	.percent-#{$percent} .speedometer.play,
+	// Small versions
+	.percent-#{$percent}-sm .speedometer.play {
+		// 'animated' is the class on elements that animate on animated version
+		.animated {
+			// Pull the name of the correct animation based on index
+			animation-name: to-#{nth($percentages, $i)};
+		}
 	}
 
-	100% {
-		transform: rotate($start-pos + 180deg * 0.666);
+	// Class names for satic versions
+	.percent-#{$percent}-static,
+	// Small versions
+	.percent-#{$percent}-static-sm {
+		.animated {
+			animation: none;
+
+			// Pull the correct ending position based on index
+			transform: rotate(#{nth($end-positions, $i)});
+		}
 	}
 }
 
-@keyframes to-33 {
-	0% {
-		transform: rotate($start-pos);
-	}
+// Small versions. When we shrink them down there is a gap between the white half circle that is covered the blue bg circle and the bottom of the blue circle. Add a pseudo element to cover it
+[class*='sm'] {
+	.speedometer {
+		transform: scale(0.6);
 
-	100% {
-		transform: rotate($start-pos + 180deg * 0.333);
+		.half-circle-cover::after {
+			background-color: #fff;
+			height: 10px;
+			width: $circle-diameter - $dial-stroke-width * 2;
+			margin: 0 auto;
+			top: $dial-stroke-width * 2;
+			content: '';
+			position: absolute;
+			border-radius: 1px;
+			z-index: 40;
+		}
 	}
 }
 
-@keyframes to-16 {
-	0% {
-		transform: rotate($start-pos);
-	}
+// Generate keyframes
+@for $i from 1 through length($percentages) {
+	$percent: #{nth($percentages, $i)};
 
-	100% {
-		transform: rotate($start-pos + 180deg * 0.166);
-	}
-}
+	@keyframes to-#{$percent} {
+		0% {
+			transform: rotate($start-pos);
+		}
 
-.controls {
-	width: 200px;
-	position: relative;
-
-	button {
-		margin: 0 auto;
-		position: absolute;
-
-		// left:0;
-		// right:0;
-		width: 100px;
-		margin: 20px;
+		// translate3d for FF rendering bug
+		100% {
+			transform: rotate(#{nth($end-positions, $i)});
+		}
 	}
 }
