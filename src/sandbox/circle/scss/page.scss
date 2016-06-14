@@ -1,8 +1,5 @@
 // @import 'init';
 
-// Half circle: 190px / 95px
-// Needle: 112px x 12px
-// Bottom of needle: 12 x 6
 // Maxx
 // ====
 // Ultimate 300/300: 100%
@@ -51,15 +48,18 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 }
 
 .speedometer {
-	width: $circle-diameter;
-	height: $circle-radius;
+	// We need to hide overflow on the container or else the rotating 'needle' boundary box will create scrollbars when animated
+	overflow: hidden;
+
+	// Add some extra space around the container so that 'needle' isn't cut off while animating
+	width: $circle-diameter + 20px;
+	height: $circle-radius + 25px;
 	position: relative;
 	margin: 20px auto;
 
 	// contains progress bar and needle
 	.dial {
-		height: $circle-radius;
-		height: $circle-radius;
+		padding-top: 20px;
 		overflow: hidden;
 	}
 
@@ -69,6 +69,7 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		left: 0;
 		right: 0;
 		top: $circle-radius - $needle-height;
+		top: 2px;
 		width: $needle-width;
 		margin: 0 auto;
 		z-index: 50;
@@ -132,12 +133,12 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		background-color: $circle-color-bg;
 		z-index: 10;
 	}
+
 	// Speed indicator/progress bar
 	.half-circle-speed {
 		background-color: $circle-color-speed;
 		z-index: 20;
 	}
-
 
 	// Speed indicator/progress bar cover, makes the half circle appear as as a circular bar instead
 	.half-circle-cover {
@@ -206,72 +207,18 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 	}
 }
 
-@keyframes to-100 {
-	0% {
-		transform: rotate($start-pos);
-	}
+// Generate keyframes
+@for $i from 1 through length($percentages) {
+	$percent: #{nth($percentages, $i)};
 
-	100% {
-		transform: rotate($end-pos-100);
-	}
-}
+	@keyframes to-#{$percent} {
+		0% {
+			transform: rotate($start-pos);
+		}
 
-@keyframes to-66 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-66);
-	}
-}
-
-@keyframes to-60 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-60);
-	}
-}
-
-@keyframes to-40 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-40);
-	}
-}
-
-@keyframes to-33 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-33);
-	}
-}
-
-@keyframes to-30 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-30);
-	}
-}
-
-@keyframes to-16 {
-	0% {
-		transform: rotate($start-pos);
-	}
-
-	100% {
-		transform: rotate($end-pos-16);
+		// translate3d for FF rendering bug
+		100% {
+			transform: rotate(#{nth($end-positions, $i)});
+		}
 	}
 }

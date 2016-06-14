@@ -1,12 +1,13 @@
 .speedometer {
-  width: 190px;
-  height: 95px;
+  overflow: hidden;
+  width: 210px;
+  height: 120px;
   position: relative;
   margin: 20px auto;
 }
 
 .speedometer .dial {
-  height: 95px;
+  padding-top: 20px;
   overflow: hidden;
 }
 
@@ -15,6 +16,7 @@
   left: 0;
   right: 0;
   top: -17px;
+  top: 2px;
   width: 12px;
   margin: 0 auto;
   z-index: 50;
