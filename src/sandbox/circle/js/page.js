@@ -1,15 +1,14 @@
 var speedometer = {
 	'trigger'        : '#speed-compare',
-	'target'         :'.modal_content .speedometer',
+	'target'         : '.modal_content .speedometer',
 	'activationClass': 'play',
-	'delay'          : 1250
+	'delay'          : 500
 };
-$(function() {
-	$(speedometer.trigger).on('click', function() {
-		setTimeout( function() {
-			$(speedometer.target).each(function() {
-				$(this).addClass(speedometer.activationClass);
-			});
-		}, speedometer.delay);
-	});
-});
+var activateSpeedometer = function() {
+	setTimeout( function() {
+		$(speedometer.target).each(function() {
+			$(this).addClass(speedometer.activationClass);
+		});
+	}, speedometer.delay);
+};
+activateSpeedometer();
