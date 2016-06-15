@@ -1,5 +1,10 @@
 // @import 'init';
+@function px-to-em($pixels, $base: 16) {
+	@return $pixels / $base * 1em;
+}
 
+// Full-size width: 195px
+// Small: 118px
 // Maxx
 // ====
 // Ultimate 300/300: 100%
@@ -39,12 +44,97 @@ $percentages: 100, 66, 60, 40, 33, 30, 16;
 // List of possible ending positions (rotations)
 $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33, $end-pos-30, $end-pos-16;
 
+// Breakpoint values in pixels : what factor to scale by at that breakpoint
+$breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
+
 @mixin animation {
 	transform-origin: bottom center;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
+}
+
+@mixin adjust-size($factor: 90) {
+	$factor: $factor * 0.01;
+
+	// .speedometer {
+	width: ($circle-diameter + 20px) * $factor;
+	height: ($circle-radius + 25px) * $factor;
+	position: relative;
+	margin: 20px auto;
+
+	&::after {
+		height: 10px * $factor;
+		width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
+
+		// top: $dial-stroke-width * 2 * $factor;
+
+	}
+
+	.dial {
+		padding-top: 20px * $factor;
+	}
+
+	.bar {
+		position: relative;
+		overflow: hidden;
+		height: $circle-radius * $factor;
+	}
+
+	.half-circle {
+		height: $circle-radius * $factor;
+		width: $circle-diameter * $factor;
+		border-radius: ($circle-diameter * $factor) ($circle-diameter * $factor) 0 0;
+		transform-origin: bottom center;
+	}
+
+	.half-circle-cover {
+		height: ($circle-radius - $dial-stroke-width) * $factor;
+		width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
+		border-radius: ($circle-diameter * $factor) ($circle-diameter * $factor) 0 0;
+
+		// top: $dial-stroke-width;
+
+		// &::after {
+		// 	height: 10px * $factor;
+		// 	width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
+		// 	top: $dial-stroke-width * 2 * $factor;
+		// }
+
+	}
+
+	.needle {
+		// top: $needle-pos;
+		width: $needle-width * $factor;
+
+		.inner {
+			height: $needle-height * $factor;
+			width: $needle-width * $factor;
+		}
+
+		// upper triangle
+		.top {
+			// border-width: 0 ($needle-width / 2 * $factor) ($needle-top-height * $factor) ($needle-width / 2 * $factor);
+
+		}
+
+		// lower half circle
+		.bottom {
+			// height: $needle-width / 2 * $factor;
+			// width: $needle-width * $factor;
+			// border-radius: 0 0 ($circle-diameter * $factor) ($circle-diameter * $factor);
+
+		}
+	}
+
+	// }
+}
+
+@mixin needle-svg {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMSBUaW55Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLXRpbnkuZHRkIj48c3ZnIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9InRpbnkiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEycHgiIGhlaWdodD0iMTEzcHgiIHZpZXdCb3g9IjAgMCAxMiAxMTMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM2NzY3NjciIGQ9Ik0wLjA2NywxMDYuMzQ0Yy0wLjAxNiwwLjEzNS0wLjAyNCwwLjU0My0wLjAzMiwwLjY4MWwtMC4wMTIsMC40MTFoMC4wMDVjLTAuMDAxLDAtMC4wMTEtMC4xNDYtMC4wMTEtMC4wODFjMC4wMDYsMy4xOSwyLjY4OSw1LjYzNSw1Ljk5NSw1LjYyOWMzLjMwNC0wLjAwNyw1Ljk3OC0yLjY2Niw1Ljk3MS01Ljg1NmMtMC4wMDEtMC40MTUtMC4wNS0wLjg1My0wLjEzNi0xLjI0Mkw2LjAxMiwwLjEyNEwwLjA2NywxMDYuMzQ0eiIvPjwvc3ZnPg==);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .speedometer {
@@ -55,7 +145,25 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 	width: $circle-diameter + 20px;
 	height: $circle-radius + 25px;
 	position: relative;
-	margin: 20px auto;
+	margin: 0px auto 10px;
+
+	// In some browsers there is a gap between the white half circle that is covering the blue bg circle, and the bottom of the blue bg circle. Add a pseudo element to cover it
+
+	&::after {
+		background-color: #fff;
+		height: 10px;
+		width: 130px;
+		margin: 0 auto;
+
+		/* top: 60px; */
+		left: 0;
+		bottom: 0;
+		content: '';
+		position: absolute;
+		border-radius: 1px;
+		z-index: 40;
+		right: 0;
+	}
 
 	// contains progress bar and needle
 	.dial {
@@ -68,13 +176,21 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: $circle-radius - $needle-height;
+
+		// top: $circle-radius - $needle-height;
 		top: 2px;
+
+		// bottom: 0;
 		width: $needle-width;
 		margin: 0 auto;
 		z-index: 50;
 
 		.inner {
+			// CSS-only needle breaks up on scaling, and in different browsers
+			@include needle-svg;
+
+			// Prevents blurry subpixel rendering
+			-webkit-backface-visibility: hidden;
 			height: $needle-height;
 			width: $needle-width;
 			position: relative;
@@ -84,28 +200,33 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 
 		.top,
 		.bottom {
+			display: none;
 			position: absolute;
 		}
 
 		// upper triangle
 		.top {
-			top: 0;
-			left: 0;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 0 ($needle-width / 2) $needle-top-height ($needle-width / 2);
-			border-color: transparent transparent $needle-color transparent;
+			// top: 0;
+			// left: 0;
+			// width: 0;
+			// height: 0;
+			// border-style: solid;
+			// border-width: 0 ($needle-width / 2) $needle-top-height ($needle-width / 2);
+			// border-color: transparent transparent $needle-color transparent;
+			border-color: transparent;
 		}
 
 		// lower half circle
 		.bottom {
-			height: $needle-width / 2;
-			width: $needle-width;
-			border-radius: 0 0 $circle-diameter $circle-diameter;
-			background-color: $needle-color;
-			margin: 0 auto;
-			bottom: 1px;
+			// height: $needle-width / 2;
+			// width: $needle-width;
+			// border-radius: 0 0 $circle-diameter $circle-diameter;
+			// background-color: $needle-color;
+			background-color: transparent;
+
+			// margin: 0 auto;
+			// bottom: 1px;
+
 		}
 	}
 
@@ -148,20 +269,22 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		border-radius: $circle-diameter $circle-diameter 0 0;
 		background: $circle-color-cover;
 		margin: 0 auto;
-		top: $dial-stroke-width;
+		top: auto;
+		bottom: 0;
 		z-index: 30;
 
-		&::after {
-			background-color: #fff;
-			height: 10px;
-			width: $circle-diameter - $dial-stroke-width * 2;
-			margin: 0 auto;
-			top: $dial-stroke-width * 2;
-			content: '';
-			position: absolute;
-			border-radius: 1px;
-			z-index: 40;
-		}
+		// &::after {
+		// 	background-color: #fff;
+		// 	height: 10px;
+		// 	width: $circle-diameter - $dial-stroke-width * 2;
+		// 	margin: 0 auto;
+		// 	top: $dial-stroke-width * 2;
+		// 	content: '';
+		// 	position: absolute;
+		// 	border-radius: 1px;
+		// 	z-index: 40;
+		// }
+
 	}
 
 	.animated {
@@ -169,6 +292,34 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 
 		@include animation;
 	}
+
+	// Small versions
+	[class*='sm'] & {
+		// 62% is the magic number that gets us the closest to a 118px width from the comp
+		@include adjust-size(62);
+	}
+
+	.campaign-speed-explanation-modal & {
+		// CMS adds NBSPs to empty elements, causing display issues
+		font-size: 0;
+	}
+}
+
+// Testing
+.scaled-90 .speedometer {
+	@include adjust-size(90);
+}
+
+.scaled-80 .speedometer {
+	@include adjust-size(80);
+}
+
+.scaled-70 .speedometer {
+	@include adjust-size(70);
+}
+
+.scaled-60 .speedometer {
+	@include adjust-size(60);
 }
 
 // Iterate over each possible percentage the progress meter will indicate
@@ -195,15 +346,8 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 			animation: none;
 
 			// Pull the correct ending position based on index
-			transform: rotate(#{nth($end-positions, $i)});
+			transform: rotate(#{nth($end-positions, $i)}) translateZ(0);
 		}
-	}
-}
-
-// Small versions. When we shrink them down there is a gap between the white half circle that is covered the blue bg circle and the bottom of the blue circle. Add a pseudo element to cover it
-[class*='sm'] {
-	.speedometer {
-		transform: scale(0.6);
 	}
 }
 
@@ -219,6 +363,16 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 		// translate3d for FF rendering bug
 		100% {
 			transform: rotate(#{nth($end-positions, $i)});
+		}
+	}
+}
+
+// Generate media queries
+
+@each $bp, $scale in $breakpoint-scaling {
+	@media (max-width: px-to-em($bp)) {
+		.speedometer {
+			@include adjust-size($scale);
 		}
 	}
 }
