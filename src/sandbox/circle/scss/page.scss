@@ -1,8 +1,5 @@
+/* Version 5 | 2016 06 16 */
 // @import 'init';
-@function px-to-em($pixels, $base: 16) {
-	@return $pixels / $base * 1em;
-}
-
 // Full-size width: 195px
 // Small: 118px
 // Maxx
@@ -17,6 +14,7 @@
 // Extreme 30/50   : 60%
 // Turbo 20/50     : 40%
 // Standard 15/50  : 30%;
+
 $needle-height: 112px;
 $needle-top-height: 106px;
 $needle-width: 12px;
@@ -47,6 +45,10 @@ $end-positions: $end-pos-100, $end-pos-66, $end-pos-60, $end-pos-40, $end-pos-33
 // Breakpoint values in pixels : what factor to scale by at that breakpoint
 $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 
+@function px-to-em($pixels, $base: 16) {
+	@return $pixels / $base * 1em;
+}
+
 @mixin animation {
 	transform-origin: bottom center;
 	animation-duration: 1s;
@@ -58,18 +60,12 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 @mixin adjust-size($factor: 90) {
 	$factor: $factor * 0.01;
 
-	// .speedometer {
 	width: ($circle-diameter + 20px) * $factor;
 	height: ($circle-radius + 25px) * $factor;
-	position: relative;
-	margin: 20px auto;
 
 	&::after {
 		height: 10px * $factor;
 		width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
-
-		// top: $dial-stroke-width * 2 * $factor;
-
 	}
 
 	.dial {
@@ -77,8 +73,6 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 	}
 
 	.bar {
-		position: relative;
-		overflow: hidden;
 		height: $circle-radius * $factor;
 	}
 
@@ -86,49 +80,21 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 		height: $circle-radius * $factor;
 		width: $circle-diameter * $factor;
 		border-radius: ($circle-diameter * $factor) ($circle-diameter * $factor) 0 0;
-		transform-origin: bottom center;
 	}
 
 	.half-circle-cover {
 		height: ($circle-radius - $dial-stroke-width) * $factor;
 		width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
-		border-radius: ($circle-diameter * $factor) ($circle-diameter * $factor) 0 0;
-
-		// top: $dial-stroke-width;
-
-		// &::after {
-		// 	height: 10px * $factor;
-		// 	width: ($circle-diameter - $dial-stroke-width * 2) * $factor;
-		// 	top: $dial-stroke-width * 2 * $factor;
-		// }
-
 	}
 
 	.needle {
-		// top: $needle-pos;
 		width: $needle-width * $factor;
 
 		.inner {
 			height: $needle-height * $factor;
 			width: $needle-width * $factor;
 		}
-
-		// upper triangle
-		.top {
-			// border-width: 0 ($needle-width / 2 * $factor) ($needle-top-height * $factor) ($needle-width / 2 * $factor);
-
-		}
-
-		// lower half circle
-		.bottom {
-			// height: $needle-width / 2 * $factor;
-			// width: $needle-width * $factor;
-			// border-radius: 0 0 ($circle-diameter * $factor) ($circle-diameter * $factor);
-
-		}
 	}
-
-	// }
 }
 
 @mixin needle-svg {
@@ -138,24 +104,22 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 }
 
 .speedometer {
-	// We need to hide overflow on the container or else the rotating 'needle' boundary box will create scrollbars when animated
+	// Hide overflow on the container or else the rotating 'needle' boundary box will create scrollbars when animated
 	overflow: hidden;
 
-	// Add some extra space around the container so that 'needle' isn't cut off while animating
+	// Add extra space around the container so that 'needle' isn't cut off while animating
 	width: $circle-diameter + 20px;
 	height: $circle-radius + 25px;
 	position: relative;
 	margin: 0px auto 10px;
 
-	// In some browsers there is a gap between the white half circle that is covering the blue bg circle, and the bottom of the blue bg circle. Add a pseudo element to cover it
+	// Pseudo element to cover gap between the white half circle that is covering the blue bg circle, and the bottom of the blue bg circle (in some browsers)
 
 	&::after {
 		background-color: #fff;
 		height: 10px;
 		width: 130px;
 		margin: 0 auto;
-
-		/* top: 60px; */
 		left: 0;
 		bottom: 0;
 		content: '';
@@ -171,25 +135,19 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 		overflow: hidden;
 	}
 
-	// needle is a css triangle above a css half-circle
 	.needle {
 		position: absolute;
 		left: 0;
 		right: 0;
-
-		// top: $circle-radius - $needle-height;
 		top: 2px;
-
-		// bottom: 0;
 		width: $needle-width;
 		margin: 0 auto;
 		z-index: 50;
 
 		.inner {
-			// CSS-only needle breaks up on scaling, and in different browsers
+			// CSS-only needle breaks up upon scaling, and in different browsers
 			@include needle-svg;
 
-			// Prevents blurry subpixel rendering
 			-webkit-backface-visibility: hidden;
 			height: $needle-height;
 			width: $needle-width;
@@ -198,6 +156,7 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 			transform-origin: bottom center;
 		}
 
+		// needle was once a css triangle above a css half-circle
 		.top,
 		.bottom {
 			display: none;
@@ -272,19 +231,6 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 		top: auto;
 		bottom: 0;
 		z-index: 30;
-
-		// &::after {
-		// 	background-color: #fff;
-		// 	height: 10px;
-		// 	width: $circle-diameter - $dial-stroke-width * 2;
-		// 	margin: 0 auto;
-		// 	top: $dial-stroke-width * 2;
-		// 	content: '';
-		// 	position: absolute;
-		// 	border-radius: 1px;
-		// 	z-index: 40;
-		// }
-
 	}
 
 	.animated {
@@ -295,7 +241,7 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 
 	// Small versions
 	[class*='sm'] & {
-		// 62% is the magic number that gets us the closest to a 118px width from the comp
+		// 62% gets us the closest to spec's 118px width
 		@include adjust-size(62);
 	}
 
@@ -303,23 +249,6 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 		// CMS adds NBSPs to empty elements, causing display issues
 		font-size: 0;
 	}
-}
-
-// Testing
-.scaled-90 .speedometer {
-	@include adjust-size(90);
-}
-
-.scaled-80 .speedometer {
-	@include adjust-size(80);
-}
-
-.scaled-70 .speedometer {
-	@include adjust-size(70);
-}
-
-.scaled-60 .speedometer {
-	@include adjust-size(60);
 }
 
 // Iterate over each possible percentage the progress meter will indicate
@@ -343,10 +272,9 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 	// Small versions
 	.percent-#{$percent}-static-sm {
 		.animated {
-			animation: none;
-
 			// Pull the correct ending position based on index
 			transform: rotate(#{nth($end-positions, $i)}) translateZ(0);
+			animation: none;
 		}
 	}
 }
@@ -360,7 +288,6 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 			transform: rotate($start-pos);
 		}
 
-		// translate3d for FF rendering bug
 		100% {
 			transform: rotate(#{nth($end-positions, $i)});
 		}
@@ -368,7 +295,6 @@ $breakpoint-scaling: (1150: 90, 1025: 80, 900: 70, 825: 60, 768: 62);
 }
 
 // Generate media queries
-
 @each $bp, $scale in $breakpoint-scaling {
 	@media (max-width: px-to-em($bp)) {
 		.speedometer {
