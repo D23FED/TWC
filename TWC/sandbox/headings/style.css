@@ -29,9 +29,8 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 20px;
-  font-size: 2rem;
-  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 a {
@@ -48,6 +47,22 @@ a:hover {
   font-size: 4.6rem;
 }
 
+.medium-body-text {
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/*
+Bug from https://podio.com/tasks/50318154
+This rule was removed from residential.css, line 1671
+It may either be restored there, or added here
+*/
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  display: inline-block;
+}
+
+/* Mobile/tablet versions */
 @media (max-width: 48em) {
 
   h1, .h1 {
@@ -76,8 +91,8 @@ a:hover {
   }
 
   h6, .h6 {
-    font-size: 17px;
-    font-size: 1.7rem;
+    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .page-heading,
@@ -115,8 +130,8 @@ a:hover {
   }
 
   h6, .h6 {
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   .page-heading,
@@ -125,5 +140,3 @@ a:hover {
     font-size: 3.0rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
