@@ -1,4 +1,3 @@
-// Global Headings
 @import 'init';
 
 $h1SuperSize: 4.6rem;
@@ -7,17 +6,12 @@ $h2Size: 3rem;
 $h3Size: 2.7rem;
 $h4Size: 2.4rem;
 $h5Size: 2rem;
-$h6Size: $h5Size;
+$h6Size: 1.8rem;
 $headingSizes: $h1Size $h2Size $h3Size $h4Size $h5Size $h6Size;
 $scalingFactorMedium: 0.75;
 $scalingFactorSmall: 0.65;
 
 @mixin heading-size($size, $scale: 'medium') {
-
-	// h5 and h6 are same size
-	@if $size == 6 {
-		$size: 5;
-	}
 
 	@if $scale == 'medium' {
 		$scalingFactor: $scalingFactorMedium;
@@ -34,19 +28,17 @@ $scalingFactorSmall: 0.65;
 	font-weight: normal;
 }
 
+// Global Headings
 @for $i from 1 through 6 {
 	h#{$i}, .h#{$i} {
 		@extend .heading;
 
 		font-size: nth($headingSizes, $i);
 
-		@if $i == 6 {
-			font-family: $font-stack-sans-book;
-		}
-
 		@include respond-to('medium') {
 			@include heading-size($i);
 		}
+
 
 		@include respond-to('small') {
 			@include heading-size($i, 'small');
@@ -63,14 +55,34 @@ a {
 	}
 }
 
+// Helper for large titles
 .page-heading,
 .super-h1 {
 	font-size: $h1SuperSize;
+
 	@include respond-to('medium') {
 		font-size: $h1SuperSize * $scalingFactorMedium;
 	}
+
+
 	@include respond-to('small') {
 		font-size: $h1SuperSize * $scalingFactorSmall;
 	}
-
 }
+
+// Helper for paragraph text
+.medium-body-text {
+	font-family: $font-stack-sans-light;
+	font-size: 1.6rem;
+}
+
+/*
+Bug from https://podio.com/tasks/50318154
+This rule was removed from residential.css, line 1671
+It may either be restored there, or added here
+*/
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	display: inline-block;
+}
+
+/* Mobile/tablet versions */
