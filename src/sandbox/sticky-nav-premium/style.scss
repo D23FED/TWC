@@ -1,0 +1,126 @@
+$sticky-menu: '.stickySubNav';
+$sticky-el: '.stickyElement';
+$sticky-offscreen: '.js-sticky-past';
+$sticky-active: '.js-sticky';
+$sticky-closed: '.js-closed';
+$sticky-spacer: '.stickySpacing';
+$sticky-scroll-item: '.stickyScrollItem';
+
+.twc-content {
+	background-image: none;
+	background: #fff;
+}
+
+#{$sticky-menu} {
+	padding: 0;
+	overflow: hidden;
+	transition: opacity 0.5s;
+
+	&#{$sticky-active} {
+		visibility: visible;
+		opacity: 1;
+		position: fixed;
+		height: auto;
+		top: 0;
+		z-index: 9999;
+		width: 100%;
+		max-width: 980px;
+		box-shadow: 0 1px 2px 0 #666666;
+		display: block;
+		background: rgba(255, 255, 255, 0.75);
+		box-shadow: none;
+		max-width: 100%;
+
+		li#{$sticky-scroll-item} a svg {
+			display: inline-block;
+		}
+	}
+
+	ul {
+		width: 100%;
+		text-align: center;
+		padding: 1em 0;
+		position: relative;
+	}
+
+	&#{$sticky-closed} {
+		display: none;
+	}
+
+	li#{$sticky-scroll-item} {
+		display: inline;
+
+		a {
+			box-shadow: 1px 1px 2px 0 #888888;
+			display: inline-block;
+			width: 15%;
+			max-width: 105px;
+			height: auto;
+			padding: 0.6em 0.3em;
+			margin-right: 1%;
+			border: 2px solid $color-steel-dark-lightish;
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 7px;
+			text-align: center;
+			transition: border 300ms linear;
+			color: #5f5f5f;
+
+			svg {
+				display: none;
+				fill: #5f5f5f;
+				max-width: 50%;
+				transition: fill 300ms linear;
+			}
+
+			&:hover {
+				border: 2px solid #4578af;
+				box-shadow: 1px 1px 2px 0 #3376b2;
+				color: #4578af;
+
+				svg {
+					fill: #4578af;
+				}
+			}
+		}
+
+		&.active a {
+			border: 2px solid #4578af;
+			box-shadow: 1px 1px 2px 0 #3376b2;
+			color: #4578af;
+
+			svg {
+				fill: #4578af;
+				display: none;
+			}
+		}
+
+		&:last-of-type a {
+			margin-right: 0;
+		}
+	}
+
+	~ #{$sticky-spacer} {
+		display: none !important;
+	}
+}
+
+@media (max-width: 40em) {
+	#{$sticky-menu} {
+		ul {
+			padding: 1.25em 0.5em 0.5em;
+		}
+
+		li#{$sticky-scroll-item} a {
+			width: 23%;
+		}
+	}
+
+	.closeSticky {
+		top: 0;
+		right: 0;
+	}
+}
+
+.closeSticky span:after {
+	padding-left: 0.5em;
+}
