@@ -35,6 +35,7 @@
     "gulp-iconfont": "^6.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
+    "gulp-js-prettify": "^0.1.0",
     "gulp-jsbeautifier": "^2.0.3",
     "gulp-load-plugins": "^1.2.2",
     "gulp-newer": "^1.1.0",

@@ -63,6 +63,7 @@ It may either be restored there, or added here
 }
 
 /* Mobile/tablet versions */
+
 @media (max-width: 48em) {
 
   h1, .h1 {
@@ -140,3 +141,5 @@ It may either be restored there, or added here
     font-size: 3.0rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

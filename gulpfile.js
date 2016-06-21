@@ -194,7 +194,10 @@ g.task('php', function() {
 })
 
 g.task('scripts', function() {
-	return g.src(paths.source + globs.scripts, {
+	return g.src([
+		paths.source + globs.scripts,
+		'!node_modules/**/*'],
+		{
 			base: './src/'
 		})
 		.pipe($.changed(paths.dist))
@@ -225,23 +228,43 @@ g.task('scripts', function() {
 		.pipe($.eslint.format())
 		// Concat
 		// .pipe($.concat('main.js'))
-		.pipe($.jsbeautifier({
-			// config: './config.json',
-			indent_char: '\t',
-			indent_size: 1,
-			space_in_paren: true
+		// .pipe($.jsbeautifier({
+		// 	indent_char: '\t',
+		// 	indent_size: 1,
+		// 	space_in_paren: true
+		// }))
+		.pipe($.jsPrettify({
+	    "indent_size": 1,
+	    "indent_char": "	",
+	    "eol": "\n",
+	    "indent_level": 0,
+	    "indent_with_tabs": true,
+	    "preserve_newlines": true,
+	    "max_preserve_newlines": 2,
+	    "space_after_anon_function": false,
+	    "brace_style": "collapse",
+	    "keep_array_indentation": true,
+	    "keep_function_indentation": false,
+	    "space_before_conditional": true,
+	    "break_chained_methods": false,
+	    "eval_code": false,
+	    "unescape_strings": false,
+	    "wrap_line_length": 0,
+	    "wrap_attributes": "auto",
+	    "wrap_attributes_indent_size": 4,
+	    "end_with_newline": true
 		}))
 		.pipe(g.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
 			minimal: true
 		}))
-		//.pipe($.stripDebug())
+		.pipe($.stripDebug())
 		.pipe($.rename({
 			suffix: '.dist'
 		}))
 		// Uglify
-		// .pipe($.uglify())
+		.pipe($.uglify())
 		.pipe(g.dest(paths.dist))
 		// .pipe($.notify({
 		// 	message: 'Scripts task complete'

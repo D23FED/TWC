@@ -1,0 +1,119 @@
+.twc-content {
+  background-image: none;
+  background: #fff;
+}
+
+.stickySubNav {
+  padding: 0;
+  overflow: hidden;
+  transition: opacity 0.5s;
+}
+
+.stickySubNav.js-sticky {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  height: auto;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 980px;
+  box-shadow: 0 1px 2px 0 #666666;
+  display: block;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: none;
+  max-width: 100%;
+}
+
+.stickySubNav.js-sticky li.stickyScrollItem a svg {
+  display: inline-block;
+}
+
+.stickySubNav ul {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+}
+
+.stickySubNav.js-closed {
+  display: none;
+}
+
+.stickySubNav li.stickyScrollItem {
+  display: inline;
+}
+
+.stickySubNav li.stickyScrollItem a {
+  box-shadow: 1px 1px 2px 0 #888888;
+  display: inline-block;
+  width: 15%;
+  max-width: 105px;
+  height: auto;
+  padding: 0.6em 0.3em;
+  margin-right: 1%;
+  border: 2px solid #98999b;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 7px;
+  text-align: center;
+  transition: border 300ms linear;
+  color: #5f5f5f;
+}
+
+.stickySubNav li.stickyScrollItem a svg {
+  display: none;
+  fill: #5f5f5f;
+  max-width: 50%;
+  transition: fill 300ms linear;
+}
+
+.stickySubNav li.stickyScrollItem a:hover {
+  border: 2px solid #4578af;
+  box-shadow: 1px 1px 2px 0 #3376b2;
+  color: #4578af;
+}
+
+.stickySubNav li.stickyScrollItem a:hover svg {
+  fill: #4578af;
+}
+
+.stickySubNav li.stickyScrollItem.active a {
+  border: 2px solid #4578af;
+  box-shadow: 1px 1px 2px 0 #3376b2;
+  color: #4578af;
+}
+
+.stickySubNav li.stickyScrollItem.active a svg {
+  fill: #4578af;
+  display: none;
+}
+
+.stickySubNav li.stickyScrollItem:last-of-type a {
+  margin-right: 0;
+}
+
+.stickySubNav ~ .stickySpacing {
+  display: none !important;
+}
+
+.closeSticky span:after {
+  padding-left: 0.5em;
+}
+
+@media (max-width: 40em) {
+
+  .stickySubNav ul {
+    padding: 1.25em 0.5em 0.5em;
+  }
+
+  .stickySubNav li.stickyScrollItem a {
+    width: 23%;
+  }
+
+  .closeSticky {
+    top: 0;
+    right: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

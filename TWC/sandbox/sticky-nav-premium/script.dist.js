@@ -58,7 +58,7 @@ $.fn.scrollTo = function(target, options, callback) {
     Sticky Sub Nav -- Version: 1.2 - Updated: 6/20/2016
    ========================================================================== */
 $(document).ready(function() {
-	if (!!$(sticky.menu).offset()) {
+	if ( !! $(sticky.menu).offset()) {
 		$(function() {
 			var stickyTop = $(sticky.menu).offset().top;
 			var stickyNav = function() {
@@ -175,5 +175,5 @@ var _debounce = function(func, wait, immediate) {
 
 // Now function poached from underscore,  get the current timestamp as an integer.
 var _now = Date.now || function() {
-	return new Date().getTime();
-};
+		return new Date().getTime();
+	};
