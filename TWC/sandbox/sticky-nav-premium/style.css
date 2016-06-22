@@ -4,9 +4,13 @@
 }
 
 .stickySubNav {
-  padding: 0;
+  padding: 10px 0;
+  padding: 1rem 0;
   overflow: hidden;
   transition: opacity 0.5s;
+  display: table;
+  margin: 0 auto;
+  border-bottom: 1px solid #00315c;
 }
 
 .stickySubNav.js-sticky {
@@ -17,79 +21,88 @@
   top: 0;
   z-index: 9999;
   width: 100%;
-  max-width: 980px;
-  box-shadow: 0 1px 2px 0 #666666;
   display: block;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: none;
-  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .stickySubNav.js-sticky li.stickyScrollItem a svg {
   display: inline-block;
+  display: none;
+}
+
+.stickySubNav .inner {
+  max-width: 980px;
+  display: table;
+  margin: 0 auto;
 }
 
 .stickySubNav ul {
-  width: 100%;
   text-align: center;
   padding: 1em 0;
   position: relative;
+  display: table-row;
 }
 
-.stickySubNav.js-closed {
-  display: none;
+.stickySubNav li {
+  display: table-cell;
+  padding: 0 12px;
 }
 
-.stickySubNav li.stickyScrollItem {
-  display: inline;
+.stickySubNav li.twc-first {
+  padding-left: 0;
 }
 
-.stickySubNav li.stickyScrollItem a {
-  box-shadow: 1px 1px 2px 0 #888888;
+.stickySubNav li.twc-last {
+  padding-right: 0;
+}
+
+.stickySubNav li a {
   display: inline-block;
-  width: 15%;
-  max-width: 105px;
+  width: 100%;
   height: auto;
-  padding: 0.6em 0.3em;
+  padding: .556em 1.445em;
   margin-right: 1%;
-  border: 2px solid #98999b;
-  background: rgba(255, 255, 255, 0.8);
   border-radius: 7px;
   text-align: center;
-  transition: border 300ms linear;
-  color: #5f5f5f;
+  transition: all 200ms ease-out;
+  color: #00549f;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.8rem;
+  position: relative;
+  border: 1px solid #00549f;
+  background-color: #fff;
 }
 
-.stickySubNav li.stickyScrollItem a svg {
+.stickySubNav li a svg {
   display: none;
-  fill: #5f5f5f;
+  fill: #333;
   max-width: 50%;
   transition: fill 300ms linear;
 }
 
-.stickySubNav li.stickyScrollItem a:hover {
-  border: 2px solid #4578af;
-  box-shadow: 1px 1px 2px 0 #3376b2;
-  color: #4578af;
+.stickySubNav li a:hover {
+  color: #fff;
+  background-color: #02a9e0;
+  border-color: #02a9e0;
 }
 
-.stickySubNav li.stickyScrollItem a:hover svg {
+.stickySubNav li a:hover svg {
   fill: #4578af;
 }
 
-.stickySubNav li.stickyScrollItem.active a {
-  border: 2px solid #4578af;
-  box-shadow: 1px 1px 2px 0 #3376b2;
-  color: #4578af;
-}
-
-.stickySubNav li.stickyScrollItem.active a svg {
+.stickySubNav li.active a svg {
   fill: #4578af;
   display: none;
 }
 
-.stickySubNav li.stickyScrollItem:last-of-type a {
+.stickySubNav li:last-of-type a {
   margin-right: 0;
+}
+
+.stickySubNav.js-closed {
+  display: none;
 }
 
 .stickySubNav ~ .stickySpacing {
@@ -102,17 +115,14 @@
 
 @media (max-width: 40em) {
 
-  .stickySubNav ul {
-    padding: 1.25em 0.5em 0.5em;
+  .stickySubNav li {
+    padding: 0 2px;
   }
 
-  .stickySubNav li.stickyScrollItem a {
-    width: 23%;
-  }
-
-  .closeSticky {
-    top: 0;
-    right: 0;
+  .stickySubNav li a {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 0.4em 1.1em;
   }
 }
 

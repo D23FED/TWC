@@ -54,11 +54,9 @@ $.fn.scrollTo = function(target, options, callback) {
 	});
 };
 
-/* ==========================================================================
-    Sticky Sub Nav -- Version: 1.2 - Updated: 6/20/2016
-   ========================================================================== */
-$(document).ready(function() {
-	if (!!$(sticky.menu).offset()) {
+// Sticky Sub Nav -- Version: 1.2 - Updated: 6/20/2016
+$(function() {
+	if ( $(sticky.menu).offset() ) {
 		$(function() {
 			var stickyTop = $(sticky.menu).offset().top;
 			var stickyNav = function() {
