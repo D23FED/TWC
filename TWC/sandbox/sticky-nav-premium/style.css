@@ -11,6 +11,7 @@
   display: table;
   margin: 0 auto;
   border-bottom: 1px solid #00315c;
+  width: 100%;
 }
 
 .stickySubNav.js-sticky {
@@ -122,7 +123,7 @@
   .stickySubNav li a {
     font-size: 14px;
     font-size: 1.4rem;
-    padding: 0.4em 1.1em;
+    padding: 0.556em .2em;
   }
 }
 
