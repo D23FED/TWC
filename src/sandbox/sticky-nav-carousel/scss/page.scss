@@ -1,0 +1,258 @@
+.heroCarousel {
+  height: 100%;
+  display: none;
+  .heroWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    li {
+      position: absolute;
+      max-height: 400px;
+      max-width: 980px;
+      width: 100%;
+      overflow: hidden;
+      float: left;
+    }
+    > ul > li {
+      visibility: hidden;
+      opacity: 0;
+      transition: 1s ease;
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: 1s ease;
+      }
+      .heroText {
+        position: absolute;
+        width: 39%;
+        text-align: left;
+        h1 {
+          margin-bottom: .1em;
+          font-size: 75.2px;
+          font-size: 4.7rem;
+        }
+        p {
+          margin-bottom: 1.5em;
+          font-size: 1.3em;
+          font-family: "TWC Round Light";
+        }
+        &.topLeft, &.bottomLeft {
+          left: 9%;
+        }
+        &.topRight, &.bottomRight {
+          right: 2%;
+        }
+        &.topLeft, &.topRight {
+          top: 20%;
+        }
+        &.bottomLeft, &.bottomRight {
+          bottom: 13%;
+        }
+      }
+    }
+  }
+  .heroIconWrapper .heroIcons {
+    text-align: center;
+    .iconWrapper {
+      display: table;
+      width: 100%;
+      max-width: 980px;
+      margin: 1em auto;
+    }
+    .carouselIcons {
+      cursor: pointer;
+      display: inline-block;
+      float: left;
+      text-align: center;
+      vertical-align: top;
+      width: 14.25%;
+      h6 {
+        font-size: 16px;
+        font-size: 25.6px;
+        font-size: 1.6rem;
+      }
+      span {
+        font-family: "TWC Round Light";
+        font-size: 130%;
+      }
+      &.active {
+        color: #2776b5;
+      }
+      &.empty {
+        height: 1px;
+        margin-left: 4px;
+      }
+      figure img {
+        height: auto;
+        max-width: 100%;
+        width: auto;
+        margin: auto;
+        margin-bottom: 0;
+        &:first-of-type {
+          display: block;
+        }
+      }
+      &.active figure img:last-of-type {
+        display: block;
+      }
+    }
+  }
+}
+
+div.heroCarouselSlide figure img {
+  &:first-of-type {
+    display: block;
+  }
+  &:last-of-type {
+    display: none;
+  }
+}
+
+.heroCarousel {
+  .heroIconWrapper .heroIcons .carouselIcons {
+    &.active figure img:first-of-type, figure img:last-of-type {
+      display: none;
+    }
+  }
+  .heroWrapper li figure img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  #heroCarouselPreview, #heroCarouselNext, .heroWrapper .image-gradient {
+    display: none;
+  }
+  .heroIconWrapper .heroIcons .carouselIcons:hover {
+    color: #2776B5;
+  }
+}
+
+/* HACKS FOR HERO 100%*/
+
+.twc-container, .heroWrapper, .heroCarousel .heroWrapper li {
+  max-width: 1200px !important;
+}
+
+.heroWrapper {
+  max-height: 400px;
+}
+
+.twc-new-navigation .twc-container {
+  text-align: center;
+}
+
+#header, .twc-new-nav, .twc-top .twc-container, .general, footer .twc-container, .global-elements .twc-container, div.main-content {
+  max-width: 980px !important;
+  margin: 0 auto;
+}
+
+/* HACKS FOR HERO 100%*/
+@media (max-width: 48em) {
+  .heroIcons .iconWrapper .clone {
+    display: none;
+  }
+}
+
+@media (max-width: 40em) {
+  .heroCarousel {
+    #heroCarouselPreview, #heroCarouselNext {
+      position: absolute;
+      display: block;
+      top: 0px;
+      z-index: 1;
+      height: 100%;
+      cursor: pointer;
+      width: 19px;
+    }
+    #heroCarouselPreview img, #heroCarouselNext img {
+      position: relative;
+      top: 38px;
+      margin: 0 auto;
+    }
+  }
+  div.heroCarouselSlide figure img {
+    &:first-of-type {
+      display: none;
+    }
+    &:last-of-type {
+      display: block;
+    }
+  }
+  .heroCarousel {
+    .heroWrapper li {
+      max-height: none;
+    }
+    .heroIconWrapper {
+      position: relative;
+      .heroIcons {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        width: 85%;
+        .carouselIcons {
+          float: left;
+          width: 50px;
+        }
+        .iconWrapper {
+          display: inline-block;
+          width: 9999px;
+          position: relative;
+          left: 0px;
+          transition: left 0.5s linear;
+          -webkit-transition: left 0.5s linear;
+          max-width: none;
+        }
+      }
+    }
+    .heroWrapper > ul > li .heroText {
+      text-align: center;
+      display: block;
+      width: 100%;
+      top: auto !important;
+      bottom: 5% !important;
+      right: 0 !important;
+      color: #ffffff;
+      div.cta {
+        display: block !important;
+        margin-top: 5px;
+      }
+      h1 {
+        margin-bottom: 0.3em;
+        font-size: 2.7rem;
+      }
+      h3 {
+        display: none;
+      }
+      &.topLeft, &.bottomLeft {
+        left: 0px;
+      }
+    }
+    .heroIconWrapper .heroIcons .carouselIcons {
+      figure img {
+        max-width: 55px;
+        width: 100%;
+      }
+      span {
+        font-size: 1em;
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  .heroWrapper {
+    max-height: none;
+  }
+  .heroCarousel .heroWrapper .image-gradient {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 99%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=page.css.map */
