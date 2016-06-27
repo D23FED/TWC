@@ -1,57 +1,83 @@
 .twc-box-column {
   box-shadow: none;
   border-top: none;
-  border-radius: 0; }
+  border-radius: 0;
+}
 
 .mainHeader h3 {
   font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+}
 
 .mainHeader + .richtext hr {
-  display: none; }
+  display: none;
+}
 
 .mainHeader + .richtext + .richtext + .richtext + .cta {
   display: block;
-  text-align: right; }
-  .mainHeader + .richtext + .richtext + .richtext + .cta a {
-    padding-right: 0; }
-  .mainHeader + .richtext + .richtext + .richtext + .cta + .richtext hr {
-    display: none; }
+  text-align: right;
+}
+
+.mainHeader + .richtext + .richtext + .richtext + .cta a {
+  padding-right: 0;
+}
+
+.mainHeader + .richtext + .richtext + .richtext + .cta + .richtext hr {
+  display: none;
+}
 
 .listAccordionItem {
-  position: relative; }
-  .listAccordionItem > div + .cta.nostyle {
-    width: 100%;
-    background-color: #f7f7f7; }
-    .listAccordionItem > div + .cta.nostyle a {
-      width: 100%;
-      font-size: 24px;
-      font-size: 2.4rem;
-      color: #00549f; }
-      .listAccordionItem > div + .cta.nostyle a::after {
-        font-family: FontAwesome;
-        content: '\f13a';
-        right: 25px;
-        position: absolute; }
-      .listAccordionItem > div + .cta.nostyle a span {
-        font-size: inherit;
-        font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif; }
-      .listAccordionItem > div + .cta.nostyle a.active {
-        color: #333; }
-        .listAccordionItem > div + .cta.nostyle a.active::after {
-          font-family: FontAwesome;
-          content: '\f139'; }
-  .listAccordionItem + .listAccordionItem {
-    border-top: 1px solid #e1e1e1;
-    margin-top: 1px; }
-  .listAccordionItem .details {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: #f7f7f7; }
+  position: relative;
+}
+
+.listAccordionItem > div + .cta.nostyle {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.listAccordionItem > div + .cta.nostyle a {
+  width: 100%;
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #00549f;
+}
+
+.listAccordionItem > div + .cta.nostyle a::after {
+  font-family: FontAwesome;
+  content: '\f13a';
+  right: 25px;
+  position: absolute;
+}
+
+.listAccordionItem > div + .cta.nostyle a span {
+  font-size: inherit;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.listAccordionItem > div + .cta.nostyle a.active {
+  color: #333;
+}
+
+.listAccordionItem > div + .cta.nostyle a.active::after {
+  font-family: FontAwesome;
+  content: '\f139';
+}
+
+.listAccordionItem + .listAccordionItem {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 1px;
+}
+
+.listAccordionItem .details {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #f7f7f7;
+}
 
 .price {
-  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 
 /*# sourceMappingURL=page.css.map */
