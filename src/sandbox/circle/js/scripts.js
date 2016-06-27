@@ -8,8 +8,8 @@ $( window ).load(function() {
 			$('.fill, .mask.full').css('transform','rotate('+fillRotation+')');
 			$('.fill.fix').css('transform','rotate('+fixRotation+')');
 		});
-	})
-})
+	});
+});
 
 // Small offset = long line
 // Large offset = small line
@@ -68,7 +68,7 @@ for (var i = 1; i < 5; i++) {
 // Controls
 $controls.find('a').on('click', function(e) {
 	var text = $(this).text();
-	animateCircle({goTo: parseInt(text)})
+	animateCircle({goTo: parseInt(text)});
 });
 
 // Initial Call
