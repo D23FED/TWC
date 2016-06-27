@@ -1,0 +1,33 @@
+/*
+Update "Side Tab Accordion" CSS
+Add the below CSS to allComponents.css, beginning on line 4820
+ */
+.expandableHybrid .side-tab-accordion .side-topic-content li {
+  border: 0;
+}
+
+.expandableHybrid .side-tab-accordion .side-topic-content .vertical li {
+  padding: .5em;
+}
+
+.expandableHybrid .side-tab-accordion .side-tab-accordion-list .side-topic-content li a {
+  line-height: normal;
+  width: auto;
+  padding-left: initial;
+  border-left: 0;
+  transition: none;
+}
+
+.expandableHybrid .side-tab-accordion .side-topic-content a {
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  display: inline;
+  font-weight: 700;
+}
+
+.expandableHybrid .side-tab-accordion .side-topic-content p {
+  margin-bottom: .5em;
+  display: inherit;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
