@@ -1,138 +1,16 @@
 <?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php'); ?>
 
 <center>
-<div class="heroCarousel" >
-  <div class="heroWrapper">
-    <ul>
-     <li id="heroCarousel-1" class="active">
-        <div class="heroCarouselSlide">
-          <figure>
-            <img src="images/hd-channels-hero-desktop.jpg" alt="HD Channels">
-            <img src="images/hd-channels-hero-mobile.jpg" alt="HD Channels">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText topLeft text-white">
-           <span class="super-h2">HDTV</span>
-             <h3>Immerse yourself in the most HD channels and thousands of On Demand choices – at no extra charge.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:6:1:hd channels" href="/content/twc/en/tv/tv-features.html#hd?iid=tv_hero_hd_learnmore">
-                <span>Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li id="heroCarousel-2">
-        <div class="heroCarouselSlide">
-          <figure>
-             <img src="images/on-demand-hero-desktop.jpg" alt="On Demand">
-            <img src="images/on-demand-hero-mobile.jpg" alt="On Demand">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText bottomLeft text-grey">
-            <span class="super-h2">On Demand</span>
-            <h3>Enjoy hit movies and your favorite shows, anytime.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:1:1:on demand" href="/content/twc/en/tv/features/on-demand.html?iid=tv_hero_od_learnmore">
-              <span>Learn More</span>
-              </a>
-            </div>
+<div class="copy-above">
+	<h1>Nullam facilisis interdum quam ut porttitor.</h1>
 
-          </div>
-        </div>
-      </li>
-      <li id="heroCarousel-3">
-          <div class="heroCarouselSlide">
-              <figure>
-                 <img src="images/dvr-hero-desktop.jpg" alt="Whole House DVR">
-                <img src="images/dvr-hero-mobile.jpg" alt="Whole House DVR">
-              </figure>
-              <div class="image-gradient"></div>
-              <div class="heroText bottomLeft text-white">
-                <span class="super-h2">DVR</span>
-                <h3>From Whole House HD-DVR to our newest Enhanced DVR, take control of your TV.</h3>
-                <div class="cta omega icon-angle-right twc-icon-after">
-                  <a analyticsname="hero cta:3:1:whole house dvr" href="/content/twc/en/tv/features/whole-house-dvr.html?iid=tv_hero_dvr_learnmore">
-                    <span>Learn More</span>
-                  </a>
-                </div>
-              </div>
-        </div>
-      </li>
-      <li id="heroCarousel-4" class="">
-        <div class="heroCarouselSlide">
-          <figure>
-             <img src="images/twc-tv-app-hero-desktop.jpg" alt="TWC TV&reg; App">
-            <img src="images/twc-tv-app-hero-mobile.jpg" alt="TWC TV&reg; App">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText topRight text-gray">
-           <span class="super-h2">TWC TV&reg; App</span>
-            <h3>Transform your favorite devices into a TV — from virtually anywhere.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:2:1:twc tv" href="/content/twc/en/tv/features/twc-tv-app.html?iid=tv_hero_twctv_learnmore">
-                <span>Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li id="heroCarousel-5" class="">
-        <div class="heroCarouselSlide">
-          <figure>
-            <img src="images/tv-everywhere-hero-desktop.jpg" alt="TV Everywhere">
-            <img src="images/tv-everywhere-hero-mobile.jpg" alt="TV Everywhere">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText topRight text-white">
-            <span class="super-h2">TV Everywhere</span>
-            <h3>Watch your favorite shows, sports and movies on-the-go.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:4:1:tv everywhere" href="/content/twc/en/tv/features/tv-everywhere.html?iid=tv_hero_tveverywhere_learnmore">
-                <span>Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li id="heroCarousel-6" class="">
-        <div class="heroCarouselSlide">
-          <figure>
-            <img src="images/premium-hero-desktop.jpg" alt="Premium Networks">
-            <img src="images/premium-hero-mobile.jpg" alt="Premium Networks">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText topRight text-gray">
-            <span class="super-h2">Premium Networks</span>
-             <h3>Keep up with groundbreaking series and blockbuster movies from all the networks you love.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:6:1:premium networks" href="/content/twc/en/tv/features/premium-networks.html?iid=tv_hero_premiums_learnmore">
-                <span>Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li id="heroCarousel-7" >
-        <div class="heroCarouselSlide">
-          <figure>
-            <img src="images/sports-packages-hero-desktop.jpg" alt="Sports Packages">
-            <img src="images/sports-packages-hero-mobile.jpg" alt="Sports Packages">
-          </figure>
-          <div class="image-gradient"></div>
-          <div class="heroText topLeft text-white">
-            <span class="super-h2">Sports Packages</span>
-            <h3>Don't miss a game with seasonal packages and TWC Sports Pass featuring NFL RedZone.</h3>
-            <div class="cta omega icon-angle-right twc-icon-after">
-              <a analyticsname="hero cta:5:1:sports packages" href="/content/twc/en/tv/features/sports-packages.html?iid=tv_hero_sports_learnmore">
-                <span>Learn More</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+	<p>Suspendisse aliquam neque tortor, ut sodales sapien pulvinar nec. Sed vel dictum neque, eu bibendum est. Nunc convallis elit nulla, sed porttitor orci tincidunt eget. Maecenas sed sapien eget orci aliquam hendrerit in ac velit. Quisque ac nunc mollis, viverra orci a, auctor elit. Suspendisse sed lacus at elit maximus tempus eget non orci. Mauris sed eros tellus. Vivamus egestas mi in eros vehicula, vitae condimentum felis lobortis. Donec vulputate lacinia elit, ac iaculis nulla accumsan sed. Donec sagittis non mauris venenatis maximus. Fusce vehicula enim sed leo suscipit vestibulum vel ut ligula. Vivamus molestie massa urna, ut pretium libero ornare non.</p>
+	<p>Nulla facilisi. Aenean suscipit tortor ut malesuada hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in laoreet elit, vitae aliquam nisl. Fusce tortor dolor, congue ac vestibulum vel, scelerisque eu velit. Nullam ut nunc a nisi molestie aliquam. Etiam consectetur mattis enim at lacinia. Maecenas dictum diam justo, sit amet cursus augue lacinia id. Pellentesque libero eros, dapibus ac rutrum nec, imperdiet sodales neque. Maecenas erat nisi, scelerisque ut efficitur efficitur, ultrices eu est.</p>
+	<p>Vivamus vestibulum commodo congue. Vivamus id tristique metus. Integer posuere bibendum diam, eu blandit nulla laoreet id. Ut sed quam dui. Nunc blandit rhoncus nisi et tempus. Fusce consectetur ullamcorper massa et mollis. Nam iaculis faucibus nisi, quis ultricies lorem sagittis nec. Quisque pretium porttitor nisi at efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dui egestas, dignissim ipsum pharetra, dictum sem.</p>
+	<p>Ut nec arcu fringilla, vestibulum mi vitae, porttitor ante. In congue massa et ipsum lobortis, at varius eros vehicula. Pellentesque aliquam bibendum enim, sit amet cursus ligula volutpat cursus. Sed vehicula massa sed sapien molestie, ac mollis magna commodo. Aliquam condimentum purus feugiat arcu luctus, ut dictum felis dictum. Sed eleifend tristique nulla quis consequat. Aenean dictum lectus at urna condimentum, vel consequat arcu maximus. Etiam lacinia accumsan erat. Sed facilisis hendrerit purus, ut interdum eros vulputate ut. Proin sit amet mattis orci. Nunc varius placerat suscipit. Curabitur tempus gravida gravida. Praesent tincidunt ligula quis metus pulvinar vehicula.</p>
+	<p>In auctor vel ante non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ultricies orci ante, et consequat purus maximus vitae. Mauris nec justo neque. Phasellus id ipsum et erat iaculis blandit. Quisque eu elit egestas, dictum justo a, suscipit purus. Curabitur ac urna vitae velit accumsan pretium.</p>
+</div>
+<div class="heroCarousel" >
   <div class="heroIconWrapper">
     <div id="heroCarouselPreview"><img src="images/carousel-left-blue.png" alt=""></div>
 
@@ -206,6 +84,27 @@
     </div>
     <div id="heroCarouselNext"><img src="images/carousel-right-blue.png" alt=""></div>
   </div>
+</div>
+<div class="copy-below">
+	<h1>Nullam facilisis interdum quam ut porttitor.</h1>
+
+	<p>Suspendisse aliquam neque tortor, ut sodales sapien pulvinar nec. Sed vel dictum neque, eu bibendum est. Nunc convallis elit nulla, sed porttitor orci tincidunt eget. Maecenas sed sapien eget orci aliquam hendrerit in ac velit. Quisque ac nunc mollis, viverra orci a, auctor elit. Suspendisse sed lacus at elit maximus tempus eget non orci. Mauris sed eros tellus. Vivamus egestas mi in eros vehicula, vitae condimentum felis lobortis. Donec vulputate lacinia elit, ac iaculis nulla accumsan sed. Donec sagittis non mauris venenatis maximus. Fusce vehicula enim sed leo suscipit vestibulum vel ut ligula. Vivamus molestie massa urna, ut pretium libero ornare non.</p>
+	<p>Nulla facilisi. Aenean suscipit tortor ut malesuada hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in laoreet elit, vitae aliquam nisl. Fusce tortor dolor, congue ac vestibulum vel, scelerisque eu velit. Nullam ut nunc a nisi molestie aliquam. Etiam consectetur mattis enim at lacinia. Maecenas dictum diam justo, sit amet cursus augue lacinia id. Pellentesque libero eros, dapibus ac rutrum nec, imperdiet sodales neque. Maecenas erat nisi, scelerisque ut efficitur efficitur, ultrices eu est.</p>
+	<p>Vivamus vestibulum commodo congue. Vivamus id tristique metus. Integer posuere bibendum diam, eu blandit nulla laoreet id. Ut sed quam dui. Nunc blandit rhoncus nisi et tempus. Fusce consectetur ullamcorper massa et mollis. Nam iaculis faucibus nisi, quis ultricies lorem sagittis nec. Quisque pretium porttitor nisi at efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dui egestas, dignissim ipsum pharetra, dictum sem.</p>
+	<p>Ut nec arcu fringilla, vestibulum mi vitae, porttitor ante. In congue massa et ipsum lobortis, at varius eros vehicula. Pellentesque aliquam bibendum enim, sit amet cursus ligula volutpat cursus. Sed vehicula massa sed sapien molestie, ac mollis magna commodo. Aliquam condimentum purus feugiat arcu luctus, ut dictum felis dictum. Sed eleifend tristique nulla quis consequat. Aenean dictum lectus at urna condimentum, vel consequat arcu maximus. Etiam lacinia accumsan erat. Sed facilisis hendrerit purus, ut interdum eros vulputate ut. Proin sit amet mattis orci. Nunc varius placerat suscipit. Curabitur tempus gravida gravida. Praesent tincidunt ligula quis metus pulvinar vehicula.</p>
+	<p>In auctor vel ante non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ultricies orci ante, et consequat purus maximus vitae. Mauris nec justo neque. Phasellus id ipsum et erat iaculis blandit. Quisque eu elit egestas, dictum justo a, suscipit purus. Curabitur ac urna vitae velit accumsan pretium.</p>	<p>Suspendisse aliquam neque tortor, ut sodales sapien pulvinar nec. Sed vel dictum neque, eu bibendum est. Nunc convallis elit nulla, sed porttitor orci tincidunt eget. Maecenas sed sapien eget orci aliquam hendrerit in ac velit. Quisque ac nunc mollis, viverra orci a, auctor elit. Suspendisse sed lacus at elit maximus tempus eget non orci. Mauris sed eros tellus. Vivamus egestas mi in eros vehicula, vitae condimentum felis lobortis. Donec vulputate lacinia elit, ac iaculis nulla accumsan sed. Donec sagittis non mauris venenatis maximus. Fusce vehicula enim sed leo suscipit vestibulum vel ut ligula. Vivamus molestie massa urna, ut pretium libero ornare non.</p>
+	<p>Nulla facilisi. Aenean suscipit tortor ut malesuada hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in laoreet elit, vitae aliquam nisl. Fusce tortor dolor, congue ac vestibulum vel, scelerisque eu velit. Nullam ut nunc a nisi molestie aliquam. Etiam consectetur mattis enim at lacinia. Maecenas dictum diam justo, sit amet cursus augue lacinia id. Pellentesque libero eros, dapibus ac rutrum nec, imperdiet sodales neque. Maecenas erat nisi, scelerisque ut efficitur efficitur, ultrices eu est.</p>
+	<p>Vivamus vestibulum commodo congue. Vivamus id tristique metus. Integer posuere bibendum diam, eu blandit nulla laoreet id. Ut sed quam dui. Nunc blandit rhoncus nisi et tempus. Fusce consectetur ullamcorper massa et mollis. Nam iaculis faucibus nisi, quis ultricies lorem sagittis nec. Quisque pretium porttitor nisi at efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dui egestas, dignissim ipsum pharetra, dictum sem.</p>
+	<p>Ut nec arcu fringilla, vestibulum mi vitae, porttitor ante. In congue massa et ipsum lobortis, at varius eros vehicula. Pellentesque aliquam bibendum enim, sit amet cursus ligula volutpat cursus. Sed vehicula massa sed sapien molestie, ac mollis magna commodo. Aliquam condimentum purus feugiat arcu luctus, ut dictum felis dictum. Sed eleifend tristique nulla quis consequat. Aenean dictum lectus at urna condimentum, vel consequat arcu maximus. Etiam lacinia accumsan erat. Sed facilisis hendrerit purus, ut interdum eros vulputate ut. Proin sit amet mattis orci. Nunc varius placerat suscipit. Curabitur tempus gravida gravida. Praesent tincidunt ligula quis metus pulvinar vehicula.</p>
+	<p>In auctor vel ante non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ultricies orci ante, et consequat purus maximus vitae. Mauris nec justo neque. Phasellus id ipsum et erat iaculis blandit. Quisque eu elit egestas, dictum justo a, suscipit purus. Curabitur ac urna vitae velit accumsan pretium.</p>	<p>Suspendisse aliquam neque tortor, ut sodales sapien pulvinar nec. Sed vel dictum neque, eu bibendum est. Nunc convallis elit nulla, sed porttitor orci tincidunt eget. Maecenas sed sapien eget orci aliquam hendrerit in ac velit. Quisque ac nunc mollis, viverra orci a, auctor elit. Suspendisse sed lacus at elit maximus tempus eget non orci. Mauris sed eros tellus. Vivamus egestas mi in eros vehicula, vitae condimentum felis lobortis. Donec vulputate lacinia elit, ac iaculis nulla accumsan sed. Donec sagittis non mauris venenatis maximus. Fusce vehicula enim sed leo suscipit vestibulum vel ut ligula. Vivamus molestie massa urna, ut pretium libero ornare non.</p>
+	<p>Nulla facilisi. Aenean suscipit tortor ut malesuada hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in laoreet elit, vitae aliquam nisl. Fusce tortor dolor, congue ac vestibulum vel, scelerisque eu velit. Nullam ut nunc a nisi molestie aliquam. Etiam consectetur mattis enim at lacinia. Maecenas dictum diam justo, sit amet cursus augue lacinia id. Pellentesque libero eros, dapibus ac rutrum nec, imperdiet sodales neque. Maecenas erat nisi, scelerisque ut efficitur efficitur, ultrices eu est.</p>
+	<p>Vivamus vestibulum commodo congue. Vivamus id tristique metus. Integer posuere bibendum diam, eu blandit nulla laoreet id. Ut sed quam dui. Nunc blandit rhoncus nisi et tempus. Fusce consectetur ullamcorper massa et mollis. Nam iaculis faucibus nisi, quis ultricies lorem sagittis nec. Quisque pretium porttitor nisi at efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dui egestas, dignissim ipsum pharetra, dictum sem.</p>
+	<p>Ut nec arcu fringilla, vestibulum mi vitae, porttitor ante. In congue massa et ipsum lobortis, at varius eros vehicula. Pellentesque aliquam bibendum enim, sit amet cursus ligula volutpat cursus. Sed vehicula massa sed sapien molestie, ac mollis magna commodo. Aliquam condimentum purus feugiat arcu luctus, ut dictum felis dictum. Sed eleifend tristique nulla quis consequat. Aenean dictum lectus at urna condimentum, vel consequat arcu maximus. Etiam lacinia accumsan erat. Sed facilisis hendrerit purus, ut interdum eros vulputate ut. Proin sit amet mattis orci. Nunc varius placerat suscipit. Curabitur tempus gravida gravida. Praesent tincidunt ligula quis metus pulvinar vehicula.</p>
+	<p>In auctor vel ante non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ultricies orci ante, et consequat purus maximus vitae. Mauris nec justo neque. Phasellus id ipsum et erat iaculis blandit. Quisque eu elit egestas, dictum justo a, suscipit purus. Curabitur ac urna vitae velit accumsan pretium.</p>	<p>Suspendisse aliquam neque tortor, ut sodales sapien pulvinar nec. Sed vel dictum neque, eu bibendum est. Nunc convallis elit nulla, sed porttitor orci tincidunt eget. Maecenas sed sapien eget orci aliquam hendrerit in ac velit. Quisque ac nunc mollis, viverra orci a, auctor elit. Suspendisse sed lacus at elit maximus tempus eget non orci. Mauris sed eros tellus. Vivamus egestas mi in eros vehicula, vitae condimentum felis lobortis. Donec vulputate lacinia elit, ac iaculis nulla accumsan sed. Donec sagittis non mauris venenatis maximus. Fusce vehicula enim sed leo suscipit vestibulum vel ut ligula. Vivamus molestie massa urna, ut pretium libero ornare non.</p>
+	<p>Nulla facilisi. Aenean suscipit tortor ut malesuada hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in laoreet elit, vitae aliquam nisl. Fusce tortor dolor, congue ac vestibulum vel, scelerisque eu velit. Nullam ut nunc a nisi molestie aliquam. Etiam consectetur mattis enim at lacinia. Maecenas dictum diam justo, sit amet cursus augue lacinia id. Pellentesque libero eros, dapibus ac rutrum nec, imperdiet sodales neque. Maecenas erat nisi, scelerisque ut efficitur efficitur, ultrices eu est.</p>
+	<p>Vivamus vestibulum commodo congue. Vivamus id tristique metus. Integer posuere bibendum diam, eu blandit nulla laoreet id. Ut sed quam dui. Nunc blandit rhoncus nisi et tempus. Fusce consectetur ullamcorper massa et mollis. Nam iaculis faucibus nisi, quis ultricies lorem sagittis nec. Quisque pretium porttitor nisi at efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet dui egestas, dignissim ipsum pharetra, dictum sem.</p>
+	<p>Ut nec arcu fringilla, vestibulum mi vitae, porttitor ante. In congue massa et ipsum lobortis, at varius eros vehicula. Pellentesque aliquam bibendum enim, sit amet cursus ligula volutpat cursus. Sed vehicula massa sed sapien molestie, ac mollis magna commodo. Aliquam condimentum purus feugiat arcu luctus, ut dictum felis dictum. Sed eleifend tristique nulla quis consequat. Aenean dictum lectus at urna condimentum, vel consequat arcu maximus. Etiam lacinia accumsan erat. Sed facilisis hendrerit purus, ut interdum eros vulputate ut. Proin sit amet mattis orci. Nunc varius placerat suscipit. Curabitur tempus gravida gravida. Praesent tincidunt ligula quis metus pulvinar vehicula.</p>
+	<p>In auctor vel ante non tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut ultricies orci ante, et consequat purus maximus vitae. Mauris nec justo neque. Phasellus id ipsum et erat iaculis blandit. Quisque eu elit egestas, dictum justo a, suscipit purus. Curabitur ac urna vitae velit accumsan pretium.</p>
 </div>
 </center>
 

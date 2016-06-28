@@ -57,20 +57,19 @@ $.fn.scrollTo = function(target, options, callback) {
 // Sticky Sub Nav -- Version: 1.2 - Updated: 6/20/2016
 $(function() {
 	if ($(sticky.menu).offset()) {
-		$(function() {
-			var stickyTop = $(sticky.menu).offset().top;
-			var stickyNav = function() {
-				var scrollTop = $(window).scrollTop();
-				if (scrollTop > stickyTop) {
-					$(sticky.menu).addClass(sticky.activeClass);
-				} else {
-					$(sticky.menu).removeClass(sticky.activeClass);
-				}
-			};
+		var stickyTop = $(sticky.menu).offset().top;
+		var stickyNav = function() {
+			var scrollTop = $(window).scrollTop();
+			if (scrollTop > stickyTop) {
+				$(sticky.menu).addClass(sticky.activeClass);
+			} else {
+				$(sticky.menu).removeClass(sticky.activeClass);
+			}
+			console.log(stickyTop, scrollTop);
+		};
+		stickyNav();
+		$(window).scroll(function() {
 			stickyNav();
-			$(window).scroll(function() {
-				stickyNav();
-			});
 		});
 	}
 });
@@ -103,7 +102,7 @@ if ($(sticky.el)[0]) {
 }
 
 // Set sticky width to width of stickyElement at old tablet breakpoint
-$(document).ready(function() {
+$(function() {
 	var stickyWidth = $(sticky.el).width(); // Set stickyWidth to width of lower table
 	if ($(window).width() < 1059 && $(window).width() > 768) { // 1059 is where the css for twc-container breaks the layout. 768 is where the problem fixes itself through css
 		$(sticky.menu).css({
@@ -127,7 +126,7 @@ $(window).resize(function() {
 });
 // Set height of stickySpacing to height of sticky element to prevent content from jumping up below the sticky element
 // must pair with css to hide/show stickySpacing when sticky is stuck
-$(document).ready(function() {
+$(function() {
 	var stickySpacing = $(sticky.menu).outerHeight();
 	$(sticky.spacer).height(stickySpacing);
 	$('.scrollTop').click(function() {
@@ -137,6 +136,8 @@ $(document).ready(function() {
 		return false;
 	});
 });
+
+// Close
 $('.closeSticky').click(function() {
 	$(this).parents(sticky.menu).addClass(sticky.closedClass);
 	console.log('close');

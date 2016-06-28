@@ -1,5 +1,5 @@
 /* ==========================================================================
-		Learn Carousel -- Version: 1.0 - Updated: 3/5/2015
+		Learn Carousel -- Version: 1.1 - Updated: 6/28/2016
 	 ========================================================================== */
 // Container: .heroCarousel
 // Slideshow container: heroWrapper

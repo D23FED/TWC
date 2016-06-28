@@ -168,6 +168,10 @@ div.heroCarouselSlide figure img:last-of-type {
 
 /* HACKS FOR HERO 100%*/
 
+#site-footer {
+  display: none;
+}
+
 @media (max-width: 48em) {
 
   .heroIcons .iconWrapper .clone {
