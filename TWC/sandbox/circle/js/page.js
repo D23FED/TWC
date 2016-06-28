@@ -1,11 +1,11 @@
 var speedometer = {
-	'trigger'        : '#speed-compare',
-	'target'         : '.modal_content .speedometer',
+	'trigger': '#speed-compare',
+	'target': '.modal_content .speedometer',
 	'activationClass': 'play',
-	'delay'          : 500
+	'delay': 500
 };
 var activateSpeedometer = function() {
-	setTimeout( function() {
+	setTimeout(function() {
 		$(speedometer.target).each(function() {
 			$(this).addClass(speedometer.activationClass);
 		});

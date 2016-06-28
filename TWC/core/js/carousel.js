@@ -14,14 +14,12 @@
 //             heroTimer,
 //             element_block = 1;
 
-
 //         $(function() {
 
 //             $(window).bind("load", function() {
 //                 $(".heroCarousel").show();
 //                 heroHeight();
 //                 iconSize();
-
 
 //                 // TWC-1098: Stop trigger on click, pause on hover
 //                 $heroElements.hover(function(ev) {
@@ -77,7 +75,6 @@
 //                     elementsRotation = Math.ceil(elementsTotal / iconSlideNumber),
 //                     elementsPrev,
 //                     elementNext;
-
 
 //                 if($('.heroIcons .clone').length == 0 && heroTotalElements > iconSlideNumber) {
 

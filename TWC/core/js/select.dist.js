@@ -1,18 +1,1 @@
-/* ==========================================================================
-    Select with Link -- Version: 1.9.0.2 - Updated: 3/24/2014
-   ========================================================================== */
-
-( function( $ ) {
-
-	$.fn.selectLink = function() {
-		$( '.selectLink' ).change( function() {
-			// Ignore null value -- shown at top of dropdown
-			if ( $( this ).val().length ) {
-				window.location.href = $( this ).val();
-			}
-		} );
-	}
-
-}( jQuery ) );
-
-$( '.selectLink' ).selectLink();
+!function(n){n.fn.selectLink=function(){n(".selectLink").change(function(){n(this).val().length&&(window.location.href=n(this).val())})}}(jQuery),$(".selectLink").selectLink();
