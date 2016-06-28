@@ -1,13 +1,19 @@
 // Vars
 var sticky = {
+	wrapper: '.stickySubNavWrapper',
 	menu: '.stickySubNav',
 	el: '.stickyElement',
 	offscreenClass: 'js-sticky-past',
 	activeClass: 'js-sticky',
 	closedClass: 'js-closed',
-	spacer: '.stickySpacing',
+	spacer: '.stickySpacer',
 	yes: 'no'
 };
+
+// Get "scroll past" position from wrapping element, because actual menu's position will change when sticky
+sticky['top'] = $(sticky.wrapper).offset().top;
+sticky['spacing'] = $(sticky.menu).outerHeight();
+
 // Anchor link handler
 $(document).ready(function() {
 	$('a[href*=#]').click(function(e) {
@@ -22,6 +28,7 @@ $(document).ready(function() {
 		}
 	});
 });
+
 // ScrollTo
 $.fn.scrollTo = function(target, options, callback) {
 	if (typeof options == 'function' && arguments.length === 2) {
@@ -51,25 +58,31 @@ $.fn.scrollTo = function(target, options, callback) {
 		});
 	});
 };
+
 // Sticky Sub Nav -- Version: 1.2 - Updated: 6/20/2016
 $(function() {
 	if ($(sticky.menu).offset()) {
-		var stickyTop = $(sticky.menu).offset().top;
-		var stickyNav = function() {
-			var scrollTop = $(window).scrollTop();
-			if (scrollTop > stickyTop) {
-				$(sticky.menu).addClass(sticky.activeClass);
-			} else {
-				$(sticky.menu).removeClass(sticky.activeClass);
-			}
-			console.log(stickyTop, scrollTop);
-		};
-		stickyNav();
-		$(window).scroll(function() {
-			stickyNav();
+		$(function() {
+			sticky.top = $(sticky.wrapper).offset().top;
+			var stickyNav = function(topOfMenu) {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > topOfMenu) {
+					$(sticky.menu).addClass(sticky.activeClass);
+					$(sticky.spacer).show();
+				} else {
+					$(sticky.menu).removeClass(sticky.activeClass);
+					$(sticky.spacer).hide();
+				}
+			};
+			stickyNav(sticky.top);
+			$(window).scroll(function() {
+				_debounce(stickyNav(sticky.top), 250);
+				// console.log('Window:',$(window).scrollTop(),'Menu:',sticky.top, 'Menu live:',$(sticky.menu).offset().top)
+			});
 		});
 	}
 });
+
 // Un-stick sticky if you scroll past the stickyElement
 if ($(sticky.el)[0]) {
 	$.fn.is_on_screen = function() {
@@ -97,8 +110,9 @@ if ($(sticky.el)[0]) {
 		}
 	});
 }
+
 // Set sticky width to width of stickyElement at old tablet breakpoint
-$(function() {
+$(document).ready(function() {
 	var stickyWidth = $(sticky.el).width(); // Set stickyWidth to width of lower table
 	if ($(window).width() < 1059 && $(window).width() > 768) { // 1059 is where the css for twc-container breaks the layout. 768 is where the problem fixes itself through css
 		$(sticky.menu).css({
@@ -106,8 +120,8 @@ $(function() {
 		});
 	}
 });
-// Adjust width on resize
-$(window).resize(function() {
+
+var onResize = function() {
 	var resizeStickyWidth = $(sticky.menu).next(sticky.el).width(); // Set stickyWidth to width of lower table
 	if ($(window).width() < 1059 && $(window).width() > 768) {
 		$(sticky.menu).css({
@@ -118,12 +132,25 @@ $(window).resize(function() {
 			width: '100' + '%'
 		}); // Removes the width if you resize from tablet to mobile (user rotating phone from landscape to portrait)
 	}
+	sticky.top = $(sticky.wrapper).offset().top;
+	setSpacerHeight($(sticky.menu).outerHeight());
+
+	console.log('onResize', sticky.top);
+};
+
+// Adjust width on resize
+$(window).resize(function() {
+	_debounce(onResize(), 250);
 });
 // Set height of stickySpacing to height of sticky element to prevent content from jumping up below the sticky element
 // must pair with css to hide/show stickySpacing when sticky is stuck
-$(function() {
-	var stickySpacing = $(sticky.menu).outerHeight();
-	$(sticky.spacer).height(stickySpacing);
+$(document).ready(function() {
+	// var stickySpacing = $(sticky.menu).outerHeight();
+	setSpacerHeight(sticky.spacing);
+	// $(sticky.spacer).height(sticky.spacing);
+	console.log($(sticky.spacer), sticky.spacing);
+
+	// Scroll to top button
 	$('.scrollTop').click(function() {
 		$('html, body').animate({
 			scrollTop: 0
@@ -131,11 +158,16 @@ $(function() {
 		return false;
 	});
 });
-// Close
-$('.closeSticky').click(function() {
-	$(this).parents(sticky.menu).addClass(sticky.closedClass);
-	console.log('close');
-});
+
+// $('.closeSticky').click(function() {
+// 	$(this).parents(sticky.menu).addClass(sticky.closedClass);
+// 	// console.log('close');
+// });
+
+var setSpacerHeight = function(spacerHeight) {
+	$(sticky.spacer).height(spacerHeight);
+};
+
 // Debounce function poached from underscore
 var _debounce = function(func, wait, immediate) {
 	var timeout, args, context, timestamp, result;
@@ -164,7 +196,8 @@ var _debounce = function(func, wait, immediate) {
 		return result;
 	};
 };
-// Now function poached from underscore,  get the current timestamp as an integer.
+
+// Current time function poached from underscore,  get the current timestamp as an integer.
 var _now = Date.now || function() {
 	return new Date().getTime();
 };
