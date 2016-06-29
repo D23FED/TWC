@@ -1,5 +1,5 @@
 // Vars
-var sticky = {
+var	sticky = {
 	wrapper: '.stickySubNavWrapper',
 	menu: '.stickySubNav',
 	el: '.stickyElement',
@@ -136,6 +136,7 @@ var setSpacerHeight = function(spacerHeight) {
 // 	// console.log('close');
 // });
 
+
 // External libraries and plugins
 
 // ScrollTo plugin
@@ -199,5 +200,5 @@ var _debounce = function(func, wait, immediate) {
 
 // Current time function poached from underscore,  get the current timestamp as an integer.
 var _now = Date.now || function() {
-		return new Date().getTime();
-	};
+	return new Date().getTime();
+};

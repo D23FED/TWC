@@ -38,6 +38,8 @@ $hover-transition-duration: 200ms;
 	&#{$sticky-active} {
 		visibility: visible;
 		opacity: 1;
+		left: 0;
+		right: 0;
 		position: fixed;
 		height: auto;
 		top: 0;
