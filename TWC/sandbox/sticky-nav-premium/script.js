@@ -1,20 +1,29 @@
 // Vars
 var sticky = {
-	wrapper: '.stickySubNavWrapper',
-	menu: '.stickySubNav',
+	wrapper: '#sticky-subnav-wrapper',
+	menu: '#sticky-subnav',
 	el: '.stickyElement',
 	offscreenClass: 'js-sticky-past',
 	activeClass: 'js-sticky',
 	closedClass: 'js-closed',
-	spacer: '.stickySpacer',
-	yes: 'no'
+	spacer: '#sticky-spacer'
 };
 
 $(function() {
 
 	// Get "scroll past" position from wrapping element, because actual menu's position will change when sticky
-	sticky['top'] = $(sticky.wrapper).offset().top;
-	sticky['spacing'] = $(sticky.menu).outerHeight();
+	$(window).on('load', function() {
+		sticky['top'] = $(sticky.wrapper).offset().top;
+		// console.log('Header:',$('#site-header').outerHeight() );
+	});
+	// console.log('Header:', $('#site-header').outerHeight());
+
+	// Get menu height
+	sticky['menuHeight'] = $(sticky.menu).outerHeight();
+
+	// Set size of invisible spacer
+	sticky['spacing'] = sticky.menuHeight;
+	// console.log('Spacing:',sticky.spacing);
 	setSpacerHeight(sticky.spacing);
 	// $(sticky.spacer).height(sticky.spacing);
 	// console.log($(sticky.spacer), sticky.spacing);
@@ -78,14 +87,14 @@ $(function() {
 	}
 
 	// Anchor link scrollTo handler
-	$('a[href*=#]').click(function(e) {
+	$(sticky.menu + ' ' + 'a[href*=#]').click(function(e) {
 		e.preventDefault();
 		var href = $(this).attr('href'),
 			hash = href.match(/(#.*)/)[0];
 		if (hash !== '') {
 			$('body').scrollTo('[id=' + hash.substring(1) + ']', {
 				duration: 1000,
-				offsetTop: '0'
+				offsetTop: sticky.menuHeight
 			});
 		}
 	});
@@ -197,7 +206,7 @@ var _debounce = function(func, wait, immediate) {
 	};
 };
 
-// Current time function poached from underscore,  get the current timestamp as an integer.
+// Current time function poached from underscore,  get the current timestamp as an integer
 var _now = Date.now || function() {
 		return new Date().getTime();
 	};
