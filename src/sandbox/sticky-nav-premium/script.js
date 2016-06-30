@@ -10,7 +10,9 @@ var	sticky = {
 };
 
 $(function() {
-
+	if ( $(sticky.wrapper).length === 0 ) {
+		sticky.wrapper = '#sticky-carousel-subnav-wrapper';
+	}
 	// Get "scroll past" position from wrapping element, because actual menu's position will change when sticky
 	$(window).on('load', function() {
 		sticky['top'] = $(sticky.wrapper).offset().top;
@@ -211,3 +213,21 @@ var _debounce = function(func, wait, immediate) {
 var _now = Date.now || function() {
 	return new Date().getTime();
 };
+
+// Carousel
+var buttons = {
+	prev: '<a class="slick-prev btn-prev">Previous</a>',
+	next: '<a class="slick-next btn-next">Next</a>'
+}
+
+$(function() {
+	$('#sticky-subnav .twc-container').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true,
+		centerMode: true,
+		prevArrow: buttons.prev,
+		nextArrow: buttons.next
+	});
+});

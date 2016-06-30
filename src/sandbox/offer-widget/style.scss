@@ -118,7 +118,7 @@ $triangle-cap-height: 15px;
 		margin-right: 0;
 
 		a {
-			@include center(false, true);
+			@include center(vertical);
 		}
 	}
 }
