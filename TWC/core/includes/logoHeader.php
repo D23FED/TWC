@@ -12,7 +12,7 @@
 					}
 				?></li>
 				<li><?php
-					if ( isset($chat) && $chat ) {
+					if ( isset($chat) ) {
 						echo '
 							<div class="cta omega">
 								<button><span class="twc-icon-before icon-comments-alt"></span>Need Help? Let\'s Chat</button>

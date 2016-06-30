@@ -27,3 +27,4 @@
 								path(d='M26.5 15.5c-1.8 0-3.5 1.6-3.5 3.3V23h7v-4.4C30 16.8 28.2 15.5 26.5 15.5z')
 							rect(x='25', y='26', width='3', height='5.1')
 						span.text-center.block Adult
+	.stickySpacing(style='display:none;')

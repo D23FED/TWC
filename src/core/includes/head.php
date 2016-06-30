@@ -57,7 +57,8 @@
 	  	'css/page.css',
 	  	'css/style.css',
 	  	'style/style.css',
-	  	'style/page.css'
+	  	'style/page.css',
+	  	'style.css'
   	);
   	foreach ($stylesheets as $value) {
   	  if ( file_exists($value) ) {

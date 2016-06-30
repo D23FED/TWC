@@ -1,4 +1,5 @@
 <script>
+/*
 jQuery(document).ready(function() {
 	jQuery('#footer-menu').columnControl();
 	jQuery('.tileList').hide();
@@ -181,4 +182,5 @@ jQuery(document).ready(function() {
 		analyticsname: 'legal links:1:5:california privacy rights'
 	});
 });
+*/
 </script>

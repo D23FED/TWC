@@ -1,13 +1,30 @@
 @import 'init';
 
-$sticky-menu: '.stickySubNav';
-$sticky-menu-wrap: '.stickySubNavWrapper';
+// Wraps everything, including hidden spacer
+$sticky-menu-wrap: '#sticky-subnav-wrapper';
+
+// Contains just elements related to menu
+$sticky-menu-container: '#sticky-subnav';
+
+// Inner div
+$sticky-menu-inner: '.parsys';
+
+// Contains actualy menu (formerly UL)
+$sticky-menu: '.twc-container';
+
+// Menu Items (formerly LI)
+$sticky-menu-item: '.cta';
 $sticky-el: '.stickyElement';
+
+// States
 $sticky-offscreen: '.js-sticky-past';
 $sticky-active: '.js-sticky';
 $sticky-closed: '.js-closed';
-$sticky-spacer: '.stickySpacing';
+
+// Hidden spacer element, to prevent content jumpeing
+$sticky-spacer: '#sticky-spacer';
 $sticky-scroll-item: '.stickyScrollItem';
+$btn-close: '.closeSticky';
 $container-width: 980px;
 $hover-transition-duration: 200ms;
 
@@ -23,7 +40,7 @@ $hover-transition-duration: 200ms;
 }
 
 // Menu wrapper
-#{$sticky-menu} {
+#{$sticky-menu-container} {
 	padding: 1rem 0;
 	overflow: hidden;
 	transition: opacity 0.5s;
@@ -38,6 +55,8 @@ $hover-transition-duration: 200ms;
 	&#{$sticky-active} {
 		visibility: visible;
 		opacity: 1;
+		left: 0;
+		right: 0;
 		position: fixed;
 		height: auto;
 		top: 0;
@@ -50,38 +69,44 @@ $hover-transition-duration: 200ms;
 
 		// max-width: 100%;
 
-		li#{$sticky-scroll-item} a svg {
-			display: inline-block;
-			display: none;
-		}
+		// li#{$sticky-scroll-item} a svg {
+		// 	display: inline-block;
+		// 	display: none;
+		// }
+
 	}
 
-	.inner {
+	> #{$sticky-menu-inner} {
 		max-width: 980px;
 		display: table;
 		margin: 0 auto;
 	}
 
-	// Menu
-	ul {
+	// Menu (formerly UL)
+	#{$sticky-menu} {
 		// width: 100%;
 		text-align: center;
 		padding: 1em 0;
 		position: relative;
 		display: table-row;
+		max-width: initial;
 	}
 
-	// Menu items
-	li {
+	// Menu items (formerly LI)
+	#{$sticky-menu-item} {
 		display: table-cell;
 		padding: 0 12px;
 
-		&.twc-first {
+		&:first-of-type {
 			padding-left: 0;
 		}
 
-		&.twc-last {
+		&:last-of-type {
 			padding-right: 0;
+
+			a {
+				margin-right: 0;
+			}
 		}
 
 		a {
@@ -114,12 +139,12 @@ $hover-transition-duration: 200ms;
 			// 	transition: opacity $hover-transition-duration ease-out;
 			// }
 
-			svg {
-				display: none;
-				fill: $text-color;
-				max-width: 50%;
-				transition: fill 300ms linear;
-			}
+			// svg {
+			// 	display: none;
+			// 	fill: $text-color;
+			// 	max-width: 50%;
+			// 	transition: fill 300ms linear;
+			// }
 
 			&:hover {
 				color: #fff;
@@ -138,9 +163,10 @@ $hover-transition-duration: 200ms;
 				// 	opacity: 1;
 				// }
 
-				svg {
-					fill: #4578af;
-				}
+				// svg {
+				// 	fill: #4578af;
+				// }
+
 			}
 		}
 
@@ -149,10 +175,11 @@ $hover-transition-duration: 200ms;
 			// box-shadow: 1px 1px 2px 0 #3376b2;
 			// color: #4578af;
 
-			svg {
-				fill: #4578af;
-				display: none;
-			}
+			// svg {
+			// 	fill: #4578af;
+			// 	display: none;
+			// }
+
 		}
 
 		&:last-of-type a {
@@ -170,33 +197,26 @@ $hover-transition-duration: 200ms;
 }
 
 @media (max-width: 40em) {
-	#{$sticky-menu} {
-		ul {
-			// padding: 1.25em 0.5em 0.5em;
+	#{$sticky-menu-container} {
+		#{$sticky-menu} {}
 
-		}
-
-		li {
+		#{$sticky-menu-item} {
 			padding: 0 2px;
 
 			a {
 				font-size: 1.4rem;
 				padding: 0.556em .2em;
 			}
-
-			&#{$sticky-scroll-item} a {
-
-			}
 		}
 	}
 
-	.closeSticky {
+	#{$btn-close} {
 		// top: 0;
 		// right: 0;
 
 	}
 }
 
-.closeSticky span:after {
+#{$btn-close} span:after {
 	padding-left: 0.5em;
 }

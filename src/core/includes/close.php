@@ -27,13 +27,23 @@
 				script_tag($page_dir.$js_file_alt);
 			}
 		}
-		if (file_exists('../../js/page.js')) { echo '<script src="../../js/page.js"></script>'; }
-	  if (file_exists('../js/page.js')) { echo '<script src="../js/page.js"></script>'; }
-	  if (file_exists('js/page.js')) { echo '<script src="js/page.js"></script>'; }
-	  if (file_exists($js_file_alt)) { echo '<script src="'.$js_file_alt.'"></script>'; }
-	  if (file_exists('includes/functions.js')) { echo '<script src="includes/functions.js"></script>'; }
-  ?>
-	<?php
+		if (file_exists('../../js/page.js')) {
+			script_tag('../../js/page.js');
+		} elseif (file_exists('../js/page.js')) {
+			script_tag('../js/page.js');
+		} elseif (file_exists('js/page.js')) {
+			script_tag('js/page.js');
+		} elseif (file_exists($js_file_alt)) {
+			script_tag($js_file_alt);
+		} elseif (file_exists($js_filename_alt)) {
+			script_tag($js_filename_alt);
+		} elseif (file_exists('script.js')) {
+			script_tag('script.js');
+		} elseif (file_exists('includes/functions.js')) {
+			script_tag('includes/functions.js');
+		} else {
+			echo '<!-- No .js found -->';
+		}
 		// Load Footer
 		if ( isset($page_dir) && $page_dir ) {
 			$scripts = $page_dir.'includes/scripts.php';

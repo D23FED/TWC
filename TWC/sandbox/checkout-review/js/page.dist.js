@@ -1,15 +1,1 @@
-// 1
-jQuery( document ).ready( function() {
-	if ( typeof modalInit !== "undefined" ) {
-		$( 'a.modal' ).modalInit();
-	}
-	if ( typeof fancybox !== "undefined" ) {
-		$( 'a.modalGeneric' ).fancybox( {
-			type: 'ajax',
-			fitToView: true,
-			autoSize: true,
-			openEffect: 'fade',
-			openSpeed: 'slow'
-		} );
-	}
-} );
+jQuery(document).ready(function(){"undefined"!=typeof modalInit&&$("a.modal").modalInit(),"undefined"!=typeof fancybox&&$("a.modalGeneric").fancybox({type:"ajax",fitToView:!0,autoSize:!0,openEffect:"fade",openSpeed:"slow"})});

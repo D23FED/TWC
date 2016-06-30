@@ -8,12 +8,12 @@ $(function() {
 		var filters = [];
 		var query = '?filters=';
 		$checkboxes.each(function() {
-			if ( $(this).is(':checked') ) {
+			if ($(this).is(':checked')) {
 				var val = $(this).siblings('label').find('p').text().toLowerCase().trim();
 				filters.push(val);
 			}
 		});
-		if ( filters.length ) {
+		if (filters.length) {
 			query += filters.join();
 			targetUrl = baseUrl + query;
 		} else {
