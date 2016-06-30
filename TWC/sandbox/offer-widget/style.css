@@ -109,9 +109,9 @@
 #offer-widget .cta.section a {
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

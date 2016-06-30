@@ -177,20 +177,20 @@
 	width: $width;
 }
 
-@mixin center($horizontal: true, $vertical: true) {
-	position: absolute;
+@mixin center($type: both, $position: absolute) {
+	position: $position;
 
-	@if $horizontal and $vertical {
+	@if $type == both {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	@else if $horizontal {
+	@else if $type == horizontal {
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translateX(-50%);
 	}
-	@else if $vertical {
+	@else if $type == vertical {
 		top: 50%;
-		transform: translate(0, -50%);
+		transform: translateY(-50%);
 	}
 }

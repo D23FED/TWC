@@ -1,7 +1,9 @@
 @import 'init';
+@import 'carousel';
 
 // Wraps everything, including hidden spacer
 $sticky-menu-wrap: '#sticky-subnav-wrapper';
+$sticky-carousel-menu-wrap: '#sticky-carousel-subnav-wrapper';
 
 // Contains just elements related to menu
 $sticky-menu-container: '#sticky-subnav';
@@ -219,4 +221,46 @@ $hover-transition-duration: 200ms;
 
 #{$btn-close} span:after {
 	padding-left: 0.5em;
+}
+
+#{$sticky-carousel-menu-wrap} {
+	#{$sticky-menu-container} {
+		display: block;
+
+		> #{$sticky-menu-inner} {
+			display: block;
+			max-width: $container-width - 200px;
+		}
+	}
+
+	#{$sticky-menu} {
+		display: block;
+	}
+
+	#{$sticky-menu-item} {
+		display: inherit;
+	}
+
+	// Buttons
+	[class*='btn-'] {
+		position: absolute;
+
+		@include center(vertical);
+	}
+
+	.btn-prev {
+		left: -100px;
+
+		&::before {
+			font-awesome: chevron-left;
+		}
+	}
+
+	.btn-next {
+		right: -100px;
+
+		&::before {
+			font-awesome: chevron-right;
+		}
+	}
 }
