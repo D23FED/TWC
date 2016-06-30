@@ -3,7 +3,7 @@
   background: #fff;
 }
 
-.stickySubNav {
+#sticky-subnav {
   padding: 10px 0;
   padding: 1rem 0;
   overflow: hidden;
@@ -14,9 +14,11 @@
   width: 100%;
 }
 
-.stickySubNav.js-sticky {
+#sticky-subnav.js-sticky {
   visibility: visible;
   opacity: 1;
+  left: 0;
+  right: 0;
   position: fixed;
   height: auto;
   top: 0;
@@ -26,38 +28,34 @@
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-.stickySubNav.js-sticky li.stickyScrollItem a svg {
-  display: inline-block;
-  display: none;
-}
-
-.stickySubNav .inner {
+#sticky-subnav > .parsys {
   max-width: 980px;
   display: table;
   margin: 0 auto;
 }
 
-.stickySubNav ul {
+#sticky-subnav .twc-container {
   text-align: center;
   padding: 1em 0;
   position: relative;
   display: table-row;
+  max-width: initial;
 }
 
-.stickySubNav li {
+#sticky-subnav .cta {
   display: table-cell;
   padding: 0 12px;
 }
 
-.stickySubNav li.twc-first {
+#sticky-subnav .cta:first-of-type {
   padding-left: 0;
 }
 
-.stickySubNav li.twc-last {
+#sticky-subnav .cta:last-of-type {
   padding-right: 0;
 }
 
-.stickySubNav li a {
+#sticky-subnav .cta a {
   display: inline-block;
   width: 100%;
   height: auto;
@@ -76,37 +74,21 @@
   background-color: #fff;
 }
 
-.stickySubNav li a svg {
-  display: none;
-  fill: #333;
-  max-width: 50%;
-  transition: fill 300ms linear;
-}
-
-.stickySubNav li a:hover {
+#sticky-subnav .cta a:hover {
   color: #fff;
   background-color: #02a9e0;
   border-color: #02a9e0;
 }
 
-.stickySubNav li a:hover svg {
-  fill: #4578af;
-}
-
-.stickySubNav li.active a svg {
-  fill: #4578af;
-  display: none;
-}
-
-.stickySubNav li:last-of-type a {
+#sticky-subnav .cta:last-of-type a {
   margin-right: 0;
 }
 
-.stickySubNav.js-closed {
+#sticky-subnav.js-closed {
   display: none;
 }
 
-.stickySubNav ~ .stickySpacing {
+#sticky-subnav ~ #sticky-spacer {
   display: none !important;
 }
 
@@ -289,11 +271,11 @@ div.heroCarouselSlide figure img:last-of-type {
 
 @media (max-width: 40em) {
 
-  .stickySubNav li {
+  #sticky-subnav .cta {
     padding: 0 2px;
   }
 
-  .stickySubNav li a {
+  #sticky-subnav .cta a {
     font-size: 14px;
     font-size: 1.4rem;
     padding: 0.556em .2em;
