@@ -62,10 +62,16 @@ div[id*='centered-cta-'] .pricing .term {
   #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 {
     padding-right: 0;
     vertical-align: inherit;
+    background-image: url(/content/dam/residential/images/global/LEX-hero-bg.png);
+    background-size: cover;
   }
 
   #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 figure {
     padding-top: 0;
+  }
+
+  div[id*='centered-cta-'] .pricing .term {
+    margin-left: -2.5em;
   }
 }
 

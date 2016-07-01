@@ -221,11 +221,11 @@
           transform: translateY(-50%);
 }
 
-#sticky-carousel-subnav-wrapper .btn-prev::before {
+#sticky-carousel-subnav-wrapper .btn-prev {
   left: -100px;
 }
 
-#sticky-carousel-subnav-wrapper .btn-prev::before::before {
+#sticky-carousel-subnav-wrapper .btn-prev::before {
   font-family: FontAwesome;
   content: '\f053';
 }

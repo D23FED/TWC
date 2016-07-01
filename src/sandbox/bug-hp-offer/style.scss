@@ -34,6 +34,8 @@
 				@include respond-to(medium) {
 					padding-right: 0;
 					vertical-align: inherit;
+					background-image: url(/content/dam/residential/images/global/LEX-hero-bg.png);
+					background-size: cover;
 				}
 
 
@@ -70,6 +72,10 @@ div[id*='centered-cta-'] {
 
 		.term {
 			margin-left: -4em;
+
+			@include respond-to(medium) {
+				margin-left: -2.5em;
+			}
 		}
 	}
 }
