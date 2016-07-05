@@ -227,7 +227,9 @@
 
 #sticky-carousel-subnav-wrapper .btn-prev::before {
   font-family: FontAwesome;
-  content: '\f053';
+  content: '\f104';
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 #sticky-carousel-subnav-wrapper .btn-next {
@@ -236,7 +238,9 @@
 
 #sticky-carousel-subnav-wrapper .btn-next::before {
   font-family: FontAwesome;
-  content: '\f054';
+  content: '\f105';
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 @media (max-width: 40em) {

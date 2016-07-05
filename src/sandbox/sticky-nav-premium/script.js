@@ -216,8 +216,8 @@ var _now = Date.now || function() {
 
 // Carousel
 var buttons = {
-	prev: '<a class="slick-prev btn-prev">Previous</a>',
-	next: '<a class="slick-next btn-next">Next</a>'
+	prev: '<a class="slick-prev btn-prev"></a>',
+	next: '<a class="slick-next btn-next"></a>'
 }
 
 $(function() {
