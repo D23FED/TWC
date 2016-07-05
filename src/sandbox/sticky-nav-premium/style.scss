@@ -223,6 +223,7 @@ $hover-transition-duration: 200ms;
 	padding-left: 0.5em;
 }
 
+// Carousel
 #{$sticky-carousel-menu-wrap} {
 	#{$sticky-menu-container} {
 		display: block;
@@ -252,7 +253,8 @@ $hover-transition-duration: 200ms;
 		left: -100px;
 
 		&::before {
-			font-awesome: chevron-left;
+			font-awesome: angle-left;
+			font-size: 3.6rem;
 		}
 	}
 
@@ -260,7 +262,8 @@ $hover-transition-duration: 200ms;
 		right: -100px;
 
 		&::before {
-			font-awesome: chevron-right;
+			font-awesome: angle-right;
+			font-size: 3.6rem;
 		}
 	}
 }
