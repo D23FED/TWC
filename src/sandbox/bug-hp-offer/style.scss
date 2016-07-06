@@ -1,3 +1,4 @@
+/* Version 3 | Jul 05 */
 @import 'init';
 
 #LEX-hero-banner {
@@ -42,12 +43,26 @@
 				figure {
 					padding-top: 8%;
 
+					img {
+						width: 100%;
+					}
+
 					@media (max-width: px-to-em(880)) {
 						padding-top: 15%;
 					}
 
 					@include respond-to(medium) {
 						padding-top: 0;
+					}
+				}
+			}
+
+			.twc-col2_6733-c1 {
+				.parsley-errors-list {
+					height: 0;
+
+					+ .parsley-errors-list {
+						display: none;
 					}
 				}
 			}

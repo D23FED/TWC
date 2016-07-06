@@ -1,3 +1,4 @@
+/* Version 3 | Jul 05 */
 #LEX-hero-banner .columnControl {
   display: table;
 }
@@ -20,6 +21,18 @@
   padding-top: 8%;
 }
 
+#LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 figure img {
+  width: 100%;
+}
+
+#LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c1 .parsley-errors-list {
+  height: 0;
+}
+
+#LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c1 .parsley-errors-list + .parsley-errors-list {
+  display: none;
+}
+
 #LEX-hero-banner .columnControl .columnControl {
   display: block;
 }
@@ -37,44 +50,35 @@ div[id*='centered-cta-'] .pricing .term {
   margin-left: -4em;
 }
 
-@media (max-width: 55em) {
-
-  #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 figure {
-    padding-top: 15%;
-  }
-}
-
 @media (max-width: 48em) {
-
   #LEX-hero-banner .columnControl {
     display: block;
   }
-
   #LEX-hero-banner .columnControl .twc-col2_6733 {
     display: block;
   }
-
   #LEX-hero-banner .columnControl .twc-col2_6733 > .parsys_column {
     display: block;
     float: left;
   }
-
   #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 {
     padding-right: 0;
     vertical-align: inherit;
     background-image: url(/content/dam/residential/images/global/LEX-hero-bg.png);
     background-size: cover;
   }
-
   #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 figure {
     padding-top: 0;
   }
-
   div[id*='centered-cta-'] .pricing .term {
     margin-left: -2.5em;
   }
 }
 
-
+@media (max-width: 55em) {
+  #LEX-hero-banner .columnControl .twc-col2_6733 .twc-col2_6733-c0 figure {
+    padding-top: 15%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
