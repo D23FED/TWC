@@ -1,5 +1,4 @@
 @import 'init';
-@import 'carousel';
 
 // Wraps everything, including hidden spacer
 $sticky-menu-wrap: '#sticky-subnav-wrapper';
@@ -37,8 +36,6 @@ $hover-transition-duration: 200ms;
 
 // Menu wrapper wrapper
 #{$sticky-menu-wrap} {
-	// max-width: $container-width;
-	// margin: 0 auto;
 }
 
 // Menu wrapper
@@ -51,7 +48,6 @@ $hover-transition-duration: 200ms;
 	border-bottom: 1px solid $color-lex-deep-sky;
 	width: 100%;
 
-	// max-width: 50%;
 
 	// Activated/stuck sticky menu
 	&#{$sticky-active} {
@@ -65,16 +61,9 @@ $hover-transition-duration: 200ms;
 		z-index: 9999;
 		width: 100%;
 
-		// max-width: $container-width;
 		display: block;
 		background-color: rgba(255, 255, 255, 0.85);
 
-		// max-width: 100%;
-
-		// li#{$sticky-scroll-item} a svg {
-		// 	display: inline-block;
-		// 	display: none;
-		// }
 
 	}
 
@@ -86,7 +75,6 @@ $hover-transition-duration: 200ms;
 
 	// Menu (formerly UL)
 	#{$sticky-menu} {
-		// width: 100%;
 		text-align: center;
 		padding: 1em 0;
 		position: relative;
@@ -112,19 +100,14 @@ $hover-transition-duration: 200ms;
 		}
 
 		a {
-			// box-shadow: 1px 1px 2px 0 #888888;
 			display: inline-block;
 			width: 100%;
 
-			// max-width: 105px;
 			height: auto;
 
-			// 10px 26px @ 1.8rem
 			padding: .556em 1.445em;
 			margin-right: 1%;
 
-			// border: 2px solid $color-steel-dark-lightish;
-			// background: rgba(255, 255, 255, 0.8);
 			border-radius: 7px;
 			text-align: center;
 			transition: all $hover-transition-duration ease-out;
@@ -136,51 +119,17 @@ $hover-transition-duration: 200ms;
 			border: 1px solid $color-lex-sky;
 			background-color: #fff;
 
-			// &::after {
-			// 	opacity: 0;
-			// 	transition: opacity $hover-transition-duration ease-out;
-			// }
-
-			// svg {
-			// 	display: none;
-			// 	fill: $text-color;
-			// 	max-width: 50%;
-			// 	transition: fill 300ms linear;
-			// }
 
 			&:hover {
 				color: #fff;
 				background-color: $color-lex-bright-sky;
 				border-color: $color-lex-bright-sky;
 
-				// &::after {
-				// 	content: '';
-				// 	background-color: $color-lex-bright-sky;
-				// 	height: 5px;
-				// 	position: absolute;
-				// 	bottom: 0px;
-				// 	left: 0;
-				// 	right: 0;
-				// 	border-radius: 3px;
-				// 	opacity: 1;
-				// }
-
-				// svg {
-				// 	fill: #4578af;
-				// }
 
 			}
 		}
 
 		&.active a {
-			// border: 2px solid #4578af;
-			// box-shadow: 1px 1px 2px 0 #3376b2;
-			// color: #4578af;
-
-			// svg {
-			// 	fill: #4578af;
-			// 	display: none;
-			// }
 
 		}
 
@@ -213,9 +162,6 @@ $hover-transition-duration: 200ms;
 	}
 
 	#{$btn-close} {
-		// top: 0;
-		// right: 0;
-
 	}
 }
 
@@ -223,47 +169,5 @@ $hover-transition-duration: 200ms;
 	padding-left: 0.5em;
 }
 
-// Carousel
-#{$sticky-carousel-menu-wrap} {
-	#{$sticky-menu-container} {
-		display: block;
+@import 'carousel';
 
-		> #{$sticky-menu-inner} {
-			display: block;
-			max-width: $container-width - 200px;
-		}
-	}
-
-	#{$sticky-menu} {
-		display: block;
-	}
-
-	#{$sticky-menu-item} {
-		display: inherit;
-	}
-
-	// Buttons
-	[class*='btn-'] {
-		position: absolute;
-
-		@include center(vertical);
-	}
-
-	.btn-prev {
-		left: -100px;
-
-		&::before {
-			font-awesome: angle-left;
-			font-size: 3.6rem;
-		}
-	}
-
-	.btn-next {
-		right: -100px;
-
-		&::before {
-			font-awesome: angle-right;
-			font-size: 3.6rem;
-		}
-	}
-}
