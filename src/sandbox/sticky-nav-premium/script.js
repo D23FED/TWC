@@ -1,5 +1,5 @@
 // Vars
-var	sticky = {
+var sticky = {
 	wrapper: '#sticky-subnav-wrapper',
 	menu: '#sticky-subnav',
 	el: '.stickyElement',
@@ -10,7 +10,7 @@ var	sticky = {
 };
 
 $(function() {
-	if ( $(sticky.wrapper).length === 0 ) {
+	if ($(sticky.wrapper).length === 0) {
 		sticky.wrapper = '#sticky-carousel-subnav-wrapper';
 	}
 	// Get "scroll past" position from wrapping element, because actual menu's position will change when sticky
@@ -147,7 +147,6 @@ var setSpacerHeight = function(spacerHeight) {
 // 	// console.log('close');
 // });
 
-
 // External libraries and plugins
 
 // ScrollTo plugin
@@ -213,21 +212,3 @@ var _debounce = function(func, wait, immediate) {
 var _now = Date.now || function() {
 	return new Date().getTime();
 };
-
-// Carousel
-var buttons = {
-	prev: '<a class="slick-prev btn-prev"></a>',
-	next: '<a class="slick-next btn-next"></a>'
-}
-
-$(function() {
-	$('#sticky-subnav .twc-container').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		variableWidth: true,
-		centerMode: true,
-		prevArrow: buttons.prev,
-		nextArrow: buttons.next
-	});
-});

@@ -212,21 +212,3 @@ var _debounce = function(func, wait, immediate) {
 var _now = Date.now || function() {
 		return new Date().getTime();
 	};
-
-// Carousel
-var buttons = {
-	prev: '<a class="slick-prev btn-prev"></a>',
-	next: '<a class="slick-next btn-next"></a>'
-}
-
-$(function() {
-	$('#sticky-subnav .twc-container').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		variableWidth: true,
-		centerMode: true,
-		prevArrow: buttons.prev,
-		nextArrow: buttons.next
-	});
-});
