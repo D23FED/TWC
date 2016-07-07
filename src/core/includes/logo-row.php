@@ -3,7 +3,7 @@
 		<div class="parsys">
 			<div class="parbase section teaser">
 				<script>
-					initializeTeaserLoader([{
+					/*initializeTeaserLoader([{
 						"path": "/content/campaigns/residential/global/header-icons/onnetwork-existing-customer",
 						"name": "onnetwork-existing-customer",
 						"campaignName": "header-icons",
@@ -14,7 +14,7 @@
 						"name": "default",
 						"campaignName": "header-icons",
 						"id": "header-icons_default"
-					}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);
+					}], "first", "_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830", false);*/
 				</script>
 				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_1130406752_wrapper-parsys_teaser_373631830" class="campaign campaign-header-icons">
 					<div class="general">
@@ -264,7 +264,7 @@
 		</div>
 	</div>
 	<script>
-	jQuery('.tileList').hide();
+	/*jQuery('.tileList').hide();
 	jQuery(document).ready(function() {
 		if ("false" !== "true") {
 			jQuery('#75014ab8-d784-44e2-9ea0-a44469dd4949').closest(".smartLink").addClass("non-indented");
@@ -304,7 +304,7 @@
 		if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
 			bindUndelagatedAnalyticsTrackingClickEvents();
 		}
-	});
+	});*/
 	</script>
 	<style type="text/css">
 	.user-location_v2 .geo-error-content p,

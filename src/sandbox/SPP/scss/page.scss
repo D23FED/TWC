@@ -1,0 +1,453 @@
+@import 'init';
+
+$packages-container: '.packageSelect';
+$package-header: '.packageHead';
+$color-gradient-bg: #eff7ff;
+
+@mixin container {
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+@mixin row {
+	@include clearfix;
+}
+
+@mixin column($w: 100%) {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	width: #{$w};
+}
+
+.twc-content .twc-container-full {
+	@include twc-container;
+}
+
+#{$packages-container} {
+	.package {
+		position: relative;
+
+		// Header
+
+		&.double,
+		&.single,
+		&.triple {
+			#{$package-header} {
+				background-color: $color-lex-sky;
+			}
+		}
+
+		&.triple {
+			&.js-compare, &.js-selected {
+				border: 5px solid $color-lex-sky;
+			}
+		}
+
+		#{$package-header} {
+			> fieldset {
+				float: none;
+				max-width: 100%;
+				text-align: center;
+				font-size: 1.6rem;
+
+				input ~ label.compare-label {
+					font-size: 1.6rem;
+				}
+			}
+
+			.packageTitle {
+				float: none;
+				text-align: center;
+				font-family: 'TWC Round Medium';
+				font-size: 1.4rem;
+				max-width: 100%;
+				padding: 0;
+
+				.h5 {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		// Body
+		.packageBody {
+			margin-top: 1em;
+		}
+
+		.pricing {
+			padding-bottom: 1.5rem;
+			padding-top: .8rem;
+			margin: 0;
+			line-height: 1;
+			box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
+			position: relative;
+			&::after {
+				background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 65%,rgba(255,255,255,1) 100%);
+				content: '';
+				position: absolute;
+				bottom: -6px;
+				left: 0;
+				height: 5px;
+				width: 100%;
+
+			}
+
+
+			.currency-symbol {
+				font-size: 66%;
+				vertical-align: top;
+				line-height: 1.25;
+			}
+
+			&:not(.specialPricing) {
+				.column {
+					@include column(50%);
+				}
+			}
+
+			.before {
+				margin-left: 25%;
+				text-align: left;
+				font-size: 1.4rem;
+				color: $color-lex-sky;
+				font-family: $font-stack-sans-light;
+			}
+
+			.base-offer {
+				font-family: $font-stack-sans-light;
+				text-transform: uppercase;
+				font-size: 1.8rem;
+
+			}
+
+			.term {
+				display: inline-block;
+				font-size: 9px;
+				line-height: 1;
+				margin-left: 0;
+				text-align: left;
+				vertical-align: top;
+
+				&.under {
+					display: block;
+					margin-left: 0;
+					text-align: center;
+				}
+
+				.discountTerm, .preTerm {
+					float: left;
+					margin-top: 0.25em;
+				}
+
+				.postTerm {
+					float: left;
+					margin-left: 3px;
+					margin-top: -6px;
+				}
+
+				.discountTerm {
+					margin-top: -6px;
+				}
+			}
+
+			.super,
+			.term {
+				margin-left: 4px;
+			}
+		}
+
+		hr.spacer {
+			margin: 1.5em 0 0;
+		}
+
+		.quickCheckoutAccordion hr {
+			margin: 1em 0;
+		}
+
+		.specialOffer {
+			background-image: none;
+		}
+	}
+
+	//end .package
+	[class*='twc-col3_333333'] {
+		margin-bottom: 0;
+	}
+
+	.box {
+		background: #f2f9ff;
+		border: 1px solid #9a9c9e;
+		padding: 0;
+	}
+}
+
+.specialOffer {
+	// Price block
+	.pricing {
+		background: #ffffff;
+		background: linear-gradient(to right, #ffffff 0%, $color-gradient-bg 25%, $color-gradient-bg 75%, #ffffff 100%);
+	}
+
+	// Price
+	.h2,
+	.price {
+		font-weight: bold;
+		color: $color-lex-sky;
+		margin-bottom: 0;
+		position: relative;
+		vertical-align: middle;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	// Split prices ('$20 + $10')
+	.specialPricing {
+		position: relative;
+		min-height: 90px;
+
+		// Plus sign
+		&::after {
+			content: '\f067';
+			font-family: fontawesome;
+			font-size: 1.4rem;
+			position: absolute;
+
+			// right: -1em;
+			transform: translateX(-100%) translateY(-50%);
+			top: 50%;
+		}
+
+		.h2 {
+			&:nth-of-type(2):after {
+				display: none;
+			}
+		}
+	}
+
+	.previousPricing {
+		color: $text-color;
+		clear: both;
+		text-align: right;
+
+		.strikethrough {
+			// text-decoration: line-through;
+			display: inline-block;
+			position: relative;
+
+			&::after {
+				content: '';
+				width: 100%;
+				background-color: red;
+				position: absolute;
+				height: 2px;
+				display: block;
+				top: 50%;
+				transform: translateY(-50%) rotate(-10deg);
+			}
+		}
+	}
+
+	.h2:nth-of-type(1) .previousPricing {
+		text-align: left;
+	}
+
+	.icon-only {
+		color: rgb(22, 102, 167);
+	}
+
+	.h2 {
+		.left {
+			width: 50%;
+			text-align: right;
+		}
+
+		.right {
+			width: 50%;
+			text-align: left;
+		}
+	}
+
+	.h4 {
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+
+	.term {
+		font-size: 1.2rem;
+		// color: #333;
+		font-weight: normal;
+		min-width: 85px;
+	}
+}
+
+.w30 {
+	margin-right: 5%;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.bordered-right {
+	padding-left: 0;
+}
+
+.tooltip {
+	border-bottom: 1px dotted #3376b2;
+	pointer-events: initial;
+}
+
+.tooltip-text {
+	display: none;
+	pointer-events: none;
+}
+
+a:hover > .tooltip-text {
+	display: block;
+}
+
+.discountTerm {
+	clear: both;
+}
+
+.detailsExpansion {
+	position: relative;
+	width: 100%;
+}
+
+.detailsContent {
+	padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+	text-align: center;
+	padding: 1em 0;
+}
+
+.quickCheckoutContent {
+	text-align: left;
+	display: none;
+	font-size: 12px;
+	font-size: 1.2rem;
+
+	.cta {
+		font-size: 13px;
+		font-size: 1.3rem;
+	}
+
+	input {
+		vertical-align: top;
+	}
+
+	label, .priceTally td {
+		font-size: 1.15rem;
+	}
+
+	.productSelect {
+		text-align: left;
+
+		table {
+			width: 100%;
+
+			tr {
+				width: 100%;
+			}
+
+			td:first-of-type {
+				width: 5%;
+			}
+		}
+
+		a {
+			display: inline-block;
+			max-width: none;
+		}
+	}
+
+	.priceTally {
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.totals td {
+			font-size: 1.6rem;
+			font-size: 16px;
+		}
+	}
+
+	.pricing {
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	.disclaimer-text.text-center {
+		text-align: center;
+	}
+}
+
+.quickCheckoutAccordion.js-open .quickCheckoutBtn {
+	display: none;
+}
+
+.closeAccordion {
+	cursor: pointer;
+	margin-top: 0.5em;
+}
+
+.totals {
+	background: #b7e3ff;
+}
+
+.box p {
+	padding: 0 0.5em;
+}
+
+table tr td {
+	&:first-of-type {
+		padding-left: 0.5em;
+	}
+
+	&:last-of-type {
+		padding-right: 0.5em;
+	}
+}
+
+.totals td {
+	padding: 0.5em 0;
+
+	&.text-right {
+		padding-right: 0.5em;
+	}
+}
+
+.quickCheckoutContent
+.priceTally tr:nth-of-type(2) td {
+	padding-top: 1em;
+}
+
+.charterTitle {
+	width: 100%;
+	background: $color-lex-sky;
+	padding: 0.5em;
+	color: #fff;
+}
+
+.packageInfo .cta {
+	text-align: center;
+	width: 100%;
+}
+
+figure img {
+	margin: 0 auto 0.25em;
+}
+
+@media (max-width: 66.15em) {
+	.twc-container {
+		padding: 0;
+	}
+}
