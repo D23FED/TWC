@@ -1,0 +1,283 @@
+/* Begin global overrides */
+
+.packageSelect .package {
+  &.double .packageHead, &.single .packageHead, &.triple .packageHead {
+    background-color: #00549f;
+  }
+}
+
+.specialOffer {
+  .h2 {
+    font-weight: bold;
+    color: rgb(22, 102, 167);
+    margin-bottom: 0;
+    position: relative;
+    vertical-align: middle;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .specialPricing {
+    min-height: 90px;
+    .h2 {
+      &:after {
+        content: "\f067";
+        font-family: fontawesome;
+        font-size: 1.4rem;
+        position: absolute;
+        right: -1em;
+        top: 50%;
+      }
+      &:nth-of-type(2):after {
+        display: none;
+      }
+    }
+  }
+  .previousPricing {
+    color: rgb(177, 0, 66);
+    clear: both;
+    text-align: right;
+  }
+  .h2:nth-of-type(1) .previousPricing {
+    text-align: left;
+  }
+  .previousPricing .strikethrough {
+    text-decoration: line-through;
+  }
+  .icon-only {
+    color: rgb(22, 102, 167);
+  }
+  .h2 {
+    .left {
+      width: 50%;
+      text-align: right;
+    }
+    .right {
+      width: 50%;
+      text-align: left;
+    }
+  }
+  .h4 {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .term {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: normal;
+    min-width: 85px;
+  }
+}
+
+figure img {
+  margin: 0 auto 0.25em;
+}
+
+.packageSelect .package.triple {
+  &.js-compare, &.js-selected {
+    border: 5px solid #00549f;
+  }
+}
+
+.w30 {
+  margin-right: 5%;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.packageSelect [class*="twc-col3_333333"] {
+  margin-bottom: 0;
+}
+
+.bordered-right {
+  padding-left: 0;
+}
+
+.packageSelect .package hr.spacer {
+  margin: 1.5em 0 0;
+}
+
+.tooltip {
+  border-bottom: 1px dotted #3376b2;
+  pointer-events: initial;
+}
+
+.tooltip-text {
+  display: none;
+  pointer-events: none;
+}
+
+a:hover > .tooltip-text {
+  display: block;
+}
+
+.packageSelect {
+  .package .quickCheckoutAccordion hr {
+    margin: 1em 0;
+  }
+  .box {
+    background: #f2f9ff;
+    border: 1px solid #9a9c9e;
+    padding: 0;
+  }
+  .package .specialOffer {
+    background-image: none;
+  }
+}
+
+/* End global overrides */
+
+/* Begin Page specific CSS */
+
+.discountTerm {
+  clear: both;
+}
+
+.packageSelect .package {
+  position: relative;
+}
+
+.detailsExpansion {
+  position: relative;
+  width: 100%;
+}
+
+.detailsContent {
+  padding: 2em 1em 1em;
+}
+
+.quickCheckoutAccordion {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.quickCheckoutContent {
+  text-align: left;
+  display: none;
+  font-size: 12px;
+  font-size: 1.2rem;
+  .cta {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  input {
+    vertical-align: top;
+  }
+  label, .priceTally td {
+    font-size: 1.15rem;
+  }
+  .productSelect {
+    text-align: left;
+    table {
+      width: 100%;
+    }
+  }
+  .priceTally table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .productSelect {
+    table tr {
+      width: 100%;
+    }
+    td:first-of-type {
+      width: 5%;
+    }
+  }
+  .price {
+    text-align: right;
+    white-space: nowrap;
+  }
+  .disclaimer-text.text-center {
+    text-align: center;
+  }
+  .productSelect a {
+    display: inline-block;
+    max-width: none;
+  }
+}
+
+.quickCheckoutAccordion.js-open .quickCheckoutBtn {
+  display: none;
+}
+
+.closeAccordion {
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.totals {
+  background: #b7e3ff;
+}
+
+.box p {
+  padding: 0 0.5em;
+}
+
+table tr td {
+  &:first-of-type {
+    padding-left: 0.5em;
+  }
+  &:last-of-type {
+    padding-right: 0.5em;
+  }
+}
+
+.totals td {
+  padding: 0.5em 0;
+  &.text-right {
+    padding-right: 0.5em;
+  }
+}
+
+.quickCheckoutContent .priceTally .totals td {
+  font-size: 1.6rem;
+  font-size: 16px;
+}
+
+.priceTally tr:nth-of-type(2) td {
+  padding-top: 1em;
+}
+
+.packageSelect .package .packageHead .packageTitle {
+  float: none;
+  text-align: center;
+  font-family: "TWC Round Medium";
+  font-size: 1.4rem;
+  max-width: 100%;
+  padding: 0;
+  .h5 {
+    margin-bottom: 0;
+  }
+}
+
+.charterTitle {
+  width: 100%;
+  background: #00549f;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.packageInfo .cta {
+  text-align: center;
+  width: 100%;
+}
+
+.packageSelect .package .packageHead > fieldset {
+  float: none;
+  max-width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  input ~ label.compare-label {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 66.15em) {
+  .twc-container {
+    padding: 0;
+  }
+}
+
+/* Begin BYOB CSS */

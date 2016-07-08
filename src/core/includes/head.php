@@ -15,8 +15,10 @@
 	}
 	if ( file_exists($page_vars) ) {
 		include($page_vars);
+		echo '<!-- page_variables.php found -->';
 	} elseif ( file_exists($page_vars_alt) ) {
 		include($page_vars_alt);
+		echo '<!-- pvars.php found -->';
 	} else {
 		echo '<!-- Page vars not found -->';
 	}

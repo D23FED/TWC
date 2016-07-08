@@ -2,7 +2,7 @@
 	<div id="primary-nav">
 		<div class="parsys">
 			<div class="parbase section teaser">
-				<script type="text/javascript">teaser();</script>
+				<script type="text/javascript">// teaser();</script>
 				<div id="_content_twc_en_global-elements_ge-residential-main_jcr_content_header_manual_id_wrapper_wrapper-parsys_manual_id_wrapper_283391331_wrapper-parsys_teaser" class="campaign campaign-top-nav">
 					<div class="general">
 						<div class="par parsys">
@@ -41,7 +41,7 @@
 	</div>
 	<!-- end #primary-nav -->
 	<script type="text/javascript">
-	function teaser() {
+	/*function teaser() {
 		initializeTeaserLoader([{
 			"path": "/content/campaigns/residential/nav-megamenu-2-1/top-nav/authenticated",
 			"name": "authenticated",
@@ -73,6 +73,6 @@
 		if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
 			bindUndelagatedAnalyticsTrackingClickEvents();
 		}
-	});
+	});*/
 	</script>
 </div>

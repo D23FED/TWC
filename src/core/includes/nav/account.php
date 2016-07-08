@@ -25,7 +25,7 @@
 			<li>
 				<div class="submenu parbase twc-submenu twc-new-mega-section width-95 align-left teaser megamenu-middle" style="width: 300%;">
 					<script type="text/javascript">
-					initializeTeaserLoader([{
+					/*initializeTeaserLoader([{
 						"path": "/content/campaigns/residential/nav-megamenu-2-1/megamenu/my-account/authenticated-user",
 						"name": "authenticated-user",
 						"campaignName": "my-account",
@@ -36,15 +36,15 @@
 						"name": "default",
 						"campaignName": "my-account",
 						"id": "my-account_default"
-					}], "first", "_content_campaigns_residential_nav-megamenu-2-1_top-nav_existing-customer-nav_jcr_content_general_par_mega_menu_v2_twc-new-nav_items_mega_menu_item_1_submenu", false);
+					}], "first", "_content_campaigns_residential_nav-megamenu-2-1_top-nav_existing-customer-nav_jcr_content_general_par_mega_menu_v2_twc-new-nav_items_mega_menu_item_1_submenu", false);*/
 					</script>
 					<div id="_content_campaigns_residential_nav-megamenu-2-1_top-nav_existing-customer-nav_jcr_content_general_par_mega_menu_v2_twc-new-nav_items_mega_menu_item_1_submenu" class="campaign campaign-my-account">
 						<div class="megamenu">
 							<div class="twc-row columnControl parsys columncontrol 55-45 marginless">
 								<script>
-								jQuery(document).ready(function() {
+								/*jQuery(document).ready(function() {
 									jQuery('#a7b326b5-c3bc-4893-86c0-afe1de9febcc').columnControl();
-								});
+								});*/
 								</script>
 								<div id="a7b326b5-c3bc-4893-86c0-afe1de9febcc" class="parsys_column twc-col2_5545 marginless">
 									<div id="" class="twc-col2_5545-c0  parsys_column">
@@ -92,14 +92,14 @@
 												</form>
 												<div id="7fd8a6d3-126c-4629-8f2f-e04848ac6118"></div>
 												<script>
-												jQuery(document).ready(function() {
+												/*jQuery(document).ready(function() {
 													$('input, textarea').placeholder();
 													jQuery('#7fd8a6d3-126c-4629-8f2f-e04848ac6118').closest('.mini-login-form').rememberLogin({
 														"checkboxChecked": "false",
 														"rememberMeId": "rememberMe",
 														"componentPath": "responsive/residential/components/content/mini-login-form"
 													});
-												});
+												});*/
 												</script>
 											</div>
 										</div>
@@ -114,11 +114,11 @@
 																<span class="link-label">Access My Account</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#74e49e0d-8373-4913-a95f-2f2807c94f6c').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 														</div>
 													</li>
@@ -128,14 +128,14 @@
 																<span class="link-label">Forgot Username</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#81e242b1-ba98-4bb8-a2d5-b90e1edddbb7').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																jQuery('#81e242b1-ba98-4bb8-a2d5-b90e1edddbb7').newWindowLink({
 																	height: "768",
 																	width: "1024",
@@ -144,7 +144,7 @@
 																	toolbar: 'yes',
 																	analyticsname: 'megamenu nav myaccount:2:2:forgot username'
 																});
-															});
+															});*/
 															</script>
 														</div>
 													</li>
@@ -154,14 +154,14 @@
 																<span class="link-label">Forgot Password</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#80a316d1-b007-4428-86c7-7cd6944cfc4b').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																jQuery('#80a316d1-b007-4428-86c7-7cd6944cfc4b').newWindowLink({
 																	height: "768",
 																	width: "1024",
@@ -170,7 +170,7 @@
 																	toolbar: 'yes',
 																	analyticsname: 'megamenu nav myaccount:2:3:forgot password'
 																});
-															});
+															});*/
 															</script>
 														</div>
 													</li>
@@ -180,11 +180,11 @@
 																<span class="link-label">Register for a TWC ID</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#026c10c8-e100-489c-b197-989e393643c3').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 														</div>
 													</li>
@@ -194,14 +194,14 @@
 																<span class="link-label">Looking for your Business Account?</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#31447fc4-5df8-48de-bba6-08c2810642c7').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																jQuery('#31447fc4-5df8-48de-bba6-08c2810642c7').newWindowLink({
 																	height: "768",
 																	width: "1024",
@@ -210,7 +210,7 @@
 																	toolbar: 'yes',
 																	analyticsname: 'megamenu nav myaccount:2:5:looking for your business account?'
 																});
-															});
+															});*/
 															</script>
 														</div>
 													</li>
@@ -220,14 +220,14 @@
 																<span class="link-label">Check Email</span>
 															</a>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																if ("false" !== "true") {
 																	jQuery('#5d7e104c-02cd-47c5-a5ea-4eb9d89bb266').closest(".smartLink").addClass("non-indented");
 																}
-															});
+															});*/
 															</script>
 															<script>
-															jQuery(document).ready(function() {
+															/*jQuery(document).ready(function() {
 																jQuery('#5d7e104c-02cd-47c5-a5ea-4eb9d89bb266').newWindowLink({
 																	height: "768",
 																	width: "1024",
@@ -236,18 +236,18 @@
 																	toolbar: 'yes',
 																	analyticsname: 'megamenu nav myaccount:2:6:check email'
 																});
-															});
+															});*/
 															</script>
 														</div>
 													</li>
 												</ul>
 												<script type="text/javascript">
-												jQuery('.tileList').hide();
+												/*jQuery('.tileList').hide();
 												jQuery(document).ready(function() {
 													var tileListDiv = jQuery('.tileList');
 													tileListDiv.addClass("");
 													tileListDiv.show();
-												});
+												});*/
 												</script>
 												<div id="0598f88c-9ef4-48a2-a20b-a95a747e2591"></div>
 											</div>
@@ -258,12 +258,12 @@
 							</div>
 						</div>
 						<script>
-						jQuery(document).ready(function() {
+						/*jQuery(document).ready(function() {
 							//keeps the function call from causing an error in the teaser edit mode if util.js is not loaded in teaser edit mode
 							if (typeof bindUndelagatedAnalyticsTrackingClickEvents == 'function') {
 								bindUndelagatedAnalyticsTrackingClickEvents();
 							}
-						});
+						});*/
 						</script>
 					</div>
 					<div class="clear"></div>

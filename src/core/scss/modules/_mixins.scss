@@ -194,3 +194,13 @@
 		transform: translateY(-50%);
 	}
 }
+
+// Mimic fixed-width container component
+@mixin twc-container {
+	display: block;
+	width: 100%;
+	max-width: $site-width;
+	margin: 0 auto;
+	padding: 2em 0;
+	overflow: visible;
+}
