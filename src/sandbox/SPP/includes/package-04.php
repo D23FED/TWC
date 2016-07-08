@@ -62,29 +62,55 @@ $features = array(
 		</div>
 		<hr class="spacer">
 		<hr>
+
+		<!-- Pricing/Offer Row -->
 		<div class="specialOffer">
-			<div class="pricing specialPricing">
-				<div>
-					<div class="h2">
-						<hr class="spacer fs20">
-						<div class="column left fs28">$<?php echo $priceTV['dollars']; ?></div>
-						<div class="column right">
-							<p class="fs18"><?php echo $priceTV['super']; ?></p>
-							<p class="term"><?php echo $priceTV['term']; ?></p>
+			<div class="pricing pricing-small specialPricing">
+
+				<div class="before">From:</div>
+
+				<!-- Row: Prices -->
+				<div class="row">
+
+					<div class="column left">
+						<div class="price">
+							<div class="column left dollars">$<?php echo $priceTV['dollars']; ?></div>
+							<div class="column right">
+								<p class="super"><?php echo $priceTV['super']; ?></p>
+								<p class="term"><?php echo $priceTV['term']; ?></p>
+							</div>
 						</div>
 					</div>
-					<div class="h2">
-						<hr class="spacer fs10">
-						<div class="column left fs28">$<?php echo $priceInternet['dollars']; ?></div>
-						<div class="column right">
-							<p class="fs18"><?php echo $priceInternet['super']; ?></p>
-							<p class="term"><?php echo $priceInternet['term']; ?></p>
-						</div>
-						<div class="fs18 previousPricing">
-							was <span class="strikethrough">$<?php echo $priceInternet['was']; ?></span>
+
+					<div class="column right">
+						<div class="price">
+							<div class="column left dollars">$<?php echo $priceInternet['dollars']; ?></div>
+							<div class="column right">
+								<p class="super"><?php echo $priceInternet['super']; ?></p>
+								<p class="term"><?php echo $priceInternet['term']; ?></p>
+							</div>
 						</div>
 					</div>
+
 				</div>
+				<!-- end .row -->
+
+				<!-- Row: "Was" Prices -->
+				<div class="row">
+					<!-- Column: First "Was" Price -->
+					<div class="column left">
+						<!-- Empty -->
+					</div>
+
+					<!-- Column: Second "Was" Price -->
+					<div class="column right">
+						<div class="previousPricing">was <span class="strikethrough">$<?php echo $priceInternet['was']; ?></span></div>
+					</div>
+
+				</div>
+				<!-- end .row -->
+
+
 			</div>
 			<hr>
 			<hr class="spacer">

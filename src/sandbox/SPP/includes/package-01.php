@@ -69,14 +69,16 @@ $features = array(
     </div>
     <hr class="spacer">
     <hr>
+
+    <!-- Pricing/Offer Row -->
     <div class="specialOffer">
-      <div class="pricing steelDark-9">
+      <div class="pricing">
         <div class="text-center">
-          <div class="h4 block before">From:</div>
-          <div class="h2">
-            <div class="column left fs48"><span class="currency-symbol">$</span>29</div>
+          <div class="before">From:</div>
+          <div class="price">
+            <div class="column left dollars"><span class="currency-symbol">$</span>29</div>
             <div class="column right">
-              <p class="h4 super">99/mo</p>
+              <p class="super">99/mo</p>
               <p class="term">each for 12 mos <br>when bundled*</p>
             </div>
           </div>

@@ -50,7 +50,7 @@
               <p class="fs18">99/mo</p>
               <p class="term">for 12 mos</p>
             </div>
-            <div class="fs18 previousPricing">
+            <div class="previousPricing">
               was <span class="strikethrough">$59.99</span>
             </div>
           </div>

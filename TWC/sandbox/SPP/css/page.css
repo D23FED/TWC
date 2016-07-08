@@ -91,6 +91,9 @@
   font-size: 1.4rem;
   color: #00549f;
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 18px;
+  line-height: 1.8rem;
+  display: block;
 }
 
 .packageSelect .package .pricing .base-offer {
@@ -147,23 +150,54 @@
   background-image: none;
 }
 
-.packageSelect [class*='twc-col3_333333'] {
-  margin-bottom: 0;
-}
-
-.packageSelect .box {
-  background: #f2f9ff;
-  border: 1px solid #9a9c9e;
-  padding: 0;
-}
-
-.specialOffer .pricing {
+.packageSelect .package .specialOffer .pricing {
   background: #ffffff;
   background: linear-gradient(to right, #ffffff 0%, #eff7ff 25%, #eff7ff 75%, #ffffff 100%);
 }
 
-.specialOffer .h2,
-.specialOffer .price {
+.packageSelect .package .specialOffer .pricing .price {
+  display: inline-block;
+}
+
+.packageSelect .package .specialOffer .pricing .dollars {
+  font-size: 55px;
+  font-size: 5.5rem;
+  font-weight: normal;
+}
+
+.packageSelect .package .specialOffer .pricing .super {
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  vertical-align: top;
+  line-height: 1.4;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.packageSelect .package .specialOffer .pricing .term {
+  margin-top: -6px;
+  margin-top: -0.6rem;
+}
+
+.packageSelect .package .specialOffer .pricing-small .dollars {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.packageSelect .package .specialOffer .pricing-small .super {
+  font-size: 16px;
+  font-size: 1.6rem;
+  vertical-align: super;
+  line-height: 1.2;
+}
+
+.packageSelect .package .specialOffer .pricing-small .term {
+  font-size: 11px;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.packageSelect .package .specialOffer .h2,
+.packageSelect .package .specialOffer .price {
   font-weight: bold;
   color: #00549f;
   margin-bottom: 0;
@@ -171,17 +205,34 @@
   vertical-align: middle;
 }
 
-.specialOffer .h2 p,
-.specialOffer .price p {
+.packageSelect .package .specialOffer .h2 p,
+.packageSelect .package .specialOffer .price p {
   margin-bottom: 0;
 }
 
-.specialOffer .specialPricing {
+.packageSelect .package .specialOffer .specialPricing {
   position: relative;
   min-height: 90px;
 }
 
-.specialOffer .specialPricing::after {
+.packageSelect .package .specialOffer .specialPricing > .row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.packageSelect .package .specialOffer .specialPricing > .row > .column {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  width: 50%;
+}
+
+.packageSelect .package .specialOffer .specialPricing .before {
+  margin-left: 10%;
+}
+
+.packageSelect .package .specialOffer .specialPricing::before {
   content: '\f067';
   font-family: fontawesome;
   font-size: 14px;
@@ -193,22 +244,26 @@
   top: 50%;
 }
 
-.specialOffer .specialPricing .h2:nth-of-type(2):after {
+.packageSelect .package .specialOffer .specialPricing .h2:nth-of-type(2):after {
   display: none;
 }
 
-.specialOffer .previousPricing {
+.packageSelect .package .specialOffer .previousPricing {
   color: #333;
   clear: both;
   text-align: right;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  display: inline-block;
 }
 
-.specialOffer .previousPricing .strikethrough {
+.packageSelect .package .specialOffer .previousPricing .strikethrough {
   display: inline-block;
   position: relative;
 }
 
-.specialOffer .previousPricing .strikethrough::after {
+.packageSelect .package .specialOffer .previousPricing .strikethrough::after {
   content: '';
   width: 100%;
   background-color: red;
@@ -221,34 +276,44 @@
           transform: translateY(-50%) rotate(-10deg);
 }
 
-.specialOffer .h2:nth-of-type(1) .previousPricing {
+.packageSelect .package .specialOffer .h2:nth-of-type(1) .previousPricing {
   text-align: left;
 }
 
-.specialOffer .icon-only {
+.packageSelect .package .specialOffer .icon-only {
   color: #1666a7;
 }
 
-.specialOffer .h2 .left {
+.packageSelect .package .specialOffer .price .left {
   width: 50%;
   text-align: right;
 }
 
-.specialOffer .h2 .right {
+.packageSelect .package .specialOffer .price .right {
   width: 50%;
   text-align: left;
 }
 
-.specialOffer .h4 {
+.packageSelect .package .specialOffer .h4 {
   font-weight: bold;
   margin-bottom: 0;
 }
 
-.specialOffer .term {
-  font-size: 12px;
-  font-size: 1.2rem;
+.packageSelect .package .specialOffer .term {
+  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: normal;
   min-width: 85px;
+}
+
+.packageSelect [class*='twc-col3_333333'] {
+  margin-bottom: 0;
+}
+
+.packageSelect .box {
+  background: #f2f9ff;
+  border: 1px solid #9a9c9e;
+  padding: 0;
 }
 
 .w30 {
@@ -399,6 +464,10 @@ table tr td:last-of-type {
   background: #00549f;
   padding: 0.5em;
   color: #fff;
+}
+
+.packageInfo p {
+  margin-bottom: 0;
 }
 
 .packageInfo .cta {

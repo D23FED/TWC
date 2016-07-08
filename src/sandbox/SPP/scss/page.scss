@@ -1,6 +1,7 @@
 @import 'init';
 
 $packages-container: '.packageSelect';
+$package-container: '.package';
 $package-header: '.packageHead';
 $color-gradient-bg: #eff7ff;
 
@@ -26,7 +27,7 @@ $color-gradient-bg: #eff7ff;
 }
 
 #{$packages-container} {
-	.package {
+	#{$package-container} {
 		position: relative;
 
 		// Header
@@ -81,19 +82,18 @@ $color-gradient-bg: #eff7ff;
 			padding-top: .8rem;
 			margin: 0;
 			line-height: 1;
-			box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
+			box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
 			position: relative;
+
 			&::after {
-				background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 65%,rgba(255,255,255,1) 100%);
+				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 1) 100%);
 				content: '';
 				position: absolute;
 				bottom: -6px;
 				left: 0;
 				height: 5px;
 				width: 100%;
-
 			}
-
 
 			.currency-symbol {
 				font-size: 66%;
@@ -113,13 +113,14 @@ $color-gradient-bg: #eff7ff;
 				font-size: 1.4rem;
 				color: $color-lex-sky;
 				font-family: $font-stack-sans-light;
+				line-height: 1.8rem;
+				display: block;
 			}
 
 			.base-offer {
 				font-family: $font-stack-sans-light;
 				text-transform: uppercase;
 				font-size: 1.8rem;
-
 			}
 
 			.term {
@@ -169,6 +170,160 @@ $color-gradient-bg: #eff7ff;
 		.specialOffer {
 			background-image: none;
 		}
+
+		.specialOffer {
+			// Price block
+			.pricing {
+				background: #ffffff;
+				background: linear-gradient(to right, #ffffff 0%, $color-gradient-bg 25%, $color-gradient-bg 75%, #ffffff 100%);
+
+				.price {
+					display: inline-block;
+				}
+
+				.dollars {
+					font-size: 5.5rem;
+					font-weight: normal;
+				}
+
+				.super {
+					font-family: $font-stack-sans-book;
+					vertical-align: top;
+					line-height: 1.4;
+					font-size: 22px;
+					font-weight: normal;
+				}
+				.term {
+					margin-top: -0.6rem;
+
+				}
+			}
+
+			.pricing-small {
+				.dollars {
+					font-size: 3.2rem;
+				}
+
+				.super {
+					font-size: 1.6rem;
+					vertical-align: super;
+					line-height: 1.2;
+				}
+
+				.term {
+					font-size: 1.1rem;
+					margin-top: 0;
+
+				}
+			}
+
+			// Price
+			.h2,
+			.price {
+				font-weight: bold;
+				color: $color-lex-sky;
+				margin-bottom: 0;
+				position: relative;
+				vertical-align: middle;
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+
+			// Split prices ('$20 + $10')
+			.specialPricing {
+				position: relative;
+				min-height: 90px;
+
+				> .row {
+					@include row;
+
+					> .column {
+						@include column(50%);
+					}
+				}
+
+				.before {
+					margin-left: 10%;
+				}
+
+				// Plus sign
+				&::before {
+					content: '\f067';
+					font-family: fontawesome;
+					font-size: 1.4rem;
+					position: absolute;
+					transform: translateX(-100%) translateY(-50%);
+					top: 50%;
+				}
+
+				.h2 {
+					&:nth-of-type(2):after {
+						display: none;
+					}
+				}
+			}
+
+			.previousPricing {
+				color: $text-color;
+				clear: both;
+				text-align: right;
+				font-size: 1.8rem;
+				font-weight: normal;
+				display: inline-block;
+
+				.strikethrough {
+					// text-decoration: line-through;
+					display: inline-block;
+					position: relative;
+
+					&::after {
+						content: '';
+						width: 100%;
+						background-color: red;
+						position: absolute;
+						height: 2px;
+						display: block;
+						top: 50%;
+						transform: translateY(-50%) rotate(-10deg);
+					}
+				}
+			}
+
+			.h2:nth-of-type(1) .previousPricing {
+				text-align: left;
+			}
+
+			.icon-only {
+				color: rgb(22, 102, 167);
+			}
+
+			.price {
+				.left {
+					width: 50%;
+					text-align: right;
+				}
+
+				.right {
+					width: 50%;
+					text-align: left;
+				}
+			}
+
+			.h4 {
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+
+			.term {
+				font-size: 1.1rem;
+
+				// color: #333;
+				font-weight: normal;
+				min-width: 85px;
+			}
+		}
 	}
 
 	//end .package
@@ -180,107 +335,6 @@ $color-gradient-bg: #eff7ff;
 		background: #f2f9ff;
 		border: 1px solid #9a9c9e;
 		padding: 0;
-	}
-}
-
-.specialOffer {
-	// Price block
-	.pricing {
-		background: #ffffff;
-		background: linear-gradient(to right, #ffffff 0%, $color-gradient-bg 25%, $color-gradient-bg 75%, #ffffff 100%);
-	}
-
-	// Price
-	.h2,
-	.price {
-		font-weight: bold;
-		color: $color-lex-sky;
-		margin-bottom: 0;
-		position: relative;
-		vertical-align: middle;
-
-		p {
-			margin-bottom: 0;
-		}
-	}
-
-	// Split prices ('$20 + $10')
-	.specialPricing {
-		position: relative;
-		min-height: 90px;
-
-		// Plus sign
-		&::after {
-			content: '\f067';
-			font-family: fontawesome;
-			font-size: 1.4rem;
-			position: absolute;
-
-			// right: -1em;
-			transform: translateX(-100%) translateY(-50%);
-			top: 50%;
-		}
-
-		.h2 {
-			&:nth-of-type(2):after {
-				display: none;
-			}
-		}
-	}
-
-	.previousPricing {
-		color: $text-color;
-		clear: both;
-		text-align: right;
-
-		.strikethrough {
-			// text-decoration: line-through;
-			display: inline-block;
-			position: relative;
-
-			&::after {
-				content: '';
-				width: 100%;
-				background-color: red;
-				position: absolute;
-				height: 2px;
-				display: block;
-				top: 50%;
-				transform: translateY(-50%) rotate(-10deg);
-			}
-		}
-	}
-
-	.h2:nth-of-type(1) .previousPricing {
-		text-align: left;
-	}
-
-	.icon-only {
-		color: rgb(22, 102, 167);
-	}
-
-	.h2 {
-		.left {
-			width: 50%;
-			text-align: right;
-		}
-
-		.right {
-			width: 50%;
-			text-align: left;
-		}
-	}
-
-	.h4 {
-		font-weight: bold;
-		margin-bottom: 0;
-	}
-
-	.term {
-		font-size: 1.2rem;
-		// color: #333;
-		font-weight: normal;
-		min-width: 85px;
 	}
 }
 
@@ -437,9 +491,20 @@ table tr td {
 	color: #fff;
 }
 
-.packageInfo .cta {
-	text-align: center;
-	width: 100%;
+.packageInfo {
+	p {
+		margin-bottom: 0;
+
+		+ p {
+			// margin-top: .5em;
+
+		}
+	}
+
+	.cta {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 figure img {

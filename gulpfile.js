@@ -308,6 +308,10 @@ g.task('style',
 g.task('default',
 	g.parallel('style', 'markup', 'scripts', 'images'));
 
+// Sandbox Style + markup
+g.task('sm',
+	g.parallel('style-all', 'markup'));
+
 
 // g.task('serve', ['style'], function() {
 //   $.browserSync.init({

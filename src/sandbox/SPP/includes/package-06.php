@@ -45,19 +45,22 @@ $features = array(
 		</div>
 		<hr class="spacer">
 		<hr>
+
+		<!-- Pricing/Offer Row -->
 		<div class="specialOffer">
-			<div class="pricing">
-				<div class="text-center">
-					<div class="base-offer">From:</div>
-					<div class="h2">
-						<div class="left fs48"><span class="currency-symbol">$</span><?php echo $price['dollars']; ?></div>
-						<div class="column right">
-							<p class="h4 super"><?php echo $price['super']; ?></p>
-							<p class="term"><?php echo $price['term']; ?></p>
-						</div>
-						<div class="fs18 previousPricing">
-							was <span class="strikethrough">$<?php echo $price['was']; ?></span>
-						</div>
+			<div class="pricing pricing-small">
+				<div class="before">&nbsp;</div>
+
+				<div class="price">
+					<div class="column dollars left">
+						<span class="currency-symbol">$</span><?php echo $price['dollars']; ?>
+					</div>
+					<div class="column right">
+						<p class="super"><?php echo $price['super']; ?></p>
+						<p class="term"><?php echo $price['term']; ?></p>
+					</div>
+					<div class="previousPricing">
+						was <span class="strikethrough">$<?php echo $price['was']; ?></span>
 					</div>
 				</div>
 			</div>

@@ -69,16 +69,16 @@ $features = array(
 		</div>
 		<hr class="spacer">
 		<hr>
+
+		<!-- Pricing/Offer Row -->
 		<div class="specialOffer">
 			<div class="pricing">
-				<div class="text-center">
-					<div class="base-offer"><?php echo $price['base']; ?> +</div>
-					<div class="h2">
-						<div class="column left fs48"><span class="currency-symbol">$</span><?php echo $price['dollars']; ?></div>
-						<div class="column right">
-							<p class="h4 super"><?php echo $price['super']; ?></p>
-							<p class="term"><?php echo $price['term']; ?></p>
-						</div>
+				<div class="base-offer"><?php echo $price['base']; ?> +</div>
+				<div class="price">
+					<div class="column left dollars"><span class="currency-symbol">$</span><?php echo $price['dollars']; ?></div>
+					<div class="column right">
+						<p class="super"><?php echo $price['super']; ?></p>
+						<p class="term"><?php echo $price['term']; ?></p>
 					</div>
 				</div>
 			</div>
