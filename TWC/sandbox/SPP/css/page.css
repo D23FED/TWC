@@ -19,6 +19,20 @@
   border: 5px solid #00549f;
 }
 
+.packageSelect .package .packageHead .packageTitle {
+  float: none;
+  text-align: center;
+  font-family: 'TWC Round Medium';
+  font-size: 14px;
+  font-size: 1.4rem;
+  max-width: 100%;
+  padding: 2px 0;
+}
+
+.packageSelect .package .packageHead .packageTitle .h5 {
+  margin-bottom: 0;
+}
+
 .packageSelect .package .packageHead > fieldset {
   float: none;
   max-width: 100%;
@@ -32,187 +46,42 @@
   font-size: 1.6rem;
 }
 
-.packageSelect .package .packageHead .packageTitle {
-  float: none;
-  text-align: center;
-  font-family: 'TWC Round Medium';
-  font-size: 14px;
-  font-size: 1.4rem;
-  max-width: 100%;
-  padding: 0;
-}
-
-.packageSelect .package .packageHead .packageTitle .h5 {
-  margin-bottom: 0;
-}
-
 .packageSelect .package .packageBody {
   margin-top: 1em;
 }
 
-.packageSelect .package .pricing {
-  padding-bottom: 15px;
-  padding-bottom: 1.5rem;
-  padding-top: 8px;
-  padding-top: .8rem;
-  margin: 0;
-  line-height: 1;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
-  position: relative;
+.packageSelect .package .packageInfo p {
+  margin-bottom: 0;
 }
 
-.packageSelect .package .pricing::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 65%, white 100%);
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  height: 5px;
-  width: 100%;
-}
-
-.packageSelect .package .pricing .currency-symbol {
-  font-size: 66%;
-  vertical-align: top;
-  line-height: 1.25;
-}
-
-.packageSelect .package .pricing:not(.specialPricing) .column {
-  float: left;
-  position: relative;
-  min-height: 1px;
-  width: 50%;
-}
-
-.packageSelect .package .pricing .before {
-  margin-left: 25%;
-  text-align: left;
-  font-size: 14px;
-  font-size: 1.4rem;
-  color: #00549f;
-  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 18px;
-  line-height: 1.8rem;
-  display: block;
-}
-
-.packageSelect .package .pricing .base-offer {
-  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-
-.packageSelect .package .pricing .term {
-  display: inline-block;
-  font-size: 9px;
-  line-height: 1;
-  margin-left: 0;
-  text-align: left;
-  vertical-align: top;
-}
-
-.packageSelect .package .pricing .term.under {
-  display: block;
-  margin-left: 0;
+.packageSelect .package .packageInfo .cta {
   text-align: center;
-}
-
-.packageSelect .package .pricing .term .discountTerm, .packageSelect .package .pricing .term .preTerm {
-  float: left;
-  margin-top: 0.25em;
-}
-
-.packageSelect .package .pricing .term .postTerm {
-  float: left;
-  margin-left: 3px;
-  margin-top: -6px;
-}
-
-.packageSelect .package .pricing .term .discountTerm {
-  margin-top: -6px;
-}
-
-.packageSelect .package .pricing .super,
-.packageSelect .package .pricing .term {
-  margin-left: 4px;
-}
-
-.packageSelect .package hr.spacer {
-  margin: 1.5em 0 0;
-}
-
-.packageSelect .package .quickCheckoutAccordion hr {
-  margin: 1em 0;
+  width: 100%;
 }
 
 .packageSelect .package .specialOffer {
   background-image: none;
 }
 
-.packageSelect .package .specialOffer .pricing {
-  background: #ffffff;
-  background: linear-gradient(to right, #ffffff 0%, #eff7ff 25%, #eff7ff 75%, #ffffff 100%);
+.packageSelect .package .specialOffer .pricing .term.under {
+  display: block;
+  margin-left: 0;
+  text-align: center;
 }
 
-.packageSelect .package .specialOffer .pricing .price {
-  display: inline-block;
+.packageSelect .package .specialOffer .pricing .term .discountTerm, .packageSelect .package .specialOffer .pricing .term .preTerm {
+  float: left;
+  margin-top: 0.25em;
 }
 
-.packageSelect .package .specialOffer .pricing .dollars {
-  font-size: 55px;
-  font-size: 5.5rem;
-  font-weight: normal;
-}
-
-.packageSelect .package .specialOffer .pricing .super {
-  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  vertical-align: top;
-  line-height: 1.4;
-  font-size: 22px;
-  font-weight: normal;
-}
-
-.packageSelect .package .specialOffer .pricing .term {
+.packageSelect .package .specialOffer .pricing .term .postTerm {
+  float: left;
+  margin-left: 3px;
   margin-top: -6px;
-  margin-top: -0.6rem;
 }
 
-.packageSelect .package .specialOffer .pricing-small .dollars {
-  font-size: 32px;
-  font-size: 3.2rem;
-}
-
-.packageSelect .package .specialOffer .pricing-small .super {
-  font-size: 16px;
-  font-size: 1.6rem;
-  vertical-align: super;
-  line-height: 1.2;
-}
-
-.packageSelect .package .specialOffer .pricing-small .term {
-  font-size: 11px;
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.packageSelect .package .specialOffer .h2,
-.packageSelect .package .specialOffer .price {
-  font-weight: bold;
-  color: #00549f;
-  margin-bottom: 0;
-  position: relative;
-  vertical-align: middle;
-}
-
-.packageSelect .package .specialOffer .h2 p,
-.packageSelect .package .specialOffer .price p {
-  margin-bottom: 0;
-}
-
-.packageSelect .package .specialOffer .specialPricing {
-  position: relative;
-  min-height: 90px;
+.packageSelect .package .specialOffer .pricing .term .discountTerm {
+  margin-top: -6px;
 }
 
 .packageSelect .package .specialOffer .specialPricing > .row::after {
@@ -228,10 +97,6 @@
   width: 50%;
 }
 
-.packageSelect .package .specialOffer .specialPricing .before {
-  margin-left: 10%;
-}
-
 .packageSelect .package .specialOffer .specialPricing::before {
   content: '\f067';
   font-family: fontawesome;
@@ -244,66 +109,12 @@
   top: 50%;
 }
 
-.packageSelect .package .specialOffer .specialPricing .h2:nth-of-type(2):after {
-  display: none;
+.packageSelect .package hr.spacer {
+  margin: 1.5em 0 0;
 }
 
-.packageSelect .package .specialOffer .previousPricing {
-  color: #333;
-  clear: both;
-  text-align: right;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: normal;
-  display: inline-block;
-}
-
-.packageSelect .package .specialOffer .previousPricing .strikethrough {
-  display: inline-block;
-  position: relative;
-}
-
-.packageSelect .package .specialOffer .previousPricing .strikethrough::after {
-  content: '';
-  width: 100%;
-  background-color: red;
-  position: absolute;
-  height: 2px;
-  display: block;
-  top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-10deg);
-      -ms-transform: translateY(-50%) rotate(-10deg);
-          transform: translateY(-50%) rotate(-10deg);
-}
-
-.packageSelect .package .specialOffer .h2:nth-of-type(1) .previousPricing {
-  text-align: left;
-}
-
-.packageSelect .package .specialOffer .icon-only {
-  color: #1666a7;
-}
-
-.packageSelect .package .specialOffer .price .left {
-  width: 50%;
-  text-align: right;
-}
-
-.packageSelect .package .specialOffer .price .right {
-  width: 50%;
-  text-align: left;
-}
-
-.packageSelect .package .specialOffer .h4 {
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.packageSelect .package .specialOffer .term {
-  font-size: 11px;
-  font-size: 1.1rem;
-  font-weight: normal;
-  min-width: 85px;
+.packageSelect .package .quickCheckoutAccordion hr {
+  margin: 1em 0;
 }
 
 .packageSelect [class*='twc-col3_333333'] {
@@ -314,14 +125,6 @@
   background: #f2f9ff;
   border: 1px solid #9a9c9e;
   padding: 0;
-}
-
-.w30 {
-  margin-right: 5%;
-}
-
-.w30:last-of-type {
-  margin-right: 0;
 }
 
 .bordered-right {
@@ -466,17 +269,169 @@ table tr td:last-of-type {
   color: #fff;
 }
 
-.packageInfo p {
-  margin-bottom: 0;
+figure img {
+  margin: 0 auto 0.25em;
 }
 
-.packageInfo .cta {
-  text-align: center;
+/* New */
+.packageSelect .package .specialOfferNew .price-wrap {
+  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
+  padding-top: 8px;
+  padding-top: .8rem;
+  margin: 0;
+  line-height: 1;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #eff7ff 25%, #eff7ff 75%, #ffffff 100%);
+}
+
+.packageSelect .package .specialOfferNew .price-wrap::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 65%, white 100%);
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 5px;
   width: 100%;
 }
 
-figure img {
-  margin: 0 auto 0.25em;
+.packageSelect .package .specialOfferNew .price-lockup {
+  display: table;
+  margin: 0 auto;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .row {
+  display: table-row;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .column {
+  display: table-cell;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .column.spacer {
+  width: 2px;
+  display: none;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .column.left {
+  padding-right: 1px;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .column.right {
+  text-align: left;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup .column.left, .packageSelect .package .specialOfferNew .price-lockup .column.right {
+  float: none;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup.small .dollars {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup.small .super {
+  font-size: 16px;
+  font-size: 1.6rem;
+  vertical-align: super;
+  line-height: 1.2;
+}
+
+.packageSelect .package .specialOfferNew .price-lockup.small .term {
+  font-size: 11px;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.packageSelect .package .specialOfferNew .price {
+  display: table-row;
+}
+
+.packageSelect .package .specialOfferNew .before {
+  color: #00549f;
+  font-size: 14px;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 18.0px;
+  line-height: .9;
+  text-align: left;
+}
+
+.packageSelect .package .specialOfferNew .before .column {
+  vertical-align: top;
+  padding-bottom: 2px;
+}
+
+.packageSelect .package .specialOfferNew .before.base-offer {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18.0px;
+  color: #333;
+}
+
+.packageSelect .package .specialOfferNew .after {
+  color: #333;
+  text-align: right;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  display: inline-block;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.packageSelect .package .specialOfferNew .dollars {
+  font-size: 55px;
+  line-height: .8;
+}
+
+.packageSelect .package .specialOfferNew .currency {
+  font-size: 33px;
+  font-size: 66%;
+  padding-top: .15em;
+  display: inline-block;
+}
+
+.packageSelect .package .specialOfferNew .super {
+  font-size: 22px;
+  line-height: .95;
+}
+
+.packageSelect .package .specialOfferNew .term {
+  font-size: 11px;
+  text-align: left;
+}
+
+.packageSelect .package .specialOfferNew .dollars, .packageSelect .package .specialOfferNew .super, .packageSelect .package .specialOfferNew .term, .packageSelect .package .specialOfferNew .currency {
+  margin: 0;
+  vertical-align: top;
+  font-family: 'TWC Round Book', sans-serif;
+  color: #00549f;
+}
+
+.packageSelect .package .specialOfferNew .price-prev {
+  display: inline-block;
+  position: relative;
+  color: #333;
+}
+
+.packageSelect .package .specialOfferNew .price-prev::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-10deg);
+  -ms-transform: translateY(-50%) rotate(-10deg);
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+.packageSelect .package .specialOfferNew .pricing {
+  padding: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 @media (max-width: 66.2em) {

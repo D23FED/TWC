@@ -1,19 +1,27 @@
-<!--Triple Play Silver-->
+<!-- TV Select + Phone -->
 <?php
-$title        = 'Triple Play Silver';
-$channels     = '175';
+$title        = 'TV Select + Phone';
+$channels     = '125';
 $mbps         = '60';
+// TV
 $price = array(
-	'dollars' => 20,
-	'super'   => 'more',
-	'term'    => 'per mo<br> for 12 mos*',
+	'dollars' => 29,
+	'super'   => '99/mo',
+	'term'    => 'for 12 mos',
+	'was'     => '59.99',
+	'before'  => 'From:'
+	);
+// Phone
+$price2 = array(
+	'dollars' => 19,
+	'super'   => '99/mo',
+	'term'    => 'for 12 mos',
 	'was'     => '',
-	'before'  => 'From:',
-	'base'    => 'Select'
+	'before'  => ''
 	);
 $features = array(
 	'<p><span class="text-info">FREE</span> DVR Service</p>',
-	'<p class="book fs14">Includes HBO, Cinemax, Showtime &amp; NFL Network</p>',
+	'<br>',
 	'<br>'
 	);
 ?>
@@ -25,9 +33,9 @@ $features = array(
 	</div>
 	<div class="packageBody">
 		<div class="packageInfo">
-			<div class="33-33-33 section columnControl">
-				<div class="parsys_column twc-col3_333333">
-					<div class="parsys parsys0 twc-col3_333333-c0 parsys_column">
+			<div class="50-50 section columnControl">
+				<div class="parsys_column twc-col2_5050">
+					<div class="parsys parsys0 twc-col2_5050-c0 parsys_column">
 						<div class="parbase section bordered-right">
 							<div class="text-center">
 								<figure>
@@ -39,19 +47,7 @@ $features = array(
 						</div>
 						<div class="new section"></div>
 					</div>
-					<div class="parsys parsys1 twc-col3_333333-c1 parsys_column">
-						<div class="parbase section bordered-right">
-							<div class="text-center">
-								<figure>
-									<img src="images/internet_cic_icon.png" alt="">
-								</figure>
-								<p class="b">Internet</p>
-								<a class="fs-14">Up to <br><?php echo $mbps; ?>Mbps</a>
-							</div>
-						</div>
-						<div class="new section"></div>
-					</div>
-					<div class="parsys parsys1 twc-col3_333333-c2 parsys_column">
+					<div class="parsys parsys1 twc-col2_5050-c1 parsys_column">
 						<div class="parbase section">
 							<div class="text-center">
 								<figure>
@@ -71,32 +67,85 @@ $features = array(
 		<hr>
 
 		<!-- Pricing/Offer Row -->
-		<div class="specialOffer">
+		<div class="specialOffer specialOfferNew">
 
-			<div class="price-wrap">
-				<div class="price-lockup">
-				  <div class="before row basse-offer">
-				    <div class="column"><?php echo $price['before']; ?></div>
-				  </div>
-				  <div class="pricing row">
-				    <div class="price row">
-				      <div class="column left dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
-				      </div>
-				      <div class="column spacer"></div>
-				      <div class="column right">
-				        <div class="row">
-				          <p class="super"><?php echo $price['super']; ?></p>
-				        </div>
-				        <div class="row">
-				          <p class="term"><?php echo $price['term']; ?>
-				          </p>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="after row">was <span class="price-prev">$<?php echo $priceTV['was']; ?></span></div>
+			<div class="price-wrap pricing-small specialPricing">
+
+				<!-- Row: Prices -->
+				<div class="row">
+
+					<div class="column left">
+
+						<div class="">
+							<div class="price-lockup small">
+								<div class="before row">
+									<div class="column"><?php echo $price['before']; ?></div>
+								</div>
+								<div class="pricing row">
+									<div class="price row">
+										<div class="column left dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
+										</div>
+										<div class="column spacer"></div>
+										<div class="column right">
+											<div class="row">
+												<p class="super"><?php echo $price['super']; ?></p>
+											</div>
+											<div class="row">
+												<p class="term"><?php echo $price['term']; ?>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php	if ($price['was'] !== ''): ?>
+								<div class="after row">
+									was <span class="price-prev"><?php echo $price['was']; ?></span>
+								</div>
+								<?php endif; ?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="column right">
+
+						<div class="">
+							<div class="price-lockup small">
+								<div class="before row">
+									<div class="column"><?php echo $price2['before']; ?></div>
+								</div>
+								<div class="pricing row">
+									<div class="price row">
+										<div class="column left dollars"><span class="currency">$</span><?php echo $price2['dollars']; ?>
+										</div>
+										<div class="column spacer"></div>
+										<div class="column right">
+											<div class="row">
+												<p class="super"><?php echo $price2['super']; ?></p>
+											</div>
+											<div class="row">
+												<p class="term"><?php echo $price2['term']; ?>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php	if ($price2['was'] !== ''): ?>
+								<div class="after row">
+									was <span class="price-prev"><?php echo $price2['was']; ?></span>
+								</div>
+								<?php endif; ?>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
+				<!-- end .row -->
+
 			</div>
+
+
 			<hr>
 			<hr class="spacer">
 			<ul class="included text-left text-center">
@@ -108,12 +157,11 @@ $features = array(
 				</li>
 				<li>
 					<?php echo $features[2]; ?>
-
 				</li>
 			</ul>
-		</div>
+		</div><!-- end .specialOffer -->
 		<hr>
-	</div>
+	</div><!-- end .packageBody -->
 	<div class="packageFooter side-by-side">
 		<div class="buttonWrapper">
 			<div class="cta whiteCTA expandDetails icon-after icon-angle-down">
@@ -189,4 +237,4 @@ $features = array(
 		</div>
 	</div>
 </div>
-<!--PACKAGE END-->
+<!--PACKAGE END: <?php echo $title; ?> -->

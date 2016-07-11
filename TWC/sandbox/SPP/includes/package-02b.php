@@ -8,8 +8,7 @@ $price = array(
 	'super'   => 'more',
 	'term'    => 'per mo<br> for 12 mos*',
 	'was'     => '',
-	'before'  => 'From:',
-	'base'    => 'Select'
+	'before'  => 'Select +'
 	);
 $features = array(
 	'<p><span class="text-info">FREE</span> DVR Service</p>',
@@ -71,11 +70,10 @@ $features = array(
 		<hr>
 
 		<!-- Pricing/Offer Row -->
-		<div class="specialOffer">
-
+		<div class="specialOffer specialOfferNew">
 			<div class="price-wrap">
 				<div class="price-lockup">
-				  <div class="before row basse-offer">
+				  <div class="before row base-offer">
 				    <div class="column"><?php echo $price['before']; ?></div>
 				  </div>
 				  <div class="pricing row">
@@ -94,7 +92,7 @@ $features = array(
 				      </div>
 				    </div>
 				  </div>
-				  <div class="after row">was <span class="price-prev">$<?php echo $priceTV['was']; ?></span></div>
+				  <!-- <div class="after row">was <span class="price-prev">$<?php //echo $price['was']; ?></span></div> -->
 				</div>
 			</div>
 			<hr>

@@ -1,15 +1,14 @@
-<!--Triple Play Silver-->
+<!--Triple Play Gold-->
 <?php
-$title        = 'Triple Play Silver';
-$channels     = '175';
-$mbps         = '60';
+$title = 'Triple Play Gold';
+$channels = '200+';
+$mbps = '60';
 $price = array(
 	'dollars' => 20,
 	'super'   => 'more',
 	'term'    => 'per mo<br> for 12 mos*',
 	'was'     => '',
-	'before'  => 'From:',
-	'base'    => 'Select'
+	'before'  => 'Silver +'
 	);
 $features = array(
 	'<p><span class="text-info">FREE</span> DVR Service</p>',
@@ -34,7 +33,7 @@ $features = array(
 									<img src="images/tv_cic_icon.png" alt="">
 								</figure>
 								<p class="b">TV</p>
-								<a href="" class="fs-14"><?php echo $channels; ?>+ <br>Channels</a>
+								<a href="" class="fs-14"><?php echo $channels; ?> <br>Channels</a>
 							</div>
 						</div>
 						<div class="new section"></div>
@@ -71,11 +70,11 @@ $features = array(
 		<hr>
 
 		<!-- Pricing/Offer Row -->
-		<div class="specialOffer">
+		<div class="specialOffer specialOfferNew">
 
 			<div class="price-wrap">
 				<div class="price-lockup">
-				  <div class="before row basse-offer">
+				  <div class="before row base-offer">
 				    <div class="column"><?php echo $price['before']; ?></div>
 				  </div>
 				  <div class="pricing row">
@@ -94,7 +93,11 @@ $features = array(
 				      </div>
 				    </div>
 				  </div>
-				  <div class="after row">was <span class="price-prev">$<?php echo $priceTV['was']; ?></span></div>
+			  	<?php	if ($price['was'] !== ''): ?>
+				  <div class="after row">
+				  	was <span class="price-prev"><?php echo $price['was']; ?></span>
+			  	</div>
+				  <?php endif; ?>
 				</div>
 			</div>
 			<hr>
