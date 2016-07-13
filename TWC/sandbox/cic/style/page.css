@@ -1,75 +1,106 @@
 .packageSelect .package .packageHead {
   background-color: transparent;
-  padding: 0; }
-  .packageSelect .package .packageHead fieldset {
-    background-color: #0070c0;
-    width: auto;
-    float: none;
-    max-width: none;
-    text-align: center;
-    min-height: 36px; }
-  .packageSelect .package .packageHead .packageTitle {
-    color: #333;
-    float: none;
-    text-align: center;
-    max-width: none;
-    padding-top: 45px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    display: none; }
-    .packageSelect .package .packageHead .packageTitle[data-packagetitle="Internet"] {
-      background-image: url("http://d23.us/TWC/images/cic/icon-internet-45x35.png");
-      background-repeat: no-repeat;
-      background-position: center 5px; }
-    .packageSelect .package .packageHead .packageTitle .right {
-      float: none;
-      right: auto; }
-  .packageSelect .package .packageHead .compare-label {
-    font-size: 16px;
-    font-size: 1.6rem; }
-    .packageSelect .package .packageHead .compare-label::after {
-      content: ' Plan'; }
+  padding: 0;
+}
+
+.packageSelect .package .packageHead fieldset {
+  background-color: #0070c0;
+  width: auto;
+  float: none;
+  max-width: none;
+  text-align: center;
+  min-height: 36px;
+}
+
+.packageSelect .package .packageHead .packageTitle {
+  color: #333;
+  float: none;
+  text-align: center;
+  max-width: none;
+  padding-top: 45px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: none;
+}
+
+.packageSelect .package .packageHead .packageTitle[data-packagetitle="Internet"] {
+  background-image: url("http://d23.us/TWC/images/cic/icon-internet-45x35.png");
+  background-repeat: no-repeat;
+  background-position: center 5px;
+}
+
+.packageSelect .package .packageHead .packageTitle .right {
+  float: none;
+  right: auto;
+}
+
+.packageSelect .package .packageHead .compare-label {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.packageSelect .package .packageHead .compare-label::after {
+  content: ' Plan';
+}
 
 .packageSelect .package.single.js-compare, .packageSelect .package.double.js-compare, .packageSelect .package.triple.js-compare {
-  border-color: #0070c0; }
+  border-color: #0070c0;
+}
 
 .packageSelect .wrap {
   display: table;
-  width: 100%; }
-  .packageSelect .wrap .row {
-    display: table-row; }
-    .packageSelect .wrap .row .col {
-      display: table-cell;
-      width: 50%;
-      text-align: center; }
-      .packageSelect .wrap .row .col + .col {
-        border-left: 1px solid #ececec; }
-    .packageSelect .wrap .row .col-third {
-      width: 33%; }
+  width: 100%;
+}
+
+.packageSelect .wrap .row {
+  display: table-row;
+}
+
+.packageSelect .wrap .row .col {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+}
+
+.packageSelect .wrap .row .col + .col {
+  border-left: 1px solid #ececec;
+}
+
+.packageSelect .wrap .row .col-third {
+  width: 33%;
+}
 
 .expandable-tile .packageHead > fieldset input:checked ~ .compare-button {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .discountTerm {
-  clear: both; }
+  clear: both;
+}
 
 .packageSelect .package .pricing .h4 sup.pre-text {
   top: -0.5em;
-  margin-right: 0.25em; }
+  margin-right: 0.25em;
+}
 
 .test1 {
-  color: #000; }
+  color: #000;
+}
 
 .packageSelect .package .pricing .term .discountTerm,
 .sbsCompare .main-content .pricing .term .discountTerm,
 .packageSelect .package .pricing .term .postTerm,
 .sbsCompare .main-content .pricing .term .postTerm {
-  margin-top: -3px; }
+  margin-top: -3px;
+}
 
 /* Begin BYOB CSS */
 
-@media (max-width: 66.15em) {
+@media (max-width: 66.2em) {
+
   .twc-container {
-    padding: 0; } }
+    padding: 0;
+  }
+}
 
 /*# sourceMappingURL=page.css.map */

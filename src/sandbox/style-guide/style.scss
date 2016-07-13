@@ -1,0 +1,44 @@
+@import 'init';
+
+$wrapper: '.stylegallery';
+
+#{$wrapper} {
+	position: relative;
+	border: 1px solid #1399da;
+	margin-bottom: 1em;
+
+	figure:hover .txtblock {
+		opacity: 1;
+	}
+
+	.txtblock {
+		position: relative;
+		width: 100%;
+		min-height: 6em;
+		pointer-events: none;
+		background: #1399da;
+		padding: 0.5em;
+		opacity: 0.8;
+		transition: opacity 150ms ease-out;
+	}
+
+	&:hover {
+		.txtblock {
+			opacity: 1;
+		}
+		figure {
+			img {
+				transform: scale(1.05);
+			}
+		}
+
+	}
+
+	figure {
+		overflow: hidden;
+
+		img {
+			transition: transform 150ms ease-out;
+		}
+	}
+}

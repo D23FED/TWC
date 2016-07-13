@@ -45,3 +45,4 @@ test/
 *.pdf
 error_log
 timestamp.rb
+.sublime-gulp-tmp.js

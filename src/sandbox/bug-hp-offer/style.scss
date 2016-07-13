@@ -1,0 +1,96 @@
+/* Version 3 | Jul 05 */
+@import 'init';
+
+#LEX-hero-banner {
+	.columnControl {
+		display: table;
+
+		@include respond-to(medium) {
+			display: block;
+		}
+
+
+		.twc-col2_6733 {
+			display: table-row;
+
+			@include respond-to(medium) {
+				display: block;
+			}
+
+
+			> .parsys_column {
+				display: table-cell;
+				float: none;
+
+				@include respond-to(medium) {
+					display: block;
+					float: left;
+				}
+			}
+
+			.twc-col2_6733-c0 {
+				padding-right: 2.5%;
+				vertical-align: bottom;
+
+				@include respond-to(medium) {
+					padding-right: 0;
+					vertical-align: inherit;
+					background-image: url(/content/dam/residential/images/global/LEX-hero-bg.png);
+					background-size: cover;
+				}
+
+
+				figure {
+					padding-top: 8%;
+
+					img {
+						width: 100%;
+					}
+
+					@media (max-width: px-to-em(880)) {
+						padding-top: 15%;
+					}
+
+					@include respond-to(medium) {
+						padding-top: 0;
+					}
+				}
+			}
+
+			.twc-col2_6733-c1 {
+				.parsley-errors-list {
+					height: 0;
+
+					+ .parsley-errors-list {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.columnControl {
+			display: block;
+		}
+	}
+}
+
+div[id*='centered-cta-'] {
+	.pricing {
+		.cents {
+			font-size: 0.6em;
+			margin-left: -.2em;
+		}
+
+		sup {
+			vertical-align: top;
+		}
+
+		.term {
+			margin-left: -4em;
+
+			@include respond-to(medium) {
+				margin-left: -2.5em;
+			}
+		}
+	}
+}
