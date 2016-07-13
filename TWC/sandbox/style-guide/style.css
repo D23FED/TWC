@@ -1,0 +1,42 @@
+.stylegallery {
+  position: relative;
+  border: 1px solid #1399da;
+  margin-bottom: 1em;
+}
+
+.stylegallery figure:hover .txtblock {
+  opacity: 1;
+}
+
+.stylegallery .txtblock {
+  position: relative;
+  width: 100%;
+  min-height: 6em;
+  pointer-events: none;
+  background: #1399da;
+  padding: 0.5em;
+  opacity: 0.8;
+  transition: opacity 150ms ease-out;
+}
+
+.stylegallery:hover .txtblock {
+  opacity: 1;
+}
+
+.stylegallery:hover figure img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.stylegallery figure {
+  overflow: hidden;
+}
+
+.stylegallery figure img {
+  transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+
+/*# sourceMappingURL=style.css.map */
