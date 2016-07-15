@@ -1,0 +1,37 @@
+// Display active state via injection container
+// Pages do not have a unique wrapping class or ID depending on their type (Premiums, Sports, etc) so we hard-code them and use them as one-off fixes in injection containers
+@import 'init';
+$sticky-menu-container: '#sticky-subnav';
+$sticky-menu-item: '.cta';
+$position-premiums: 1;
+$position-sports: 2;
+
+@mixin active-state {
+	color: #fff;
+	background-color: $color-lex-bright-sky;
+	border-color: $color-lex-bright-sky;
+}
+
+$positions: ('Premiums': $position-premiums, 'Sports': $position-sports);
+
+@each $name, $position in $positions {
+	/* #{$name} */
+	#{$sticky-menu-container} {
+		#{$sticky-menu-item}:nth-of-type(#{$position}) {
+			a {
+				@include active-state;
+			}
+		}
+	}
+}
+
+// Premiums
+#{$sticky-menu-container} {
+	#{$sticky-menu-item} {
+		a {
+			@include active-state;
+		}
+	}
+}
+
+// Sports

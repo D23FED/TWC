@@ -101,6 +101,11 @@ It may either be restored there, or added here
     font-size: 34px;
     font-size: 3.4rem;
   }
+
+  .medium-body-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 40em) {

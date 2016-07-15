@@ -96,53 +96,6 @@
   padding-left: 0.5em;
 }
 
-#sticky-carousel-subnav-wrapper #sticky-subnav {
-  display: block;
-}
-
-#sticky-carousel-subnav-wrapper #sticky-subnav > .parsys {
-  display: block;
-  max-width: 780px;
-}
-
-#sticky-carousel-subnav-wrapper .twc-container {
-  display: block;
-}
-
-#sticky-carousel-subnav-wrapper .cta {
-  display: inherit;
-}
-
-#sticky-carousel-subnav-wrapper [class*='btn-'] {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-#sticky-carousel-subnav-wrapper .btn-prev {
-  left: -100px;
-}
-
-#sticky-carousel-subnav-wrapper .btn-prev::before {
-  font-family: FontAwesome;
-  content: '\f104';
-  font-size: 36px;
-  font-size: 3.6rem;
-}
-
-#sticky-carousel-subnav-wrapper .btn-next {
-  right: -100px;
-}
-
-#sticky-carousel-subnav-wrapper .btn-next::before {
-  font-family: FontAwesome;
-  content: '\f105';
-  font-size: 36px;
-  font-size: 3.6rem;
-}
-
 .slick-slider {
   position: relative;
   display: block;
@@ -238,6 +191,53 @@
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+#sticky-carousel-subnav-wrapper #sticky-subnav {
+  display: block;
+}
+
+#sticky-carousel-subnav-wrapper #sticky-subnav > .parsys {
+  display: block;
+  max-width: 780px;
+}
+
+#sticky-carousel-subnav-wrapper .twc-container {
+  display: block;
+}
+
+#sticky-carousel-subnav-wrapper .cta {
+  display: inherit;
+}
+
+#sticky-carousel-subnav-wrapper [class*='btn-'] {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#sticky-carousel-subnav-wrapper .btn-prev {
+  left: -100px;
+}
+
+#sticky-carousel-subnav-wrapper .btn-prev::before {
+  font-family: FontAwesome;
+  content: '\f104';
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+#sticky-carousel-subnav-wrapper .btn-next {
+  right: -100px;
+}
+
+#sticky-carousel-subnav-wrapper .btn-next::before {
+  font-family: FontAwesome;
+  content: '\f105';
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 @media (max-width: 40em) {

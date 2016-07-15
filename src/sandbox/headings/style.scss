@@ -8,11 +8,11 @@ $h4Size: 2.4rem;
 $h5Size: 2rem;
 $h6Size: 1.8rem;
 $headingSizes: $h1Size $h2Size $h3Size $h4Size $h5Size $h6Size;
+$body-text-size: 1.6rem;
 $scalingFactorMedium: 0.75;
 $scalingFactorSmall: 0.65;
 
 @mixin heading-size($size, $scale: 'medium') {
-
 	@if $scale == 'medium' {
 		$scalingFactor: $scalingFactorMedium;
 	}
@@ -73,7 +73,11 @@ a {
 // Helper for paragraph text
 .medium-body-text {
 	font-family: $font-stack-sans-light;
-	font-size: 1.6rem;
+	font-size: $body-text-size;
+
+	@include respond-to('medium') {
+		font-size: $body-text-size * 0.875;
+	}
 }
 
 /*
