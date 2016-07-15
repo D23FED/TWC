@@ -1,0 +1,141 @@
+@import 'init';
+
+$color-gradient-end: #008bc6;
+
+@mixin column-divider {
+	position: relative;
+	border-top-width: 13px;
+	border-bottom-width: 13px;
+
+	&::after {
+		content: '';
+		background-color: $color-lex-bright-sky;
+		width: 1px;
+		height: 100%;
+		right: 0;
+		position: absolute;
+		top: 0;
+	}
+}
+
+@mixin reset-bg {
+	background-color: transparent;
+	background-image: none;
+}
+
+.compare-table {
+	+ .compare-table {
+		margin-top: .9rem;
+	}
+
+	.compare-table-row {
+		border: 1px solid #eaeceb;
+		border-radius: 5px;
+		border-bottom-color: #aaa8a9;
+		border-right-color: #aaa8a9;
+		box-shadow: 2px 5px 10px 0px rgba(215, 215, 217, 0.51);
+	}
+
+	ul {
+		li.package {
+			background-color: $color-lex-bright-sky;
+			background-image: linear-gradient(to bottom, $color-lex-bright-sky, $color-gradient-end);
+			border-color: #fff;
+		}
+
+		li.feature {
+			@include reset-bg;
+
+			border-color: #fff;
+		}
+
+		li.desc {
+			@include column-divider;
+
+			@include reset-bg;
+
+			font-family: $font-stack-sans-light;
+			border-color: #fff;
+		}
+
+		li.pricing {
+			@include column-divider;
+
+			@include reset-bg;
+
+			border-color: #fff;
+		}
+
+		.pricing {
+			color: $color-lex-sky;
+
+			.h4 {
+				font-family: $font-stack-sans-book;
+			}
+
+			.dollar-sign {
+				font-size: 2.6rem;
+				margin-right: -.3rem;
+			}
+
+			.dollars {
+				font-size: 4.4rem;
+			}
+
+			.cents {
+				font-size: 1.8rem;
+				vertical-align: super;
+			}
+		}
+
+		li.order {
+			@include reset-bg;
+
+			border-color: #fff;
+			box-shadow: none;
+		}
+
+		&:hover {
+			li.package {}
+
+			li.feature {}
+
+			li.desc {
+				@include column-divider;
+
+				@include reset-bg;
+
+				font-family: $font-stack-sans-light;
+				border-color: #fff;
+			}
+
+			li.pricing {
+				@include column-divider;
+
+				@include reset-bg;
+
+				border-color: #fff;
+			}
+
+			.pricing {
+				.h4 {}
+
+				.dollar-sign {}
+
+				.dollars {}
+
+				.cents {}
+			}
+
+			li.order {
+				@include reset-bg;
+
+				border-color: #fff;
+				box-shadow: none;
+			}
+		}
+	}
+	ul.details-content {
+		border-radius: 5px;
+	}
+}
