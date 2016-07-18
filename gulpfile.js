@@ -311,6 +311,9 @@ g.task('default',
 // Sandbox Style + markup
 g.task('sm',
 	g.parallel('style-all', 'markup'));
+// Sandbox Style + markup
+g.task('js',
+	g.parallel('scripts'));
 
 
 // g.task('serve', ['style'], function() {

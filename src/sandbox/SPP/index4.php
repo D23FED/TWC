@@ -8,17 +8,19 @@
 	<?php include('includes/menu.php'); ?>
 	<div class="packageSelect stickyElement">
 		<!-- Triple Play Select -->
-		<?php include('includes/package-01b.php'); ?>
+		<?php include('includes/package-01.php'); ?>
 		<!-- Triple Play Silver -->
-		<?php include('includes/package-02b.php'); ?>
+		<?php include('includes/package-02.php'); ?>
 		<!-- Triple Play Gold -->
-		<?php include('includes/package-03b.php'); ?>
+		<?php include('includes/package-03.php'); ?>
 		<!-- TV Select + Internet -->
-		<?php include('includes/package-04b.php'); ?>
+		<?php include('includes/package-04.php'); ?>
 		<!-- TV Select + Phone -->
-		<?php include('includes/package-05b.php'); ?>
-		<!--  Internet -->
-		<?php include('includes/package-06b.php'); ?>
+		<?php include('includes/package-05.php'); ?>
+		<!-- TV Select -->
+		<?php include('includes/package-07.php'); ?>
+		<!-- Internet -->
+		<?php include('includes/package-06.php'); ?>
   </div>
 </div>
 

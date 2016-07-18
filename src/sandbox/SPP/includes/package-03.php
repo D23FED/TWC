@@ -8,8 +8,7 @@ $price = array(
 	'super'   => 'more',
 	'term'    => 'per mo<br> for 12 mos*',
 	'was'     => '',
-	'before'  => '',
-	'base'    => 'Silver'
+	'before'  => 'Silver +'
 	);
 $features = array(
 	'<p><span class="text-info">FREE</span> DVR Service</p>',
@@ -72,14 +71,26 @@ $features = array(
 
 		<!-- Pricing/Offer Row -->
 		<div class="specialOffer">
-			<div class="pricing">
-				<div class="base-offer"><?php echo $price['base']; ?> +</div>
-				<div class="price">
-					<div class="column left dollars"><span class="currency-symbol">$</span><?php echo $price['dollars']; ?></div>
-					<div class="column right">
-						<p class="super"><?php echo $price['super']; ?></p>
-						<p class="term"><?php echo $price['term']; ?></p>
-					</div>
+			<div class="price-wrap has-base-offer">
+				<div class="price-lockup">
+				  <div class="before">
+				    <div class="column"><?php echo $price['before']; ?></div>
+				  </div>
+				  <div class="pricing">
+				    <div class="price">
+				      <div class="column dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
+				      </div>
+				      <div class="column">
+				        <p class="super"><?php echo $price['super']; ?></p>
+				        <p class="term"><?php echo $price['term']; ?></p>
+				      </div>
+				    </div>
+				  </div>
+			  	<?php	if ($price['was'] !== ''): ?>
+				  <div class="after">
+				  	was <span class="price-prev"><?php echo $price['was']; ?></span>
+			  	</div>
+				  <?php endif; ?>
 				</div>
 			</div>
 			<hr>
@@ -93,7 +104,6 @@ $features = array(
 				</li>
 				<li>
 					<?php echo $features[2]; ?>
-
 				</li>
 			</ul>
 		</div>

@@ -15,10 +15,6 @@
   background-color: #00549f;
 }
 
-.packageSelect .package.triple.js-compare, .packageSelect .package.triple.js-selected {
-  border: 5px solid #00549f;
-}
-
 .packageSelect .package .packageHead .packageTitle {
   float: none;
   text-align: center;
@@ -31,19 +27,6 @@
 
 .packageSelect .package .packageHead .packageTitle .h5 {
   margin-bottom: 0;
-}
-
-.packageSelect .package .packageHead > fieldset {
-  float: none;
-  max-width: 100%;
-  text-align: center;
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-
-.packageSelect .package .packageHead > fieldset input ~ label.compare-label {
-  font-size: 16px;
-  font-size: 1.6rem;
 }
 
 .packageSelect .package .packageBody {
@@ -63,41 +46,177 @@
   background-image: none;
 }
 
-.packageSelect .package .specialOffer .pricing .term.under {
-  display: block;
-  margin-left: 0;
+.packageSelect .package .specialOffer .price-wrap {
+  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
+  padding-top: 8px;
+  padding-top: .8rem;
+  margin: 0;
+  line-height: 1;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #eff7ff 25%, #eff7ff 75%, #ffffff 100%);
+}
+
+.packageSelect .package .specialOffer .price-wrap::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 65%, white 100%);
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.packageSelect .package .specialOffer .price-lockup {
+  display: table;
+  margin: 0 auto;
+}
+
+.packageSelect .package .specialOffer .price-lockup .row {
+  display: table-row;
+}
+
+.packageSelect .package .specialOffer .price-lockup .column {
+  display: table-cell;
+}
+
+.packageSelect .package .specialOffer .price-lockup .column.spacer {
+  width: 2px;
+  display: none;
+}
+
+.packageSelect .package .specialOffer .price-lockup .column.left {
+  padding-right: 1px;
+}
+
+.packageSelect .package .specialOffer .price-lockup .column.right {
+  text-align: left;
+}
+
+.packageSelect .package .specialOffer .price-lockup .column.left, .packageSelect .package .specialOffer .price-lockup .column.right {
+  float: none;
+}
+
+.packageSelect .package .specialOffer .price-lockup.small .dollars {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.packageSelect .package .specialOffer .price-lockup.small .super {
+  font-size: 16px;
+  font-size: 1.6rem;
+  vertical-align: super;
+  line-height: 1.2;
+}
+
+.packageSelect .package .specialOffer .price-lockup.small .term {
+  font-size: 11px;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.packageSelect .package .specialOffer .before {
+  color: #00549f;
+  font-size: 14px;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 18.0px;
+  line-height: .9;
+  text-align: left;
+  display: table-row;
+}
+
+.packageSelect .package .specialOffer .before .column {
+  vertical-align: top;
+  padding-bottom: 2px;
+}
+
+.packageSelect .package .specialOffer .has-base-offer .before {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 18.0px;
+  color: #333;
 }
 
-.packageSelect .package .specialOffer .pricing .term .discountTerm, .packageSelect .package .specialOffer .pricing .term .preTerm {
-  float: left;
-  margin-top: 0.25em;
+.packageSelect .package .specialOffer .pricing {
+  display: table-row;
 }
 
-.packageSelect .package .specialOffer .pricing .term .postTerm {
-  float: left;
-  margin-left: 3px;
-  margin-top: -6px;
+.packageSelect .package .specialOffer .after {
+  color: #333;
+  text-align: right;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  display: inline-block;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: table-row;
 }
 
-.packageSelect .package .specialOffer .pricing .term .discountTerm {
-  margin-top: -6px;
+.packageSelect .package .specialOffer .dollars {
+  font-size: 55px;
+  line-height: .8;
 }
 
-.packageSelect .package .specialOffer .specialPricing > .row::after {
+.packageSelect .package .specialOffer .currency {
+  font-size: 33px;
+  font-size: 66%;
+  padding-top: .15em;
+  display: inline-block;
+}
+
+.packageSelect .package .specialOffer .super {
+  font-size: 22px;
+  line-height: .95;
+  text-align: left;
+}
+
+.packageSelect .package .specialOffer .term {
+  font-size: 11px;
+  text-align: left;
+}
+
+.packageSelect .package .specialOffer .dollars, .packageSelect .package .specialOffer .super, .packageSelect .package .specialOffer .term, .packageSelect .package .specialOffer .currency {
+  margin: 0;
+  vertical-align: top;
+  font-family: 'TWC Round Book', sans-serif;
+  color: #00549f;
+}
+
+.packageSelect .package .specialOffer .price-prev {
+  display: inline-block;
+  position: relative;
+  color: #333;
+}
+
+.packageSelect .package .specialOffer .price-prev::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-10deg);
+  -ms-transform: translateY(-50%) rotate(-10deg);
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+.packageSelect .package .specialOffer .pricing-dual > .row::after {
   content: '';
   display: block;
   clear: both;
 }
 
-.packageSelect .package .specialOffer .specialPricing > .row > .column {
+.packageSelect .package .specialOffer .pricing-dual > .row > .column {
   float: left;
   position: relative;
   min-height: 1px;
   width: 50%;
 }
 
-.packageSelect .package .specialOffer .specialPricing::before {
+.packageSelect .package .specialOffer .pricing-dual::before {
   content: '\f067';
   font-family: fontawesome;
   font-size: 14px;
@@ -107,6 +226,30 @@
       -ms-transform: translateX(-100%) translateY(-50%);
           transform: translateX(-100%) translateY(-50%);
   top: 50%;
+}
+
+.packageSelect .package .specialOffer .pricing-small .price-lockup .dollars {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+
+.packageSelect .package .specialOffer .pricing-small .price-lockup .super {
+  font-size: 16px;
+  font-size: 1.6rem;
+  vertical-align: super;
+  line-height: 1.2;
+}
+
+.packageSelect .package .specialOffer .pricing-small .price-lockup .term {
+  font-size: 11px;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.packageSelect .package .specialOfferNew .pricing {
+  padding: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .packageSelect .package hr.spacer {
@@ -119,12 +262,6 @@
 
 .packageSelect [class*='twc-col3_333333'] {
   margin-bottom: 0;
-}
-
-.packageSelect .box {
-  background: #f2f9ff;
-  border: 1px solid #9a9c9e;
-  padding: 0;
 }
 
 .bordered-right {
@@ -145,10 +282,6 @@ a:hover > .tooltip-text {
   display: block;
 }
 
-.discountTerm {
-  clear: both;
-}
-
 .detailsExpansion {
   position: relative;
   width: 100%;
@@ -156,110 +289,6 @@ a:hover > .tooltip-text {
 
 .detailsContent {
   padding: 2em 1em 1em;
-}
-
-.quickCheckoutAccordion {
-  text-align: center;
-  padding: 1em 0;
-}
-
-.quickCheckoutContent {
-  text-align: left;
-  display: none;
-  font-size: 12px;
-  font-size: 1.2rem;
-}
-
-.quickCheckoutContent .cta {
-  font-size: 13px;
-  font-size: 1.3rem;
-}
-
-.quickCheckoutContent input {
-  vertical-align: top;
-}
-
-.quickCheckoutContent label, .quickCheckoutContent .priceTally td {
-  font-size: 11.5px;
-  font-size: 1.15rem;
-}
-
-.quickCheckoutContent .productSelect {
-  text-align: left;
-}
-
-.quickCheckoutContent .productSelect table {
-  width: 100%;
-}
-
-.quickCheckoutContent .productSelect table tr {
-  width: 100%;
-}
-
-.quickCheckoutContent .productSelect table td:first-of-type {
-  width: 5%;
-}
-
-.quickCheckoutContent .productSelect a {
-  display: inline-block;
-  max-width: none;
-}
-
-.quickCheckoutContent .priceTally table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.quickCheckoutContent .priceTally .totals td {
-  font-size: 1.6rem;
-  font-size: 16px;
-}
-
-.quickCheckoutContent .pricing {
-  text-align: right;
-  white-space: nowrap;
-}
-
-.quickCheckoutContent .disclaimer-text.text-center {
-  text-align: center;
-}
-
-.quickCheckoutAccordion.js-open .quickCheckoutBtn {
-  display: none;
-}
-
-.closeAccordion {
-  cursor: pointer;
-  margin-top: 0.5em;
-}
-
-.totals {
-  background: #b7e3ff;
-}
-
-.box p {
-  padding: 0 0.5em;
-}
-
-table tr td:first-of-type {
-  padding-left: 0.5em;
-}
-
-table tr td:last-of-type {
-  padding-right: 0.5em;
-}
-
-.totals td {
-  padding: 0.5em 0;
-}
-
-.totals td.text-right {
-  padding-right: 0.5em;
-}
-
-.quickCheckoutContent
-.priceTally tr:nth-of-type(2) td {
-  padding-top: 1em;
 }
 
 .charterTitle {
@@ -271,167 +300,6 @@ table tr td:last-of-type {
 
 figure img {
   margin: 0 auto 0.25em;
-}
-
-/* New */
-.packageSelect .package .specialOfferNew .price-wrap {
-  padding-bottom: 15px;
-  padding-bottom: 1.5rem;
-  padding-top: 8px;
-  padding-top: .8rem;
-  margin: 0;
-  line-height: 1;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
-  position: relative;
-  background: #ffffff;
-  background: linear-gradient(to right, #ffffff 0%, #eff7ff 25%, #eff7ff 75%, #ffffff 100%);
-}
-
-.packageSelect .package .specialOfferNew .price-wrap::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0) 65%, white 100%);
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  height: 5px;
-  width: 100%;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup {
-  display: table;
-  margin: 0 auto;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .row {
-  display: table-row;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .column {
-  display: table-cell;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .column.spacer {
-  width: 2px;
-  display: none;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .column.left {
-  padding-right: 1px;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .column.right {
-  text-align: left;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup .column.left, .packageSelect .package .specialOfferNew .price-lockup .column.right {
-  float: none;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup.small .dollars {
-  font-size: 32px;
-  font-size: 3.2rem;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup.small .super {
-  font-size: 16px;
-  font-size: 1.6rem;
-  vertical-align: super;
-  line-height: 1.2;
-}
-
-.packageSelect .package .specialOfferNew .price-lockup.small .term {
-  font-size: 11px;
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.packageSelect .package .specialOfferNew .price {
-  display: table-row;
-}
-
-.packageSelect .package .specialOfferNew .before {
-  color: #00549f;
-  font-size: 14px;
-  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  height: 18.0px;
-  line-height: .9;
-  text-align: left;
-}
-
-.packageSelect .package .specialOfferNew .before .column {
-  vertical-align: top;
-  padding-bottom: 2px;
-}
-
-.packageSelect .package .specialOfferNew .before.base-offer {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18.0px;
-  color: #333;
-}
-
-.packageSelect .package .specialOfferNew .after {
-  color: #333;
-  text-align: right;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: normal;
-  display: inline-block;
-  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.packageSelect .package .specialOfferNew .dollars {
-  font-size: 55px;
-  line-height: .8;
-}
-
-.packageSelect .package .specialOfferNew .currency {
-  font-size: 33px;
-  font-size: 66%;
-  padding-top: .15em;
-  display: inline-block;
-}
-
-.packageSelect .package .specialOfferNew .super {
-  font-size: 22px;
-  line-height: .95;
-}
-
-.packageSelect .package .specialOfferNew .term {
-  font-size: 11px;
-  text-align: left;
-}
-
-.packageSelect .package .specialOfferNew .dollars, .packageSelect .package .specialOfferNew .super, .packageSelect .package .specialOfferNew .term, .packageSelect .package .specialOfferNew .currency {
-  margin: 0;
-  vertical-align: top;
-  font-family: 'TWC Round Book', sans-serif;
-  color: #00549f;
-}
-
-.packageSelect .package .specialOfferNew .price-prev {
-  display: inline-block;
-  position: relative;
-  color: #333;
-}
-
-.packageSelect .package .specialOfferNew .price-prev::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: red;
-  top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-10deg);
-  -ms-transform: translateY(-50%) rotate(-10deg);
-  transform: translateY(-50%) rotate(-10deg);
-}
-
-.packageSelect .package .specialOfferNew .pricing {
-  padding: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
 }
 
 @media (max-width: 66.2em) {

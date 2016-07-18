@@ -3,21 +3,18 @@
 $title        = 'TV Select + Phone';
 $channels     = '125';
 $mbps         = '60';
-// TV
-$price = array(
+$priceTV = array(
 	'dollars' => 29,
 	'super'   => '99/mo',
 	'term'    => 'for 12 mos',
 	'was'     => '59.99',
 	'before'  => 'From:'
 	);
-// Phone
-$price2 = array(
+$pricePhone = array(
 	'dollars' => 19,
 	'super'   => '99/mo',
 	'term'    => 'for 12 mos',
-	'was'     => '',
-	'before'  => ''
+	'was'     => ''
 	);
 $features = array(
 	'<p><span class="text-info">FREE</span> DVR Service</p>',
@@ -67,84 +64,53 @@ $features = array(
 		<hr>
 
 		<!-- Pricing/Offer Row -->
-		<div class="specialOffer specialOfferNew">
+		<div class="specialOffer">
 
-			<div class="price-wrap pricing-small specialPricing">
+			<div class="pricing pricing-small specialPricing">
+
+				<div class="before">From:</div>
 
 				<!-- Row: Prices -->
 				<div class="row">
-
+					<!-- Column: First Price -->
 					<div class="column left">
-
-						<div class="">
-							<div class="price-lockup small">
-								<div class="before row">
-									<div class="column"><?php echo $price['before']; ?></div>
-								</div>
-								<div class="pricing row">
-									<div class="price row">
-										<div class="column left dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
-										</div>
-										<div class="column spacer"></div>
-										<div class="column right">
-											<div class="row">
-												<p class="super"><?php echo $price['super']; ?></p>
-											</div>
-											<div class="row">
-												<p class="term"><?php echo $price['term']; ?>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<?php	if ($price['was'] !== ''): ?>
-								<div class="after row">
-									was <span class="price-prev"><?php echo $price['was']; ?></span>
-								</div>
-								<?php endif; ?>
+						<div class="price">
+							<div class="column left dollars">$<?php echo $priceTV['dollars']; ?></div>
+							<div class="column right">
+								<p class="super"><?php echo $priceTV['super']; ?></p>
+								<p class="term"><?php echo $priceTV['term']; ?></p>
 							</div>
 						</div>
-
 					</div>
 
+					<!-- Column: Second Price -->
 					<div class="column right">
-
-						<div class="">
-							<div class="price-lockup small">
-								<div class="before row">
-									<div class="column"><?php echo $price2['before']; ?></div>
-								</div>
-								<div class="pricing row">
-									<div class="price row">
-										<div class="column left dollars"><span class="currency">$</span><?php echo $price2['dollars']; ?>
-										</div>
-										<div class="column spacer"></div>
-										<div class="column right">
-											<div class="row">
-												<p class="super"><?php echo $price2['super']; ?></p>
-											</div>
-											<div class="row">
-												<p class="term"><?php echo $price2['term']; ?>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<?php	if ($price2['was'] !== ''): ?>
-								<div class="after row">
-									was <span class="price-prev"><?php echo $price2['was']; ?></span>
-								</div>
-								<?php endif; ?>
+						<div class="price">
+							<div class="left dollars">$<?php echo $pricePhone['dollars']; ?></div>
+							<div class="right">
+								<p class="super"><?php echo $pricePhone['super']; ?></p>
+								<p class="term"><?php echo $pricePhone['term']; ?></p>
 							</div>
 						</div>
-
 					</div>
+				</div><!-- end .row -->
+
+				<!-- Row: "Was" Prices -->
+				<div class="row">
+					<!-- Column: First "Was" Price -->
+					<div class="column left">
+						<div class="previousPricing">
+								was <span class="strikethrough">$<?php echo $priceTV['was']; ?></span>
+						</div>
+					</div>
+
+					<!-- Column: Second "Was" Price -->
+					<div class="column right"></div>
 
 				</div>
 				<!-- end .row -->
-
 			</div>
-
+			<!-- end /.pricing -->
 
 			<hr>
 			<hr class="spacer">

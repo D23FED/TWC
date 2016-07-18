@@ -47,33 +47,21 @@ $features = array(
 		<hr>
 
 		<!-- Pricing/Offer Row -->
-		<div class="specialOffer specialOfferNew">
-			<div class="price-wrap">
-				<div class="price-lockup small">
-				  <div class="before row">
-				    <div class="column"><?php echo $price['before']; ?></div>
-				  </div>
-				  <div class="pricing row">
-				    <div class="price row">
-				      <div class="column left dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
-				      </div>
-				      <div class="column spacer"></div>
-				      <div class="column right">
-				        <div class="row">
-				          <p class="super"><?php echo $price['super']; ?></p>
-				        </div>
-				        <div class="row">
-				          <p class="term"><?php echo $price['term']; ?>
-				          </p>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-			  	<?php	if ($price['was'] !== ''): ?>
-				  <div class="after row">
-				  	was <span class="price-prev"><?php echo $price['was']; ?></span>
-			  	</div>
-				  <?php endif; ?>
+		<div class="specialOffer">
+			<div class="pricing pricing-small">
+				<div class="before">&nbsp;</div>
+
+				<div class="price">
+					<div class="column dollars left">
+						<span class="currency-symbol">$</span><?php echo $price['dollars']; ?>
+					</div>
+					<div class="column right">
+						<p class="super"><?php echo $price['super']; ?></p>
+						<p class="term"><?php echo $price['term']; ?></p>
+					</div>
+					<div class="previousPricing">
+						was <span class="strikethrough">$<?php echo $price['was']; ?></span>
+					</div>
 				</div>
 			</div>
 			<hr>

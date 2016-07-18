@@ -72,19 +72,24 @@ $features = array(
 
     <!-- Pricing/Offer Row -->
     <div class="specialOffer">
-      <div class="pricing">
-        <div class="text-center">
-          <div class="before">From:</div>
-          <div class="price">
-            <div class="column left dollars"><span class="currency-symbol">$</span>29</div>
-            <div class="column right">
-              <p class="super">99/mo</p>
-              <p class="term">each for 12 mos <br>when bundled*</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr>
+
+	    <div class="price-wrap">
+	    	<div class="price-lockup">
+	    	  <div class="before">
+	    	    <?php echo $price['before']; ?>
+	    	  </div>
+	    	  <div class="pricing">
+	    	      <div class="column dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
+	    	      </div>
+	    	      <div class="column">
+    	          <p class="super"><?php echo $price['super']; ?></p>
+    	          <p class="term"><?php echo $price['term']; ?></p>
+	    	      </div>
+	    	  </div>
+	    	  <!-- <div class="after row">was <span class="price-prev">$<?php //echo $price['was']; ?></span></div> -->
+	    	</div>
+	    </div>
+	    <hr>
       <hr class="spacer">
       <ul class="included text-left text-center">
         <li>

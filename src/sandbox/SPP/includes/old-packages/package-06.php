@@ -1,13 +1,12 @@
 <!-- Internet -->
 <?php
-$title        = 'TV Select';
+$title        = 'Internet';
 $mbps         = '60';
-$channels     = '125';
 $price = array(
-	'dollars' => 59,
+	'dollars' => 39,
 	'super'   => '99/mo',
 	'term'    => 'for 12 mos',
-	'was'     => '',
+	'was'     => '59.99',
 	'before'  => 'From:'
 	);
 $features = array(
@@ -33,8 +32,8 @@ $features = array(
 									<figure>
 										<img src="images/internet_cic_icon.png" alt="">
 									</figure>
-									<p class="b">TV</p>
-									<a class="fs-14"><?php echo $channels; ?>+<br> Channels</a>
+									<p class="b">Internet</p>
+									<a class="fs-14">Up to <br><?php echo $mbps; ?>Mbps</a>
 								</div>
 							</div>
 						</div>
@@ -49,26 +48,20 @@ $features = array(
 
 		<!-- Pricing/Offer Row -->
 		<div class="specialOffer">
-			<div class="price-wrap pricing-small">
-				<div class="price-lockup">
-				  <div class="before">
-				  	<?php echo $price['before']; ?>
-				  </div>
-				  <div class="pricing">
-				    <div class="price">
-				      <div class="column dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
-				      </div>
-				      <div class="column">
-				        <p class="super"><?php echo $price['super']; ?></p>
-				        <p class="term"><?php echo $price['term']; ?></p>
-				      </div>
-				    </div>
-				  </div>
-			  	<?php	if ($price['was'] !== ''): ?>
-					  <div class="after">
-					  	was <span class="price-prev"><?php echo $price['was']; ?></span>
-				  	</div>
-				  <?php endif; ?>
+			<div class="pricing pricing-small">
+				<div class="before">&nbsp;</div>
+
+				<div class="price">
+					<div class="column dollars left">
+						<span class="currency-symbol">$</span><?php echo $price['dollars']; ?>
+					</div>
+					<div class="column right">
+						<p class="super"><?php echo $price['super']; ?></p>
+						<p class="term"><?php echo $price['term']; ?></p>
+					</div>
+					<div class="previousPricing">
+						was <span class="strikethrough">$<?php echo $price['was']; ?></span>
+					</div>
 				</div>
 			</div>
 			<hr>

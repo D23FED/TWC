@@ -1,3 +1,17 @@
+// Match height of special offer price area
+var price = {
+	'$wrap': $('.price-wrap'),
+	'maxHeight': 0
+};
+
+price.$wrap.each( function(){
+	var h = $(this).outerHeight();
+	// console.log(h)
+	if (h > price.maxHeight) {
+		price.maxHeight = h;
+	}
+}).css('min-height',price.maxHeight);
+
 // Packages - expand to show details
 $('.side-by-side .expandDetails').click(function(){
   if($(this).parents().nextAll('.detailsExpansion').is(':hidden')){

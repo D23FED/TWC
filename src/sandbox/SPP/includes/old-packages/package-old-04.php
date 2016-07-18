@@ -1,33 +1,16 @@
-<!--Triple Play Select-->
-<?php
-$title        = 'Triple Play Select';
-$channels     = '125';
-$mbps         = '60';
-$price = array(
-	'dollars' => 29,
-	'super'   => '99/mo',
-	'term'    => 'each for 12 mos <br>when bundled*',
-	'was'     => '',
-	'before'  => 'From:'
-	);
-$features = array(
-	'<p><span class="text-info">FREE</span> DVR Service</p>',
-	'<p class="book fs14">Includes HBO, Cinemax, Showtime &amp; NFL Network</p>',
-	'<br>'
-	);
-?>
-
+<!--PACKAGE BEGIN-->
 <div class="package triple">
   <div class="packageHead">
     <div class="packageTitle">
-      <p class="h5">Triple Play Select</p>
+      <p class="h5">TV Select + Internet</p>
     </div>
+
   </div>
   <div class="packageBody">
     <div class="packageInfo">
-      <div class="33-33-33 section columnControl">
-        <div class="parsys_column twc-col3_333333">
-          <div class="parsys parsys0 twc-col3_333333-c0 parsys_column">
+      <div class="50-50 section columnControl">
+        <div class="parsys_column twc-col2_5050">
+          <div class="parsys parsys0 twc-col2_5050-c0 parsys_column">
             <div class="parbase section bordered-right">
               <div class="text-center">
                 <figure>
@@ -39,7 +22,7 @@ $features = array(
             </div>
             <div class="new section"></div>
           </div>
-          <div class="parsys parsys1 twc-col3_333333-c1 parsys_column">
+          <div class="parsys parsys1 twc-col2_5050-c1 parsys_column">
             <div class="parbase section bordered-right">
               <div class="text-center">
                 <figure>
@@ -51,47 +34,39 @@ $features = array(
             </div>
             <div class="new section"></div>
           </div>
-          <div class="parsys parsys1 twc-col3_333333-c2 parsys_column">
-            <div class="parbase section">
-              <div class="text-center">
-                <figure>
-                  <img src="images/phone_cic_icon.png" alt="">
-                </figure>
-                <p class="b">Phone</p>
-                <p class="fs-14">with <br> voicemail</p>
-              </div>
-            </div>
-            <div class="new section"></div>
-          </div>
         </div>
         <div class="columnClear"></div>
       </div>
     </div>
     <hr class="spacer">
     <hr>
-
-    <!-- Pricing/Offer Row -->
     <div class="specialOffer">
-
-	    <div class="price-wrap">
-	    	<div class="price-lockup">
-	    	  <div class="before">
-	    	    <?php echo $price['before']; ?>
-	    	  </div>
-	    	  <div class="pricing">
-	    	      <div class="column dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
-	    	      </div>
-	    	      <div class="column">
-    	          <p class="super"><?php echo $price['super']; ?></p>
-    	          <p class="term"><?php echo $price['term']; ?></p>
-	    	      </div>
-	    	  </div>
-	    	  <!-- <div class="after row">was <span class="price-prev">$<?php //echo $price['was']; ?></span></div> -->
-	    	</div>
-	    </div>
-	    <hr>
+      <div class="steelDark-9 specialPricing">
+        <div>
+          <div class="h2">
+            <hr class="spacer fs20">
+            <div class="column left fs28">$59</div>
+            <div class="column right">
+              <p class="fs18">99/mo</p>
+              <p class="term">for 12 mos</p>
+            </div>
+          </div>
+          <div class="h2">
+            <hr class="spacer fs10">
+            <div class="column left fs28">$29</div>
+            <div class="column right">
+              <p class="fs18">99/mo</p>
+              <p class="term">for 12 mos</p>
+            </div>
+            <div class="previousPricing">
+              was <span class="strikethrough">$53.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
       <hr class="spacer">
-      <ul class="included text-left text-center">
+      <ul class="text-left text-center">
         <li>
           <p class="book fs14"><span class="text-info">FREE</span> DVR Service</p>
         </li>
