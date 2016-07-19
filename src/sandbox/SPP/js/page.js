@@ -6,7 +6,6 @@ var price = {
 
 price.$wrap.each( function(){
 	var h = $(this).outerHeight();
-	// console.log(h)
 	if (h > price.maxHeight) {
 		price.maxHeight = h;
 	}

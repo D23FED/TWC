@@ -1,5 +1,3 @@
-/* Begin global overrides */
-
 .packageSelect .package.double .packageHead, .packageSelect .package.single .packageHead, .packageSelect .package.triple .packageHead {
     background-color: #00549f;
 }
@@ -280,5 +278,3 @@ font-size: 1.6rem;
         padding: 0;
     }
 }
-
-/* Begin BYOB CSS */

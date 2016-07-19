@@ -73,26 +73,20 @@ $features = array(
 		<div class="specialOffer">
 			<div class="price-wrap has-base-offer">
 				<div class="price-lockup">
-				  <div class="before row">
-				    <div class="column"><?php echo $price['before']; ?></div>
+				  <div class="before">
+				  	<?php echo $price['before']; ?>
 				  </div>
-				  <div class="pricing row">
-				    <div class="price row">
-				      <div class="column left dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
+				  <div class="pricing">
+				    <div class="price">
+				      <div class="column dollars"><span class="currency">$</span><?php echo $price['dollars']; ?>
 				      </div>
-				      <div class="column spacer"></div>
-				      <div class="column right">
-				        <div class="row">
-				          <p class="super"><?php echo $price['super']; ?></p>
-				        </div>
-				        <div class="row">
-				          <p class="term"><?php echo $price['term']; ?>
-				          </p>
-				        </div>
+				      <div class="column">
+				        <p class="super"><?php echo $price['super']; ?></p>
+				        <p class="term"><?php echo $price['term']; ?></p>
 				      </div>
 				    </div>
 				  </div>
-				  <!-- <div class="after row">was <span class="price-prev">$<?php //echo $price['was']; ?></span></div> -->
+				  <!-- <div class="after">was <span class="price-prev">$<?php //echo $price['was']; ?></span></div> -->
 				</div>
 			</div>
 			<hr>
