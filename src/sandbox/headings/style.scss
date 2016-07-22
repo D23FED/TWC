@@ -74,6 +74,7 @@ a {
 .medium-body-text {
 	font-family: $font-stack-sans-light;
 	font-size: $body-text-size;
+	line-height: 125%;
 
 	@include respond-to('medium') {
 		font-size: $body-text-size * 0.875;

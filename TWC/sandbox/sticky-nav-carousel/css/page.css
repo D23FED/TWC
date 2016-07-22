@@ -96,6 +96,150 @@
   padding-left: 0.5em;
 }
 
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.slick-track:before, .slick-track:after {
+  content: '';
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+#sticky-carousel-subnav-wrapper #sticky-subnav {
+  display: block;
+}
+
+#sticky-carousel-subnav-wrapper #sticky-subnav > .parsys {
+  display: block;
+  max-width: 780px;
+}
+
+#sticky-carousel-subnav-wrapper .twc-container {
+  display: block;
+}
+
+#sticky-carousel-subnav-wrapper .cta {
+  display: inherit;
+}
+
+#sticky-carousel-subnav-wrapper [class*='btn-'] {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#sticky-carousel-subnav-wrapper .btn-prev {
+  left: -100px;
+}
+
+#sticky-carousel-subnav-wrapper .btn-prev::before {
+  font-family: FontAwesome;
+  content: '\f104';
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+#sticky-carousel-subnav-wrapper .btn-next {
+  right: -100px;
+}
+
+#sticky-carousel-subnav-wrapper .btn-next::before {
+  font-family: FontAwesome;
+  content: '\f105';
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
 .heroCarousel {
   height: 100%;
 }
