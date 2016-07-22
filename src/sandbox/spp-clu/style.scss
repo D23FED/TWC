@@ -1,0 +1,282 @@
+@import 'init';
+
+$input-radius: 3px;
+$active-tab-border-width: 12px;
+
+// Debug responsive classes
+#clu-header h2 {
+	@include respond-to(medium) {
+		// background-color: pink;
+	}
+
+
+	@include respond-to(small) {
+		// background-color: purple;
+	}
+}
+
+// Tabs
+// Tab title
+.packageSelectTabs {
+	li {
+		&.tabHead {
+			bottom: -$active-tab-border-width;
+			span {
+				color: $color-lex-sky;
+			}
+
+			// Active tab
+			&.js-active {
+				border-top: $active-tab-border-width solid $color-lex-bright-sky;
+				bottom: auto;
+
+				// Active tab title
+				span {
+					color: $color-lex-bright-sky;
+				}
+			}
+		}
+	}
+
+	// Inactive tab bg
+	.tab-links {
+		li {
+			background-color: #fff;
+		}
+	}
+
+	// Active sticky menu
+	.sticky.js-sticky {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+// Right side column of header inside tab, above channel listing table, holds links to 'Print channel Lineup' etc (temp ID)
+#tab1-header-right {
+	text-align: right;
+
+	@include respond-to(medium) {
+		text-align: center;
+	}
+
+
+	// Temp hide second location component
+	.ncs-change-location {
+		display: none;
+	}
+
+	// 'Print channel lineup'
+	.ncs-print-link {
+		float: none;
+		padding: 0;
+		margin-right: 50px;
+	}
+
+	// 'View TV listings' link
+	> .smartLink.icon-angle-right {
+		display: inline-block;
+		float: right;
+
+		@include respond-to(medium) {
+			float: none;
+		}
+
+
+		a::before {
+			width: 21px;
+			height: 21px;
+			content: '';
+			background-image: url('http://d23.us/TWC/sandbox/spp-clu/images/icon-tv.png');
+			background-position: center;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+			background-repeat: no-repeat;
+		}
+	}
+
+	// Both links
+	.ncs-print-link,
+	> .smartLink.icon-angle-right {
+		vertical-align: top;
+
+		@include respond-to(medium) {
+			margin-right: 25px;
+			margin-left: 25px;
+		}
+
+
+		a {
+			font-family: $font-stack-sans-book;
+			font-size: 1.8rem;
+			font-weight: normal;
+			padding: 0;
+			color: $color-lex-sky;
+		}
+	}
+}
+
+// Location component
+.ncs-change-location {
+	text-align: right;
+}
+
+// Hide empty CTAs
+span.noContent {
+	display: none;
+}
+
+.clu {
+	// Channel search input and button
+	fieldset.channel-search {
+		@include respond-to(small) {
+			margin: 0 auto;
+			text-align: center;
+			width: 100%;
+			float: none;
+		}
+
+
+		.channel-search-input-wrap {
+			display: inline-block;
+
+			input {
+				margin-top: 0;
+			}
+		}
+
+		.cta {
+			vertical-align: top;
+
+			a::before {
+				content: '';
+				display: inline-block;
+				padding-right: 3px;
+				background-image: url('http://d23.us/TWC/sandbox/spp-clu/images/icon-refresh.png');
+				background-position: left center;
+				width: 13px;
+				height: 13px;
+				background-repeat: no-repeat;
+			}
+
+			span {
+				vertical-align: top;
+				font-size: 1.4rem;
+				text-transform: uppercase;
+			}
+		}
+
+		// Mobile search submit (replaced by 'refresh' button?)
+		+ fieldset {
+			display: none;
+		}
+	}
+
+	// Table of channels
+
+	table {
+		th {
+			padding-top: 8px;
+
+			// Table headings
+			> span:first-child {
+				font-size: 1.8rem;
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	// 'View more'
+	.table-footer {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+}
+
+// Filter dropdowns section
+.clu-filter-wrapper {
+	ul.filter-content {
+		position: relative;
+		padding-left: 40px;
+
+		@include respond-to(medium) {
+			display: inline-block;
+		}
+		@include respond-to(small) {
+			padding-left: 0;
+			width: 100%;
+		}
+
+
+		// 'Filter by:' label
+		.clu-filter-head {
+			position: absolute;
+			top: -20px;
+			font-weight: bold;
+
+			@include respond-to(medium) {
+				display: block;
+				top: auto;
+				position: static;
+				margin-bottom: 5px;
+				width: 100%;
+			}
+		}
+	}
+
+	// Dropdown labels
+	> ul > li {
+		width: 50%;
+
+		@include respond-to(medium) {
+			width: 100%;
+			display: block;
+			margin-bottom: 5px;
+		}
+		@include respond-to(small) {
+			width: 48%;
+		}
+	}
+
+	// Dropdown labels
+	.clu-filter {
+		border-radius: $input-radius;
+
+		&.js-last {
+			@include respond-to(medium) {
+				margin-left: 0;
+			}
+			@include respond-to(small) {
+				margin-left: 4%;
+			}
+		}
+
+		&::after {
+			padding: 0.65em 0.325em;
+			color: #fff;
+			background-color: $color-lex-sky;
+		}
+
+		> span {
+			padding: .65em;
+		}
+	}
+
+	// Dropdown contents
+	.clu-filter-container {
+		top: 2.5em;
+	}
+}
+
+.tab-content {
+	h1 {
+		@include respond-to(medium) {
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

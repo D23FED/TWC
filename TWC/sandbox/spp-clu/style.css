@@ -1,0 +1,235 @@
+.packageSelectTabs li.tabHead {
+  bottom: -12px;
+}
+
+.packageSelectTabs li.tabHead span {
+  color: #00549f;
+}
+
+.packageSelectTabs li.tabHead.js-active {
+  border-top: 12px solid #02a9e0;
+  bottom: auto;
+}
+
+.packageSelectTabs li.tabHead.js-active span {
+  color: #02a9e0;
+}
+
+.packageSelectTabs .tab-links li {
+  background-color: #fff;
+}
+
+.packageSelectTabs .sticky.js-sticky {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#tab1-header-right {
+  text-align: right;
+}
+
+#tab1-header-right .ncs-change-location {
+  display: none;
+}
+
+#tab1-header-right .ncs-print-link {
+  float: none;
+  padding: 0;
+  margin-right: 50px;
+}
+
+#tab1-header-right > .smartLink.icon-angle-right {
+  display: inline-block;
+  float: right;
+}
+
+#tab1-header-right > .smartLink.icon-angle-right a::before {
+  width: 21px;
+  height: 21px;
+  content: '';
+  background-image: url("http://d23.us/TWC/sandbox/spp-clu/images/icon-tv.png");
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+}
+
+#tab1-header-right .ncs-print-link,
+#tab1-header-right > .smartLink.icon-angle-right {
+  vertical-align: top;
+}
+
+#tab1-header-right .ncs-print-link a,
+#tab1-header-right > .smartLink.icon-angle-right a {
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  padding: 0;
+  color: #00549f;
+}
+
+.ncs-change-location {
+  text-align: right;
+}
+
+span.noContent {
+  display: none;
+}
+
+.clu fieldset.channel-search .channel-search-input-wrap {
+  display: inline-block;
+}
+
+.clu fieldset.channel-search .channel-search-input-wrap input {
+  margin-top: 0;
+}
+
+.clu fieldset.channel-search .cta {
+  vertical-align: top;
+}
+
+.clu fieldset.channel-search .cta a::before {
+  content: '';
+  display: inline-block;
+  padding-right: 3px;
+  background-image: url("http://d23.us/TWC/sandbox/spp-clu/images/icon-refresh.png");
+  background-position: left center;
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+}
+
+.clu fieldset.channel-search .cta span {
+  vertical-align: top;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.clu fieldset.channel-search + fieldset {
+  display: none;
+}
+
+.clu table th {
+  padding-top: 8px;
+}
+
+.clu table th > span:first-child {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.clu table th > span:first-child p {
+  margin-bottom: 0;
+}
+
+.clu .table-footer {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.clu-filter-wrapper ul.filter-content {
+  position: relative;
+  padding-left: 40px;
+}
+
+.clu-filter-wrapper ul.filter-content .clu-filter-head {
+  position: absolute;
+  top: -20px;
+  font-weight: bold;
+}
+
+.clu-filter-wrapper > ul > li {
+  width: 50%;
+}
+
+.clu-filter-wrapper .clu-filter {
+  border-radius: 3px;
+}
+
+.clu-filter-wrapper .clu-filter::after {
+  padding: 0.65em 0.325em;
+  color: #fff;
+  background-color: #00549f;
+}
+
+.clu-filter-wrapper .clu-filter > span {
+  padding: .65em;
+}
+
+.clu-filter-wrapper .clu-filter-container {
+  top: 2.5em;
+}
+
+@media (max-width: 48em) {
+
+  #tab1-header-right {
+    text-align: center;
+  }
+
+  #tab1-header-right > .smartLink.icon-angle-right {
+    float: none;
+  }
+
+  #tab1-header-right .ncs-print-link,
+  #tab1-header-right > .smartLink.icon-angle-right {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .clu-filter-wrapper ul.filter-content {
+    display: inline-block;
+  }
+
+  .clu-filter-wrapper ul.filter-content .clu-filter-head {
+    display: block;
+    top: auto;
+    position: static;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .clu-filter-wrapper > ul > li {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .clu-filter-wrapper .clu-filter.js-last {
+    margin-left: 0;
+  }
+
+  .tab-content h1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 40em) {
+
+  .clu fieldset.channel-search {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    float: none;
+  }
+
+  .clu-filter-wrapper ul.filter-content {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .clu-filter-wrapper > ul > li {
+    width: 48%;
+  }
+
+  .clu-filter-wrapper .clu-filter.js-last {
+    margin-left: 4%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
