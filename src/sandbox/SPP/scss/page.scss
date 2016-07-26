@@ -7,8 +7,6 @@ $color-gradient-bg: #eff7ff;
 $font-size-base: 11px;
 $font-size-base-offer: $font-size-base * 1.64;
 
-// $color-lex-sky: #00549f;
-
 @mixin container {
 	margin-left: auto;
 	margin-right: auto;
@@ -83,10 +81,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 	}
 }
 
-.twc-content .twc-container-full {
-	@include twc-container;
-}
-
 #{$packages-container} {
 	#{$package-container} {
 		position: relative;
@@ -97,14 +91,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 		&.triple {
 			#{$package-header} {
 				background-color: $color-lex-sky;
-			}
-		}
-
-		// Active packages
-		&.triple {
-			&.js-compare, &.js-selected {
-				// border: 5px solid $color-lex-sky;
-
 			}
 		}
 
@@ -123,19 +109,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 					margin-bottom: 0;
 				}
 			}
-
-			// Compare
-			> fieldset {
-				// float: none;
-				// max-width: 100%;
-				// text-align: center;
-				// font-size: 1.6rem;
-
-				input ~ label.compare-label {
-					// font-size: 1.6rem;
-
-				}
-			}
 		}
 
 		// Body
@@ -147,11 +120,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 		.packageInfo {
 			p {
 				margin-bottom: 0;
-
-				+ p {
-					// margin-top: .5em;
-
-				}
 			}
 
 			.cta {
@@ -194,16 +162,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 						text-align: left;
 					}
 
-					.inner {
-						// display: table;
-
-					}
-
-					.row {
-						// display: table-row;
-
-					}
-
 					&.left, &.right {
 						float: none;
 					}
@@ -212,12 +170,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 				&.small {
 					@include price-small;
 				}
-			}
-
-			// Actual price
-			.price {
-				// display: table-row;
-
 			}
 
 			// Before the price, 'From:'
@@ -249,8 +201,7 @@ $font-size-base-offer: $font-size-base * 1.64;
 				display: table-row;
 
 				.price {
-					// display: table-row;
-
+					font-weight: normal;
 				}
 			}
 
@@ -265,14 +216,6 @@ $font-size-base-offer: $font-size-base * 1.64;
 				font-family: $font-stack-sans-book;
 				display: table-row;
 
-				// width: 100%;
-
-				.column,
-				span {
-					// text-align: right;
-					// width: 100%;
-
-				}
 			}
 
 			.dollars {
@@ -341,215 +284,9 @@ $font-size-base-offer: $font-size-base * 1.64;
 			}
 		}
 
-		// Temp overrides
-		.specialOfferNew {
-			.pricing {
-				padding: 0 !important;
-				box-shadow: none !important;
-				background: transparent !important;
-			}
-		}
-
-		// Old pricing styles
-		.specialOffer {
-			// Price block
-			.pricing {
-				// background: #ffffff;
-				// background: linear-gradient(to right, #ffffff 0%, $color-gradient-bg 25%, $color-gradient-bg 75%, #ffffff 100%);
-
-				.price {
-					// display: inline-block;
-
-				}
-
-				.dollars {
-					// font-size: 5.5rem;
-					// font-weight: normal;
-
-				}
-
-				.super {
-					// font-family: $font-stack-sans-book;
-					// vertical-align: top;
-					// line-height: 1.4;
-					// font-size: 22px;
-					// font-weight: normal;
-
-				}
-
-				.term {
-					// margin-top: -0.6rem;
-
-				}
-			}
-
-			.pricing {
-				// @include pricing-bg;
-
-				.currency-symbol {
-					// font-size: 66%;
-					// vertical-align: top;
-					// line-height: 1.25;
-
-				}
-
-				&:not(.specialPricing) {
-					.column {
-						// @include column(50%);
-
-					}
-				}
-
-				.before {
-					// margin-left: 25%;
-					// text-align: left;
-					// font-size: 1.4rem;
-					// color: $color-lex-sky;
-					// font-family: $font-stack-sans-light;
-					// line-height: 1.8rem;
-					// display: block;
-
-				}
-
-				.base-offer {
-					// font-family: $font-stack-sans-light;
-					// text-transform: uppercase;
-					// font-size: 1.8rem;
-
-				}
-
-				.term {
-					// display: inline-block;
-					// font-size: 9px;
-					// line-height: 1;
-					// margin-left: 0;
-					// text-align: left;
-					// vertical-align: top;
-					// font-size: 1.1rem;
-					// font-weight: normal;
-					// min-width: 85px;
-
-					&.under {
-						// display: block;
-						// margin-left: 0;
-						// text-align: center;
-
-					}
-
-					.discountTerm, .preTerm {
-						// float: left;
-						// margin-top: 0.25em;
-
-					}
-
-					.postTerm {
-						// float: left;
-						// margin-left: 3px;
-						// margin-top: -6px;
-
-					}
-
-					.discountTerm {
-						// margin-top: -6px;
-
-					}
-				}
-
-				.super,
-				.term {
-					// margin-left: 4px;
-
-				}
-			}
-
-			// Price block with small price tag
-			.pricing-small {
-				// @include price-small;
-
-			}
-
-			// Price
-			.h2,
-			.price {
-				// font-weight: bold;
-				// color: $color-lex-sky;
-				// margin-bottom: 0;
-				// position: relative;
-				// vertical-align: middle;
-
-				p {
-					// margin-bottom: 0;
-
-				}
-			}
-
-			.price {
-				.left {
-					// width: 50%;
-					// text-align: right;
-
-				}
-
-				.right {
-					// width: 50%;
-					// text-align: left;
-
-				}
-			}
-
-			// Previous price, 'was $29.99'
-			.previousPricing {
-				// color: $text-color;
-				// clear: both;
-				// text-align: right;
-				// font-size: 1.8rem;
-				// font-weight: normal;
-				// display: inline-block;
-				// font-family: $font-stack-sans-book;
-
-				.strikethrough {
-					// text-decoration: line-through;
-					// display: inline-block;
-					// position: relative;
-
-					&::after {
-						// content: '';
-						// width: 100%;
-						// background-color: red;
-						// position: absolute;
-						// height: 2px;
-						// display: block;
-						// top: 50%;
-						// transform: translateY(-50%) rotate(-10deg);
-
-					}
-				}
-			}
-
-			.h2:nth-of-type(1) .previousPricing {
-				// text-align: left;
-
-			}
-
-			.icon-only {
-				// color: rgb(22, 102, 167);
-
-			}
-
-			.h4 {
-				// font-weight: bold;
-				// margin-bottom: 0;
-
-			}
-		}
-
 		// Horizontal Spacer
 		hr.spacer {
 			margin: 1.5em 0 0;
-		}
-
-		.quickCheckoutAccordion hr {
-			margin: 1em 0;
 		}
 	}
 
@@ -560,21 +297,7 @@ $font-size-base-offer: $font-size-base * 1.64;
 		margin-bottom: 0;
 	}
 
-	.box {
-		// background: #f2f9ff;
-		// border: 1px solid #9a9c9e;
-		// padding: 0;
-
-	}
 }
-
-// .w30 {
-// 	margin-right: 5%;
-
-// 	&:last-of-type {
-// 		margin-right: 0;
-// 	}
-// }
 
 // Column styling
 .bordered-right {
@@ -600,21 +323,6 @@ a:hover > .tooltip-text {
 .detailsExpansion {
 	position: relative;
 	width: 100%;
-}
-
-.detailsContent {
-	padding: 2em 1em 1em;
-}
-
-.discountTerm {
-	// clear: both;
-}
-
-.charterTitle {
-	width: 100%;
-	background: $color-lex-sky;
-	padding: 0.5em;
-	color: #fff;
 }
 
 figure img {
