@@ -4,13 +4,15 @@
 	<header>
 		<h2 class='title'>You selected & saved by switching to: <span class="package">Spectrum TV <strong class="package-name">Select</strong></span></h2>
 	</header>
-	<p class="package-contents-heading">Includes:</p>
-	<ul class="package-contents">
-		<li><strong>125+ channels</strong>, with <em>free</em> DVR Service</li>
-		<li>Access to 10,000 shows and movies with On Demand, with 5,000 free choices!</li>
-		<li>FREE Spectrum TV app&mdash;Watch live TV and On Demand on any device</li>
-		<li>Pause, play and rewind live TV</li>
-	</ul>
+	<section class="body">
+		<p class="package-contents-heading">Includes:</p>
+		<ul class="package-contents">
+			<li><span><strong>125+ channels</strong>, with <em>free</em> DVR Service</span></li>
+			<li><span>Access to 10,000 shows and movies with On Demand, with 5,000 free choices!</span></li>
+			<li><span>FREE Spectrum TV app&mdash;Watch live TV and On Demand on any device</span></li>
+			<li><span>Pause, play and rewind live TV</span></li>
+		</ul>
+	</section>
 </div>
 
 <div class="upsell-component upsell-component-02">

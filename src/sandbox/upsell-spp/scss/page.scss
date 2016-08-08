@@ -2,10 +2,113 @@
 
 $color-cta: #068a2a;
 
-.upsell-component-01 {
+@mixin pseudo-img($pos: absolute) {
+	content: '';
+	display: block;
+	position: $pos;
+	background-repeat: no-repeat;
+}
 
+.upsell-component {
+	border: 2px solid $text-lightgrey;
+	width: 700px;
+	margin: 0 auto;
+}
+
+.upsell-component-01 {
+	header {
+		padding: 10px;
+		border-bottom: 2px solid $color-lex-bright-sky;
+		position: relative;
+
+		// Triangle
+		$triangle-width: 46px;
+		$triangle-height: 8px;
+
+		&::after {
+			@include pseudo-img;
+
+			width: 0;
+			height: 0;
+			bottom: -$triangle-height;
+			left: 22px;
+			border-style: solid;
+			border-width: $triangle-height ($triangle-width / 2) 0 ($triangle-width / 2);
+			border-color: $color-lex-bright-sky transparent transparent transparent;
+		}
+
+		.title {
+			color: $color-lex-deep-gray;
+			font-size: 1.6rem;
+			font-family: $font-stack-sans-book;
+			padding-left: 30px;
+			position: relative;
+			margin-bottom: 0;
+
+			&::before {
+				@include pseudo-img;
+
+				background-image: url('../images/icon-checkmark.png');
+				width: 22px;
+				height: 24px;
+				left: 0;
+				z-index: 1;
+				min-height: 1px;
+			}
+
+			.package {
+				display: block;
+				font-family: $font-stack-sans-light;
+				font-size: 2.4rem;
+				text-transform: uppercase;
+				color: $color-lex-bright-sky;
+			}
+		}
+	}
+
+	.body {
+		padding-top: 15px;
+		padding-left: 19px;
+		padding-bottom: 15px;
+		padding-right: 15px;
+	}
+
+	.package-contents-heading {
+		color: $color-lex-deep-gray;
+		font-size: 1.8rem;
+		font-family: $font-stack-sans-book;
+	}
+
+	.package-contents {
+		padding-left: 12px;
+
+		li {
+			line-height: 2;
+			color: $color-lex-bright-sky;
+			list-style-type: disc;
+			font-size: 1.4rem;
+			font-family: $font-stack-sans-light;
+			list-style-position: inside;
+
+			span {
+				color: $color-lex-deep-gray;
+			}
+
+			strong {
+				color: $color-lex-sky;
+				font-family: $font-stack-sans-book;
+			}
+
+			em {
+				font-style: normal;
+				text-transform: uppercase;
+				color: #000;
+				font-family: $font-stack-sans-book;
+			}
+		}
+	}
 }
 
 .upsell-component-02 {
-
+	display: none;
 }
