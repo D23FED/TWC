@@ -210,7 +210,7 @@
 
 .upsell-component-02 .upsell-option .col {
   display: table-cell;
-  width: calc(100%/2);
+  width: 50%;
   padding-left: 10px;
   padding-right: 10px;
   border-right: 1px solid black;
@@ -228,7 +228,7 @@
 
 .upsell-component-02 .upsell-option .col-pricing,
 .upsell-component-02 .upsell-option .col-cta {
-  width: calc(100%/4);
+  width: 25%;
 }
 
 .upsell-component-02 .upsell-option .col-cta {
