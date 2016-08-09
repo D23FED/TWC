@@ -68,7 +68,7 @@
   display: block;
 }
 .vertical-center {
-  @include vertical-align();
+  @include vertical-center();
 }
 .text-left {
   text-align: left;

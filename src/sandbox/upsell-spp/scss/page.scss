@@ -1,0 +1,327 @@
+@import 'init';
+
+$color-cta: #068a2a;
+
+@mixin pseudo-img($pos: absolute) {
+	content: '';
+	display: block;
+	position: $pos;
+	background-repeat: no-repeat;
+}
+
+.upsell-component {
+	border: 2px solid $text-lightgrey;
+	width: 700px;
+	margin: 0 auto;
+	background-color: #fff;
+
+	+ .upsell-component {
+		margin-top: 20px;
+	}
+}
+
+.upsell-component-01 {
+	header {
+		padding: 10px;
+		border-bottom: 2px solid $color-lex-bright-sky;
+		position: relative;
+
+		// Triangle
+		$triangle-01-width: 46px;
+		$triangle-01-height: 8px;
+
+		&::after {
+			@include pseudo-img;
+
+			width: 0;
+			height: 0;
+			bottom: -$triangle-01-height;
+			left: 22px;
+			border-style: solid;
+			border-width: $triangle-01-height ($triangle-01-width / 2) 0 ($triangle-01-width / 2);
+			border-color: $color-lex-bright-sky transparent transparent transparent;
+		}
+
+		.title {
+			color: $color-lex-deep-gray;
+			font-size: 1.6rem;
+			font-family: $font-stack-sans-book;
+			padding-left: 30px;
+			position: relative;
+			margin-bottom: 0;
+
+			&::before {
+				@include pseudo-img;
+
+				background-image: url('../images/icon-checkmark.png');
+				width: 22px;
+				height: 24px;
+				left: 0;
+				z-index: 1;
+				min-height: 1px;
+			}
+
+			.package {
+				display: block;
+				font-family: $font-stack-sans-light;
+				font-size: 2.4rem;
+				text-transform: uppercase;
+				color: $color-lex-bright-sky;
+			}
+		}
+	}
+
+	.body {
+		padding-top: 15px;
+		padding-left: 19px;
+		padding-bottom: 15px;
+		padding-right: 15px;
+	}
+
+	.package-contents-heading {
+		color: $color-lex-deep-gray;
+		font-size: 1.8rem;
+		font-family: $font-stack-sans-book;
+	}
+
+	.package-contents {
+		padding-left: 12px;
+
+		li {
+			line-height: 2;
+			color: $color-lex-bright-sky;
+			list-style-type: disc;
+			font-size: 1.4rem;
+			font-family: $font-stack-sans-light;
+			list-style-position: inside;
+
+			span {
+				color: $color-lex-deep-gray;
+			}
+
+			strong {
+				color: $color-lex-sky;
+				font-family: $font-stack-sans-book;
+			}
+
+			em {
+				font-style: normal;
+				text-transform: uppercase;
+				color: #000;
+				font-family: $font-stack-sans-book;
+			}
+		}
+	}
+}
+
+.upsell-component-02 {
+	padding: 10px 15px;
+
+	header {
+		@include clearfix;
+	}
+
+	.title {
+		font-size: 2.4rem;
+		font-family: $font-stack-sans-light;
+		color: $color-lex-deep-gray;
+		float: left;
+	}
+
+	.cart-notifier {
+		border: 2px solid $color-lex-bright-sky;
+		min-height: 3.6rem;
+		padding-top: 6px;
+		padding-left: 18px;
+		padding-bottom: 5px;
+		padding-right: 30px;
+		font-size: 1.4rem;
+		font-family: $font-stack-sans-book;
+		background-color: $color-lex-light-sky;
+		position: relative;
+		line-height: 1;
+		float: right;
+
+		.inner {}
+
+		$triangle-02-width: 10px;
+		$triangle-02-height: 33px;
+
+		&::before {
+			@include pseudo-img;
+
+			width: 0;
+			height: 0;
+			left: 0;
+			top: 0;
+			border-style: solid;
+			border-width: ($triangle-02-height / 2) 0 ($triangle-02-height / 2) $triangle-02-width;
+			border-color: transparent transparent transparent $color-lex-bright-sky;
+		}
+
+		&::after {
+			@include pseudo-img;
+
+			width: 0;
+			height: 0;
+			top: -4px;
+			background-image: url('../images/icon-cart.png');
+			width: 27px;
+			height: 25px;
+			z-index: 1;
+			min-height: 1px;
+			right: -6px;
+		}
+
+		.package-name {
+			font-size: 1.8rem;
+			color: $color-lex-sky;
+			text-transform: uppercase;
+			font-family: $font-stack-sans-book;
+			font-weight: normal;
+		}
+	}
+
+	.upsells {
+		clear: both;
+		margin-top: 12px;
+	}
+
+	.upsell-option {
+		border: 2px solid $color-ch-teal;
+		border-radius: 5px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 10px;
+		padding-right: 0;
+		font-family: $font-stack-sans-light;
+		color: $color-lex-deep-gray;
+		margin-top: 1rem;
+
+		@include clearfix;
+
+		.inner {
+			display: table;
+			width: 100%;
+		}
+
+		.col {
+			display: table-cell;
+			width: 50%;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-right: 1px solid black;
+			padding-top: 6px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+				border: none;
+			}
+		}
+
+		.col-pricing,
+		.col-cta {
+			width: 25%;
+		}
+
+		.col-cta {
+			padding-top: 0;
+			position: relative;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.action {
+			font-size: 1.6rem;
+			font-family: $font-stack-sans-light;
+			margin-bottom: 0;
+		}
+
+		.package {
+			font-size: 2.4rem;
+			font-family: $font-stack-sans-light;
+			margin-bottom: 0;
+		}
+
+		.price-lockup {
+			color: $color-ch-teal;
+			line-height: 1;
+		}
+
+		.currency-symbol,
+		.dollars,
+		.terms {
+			vertical-align: top;
+			display: inline-block;
+		}
+
+		.currency-symbol {
+			font-size: 2.7rem;
+			line-height: 1.7;
+		}
+
+		.dollars {
+			font-size: 5rem;
+			font-family: $font-stack-sans-book;
+		}
+
+		.terms {
+			text-transform: uppercase;
+			font-size: 1.7rem;
+			line-height: 1;
+			margin-top: 1rem;
+		}
+
+		.row-channels {
+			p, a {
+				font-family: $font-stack-sans-book;
+				font-weight: normal;
+				vertical-align: middle;
+			}
+
+			p {
+				font-size: 1.8rem;
+				color: $color-ch-teal;
+				padding-right: 10px;
+				margin-right: 10px;
+				border-right: 1px solid #7a7a7a;
+				display: inline-block;
+				margin-bottom: 0;
+			}
+
+			a {
+				font-size: 1.6rem;
+				text-decoration: underline;
+			}
+		}
+
+		.channel-description {
+			font-size: 1.6rem;
+			font-family: $font-stack-sans-light;
+			line-height: 1.6;
+			margin-bottom: .5rem;
+		}
+	}
+
+	.upsell-02 {
+		border-color: $color-ch-yellow;
+
+		.price-lockup {
+			color: $color-ch-yellow;
+		}
+
+		.row-channels {
+			p {
+				color: $color-ch-yellow;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 1rem;
+	}
+}

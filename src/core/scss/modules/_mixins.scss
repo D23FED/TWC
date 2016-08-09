@@ -110,8 +110,8 @@
 }
 
 // Vertical Align
-@mixin vertical-align {
-	position: relative;
+@mixin vertical-center($pos: relative) {
+	position: $pos;
 	top: 50%;
 	transform: translateY(-50%);
 }

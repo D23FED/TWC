@@ -560,7 +560,7 @@ $color-order-alt-hover: #d9eaf9;
             border-left: none;
             border-top: 1px solid $white;
             .cta {
-              @include vertical-align;
+              @include vertical-center;
               position: relative;
               top: 50%;
               transform: translateY(-50%);
