@@ -2,6 +2,11 @@
   border: 2px solid #e1e1e1;
   width: 700px;
   margin: 0 auto;
+  background-color: #fff;
+}
+
+.upsell-component + .upsell-component {
+  margin-top: 20px;
 }
 
 .upsell-component-01 header {
@@ -101,7 +106,232 @@
 }
 
 .upsell-component-02 {
-  display: none;
+  padding: 10px 15px;
+}
+
+.upsell-component-02 header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.upsell-component-02 .title {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
+  float: left;
+}
+
+.upsell-component-02 .cart-notifier {
+  border: 2px solid #02a9e0;
+  min-height: 36px;
+  min-height: 3.6rem;
+  padding-top: 6px;
+  padding-left: 18px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #e0f3fc;
+  position: relative;
+  line-height: 1;
+  float: right;
+}
+
+.upsell-component-02 .cart-notifier::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  border-style: solid;
+  border-width: 16.5px 0 16.5px 10px;
+  border-color: transparent transparent transparent #02a9e0;
+}
+
+.upsell-component-02 .cart-notifier::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 0;
+  height: 0;
+  top: -4px;
+  background-image: url("../images/icon-cart.png");
+  width: 27px;
+  height: 25px;
+  z-index: 1;
+  min-height: 1px;
+  right: -6px;
+}
+
+.upsell-component-02 .cart-notifier .package-name {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #00549f;
+  text-transform: uppercase;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.upsell-component-02 .upsells {
+  clear: both;
+  margin-top: 12px;
+}
+
+.upsell-component-02 .upsell-option {
+  border: 2px solid #009E8C;
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 0;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
+  margin-top: 10px;
+  margin-top: 1rem;
+}
+
+.upsell-component-02 .upsell-option::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.upsell-component-02 .upsell-option .inner {
+  display: table;
+  width: 100%;
+}
+
+.upsell-component-02 .upsell-option .col {
+  display: table-cell;
+  width: calc(100%/2);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid black;
+  padding-top: 6px;
+}
+
+.upsell-component-02 .upsell-option .col:first-child {
+  padding-left: 0;
+}
+
+.upsell-component-02 .upsell-option .col:last-child {
+  padding-right: 0;
+  border: none;
+}
+
+.upsell-component-02 .upsell-option .col-pricing,
+.upsell-component-02 .upsell-option .col-cta {
+  width: calc(100%/4);
+}
+
+.upsell-component-02 .upsell-option .col-cta {
+  padding-top: 0;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.upsell-component-02 .upsell-option .action {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+
+.upsell-component-02 .upsell-option .package {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+
+.upsell-component-02 .upsell-option .price-lockup {
+  color: #009E8C;
+  line-height: 1;
+}
+
+.upsell-component-02 .upsell-option .currency-symbol,
+.upsell-component-02 .upsell-option .dollars,
+.upsell-component-02 .upsell-option .terms {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.upsell-component-02 .upsell-option .currency-symbol {
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: 1.7;
+}
+
+.upsell-component-02 .upsell-option .dollars {
+  font-size: 50px;
+  font-size: 5rem;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.upsell-component-02 .upsell-option .terms {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 1;
+  margin-top: 10px;
+  margin-top: 1rem;
+}
+
+.upsell-component-02 .upsell-option .row-channels p, .upsell-component-02 .upsell-option .row-channels a {
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.upsell-component-02 .upsell-option .row-channels p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #009E8C;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #7a7a7a;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.upsell-component-02 .upsell-option .row-channels a {
+  font-size: 16px;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+.upsell-component-02 .upsell-option .channel-description {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  margin-bottom: .5rem;
+}
+
+.upsell-component-02 .upsell-02 {
+  border-color: #FAA41A;
+}
+
+.upsell-component-02 .upsell-02 .price-lockup {
+  color: #FAA41A;
+}
+
+.upsell-component-02 .upsell-02 .row-channels p {
+  color: #FAA41A;
+}
+
+.upsell-component-02 footer {
+  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=page.css.map */

@@ -29,15 +29,15 @@ $banner_title = '';
 // SubHead text
 $subHead = '';
 // Setup the page
-$tophat = true;
+$tophat = false;
 $logoHeader = false;
-$nav = true;
-$subNav = true;
+$nav = false;
+$subNav = false;
 $alert = false;
 $breadcrumbs = false;
 $banner = false;
 $supportSearch = false;
 $content = true;
-$footer = true;
+$footer = false;
 $container = false;
 ?>
