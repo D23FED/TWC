@@ -1,6 +1,10 @@
 @import 'init';
 
-$color-cta: #068a2a;
+$color-cta                : #068a2a;
+$color-pkg-select         : $color-lex-bright-sky;
+$color-pkg-silver         : $color-ch-teal;
+$color-pkg-gold           : $color-ch-yellow;
+$price-block-table-layout : true;
 
 @mixin pseudo-img($pos: absolute) {
 	content: '';
@@ -18,19 +22,26 @@ $color-cta: #068a2a;
 	+ .upsell-component {
 		margin-top: 20px;
 	}
+
+	+ .heading {
+		margin-top: 2rem;
+	}
 }
 
+// Status
 .upsell-component-01 {
 	header {
 		padding: 10px;
 		border-bottom: 2px solid $color-lex-bright-sky;
 		position: relative;
 
+		@include clearfix;
+
 		// Triangle
 		$triangle-01-width: 46px;
 		$triangle-01-height: 8px;
 
-		&::after {
+		&::before {
 			@include pseudo-img;
 
 			width: 0;
@@ -42,24 +53,38 @@ $color-cta: #068a2a;
 			border-color: $color-lex-bright-sky transparent transparent transparent;
 		}
 
+		.column {
+			float: left;
+
+			&::first-child {
+				width: 3rem;
+			}
+		}
+
+		.indicator-icon {
+			width: 22px;
+			height: 24px;
+
+			path {
+				fill: $color-lex-bright-sky;
+			}
+
+			&.pkg-silver path {
+				fill: $color-pkg-silver;
+			}
+
+			&.pkg-gold path {
+				fill: $color-pkg-gold;
+			}
+		}
+
 		.title {
 			color: $color-lex-deep-gray;
 			font-size: 1.6rem;
 			font-family: $font-stack-sans-book;
-			padding-left: 30px;
+			padding-left: 5px;
 			position: relative;
 			margin-bottom: 0;
-
-			&::before {
-				@include pseudo-img;
-
-				background-image: url('../images/icon-checkmark.png');
-				width: 22px;
-				height: 24px;
-				left: 0;
-				z-index: 1;
-				min-height: 1px;
-			}
 
 			.package {
 				display: block;
@@ -112,8 +137,69 @@ $color-cta: #068a2a;
 			}
 		}
 	}
+
+	// Change upsell theme color based on package
+	&.pkg-select {
+		.indicator-icon path {
+			fill: $color-pkg-select;
+		}
+
+		header {
+			border-color: $color-pkg-select;
+
+			&::before {
+				border-color: $color-pkg-select transparent transparent transparent;
+			}
+		}
+
+		header .title .package,
+		.package-contents li {
+			color: $color-pkg-select;
+		}
+	}
+
+	// Silver package
+	&.pkg-silver {
+		.indicator-icon path {
+			fill: $color-pkg-silver;
+		}
+
+		header {
+			border-color: $color-pkg-silver;
+
+			&::before {
+				border-color: $color-pkg-silver transparent transparent transparent;
+			}
+		}
+
+		header .title .package,
+		.package-contents li {
+			color: $color-pkg-silver;
+		}
+	}
+
+	// Silver package
+	&.pkg-gold {
+		.indicator-icon path {
+			fill: $color-pkg-gold;
+		}
+
+		header {
+			border-color: $color-pkg-gold;
+
+			&::before {
+				border-color: $color-pkg-gold transparent transparent transparent;
+			}
+		}
+
+		header .title .package,
+		.package-contents li {
+			color: $color-pkg-gold;
+		}
+	}
 }
 
+// Upgrade/downgrade options
 .upsell-component-02 {
 	padding: 10px 15px;
 
@@ -142,6 +228,45 @@ $color-cta: #068a2a;
 		line-height: 1;
 		float: right;
 
+		&.upsell-pkg-select {
+			border-color: $color-pkg-select;
+			background-color: $color-lex-light-sky;
+
+			&::before {
+				border-color: transparent transparent transparent $color-pkg-select;
+			}
+
+			.indicator-icon g.outer {
+				fill: $color-pkg-select;
+			}
+		}
+
+		&.upsell-pkg-silver {
+			border-color: $color-pkg-silver;
+			background-color: #ecfefc;
+
+			&::before {
+				border-color: transparent transparent transparent $color-pkg-silver;
+			}
+
+			.indicator-icon g.outer {
+				fill: $color-pkg-silver;
+			}
+		}
+
+		&.upsell-pkg-gold {
+			border-color: $color-pkg-gold;
+			background-color: #fffaf0;
+
+			&::before {
+				border-color: transparent transparent transparent $color-pkg-gold;
+			}
+
+			.indicator-icon g.outer {
+				fill: $color-pkg-gold;
+			}
+		}
+
 		.inner {}
 
 		$triangle-02-width: 10px;
@@ -159,18 +284,38 @@ $color-cta: #068a2a;
 			border-color: transparent transparent transparent $color-lex-bright-sky;
 		}
 
-		&::after {
-			@include pseudo-img;
-
+		.indicator-icon {
+			display: block;
+			position: absolute;
+			background-repeat: no-repeat;
 			width: 0;
 			height: 0;
 			top: -4px;
-			background-image: url('../images/icon-cart.png');
 			width: 27px;
 			height: 25px;
 			z-index: 1;
 			min-height: 1px;
 			right: -6px;
+
+			svg {
+				max-width: 100%;
+			}
+
+			g.outer {
+				fill: $color-lex-bright-sky;
+			}
+
+			g.inner {
+				fill: #fff;
+			}
+
+			&.pkg-silver g.outer {
+				fill: $color-pkg-silver;
+			}
+
+			&.pkg-gold g.outer {
+				fill: $color-pkg-gold;
+			}
 		}
 
 		.package-name {
@@ -188,7 +333,7 @@ $color-cta: #068a2a;
 	}
 
 	.upsell-option {
-		border: 2px solid $color-ch-teal;
+		border: 2px solid $color-lex-bright-sky;
 		border-radius: 5px;
 		padding-top: 6px;
 		padding-bottom: 6px;
@@ -242,14 +387,18 @@ $color-cta: #068a2a;
 		}
 
 		.package {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
 			font-family: $font-stack-sans-light;
 			margin-bottom: 0;
 		}
 
 		.price-lockup {
-			color: $color-ch-teal;
+			color: $color-lex-bright-sky;
 			line-height: 1;
+
+			@if $price-block-table-layout == true {
+				display: table;
+			}
 		}
 
 		.currency-symbol,
@@ -257,6 +406,10 @@ $color-cta: #068a2a;
 		.terms {
 			vertical-align: top;
 			display: inline-block;
+
+			@if $price-block-table-layout == true {
+				display: table-cell;
+			}
 		}
 
 		.currency-symbol {
@@ -274,6 +427,10 @@ $color-cta: #068a2a;
 			font-size: 1.7rem;
 			line-height: 1;
 			margin-top: 1rem;
+
+			@if $price-block-table-layout == true {
+				vertical-align: middle;
+			}
 		}
 
 		.row-channels {
@@ -285,7 +442,7 @@ $color-cta: #068a2a;
 
 			p {
 				font-size: 1.8rem;
-				color: $color-ch-teal;
+				color: $color-lex-bright-sky;
 				padding-right: 10px;
 				margin-right: 10px;
 				border-right: 1px solid #7a7a7a;
@@ -307,16 +464,44 @@ $color-cta: #068a2a;
 		}
 	}
 
-	.upsell-02 {
-		border-color: $color-ch-yellow;
+	.upsell-pkg-select {
+		border-color: $color-pkg-select;
 
 		.price-lockup {
-			color: $color-ch-yellow;
+			color: $color-pkg-select;
 		}
 
 		.row-channels {
 			p {
-				color: $color-ch-yellow;
+				color: $color-pkg-select;
+			}
+		}
+	}
+
+	.upsell-pkg-silver {
+		border-color: $color-pkg-silver;
+
+		.price-lockup {
+			color: $color-pkg-silver;
+		}
+
+		.row-channels {
+			p {
+				color: $color-pkg-silver;
+			}
+		}
+	}
+
+	.upsell-pkg-gold {
+		border-color: $color-pkg-gold;
+
+		.price-lockup {
+			color: $color-pkg-gold;
+		}
+
+		.row-channels {
+			p {
+				color: $color-pkg-gold;
 			}
 		}
 	}

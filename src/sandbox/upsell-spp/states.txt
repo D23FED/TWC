@@ -1,0 +1,65 @@
+Action: Selected => No cart banner
+
+
+Case:
+	Action : Selected
+	Package: Select
+State:
+	Cart banner  : Hidden
+	Select upsell: Hidden
+	Silver upsell: Upgrade, 20
+	Gold upsell  : Upgrade, 40
+
+Case:
+	Action : Selected
+	Package: Silver
+State:
+	Cart banner  : Hidden
+	Select upsell: Downgrade, 20
+	Silver upsell: Hidden
+	Gold upsell  : Upgrade, 40
+
+Case:
+	Action : Selected
+	Package: Gold
+State:
+	Cart banner  : Hidden
+	Gold upsell  : Hidden
+	Silver upsell: Downgrade, 20
+	Select upsell: Downgrade, 40
+
+Case:
+	Action : Upgraded
+	Package: Silver
+State:
+	Cart banner  : Silver
+	Gold upsell  : Upgrade, 40
+	Silver upsell: Hidden
+	Select upsell: Downgrade, 20
+
+Case:
+	Action : Upgraded
+	Package: Gold
+State:
+	Cart banner  : Gold
+	Gold upsell  : Hidden
+	Silver upsell: Downgrade, 20
+	Select upsell: Downgrade, 40
+
+Case:
+	Action : Switched
+	Package: Select
+State:
+	Cart banner  : Select
+	Select upsell: Hidden
+	Silver upsell: Upgrade, 20
+	Gold upsell  : Upgrade, 40
+
+Case:
+	Action : Switched
+	Package: Select
+State:
+	Cart banner  : Select
+	Select upsell: Hidden
+	Silver upsell: Upgrade
+	Gold upsell  : Upgrade

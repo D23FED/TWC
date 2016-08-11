@@ -60,7 +60,7 @@ var
 		php: '**/*.php',
 		jade: '**/*.jade',
 		scripts: '**/*.js',
-		img: '**/*.{jpg,jpeg,gif,png}'
+		img: '**/*.{jpg,jpeg,gif,png,svg}'
 	};
 
 // Tasks
