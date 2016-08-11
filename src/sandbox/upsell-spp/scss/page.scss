@@ -230,6 +230,7 @@ $price-block-table-layout : true;
 
 		&.upsell-pkg-select {
 			border-color: $color-pkg-select;
+			background-color: $color-lex-light-sky;
 
 			&::before {
 				border-color: transparent transparent transparent $color-pkg-select;
@@ -242,6 +243,7 @@ $price-block-table-layout : true;
 
 		&.upsell-pkg-silver {
 			border-color: $color-pkg-silver;
+			background-color: #ecfefc;
 
 			&::before {
 				border-color: transparent transparent transparent $color-pkg-silver;
@@ -254,6 +256,7 @@ $price-block-table-layout : true;
 
 		&.upsell-pkg-gold {
 			border-color: $color-pkg-gold;
+			background-color: #fffaf0;
 
 			&::before {
 				border-color: transparent transparent transparent $color-pkg-gold;

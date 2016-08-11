@@ -217,6 +217,7 @@
 
 .upsell-component-02 .cart-notifier.upsell-pkg-select {
   border-color: #02a9e0;
+  background-color: #e0f3fc;
 }
 
 .upsell-component-02 .cart-notifier.upsell-pkg-select::before {
@@ -229,6 +230,7 @@
 
 .upsell-component-02 .cart-notifier.upsell-pkg-silver {
   border-color: #009E8C;
+  background-color: #ecfefc;
 }
 
 .upsell-component-02 .cart-notifier.upsell-pkg-silver::before {
@@ -241,6 +243,7 @@
 
 .upsell-component-02 .cart-notifier.upsell-pkg-gold {
   border-color: #FAA41A;
+  background-color: #fffaf0;
 }
 
 .upsell-component-02 .cart-notifier.upsell-pkg-gold::before {
