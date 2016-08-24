@@ -1,0 +1,64 @@
+/* Fix pricing | v2 */
+@import 'init';
+
+$font-size-base: 9rem;
+
+.pricing {
+	line-height: $font-size-base;
+	line-height: 1;
+	display: table;
+	color: $color-lex-sky;
+	font-family: $font-stack-sans-light;
+
+
+	.column {
+		display: table-cell;
+	}
+
+	.column-details {
+		vertical-align: top;
+		.row {
+			display: block;
+		}
+	}
+
+	.dollar-sign {
+		font-size: $font-size-base * 0.6;
+		vertical-align: top;
+		line-height: 1;
+		padding-top: .8rem;
+	}
+
+	.dollars {
+		font-size: $font-size-base;
+		line-height: 1;
+		font-family: $font-stack-sans-book;
+	}
+
+	.cents {
+		font-size: $font-size-base * 0.3;
+		line-height: 1;
+		padding-top: 1.2rem;
+	}
+
+	.term {
+		$term-font-size: $font-size-base * 0.1;
+		@if ( $term-font-size > 1.2rem) {
+			font-size: $term-font-size;
+		}
+		@else {
+			font-size: 1.2rem;
+		}
+		line-height: 1;
+		text-align: left;
+		margin-left: 0;
+		padding-top: .5rem;
+	}
+}
+
+
+.pricing .term {
+	text-align: left;
+}
+
+.pricing {}

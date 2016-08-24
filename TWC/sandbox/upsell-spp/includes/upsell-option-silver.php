@@ -16,7 +16,7 @@
 			<!-- Column: Package features -->
 			<div class="col col-features">
 				<div class="row row-channels"><p class="channels">175 + Channels</p> <a href="#" class="">View Channel Lineup</a></div>
-				<div class="row"><p class="channel-description">50 Additional Channels including:</p> </div>
+				<div class="row row-features"><p class="channel-description">50 Additional Channels including:</p> </div>
 				<div class="row row-logos">
 					<img src="images/logo-block-silver.png" alt="HBO, Showtime, Cinemax">
 				</div>

@@ -1,4 +1,5 @@
 <?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/header.php'); ?>
+<div class="buyflow-left-column">
 <?php
 $package          = 'Select';
 $selection_action = "selected";
@@ -29,5 +30,5 @@ $selection_action = "switched";
 include 'includes/upsells.php';
 
 ?>
-
+</div>
 <?php include($_SERVER['DOCUMENT_ROOT']. '/TWC/core/includes/footer.php'); ?>

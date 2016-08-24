@@ -1,0 +1,61 @@
+/* Fix pricing | v2 */
+.pricing {
+  line-height: 90px;
+  line-height: 9rem;
+  line-height: 1;
+  display: table;
+  color: #00549f;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.pricing .column {
+  display: table-cell;
+}
+
+.pricing .column-details {
+  vertical-align: top;
+}
+
+.pricing .column-details .row {
+  display: block;
+}
+
+.pricing .dollar-sign {
+  font-size: 54px;
+  font-size: 5.4rem;
+  vertical-align: top;
+  line-height: 1;
+  padding-top: 8px;
+  padding-top: .8rem;
+}
+
+.pricing .dollars {
+  font-size: 90px;
+  font-size: 9rem;
+  line-height: 1;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.pricing .cents {
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: 1;
+  padding-top: 12px;
+  padding-top: 1.2rem;
+}
+
+.pricing .term {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: left;
+  margin-left: 0;
+  padding-top: 5px;
+  padding-top: .5rem;
+}
+
+.pricing .term {
+  text-align: left;
+}
+
+/*# sourceMappingURL=style.css.map */

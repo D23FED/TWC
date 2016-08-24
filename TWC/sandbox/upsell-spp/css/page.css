@@ -1,6 +1,11 @@
+.buyflow-left-column {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .upsell-component {
   border: 2px solid #e1e1e1;
-  width: 700px;
+  width: 100%;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -184,6 +189,18 @@
   padding: 10px 15px;
 }
 
+.upsell-component-02 header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .upsell-component-02 header::after {
   content: '';
   display: block;
@@ -196,6 +213,7 @@
   font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #333;
   float: left;
+  margin-bottom: 0;
 }
 
 .upsell-component-02 .cart-notifier {
@@ -213,6 +231,7 @@
   position: relative;
   line-height: 1;
   float: right;
+  margin-left: auto;
 }
 
 .upsell-component-02 .cart-notifier.upsell-pkg-select {
@@ -345,8 +364,8 @@
   width: 50%;
   padding-left: 10px;
   padding-right: 10px;
-  border-right: 1px solid black;
   padding-top: 6px;
+  border-right: 1px solid black;
 }
 
 .upsell-component-02 .upsell-option .col:first-child {
@@ -368,6 +387,7 @@
   position: relative;
   vertical-align: middle;
   text-align: center;
+  margin-top: 0;
 }
 
 .upsell-component-02 .upsell-option .action {
@@ -424,17 +444,18 @@
   font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
   vertical-align: middle;
+  text-align: center;
 }
 
 .upsell-component-02 .upsell-option .row-channels p {
   font-size: 18px;
   font-size: 1.8rem;
   color: #02a9e0;
+  margin-bottom: 0;
+  display: inline-block;
   padding-right: 10px;
   margin-right: 10px;
   border-right: 1px solid #7a7a7a;
-  display: inline-block;
-  margin-bottom: 0;
 }
 
 .upsell-component-02 .upsell-option .row-channels a {
@@ -450,6 +471,19 @@
   line-height: 1.6;
   margin-bottom: 5px;
   margin-bottom: .5rem;
+}
+
+.upsell-component-02 .upsell-option .row-features {
+  text-align: center;
+}
+
+.upsell-component-02 .upsell-option .row-logos {
+  padding-right: 10px;
+  padding-right: 1rem;
+}
+
+.upsell-component-02 .upsell-option .row-logos img {
+  max-width: 100%;
 }
 
 .upsell-component-02 .upsell-pkg-select {
@@ -491,6 +525,74 @@
 .upsell-component-02 footer {
   margin-top: 10px;
   margin-top: 1rem;
+}
+
+@media (max-width: 40em) {
+
+  .upsell-component-02 header {
+    display: block;
+  }
+
+  .upsell-component-02 .title {
+    margin-bottom: .5em;
+  }
+
+  .upsell-component-02 .upsell-option {
+    padding-right: 10px;
+  }
+
+  .upsell-component-02 .upsell-option .col {
+    display: block;
+    width: 100%;
+    border-right: none;
+  }
+
+  .upsell-component-02 .upsell-option .col-pricing,
+  .upsell-component-02 .upsell-option .col-cta {
+    width: 100%;
+    margin-top: 10px;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+    margin-bottom: .5rem;
+  }
+
+  .upsell-component-02 .upsell-option .col-pricing {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  .upsell-component-02 .upsell-option .price-lockup {
+    margin: 0 auto;
+  }
+
+  .upsell-component-02 .upsell-option .row-channels p {
+    display: block;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+  }
+
+  .upsell-component-02 .upsell-option .row-channels a {
+    display: block;
+  }
+
+  .upsell-component-02 .upsell-option .row-features .feature {
+    display: block;
+  }
+
+  .upsell-component-02 .upsell-option .row-features .seperator {
+    display: none;
+  }
+
+  .upsell-component-02 .upsell-option .row-logos {
+    text-align: center;
+  }
+
+  .upsell-component-02 .upsell-option .row-logos img {
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=page.css.map */

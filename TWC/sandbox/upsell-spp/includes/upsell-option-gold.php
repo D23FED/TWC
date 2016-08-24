@@ -16,7 +16,7 @@
 			<!-- Column: Package features -->
 			<div class="col col-features">
 				<div class="row row-channels"><p class="channels">200 + Channels</p> <a href="#" class="">View Channel Lineup</a></div>
-				<div class="row"><p class="channel-description">50 Additional Channels including:</p> </div>
+				<div class="row row-features"><p class="channel-description">50 Additional Channels including:</p> </div>
 				<div class="row row-logos">
 					<img src="images/logo-block-gold.png" alt="HBO, Showtime, Cinemax, Starz, Starz Encore, Epix">
 				</div>

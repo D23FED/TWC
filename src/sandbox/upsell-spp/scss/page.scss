@@ -1,10 +1,10 @@
 @import 'init';
 
-$color-cta                : #068a2a;
-$color-pkg-select         : $color-lex-bright-sky;
-$color-pkg-silver         : $color-ch-teal;
-$color-pkg-gold           : $color-ch-yellow;
-$price-block-table-layout : true;
+$color-cta: #068a2a;
+$color-pkg-select: $color-lex-bright-sky;
+$color-pkg-silver: $color-ch-teal;
+$color-pkg-gold: $color-ch-yellow;
+$price-block-table-layout: true;
 
 @mixin pseudo-img($pos: absolute) {
 	content: '';
@@ -13,9 +13,14 @@ $price-block-table-layout : true;
 	background-repeat: no-repeat;
 }
 
+.buyflow-left-column {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
 .upsell-component {
 	border: 2px solid $text-lightgrey;
-	width: 700px;
+	width: 100%;
 	margin: 0 auto;
 	background-color: #fff;
 
@@ -205,6 +210,13 @@ $price-block-table-layout : true;
 
 	header {
 		@include clearfix;
+		display: flex;
+	  flex-flow: row nowrap;
+	  align-items: flex-end;
+	  @include respond-to(small) {
+	  	display: block;
+	  	// flex-flow: none;
+	  }
 	}
 
 	.title {
@@ -212,6 +224,10 @@ $price-block-table-layout : true;
 		font-family: $font-stack-sans-light;
 		color: $color-lex-deep-gray;
 		float: left;
+		margin-bottom: 0;
+		@include respond-to(small) {
+			margin-bottom: .5em;
+		}
 	}
 
 	.cart-notifier {
@@ -227,6 +243,7 @@ $price-block-table-layout : true;
 		position: relative;
 		line-height: 1;
 		float: right;
+		margin-left: auto;
 
 		&.upsell-pkg-select {
 			border-color: $color-pkg-select;
@@ -343,11 +360,18 @@ $price-block-table-layout : true;
 		color: $color-lex-deep-gray;
 		margin-top: 1rem;
 
+		@include respond-to(small) {
+			padding-right: 10px;
+		}
+
+
 		@include clearfix;
 
 		.inner {
 			display: table;
 			width: 100%;
+
+			@include respond-to(small) {}
 		}
 
 		.col {
@@ -355,8 +379,15 @@ $price-block-table-layout : true;
 			width: 50%;
 			padding-left: 10px;
 			padding-right: 10px;
-			border-right: 1px solid black;
 			padding-top: 6px;
+			border-right: 1px solid black;
+
+			@include respond-to(small) {
+				display: block;
+				width: 100%;
+				border-right: none;
+			}
+
 
 			&:first-child {
 				padding-left: 0;
@@ -371,6 +402,21 @@ $price-block-table-layout : true;
 		.col-pricing,
 		.col-cta {
 			width: 25%;
+
+			@include respond-to(small) {
+				width: 100%;
+				margin-top: 1rem;
+				margin-bottom: .5rem;
+			}
+		}
+
+		.col-pricing {
+			@include respond-to(small) {
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+				border-bottom: 1px solid black;
+				text-align: center;
+			}
 		}
 
 		.col-cta {
@@ -378,6 +424,9 @@ $price-block-table-layout : true;
 			position: relative;
 			vertical-align: middle;
 			text-align: center;
+			margin-top: 0;
+
+			@include respond-to(small) {}
 		}
 
 		.action {
@@ -395,6 +444,9 @@ $price-block-table-layout : true;
 		.price-lockup {
 			color: $color-lex-bright-sky;
 			line-height: 1;
+			@include respond-to(small) {
+				margin: 0 auto;
+			}
 
 			@if $price-block-table-layout == true {
 				display: table;
@@ -438,21 +490,33 @@ $price-block-table-layout : true;
 				font-family: $font-stack-sans-book;
 				font-weight: normal;
 				vertical-align: middle;
+				text-align: center;
 			}
 
 			p {
 				font-size: 1.8rem;
 				color: $color-lex-bright-sky;
+				margin-bottom: 0;
+				display: inline-block;
 				padding-right: 10px;
 				margin-right: 10px;
 				border-right: 1px solid #7a7a7a;
-				display: inline-block;
-				margin-bottom: 0;
+
+				@include respond-to(small) {
+					display: block;
+					padding-right: 0;
+					margin-right: 0;
+					border-right: none;
+				}
 			}
 
 			a {
 				font-size: 1.6rem;
 				text-decoration: underline;
+
+				@include respond-to(small) {
+					display: block;
+				}
 			}
 		}
 
@@ -461,6 +525,39 @@ $price-block-table-layout : true;
 			font-family: $font-stack-sans-light;
 			line-height: 1.6;
 			margin-bottom: .5rem;
+		}
+
+		.row-features {
+			text-align: center;
+
+			.feature {
+				@include respond-to(small) {
+					display: block;
+				}
+			}
+
+			.seperator {
+				@include respond-to(small) {
+					display: none;
+				}
+			}
+		}
+
+		.row-logos {
+			padding-right: 1rem;
+
+			@include respond-to(small) {
+				text-align: center;
+			}
+
+
+			img {
+				max-width: 100%;
+
+				@include respond-to(small) {
+					margin: 0 auto;
+				}
+			}
 		}
 	}
 

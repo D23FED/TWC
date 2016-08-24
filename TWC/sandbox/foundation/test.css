@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    .test1 {
+        color: #000
+    }
+}
+@media (max-width: 991px) {
+    .test2 {
+        color: #000
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .test3 {
+        color: #000
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .test4 {
+        color: #000
+    }
+}
+
+/*# sourceMappingURL=test.css.map */

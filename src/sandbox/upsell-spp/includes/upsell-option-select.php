@@ -16,7 +16,7 @@
 			<!-- Column: Package features -->
 			<div class="col col-features">
 				<div class="row row-channels"><p class="channels">125 + Channels</p> <a href="#" class="">View Channel Lineup</a></div>
-				<div class="row"><p class="channel-description">FREE DVR Service | Featured Channels:</p> </div>
+				<div class="row row-features"><p class="channel-description"><span class="feature">FREE DVR Service</span><span class="seperator"> | </span><span class="feature">Featured Channels:</span></p> </div>
 				<div class="row row-logos">
 					<img src="images/logo-block-select.png" alt="MTV, CNN, ESPN, TLC, Discovery Channel, Lifetime">
 				</div>
