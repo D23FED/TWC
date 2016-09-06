@@ -1,0 +1,49 @@
+// New tab styling
+
+@import 'init';
+
+$component-wrapper: 'tab-component';
+$tab-section-wrapper: 'respTabs';
+$tab: 'tabbedRow';
+$tab-content: 'tabbedLabel';
+
+// Component containing tabs and their content panes
+.#{$component-wrapper} {
+	// Row containing all tabs, above content panes
+	.#{$tab-section-wrapper} {
+		box-shadow: none;
+		// Container for individual tabs
+		.tabbedRow {
+			background-color: transparent;
+			background-image: none;
+		}
+
+		// Actual tab content wrapper
+		.tabbedLabel {
+			li {
+				background-color: white;
+				background-image: none;
+				box-shadow: 0px -1px 3px 1px #999;
+				position: relative;
+				z-index: 1;
+
+				// Active tab
+				&.js-active {
+					border-top: 12px solid $color-lex-bright-sky;
+					box-shadow: 0 -3px 3px 0 #b5b5b5;
+					z-index: 2;
+
+					a {
+						color: $color-lex-bright-sky;
+					}
+				}
+
+				a {
+					color: $color-lex-sky;
+					font-family: $font-stack-sans-light;
+					font-size: 2.2rem;
+				}
+			}
+		}
+	}
+}

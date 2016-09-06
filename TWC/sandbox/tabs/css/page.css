@@ -1,0 +1,35 @@
+.tab-component .respTabs {
+  box-shadow: none;
+}
+
+.tab-component .respTabs .tabbedRow {
+  background-color: transparent;
+  background-image: none;
+}
+
+.tab-component .respTabs .tabbedLabel li {
+  background-color: white;
+  background-image: none;
+  box-shadow: 0px -1px 3px 1px #999;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-component .respTabs .tabbedLabel li.js-active {
+  border-top: 12px solid #02a9e0;
+  box-shadow: 0 -3px 3px 0 #b5b5b5;
+  z-index: 2;
+}
+
+.tab-component .respTabs .tabbedLabel li.js-active a {
+  color: #02a9e0;
+}
+
+.tab-component .respTabs .tabbedLabel li a {
+  color: #00549f;
+  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+/*# sourceMappingURL=page.css.map */
