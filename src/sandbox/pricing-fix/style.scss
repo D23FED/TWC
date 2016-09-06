@@ -1,14 +1,22 @@
-/* Fix pricing | v2 */
+/* Fix pricing | v3 */
 @import 'init';
 
 $font-size-base: 9rem;
+$tv-cta-col: '#_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_5050-c1';
+$tv-cta-col-2: '#_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_6040-c1';
+$phone-cta-col: '#_content_twc_en_phone_phone-service_jcr_content_alerts_teaser .twc-col2_5050-c1 .twc-col2_5545-c1';
+$internet-cta-col: '#_content_twc_en_internet_internet-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_5545-c1';
 
 .pricing {
 	line-height: $font-size-base;
 	line-height: 1;
 	display: table;
 	color: $color-lex-sky;
-	font-family: $font-stack-sans-light;
+	font-family: $font-stack-sans-book;
+
+	@include respond-to(medium) {
+		margin: 0 auto;
+	}
 
 
 	.column {
@@ -17,6 +25,7 @@ $font-size-base: 9rem;
 
 	.column-details {
 		vertical-align: top;
+
 		.row {
 			display: block;
 		}
@@ -43,12 +52,14 @@ $font-size-base: 9rem;
 
 	.term {
 		$term-font-size: $font-size-base * 0.1;
-		@if ( $term-font-size > 1.2rem) {
+
+		@if $term-font-size > 1.2rem {
 			font-size: $term-font-size;
 		}
 		@else {
 			font-size: 1.2rem;
 		}
+
 		line-height: 1;
 		text-align: left;
 		margin-left: 0;
@@ -56,9 +67,23 @@ $font-size-base: 9rem;
 	}
 }
 
-
 .pricing .term {
 	text-align: left;
 }
 
-.pricing {}
+#{$tv-cta-col},
+#{$tv-cta-col-2},
+#{$phone-cta-col},
+#{$internet-cta-col} {
+	text-align: center;
+}
+
+#{$tv-cta-col},
+#{$tv-cta-col-2} {
+	.cta {
+		@include respond-to(medium) {
+			float: none;
+			padding-bottom: 1rem;
+		}
+	}
+}

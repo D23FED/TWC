@@ -1,11 +1,11 @@
-/* Fix pricing | v2 */
+/* Fix pricing | v3 */
 .pricing {
   line-height: 90px;
   line-height: 9rem;
   line-height: 1;
   display: table;
   color: #00549f;
-  font-family: "TWC Round Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "TWC Round Book", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .pricing .column {
@@ -56,6 +56,25 @@
 
 .pricing .term {
   text-align: left;
+}
+
+#_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_5050-c1,
+#_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_6040-c1,
+#_content_twc_en_phone_phone-service_jcr_content_alerts_teaser .twc-col2_5050-c1 .twc-col2_5545-c1,
+#_content_twc_en_internet_internet-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_5545-c1 {
+  text-align: center;
+}
+
+@media (max-width: 48em) {
+  .pricing {
+    margin: 0 auto;
+  }
+  #_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_5050-c1 .cta,
+  #_content_twc_en_tv_tv-service_jcr_content_alerts_teaser .twc-col2_5050-c0 .twc-col2_6040-c1 .cta {
+    float: none;
+    padding-bottom: 10px;
+    padding-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
