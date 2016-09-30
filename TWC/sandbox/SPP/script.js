@@ -1,25 +1,26 @@
-/* v3 | Jul 26 */
-// Match height of special offer price area
+/* v1 */
+// Match height of offers
+var offerSelector = '[id="boxed-grey-border"]';
 var check = function() {
-	if (!$('.price-wrap').length) {
+	if (!$(offerSelector).length) {
 		setTimeout(check, 500);
 	} else {
-		priceMatchHeight();
+		containerMatchHeight();
 	}
 };
 
-var priceMatchHeight = function() {
-	var price = {
-		'$wrap': $('.price-wrap'),
+var containerMatchHeight = function() {
+	var container = {
+		'$el': $(offerSelector),
 		'maxHeight': 0
 	};
-	if (price.$wrap.length) {
-		price.$wrap.each(function() {
+	if (container.$el.length) {
+		container.$el.each(function() {
 			var h = $(this).outerHeight();
-			if (h > price.maxHeight) {
-				price.maxHeight = h;
+			if (h > container.maxHeight) {
+				container.maxHeight = h;
 			}
-		}).css('min-height', price.maxHeight);
+		}).css('min-height', container.maxHeight);
 	}
 };
 

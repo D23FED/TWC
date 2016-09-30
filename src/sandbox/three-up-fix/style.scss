@@ -1,0 +1,27 @@
+/* Three-up Carousel Adjustment | v1 */
+$img-w: 500px;
+$img-h: 282px;
+$margin-w: 25px;
+.three-up-carousel {
+	.slider-wrapper {
+		max-width: $img-w !important;
+	}
+	.slider-viewport {
+		height: $img-h !important;
+	}
+	// .promo-slides {
+	// 	transform: translate3d(-($img-w+$margin-w), 0px, 0px) !important;
+	// }
+	.slide {
+		&,
+		& img {
+			width: auto !important;
+			height: auto !important;
+
+		}
+		img {
+
+		}
+	}
+
+}

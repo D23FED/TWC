@@ -1,0 +1,16 @@
+/* Three-up Carousel Adjustment | v1 */
+.three-up-carousel .slider-wrapper {
+  max-width: 500px !important;
+}
+
+.three-up-carousel .slider-viewport {
+  height: 282px !important;
+}
+
+.three-up-carousel .slide,
+.three-up-carousel .slide img {
+  width: auto !important;
+  height: auto !important;
+}
+
+/*# sourceMappingURL=style.css.map */
